@@ -4,7 +4,7 @@
 
 | 结论 | 证据 | 待确认 |
 |---|---|---|
-| 微信上下文提供后端身份 | `cloudfunctions/familyApi/index.js`；[官方调用说明](https://docs.cloudbase.net/recipes/add-cloud-function-wechat-miniprogram) | 实际云环境关联 |
+| 微信上下文提供后端身份 | `cloudfunctions/familyApi/index.js`；[官方调用说明](https://docs.cloudbase.net/recipes/add-cloud-function-wechat-miniprogram)；微信云开发控制台已关联目标环境，用户已在真机确认默认档案与「已同步」 | 两个账号真机同步 |
 | 家庭隔离、任务版本控制在服务端执行 | `service.js`、`tests/family.test.js` | 云规则生效、真机验收 |
 | 生日按上海日期自动计算周岁，离线页面同样重算 | `shared/child-profile.js`、`tests/child-profile.test.js`；生日当天、无效日期、旧档案与缓存场景通过 | 真机生日选择及展示 |
 | 离线队列先持久化再发送 | `miniprogram/lib/sync-engine.js`、`tests/sync.test.js` | iOS/Android 真机断网重启 |
@@ -57,7 +57,7 @@
 | 能力 | 状态 |
 |---|---|
 | 家庭、自动／手动计划、知识库、回顾、知识进度 | 已实现；本地行为测试覆盖核心流程，微信 WXML 编译通过。当前版本尚未完成原生全流程与真机验收 |
-| 真实云端多手机同步 | 云环境关联、集合规则与函数部署已完成；两个账号真机同步待验收 |
+| 真实云端多手机同步 | 微信侧环境关联、集合规则与函数部署已完成；开发者工具及单台手机均已读取云端默认档案，手机权限报错已消失。两个账号同步待验收 |
 | 内置课标底库与公版原作 | 已入库并标记来源／待核实项；不是上海完整教材库 |
 | 教材整册、逐年级全量、拼音、音频 | 教材版次、逐页核验和可用范围待确认 |
 | 录音、评分、间隔复习 | 待实现 |
