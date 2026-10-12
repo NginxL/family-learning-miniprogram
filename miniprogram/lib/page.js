@@ -46,7 +46,7 @@ function common() {
         childIndex: Math.max(0, children.findIndex((child) => child.id === childId)),
         doneCount, minutes, percent: allTasks.length ? Math.round(doneCount / allTasks.length * 100) : 0,
         syncLabel, syncError: snapshot.error, notice: snapshot.notice, mode: getApp().mode });
-      if (this.afterRender) this.afterRender();
+      if (this.afterRender) this.afterRender({ allTasks });
     },
     rememberSelection() { getApp().navigation = { childId: this.data.childId, subject: this.data.subjectFilter }; },
     selectChild(event) {

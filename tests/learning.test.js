@@ -28,6 +28,25 @@ test('automatic daily quotas cover poems, English words/sentences, reading and m
   assert.equal(tomorrow.tasks.some((task) => a.day.tasks.some((old) => old.contentId === task.contentId)), false, 'even uncompleted assignments are not new again');
 });
 
+test('English articles have their own plan type and new/review quotas without relabeling other reading content', async () => {
+  const s = await setup();
+  for (const [title, detail] of [['A red ball', 'I have a red ball.'], ['My little dog', 'My little dog runs to me.']]) {
+    await s.call('addPlan', { title, detail, kind: 'english-reading', subject: 'english', minutes: 5, schedule: 'library' });
+  }
+  await s.configure({ 'english-reading': { quantity: 1 }, reading: { quantity: 1 }, word: { quantity: 2 } });
+  const today = (await s.call('getDay')).day;
+  const article = today.tasks.find((task) => task.kind === 'english-reading');
+  assert.equal(article.subject, 'english'); assert.equal(article.source, '家长自建');
+  assert.equal(today.tasks.filter((task) => task.kind === 'reading' && task.subject === 'reading').length, 1);
+  assert.equal(today.tasks.filter((task) => task.kind === 'word').length, 2);
+  await s.done(article); s.f.advance(86400000);
+  const tomorrow = (await s.call('getDay')).day.tasks.find((task) => task.kind === 'english-reading');
+  assert.notEqual(tomorrow.contentId, article.contentId);
+  await s.configure({ 'english-reading': { quantity: 1, mode: 'review' } }); s.f.advance(86400000);
+  const review = (await s.call('getDay')).day.tasks;
+  assert.equal(review.length, 1); assert.equal(review[0].contentId, article.contentId); assert.equal(review[0].mode, 'review');
+});
+
 test('review uses completed content, oldest last-study date first; unfinished and other child content are excluded', async () => {
   const s = await setup(); await s.configure({ poetry: { quantity: 2 } });
   const first = (await s.call('getDay')).day.tasks;

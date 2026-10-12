@@ -1,0 +1,11 @@
+.activity-total { flex-shrink:0; text-align:right; }
+.activity-total .subtitle { margin-top:0; }
+.activity-title { font-size:32rpx; font-weight:600; line-height:1.6; }
+.activity-title .pill { font-weight:400; vertical-align:middle; }
+.activity-expand { flex-shrink:0; color:#66786b; font-size:24rpx; }
+.activity-actions { margin-top:24rpx; }
+.activity-actions button { margin-top:0; }
+.activity-items { margin-top:22rpx; border-top:1rpx solid #edf0e9; }
+.activity-item { padding:22rpx 0; border-bottom:1rpx solid #edf0e9; }
+.activity-item-title { font-size:29rpx; line-height:1.6; overflow-wrap:anywhere; }
+.activity-items > .quiet { margin-top:16rpx; }

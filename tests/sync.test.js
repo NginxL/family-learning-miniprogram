@@ -29,6 +29,65 @@ test('offline check-in persists across restart and is uploaded when connection r
   assert.equal(restarted.engine.state.queue.length, 0);
 });
 
+test('a group is saved together offline and each item survives restart and a lost server response', async () => {
+  const f = fixture(); const family = await f.family(); await f.addParent(family.id);
+  const a = f.client('parent-a'); await a.engine.sync(DATE); a.offline();
+  const ids = a.engine.viewDay(DATE).tasks.map((task) => task.id);
+  assert.equal(a.engine.enqueueMany(DATE, [...ids, ids[0]], true), ids.length, 'duplicate IDs are queued once');
+  assert.equal(a.engine.enqueueMany(DATE, ids, true), 0, 'a repeated completion creates no new writes');
+  await a.engine.sync(DATE);
+  const restarted = f.client('parent-a', a.storage);
+  assert.ok(restarted.engine.viewDay(DATE).tasks.every((task) => task.done && task.pending));
+  restarted.loseNextResponse(); await restarted.engine.sync(DATE);
+  assert.equal(restarted.engine.state.queue.length, ids.length);
+  await restarted.engine.sync(DATE);
+  const b = f.client('parent-b'); await b.engine.sync(DATE);
+  assert.ok(b.engine.viewDay(DATE).tasks.every((task) => task.done && task.version === 1));
+  assert.equal(restarted.engine.state.queue.length, 0);
+  const history = await b.engine.getHistory({ childId: family.children[0].id });
+  assert.equal(history.total, ids.length);
+  assert.ok(history.items.every((item) => item.learnedCount === 1 && !item.mastered));
+});
+
+test('group validation, queue limits and storage errors leave no partially saved completion', async () => {
+  const f = fixture(); await f.family(); const a = f.client('parent-a'); await a.engine.sync(DATE);
+  const ids = a.engine.viewDay(DATE).tasks.map((task) => task.id);
+  const original = a.storage.read();
+  assert.throws(() => a.engine.enqueueMany(DATE, [...ids, 'missing-task'], true), /加载/);
+  assert.throws(() => a.engine.enqueueMany(DATE, ids, 'true'), /无效/);
+  assert.deepEqual(a.storage.read(), original);
+  const failed = new SyncEngine({ transport: async () => {}, storage: { read: () => original, write: () => { throw new Error('磁盘已满'); } } });
+  assert.throws(() => failed.enqueueMany(DATE, ids, true), /磁盘已满/);
+  assert.equal(failed.state.queue.length, 0);
+  assert.ok(failed.viewDay(DATE).tasks.every((task) => !task.done));
+  const queued = Array.from({ length: 499 }, (_, i) => ({ familyId: original.family.id, date: '2026-10-11', taskId: 'old-task',
+    done: true, baseVersion: i, mutationId: `old-${i}` }));
+  a.engine.save({ ...original, queue: queued });
+  assert.throws(() => a.engine.enqueueMany(DATE, ids, true), /请先联网同步/);
+  assert.equal(a.engine.state.queue.length, 499);
+  assert.ok(a.engine.viewDay(DATE).tasks.every((task) => !task.done));
+  a.engine.save({ ...original, queue: queued.slice(1) });
+  assert.equal(a.engine.enqueueMany(DATE, ids, true), 2);
+  assert.equal(a.engine.state.queue.length, 500);
+  assert.equal(a.engine.enqueueMany(DATE, ids, true), 0);
+});
+
+test('a conflict in one group item preserves that server result while the remaining items sync', async () => {
+  const f = fixture(); const family = await f.family(); await f.addParent(family.id);
+  const a = f.client('parent-a'); const b = f.client('parent-b');
+  await a.engine.sync(DATE); await b.engine.sync(DATE);
+  const ids = b.engine.viewDay(DATE).tasks.map((task) => task.id);
+  b.engine.enqueueMany(DATE, ids, true);
+  a.engine.enqueue(DATE, ids[0], true); a.engine.enqueue(DATE, ids[0], false); await a.engine.sync(DATE);
+  await b.engine.sync(DATE);
+  assert.equal(b.engine.viewDay(DATE).tasks[0].done, false);
+  assert.equal(b.engine.viewDay(DATE).tasks[0].version, 2);
+  assert.equal(b.engine.viewDay(DATE).tasks[1].done, true);
+  assert.equal(b.engine.state.queue.length, 0);
+  assert.match(b.engine.state.notice, /已被家人更新/);
+  assert.equal((await b.engine.getHistory({ childId: family.children[0].id })).total, 1);
+});
+
 test('successful server write with lost response retries without a duplicate version', async () => {
   const f = fixture(); await f.family(); const a = f.client('parent-a');
   await a.engine.sync(DATE);

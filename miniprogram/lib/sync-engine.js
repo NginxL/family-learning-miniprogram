@@ -30,15 +30,22 @@ class SyncEngine {
     return day;
   }
   enqueue(date, taskId, done) {
+    return this.enqueueMany(date, [taskId], done);
+  }
+  enqueueMany(date, taskIds, done) {
     if (!this.state.userId || !this.state.family) throw new Error('请先联网创建或加入家庭');
-    if (this.state.queue.length >= 500) throw new Error('待同步记录较多，请先联网同步');
-    const task = this.viewDay(date).tasks.find((entry) => entry.id === taskId);
-    if (!task) throw new Error('请先联网加载当天任务');
-    if (task.done === done) return;
+    if (!Array.isArray(taskIds) || typeof done !== 'boolean') throw new Error('学习记录无效，请刷新后重试');
+    const day = this.viewDay(date);
+    const tasks = [...new Set(taskIds)].map((id) => day.tasks.find((task) => task.id === id));
+    if (tasks.some((task) => !task)) throw new Error('请先联网加载当天任务');
+    const changed = tasks.filter((task) => task.done !== done);
+    if (!changed.length) return 0;
+    if (this.state.queue.length + changed.length > 500) throw new Error('待同步记录较多，请先联网同步');
     const next = clone(this.state);
-    next.queue.push({ familyId: next.family.id, date, taskId, done, baseVersion: task.version, mutationId: this.makeId() });
-    // A storage failure must not be displayed as a successful local check-in.
+    changed.forEach((task) => next.queue.push({ familyId: next.family.id, date, taskId: task.id, done, baseVersion: task.version, mutationId: this.makeId() }));
+    // Validate and persist the whole local group before displaying any successful check-ins.
     this.save(next);
+    return changed.length;
   }
   async bootstrap() {
     const data = await this.transport('bootstrap', {});

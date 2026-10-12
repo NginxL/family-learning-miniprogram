@@ -12,6 +12,7 @@
         <picker range="{{item.scopes}}" range-key="label" value="{{item.scopeIndex}}" data-id="{{item.id}}" bindchange="changeScope"><view class="picker" style="margin-top:18rpx">{{item.scopes[item.scopeIndex].label}} ▾</view></picker>
         <view class="row" style="margin-top:24rpx"><view class="muted">每天 · {{item.unit}}（0–{{item.max}}）</view><view class="stepper"><button class="step" data-id="{{item.id}}" data-step="-1" bindtap="stepQuantity">−</button><input class="quantity" type="number" maxlength="2" value="{{item.quantity}}" data-id="{{item.id}}" bindinput="changeQuantity" /><button class="step" data-id="{{item.id}}" data-step="1" bindtap="stepQuantity">＋</button></view></view>
         <button class="quiet" data-id="{{item.id}}" bindtap="browseRule">看看这些内容 →</button>
+        <view wx:if="{{item.id === 'english-reading' && !item.poolCount}}" class="muted plan-help">可在「家长添加」中选择英文阅读，再加入自动内容库。</view>
       </view>
       <view wx:if="{{!visibleRules.length}}" class="card empty">先在「家长添加」中补充这一类内容库。</view>
       <view class="muted plan-help">全新：以前未安排过。复习：已完成过，较久未学的优先。每天首次打开时生成；已生成的类型保持当天安排，修改从明天生效。</view>
