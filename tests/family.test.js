@@ -68,6 +68,9 @@ test('removal revokes reads, writes and even replay of a previously acknowledged
 
 test('daily tasks retain history; paused plans stop the next day; no synthetic past assignments', async () => {
   const f = fixture(); const family = await f.family();
+  const rules = family.autoPlans[family.children[0].id].map((rule) => ({ ...rule, quantity: 0 }));
+  await f.call('parent-a', 'saveAutoPlans', { familyId: family.id, childId: family.children[0].id, rules });
+  for (const title of ['每日读书', '每日口算']) await f.call('parent-a', 'addPlan', { familyId: family.id, childId: family.children[0].id, title, subject: 'other', minutes: 5 });
   const { day } = await f.call('parent-a', 'getDay', { familyId: family.id });
   await f.call('parent-a', 'setPlanEnabled', { familyId: family.id, planId: day.tasks[0].id, enabled: false });
   assert.equal((await f.call('parent-a', 'getDay', { familyId: family.id })).day.tasks.length, 2);

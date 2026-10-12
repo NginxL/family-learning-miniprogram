@@ -2,6 +2,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const { fixture } = require('./helpers');
 const { SyncEngine } = require('../miniprogram/lib/sync-engine');
+const { memoryStorage } = require('./helpers');
 const DATE = '2026-10-12';
 
 test('two independently cached clients see a shared check-in after sync', async () => {
@@ -87,4 +88,33 @@ test('changing date during an active sync fetches the requested history afterwar
   const f = fixture(); await f.family(); const a = f.client('parent-a');
   await Promise.all([a.engine.sync(DATE), a.engine.sync('2026-10-11')]);
   assert.equal(a.engine.lastDate, '2026-10-11');
+});
+
+test('history and progress use child-specific offline caches and revoked membership removes both', async () => {
+  const f = fixture(); const family = await f.family(); await f.addParent(family.id);
+  const childId = family.children[0].id; const b = f.client('parent-b'); await b.engine.sync(DATE);
+  const input = { childId }; const first = await b.engine.getHistory(input); await b.engine.getProgress(input);
+  b.offline(); assert.equal((await b.engine.getHistory(input)).cached, true);
+  assert.equal((await b.engine.getProgress(input)).cached, true);
+  await assert.rejects(b.engine.getProgress({ childId: 'not-cached' }));
+  assert.equal(first.cached, false);
+  await f.call('parent-a', 'removeMember', { familyId: family.id, memberId: b.engine.state.userId });
+  b.online(); await assert.rejects(b.engine.getProgress(input), (error) => error.code === 'FORBIDDEN');
+  assert.deepEqual(b.engine.state.histories, {}); assert.deepEqual(b.engine.state.progresses, {});
+});
+
+test('late progress or forbidden responses cannot show previous family data or clear the new family cache', async () => {
+  for (const forbidden of [false, true]) {
+    let resolve; let reject;
+    const transport = () => new Promise((a, b) => { resolve = a; reject = b; });
+    const engine = new SyncEngine({ transport, storage: memoryStorage() });
+    engine.save({ userId: 'old-user', family: { id: 'old-family' }, days: {}, histories: {}, progresses: {}, queue: [] });
+    const pending = engine.getProgress({ childId: 'old-child' });
+    engine.save({ userId: 'new-user', family: { id: 'new-family' }, days: {}, histories: {}, progresses: {}, queue: [{ mutationId: 'keep-me' }] });
+    if (forbidden) { const error = new Error('removed'); error.code = 'FORBIDDEN'; reject(error); }
+    else resolve({ stats: { learned: 99 } });
+    await assert.rejects(pending);
+    assert.equal(engine.state.family.id, 'new-family'); assert.equal(engine.state.queue[0].mutationId, 'keep-me');
+    assert.deepEqual(engine.state.progresses, {});
+  }
 });

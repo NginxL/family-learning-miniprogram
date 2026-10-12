@@ -8,6 +8,6 @@ Page({
     catch (error) { wx.showToast({ title: error.message, icon: 'none' }); }
   },
   expandTask(event) { const id = event.currentTarget.dataset.id; this.setData({ expandedId: this.data.expandedId === id ? '' : id }); },
-  async changeDate(event) { this.setData({ date: event.detail.value, expandedId: '' }); this.render(); await this.engine.sync(this.data.date); },
-  async backToday() { this.setData({ date: this.data.today }); this.render(); await this.engine.sync(this.data.date); }
+  async changeDate(event) { this.setData({ date: event.detail.value, followToday: event.detail.value === this.data.today, expandedId: '' }); this.render(); await this.engine.sync(this.data.date); },
+  async backToday() { this.setData({ date: this.data.today, followToday: true }); this.render(); await this.engine.sync(this.data.date); }
 });

@@ -7,17 +7,21 @@
   <block wx:if="{{family}}">
     <view class="tab-row"><view wx:for="{{children}}" wx:key="id" class="chip {{childId === item.id ? 'active' : ''}}" data-id="{{item.id}}" bindtap="selectChild">{{item.name}}</view></view>
     <view class="card hero">
-      <view class="row"><view><view>{{date === today ? '今天，也进步一点点' : '一起回顾这一天'}}</view><view class="subtitle">{{tasks.length}} 项学习 · 约 {{minutes}} 分钟</view></view><view><text class="big-number">{{doneCount}}</text><text> / {{tasks.length}}</text></view></view>
+      <view class="row"><view><view>{{date === today ? '今天，也进步一点点' : '一起回顾这一天'}}</view><view class="subtitle">{{allTaskCount}} 项学习 · 约 {{minutes}} 分钟</view></view><view><text class="big-number">{{doneCount}}</text><text> / {{allTaskCount}}</text></view></view>
       <view class="meter"><view class="meter-fill" style="width:{{percent}}%"></view></view>
     </view>
+    <view class="tab-row subjects"><view wx:for="{{subjectOptions}}" wx:key="id" class="subject-chip {{subjectFilter === item.id ? 'selected' : ''}}" data-id="{{item.id}}" bindtap="selectSubject">{{item.label}}<text wx:if="{{item.count}}"> {{item.count}}</text></view></view>
+    <view class="row quick-links"><button class="quiet" bindtap="openPlans">调整计划 →</button><button class="quiet" bindtap="openHistory">回顾学过的内容 →</button></view>
+    <view class="row"><button class="quiet" bindtap="openLibrary">从知识库选一项 →</button><button class="quiet" bindtap="openProgress">知识进度 →</button></view>
     <view class="row"><view class="section">{{date === today ? '今日学习' : '学习记录'}}</view><view class="status" bindtap="refresh">{{mode === 'demo' ? '本机保存' : syncLabel}} ↻</view></view>
+    <view wx:for="{{dayWarnings}}" wx:key="kind" class="notice">{{item.message}}</view>
     <view wx:for="{{tasks}}" wx:key="id" class="card">
-      <view class="row"><view class="pill {{item.subject}}">{{item.subjectLabel}}</view><view class="muted">{{item.minutes}} 分钟 <text wx:if="{{item.pending}}">· 待同步</text></view></view>
+      <view class="row"><view class="pill {{item.subject}}">{{item.kindLabel}} · {{item.modeLabel}}</view><view class="muted">{{item.minutes}} 分钟 <text wx:if="{{item.pending}}">· 待同步</text></view></view>
       <view class="task-title {{item.done ? 'done-title' : ''}}" data-id="{{item.id}}" bindtap="expandTask">{{item.done ? '✓ ' : ''}}{{item.title}}</view>
-      <view wx:if="{{expandedId === item.id}}"><view class="body">{{item.detail || '和家人一起完成这项学习。'}}</view><view class="muted">{{item.source}}</view></view>
+      <view wx:if="{{expandedId === item.id}}"><view class="body">{{item.detail || '和家人一起完成这项学习。'}}</view><view class="muted">{{item.source}}</view><view wx:if="{{item.note}}" class="muted plan-help">{{item.note}}</view></view>
       <view class="row" style="margin-top:24rpx"><button class="quiet" data-id="{{item.id}}" bindtap="expandTask">{{expandedId === item.id ? '收起内容 ↑' : '看看内容 ↓'}}</button><button class="small {{item.done ? 'secondary' : 'primary'}}" style="margin:0" data-id="{{item.id}}" bindtap="toggleTask">{{item.done ? '已完成 · 撤销' : '完成学习'}}</button></view>
     </view>
-    <view wx:if="{{!tasks.length}}" class="card empty"><view class="empty-icon">☀</view><view>这一天还没有学习任务</view><view class="subtitle">{{date === today ? '从一个小目标开始吧' : '这一天没有已保存的任务记录'}}</view><button wx:if="{{date === today}}" class="secondary" bindtap="openPlans">添加学习计划</button></view>
+    <view wx:if="{{!tasks.length}}" class="card empty"><view class="empty-icon">☀</view><view>{{subjectFilter === 'all' ? '这一天还没有学习任务' : '这个科目还没有学习任务'}}</view><view class="subtitle">{{date === today ? '设置每天数量，或由家长添加内容' : '这一天没有已保存的任务记录'}}</view><button wx:if="{{date === today}}" class="secondary" bindtap="openPlans">安排学习内容</button></view>
     <button wx:if="{{date !== today}}" class="secondary" bindtap="backToday">回到今天</button>
   </block>
   <view wx:else class="card empty"><view class="empty-icon">🌱</view><view class="section">和家人一起，慢慢长大</view><view class="subtitle">创建家庭，为孩子安排小小的每日任务。家人可以一起记录、接力陪伴。</view><button class="primary" bindtap="openFamily">创建或加入家庭</button></view>

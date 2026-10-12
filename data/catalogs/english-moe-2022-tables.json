@@ -1,0 +1,545 @@
+{
+  "scope": "课标附录另列表：30个基数词、28个序数词、12个月份、7个星期；不计入1600/505词条。释义自编。",
+  "sourceUrl": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582349487953.pdf",
+  "entries": [
+    {
+      "id": "word-one",
+      "word": "one",
+      "meaning": "一",
+      "table": "基数词",
+      "sourcePdfPage": 135
+    },
+    {
+      "id": "word-two",
+      "word": "two",
+      "meaning": "二",
+      "table": "基数词",
+      "sourcePdfPage": 135
+    },
+    {
+      "id": "word-three",
+      "word": "three",
+      "meaning": "三",
+      "table": "基数词",
+      "sourcePdfPage": 135
+    },
+    {
+      "id": "word-four",
+      "word": "four",
+      "meaning": "四",
+      "table": "基数词",
+      "sourcePdfPage": 135
+    },
+    {
+      "id": "word-five",
+      "word": "five",
+      "meaning": "五",
+      "table": "基数词",
+      "sourcePdfPage": 135
+    },
+    {
+      "id": "word-six",
+      "word": "six",
+      "meaning": "六",
+      "table": "基数词",
+      "sourcePdfPage": 135
+    },
+    {
+      "id": "word-seven",
+      "word": "seven",
+      "meaning": "七",
+      "table": "基数词",
+      "sourcePdfPage": 135
+    },
+    {
+      "id": "word-eight",
+      "word": "eight",
+      "meaning": "八",
+      "table": "基数词",
+      "sourcePdfPage": 135
+    },
+    {
+      "id": "word-nine",
+      "word": "nine",
+      "meaning": "九",
+      "table": "基数词",
+      "sourcePdfPage": 135
+    },
+    {
+      "id": "word-ten",
+      "word": "ten",
+      "meaning": "十",
+      "table": "基数词",
+      "sourcePdfPage": 135
+    },
+    {
+      "id": "word-eleven",
+      "word": "eleven",
+      "meaning": "十一",
+      "table": "基数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-twelve",
+      "word": "twelve",
+      "meaning": "十二",
+      "table": "基数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-thirteen",
+      "word": "thirteen",
+      "meaning": "十三",
+      "table": "基数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-fourteen",
+      "word": "fourteen",
+      "meaning": "十四",
+      "table": "基数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-fifteen",
+      "word": "fifteen",
+      "meaning": "十五",
+      "table": "基数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-sixteen",
+      "word": "sixteen",
+      "meaning": "十六",
+      "table": "基数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-seventeen",
+      "word": "seventeen",
+      "meaning": "十七",
+      "table": "基数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-eighteen",
+      "word": "eighteen",
+      "meaning": "十八",
+      "table": "基数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-nineteen",
+      "word": "nineteen",
+      "meaning": "十九",
+      "table": "基数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-twenty",
+      "word": "twenty",
+      "meaning": "二十",
+      "table": "基数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-thirty",
+      "word": "thirty",
+      "meaning": "三十",
+      "table": "基数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-forty",
+      "word": "forty",
+      "meaning": "四十",
+      "table": "基数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-fifty",
+      "word": "fifty",
+      "meaning": "五十",
+      "table": "基数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-sixty",
+      "word": "sixty",
+      "meaning": "六十",
+      "table": "基数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-seventy",
+      "word": "seventy",
+      "meaning": "七十",
+      "table": "基数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-eighty",
+      "word": "eighty",
+      "meaning": "八十",
+      "table": "基数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-ninety",
+      "word": "ninety",
+      "meaning": "九十",
+      "table": "基数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-hundred",
+      "word": "hundred",
+      "meaning": "百",
+      "table": "基数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-thousand",
+      "word": "thousand",
+      "meaning": "千",
+      "table": "基数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-million",
+      "word": "million",
+      "meaning": "百万",
+      "table": "基数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-first",
+      "word": "first",
+      "meaning": "第一",
+      "table": "序数词",
+      "sourcePdfPage": 135
+    },
+    {
+      "id": "word-second",
+      "word": "second",
+      "meaning": "第二",
+      "table": "序数词",
+      "sourcePdfPage": 135
+    },
+    {
+      "id": "word-third",
+      "word": "third",
+      "meaning": "第三",
+      "table": "序数词",
+      "sourcePdfPage": 135
+    },
+    {
+      "id": "word-fourth",
+      "word": "fourth",
+      "meaning": "第四",
+      "table": "序数词",
+      "sourcePdfPage": 135
+    },
+    {
+      "id": "word-fifth",
+      "word": "fifth",
+      "meaning": "第五",
+      "table": "序数词",
+      "sourcePdfPage": 135
+    },
+    {
+      "id": "word-sixth",
+      "word": "sixth",
+      "meaning": "第六",
+      "table": "序数词",
+      "sourcePdfPage": 135
+    },
+    {
+      "id": "word-seventh",
+      "word": "seventh",
+      "meaning": "第七",
+      "table": "序数词",
+      "sourcePdfPage": 135
+    },
+    {
+      "id": "word-eighth",
+      "word": "eighth",
+      "meaning": "第八",
+      "table": "序数词",
+      "sourcePdfPage": 135
+    },
+    {
+      "id": "word-ninth",
+      "word": "ninth",
+      "meaning": "第九",
+      "table": "序数词",
+      "sourcePdfPage": 135
+    },
+    {
+      "id": "word-tenth",
+      "word": "tenth",
+      "meaning": "第十",
+      "table": "序数词",
+      "sourcePdfPage": 135
+    },
+    {
+      "id": "word-eleventh",
+      "word": "eleventh",
+      "meaning": "第十一",
+      "table": "序数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-twelfth",
+      "word": "twelfth",
+      "meaning": "第十二",
+      "table": "序数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-thirteenth",
+      "word": "thirteenth",
+      "meaning": "第十三",
+      "table": "序数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-fourteenth",
+      "word": "fourteenth",
+      "meaning": "第十四",
+      "table": "序数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-fifteenth",
+      "word": "fifteenth",
+      "meaning": "第十五",
+      "table": "序数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-sixteenth",
+      "word": "sixteenth",
+      "meaning": "第十六",
+      "table": "序数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-seventeenth",
+      "word": "seventeenth",
+      "meaning": "第十七",
+      "table": "序数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-eighteenth",
+      "word": "eighteenth",
+      "meaning": "第十八",
+      "table": "序数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-nineteenth",
+      "word": "nineteenth",
+      "meaning": "第十九",
+      "table": "序数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-twentieth",
+      "word": "twentieth",
+      "meaning": "第二十",
+      "table": "序数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-thirtieth",
+      "word": "thirtieth",
+      "meaning": "第三十",
+      "table": "序数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-fortieth",
+      "word": "fortieth",
+      "meaning": "第四十",
+      "table": "序数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-fiftieth",
+      "word": "fiftieth",
+      "meaning": "第五十",
+      "table": "序数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-sixtieth",
+      "word": "sixtieth",
+      "meaning": "第六十",
+      "table": "序数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-seventieth",
+      "word": "seventieth",
+      "meaning": "第七十",
+      "table": "序数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-eightieth",
+      "word": "eightieth",
+      "meaning": "第八十",
+      "table": "序数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-ninetieth",
+      "word": "ninetieth",
+      "meaning": "第九十",
+      "table": "序数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-hundredth",
+      "word": "hundredth",
+      "meaning": "第百",
+      "table": "序数词",
+      "sourcePdfPage": 136
+    },
+    {
+      "id": "word-january",
+      "word": "January",
+      "meaning": "1月",
+      "table": "月份",
+      "sourcePdfPage": 137
+    },
+    {
+      "id": "word-february",
+      "word": "February",
+      "meaning": "2月",
+      "table": "月份",
+      "sourcePdfPage": 137
+    },
+    {
+      "id": "word-march",
+      "word": "March",
+      "meaning": "3月",
+      "table": "月份",
+      "sourcePdfPage": 137
+    },
+    {
+      "id": "word-april",
+      "word": "April",
+      "meaning": "4月",
+      "table": "月份",
+      "sourcePdfPage": 137
+    },
+    {
+      "id": "word-month-may",
+      "word": "May",
+      "meaning": "5月",
+      "table": "月份",
+      "sourcePdfPage": 137
+    },
+    {
+      "id": "word-june",
+      "word": "June",
+      "meaning": "6月",
+      "table": "月份",
+      "sourcePdfPage": 137
+    },
+    {
+      "id": "word-july",
+      "word": "July",
+      "meaning": "7月",
+      "table": "月份",
+      "sourcePdfPage": 137
+    },
+    {
+      "id": "word-august",
+      "word": "August",
+      "meaning": "8月",
+      "table": "月份",
+      "sourcePdfPage": 137
+    },
+    {
+      "id": "word-september",
+      "word": "September",
+      "meaning": "9月",
+      "table": "月份",
+      "sourcePdfPage": 137
+    },
+    {
+      "id": "word-october",
+      "word": "October",
+      "meaning": "10月",
+      "table": "月份",
+      "sourcePdfPage": 137
+    },
+    {
+      "id": "word-november",
+      "word": "November",
+      "meaning": "11月",
+      "table": "月份",
+      "sourcePdfPage": 137
+    },
+    {
+      "id": "word-december",
+      "word": "December",
+      "meaning": "12月",
+      "table": "月份",
+      "sourcePdfPage": 137
+    },
+    {
+      "id": "word-monday",
+      "word": "Monday",
+      "meaning": "星期一",
+      "table": "星期",
+      "sourcePdfPage": 137
+    },
+    {
+      "id": "word-tuesday",
+      "word": "Tuesday",
+      "meaning": "星期二",
+      "table": "星期",
+      "sourcePdfPage": 137
+    },
+    {
+      "id": "word-wednesday",
+      "word": "Wednesday",
+      "meaning": "星期三",
+      "table": "星期",
+      "sourcePdfPage": 137
+    },
+    {
+      "id": "word-thursday",
+      "word": "Thursday",
+      "meaning": "星期四",
+      "table": "星期",
+      "sourcePdfPage": 137
+    },
+    {
+      "id": "word-friday",
+      "word": "Friday",
+      "meaning": "星期五",
+      "table": "星期",
+      "sourcePdfPage": 137
+    },
+    {
+      "id": "word-saturday",
+      "word": "Saturday",
+      "meaning": "星期六",
+      "table": "星期",
+      "sourcePdfPage": 137
+    },
+    {
+      "id": "word-sunday",
+      "word": "Sunday",
+      "meaning": "星期日",
+      "table": "星期",
+      "sourcePdfPage": 137
+    }
+  ]
+}

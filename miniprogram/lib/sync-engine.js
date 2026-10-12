@@ -1,5 +1,5 @@
 'use strict';
-const empty = () => ({ userId: null, family: null, days: {}, queue: [], notice: '' });
+const empty = () => ({ userId: null, family: null, days: {}, histories: {}, progresses: {}, queue: [], notice: '' });
 const clone = (value) => JSON.parse(JSON.stringify(value));
 const dayKey = (familyId, date) => `${familyId}:${date}`;
 const chinaDate = () => new Date(Date.now() + 8 * 3600000).toISOString().slice(0, 10);
@@ -58,6 +58,34 @@ class SyncEngine {
     const data = await this.transport(action, { ...payload, familyId: this.state.family && this.state.family.id });
     await this.sync();
     return data;
+  }
+  async getHistory(input) {
+    return this.cachedRead('getHistory', 'histories', input, [input.subject, input.filter, input.query, input.offset || 0], 8);
+  }
+  async getProgress(input) {
+    return this.cachedRead('getProgress', 'progresses', input, [], 5);
+  }
+  async cachedRead(action, bucket, input, fields, max) {
+    const familyId = this.state.family && this.state.family.id;
+    const userId = this.state.userId;
+    if (!familyId) throw new Error('请先创建或加入家庭');
+    const key = JSON.stringify([familyId, input.childId, ...fields]);
+    try {
+      const result = await this.transport(action, { ...input, familyId });
+      if (this.state.userId !== userId || !this.state.family || this.state.family.id !== familyId) throw new Error('家庭已切换，请刷新');
+      const next = clone(this.state); next[bucket] = next[bucket] || {};
+      delete next[bucket][key]; next[bucket][key] = result;
+      Object.keys(next[bucket]).slice(0, -max).forEach((old) => delete next[bucket][old]);
+      this.save(next); return { ...result, cached: false };
+    } catch (error) {
+      if (error.code === 'FORBIDDEN' || error.code === 'UNAUTHENTICATED') {
+        if (this.state.userId === userId && this.state.family && this.state.family.id === familyId) this.save(empty());
+        throw error;
+      }
+      const cached = this.state[bucket] && this.state[bucket][key];
+      if (cached && this.state.userId === userId && this.state.family && this.state.family.id === familyId) return { ...clone(cached), cached: true };
+      throw error;
+    }
   }
   sync(date = chinaDate()) {
     if (this.running) {

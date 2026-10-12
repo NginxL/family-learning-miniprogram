@@ -1,0 +1,26 @@
+<view class="page">
+  <view class="eyebrow">看见积累 · 按自己的节奏学</view><view class="title">知识进度</view>
+  <block wx:if="{{family}}">
+    <view class="tab-row"><view wx:for="{{children}}" wx:key="id" class="chip {{childId === item.id ? 'active' : ''}}" data-id="{{item.id}}" bindtap="selectChild">{{item.name}}</view></view>
+    <view class="card"><view class="task-title">{{children[childIndex].name}}</view><view class="subtitle">{{children[childIndex].age ? children[childIndex].age + ' 岁 · ' : ''}}在读：{{children[childIndex].gradeLabel}}</view><view class="muted" wx:if="{{children[childIndex].ageRecordedOn}}">年龄填写于 {{children[childIndex].ageRecordedOn}}，由家长更新</view><button class="quiet" bindtap="openFamily">编辑年龄和在读年级 →</button></view>
+    <view wx:if="{{progressCached}}" class="notice">显示上次同步的进度；联网后刷新。</view>
+    <view wx:if="{{progressError}}" class="notice">{{progressError}}</view>
+    <view wx:if="{{progressBusy && !progress}}" class="status">正在读取知识进度…</view>
+    <block wx:if="{{progress}}">
+      <view class="card stats-row"><view><view class="stat-number">{{progress.stats.learned}}</view><view class="muted">学过</view></view><view><view class="stat-number">{{progress.stats.mastered}}</view><view class="muted">家长确认已掌握</view></view></view>
+      <view class="notice">{{progress.highestGradeStarted ? '已涉及 ' + highestLabel + ' 的部分教材篇目。' : '尚无已完成且年级已核实的篇目。'}}这表示学习涉及的范围，不代表达到该年级的综合水平。</view>
+      <view class="section">上海五四制 · 按年级看积累</view><view class="muted">{{progress.coverageNote}}</view>
+      <view wx:for="{{progress.grades}}" wx:key="grade" class="card"><view class="row"><view class="rule-title">{{item.label}}</view><view class="muted">{{item.stage}}</view></view>
+        <view wx:if="{{item.total}}" class="subtitle">已核实 {{item.total}} 项中的：学过 {{item.learned}} · 已掌握 {{item.mastered}}</view><view wx:else class="subtitle">教材年级映射待核对</view>
+        <view class="muted">{{item.total ? '目前仅覆盖部分古诗文，未覆盖整年级知识。' : '暂无可据以计算整年级进度的完整知识清单。'}}</view>
+        <view wx:if="{{item.parentLearned}}" class="subtitle">家长标注：学过 {{item.parentLearned}} · 已掌握 {{item.parentMastered}}</view>
+        <button wx:if="{{item.total}}" class="quiet" data-grade="{{item.grade}}" bindtap="browseGrade">查看已核实内容 →</button>
+      </view>
+      <view class="section">基础知识积累</view><view wx:for="{{progress.foundations}}" wx:key="label" class="card"><view class="rule-title">{{item.label}}</view><view class="subtitle">学过 {{item.learned}} / {{item.total}} · 已掌握 {{item.mastered}} / {{item.total}}</view></view>
+      <view class="muted">以上为国家课标范围内的数量，不是上海小学毕业完成率。{{progress.unclassifiedLearned}} 项已学内容尚无已核实的年级归属。</view>
+      <view class="section">按科目</view><view wx:for="{{progress.subjects}}" wx:key="id" class="member row"><view>{{item.label}}</view><view class="muted">学过 {{item.learned}} · 已掌握 {{item.mastered}}</view></view>
+      <button class="primary" bindtap="openHistory">回顾学过的具体内容</button><button class="secondary" bindtap="openExamScope">上海中考要求与知识库覆盖</button><button class="quiet" bindtap="openLibrary">查看知识库与教材来源 →</button>
+    </block>
+  </block>
+  <view wx:else class="card empty"><view>先创建或加入一个家庭</view><button class="primary" bindtap="openFamily">前往家庭</button></view>
+</view>

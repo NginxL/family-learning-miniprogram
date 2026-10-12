@@ -1,0 +1,28 @@
+<view class="page">
+  <view class="eyebrow">每一点积累，都看得见</view><view class="title">学习回顾</view>
+  <view wx:if="{{mode === 'demo'}}" class="notice">本机演示 · 尚未连接家庭云数据</view>
+  <block wx:if="{{family}}">
+    <view class="tab-row"><view wx:for="{{children}}" wx:key="id" class="chip {{childId === item.id ? 'active' : ''}}" data-id="{{item.id}}" bindtap="selectChild">{{item.name}}</view></view>
+    <view class="card stats-row"><view><view class="stat-number">{{stats.learned}}</view><view class="muted">学过的内容</view></view><view><view class="stat-number">{{stats.mastered}}</view><view class="muted">家长确认已掌握</view></view></view>
+    <button class="quiet" bindtap="openProgress">按年级查看知识进度 →</button>
+    <view class="tab-row subjects"><view wx:for="{{subjectOptions}}" wx:key="id" class="subject-chip {{subjectFilter === item.id ? 'selected' : ''}}" data-id="{{item.id}}" bindtap="selectSubject">{{item.label}}</view></view>
+    <view class="segmented"><view class="segment {{historyFilter === 'learned' ? 'selected' : ''}}" data-id="learned" bindtap="changeFilter">学过</view><view class="segment {{historyFilter === 'mastered' ? 'selected' : ''}}" data-id="mastered" bindtap="changeFilter">已掌握</view><view class="segment {{historyFilter === 'all' ? 'selected' : ''}}" data-id="all" bindtap="changeFilter">全部安排</view></view>
+    <input value="{{query}}" bindinput="typeQuery" maxlength="80" placeholder="找诗名、单词、句子或读过的书" confirm-type="search" />
+    <view wx:if="{{historyCached}}" class="notice">当前显示本机缓存；联网刷新后可更新掌握状态、安排复习。</view>
+    <view wx:if="{{historyError}}" class="notice">{{historyError}}</view>
+    <view class="row"><view class="section">{{historyFilter === 'mastered' ? '已经学会的知识' : '一点点积累'}}</view><view class="muted">{{historyTotal}} 项</view></view>
+    <view wx:for="{{historyItems}}" wx:key="contentId" class="card">
+      <view class="row"><view class="pill {{item.subject}}">{{item.kindLabel}}</view><view class="muted">{{item.mastered ? '✓ 已掌握' : item.learnedCount ? '已学过' : '已安排'}}</view></view>
+      <view class="task-title" data-id="{{item.contentId}}" bindtap="expandContent">{{item.title}}</view>
+      <view class="muted" style="margin-top:12rpx">{{item.lastLearned ? '最近学习：' + item.lastLearned + ' · 共 ' + item.learnedCount + ' 天' : '首次安排：' + item.firstSeen}}</view>
+      <view wx:if="{{expandedId === item.contentId}}"><view class="body">{{item.detail || '和家人一起回顾这项内容。'}}</view><view class="muted">{{item.source}}</view><view wx:if="{{item.note}}" class="muted plan-help">{{item.note}}</view></view>
+      <view class="row history-actions"><button class="quiet" data-id="{{item.contentId}}" bindtap="expandContent">{{expandedId === item.contentId ? '收起 ↑' : '回顾内容 ↓'}}</button><button wx:if="{{item.learnedCount}}" class="quiet" data-id="{{item.contentId}}" disabled="{{busy || historyCached}}" bindtap="toggleMastery">{{item.mastered ? '还需巩固' : '确认已掌握'}}</button></view>
+      <button wx:if="{{item.learnedCount}}" class="secondary small" data-id="{{item.contentId}}" disabled="{{busy || historyCached}}" bindtap="reviewToday">安排到今日复习</button>
+    </view>
+    <view wx:if="{{!historyItems.length && !historyBusy && !historyError}}" class="card empty"><view class="empty-icon">🌱</view><view>{{historyFilter === 'mastered' ? '还没有确认掌握的内容' : '还没有符合条件的学习记录'}}</view><view class="subtitle">完成学习后，会出现在这里。家长可以再确认是否已经掌握。</view><button class="secondary" bindtap="openToday">前往今日学习</button></view>
+    <button wx:if="{{nextOffset !== null}}" class="secondary" bindtap="loadMore" loading="{{historyBusy}}" disabled="{{historyBusy}}">继续查看</button>
+    <view wx:if="{{historyBusy}}" class="status">正在读取学习记录…</view>
+    <view class="muted plan-help">“学过”来自完成记录；“已掌握”由家长确认，可随时改为还需巩固。</view>
+  </block>
+  <view wx:else class="card empty"><view>先创建或加入一个家庭</view><button class="primary" bindtap="openFamily">前往家庭</button></view>
+</view>

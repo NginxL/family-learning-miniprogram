@@ -1,5 +1,6 @@
 'use strict';
 const crypto = require('node:crypto');
+const learning = require('./learning/learning');
 const hash = (text) => crypto.createHash('sha256').update(text).digest('hex');
 const clone = (value) => JSON.parse(JSON.stringify(value));
 const dayKey = (familyId, date) => hash(`${familyId}:${date}`);
@@ -20,6 +21,13 @@ function identifier(value) {
   requireValue(typeof value === 'string' && /^[a-zA-Z0-9_-]{1,100}$/.test(value), 'INVALID', '编号无效');
   return value;
 }
+function childProfile(input, today) {
+  const age = input.age === undefined || input.age === null ? null : input.age;
+  const schoolGrade = input.schoolGrade === undefined || input.schoolGrade === null ? null : input.schoolGrade;
+  requireValue(age === null || (Number.isInteger(age) && age >= 1 && age <= 18), 'INVALID', '年龄需为1–18岁，或留空');
+  requireValue(schoolGrade === null || (Number.isInteger(schoolGrade) && schoolGrade >= 1 && schoolGrade <= 9), 'INVALID', '在读年级需为1–9，或留空');
+  return { age, schoolGrade, ageRecordedOn: age === null ? null : today };
+}
 function validDate(value, now) {
   requireValue(typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value), 'INVALID', '日期无效');
   const parsed = Date.parse(`${value}T00:00:00+08:00`);
@@ -31,7 +39,7 @@ function publicFamily(family, uid) {
   return {
     id: family.id, name: family.name, ownerId: family.ownerId,
     members: family.members.map(({ id, name, role }) => ({ id, name, role })),
-    children: clone(family.children), plans: clone(family.plans),
+    children: clone(family.children), plans: clone(family.plans), autoPlans: clone(family.autoPlans || {}),
     myRole: family.ownerId === uid ? 'owner' : 'guardian'
   };
 }
@@ -64,13 +72,8 @@ function createService({ store, now = Date.now, randomId = () => crypto.randomBy
         const family = {
           id: familyId, name: text(input.name, '家庭名称', 24), ownerId: uid,
           members: [{ id: uid, name: text(input.memberName, '你的称呼', 16), role: 'owner' }],
-          children: [{ id: childId, name: text(input.childName, '孩子昵称', 16) }],
-          plans: [
-            { id: `p_${newId}_poem`, childId, title: '读一读《咏鹅》', subject: 'poetry', minutes: 5,
-              detail: '骆宾王\n鹅，鹅，鹅，曲项向天歌。\n白毛浮绿水，红掌拨清波。\n\n和家人一起读，再用自己的话说说看到了什么。', source: '古诗文示例；未映射校内教材', enabled: true },
-            { id: `p_${newId}_english`, childId, title: '用英语打个招呼', subject: 'english', minutes: 5,
-              detail: 'Hello! 你好！\nGood morning! 早上好！\nMy name is ... 我的名字是……\n\n和家人轮流练习两次。', source: '自编入门示例；非教材单元', enabled: true }
-          ],
+          children: [{ id: childId, name: text(input.childName, '孩子昵称', 16), ...childProfile(input, today), version: 0 }],
+          plans: [], autoPlans: { [childId]: learning.defaultRules() },
           createdAt: timestamp, activeInviteHash: null
         };
         await tx.put('families', familyId, family);
@@ -100,6 +103,17 @@ function createService({ store, now = Date.now, randomId = () => crypto.randomBy
       requireValue(family && family.members.some((member) => member.id === uid), 'FORBIDDEN', '你已不在这个家庭中');
       const owner = () => requireValue(family.ownerId === uid, 'FORBIDDEN', '只有家庭创建者可以操作');
       const childExists = (childId) => requireValue(family.children.some((child) => child.id === childId), 'INVALID', '孩子档案不存在');
+      const ledgerKey = (childId) => hash(`${family.id}:${childId}`);
+      const readLedger = async (childId) => (await tx.get('learning', ledgerKey(childId))) || { familyId: family.id, childId, records: {} };
+      const saveLedger = async (ledger) => {
+        // Leave headroom below the CloudBase document limit; fail atomically instead of dropping history.
+        requireValue(Buffer.byteLength(JSON.stringify(ledger), 'utf8') < 700 * 1024, 'LIMIT', '学习档案容量已满，请联系管理员扩容后重试');
+        await tx.put('learning', ledgerKey(ledger.childId), ledger);
+      };
+      const saveDay = async (id, day) => {
+        requireValue(Buffer.byteLength(JSON.stringify(day), 'utf8') < 700 * 1024, 'LIMIT', '当天任务较多，请减少安排后重试');
+        await tx.put('days', id, day);
+      };
 
       if (action === 'createInvite') {
         owner();
@@ -123,18 +137,32 @@ function createService({ store, now = Date.now, randomId = () => crypto.randomBy
       if (action === 'addChild') {
         owner();
         requireValue(family.children.length < 5, 'LIMIT', '一个家庭最多5个孩子档案');
-        family.children.push({ id: `c_${newId}`, name: text(input.name, '孩子昵称', 16) });
+        family.children.push({ id: `c_${newId}`, name: text(input.name, '孩子昵称', 16), ...childProfile(input, today), version: 0 });
+        await tx.put('families', family.id, family);
+        return { family: publicFamily(family, uid) };
+      }
+      if (action === 'updateChild') {
+        owner(); childExists(input.childId);
+        const child = family.children.find((item) => item.id === input.childId);
+        requireValue(Number.isInteger(input.baseVersion) && input.baseVersion === (child.version || 0), 'CONFLICT', '档案已更新，请刷新后再修改');
+        Object.assign(child, { name: text(input.name, '孩子昵称', 16), ...childProfile(input, today), version: (child.version || 0) + 1 });
         await tx.put('families', family.id, family);
         return { family: publicFamily(family, uid) };
       }
       if (action === 'addPlan') {
         childExists(input.childId);
         requireValue(family.plans.length < 100, 'LIMIT', '最多保存100项学习计划');
-        requireValue(['poetry', 'english', 'other'].includes(input.subject), 'INVALID', '请选择学习科目');
+        requireValue(['poetry', 'english', 'reading', 'math', 'other'].includes(input.subject), 'INVALID', '请选择学习科目');
+        const kind = input.kind || learning.kindOf(input);
+        requireValue(learning.kinds.some((item) => item.id === kind && item.subject === input.subject), 'INVALID', '学习类型与科目不匹配');
+        const schedule = input.schedule || 'daily';
+        requireValue(['once', 'daily', 'library'].includes(schedule), 'INVALID', '请选择安排方式');
         requireValue(Number.isInteger(input.minutes) && input.minutes >= 1 && input.minutes <= 120, 'INVALID', '时长需为1–120分钟');
+        requireValue(input.studyGrade === undefined || input.studyGrade === null || (Number.isInteger(input.studyGrade) && input.studyGrade >= 1 && input.studyGrade <= 9), 'INVALID', '学习年级无效');
         family.plans.push({ id: `p_${newId}`, childId: input.childId, title: text(input.title, '任务名称', 60),
           detail: typeof input.detail === 'string' ? input.detail.trim().slice(0, 2000) : '',
-          subject: input.subject, minutes: input.minutes, enabled: true, source: '家长自建' });
+          subject: input.subject, kind, schedule, date: today, minutes: input.minutes, enabled: true, source: '家长自建',
+          ...(input.studyGrade ? { studyGrade: input.studyGrade } : {}) });
         await tx.put('families', family.id, family);
         return { family: publicFamily(family, uid) };
       }
@@ -145,22 +173,83 @@ function createService({ store, now = Date.now, randomId = () => crypto.randomBy
         await tx.put('families', family.id, family);
         return { family: publicFamily(family, uid) };
       }
+      if (action === 'saveAutoPlans') {
+        childExists(input.childId);
+        requireValue(Array.isArray(input.rules) && input.rules.length === learning.kinds.length, 'INVALID', '请提供完整的每日安排');
+        const seen = new Set();
+        const rules = input.rules.map((rule) => {
+          requireValue(rule && typeof rule === 'object', 'INVALID', '每日安排无效');
+          const kind = learning.kinds.find((item) => item.id === rule.kind);
+          requireValue(kind && !seen.has(kind.id) && ['new', 'review'].includes(rule.mode)
+            && Number.isInteger(rule.quantity) && rule.quantity >= 0 && rule.quantity <= kind.max, 'INVALID', '每日数量或新学／复习类型无效');
+          const scope = rule.scope || 'starter';
+          requireValue(learning.scopeOptions(kind.id).some((item) => item.id === scope), 'INVALID', '学习内容范围无效');
+          seen.add(kind.id); return { kind: kind.id, mode: rule.mode, quantity: rule.quantity, scope };
+        });
+        family.autoPlans = family.autoPlans || {};
+        family.autoPlans[input.childId] = rules;
+        await tx.put('families', family.id, family);
+        return { family: publicFamily(family, uid) };
+      }
       if (action === 'getDay') {
         const date = validDate(input.date || today, timestamp);
         const id = dayKey(family.id, date);
         let day = await tx.get('days', id);
-        const existed = Boolean(day);
-        // Past days remain immutable snapshots of their actual assignments.
+        const beforeDay = JSON.stringify(day);
+        const ledgers = {};
+        const originals = {};
+        for (const child of family.children) {
+          ledgers[child.id] = await readLedger(child.id);
+          originals[child.id] = JSON.stringify(ledgers[child.id]);
+        }
+        // Old assignments are indexed when viewed, but no past tasks are invented.
         if (date === today) {
           day = day || { familyId: family.id, date, tasks: [] };
-          const known = new Set(day.tasks.map((task) => task.id));
-          const added = family.plans.filter((plan) => plan.enabled && !known.has(plan.id));
-          if (added.length || !existed) {
-            day.tasks.push(...added.map((plan) => ({ ...clone(plan), done: false, version: 0, updatedBy: null, updatedAt: null })));
-            await tx.put('days', id, day);
-          }
+          learning.generateDay(family, day, ledgers);
+          if (JSON.stringify(day) !== beforeDay) await saveDay(id, day);
+        } else if (day) {
+          for (const child of family.children) learning.recordTasks(ledgers[child.id], day.tasks.filter((task) => task.childId === child.id), date);
         }
+        for (const child of family.children) if (originals[child.id] !== JSON.stringify(ledgers[child.id])) await saveLedger(ledgers[child.id]);
         return { day: day || { familyId: family.id, date, tasks: [] }, today };
+      }
+      if (action === 'getHistory') {
+        childExists(input.childId);
+        requireValue(input.subject === undefined || learning.subjects.some((item) => item.id === input.subject), 'INVALID', '科目无效');
+        requireValue(input.filter === undefined || ['all', 'learned', 'mastered'].includes(input.filter), 'INVALID', '回顾范围无效');
+        requireValue(input.query === undefined || (typeof input.query === 'string' && input.query.length <= 80), 'INVALID', '搜索内容过长');
+        requireValue(input.offset === undefined || (Number.isInteger(input.offset) && input.offset >= 0 && input.offset <= 100000), 'INVALID', '分页无效');
+        return learning.history(await readLedger(input.childId), input);
+      }
+      if (action === 'getProgress') {
+        childExists(input.childId);
+        return learning.progress(await readLedger(input.childId));
+      }
+      if (action === 'setMastery' || action === 'reviewContent' || action === 'assignContent') {
+        childExists(input.childId); identifier(input.contentId);
+        const ledger = await readLedger(input.childId);
+        const entry = Object.hasOwn(ledger.records, input.contentId) ? ledger.records[input.contentId] : null;
+        const candidate = learning.catalogById.get(input.contentId);
+        if (action === 'assignContent') requireValue(candidate, 'INVALID', '知识库中没有这项内容，请更新小程序后重试');
+        else requireValue(entry && entry.completedDates.length, 'INVALID', '请先完成这项内容的学习');
+        if (action === 'setMastery') {
+          requireValue(typeof input.mastered === 'boolean' && Number.isInteger(input.baseVersion), 'INVALID', '掌握状态无效');
+          requireValue(entry.version === input.baseVersion, 'CONFLICT', '家人已更新学习记录，请刷新后再确认');
+          entry.mastered = input.mastered; entry.version += 1;
+          await saveLedger(ledger);
+          return { mastered: entry.mastered };
+        }
+        const id = dayKey(family.id, today);
+        const day = (await tx.get('days', id)) || { familyId: family.id, date: today, tasks: [] };
+        let task = day.tasks.find((item) => item.childId === input.childId && learning.contentId(item) === input.contentId);
+        if (!task) {
+          const mode = entry ? (entry.completedDates.length ? 'review' : 'manual') : 'new';
+          task = learning.taskFrom(action === 'assignContent' ? candidate : entry.item, input.childId, `r_${input.childId}_${input.contentId}`, mode);
+          day.tasks.push(task);
+          learning.recordTasks(ledger, day.tasks.filter((item) => item.childId === input.childId), today);
+          await saveDay(id, day); await saveLedger(ledger);
+        }
+        return { task, date: today };
       }
       if (action === 'setTaskDone') {
         const date = validDate(input.date, timestamp);
@@ -182,7 +271,10 @@ function createService({ store, now = Date.now, randomId = () => crypto.randomBy
         task.version += 1;
         task.updatedAt = timestamp;
         task.updatedBy = uid;
-        await tx.put('days', id, day);
+        const ledger = await readLedger(task.childId);
+        learning.recordTasks(ledger, day.tasks.filter((item) => item.childId === task.childId), date);
+        await saveLedger(ledger);
+        await saveDay(id, day);
         await tx.put('receipts', receiptId, { familyId: family.id, fingerprint, task: clone(task), createdAt: timestamp });
         return { task: clone(task), duplicate: false };
       }

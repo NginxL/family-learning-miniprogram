@@ -1,21 +1,41 @@
 <view class="page">
-  <view class="eyebrow">小目标 · 慢慢来</view><view class="title">学习计划</view>
-  <view class="subtitle">每天重复的小练习，让积累变得简单。</view>
+  <view class="eyebrow">把每天的进步，安排好</view><view class="title">学习计划</view>
   <view wx:if="{{mode === 'demo'}}" class="notice">本机演示 · 尚未连接家庭云数据</view>
   <block wx:if="{{family}}">
     <view class="tab-row"><view wx:for="{{children}}" wx:key="id" class="chip {{childId === item.id ? 'active' : ''}}" data-id="{{item.id}}" bindtap="selectChild">{{item.name}}</view></view>
-    <view class="section">每天的安排</view>
-    <view wx:for="{{plans}}" wx:key="id" class="card"><view class="row"><view><view class="pill {{item.subject}}">{{item.subjectLabel}} · {{item.minutes}} 分钟</view><view class="task-title">{{item.title}}</view></view><switch checked="{{item.enabled}}" disabled="{{busy}}" color="#27654c" data-id="{{item.id}}" bindchange="togglePlan" /></view></view>
-    <view class="muted" style="margin-top:20rpx">暂停后不再生成后续任务，已生成的当天任务和历史记录会保留。新增计划会加入今天的任务。</view>
-    <form class="card" bindsubmit="addPlan">
-      <view class="section" style="margin-top:0">添加每日任务</view>
-      <label class="label">孩子</label><picker range="{{children}}" range-key="name" value="{{childIndex}}" bindchange="pickChild"><view class="picker">{{children[childIndex].name}} ▾</view></picker>
-      <label class="label">科目</label><picker range="{{subjects}}" value="{{subjectIndex}}" bindchange="changeSubject"><view class="picker">{{subjects[subjectIndex]}} ▾</view></picker>
-      <label class="label">任务名称</label><input name="title" value="{{formTitle}}" maxlength="60" placeholder="例如：读一首古诗" />
-      <label class="label">学习内容或给孩子的提示</label><textarea name="detail" value="{{formDetail}}" maxlength="2000" placeholder="写下要读的内容，或今天的小目标" auto-height />
-      <label class="label">预计分钟数</label><input name="minutes" value="{{formMinutes}}" type="number" maxlength="3" placeholder="5" />
-      <button class="primary" form-type="submit" loading="{{busy}}" disabled="{{busy}}">加入每日计划</button>
-    </form>
+    <view class="tab-row subjects"><view wx:for="{{subjectOptions}}" wx:key="id" class="subject-chip {{subjectFilter === item.id ? 'selected' : ''}}" data-id="{{item.id}}" bindtap="selectSubject">{{item.label}}</view></view>
+    <view class="segmented"><view class="segment {{editor === 'auto' ? 'selected' : ''}}" data-id="auto" bindtap="changeEditor">自动安排</view><view class="segment {{editor === 'manual' ? 'selected' : ''}}" data-id="manual" bindtap="changeEditor">家长添加</view></view>
+    <block wx:if="{{editor === 'auto'}}">
+      <view class="subtitle">每天 {{dailyCount}} 项 · 数量设为 0 即暂停</view>
+      <view wx:for="{{visibleRules}}" wx:key="id" class="card rule-card">
+        <view class="row"><view><view class="rule-title">{{item.label}}</view><view class="muted">内容库 {{item.poolCount}} 项</view></view><picker range="{{modes}}" value="{{item.mode === 'review' ? 1 : 0}}" data-id="{{item.id}}" bindchange="changeMode"><view class="mode-picker">{{item.mode === 'review' ? '复习' : '全新'}} ▾</view></picker></view>
+        <picker range="{{item.scopes}}" range-key="label" value="{{item.scopeIndex}}" data-id="{{item.id}}" bindchange="changeScope"><view class="picker" style="margin-top:18rpx">{{item.scopes[item.scopeIndex].label}} ▾</view></picker>
+        <view class="row" style="margin-top:24rpx"><view class="muted">每天 · {{item.unit}}（0–{{item.max}}）</view><view class="stepper"><button class="step" data-id="{{item.id}}" data-step="-1" bindtap="stepQuantity">−</button><input class="quantity" type="number" maxlength="2" value="{{item.quantity}}" data-id="{{item.id}}" bindinput="changeQuantity" /><button class="step" data-id="{{item.id}}" data-step="1" bindtap="stepQuantity">＋</button></view></view>
+        <button class="quiet" data-id="{{item.id}}" bindtap="browseRule">看看这些内容 →</button>
+      </view>
+      <view wx:if="{{!visibleRules.length}}" class="card empty">先在「家长添加」中补充这一类内容库。</view>
+      <view class="muted plan-help">全新：以前未安排过。复习：已完成过，较久未学的优先。每天首次打开时生成；已生成的类型保持当天安排，修改从明天生效。</view>
+      <button class="primary" bindtap="saveAutoPlans" loading="{{busy}}" disabled="{{busy}}">保存每日安排</button>
+      <view class="row" style="margin-top:18rpx"><button wx:if="{{draftDirty}}" class="quiet" bindtap="resetRules">放弃未保存修改</button><button class="quiet" bindtap="openToday">查看今日任务 →</button></view>
+      <view class="muted plan-help">默认亲子入门，可扩大到课标范围。课标学段不是上海五四制年级；校内教材全量仍在核对。家长加入的内容库也会参与安排。</view>
+    </block>
+    <block wx:else>
+      <form class="card" bindsubmit="addPlan">
+        <view class="rule-title">为 {{children[childIndex].name}} 添加内容</view>
+        <label class="label">学习类型</label><picker range="{{kinds}}" range-key="label" value="{{kindIndex}}" bindchange="changeKind"><view class="picker">{{kinds[kindIndex].label}} ▾</view></picker>
+        <label class="label">怎样安排</label><picker range="{{schedules}}" value="{{scheduleIndex}}" bindchange="changeSchedule"><view class="picker">{{schedules[scheduleIndex]}} ▾</view></picker>
+        <view wx:if="{{scheduleIndex === 2}}" class="muted" style="margin-top:10rpx">保存到内容库，按上方自动安排的数量选取；一条内容计一项。</view>
+        <label class="label">名称</label><input name="title" value="{{formTitle}}" maxlength="60" placeholder="例如：apple ／《小池》／绘本第 1–3 页" />
+        <label class="label">正文或学习提示</label><textarea name="detail" value="{{formDetail}}" maxlength="2000" placeholder="单词释义、诗文正文、句子，或读书页码和问题" auto-height />
+        <label class="label">预计分钟数</label><input name="minutes" value="{{formMinutes}}" type="number" maxlength="3" placeholder="5" />
+        <label class="label">内容年级（家长标注，选填）</label><picker range="{{gradeLabels}}" value="{{studyGrade}}" bindchange="changeStudyGrade"><view class="picker">{{gradeLabels[studyGrade]}} ▾</view></picker><view class="muted">依据孩子的课本填写；会与教材已核实的进度分别展示。</view>
+        <button class="primary" form-type="submit" loading="{{busy}}" disabled="{{busy}}">{{scheduleIndex === 2 ? '加入内容库' : '添加学习安排'}}</button>
+      </form>
+      <view class="section">家长添加的内容</view>
+      <view wx:for="{{plans}}" wx:key="id" class="card"><view class="row"><view class="grow"><view class="pill {{item.subject}}">{{item.kindLabel}} · {{item.scheduleLabel}}</view><view class="task-title">{{item.title}}</view></view><switch checked="{{item.enabled}}" disabled="{{busy}}" color="#27654c" data-id="{{item.id}}" bindchange="togglePlan" /></view></view>
+      <view wx:if="{{!plans.length}}" class="muted">还没有手动添加的内容。</view>
+      <view class="muted plan-help">暂停只影响后续安排，已生成的任务和学习记录会保留。</view>
+    </block>
   </block>
   <view wx:else class="card empty"><view>先创建或加入一个家庭</view><button class="primary" bindtap="openFamily">前往家庭</button></view>
 </view>

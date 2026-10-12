@@ -3,14 +3,14 @@
   "verified_date": "2026-10-12",
   "source_url": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582344386456.pdf",
   "entry_count": 135,
-  "scope": "国家课标推荐135篇/段目录；非上海中考完整范围，非可直接上线的完整学习内容库",
+  "scope": "国家课标推荐135篇/段目录；公版原作见配套正文文件，非上海中考完整范围",
   "notes": [
     "保留课标原有学段与标题；上海五四学制年级映射待确认。",
     "同名不同首按作者、首句区分；论语十二章、孟子三则等按课标合并计为一条。",
     "作者或文献来源在课标未单列时由标题提供；未补写未核对的篇首。",
     "source_excerpt_selector为课标用于识别作品/选段的文字，不代表完整背诵范围。",
     "木兰辞/木兰诗、杂说（四）/马说等教材别名需要在教材映射时维护。",
-    "正文、拼音、注释、音频、上海教材补充篇目均未在此目录内。"
+    "公版原作已在 chinese-moe-2022-texts.json 入库；拼音、现代注释、音频与教材逐字校对待确认。"
   ],
   "entries": [
     {
@@ -23,8 +23,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 58,
       "source_pdf_page": 65,
-      "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 1,
+          "bookId": "chinese-1a-sample",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "edition": "封面标注审定2024；电子样本未载ISBN、印次",
+          "sourceUrl": "https://keben.app/book/0358",
+          "outlineDestination": "#page=67",
+          "sourcePdfPage": 67,
+          "sourcePrintPage": 62,
+          "unit": "第五单元·阅读第2课",
+          "sourceKind": "public_sample",
+          "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+          "status": "catalogue_verified"
+        }
+      ],
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-001"
     },
     {
       "id": "moe-2022-zh-1-6-002",
@@ -37,7 +54,8 @@
       "source_print_page": 58,
       "source_pdf_page": 65,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-002"
     },
     {
       "id": "moe-2022-zh-1-6-003",
@@ -50,7 +68,8 @@
       "source_print_page": 58,
       "source_pdf_page": 65,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-003"
     },
     {
       "id": "moe-2022-zh-1-6-004",
@@ -62,8 +81,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 58,
       "source_pdf_page": 65,
-      "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 1,
+          "bookId": "chinese-1a-sample",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "edition": "封面标注审定2024；电子样本未载ISBN、印次",
+          "sourceUrl": "https://keben.app/book/0358",
+          "outlineDestination": "#page=21",
+          "sourcePdfPage": 21,
+          "sourcePrintPage": 16,
+          "unit": "第一单元·语文园地一·日积月累",
+          "sourceKind": "public_sample",
+          "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+          "status": "catalogue_verified"
+        }
+      ],
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "poem-goose"
     },
     {
       "id": "moe-2022-zh-1-6-005",
@@ -75,8 +111,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 58,
       "source_pdf_page": 65,
-      "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 1,
+          "bookId": "chinese-1a-sample",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "edition": "封面标注审定2024；电子样本未载ISBN、印次",
+          "sourceUrl": "https://keben.app/book/0358",
+          "outlineDestination": "#page=107",
+          "sourcePdfPage": 107,
+          "sourcePrintPage": 102,
+          "unit": "第八单元·语文园地八·日积月累",
+          "sourceKind": "public_sample",
+          "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+          "status": "catalogue_verified"
+        }
+      ],
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "poem-wind"
     },
     {
       "id": "moe-2022-zh-1-6-006",
@@ -89,7 +142,8 @@
       "source_print_page": 58,
       "source_pdf_page": 65,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "poem-willow"
     },
     {
       "id": "moe-2022-zh-1-6-007",
@@ -102,7 +156,8 @@
       "source_print_page": 58,
       "source_pdf_page": 65,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-007"
     },
     {
       "id": "moe-2022-zh-1-6-008",
@@ -115,7 +170,8 @@
       "source_print_page": 58,
       "source_pdf_page": 65,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-008"
     },
     {
       "id": "moe-2022-zh-1-6-009",
@@ -128,7 +184,8 @@
       "source_print_page": 58,
       "source_pdf_page": 65,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "poem-stork-tower"
     },
     {
       "id": "moe-2022-zh-1-6-010",
@@ -141,7 +198,8 @@
       "source_print_page": 59,
       "source_pdf_page": 66,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "poem-spring-morning"
     },
     {
       "id": "moe-2022-zh-1-6-011",
@@ -154,7 +212,8 @@
       "source_print_page": 59,
       "source_pdf_page": 66,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-011"
     },
     {
       "id": "moe-2022-zh-1-6-012",
@@ -167,7 +226,8 @@
       "source_print_page": 59,
       "source_pdf_page": 66,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-012"
     },
     {
       "id": "moe-2022-zh-1-6-013",
@@ -180,7 +240,8 @@
       "source_print_page": 59,
       "source_pdf_page": 66,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-013"
     },
     {
       "id": "moe-2022-zh-1-6-014",
@@ -192,8 +253,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 59,
       "source_pdf_page": 66,
-      "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 3,
+          "bookId": "chinese-3a-sample",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "edition": "封面标注审定2024；电子样本未载ISBN、印次",
+          "sourceUrl": "https://keben.app/book/0357",
+          "outlineDestination": "#page=89",
+          "sourcePdfPage": 89,
+          "sourcePrintPage": 84,
+          "unit": "第七单元·第20课古诗三首",
+          "sourceKind": "public_sample",
+          "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+          "status": "catalogue_verified"
+        }
+      ],
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-014"
     },
     {
       "id": "moe-2022-zh-1-6-015",
@@ -205,8 +283,22 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 59,
       "source_pdf_page": 66,
-      "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 6,
+          "bookId": "chinese-6a",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "edition": "根据2022年版课程标准修订",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=2ca4002f-cb3d-4a21-bcfe-ebb94032a400&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#%5B142%2C%22XYZ%22%2Cnull%2Cnull%2Cnull%5D",
+          "sourceKind": "official_outline",
+          "evidence": "官方教材目录篇名与册次已核对；正文异文校对另计",
+          "status": "catalogue_verified"
+        }
+      ],
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-015"
     },
     {
       "id": "moe-2022-zh-1-6-016",
@@ -219,7 +311,8 @@
       "source_print_page": 59,
       "source_pdf_page": 66,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-016"
     },
     {
       "id": "moe-2022-zh-1-6-017",
@@ -232,7 +325,8 @@
       "source_print_page": 59,
       "source_pdf_page": 66,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "poem-quiet-night"
     },
     {
       "id": "moe-2022-zh-1-6-018",
@@ -245,7 +339,8 @@
       "source_print_page": 59,
       "source_pdf_page": 66,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-018"
     },
     {
       "id": "moe-2022-zh-1-6-019",
@@ -258,7 +353,8 @@
       "source_print_page": 59,
       "source_pdf_page": 66,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-019"
     },
     {
       "id": "moe-2022-zh-1-6-020",
@@ -271,7 +367,8 @@
       "source_print_page": 59,
       "source_pdf_page": 66,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-020"
     },
     {
       "id": "moe-2022-zh-1-6-021",
@@ -284,7 +381,8 @@
       "source_print_page": 59,
       "source_pdf_page": 66,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-021"
     },
     {
       "id": "moe-2022-zh-1-6-022",
@@ -296,8 +394,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 59,
       "source_pdf_page": 66,
-      "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 3,
+          "bookId": "chinese-3a-sample",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "edition": "封面标注审定2024；电子样本未载ISBN、印次",
+          "sourceUrl": "https://keben.app/book/0357",
+          "outlineDestination": "#page=87",
+          "sourcePdfPage": 87,
+          "sourcePrintPage": 82,
+          "unit": "第六单元·语文园地·日积月累",
+          "sourceKind": "public_sample",
+          "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+          "status": "catalogue_verified"
+        }
+      ],
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "poem-baidi"
     },
     {
       "id": "moe-2022-zh-1-6-023",
@@ -309,8 +424,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 59,
       "source_pdf_page": 66,
-      "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 3,
+          "bookId": "chinese-3a-sample",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "edition": "封面标注审定2024；电子样本未载ISBN、印次",
+          "sourceUrl": "https://keben.app/book/0357",
+          "outlineDestination": "#page=89",
+          "sourcePdfPage": 89,
+          "sourcePrintPage": 84,
+          "unit": "第七单元·第20课古诗三首",
+          "sourceKind": "public_sample",
+          "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+          "status": "catalogue_verified"
+        }
+      ],
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-023"
     },
     {
       "id": "moe-2022-zh-1-6-024",
@@ -323,7 +455,8 @@
       "source_print_page": 59,
       "source_pdf_page": 66,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-024"
     },
     {
       "id": "moe-2022-zh-1-6-025",
@@ -336,7 +469,8 @@
       "source_print_page": 59,
       "source_pdf_page": 66,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-025"
     },
     {
       "id": "moe-2022-zh-1-6-026",
@@ -349,7 +483,8 @@
       "source_print_page": 59,
       "source_pdf_page": 66,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-026"
     },
     {
       "id": "moe-2022-zh-1-6-027",
@@ -362,7 +497,8 @@
       "source_print_page": 59,
       "source_pdf_page": 66,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-027"
     },
     {
       "id": "moe-2022-zh-1-6-028",
@@ -374,8 +510,22 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 59,
       "source_pdf_page": 66,
-      "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 6,
+          "bookId": "chinese-6a",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "edition": "根据2022年版课程标准修订",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=2ca4002f-cb3d-4a21-bcfe-ebb94032a400&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#%5B143%2C%22XYZ%22%2Cnull%2Cnull%2Cnull%5D",
+          "sourceKind": "official_outline",
+          "evidence": "官方教材目录篇名与册次已核对；正文异文校对另计",
+          "status": "catalogue_verified"
+        }
+      ],
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-028"
     },
     {
       "id": "moe-2022-zh-1-6-029",
@@ -388,7 +538,8 @@
       "source_print_page": 59,
       "source_pdf_page": 66,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-029"
     },
     {
       "id": "moe-2022-zh-1-6-030",
@@ -401,7 +552,8 @@
       "source_print_page": 59,
       "source_pdf_page": 66,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-030"
     },
     {
       "id": "moe-2022-zh-1-6-031",
@@ -414,7 +566,8 @@
       "source_print_page": 59,
       "source_pdf_page": 66,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-031"
     },
     {
       "id": "moe-2022-zh-1-6-032",
@@ -427,7 +580,8 @@
       "source_print_page": 59,
       "source_pdf_page": 66,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-032"
     },
     {
       "id": "moe-2022-zh-1-6-033",
@@ -440,7 +594,8 @@
       "source_print_page": 59,
       "source_pdf_page": 66,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-033"
     },
     {
       "id": "moe-2022-zh-1-6-034",
@@ -453,7 +608,8 @@
       "source_print_page": 59,
       "source_pdf_page": 66,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-034"
     },
     {
       "id": "moe-2022-zh-1-6-035",
@@ -465,8 +621,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 59,
       "source_pdf_page": 66,
-      "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 3,
+          "bookId": "chinese-3a-sample",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "edition": "封面标注审定2024；电子样本未载ISBN、印次",
+          "sourceUrl": "https://keben.app/book/0357",
+          "outlineDestination": "#page=19",
+          "sourcePdfPage": 19,
+          "sourcePrintPage": 14,
+          "unit": "第二单元·第4课古诗三首",
+          "sourceKind": "public_sample",
+          "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+          "status": "catalogue_verified"
+        }
+      ],
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-035"
     },
     {
       "id": "moe-2022-zh-1-6-036",
@@ -479,7 +652,8 @@
       "source_print_page": 59,
       "source_pdf_page": 66,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-036"
     },
     {
       "id": "moe-2022-zh-1-6-037",
@@ -492,7 +666,8 @@
       "source_print_page": 59,
       "source_pdf_page": 66,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-037"
     },
     {
       "id": "moe-2022-zh-1-6-038",
@@ -505,7 +680,8 @@
       "source_print_page": 60,
       "source_pdf_page": 67,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "poem-pond"
     },
     {
       "id": "moe-2022-zh-1-6-039",
@@ -518,7 +694,8 @@
       "source_print_page": 60,
       "source_pdf_page": 67,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-039"
     },
     {
       "id": "moe-2022-zh-1-6-040",
@@ -531,7 +708,8 @@
       "source_print_page": 60,
       "source_pdf_page": 67,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-040"
     },
     {
       "id": "moe-2022-zh-1-6-041",
@@ -543,8 +721,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 60,
       "source_pdf_page": 67,
-      "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 1,
+          "bookId": "chinese-1a-sample",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "edition": "封面标注审定2024；电子样本未载ISBN、印次",
+          "sourceUrl": "https://keben.app/book/0358",
+          "outlineDestination": "#page=63",
+          "sourcePdfPage": 63,
+          "sourcePrintPage": 58,
+          "unit": "第四单元·语文园地四·日积月累",
+          "sourceKind": "public_sample",
+          "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+          "status": "catalogue_verified"
+        }
+      ],
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "poem-farmer-two"
     },
     {
       "id": "moe-2022-zh-1-6-042",
@@ -557,7 +752,8 @@
       "source_print_page": 60,
       "source_pdf_page": 67,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-042"
     },
     {
       "id": "moe-2022-zh-1-6-043",
@@ -570,7 +766,8 @@
       "source_print_page": 60,
       "source_pdf_page": 67,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "poem-river-snow"
     },
     {
       "id": "moe-2022-zh-1-6-044",
@@ -583,7 +780,8 @@
       "source_print_page": 60,
       "source_pdf_page": 67,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "poem-hermit"
     },
     {
       "id": "moe-2022-zh-1-6-045",
@@ -595,8 +793,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 60,
       "source_pdf_page": 67,
-      "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 3,
+          "bookId": "chinese-3a-sample",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "edition": "封面标注审定2024；电子样本未载ISBN、印次",
+          "sourceUrl": "https://keben.app/book/0357",
+          "outlineDestination": "#page=19",
+          "sourcePdfPage": 19,
+          "sourcePrintPage": 14,
+          "unit": "第二单元·第4课古诗三首",
+          "sourceKind": "public_sample",
+          "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+          "status": "catalogue_verified"
+        }
+      ],
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-045"
     },
     {
       "id": "moe-2022-zh-1-6-046",
@@ -609,7 +824,8 @@
       "source_print_page": 60,
       "source_pdf_page": 67,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-046"
     },
     {
       "id": "moe-2022-zh-1-6-047",
@@ -621,8 +837,22 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 60,
       "source_pdf_page": 67,
-      "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 6,
+          "bookId": "chinese-6a",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "edition": "根据2022年版课程标准修订",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=2ca4002f-cb3d-4a21-bcfe-ebb94032a400&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#%5B69%2C%22XYZ%22%2Cnull%2Cnull%2Cnull%5D",
+          "sourceKind": "official_outline",
+          "evidence": "官方教材目录篇名与册次已核对；正文异文校对另计",
+          "status": "catalogue_verified"
+        }
+      ],
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-047"
     },
     {
       "id": "moe-2022-zh-1-6-048",
@@ -635,7 +865,8 @@
       "source_print_page": 60,
       "source_pdf_page": 67,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-048"
     },
     {
       "id": "moe-2022-zh-1-6-049",
@@ -648,7 +879,8 @@
       "source_print_page": 60,
       "source_pdf_page": 67,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-049"
     },
     {
       "id": "moe-2022-zh-1-6-050",
@@ -661,7 +893,8 @@
       "source_print_page": 60,
       "source_pdf_page": 67,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-050"
     },
     {
       "id": "moe-2022-zh-1-6-051",
@@ -674,7 +907,8 @@
       "source_print_page": 60,
       "source_pdf_page": 67,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-051"
     },
     {
       "id": "moe-2022-zh-1-6-052",
@@ -686,8 +920,22 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 60,
       "source_pdf_page": 67,
-      "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 6,
+          "bookId": "chinese-6a",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "edition": "根据2022年版课程标准修订",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=2ca4002f-cb3d-4a21-bcfe-ebb94032a400&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#%5B70%2C%22XYZ%22%2Cnull%2Cnull%2Cnull%5D",
+          "sourceKind": "official_outline",
+          "evidence": "官方教材目录篇名与册次已核对；正文异文校对另计",
+          "status": "catalogue_verified"
+        }
+      ],
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-052"
     },
     {
       "id": "moe-2022-zh-1-6-053",
@@ -699,8 +947,22 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 60,
       "source_pdf_page": 67,
-      "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 6,
+          "bookId": "chinese-6a",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "edition": "根据2022年版课程标准修订",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=2ca4002f-cb3d-4a21-bcfe-ebb94032a400&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#%5B19%2C%22XYZ%22%2Cnull%2Cnull%2Cnull%5D",
+          "sourceKind": "official_outline",
+          "evidence": "官方教材目录篇名与册次已核对；正文异文校对另计",
+          "status": "catalogue_verified"
+        }
+      ],
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-053"
     },
     {
       "id": "moe-2022-zh-1-6-054",
@@ -712,8 +974,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 60,
       "source_pdf_page": 67,
-      "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 3,
+          "bookId": "chinese-3a-sample",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "edition": "封面标注审定2024；电子样本未载ISBN、印次",
+          "sourceUrl": "https://keben.app/book/0357",
+          "outlineDestination": "#page=90",
+          "sourcePdfPage": 90,
+          "sourcePrintPage": 85,
+          "unit": "第七单元·第20课古诗三首",
+          "sourceKind": "public_sample",
+          "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+          "status": "catalogue_verified"
+        }
+      ],
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-054"
     },
     {
       "id": "moe-2022-zh-1-6-055",
@@ -726,7 +1005,8 @@
       "source_print_page": 60,
       "source_pdf_page": 67,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-055"
     },
     {
       "id": "moe-2022-zh-1-6-056",
@@ -739,7 +1019,8 @@
       "source_print_page": 60,
       "source_pdf_page": 67,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-056"
     },
     {
       "id": "moe-2022-zh-1-6-057",
@@ -752,7 +1033,8 @@
       "source_print_page": 60,
       "source_pdf_page": 67,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-057"
     },
     {
       "id": "moe-2022-zh-1-6-058",
@@ -765,7 +1047,8 @@
       "source_print_page": 60,
       "source_pdf_page": 67,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-058"
     },
     {
       "id": "moe-2022-zh-1-6-059",
@@ -778,7 +1061,8 @@
       "source_print_page": 60,
       "source_pdf_page": 67,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-059"
     },
     {
       "id": "moe-2022-zh-1-6-060",
@@ -791,7 +1075,8 @@
       "source_print_page": 60,
       "source_pdf_page": 67,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-060"
     },
     {
       "id": "moe-2022-zh-1-6-061",
@@ -804,7 +1089,8 @@
       "source_print_page": 60,
       "source_pdf_page": 67,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-061"
     },
     {
       "id": "moe-2022-zh-1-6-062",
@@ -817,7 +1103,8 @@
       "source_print_page": 60,
       "source_pdf_page": 67,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-062"
     },
     {
       "id": "moe-2022-zh-1-6-063",
@@ -830,7 +1117,8 @@
       "source_print_page": 60,
       "source_pdf_page": 67,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "poem-small-pond"
     },
     {
       "id": "moe-2022-zh-1-6-064",
@@ -843,7 +1131,8 @@
       "source_print_page": 60,
       "source_pdf_page": 67,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-064"
     },
     {
       "id": "moe-2022-zh-1-6-065",
@@ -855,8 +1144,22 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 60,
       "source_pdf_page": 67,
-      "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 6,
+          "bookId": "chinese-6a",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "edition": "根据2022年版课程标准修订",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=2ca4002f-cb3d-4a21-bcfe-ebb94032a400&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#%5B144%2C%22XYZ%22%2Cnull%2Cnull%2Cnull%5D",
+          "sourceKind": "official_outline",
+          "evidence": "官方教材目录篇名与册次已核对；正文异文校对另计",
+          "status": "catalogue_verified"
+        }
+      ],
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-065"
     },
     {
       "id": "moe-2022-zh-1-6-066",
@@ -869,7 +1172,8 @@
       "source_print_page": 61,
       "source_pdf_page": 68,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-066"
     },
     {
       "id": "moe-2022-zh-1-6-067",
@@ -882,7 +1186,8 @@
       "source_print_page": 61,
       "source_pdf_page": 68,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-067"
     },
     {
       "id": "moe-2022-zh-1-6-068",
@@ -895,7 +1200,8 @@
       "source_print_page": 61,
       "source_pdf_page": 68,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-068"
     },
     {
       "id": "moe-2022-zh-1-6-069",
@@ -908,7 +1214,8 @@
       "source_print_page": 61,
       "source_pdf_page": 68,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-069"
     },
     {
       "id": "moe-2022-zh-1-6-070",
@@ -921,7 +1228,8 @@
       "source_print_page": 61,
       "source_pdf_page": 68,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-070"
     },
     {
       "id": "moe-2022-zh-1-6-071",
@@ -934,7 +1242,8 @@
       "source_print_page": 61,
       "source_pdf_page": 68,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-071"
     },
     {
       "id": "moe-2022-zh-1-6-072",
@@ -947,7 +1256,8 @@
       "source_print_page": 61,
       "source_pdf_page": 68,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-072"
     },
     {
       "id": "moe-2022-zh-1-6-073",
@@ -959,8 +1269,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 3,
+          "bookId": "chinese-3a-sample",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "edition": "封面标注审定2024；电子样本未载ISBN、印次",
+          "sourceUrl": "https://keben.app/book/0357",
+          "outlineDestination": "#page=17",
+          "sourcePdfPage": 17,
+          "sourcePrintPage": 12,
+          "unit": "第一单元·语文园地·日积月累",
+          "sourceKind": "public_sample",
+          "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+          "status": "catalogue_verified"
+        }
+      ],
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-073"
     },
     {
       "id": "moe-2022-zh-1-6-074",
@@ -973,7 +1300,8 @@
       "source_print_page": 61,
       "source_pdf_page": 68,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-074"
     },
     {
       "id": "moe-2022-zh-1-6-075",
@@ -986,7 +1314,8 @@
       "source_print_page": 61,
       "source_pdf_page": 68,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-1-6-075"
     },
     {
       "id": "moe-2022-zh-7-9-001",
@@ -999,7 +1328,8 @@
       "source_print_page": 61,
       "source_pdf_page": 68,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-001"
     },
     {
       "id": "moe-2022-zh-7-9-002",
@@ -1012,7 +1342,8 @@
       "source_print_page": 61,
       "source_pdf_page": 68,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-002"
     },
     {
       "id": "moe-2022-zh-7-9-003",
@@ -1025,7 +1356,8 @@
       "source_print_page": 61,
       "source_pdf_page": 68,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-003"
     },
     {
       "id": "moe-2022-zh-7-9-004",
@@ -1038,7 +1370,8 @@
       "source_print_page": 61,
       "source_pdf_page": 68,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-004"
     },
     {
       "id": "moe-2022-zh-7-9-005",
@@ -1051,7 +1384,8 @@
       "source_print_page": 61,
       "source_pdf_page": 68,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-005"
     },
     {
       "id": "moe-2022-zh-7-9-006",
@@ -1064,7 +1398,8 @@
       "source_print_page": 61,
       "source_pdf_page": 68,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-006"
     },
     {
       "id": "moe-2022-zh-7-9-007",
@@ -1077,7 +1412,8 @@
       "source_print_page": 61,
       "source_pdf_page": 68,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-007"
     },
     {
       "id": "moe-2022-zh-7-9-008",
@@ -1090,7 +1426,8 @@
       "source_print_page": 61,
       "source_pdf_page": 68,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-008"
     },
     {
       "id": "moe-2022-zh-7-9-009",
@@ -1103,7 +1440,8 @@
       "source_print_page": 61,
       "source_pdf_page": 68,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-009"
     },
     {
       "id": "moe-2022-zh-7-9-010",
@@ -1116,7 +1454,8 @@
       "source_print_page": 61,
       "source_pdf_page": 68,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-010"
     },
     {
       "id": "moe-2022-zh-7-9-011",
@@ -1129,7 +1468,8 @@
       "source_print_page": 61,
       "source_pdf_page": 68,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-011"
     },
     {
       "id": "moe-2022-zh-7-9-012",
@@ -1142,7 +1482,8 @@
       "source_print_page": 61,
       "source_pdf_page": 68,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-012"
     },
     {
       "id": "moe-2022-zh-7-9-013",
@@ -1155,7 +1496,8 @@
       "source_print_page": 61,
       "source_pdf_page": 68,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-013"
     },
     {
       "id": "moe-2022-zh-7-9-014",
@@ -1168,7 +1510,8 @@
       "source_print_page": 61,
       "source_pdf_page": 68,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-014"
     },
     {
       "id": "moe-2022-zh-7-9-015",
@@ -1181,7 +1524,8 @@
       "source_print_page": 61,
       "source_pdf_page": 68,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-015"
     },
     {
       "id": "moe-2022-zh-7-9-016",
@@ -1194,7 +1538,8 @@
       "source_print_page": 61,
       "source_pdf_page": 68,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-016"
     },
     {
       "id": "moe-2022-zh-7-9-017",
@@ -1207,7 +1552,8 @@
       "source_print_page": 62,
       "source_pdf_page": 69,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-017"
     },
     {
       "id": "moe-2022-zh-7-9-018",
@@ -1220,7 +1566,8 @@
       "source_print_page": 62,
       "source_pdf_page": 69,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-018"
     },
     {
       "id": "moe-2022-zh-7-9-019",
@@ -1233,7 +1580,8 @@
       "source_print_page": 62,
       "source_pdf_page": 69,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-019"
     },
     {
       "id": "moe-2022-zh-7-9-020",
@@ -1246,7 +1594,8 @@
       "source_print_page": 62,
       "source_pdf_page": 69,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-020"
     },
     {
       "id": "moe-2022-zh-7-9-021",
@@ -1259,7 +1608,8 @@
       "source_print_page": 62,
       "source_pdf_page": 69,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-021"
     },
     {
       "id": "moe-2022-zh-7-9-022",
@@ -1272,7 +1622,8 @@
       "source_print_page": 62,
       "source_pdf_page": 69,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-022"
     },
     {
       "id": "moe-2022-zh-7-9-023",
@@ -1285,7 +1636,8 @@
       "source_print_page": 62,
       "source_pdf_page": 69,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-023"
     },
     {
       "id": "moe-2022-zh-7-9-024",
@@ -1298,7 +1650,8 @@
       "source_print_page": 62,
       "source_pdf_page": 69,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-024"
     },
     {
       "id": "moe-2022-zh-7-9-025",
@@ -1311,7 +1664,8 @@
       "source_print_page": 62,
       "source_pdf_page": 69,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-025"
     },
     {
       "id": "moe-2022-zh-7-9-026",
@@ -1324,7 +1678,8 @@
       "source_print_page": 62,
       "source_pdf_page": 69,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-026"
     },
     {
       "id": "moe-2022-zh-7-9-027",
@@ -1337,7 +1692,8 @@
       "source_print_page": 62,
       "source_pdf_page": 69,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-027"
     },
     {
       "id": "moe-2022-zh-7-9-028",
@@ -1350,7 +1706,8 @@
       "source_print_page": 62,
       "source_pdf_page": 69,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-028"
     },
     {
       "id": "moe-2022-zh-7-9-029",
@@ -1363,7 +1720,8 @@
       "source_print_page": 62,
       "source_pdf_page": 69,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-029"
     },
     {
       "id": "moe-2022-zh-7-9-030",
@@ -1376,7 +1734,8 @@
       "source_print_page": 62,
       "source_pdf_page": 69,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-030"
     },
     {
       "id": "moe-2022-zh-7-9-031",
@@ -1389,7 +1748,8 @@
       "source_print_page": 62,
       "source_pdf_page": 69,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-031"
     },
     {
       "id": "moe-2022-zh-7-9-032",
@@ -1402,7 +1762,8 @@
       "source_print_page": 62,
       "source_pdf_page": 69,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-032"
     },
     {
       "id": "moe-2022-zh-7-9-033",
@@ -1415,7 +1776,8 @@
       "source_print_page": 62,
       "source_pdf_page": 69,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-033"
     },
     {
       "id": "moe-2022-zh-7-9-034",
@@ -1428,7 +1790,8 @@
       "source_print_page": 62,
       "source_pdf_page": 69,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-034"
     },
     {
       "id": "moe-2022-zh-7-9-035",
@@ -1441,7 +1804,8 @@
       "source_print_page": 62,
       "source_pdf_page": 69,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-035"
     },
     {
       "id": "moe-2022-zh-7-9-036",
@@ -1454,7 +1818,8 @@
       "source_print_page": 62,
       "source_pdf_page": 69,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-036"
     },
     {
       "id": "moe-2022-zh-7-9-037",
@@ -1467,7 +1832,8 @@
       "source_print_page": 62,
       "source_pdf_page": 69,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-037"
     },
     {
       "id": "moe-2022-zh-7-9-038",
@@ -1480,7 +1846,8 @@
       "source_print_page": 62,
       "source_pdf_page": 69,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-038"
     },
     {
       "id": "moe-2022-zh-7-9-039",
@@ -1493,7 +1860,8 @@
       "source_print_page": 62,
       "source_pdf_page": 69,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-039"
     },
     {
       "id": "moe-2022-zh-7-9-040",
@@ -1506,7 +1874,8 @@
       "source_print_page": 62,
       "source_pdf_page": 69,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-040"
     },
     {
       "id": "moe-2022-zh-7-9-041",
@@ -1518,8 +1887,22 @@
       "content_type": "文言文及选段",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 7,
+          "bookId": "chinese-7a",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "edition": "根据2022年版课程标准修订",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#%5B69%2C%22XYZ%22%2Cnull%2Cnull%2Cnull%5D",
+          "sourceKind": "official_outline",
+          "evidence": "官方教材目录篇名与册次已核对；正文异文校对另计",
+          "status": "catalogue_verified"
+        }
+      ],
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-041"
     },
     {
       "id": "moe-2022-zh-7-9-042",
@@ -1532,7 +1915,8 @@
       "source_print_page": 63,
       "source_pdf_page": 70,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-042"
     },
     {
       "id": "moe-2022-zh-7-9-043",
@@ -1545,7 +1929,8 @@
       "source_print_page": 63,
       "source_pdf_page": 70,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-043"
     },
     {
       "id": "moe-2022-zh-7-9-044",
@@ -1558,7 +1943,8 @@
       "source_print_page": 63,
       "source_pdf_page": 70,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-044"
     },
     {
       "id": "moe-2022-zh-7-9-045",
@@ -1571,7 +1957,8 @@
       "source_print_page": 63,
       "source_pdf_page": 70,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-045"
     },
     {
       "id": "moe-2022-zh-7-9-046",
@@ -1584,7 +1971,8 @@
       "source_print_page": 63,
       "source_pdf_page": 70,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-046"
     },
     {
       "id": "moe-2022-zh-7-9-047",
@@ -1597,7 +1985,8 @@
       "source_print_page": 63,
       "source_pdf_page": 70,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-047"
     },
     {
       "id": "moe-2022-zh-7-9-048",
@@ -1610,7 +1999,8 @@
       "source_print_page": 63,
       "source_pdf_page": 70,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-048"
     },
     {
       "id": "moe-2022-zh-7-9-049",
@@ -1623,7 +2013,8 @@
       "source_print_page": 63,
       "source_pdf_page": 70,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-049"
     },
     {
       "id": "moe-2022-zh-7-9-050",
@@ -1636,7 +2027,8 @@
       "source_print_page": 63,
       "source_pdf_page": 70,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-050"
     },
     {
       "id": "moe-2022-zh-7-9-051",
@@ -1649,7 +2041,8 @@
       "source_print_page": 63,
       "source_pdf_page": 70,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-051"
     },
     {
       "id": "moe-2022-zh-7-9-052",
@@ -1662,7 +2055,8 @@
       "source_print_page": 63,
       "source_pdf_page": 70,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-052"
     },
     {
       "id": "moe-2022-zh-7-9-053",
@@ -1675,7 +2069,8 @@
       "source_print_page": 63,
       "source_pdf_page": 70,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-053"
     },
     {
       "id": "moe-2022-zh-7-9-054",
@@ -1688,7 +2083,8 @@
       "source_print_page": 63,
       "source_pdf_page": 70,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-054"
     },
     {
       "id": "moe-2022-zh-7-9-055",
@@ -1701,7 +2097,8 @@
       "source_print_page": 63,
       "source_pdf_page": 70,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-055"
     },
     {
       "id": "moe-2022-zh-7-9-056",
@@ -1714,7 +2111,8 @@
       "source_print_page": 63,
       "source_pdf_page": 70,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-056"
     },
     {
       "id": "moe-2022-zh-7-9-057",
@@ -1727,7 +2125,8 @@
       "source_print_page": 63,
       "source_pdf_page": 70,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-057"
     },
     {
       "id": "moe-2022-zh-7-9-058",
@@ -1740,7 +2139,8 @@
       "source_print_page": 63,
       "source_pdf_page": 70,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-058"
     },
     {
       "id": "moe-2022-zh-7-9-059",
@@ -1753,7 +2153,8 @@
       "source_print_page": 63,
       "source_pdf_page": 70,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-059"
     },
     {
       "id": "moe-2022-zh-7-9-060",
@@ -1766,7 +2167,8 @@
       "source_print_page": 63,
       "source_pdf_page": 70,
       "shanghai_textbook_mapping": null,
-      "full_text_status": "待按教材版本录入校对"
+      "full_text_status": "公版原作已录入；教材逐字校对待确认",
+      "content_id": "moe-2022-zh-7-9-060"
     }
   ]
 }

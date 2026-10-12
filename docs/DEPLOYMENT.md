@@ -16,7 +16,7 @@ npm run configure -- --appid wxYOUR_APP_ID --env YOUR_CLOUDBASE_ENV_ID
 
 ## 数据库与函数
 
-创建五个空集合：`profiles`、`families`、`invites`、`days`、`receipts`。每个集合使用自定义安全规则：
+创建六个空集合：`profiles`、`families`、`invites`、`days`、`receipts`、`learning`。每个集合使用自定义安全规则：
 
 ```json
 { "read": false, "write": false }
@@ -26,6 +26,7 @@ npm run configure -- --appid wxYOUR_APP_ID --env YOUR_CLOUDBASE_ENV_ID
 
 ```sh
 npm ci --prefix cloudfunctions/familyApi --ignore-scripts
+npm run build
 npm run verify
 npm audit --prefix cloudfunctions/familyApi --omit=dev
 ```
@@ -44,6 +45,9 @@ npm audit --prefix cloudfunctions/familyApi --omit=dev
 | 两端离线修改同一项，先后联网 | 冲突提示，不静默覆盖 |
 | A 移除 B，B 再请求 | 读写被拒绝、联网清理缓存 |
 | 暂停计划、切换新日期和历史 | 新日期采用当前计划，历史快照不变 |
+| 分别设置全新／复习和各类数量 | 全新不重复安排旧内容；复习只选择已完成内容；不足时显示缺额 |
+| 知识库加入今日、完成、确认掌握 | 今日、回顾和知识进度使用同一条内容记录，两端同步 |
+| 修改年龄与在读年级；另一端读取 | 档案同步；跨年级学习不改变在读年级 |
 
 覆盖 iPhone、Android、慢网、存储失败和云函数超时。确认集合客户端直读／直写均拒绝，再添加真实家庭数据。
 
@@ -51,6 +55,8 @@ npm audit --prefix cloudfunctions/familyApi --omit=dev
 
 上传后，在微信公众平台设置体验版并添加家人体验权限。体验资格和应用内家庭邀请码是两层独立权限。上传体验版不替换正式版；正式发布另需审核。
 
-从控制台导出五个集合，并恢复到单独测试环境验证。`receipts` 与 `days` 一起备份；学习记录禁止进入公开仓库。删除家庭数据时由管理员按核准家庭 ID 清除五个集合中对应数据，设备联网后撤销缓存。
+从控制台导出六个集合，并恢复到单独测试环境验证。`receipts`、`days` 和 `learning` 一起备份；学习记录禁止进入公开仓库。删除家庭数据时由管理员按核准家庭 ID 清除六个集合中对应数据，设备联网后撤销缓存。
+
+从 v0.1 升级时，先创建并保护 `learning` 集合，再同时部署新的云函数与小程序。旧固定计划继续按每天执行；读取旧日期时把该日完成记录写入知识档案，不凭空补造任务。旧历史未读取前，新知识档案可能尚未包含那些日期，跨日期汇总需要逐日补索引或经管理员验证的迁移。
 
 管理操作不进入离线重放队列，网络失败先刷新确认结果再重试。邀请码仅生成时显示，遗失可以重新生成。自助备份、删除与管理员转让待实现。

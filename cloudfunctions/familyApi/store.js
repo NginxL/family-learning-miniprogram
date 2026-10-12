@@ -1,5 +1,5 @@
 'use strict';
-const COLLECTIONS = ['profiles', 'families', 'invites', 'days', 'receipts'];
+const COLLECTIONS = ['profiles', 'families', 'invites', 'days', 'receipts', 'learning'];
 
 function createCloudStore(db) {
   return {
