@@ -1,0 +1,20 @@
+{
+  "pages": ["pages/today/index", "pages/plans/index", "pages/family/index"],
+  "window": {
+    "navigationBarTitleText": "小小日课",
+    "navigationBarBackgroundColor": "#f6f5ef",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f6f5ef",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#78837b", "selectedColor": "#27654c", "backgroundColor": "#ffffff", "borderStyle": "white",
+    "list": [
+      { "pagePath": "pages/today/index", "text": "今日" },
+      { "pagePath": "pages/plans/index", "text": "计划" },
+      { "pagePath": "pages/family/index", "text": "家庭" }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

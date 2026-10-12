@@ -1,0 +1,11 @@
+{
+  "name": "family-api",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.js",
+  "dependencies": { "wx-server-sdk": "4.0.2" },
+  "overrides": {
+    "@cloudbase/database": "1.5.1",
+    "axios": "0.34.0"
+  }
+}

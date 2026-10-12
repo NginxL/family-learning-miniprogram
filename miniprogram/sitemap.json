@@ -1,0 +1,1 @@
+{ "desc": "家庭内部学习工具，不索引内容", "rules": [{ "action": "disallow", "page": "*" }] }

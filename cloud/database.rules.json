@@ -1,0 +1,7 @@
+{
+  "profiles": { "read": false, "write": false },
+  "families": { "read": false, "write": false },
+  "invites": { "read": false, "write": false },
+  "days": { "read": false, "write": false },
+  "receipts": { "read": false, "write": false }
+}

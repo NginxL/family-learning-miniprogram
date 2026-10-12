@@ -1,0 +1,40 @@
+page { background:#f6f5ef; color:#253b32; font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif; font-size:28rpx; }
+.page { padding:32rpx 32rpx 64rpx; }
+.eyebrow { color:#6f806f; font-size:22rpx; letter-spacing:4rpx; margin:8rpx 0 14rpx; }
+.title { font-size:48rpx; font-weight:600; line-height:1.3; }
+.subtitle { font-size:26rpx; color:#738077; margin-top:14rpx; line-height:1.7; }
+.card { background:#fff; border-radius:28rpx; padding:30rpx; margin-top:24rpx; box-shadow:0 6rpx 22rpx rgba(37,59,50,.035); }
+.hero { background:#27654c; color:#fff; }
+.hero .subtitle { color:#d6e6db; }
+.row { display:flex; align-items:center; justify-content:space-between; gap:16rpx; }
+.section { font-size:32rpx; font-weight:600; margin:34rpx 0 10rpx; }
+.muted { color:#7b857f; font-size:24rpx; line-height:1.7; }
+.pill { display:inline-block; background:#eaf0e6; color:#426348; padding:7rpx 16rpx; border-radius:24rpx; font-size:22rpx; }
+.english { background:#edf0fb; color:#62699a; }
+.other { background:#f9eee1; color:#98734b; }
+.notice { background:#fff3d8; color:#7b602c; padding:20rpx 24rpx; border-radius:16rpx; font-size:24rpx; line-height:1.6; margin:18rpx 0; }
+.status { color:#657c6e; font-size:22rpx; margin-top:18rpx; }
+button { font-size:28rpx; border-radius:18rpx; margin:0; font-weight:500; }
+button::after { border:0; }
+.primary { background:#27654c; color:#fff; margin-top:24rpx; }
+.secondary { background:#edf2eb; color:#315e43; margin-top:20rpx; }
+.small { font-size:24rpx; padding:0 22rpx; line-height:2.7; }
+.quiet { background:transparent; color:#66786b; padding:0 14rpx; font-size:24rpx; }
+.danger { color:#ad564e; }
+input, textarea, .picker { box-sizing:border-box; background:#f5f6f2; border-radius:16rpx; padding:22rpx; width:100%; margin-top:12rpx; font-size:28rpx; }
+textarea { min-height:160rpx; }
+.label { display:block; font-size:24rpx; color:#67766b; margin-top:24rpx; }
+.divider { height:1rpx; background:#edf0e9; margin:24rpx 0; }
+.empty { text-align:center; padding:60rpx 24rpx; }
+.empty-icon { font-size:64rpx; margin-bottom:20rpx; }
+.tab-row { display:flex; gap:12rpx; flex-wrap:wrap; margin-top:22rpx; }
+.chip { font-size:25rpx; padding:12rpx 26rpx; border-radius:32rpx; background:#eaece4; color:#738071; }
+.chip.active { background:#27654c; color:white; }
+.body { white-space:pre-wrap; font-size:29rpx; line-height:1.95; margin:22rpx 0; }
+.task-title { font-size:32rpx; font-weight:500; margin-top:18rpx; }
+.done-title { color:#7b877b; }
+.meter { height:12rpx; border-radius:8rpx; background:rgba(255,255,255,.2); margin-top:24rpx; overflow:hidden; }
+.meter-fill { height:100%; background:#dfebad; border-radius:8rpx; }
+.big-number { font-size:64rpx; font-weight:600; }
+.member { padding:20rpx 0; border-bottom:1rpx solid #f0f2ec; }
+.invite { font-family:monospace; font-size:28rpx; overflow-wrap:anywhere; line-height:1.8; }

@@ -1,0 +1,33 @@
+<view class="page">
+  <view class="eyebrow">一起陪伴 · 一起记录</view><view class="title">{{family ? family.name : '我们的家庭'}}</view>
+  <view wx:if="{{mode === 'demo'}}" class="notice">本机演示 · 邀请家人、多手机同步需连接云开发</view>
+  <view wx:if="{{syncError}}" class="notice">{{syncError}}</view>
+  <block wx:if="{{!family}}">
+    <button wx:if="{{mode === 'demo'}}" class="primary" bindtap="createDemoFamily" loading="{{busy}}" disabled="{{busy}}">一键创建示例家庭</button>
+    <form class="card" bindsubmit="createFamily"><view class="section" style="margin-top:0">创建一个家庭</view>
+      <label class="label">家庭名称</label><input name="name" maxlength="24" placeholder="例如：我们的学习小屋" />
+      <label class="label">你的称呼</label><input name="memberName" maxlength="16" placeholder="例如：妈妈、爸爸、小姨" />
+      <label class="label">孩子昵称</label><input name="childName" maxlength="16" placeholder="使用昵称就好" />
+      <button class="primary" form-type="submit" disabled="{{busy}}" loading="{{busy}}">创建家庭</button>
+    </form>
+    <form class="card" bindsubmit="joinFamily"><view class="section" style="margin-top:0">已有家人的邀请？</view>
+      <label class="label">邀请码</label><input name="code" maxlength="32" placeholder="粘贴家人给你的邀请码" />
+      <label class="label">你的称呼</label><input name="memberName" maxlength="16" placeholder="家人怎么称呼你" />
+      <button class="secondary" form-type="submit" disabled="{{busy}}" loading="{{busy}}">加入家庭</button>
+    </form>
+  </block>
+  <block wx:else>
+    <view class="status" bindtap="refresh">{{mode === 'demo' ? '本机保存' : syncLabel}} ↻</view>
+    <view class="card"><view class="section" style="margin-top:0">陪伴的家人</view>
+      <view wx:for="{{members}}" wx:key="id" class="member row"><view><view>{{item.name}} <text wx:if="{{item.isMe}}" class="muted">（我）</text></view><view class="muted">{{item.roleLabel}}</view></view><button wx:if="{{family.myRole === 'owner' && !item.isMe}}" class="quiet danger" data-id="{{item.id}}" data-name="{{item.name}}" bindtap="removeMember">移除</button></view>
+      <block wx:if="{{family.myRole === 'owner'}}"><button class="secondary" loading="{{busy}}" disabled="{{busy}}" bindtap="createInvite">生成家人邀请码</button><view class="muted" style="margin-top:16rpx">邀请码24小时有效，仅可使用一次。生成新码会使旧码失效。</view>
+        <view wx:if="{{inviteCode}}" class="notice"><view class="invite">{{inviteCode}}</view><button class="quiet" bindtap="copyInvite">复制邀请码</button></view>
+      </block>
+    </view>
+    <view class="card"><view class="section" style="margin-top:0">孩子的学习档案</view><view wx:for="{{children}}" wx:key="id" class="member">🌱 {{item.name}}</view>
+      <form wx:if="{{family.myRole === 'owner'}}" bindsubmit="addChild"><input name="name" value="{{newChildName}}" maxlength="16" placeholder="另一个孩子的昵称" /><button class="secondary" form-type="submit" loading="{{busy}}" disabled="{{busy}}">添加孩子</button></form>
+    </view>
+    <view class="card"><view>家庭数据说明</view><view class="subtitle">只使用微信身份标识、家人称呼、孩子昵称和学习记录。家人加入同一家庭后共享这些记录。</view><view class="subtitle">{{mode === 'demo' ? '当前数据仅保存在本机，清理缓存会丢失演示记录。' : '打卡先保存在手机，联网后自动同步。手机清理缓存前请确认没有待同步记录。'}}</view></view>
+    <button wx:if="{{family.myRole !== 'owner'}}" class="quiet danger" style="margin-top:30rpx" bindtap="leaveFamily">退出家庭</button>
+  </block>
+</view>

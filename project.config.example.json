@@ -1,0 +1,9 @@
+{
+  "description": "小小日课：家庭学习小程序",
+  "miniprogramRoot": "miniprogram/",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "compileType": "miniprogram",
+  "appid": "touristappid",
+  "projectname": "family-learning-miniprogram",
+  "setting": { "es6": true, "enhance": true, "postcss": true, "minified": true, "urlCheck": true }
+}

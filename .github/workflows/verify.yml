@@ -1,0 +1,16 @@
+name: Verify
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm run configure
+      - run: npm ci --prefix cloudfunctions/familyApi --ignore-scripts
+      - run: npm run verify
+      - run: npm audit --prefix cloudfunctions/familyApi --omit=dev

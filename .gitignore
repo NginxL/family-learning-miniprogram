@@ -1,0 +1,21 @@
+# Research downloads, OCR images and temporary scripts
+tmp/
+
+# Local OS files and credentials
+.DS_Store
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+project.private.config.json
+
+# Local user data and dependencies
+backups/
+node_modules/
+
+# Device/cloud-specific local configuration (generate with npm run configure)
+project.config.json
+miniprogram/config.js
+coverage/
+artifacts/

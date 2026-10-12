@@ -1,0 +1,56 @@
+# 导入、部署与家庭试用
+
+## 工程和账号
+
+按 README 安装依赖、生成配置并打开微信开发者工具。`project.config.json`、`project.private.config.json`、`miniprogram/config.js` 为本地文件，均已忽略。
+
+AppID 入口：[微信公众平台](https://mp.weixin.qq.com/) → 选择小程序 → 开发管理 → 开发设置 → 开发者 ID。AppID 可导入工程，不能证明认证、备案、成员权限或云环境状态。
+
+在已登录的微信开发者工具中，用真实 AppID 打开工程，进入「云开发」。选择已有且属于该小程序的环境，或确认套餐后新建环境，复制环境 ID：
+
+```sh
+npm run configure -- --appid wxYOUR_APP_ID --env YOUR_CLOUDBASE_ENV_ID
+```
+
+占位符换成实际编号。选择支持文档型数据库的环境；本版不依赖 SQL、容器、静态网站或自购服务器。套餐与免费期限以[官方价格](https://cloud.tencent.com.cn/document/product/876/127357)和控制台为准，付费前核对金额及续费设置。
+
+## 数据库与函数
+
+创建五个空集合：`profiles`、`families`、`invites`、`days`、`receipts`。每个集合使用自定义安全规则：
+
+```json
+{ "read": false, "write": false }
+```
+
+`cloud/database.rules.json` 是逐集合清单，不会随源码自动生效。全部配置完成后再部署云函数。所有访问按主键，无需额外复合索引。
+
+```sh
+npm ci --prefix cloudfunctions/familyApi --ignore-scripts
+npm run verify
+npm audit --prefix cloudfunctions/familyApi --omit=dev
+```
+
+右键 `cloudfunctions/familyApi`，上传并部署（云端安装依赖），保留函数名 `familyApi`。选择控制台支持的 Node.js 20 或更高运行时，初期超时 20 秒、内存 256 MB。保留锁文件和覆盖配置；确认部署环境遵循这些依赖版本，否则用本地 `npm ci` 后连依赖上传的方式。
+
+通过小程序调用，不配置公开 HTTP 触发器。控制台测试没有微信 `OPENID` 时返回 `UNAUTHENTICATED`，属于正常拒绝访问。
+
+## 两个账号验收
+
+| 操作 | 预期 |
+|---|---|
+| A 创建家庭、邀请码；B 加入 | 两端同一孩子和任务 |
+| A 完成任务；B 前台等待或重新打开 | 一个轮询周期内或重新打开后看到更新 |
+| A 断网打卡并退出，恢复网络再开 | 队列恢复、只记一次 |
+| 两端离线修改同一项，先后联网 | 冲突提示，不静默覆盖 |
+| A 移除 B，B 再请求 | 读写被拒绝、联网清理缓存 |
+| 暂停计划、切换新日期和历史 | 新日期采用当前计划，历史快照不变 |
+
+覆盖 iPhone、Android、慢网、存储失败和云函数超时。确认集合客户端直读／直写均拒绝，再添加真实家庭数据。
+
+## 试用与维护
+
+上传后，在微信公众平台设置体验版并添加家人体验权限。体验资格和应用内家庭邀请码是两层独立权限。上传体验版不替换正式版；正式发布另需审核。
+
+从控制台导出五个集合，并恢复到单独测试环境验证。`receipts` 与 `days` 一起备份；学习记录禁止进入公开仓库。删除家庭数据时由管理员按核准家庭 ID 清除五个集合中对应数据，设备联网后撤销缓存。
+
+管理操作不进入离线重放队列，网络失败先刷新确认结果再重试。邀请码仅生成时显示，遗失可以重新生成。自助备份、删除与管理员转让待实现。

@@ -1,0 +1,21 @@
+<view class="page">
+  <view class="eyebrow">小目标 · 慢慢来</view><view class="title">学习计划</view>
+  <view class="subtitle">每天重复的小练习，让积累变得简单。</view>
+  <view wx:if="{{mode === 'demo'}}" class="notice">本机演示 · 尚未连接家庭云数据</view>
+  <block wx:if="{{family}}">
+    <view class="tab-row"><view wx:for="{{children}}" wx:key="id" class="chip {{childId === item.id ? 'active' : ''}}" data-id="{{item.id}}" bindtap="selectChild">{{item.name}}</view></view>
+    <view class="section">每天的安排</view>
+    <view wx:for="{{plans}}" wx:key="id" class="card"><view class="row"><view><view class="pill {{item.subject}}">{{item.subjectLabel}} · {{item.minutes}} 分钟</view><view class="task-title">{{item.title}}</view></view><switch checked="{{item.enabled}}" disabled="{{busy}}" color="#27654c" data-id="{{item.id}}" bindchange="togglePlan" /></view></view>
+    <view class="muted" style="margin-top:20rpx">暂停后不再生成后续任务，已生成的当天任务和历史记录会保留。新增计划会加入今天的任务。</view>
+    <form class="card" bindsubmit="addPlan">
+      <view class="section" style="margin-top:0">添加每日任务</view>
+      <label class="label">孩子</label><picker range="{{children}}" range-key="name" value="{{childIndex}}" bindchange="pickChild"><view class="picker">{{children[childIndex].name}} ▾</view></picker>
+      <label class="label">科目</label><picker range="{{subjects}}" value="{{subjectIndex}}" bindchange="changeSubject"><view class="picker">{{subjects[subjectIndex]}} ▾</view></picker>
+      <label class="label">任务名称</label><input name="title" value="{{formTitle}}" maxlength="60" placeholder="例如：读一首古诗" />
+      <label class="label">学习内容或给孩子的提示</label><textarea name="detail" value="{{formDetail}}" maxlength="2000" placeholder="写下要读的内容，或今天的小目标" auto-height />
+      <label class="label">预计分钟数</label><input name="minutes" value="{{formMinutes}}" type="number" maxlength="3" placeholder="5" />
+      <button class="primary" form-type="submit" loading="{{busy}}" disabled="{{busy}}">加入每日计划</button>
+    </form>
+  </block>
+  <view wx:else class="card empty"><view>先创建或加入一个家庭</view><button class="primary" bindtap="openFamily">前往家庭</button></view>
+</view>
