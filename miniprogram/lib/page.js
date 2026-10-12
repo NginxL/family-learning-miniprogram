@@ -1,5 +1,6 @@
 const { chinaDate } = require('./sync-engine');
 const learning = require('./learning/learning');
+const { withCurrentAge } = require('./learning/child-profile');
 const modeLabels = { new: '全新', review: '复习', manual: '家长安排' };
 const decorate = (item) => ({ ...item, kindLabel: learning.definition(learning.kindOf(item)).label,
   subjectLabel: (learning.subjects.find((subject) => subject.id === item.subject) || {}).label || '其他',
@@ -25,7 +26,7 @@ function common() {
     render() {
       const snapshot = this.engine.snapshot();
       const family = snapshot.family;
-      const children = family ? family.children.map((child) => ({ ...child, gradeLabel: learning.gradeLabels[child.schoolGrade || 0] })) : [];
+      const children = family ? family.children.map((child) => ({ ...withCurrentAge(child, chinaDate()), gradeLabel: learning.gradeLabels[child.schoolGrade || 0] })) : [];
       const childId = children.some((child) => child.id === this.data.childId) ? this.data.childId : (children[0] && children[0].id) || '';
       const date = this.data.followToday ? snapshot.today : this.data.date;
       const day = this.engine.viewDay(date);

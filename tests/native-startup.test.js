@@ -69,8 +69,9 @@ test('native JavaScript loader starts the demo, registers every page and creates
   try {
     assert.equal(today.data.family, null, 'the initial screen renders before bootstrap finishes');
     await runtime.app.engine.sync();
-    await family.createDemoFamily();
     assert.equal(today.data.family.children[0].schoolGrade, 1);
+    assert.equal(today.data.family.children[0].age, 6);
+    assert.equal(today.data.family.members[0].name, '我');
     assert.ok(today.data.allTaskCount > 0);
     assert.ok(today.data.groups.length > 0);
     assert.equal(runtime.app.engine.snapshot().status, 'online');

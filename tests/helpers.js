@@ -1,7 +1,7 @@
 const { createService } = require('../cloudfunctions/familyApi/service');
 const { SyncEngine } = require('../miniprogram/lib/sync-engine');
 const copy = (value) => JSON.parse(JSON.stringify(value));
-function fixture() {
+function fixture(options = {}) {
   let database = {};
   let lock = Promise.resolve();
   let time = Date.parse('2026-10-12T10:00:00+08:00');
@@ -21,7 +21,7 @@ function fixture() {
       return result;
     }
   };
-  const service = createService({ store, now: () => time, randomId: () => `id${++counter}`, inviteCode: () => (++counter).toString(16).padStart(24, '0').toUpperCase() });
+  const service = createService({ store, ...options, now: () => time, randomId: () => `id${++counter}`, inviteCode: () => (++counter).toString(16).padStart(24, '0').toUpperCase() });
   const call = (user, action, payload) => service.execute(user, action, payload);
   async function family() {
     const result = await call('parent-a', 'createFamily', { name: '测试学习小屋', memberName: '家长甲', childName: '小树' });

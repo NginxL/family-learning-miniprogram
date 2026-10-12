@@ -19,3 +19,5 @@ project.config.json
 miniprogram/config.js
 coverage/
 artifacts/
+output/playwright/
+.playwright-cli/

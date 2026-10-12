@@ -24,5 +24,5 @@
     <view wx:if="{{historyBusy}}" class="status">正在读取学习记录…</view>
     <view class="muted plan-help">“学过”来自完成记录；“已掌握”由家长确认，可随时改为还需巩固。</view>
   </block>
-  <view wx:else class="card empty"><view>先创建或加入一个家庭</view><button class="primary" bindtap="openFamily">前往家庭</button></view>
+  <view wx:else class="card empty"><view>{{syncError ? '学习档案暂未连接' : '正在准备学习档案…'}}</view><button wx:if="{{syncError}}" class="primary" bindtap="refresh">重试连接</button></view>
 </view>

@@ -1,41 +1,45 @@
 <view class="page">
-  <view class="eyebrow">一起陪伴 · 一起记录</view><view class="title">{{family ? family.name : '我们的家庭'}}</view>
-  <view wx:if="{{mode === 'demo'}}" class="notice">本机演示 · 邀请家人、多手机同步需连接云开发</view>
+  <view class="eyebrow">一点一滴 · 每日成长</view><view class="title">{{family ? family.name : '学习档案'}}</view>
+  <view wx:if="{{mode === 'demo'}}" class="notice">本机演示 · 数据保存在这台设备</view>
   <view wx:if="{{syncError}}" class="notice">{{syncError}}</view>
-  <block wx:if="{{!family}}">
-    <button wx:if="{{mode === 'demo'}}" class="primary" bindtap="createDemoFamily" loading="{{busy}}" disabled="{{busy}}">一键创建示例家庭</button>
-    <form class="card" bindsubmit="createFamily"><view class="section" style="margin-top:0">创建一个家庭</view>
-      <label class="label">家庭名称</label><input name="name" maxlength="24" placeholder="例如：我们的学习小屋" />
-      <label class="label">你的称呼</label><input name="memberName" maxlength="16" placeholder="例如：妈妈、爸爸、小姨" />
-      <label class="label">孩子昵称</label><input name="childName" maxlength="16" placeholder="使用昵称就好" />
-      <label class="label">年龄（选填）</label><input name="age" type="number" maxlength="2" placeholder="周岁，如 6" />
-      <label class="label">在读年级（选填）</label><picker range="{{gradeLabels}}" value="{{createGrade}}" data-field="createGrade" bindchange="changeGrade"><view class="picker">{{gradeLabels[createGrade]}} ▾</view></picker>
-      <button class="primary" form-type="submit" disabled="{{busy}}" loading="{{busy}}">创建家庭</button>
-    </form>
-    <form class="card" bindsubmit="joinFamily"><view class="section" style="margin-top:0">已有家人的邀请？</view>
-      <label class="label">邀请码</label><input name="code" maxlength="32" placeholder="粘贴家人给你的邀请码" />
-      <label class="label">你的称呼</label><input name="memberName" maxlength="16" placeholder="家人怎么称呼你" />
-      <button class="secondary" form-type="submit" disabled="{{busy}}" loading="{{busy}}">加入家庭</button>
-    </form>
-  </block>
+  <view wx:if="{{!family}}" class="card empty"><view>{{syncError ? '学习档案暂未连接' : '正在准备学习档案…'}}</view><button wx:if="{{syncError}}" class="primary" bindtap="refresh">重试连接</button></view>
   <block wx:else>
     <view class="status" bindtap="refresh">{{mode === 'demo' ? '本机保存' : syncLabel}} ↻</view>
-    <view class="card"><view class="section" style="margin-top:0">陪伴的家人</view>
-      <view wx:for="{{members}}" wx:key="id" class="member row"><view><view>{{item.name}} <text wx:if="{{item.isMe}}" class="muted">（我）</text></view><view class="muted">{{item.roleLabel}}</view></view><button wx:if="{{family.myRole === 'owner' && !item.isMe}}" class="quiet danger" data-id="{{item.id}}" data-name="{{item.name}}" bindtap="removeMember">移除</button></view>
-      <block wx:if="{{family.myRole === 'owner'}}"><button class="secondary" loading="{{busy}}" disabled="{{busy}}" bindtap="createInvite">生成家人邀请码</button><view class="muted" style="margin-top:16rpx">邀请码24小时有效，仅可使用一次。生成新码会使旧码失效。</view>
-        <view wx:if="{{inviteCode}}" class="notice"><view class="invite">{{inviteCode}}</view><button class="quiet" bindtap="copyInvite">复制邀请码</button></view>
-      </block>
-    </view>
-    <view class="card"><view class="section" style="margin-top:0">孩子的学习档案</view>
-      <view wx:for="{{children}}" wx:key="id" class="member"><view class="row"><view><view>🌱 {{item.name}}</view><view class="muted">{{item.age ? item.age + ' 岁 · ' : ''}}在读：{{item.gradeLabel}}</view></view><button wx:if="{{family.myRole === 'owner'}}" class="quiet" data-id="{{item.id}}" bindtap="editChild">编辑</button></view><button class="quiet" data-id="{{item.id}}" bindtap="openProgress">查看知识进度 →</button></view>
-      <form wx:if="{{editingChild && family.myRole === 'owner'}}" bindsubmit="saveChild">
+    <view class="card">
+      <view class="section" style="margin-top:0">孩子的学习档案</view>
+      <view wx:for="{{children}}" wx:key="id" class="member"><view class="row"><view class="grow"><view>🌱 {{item.name}}</view><view class="muted">{{item.age != null ? item.age + ' 岁 · ' : ''}}在读：{{item.gradeLabel}}</view></view><button wx:if="{{family.myRole === 'owner'}}" class="quiet" data-id="{{item.id}}" bindtap="editChild">编辑</button></view><button class="quiet" data-id="{{item.id}}" bindtap="openProgress">查看知识进度 →</button></view>
+      <form wx:if="{{editingChild && family.myRole === 'owner'}}" bindsubmit="saveChild"><view>
         <label class="label">昵称</label><input name="name" value="{{editingChild.name}}" maxlength="16" />
-        <label class="label">当前年龄（选填）</label><input name="age" value="{{editingChild.age}}" type="number" maxlength="2" placeholder="周岁" />
+        <label class="label">出生日期（选填）</label><picker mode="date" end="{{today}}" value="{{editBirthDate}}" data-field="editBirthDate" bindchange="changeBirthDate"><view class="picker">{{editBirthDate || '选择出生日期'}} ▾</view></picker>
+        <view wx:if="{{editBirthDate}}" class="row"><view class="muted grow">当前 {{editCurrentAge}} 岁 · 按生日自动更新</view><button class="quiet" data-field="editBirthDate" bindtap="clearBirthDate">清除</button></view>
+        <view wx:else><label class="label">年龄（选填）</label><input name="age" value="{{editingChild.age}}" type="number" maxlength="2" placeholder="周岁" /></view>
         <label class="label">在读年级</label><picker range="{{gradeLabels}}" value="{{editGrade}}" data-field="editGrade" bindchange="changeGrade"><view class="picker">{{gradeLabels[editGrade]}} ▾</view></picker>
         <button class="primary" form-type="submit" loading="{{busy}}" disabled="{{busy}}">保存档案</button><button class="quiet" bindtap="cancelEdit">取消</button>
-      </form>
-      <form wx:elif="{{family.myRole === 'owner'}}" bindsubmit="addChild"><input name="name" value="{{newChildName}}" maxlength="16" placeholder="另一个孩子的昵称" /><label class="label">年龄（选填）</label><input name="age" value="{{newChildAge}}" type="number" maxlength="2" placeholder="周岁" /><label class="label">在读年级（选填）</label><picker range="{{gradeLabels}}" value="{{addGrade}}" data-field="addGrade" bindchange="changeGrade"><view class="picker">{{gradeLabels[addGrade]}} ▾</view></picker><button class="secondary" form-type="submit" loading="{{busy}}" disabled="{{busy}}">添加孩子</button></form>
+      </view></form>
+      <form wx:elif="{{addingChild && family.myRole === 'owner'}}" bindsubmit="addChild"><view>
+        <label class="label">孩子昵称</label><input name="name" value="{{newChildName}}" maxlength="16" placeholder="另一个孩子的昵称" />
+        <label class="label">出生日期（选填）</label><picker mode="date" end="{{today}}" value="{{addBirthDate}}" data-field="addBirthDate" bindchange="changeBirthDate"><view class="picker">{{addBirthDate || '选择出生日期'}} ▾</view></picker>
+        <view wx:if="{{addBirthDate}}" class="row"><view class="muted grow">当前 {{addCurrentAge}} 岁 · 按生日自动更新</view><button class="quiet" data-field="addBirthDate" bindtap="clearBirthDate">清除</button></view>
+        <view wx:else><label class="label">年龄（选填）</label><input name="age" value="{{newChildAge}}" type="number" maxlength="2" placeholder="周岁" /></view>
+        <label class="label">在读年级（选填）</label><picker range="{{gradeLabels}}" value="{{addGrade}}" data-field="addGrade" bindchange="changeGrade"><view class="picker">{{gradeLabels[addGrade]}} ▾</view></picker>
+        <button class="secondary" form-type="submit" loading="{{busy}}" disabled="{{busy}}">添加孩子</button><button class="quiet" bindtap="toggleAddChild">取消</button>
+      </view></form>
+      <button wx:elif="{{family.myRole === 'owner'}}" class="quiet plan-help" bindtap="toggleAddChild">＋ 添加孩子档案</button>
     </view>
-    <button wx:if="{{family.myRole !== 'owner'}}" class="quiet danger" style="margin-top:30rpx" bindtap="leaveFamily">退出家庭</button>
+    <button class="quiet plan-help" bindtap="toggleManageFamily">{{manageFamily ? '收起家人管理 ↑' : '家人管理 ↓'}}</button>
+    <view wx:if="{{manageFamily}}" class="card">
+      <view class="section" style="margin-top:0">陪伴的家人</view>
+      <view wx:for="{{members}}" wx:key="id" class="member row"><view class="grow"><view>{{item.name}} <text wx:if="{{item.isMe && item.name !== '我'}}" class="muted">（我）</text></view><view class="muted">{{item.roleLabel}}</view></view><button wx:if="{{family.myRole === 'owner' && !item.isMe}}" class="quiet danger" data-id="{{item.id}}" data-name="{{item.name}}" bindtap="removeMember">移除</button></view>
+      <block wx:if="{{mode === 'cloud' && family.myRole === 'owner'}}"><button class="secondary" loading="{{busy}}" disabled="{{busy}}" bindtap="createInvite">生成家人邀请码</button>
+        <view wx:if="{{inviteCode}}" class="notice"><view class="invite">{{inviteCode}}</view><view class="muted">24 小时内有效，仅可使用一次。</view><button class="quiet" bindtap="copyInvite">复制邀请码</button></view>
+      </block>
+      <form wx:if="{{mode === 'cloud' && family.canJoinFamily}}" bindsubmit="joinFamily"><view>
+        <view class="section">加入家人的家庭</view>
+        <label class="label">邀请码</label><input name="code" maxlength="32" placeholder="粘贴家人给你的邀请码" />
+        <label class="label">你的称呼</label><input name="memberName" maxlength="16" value="我" placeholder="家人怎么称呼你" />
+        <button class="secondary" form-type="submit" disabled="{{busy}}" loading="{{busy}}">使用邀请码加入</button>
+      </view></form>
+      <button wx:if="{{family.myRole !== 'owner'}}" class="quiet danger plan-help" bindtap="leaveFamily">退出家庭</button>
+    </view>
   </block>
 </view>

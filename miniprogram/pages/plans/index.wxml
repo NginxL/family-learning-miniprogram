@@ -21,7 +21,7 @@
       <view class="muted plan-help">默认亲子入门，可扩大到课标范围。课标学段不是上海五四制年级；校内教材全量仍在核对。家长加入的内容库也会参与安排。</view>
     </block>
     <block wx:else>
-      <form class="card" bindsubmit="addPlan">
+      <view class="card"><form bindsubmit="addPlan">
         <view class="rule-title">为 {{children[childIndex].name}} 添加内容</view>
         <label class="label">学习类型</label><picker range="{{kinds}}" range-key="label" value="{{kindIndex}}" bindchange="changeKind"><view class="picker">{{kinds[kindIndex].label}} ▾</view></picker>
         <label class="label">怎样安排</label><picker range="{{schedules}}" value="{{scheduleIndex}}" bindchange="changeSchedule"><view class="picker">{{schedules[scheduleIndex]}} ▾</view></picker>
@@ -31,12 +31,12 @@
         <label class="label">预计分钟数</label><input name="minutes" value="{{formMinutes}}" type="number" maxlength="3" placeholder="5" />
         <label class="label">内容年级（家长标注，选填）</label><picker range="{{gradeLabels}}" value="{{studyGrade}}" bindchange="changeStudyGrade"><view class="picker">{{gradeLabels[studyGrade]}} ▾</view></picker><view class="muted">依据孩子的课本填写；会与教材已核实的进度分别展示。</view>
         <button class="primary" form-type="submit" loading="{{busy}}" disabled="{{busy}}">{{scheduleIndex === 2 ? '加入内容库' : '添加学习安排'}}</button>
-      </form>
+      </form></view>
       <view class="section">家长添加的内容</view>
       <view wx:for="{{plans}}" wx:key="id" class="card"><view class="row"><view class="grow"><view class="pill {{item.subject}}">{{item.kindLabel}} · {{item.scheduleLabel}}</view><view class="task-title">{{item.title}}</view></view><switch checked="{{item.enabled}}" disabled="{{busy}}" color="#27654c" data-id="{{item.id}}" bindchange="togglePlan" /></view></view>
       <view wx:if="{{!plans.length}}" class="muted">还没有手动添加的内容。</view>
       <view class="muted plan-help">暂停只影响后续安排，已生成的任务和学习记录会保留。</view>
     </block>
   </block>
-  <view wx:else class="card empty"><view>先创建或加入一个家庭</view><button class="primary" bindtap="openFamily">前往家庭</button></view>
+  <view wx:else class="card empty"><view>{{syncError ? '学习档案暂未连接' : '正在准备学习档案…'}}</view><view wx:if="{{syncError}}" class="muted">{{syncError}}</view><button wx:if="{{syncError}}" class="primary" bindtap="refresh">重试连接</button></view>
 </view>

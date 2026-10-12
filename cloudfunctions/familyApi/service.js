@@ -1,6 +1,7 @@
 'use strict';
 const crypto = require('node:crypto');
 const learning = require('./learning/learning');
+const { ageFromBirthDate, withCurrentAge } = require('./learning/child-profile');
 const hash = (text) => crypto.createHash('sha256').update(text).digest('hex');
 const clone = (value) => JSON.parse(JSON.stringify(value));
 const dayKey = (familyId, date) => hash(`${familyId}:${date}`);
@@ -22,11 +23,13 @@ function identifier(value) {
   return value;
 }
 function childProfile(input, today) {
-  const age = input.age === undefined || input.age === null ? null : input.age;
+  const birthDate = input.birthDate == null || input.birthDate === '' ? null : input.birthDate;
+  const age = birthDate === null ? (input.age == null ? null : input.age) : ageFromBirthDate(birthDate, today);
   const schoolGrade = input.schoolGrade === undefined || input.schoolGrade === null ? null : input.schoolGrade;
-  requireValue(age === null || (Number.isInteger(age) && age >= 1 && age <= 18), 'INVALID', '年龄需为1–18岁，或留空');
+  requireValue(birthDate === null || age !== null, 'INVALID', '出生日期无效或尚未到达');
+  requireValue(birthDate !== null || age === null || (Number.isInteger(age) && age >= 1 && age <= 18), 'INVALID', '年龄需为1–18岁，或留空');
   requireValue(schoolGrade === null || (Number.isInteger(schoolGrade) && schoolGrade >= 1 && schoolGrade <= 9), 'INVALID', '在读年级需为1–9，或留空');
-  return { age, schoolGrade, ageRecordedOn: age === null ? null : today };
+  return { birthDate, age, schoolGrade, ageRecordedOn: age === null ? null : today };
 }
 function validDate(value, now) {
   requireValue(typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value), 'INVALID', '日期无效');
@@ -35,17 +38,19 @@ function validDate(value, now) {
   requireValue(now - parsed <= 366 * 86400000, 'INVALID', '仅支持最近一年内的记录');
   return value;
 }
-function publicFamily(family, uid) {
+function publicFamily(family, uid, today) {
   return {
     id: family.id, name: family.name, ownerId: family.ownerId,
     members: family.members.map(({ id, name, role }) => ({ id, name, role })),
-    children: clone(family.children), plans: clone(family.plans), autoPlans: clone(family.autoPlans || {}),
-    myRole: family.ownerId === uid ? 'owner' : 'guardian'
+    children: family.children.map((child) => withCurrentAge(child, today)), plans: clone(family.plans), autoPlans: clone(family.autoPlans || {}),
+    myRole: family.ownerId === uid ? 'owner' : 'guardian',
+    canJoinFamily: family.autoCreated === true && family.ownerId === uid && family.members.length === 1
   };
 }
 
 function createService({ store, now = Date.now, randomId = () => crypto.randomBytes(16).toString('hex'),
-  inviteCode = () => crypto.randomBytes(12).toString('hex').toUpperCase() }) {
+  inviteCode = () => crypto.randomBytes(12).toString('hex').toUpperCase(),
+  defaultChild = { name: '孩子', age: 6, schoolGrade: 1 } }) {
   async function execute(openid, action, input = {}) {
     requireValue(typeof openid === 'string' && openid.length > 0, 'UNAUTHENTICATED', '请通过微信小程序进入');
     requireValue(input && typeof input === 'object' && !Array.isArray(input), 'INVALID', '请求内容无效');
@@ -57,31 +62,58 @@ function createService({ store, now = Date.now, randomId = () => crypto.randomBy
 
     return store.run(async (tx) => {
       const profile = await tx.get('profiles', uid);
+      const ownedFamilyId = `f_${uid.slice(0, 32)}`;
+      const makeFamily = (values, autoCreated = false) => {
+        const childId = `c_${newId}`;
+        return {
+          id: ownedFamilyId, name: text(values.name, '家庭名称', 24), ownerId: uid,
+          members: [{ id: uid, name: text(values.memberName, '你的称呼', 16), role: 'owner' }],
+          children: [{ id: childId, name: text(values.childName, '孩子昵称', 16), ...childProfile(values, today), version: 0 }],
+          plans: [], autoPlans: { [childId]: learning.defaultRules() },
+          createdAt: timestamp, activeInviteHash: null, autoCreated
+        };
+      };
       if (action === 'bootstrap') {
-        const family = profile && profile.familyId ? await tx.get('families', profile.familyId) : null;
+        let family = profile && profile.familyId ? await tx.get('families', profile.familyId) : null;
         const belongs = family && family.members.some((member) => member.id === uid);
-        return { userId: uid, today, family: belongs ? publicFamily(family, uid) : null };
+        if (!belongs && input.ensureDefault === true) {
+          family = await tx.get('families', ownedFamilyId);
+          if (family) {
+            requireValue(family.ownerId === uid && family.members.some((member) => member.id === uid), 'FORBIDDEN', '无法读取学习档案，请联系管理员');
+          } else {
+            family = makeFamily({ name: '我的家庭', memberName: '我', childName: defaultChild.name,
+              birthDate: defaultChild.birthDate, age: defaultChild.age, schoolGrade: defaultChild.schoolGrade }, true);
+            await tx.put('families', ownedFamilyId, family);
+          }
+          await tx.put('profiles', uid, { familyId: ownedFamilyId });
+        } else if (!belongs) family = null;
+        const child = family && family.children.length === 1 && family.children[0];
+        // Populate a newly configured birthday only on an untouched, owned default.
+        // Existing edits, invited families and explicitly cleared dates are preserved.
+        if (family && family.autoCreated === true && family.ownerId === uid && child && !child.birthDate
+          && (child.version || 0) === 0 && child.name === defaultChild.name && defaultChild.birthDate) {
+          Object.assign(child, childProfile({ ...child, birthDate: defaultChild.birthDate }, today), { version: 1 });
+          await tx.put('families', family.id, family);
+        }
+        return { userId: uid, today, family: family ? publicFamily(family, uid, today) : null };
       }
       if (action === 'createFamily') {
         requireValue(!profile || !profile.familyId, 'ALREADY_JOINED', '你已加入一个家庭');
-        const familyId = `f_${uid.slice(0, 32)}`;
+        const familyId = ownedFamilyId;
         // Deterministic ownership makes a retried creation safe, including after a lost response.
         const existing = await tx.get('families', familyId);
         requireValue(!existing, 'ALREADY_JOINED', '家庭已创建，请刷新');
-        const childId = `c_${newId}`;
-        const family = {
-          id: familyId, name: text(input.name, '家庭名称', 24), ownerId: uid,
-          members: [{ id: uid, name: text(input.memberName, '你的称呼', 16), role: 'owner' }],
-          children: [{ id: childId, name: text(input.childName, '孩子昵称', 16), ...childProfile(input, today), version: 0 }],
-          plans: [], autoPlans: { [childId]: learning.defaultRules() },
-          createdAt: timestamp, activeInviteHash: null
-        };
+        const family = makeFamily(input);
         await tx.put('families', familyId, family);
         await tx.put('profiles', uid, { familyId });
-        return { family: publicFamily(family, uid) };
+        return { family: publicFamily(family, uid, today) };
       }
       if (action === 'joinFamily') {
-        requireValue(!profile || !profile.familyId, 'ALREADY_JOINED', '你已加入一个家庭');
+        if (profile && profile.familyId) {
+          const current = await tx.get('families', profile.familyId);
+          requireValue(current && current.autoCreated === true && current.ownerId === uid && current.members.length === 1
+            && input.replaceDefaultFamilyId === current.id, 'ALREADY_JOINED', '你已加入一个家庭');
+        }
         const enteredCode = text(input.code, '邀请码', 32).replace(/\s/g, '').toUpperCase();
         requireValue(/^[A-F0-9]{24}$/.test(enteredCode), 'INVALID_INVITE', '邀请码无效');
         const inviteHash = hash(enteredCode);
@@ -89,13 +121,14 @@ function createService({ store, now = Date.now, randomId = () => crypto.randomBy
         requireValue(invite && !invite.usedAt && invite.expiresAt > timestamp, 'INVALID_INVITE', '邀请码无效、已使用或已过期');
         const family = await tx.get('families', invite.familyId);
         requireValue(family && family.activeInviteHash === inviteHash, 'INVALID_INVITE', '邀请码已失效');
+        requireValue(!profile || profile.familyId !== family.id, 'ALREADY_JOINED', '你已在这个家庭中');
         requireValue(family.members.length < 10, 'LIMIT', '一个家庭最多10位成员');
         family.members.push({ id: uid, name: text(input.memberName, '你的称呼', 16), role: 'guardian' });
         family.activeInviteHash = null;
         await tx.put('families', family.id, family);
         await tx.put('profiles', uid, { familyId: family.id });
         await tx.put('invites', inviteHash, { ...invite, usedAt: timestamp });
-        return { family: publicFamily(family, uid) };
+        return { family: publicFamily(family, uid, today) };
       }
 
       requireValue(profile && profile.familyId && profile.familyId === input.familyId, 'FORBIDDEN', '当前账号没有这个家庭的访问权限');
@@ -139,15 +172,16 @@ function createService({ store, now = Date.now, randomId = () => crypto.randomBy
         requireValue(family.children.length < 5, 'LIMIT', '一个家庭最多5个孩子档案');
         family.children.push({ id: `c_${newId}`, name: text(input.name, '孩子昵称', 16), ...childProfile(input, today), version: 0 });
         await tx.put('families', family.id, family);
-        return { family: publicFamily(family, uid) };
+        return { family: publicFamily(family, uid, today) };
       }
       if (action === 'updateChild') {
         owner(); childExists(input.childId);
         const child = family.children.find((item) => item.id === input.childId);
         requireValue(Number.isInteger(input.baseVersion) && input.baseVersion === (child.version || 0), 'CONFLICT', '档案已更新，请刷新后再修改');
-        Object.assign(child, { name: text(input.name, '孩子昵称', 16), ...childProfile(input, today), version: (child.version || 0) + 1 });
+        Object.assign(child, { name: text(input.name, '孩子昵称', 16),
+          ...childProfile({ ...input, birthDate: input.birthDate === undefined ? child.birthDate : input.birthDate }, today), version: (child.version || 0) + 1 });
         await tx.put('families', family.id, family);
-        return { family: publicFamily(family, uid) };
+        return { family: publicFamily(family, uid, today) };
       }
       if (action === 'addPlan') {
         childExists(input.childId);
@@ -164,14 +198,14 @@ function createService({ store, now = Date.now, randomId = () => crypto.randomBy
           subject: input.subject, kind, schedule, date: today, minutes: input.minutes, enabled: true, source: '家长自建',
           ...(input.studyGrade ? { studyGrade: input.studyGrade } : {}) });
         await tx.put('families', family.id, family);
-        return { family: publicFamily(family, uid) };
+        return { family: publicFamily(family, uid, today) };
       }
       if (action === 'setPlanEnabled') {
         const plan = family.plans.find((item) => item.id === input.planId);
         requireValue(plan && typeof input.enabled === 'boolean', 'INVALID', '学习计划不存在或状态无效');
         plan.enabled = input.enabled;
         await tx.put('families', family.id, family);
-        return { family: publicFamily(family, uid) };
+        return { family: publicFamily(family, uid, today) };
       }
       if (action === 'saveAutoPlans') {
         childExists(input.childId);
@@ -189,7 +223,7 @@ function createService({ store, now = Date.now, randomId = () => crypto.randomBy
         family.autoPlans = family.autoPlans || {};
         family.autoPlans[input.childId] = rules;
         await tx.put('families', family.id, family);
-        return { family: publicFamily(family, uid) };
+        return { family: publicFamily(family, uid, today) };
       }
       if (action === 'getDay') {
         const date = validDate(input.date || today, timestamp);

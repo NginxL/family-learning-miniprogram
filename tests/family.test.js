@@ -5,6 +5,55 @@ const { chinaDate } = require('../cloudfunctions/familyApi/service');
 const DATE = '2026-10-12';
 const rejects = (promise, code) => assert.rejects(promise, (error) => error.code === code);
 
+test('first opening creates one default family, keeps edits, and isolates different WeChat identities', async () => {
+  const f = fixture();
+  const [a, again] = await Promise.all([
+    f.call('parent-a', 'bootstrap', { ensureDefault: true }),
+    f.call('parent-a', 'bootstrap', { ensureDefault: true })
+  ]);
+  assert.ok(a.family);
+  assert.equal(a.family.id, again.family.id);
+  assert.equal(a.family.children[0].id, again.family.children[0].id);
+  assert.equal(a.family.children[0].age, 6);
+  assert.equal(a.family.children[0].schoolGrade, 1);
+  assert.equal(a.family.members[0].name, '我');
+  const child = a.family.children[0];
+  await f.call('parent-a', 'updateChild', { familyId: a.family.id, childId: child.id, baseVersion: 0, name: '新昵称', age: 7, schoolGrade: 2 });
+  const restored = await f.call('parent-a', 'bootstrap', { ensureDefault: true });
+  assert.equal(restored.family.children[0].name, '新昵称');
+  assert.equal(restored.family.children[0].age, 7);
+  const b = await f.call('parent-b', 'bootstrap', { ensureDefault: true });
+  assert.notEqual(b.family.id, a.family.id);
+  await rejects(f.call('parent-b', 'getDay', { familyId: a.family.id }), 'FORBIDDEN');
+  assert.equal(Object.keys(f.inspect()).filter((key) => key.startsWith('families/')).length, 2);
+});
+
+test('joining from a default family requires an explicit switch and preserves its records when leaving', async () => {
+  const f = fixture();
+  const a = (await f.call('parent-a', 'bootstrap', { ensureDefault: true })).family;
+  const b = (await f.call('parent-b', 'bootstrap', { ensureDefault: true })).family;
+  const { day } = await f.call('parent-b', 'getDay', { familyId: b.id });
+  await f.call('parent-b', 'setTaskDone', { familyId: b.id, date: DATE, taskId: day.tasks[0].id, done: true, baseVersion: 0, mutationId: 'default-done' });
+  const invite = await f.call('parent-a', 'createInvite', { familyId: a.id });
+  await rejects(f.call('parent-b', 'joinFamily', { code: invite.code, memberName: '乙' }), 'ALREADY_JOINED');
+  await rejects(f.call('parent-b', 'joinFamily', { code: '0'.repeat(24), memberName: '乙', replaceDefaultFamilyId: b.id }), 'INVALID_INVITE');
+  assert.equal((await f.call('parent-b', 'bootstrap', { ensureDefault: true })).family.id, b.id);
+  await f.call('parent-b', 'joinFamily', { code: invite.code, memberName: '乙', replaceDefaultFamilyId: b.id });
+  assert.equal((await f.call('parent-b', 'bootstrap', { ensureDefault: true })).family.id, a.id);
+  await f.call('parent-b', 'leaveFamily', { familyId: a.id });
+  const restored = await f.call('parent-b', 'bootstrap', { ensureDefault: true });
+  assert.equal(restored.family.id, b.id);
+  assert.equal((await f.call('parent-b', 'getDay', { familyId: b.id })).day.tasks[0].done, true);
+});
+
+test('private deployment defaults initialize a child without accepting a client-supplied identity or profile', async () => {
+  const f = fixture({ defaultChild: { name: '测试孩子', age: 6, schoolGrade: 1 } });
+  const result = await f.call('parent-a', 'bootstrap', { ensureDefault: true, openid: 'parent-b', childName: '覆盖昵称', age: 18 });
+  assert.equal(result.family.children[0].name, '测试孩子');
+  assert.equal(result.family.children[0].age, 6);
+  assert.equal((await f.call('parent-b', 'bootstrap')).family, null);
+});
+
 test('two guardians share a child and check-in, while outsiders cannot read or mutate it', async () => {
   const f = fixture(); const family = await f.family(); await f.addParent(family.id);
   const { day } = await f.call('parent-b', 'getDay', { familyId: family.id, date: DATE });

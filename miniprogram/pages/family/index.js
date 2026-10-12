@@ -1,34 +1,53 @@
 const { common } = require('../../lib/page');
 const { gradeLabels } = require('../../lib/learning/learning');
+const { ageFromBirthDate } = require('../../lib/learning/child-profile');
+const { chinaDate } = require('../../lib/sync-engine');
 const base = common();
 const ageValue = (value) => value === '' || value == null ? null : Number(value);
 Page({
   ...base,
-  data: { ...base.data, gradeLabels, createGrade: 0, addGrade: 0, editGrade: 0, editingChild: null },
+  data: { ...base.data, gradeLabels, addGrade: 0, editGrade: 0, editingChild: null, addingChild: false, manageFamily: false,
+    editBirthDate: '', addBirthDate: '', editCurrentAge: null, addCurrentAge: null },
   changeGrade(event) { this.setData({ [event.currentTarget.dataset.field]: Number(event.detail.value) }); },
-  async createDemoFamily() {
-    if (getApp().mode !== 'demo') return;
-    await this.perform('createFamily', { name: '向阳学习小屋', memberName: '家长甲', childName: '小树', age: 6, schoolGrade: 1 });
+  changeBirthDate(event) {
+    const field = event.currentTarget.dataset.field;
+    if (!['editBirthDate', 'addBirthDate'].includes(field)) return;
+    this.setData({ [field]: event.detail.value,
+      [field === 'editBirthDate' ? 'editCurrentAge' : 'addCurrentAge']: ageFromBirthDate(event.detail.value, chinaDate()) });
   },
-  async createFamily(event) {
-    const result = await this.perform('createFamily', { ...event.detail.value, age: ageValue(event.detail.value.age), schoolGrade: this.data.createGrade || null });
-    if (result) wx.showToast({ title: '家庭已创建', icon: 'success' });
+  clearBirthDate(event) {
+    const field = event.currentTarget.dataset.field;
+    if (['editBirthDate', 'addBirthDate'].includes(field)) this.setData({ [field]: '' });
   },
-  async joinFamily(event) { const result = await this.perform('joinFamily', event.detail.value); if (result) wx.showToast({ title: '已加入家庭', icon: 'success' }); },
+  toggleManageFamily() { this.setData({ manageFamily: !this.data.manageFamily }); },
+  toggleAddChild() { this.setData({ addingChild: !this.data.addingChild, editingChild: null }); },
+  async joinFamily(event) {
+    const family = this.data.family;
+    if (family) {
+      const result = await new Promise((resolve) => wx.showModal({ title: '加入家人的家庭？',
+        content: '会切换到家人的学习档案；你原来的记录会保留，退出后可继续使用。', confirmText: '加入', success: resolve, fail: () => resolve({ confirm: false }) }));
+      if (!result.confirm) return;
+    }
+    const result = await this.perform('joinFamily', { ...event.detail.value, ...(family ? { replaceDefaultFamilyId: family.id } : {}) });
+    if (result) { this.setData({ manageFamily: false }); wx.showToast({ title: '已加入家庭', icon: 'success' }); }
+  },
   async addChild(event) {
-    const result = await this.perform('addChild', { ...event.detail.value, age: ageValue(event.detail.value.age), schoolGrade: this.data.addGrade || null });
-    if (result) this.setData({ newChildName: '', newChildAge: '', addGrade: 0 });
+    const result = await this.perform('addChild', { ...event.detail.value, birthDate: this.data.addBirthDate || null,
+      age: ageValue(event.detail.value.age), schoolGrade: this.data.addGrade || null });
+    if (result) this.setData({ newChildName: '', newChildAge: '', addGrade: 0, addBirthDate: '', addCurrentAge: null, addingChild: false });
   },
   editChild(event) {
     const child = this.data.children.find((item) => item.id === event.currentTarget.dataset.id);
-    if (child) this.setData({ editingChild: { ...child, age: child.age == null ? '' : child.age }, editGrade: child.schoolGrade || 0 });
+    if (child) this.setData({ editingChild: { ...child, age: child.age == null ? '' : child.age }, editGrade: child.schoolGrade || 0,
+      editBirthDate: child.birthDate || '', editCurrentAge: child.age, addingChild: false });
   },
   cancelEdit() { this.setData({ editingChild: null }); },
   async saveChild(event) {
     const child = this.data.editingChild;
     if (!child) return;
     const result = await this.perform('updateChild', { childId: child.id, baseVersion: child.version || 0,
-      name: event.detail.value.name, age: ageValue(event.detail.value.age), schoolGrade: this.data.editGrade || null });
+      name: event.detail.value.name, birthDate: this.data.editBirthDate || null,
+      age: ageValue(event.detail.value.age), schoolGrade: this.data.editGrade || null });
     if (result) { this.cancelEdit(); wx.showToast({ title: '档案已保存', icon: 'success' }); }
   },
   async createInvite() { const result = await this.perform('createInvite', {}); if (result) this.setData({ inviteCode: result.code }); },

@@ -30,11 +30,16 @@ test('all WXML event handlers exist; family profile, manual cross-grade work, li
     const template = fs.readFileSync(path.join(root, `miniprogram/pages/${name}/index.wxml`), 'utf8');
     for (const match of template.matchAll(/(?:bind|catch)(?::?[a-z]+)="([a-zA-Z]\w*)"/g)) assert.equal(typeof instance[match[1]], 'function', `${name}: missing ${match[1]}`);
   }
-  const family = page('family', engine); await family.createDemoFamily(); family.render();
+  const family = page('family', engine); await engine.sync(); family.render();
   const child = family.data.children[0]; assert.equal(child.age, 6); assert.equal(child.schoolGrade, 1);
   family.editChild({ currentTarget: { dataset: { id: child.id } } });
   await family.saveChild({ detail: { value: { name: '小树', age: '7' } } });
   assert.equal(family.data.children[0].age, 7); assert.equal(family.data.editingChild, null);
+  family.editChild({ currentTarget: { dataset: { id: child.id } } });
+  const birthDate = `${Number(engine.today.slice(0, 4)) - 6}-01-01`;
+  family.changeBirthDate({ currentTarget: { dataset: { field: 'editBirthDate' } }, detail: { value: birthDate } });
+  await family.saveChild({ detail: { value: { name: '小树' } } });
+  assert.equal(family.data.children[0].birthDate, birthDate); assert.equal(family.data.children[0].age, 6);
   family.openProgress({ currentTarget: { dataset: { id: child.id } } });
   assert.equal(navigations.at(-1), '/pages/progress/index');
 

@@ -1,25 +1,38 @@
 // Single-device demonstration. Uses the same learning rules as the deployed cloud function.
 const { chinaDate } = require('./sync-engine');
 const learning = require('./learning/learning');
+const { ageFromBirthDate, withCurrentAge } = require('./learning/child-profile');
 function createDemo(wx) {
   const read = () => wx.getStorageSync('demo-backend-v1') || { family: null, days: {}, ledgers: {} };
   const write = (data) => wx.setStorageSync('demo-backend-v1', data);
   const id = () => `demo_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`;
   const profile = (input, today) => {
-    const age = input.age == null ? null : input.age;
+    const birthDate = input.birthDate == null || input.birthDate === '' ? null : input.birthDate;
+    const age = birthDate === null ? (input.age == null ? null : input.age) : ageFromBirthDate(birthDate, today);
     const schoolGrade = input.schoolGrade == null ? null : input.schoolGrade;
-    if (age !== null && (!Number.isInteger(age) || age < 1 || age > 18)) throw new Error('年龄需为1–18岁，或留空');
+    if (birthDate !== null && age === null) throw new Error('出生日期无效或尚未到达');
+    if (birthDate === null && age !== null && (!Number.isInteger(age) || age < 1 || age > 18)) throw new Error('年龄需为1–18岁，或留空');
     if (schoolGrade !== null && (!Number.isInteger(schoolGrade) || schoolGrade < 1 || schoolGrade > 9)) throw new Error('请选择在读年级，或留空');
-    return { age, schoolGrade, ageRecordedOn: age === null ? null : today };
+    return { birthDate, age, schoolGrade, ageRecordedOn: age === null ? null : today };
   };
   return async (action, input = {}) => {
     const state = read(); state.ledgers = state.ledgers || {};
     const today = chinaDate();
+    if (state.family) state.family.children = state.family.children.map((child) => withCurrentAge(child, today));
     const ledgerFor = (childId) => {
       if (!state.family.children.some((child) => child.id === childId)) throw new Error('孩子档案不存在');
       return state.ledgers[childId] || (state.ledgers[childId] = { records: {} });
     };
-    if (action === 'bootstrap') return { userId: 'demo-parent', today, family: state.family };
+    if (action === 'bootstrap') {
+      if (!state.family && input.ensureDefault === true) {
+        state.family = { id: 'demo-family', name: '我的家庭', ownerId: 'demo-parent', myRole: 'owner', canJoinFamily: false,
+          members: [{ id: 'demo-parent', name: '我', role: 'owner' }],
+          children: [{ id: 'demo-child', name: '孩子', age: 6, schoolGrade: 1, ageRecordedOn: today, version: 0 }],
+          plans: [], autoPlans: { 'demo-child': learning.defaultRules() } };
+        write(state);
+      }
+      return { userId: 'demo-parent', today, family: state.family };
+    }
     if (action === 'createFamily') {
       if (state.family) throw new Error('家庭已创建，请刷新');
       if (!input.name || !input.memberName || !input.childName) throw new Error('请填写家庭名称、你的称呼和孩子昵称');
@@ -30,7 +43,7 @@ function createDemo(wx) {
       write(state); return { family: state.family };
     }
     if (['joinFamily', 'createInvite', 'removeMember', 'leaveFamily'].includes(action)) throw new Error('演示模式仅在本机运行；连接云开发后可邀请和同步');
-    if (!state.family) throw new Error('请先创建演示家庭');
+    if (!state.family) throw new Error('请先加载学习档案');
     // Index previous demo check-ins so an upgrade retains the family's old learning history.
     Object.values(state.days).forEach((day) => state.family.children.forEach((child) => {
       learning.recordTasks(ledgerFor(child.id), day.tasks.filter((task) => task.childId === child.id), day.date);
@@ -82,7 +95,8 @@ function createDemo(wx) {
       const child = state.family.children.find((item) => item.id === input.childId);
       if (input.baseVersion !== (child.version || 0)) { const error = new Error('档案已更新，请刷新'); error.code = 'CONFLICT'; throw error; }
       if (!input.name || !input.name.trim() || input.name.trim().length > 16) throw new Error('请填写16字以内的昵称');
-      Object.assign(child, { name: input.name.trim(), ...profile(input, today), version: (child.version || 0) + 1 });
+      Object.assign(child, { name: input.name.trim(),
+        ...profile({ ...input, birthDate: input.birthDate === undefined ? child.birthDate : input.birthDate }, today), version: (child.version || 0) + 1 });
     } else if (action === 'addPlan') {
       ledgerFor(input.childId);
       const kind = input.kind || learning.kindOf(input);

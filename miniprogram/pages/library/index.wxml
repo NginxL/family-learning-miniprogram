@@ -29,7 +29,7 @@
     <view wx:if="{{!items.length}}" class="card empty">{{grade ? '这个筛选范围尚无已核实的年级内容，不代表这个年级没有学习要求。' : '没有匹配的内容，试试其他关键词或范围。'}}</view>
     <button wx:if="{{hasMore}}" class="secondary" bindtap="loadMore">再看 30 项</button>
     <button wx:if="{{family}}" class="quiet plan-help" bindtap="openToday">查看今日任务 →</button>
-    <button wx:else class="primary" bindtap="openFamily">创建家庭，开始安排学习</button>
+    <button wx:elif="{{syncError}}" class="primary" bindtap="refresh">重试连接学习档案</button>
   </block>
   <block wx:elif="{{view === 'exam'}}">
     <view class="card"><view class="rule-title">{{resources.examFramework.title}}</view><view class="body">{{resources.examFramework.summary}}</view><view class="muted">{{resources.examFramework.versionNote}}</view></view>

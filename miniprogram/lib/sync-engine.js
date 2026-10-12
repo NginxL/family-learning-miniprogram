@@ -33,7 +33,7 @@ class SyncEngine {
     return this.enqueueMany(date, [taskId], done);
   }
   enqueueMany(date, taskIds, done) {
-    if (!this.state.userId || !this.state.family) throw new Error('请先联网创建或加入家庭');
+    if (!this.state.userId || !this.state.family) throw new Error('请先联网加载学习档案');
     if (!Array.isArray(taskIds) || typeof done !== 'boolean') throw new Error('学习记录无效，请刷新后重试');
     const day = this.viewDay(date);
     const tasks = [...new Set(taskIds)].map((id) => day.tasks.find((task) => task.id === id));
@@ -48,7 +48,7 @@ class SyncEngine {
     return changed.length;
   }
   async bootstrap() {
-    const data = await this.transport('bootstrap', {});
+    const data = await this.transport('bootstrap', { ensureDefault: true });
     const next = clone(this.state);
     const oldFamily = next.family && next.family.id;
     const newFamily = data.family && data.family.id;
@@ -75,7 +75,7 @@ class SyncEngine {
   async cachedRead(action, bucket, input, fields, max) {
     const familyId = this.state.family && this.state.family.id;
     const userId = this.state.userId;
-    if (!familyId) throw new Error('请先创建或加入家庭');
+    if (!familyId) throw new Error('请先联网加载学习档案');
     const key = JSON.stringify([familyId, input.childId, ...fields]);
     try {
       const result = await this.transport(action, { ...input, familyId });

@@ -2,7 +2,7 @@
   <view class="eyebrow">看见积累 · 按自己的节奏学</view><view class="title">知识进度</view>
   <block wx:if="{{family}}">
     <view class="tab-row"><view wx:for="{{children}}" wx:key="id" class="chip {{childId === item.id ? 'active' : ''}}" data-id="{{item.id}}" bindtap="selectChild">{{item.name}}</view></view>
-    <view class="card"><view class="task-title">{{children[childIndex].name}}</view><view class="subtitle">{{children[childIndex].age ? children[childIndex].age + ' 岁 · ' : ''}}在读：{{children[childIndex].gradeLabel}}</view><view class="muted" wx:if="{{children[childIndex].ageRecordedOn}}">年龄填写于 {{children[childIndex].ageRecordedOn}}，由家长更新</view><button class="quiet" bindtap="openFamily">编辑年龄和在读年级 →</button></view>
+    <view class="card"><view class="task-title">{{children[childIndex].name}}</view><view class="subtitle">{{children[childIndex].age != null ? children[childIndex].age + ' 岁 · ' : ''}}在读：{{children[childIndex].gradeLabel}}</view><view class="muted" wx:if="{{children[childIndex].birthDate}}">年龄按生日自动更新</view><view class="muted" wx:elif="{{children[childIndex].ageRecordedOn}}">年龄填写于 {{children[childIndex].ageRecordedOn}}，可补充生日自动更新</view><button class="quiet" bindtap="openFamily">编辑学习档案 →</button></view>
     <view wx:if="{{progressCached}}" class="notice">显示上次同步的进度；联网后刷新。</view>
     <view wx:if="{{progressError}}" class="notice">{{progressError}}</view>
     <view wx:if="{{progressBusy && !progress}}" class="status">正在读取知识进度…</view>
@@ -22,5 +22,5 @@
       <button class="primary" bindtap="openHistory">回顾学过的具体内容</button><button class="secondary" bindtap="openExamScope">上海中考要求与知识库覆盖</button><button class="quiet" bindtap="openLibrary">查看知识库与教材来源 →</button>
     </block>
   </block>
-  <view wx:else class="card empty"><view>先创建或加入一个家庭</view><button class="primary" bindtap="openFamily">前往家庭</button></view>
+  <view wx:else class="card empty"><view>{{syncError ? '学习档案暂未连接' : '正在准备学习档案…'}}</view><button wx:if="{{syncError}}" class="primary" bindtap="refresh">重试连接</button></view>
 </view>

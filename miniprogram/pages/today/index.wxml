@@ -33,5 +33,5 @@
     <view wx:if="{{!tasks.length}}" class="card empty"><view class="empty-icon">☀</view><view>{{subjectFilter === 'all' ? '这一天还没有学习任务' : '这个科目还没有学习任务'}}</view><view class="subtitle">{{date === today ? '设置每天数量，或由家长添加内容' : '这一天没有已保存的任务记录'}}</view><button wx:if="{{date === today}}" class="secondary" bindtap="openPlans">安排学习内容</button></view>
     <button wx:if="{{date !== today}}" class="secondary" bindtap="backToday">回到今天</button>
   </block>
-  <view wx:else class="card empty"><view class="empty-icon">🌱</view><view class="section">和家人一起，慢慢长大</view><view class="subtitle">创建家庭，为孩子安排小小的每日任务。家人可以一起记录、接力陪伴。</view><button class="primary" bindtap="openFamily">创建或加入家庭</button></view>
+  <view wx:else class="card empty"><view class="empty-icon">🌱</view><view class="section">{{syncError ? '暂时连接不上学习档案' : '正在准备今日学习…'}}</view><view class="subtitle">{{syncError ? '联网后重试即可继续。' : '首次打开会自动准备好孩子的档案和每日任务。'}}</view><button wx:if="{{syncError}}" class="primary" bindtap="refresh">重试连接</button></view>
 </view>

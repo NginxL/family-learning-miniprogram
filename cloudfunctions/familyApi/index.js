@@ -3,7 +3,10 @@ const cloud = require('wx-server-sdk');
 const { createService } = require('./service');
 const { createCloudStore } = require('./store');
 cloud.init({ env: cloud.DYNAMIC_CURRENT_ENV });
-const service = createService({ store: createCloudStore(cloud.database({ throwOnNotFound: false })) });
+const service = createService({ store: createCloudStore(cloud.database({ throwOnNotFound: false })),
+  defaultChild: { name: process.env.DEFAULT_CHILD_NAME || '孩子',
+    birthDate: process.env.DEFAULT_CHILD_BIRTH_DATE || null,
+    age: Number(process.env.DEFAULT_CHILD_AGE || 6), schoolGrade: Number(process.env.DEFAULT_CHILD_GRADE || 1) } });
 
 exports.main = async (event) => {
   try {

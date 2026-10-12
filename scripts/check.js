@@ -6,7 +6,7 @@ const assert = require('node:assert/strict');
 const root = path.resolve(__dirname, '..');
 function walk(folder) {
   return fs.readdirSync(folder, { withFileTypes: true }).flatMap((entry) => {
-    if (['node_modules', '.git', 'tmp', 'artifacts'].includes(entry.name)) return [];
+    if (['node_modules', '.git', 'tmp', 'artifacts', 'output', '.playwright-cli'].includes(entry.name)) return [];
     const file = path.join(folder, entry.name);
     return entry.isDirectory() ? walk(file) : [file];
   });
@@ -20,7 +20,7 @@ const app = JSON.parse(fs.readFileSync(path.join(root, 'miniprogram/app.json')))
 for (const page of app.pages) for (const extension of ['.js', '.wxml']) assert.ok(fs.existsSync(path.join(root, 'miniprogram', page + extension)), `${page}${extension} missing`);
 const rules = JSON.parse(fs.readFileSync(path.join(root, 'cloud/database.rules.json')));
 for (const name of ['families', 'profiles', 'invites', 'days', 'receipts', 'learning']) assert.deepEqual(rules[name], { read: false, write: false });
-for (const name of ['catalog.js', 'learning.js']) {
+for (const name of ['catalog.js', 'learning.js', 'child-profile.js']) {
   const expected = '// Generated from shared/' + name + '. Run npm run build after editing the source.\n' + fs.readFileSync(path.join(root, 'shared', name), 'utf8');
   for (const folder of ['miniprogram/lib/learning', 'cloudfunctions/familyApi/learning'])
     assert.equal(fs.readFileSync(path.join(root, folder, name), 'utf8'), expected, `Run npm run build: stale ${folder}/${name}`);

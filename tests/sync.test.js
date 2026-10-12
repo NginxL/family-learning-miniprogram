@@ -126,14 +126,18 @@ test('revoked membership clears cached household and queued writes', async () =>
   b.engine.enqueue(DATE, b.engine.viewDay(DATE).tasks[0].id, true);
   await f.call('parent-a', 'removeMember', { familyId: family.id, memberId: b.engine.state.userId });
   await b.engine.sync(DATE);
-  assert.equal(b.engine.state.family, null); assert.deepEqual(b.engine.state.days, {}); assert.equal(b.engine.state.queue.length, 0);
+  assert.notEqual(b.engine.state.family.id, family.id);
+  assert.ok(Object.keys(b.engine.state.days).every((key) => !key.startsWith(family.id + ':')));
+  assert.equal(b.engine.state.queue.length, 0);
 });
 
 test('account switch cannot replay previous user queue', async () => {
   const f = fixture(); await f.family(); const a = f.client('parent-a'); await a.engine.sync(DATE);
   a.engine.enqueue(DATE, a.engine.viewDay(DATE).tasks[0].id, true);
   const other = f.client('stranger', a.storage); await other.engine.sync(DATE);
-  assert.equal(other.engine.state.family, null); assert.deepEqual(other.engine.state.queue, []);
+  assert.notEqual(other.engine.state.family.id, a.engine.state.family.id);
+  assert.ok(Object.keys(other.engine.state.days).every((key) => !key.startsWith(a.engine.state.family.id + ':')));
+  assert.deepEqual(other.engine.state.queue, []);
 });
 
 test('storage failure does not pretend a local check-in was saved', async () => {
