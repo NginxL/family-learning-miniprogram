@@ -1,0 +1,21 @@
+<view class="page">
+  <view class="eyebrow">小小日课</view>
+  <view class="title">隐私与数据管理</view>
+  <view class="subtitle">本工具供家长管理家庭学习。请仅录入你有权管理的孩子档案；孩子使用时，请由监护人陪同。</view>
+  <view class="card">
+    <view class="section" style="margin-top:0">保存哪些信息</view>
+    <view class="body">为识别账号和同步学习进度，云端使用微信提供的账号标识，并保存其摘要、家庭成员称呼、孩子昵称、学习计划和完成记录。出生日期、年龄和在读年级由家长选填；生日仅用于计算周岁。不需要提供孩子真实姓名。</view>
+    <view class="body">本工具不主动获取手机号、位置、通讯录、相册或录音。点击“复制邀请码”或“复制来源链接”时，会把相应内容写入剪贴板。</view>
+  </view>
+  <view class="card">
+    <view class="section" style="margin-top:0">谁能看到</view>
+    <view class="body">家庭数据保存在腾讯云开发环境及登录设备的本地缓存中，用于跨设备同步和离线查看。只有当前家庭成员可以通过本工具读取和更新；新账号必须使用有效的家庭邀请码才能加入已有家庭。环境管理员可为维护服务、处理数据请求而访问云端数据。</view>
+    <view class="body">邀请码仅限可信家人使用，有效期 24 小时、仅可使用一次。源码公开不包含家庭档案和学习记录；本工具不展示其他家庭的信息，不将这些记录用于广告。</view>
+  </view>
+  <view class="card">
+    <view class="section" style="margin-top:0">修改、退出与删除</view>
+    <view class="body">家庭创建者可在“家庭”页修改孩子档案、清除生日、管理成员。退出或被移除后，联网时会清除该家庭在本机的应用缓存；此前已下载的离线副本无法立即远程擦除。退出家庭不会删除云端历史记录。</view>
+    <view class="body">云端记录会持续保存以供回顾。本版由管理员处理导出、删除和账号注销请求。请通过下方微信反馈入口提出请求，管理员核实你对相关数据的权限后处理；无需在反馈中提供密码或完整生日。</view>
+    <button class="secondary" open-type="feedback">联系开发者／申请管理数据</button>
+  </view>
+</view>

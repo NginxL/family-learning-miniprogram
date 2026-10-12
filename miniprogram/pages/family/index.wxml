@@ -42,4 +42,5 @@
       <button wx:if="{{family.myRole !== 'owner'}}" class="quiet danger plan-help" bindtap="leaveFamily">退出家庭</button>
     </view>
   </block>
+  <navigator class="status plan-help" url="/pages/privacy/index">隐私与数据管理 →</navigator>
 </view>
