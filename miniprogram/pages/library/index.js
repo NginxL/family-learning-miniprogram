@@ -1,6 +1,6 @@
 const { common, decorate } = require('../../lib/page');
 const learning = require('../../lib/learning/learning');
-const resources = require('../../lib/learning/resources.json');
+const resources = require('../../lib/learning/resources');
 const base = common();
 Page({
   ...base,

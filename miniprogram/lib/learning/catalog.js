@@ -52,7 +52,7 @@ const maths = Array.from({ length: 20 }, (_, i) => {
   return { id: `math-add-${a}-${b}`, kind: 'math', title: `${a} + ${b} = ?`,
     detail: `拿出 ${a} 个积木，再拿出 ${b} 个。一共有几个？\n先摆一摆，再说出算式。\n\n家长参考：${a} + ${b} = ${a + b}`, source: '自编 10 以内加法练习', minutes: 2 };
 });
-const knowledge = require('./knowledge-data.json');
+const knowledge = require('./knowledge-data');
 const byId = new Map(knowledge.map((item) => [item.id, item]));
 const starters = [...poems, ...words, ...sentences, ...readings, ...maths].map((item) => {
   const full = byId.get(item.id);

@@ -22,7 +22,7 @@ ECDICT 来源：[skywind3000/ECDICT](https://github.com/skywind3000/ECDICT)，�
 
 ## 生成与校验
 
-`npm run build` 从上述源数据生成 `shared/knowledge-data.json`、`shared/resources.json`，并同步到小程序和云函数。生成文件不手工修改；修改源数据后必须重建并运行 `npm run verify`。
+`npm run build` 从上述源数据生成 `shared/knowledge-data.json`、`shared/resources.json`，云函数使用同样的 JSON 文件，小程序使用对应的 `.js` 数据模块，以兼容微信原生模块加载。生成文件不手工修改；修改源数据后必须重建并运行 `npm run verify`。
 
 年级记录由具名教材的 `gradeVerification` 控制。只有 `catalogue_verified` 且有阅读器定位值或样本页码的条目进入年级进度；候选、截断标题、未展开组及学校采用版本不会因生成脚本运行而自动升级为已核实。`bookIds` 可保留候选关联，不能单凭它计算年级掌握程度。
 
