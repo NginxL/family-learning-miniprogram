@@ -11,6 +11,7 @@ jobs:
         with:
           node-version: '20'
       - run: npm run configure
+      - run: npm ci --ignore-scripts
       - run: npm ci --prefix cloudfunctions/familyApi --ignore-scripts
       - run: npm run verify
       - run: npm audit --prefix cloudfunctions/familyApi --omit=dev

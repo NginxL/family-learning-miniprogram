@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "Node16",
+    "moduleResolution": "node16",
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "lib": ["ES2022"],
+    "types": ["node"],
+    "rootDirs": ["src/shared", "src/cloud/learning"],
+    "paths": {
+      "wx-server-sdk": ["./cloudfunctions/familyApi/node_modules/wx-server-sdk"]
+    }
+  },
+  "include": ["src/**/*.ts", "tests/types/**/*.ts"]
+}

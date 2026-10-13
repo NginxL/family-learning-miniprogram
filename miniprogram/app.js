@@ -1,4 +1,5 @@
 const { SyncEngine } = require('./lib/sync-engine');
+const { createCloudTransport } = require('./lib/cloud-transport');
 const config = require('./config');
 App({
   onLaunch() {
@@ -6,17 +7,7 @@ App({
     if (config.mode === 'demo') transport = require('./lib/demo').createDemo(wx);
     else {
       if (wx.cloud && config.envId) wx.cloud.init({ env: config.envId, traceUser: false });
-      transport = async (action, payload) => {
-        if (!wx.cloud || !config.envId) throw new Error('云开发尚未配置，请设置环境 ID');
-        const response = await wx.cloud.callFunction({ name: 'familyApi', data: { action, payload } });
-        const result = response.result;
-        if (!result || !result.ok) {
-          const error = new Error(result && result.error ? result.error.message : '云函数返回异常');
-          error.code = result && result.error && result.error.code;
-          throw error;
-        }
-        return result.data;
-      };
+      transport = createCloudTransport(wx.cloud, config.envId);
     }
     const key = `family-learning-v1:${config.mode}:${config.envId}`;
     this.engine = new SyncEngine({ transport, storage: {

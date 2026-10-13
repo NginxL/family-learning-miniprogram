@@ -1,0 +1,256 @@
+{
+  "sourceCommit": "6da5ab34870fd9b6078bbef62514cb7177e3c143",
+  "description": "Synthetic v1 records generated before the TypeScript migration; no real household data.",
+  "now": "2026-10-13T10:00:00+08:00",
+  "database": {
+    "families/f_4c1029697ee358715d3a14a2add817c4": {
+      "id": "f_4c1029697ee358715d3a14a2add817c4",
+      "name": "我的家庭",
+      "ownerId": "4c1029697ee358715d3a14a2add817c4b01651440de808371f78165ac90dc581",
+      "members": [
+        {
+          "id": "4c1029697ee358715d3a14a2add817c4b01651440de808371f78165ac90dc581",
+          "name": "我",
+          "role": "owner"
+        }
+      ],
+      "children": [
+        {
+          "id": "c_id1",
+          "name": "测试孩子",
+          "birthDate": "2020-01-01",
+          "age": 6,
+          "schoolGrade": 1,
+          "ageRecordedOn": "2026-10-13",
+          "version": 1
+        },
+        {
+          "id": "c_id18",
+          "name": "另一个孩子",
+          "birthDate": null,
+          "age": 8,
+          "schoolGrade": 3,
+          "ageRecordedOn": "2026-10-13",
+          "version": 0
+        }
+      ],
+      "plans": [
+        {
+          "id": "p_id15",
+          "childId": "c_id1",
+          "title": "Demo article",
+          "detail": "A short family story.",
+          "subject": "english",
+          "kind": "english-reading",
+          "schedule": "library",
+          "date": "2026-10-13",
+          "minutes": 5,
+          "enabled": false,
+          "source": "家长自建",
+          "studyGrade": 3
+        }
+      ],
+      "autoPlans": {
+        "c_id1": [
+          {
+            "kind": "poetry",
+            "mode": "new",
+            "quantity": 1,
+            "scope": "starter"
+          },
+          {
+            "kind": "word",
+            "mode": "new",
+            "quantity": 0,
+            "scope": "starter"
+          },
+          {
+            "kind": "sentence",
+            "mode": "new",
+            "quantity": 1,
+            "scope": "starter"
+          },
+          {
+            "kind": "reading",
+            "mode": "new",
+            "quantity": 0,
+            "scope": "starter"
+          },
+          {
+            "kind": "english-reading",
+            "mode": "new",
+            "quantity": 0,
+            "scope": "starter"
+          },
+          {
+            "kind": "math",
+            "mode": "new",
+            "quantity": 0,
+            "scope": "starter"
+          },
+          {
+            "kind": "other",
+            "mode": "new",
+            "quantity": 0,
+            "scope": "starter"
+          }
+        ]
+      },
+      "createdAt": 1791856800000,
+      "activeInviteHash": null,
+      "autoCreated": true
+    },
+    "profiles/4c1029697ee358715d3a14a2add817c4b01651440de808371f78165ac90dc581": {
+      "familyId": "f_4c1029697ee358715d3a14a2add817c4"
+    },
+    "invites/74ab4bce3d0b11b08199f0aee792a43087d021367d2c66f8401070e0cc245d0e": {
+      "familyId": "f_4c1029697ee358715d3a14a2add817c4",
+      "expiresAt": 1791943200000,
+      "usedAt": 1791856800000
+    },
+    "profiles/dde6e8974b46a1eddcd7ea3bbb899342f48cad896b47275a6f806062ec5ca14c": {
+      "familyId": null
+    },
+    "days/d280a45547270e6fe9688f64b1652a4c421ff601837b7970575df62cf62c386e": {
+      "familyId": "f_4c1029697ee358715d3a14a2add817c4",
+      "date": "2026-10-13",
+      "tasks": [
+        {
+          "id": "a_c_id1_poem-goose",
+          "kind": "poetry",
+          "subject": "poetry",
+          "title": "《咏鹅》",
+          "detail": "骆宾王\n鹅，鹅，鹅，曲项向天歌。\n白毛浮绿水，红掌拨清波。",
+          "source": "国家语文课标 2022 · 1-6 年级推荐 · PDF 第 65 页",
+          "minutes": 5,
+          "note": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+          "contentId": "poem-goose",
+          "childId": "c_id1",
+          "mode": "new",
+          "done": true,
+          "version": 1,
+          "updatedBy": "dde6e8974b46a1eddcd7ea3bbb899342f48cad896b47275a6f806062ec5ca14c",
+          "updatedAt": 1791856800000
+        },
+        {
+          "id": "a_c_id1_sentence-hello",
+          "kind": "sentence",
+          "subject": "english",
+          "title": "Hello!",
+          "detail": "Hello!\n你好！\n\n和家人一人一句，轮流说两遍。",
+          "source": "自编口语练习；非教材单元",
+          "minutes": 3,
+          "contentId": "sentence-hello",
+          "childId": "c_id1",
+          "mode": "new",
+          "done": false,
+          "version": 0,
+          "updatedBy": null,
+          "updatedAt": null
+        },
+        {
+          "id": "r_c_id1_poem-baidi",
+          "kind": "poetry",
+          "subject": "poetry",
+          "title": "《早发白帝城》",
+          "detail": "李白\n朝辞白帝彩云间，千里江陵一日还。\n两岸猿声啼不住，轻舟已过万重山。",
+          "source": "国家语文课标 2022 · 1-6 年级推荐 · PDF 第 66 页",
+          "minutes": 5,
+          "note": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+          "contentId": "poem-baidi",
+          "childId": "c_id1",
+          "mode": "new",
+          "done": false,
+          "version": 0,
+          "updatedBy": null,
+          "updatedAt": null
+        }
+      ],
+      "generated": {
+        "c_id1": {
+          "poetry": {
+            "kind": "poetry",
+            "mode": "new",
+            "quantity": 1,
+            "scope": "starter",
+            "actual": 1
+          },
+          "sentence": {
+            "kind": "sentence",
+            "mode": "new",
+            "quantity": 1,
+            "scope": "starter",
+            "actual": 1
+          }
+        }
+      },
+      "warnings": []
+    },
+    "learning/025a0b973316e1c2238cfefa6a2b715ce2608c593ca5b6f94e36286b256f8bd9": {
+      "familyId": "f_4c1029697ee358715d3a14a2add817c4",
+      "childId": "c_id1",
+      "records": {
+        "poem-goose": {
+          "item": {
+            "id": "poem-goose",
+            "kind": "poetry",
+            "builtin": true
+          },
+          "firstSeen": "2026-10-13",
+          "lastSeen": "2026-10-13",
+          "completedDates": [
+            "2026-10-13"
+          ],
+          "mastered": true,
+          "version": 2
+        },
+        "sentence-hello": {
+          "item": {
+            "id": "sentence-hello",
+            "kind": "sentence",
+            "builtin": true
+          },
+          "firstSeen": "2026-10-13",
+          "lastSeen": "2026-10-13",
+          "completedDates": [],
+          "mastered": false,
+          "version": 0
+        },
+        "poem-baidi": {
+          "item": {
+            "id": "poem-baidi",
+            "kind": "poetry",
+            "builtin": true
+          },
+          "firstSeen": "2026-10-13",
+          "lastSeen": "2026-10-13",
+          "completedDates": [],
+          "mastered": false,
+          "version": 0
+        }
+      }
+    },
+    "receipts/4b08358c50911008c29b89c7ffa52482c876a6a07322e0f813b44af268c7bc06": {
+      "familyId": "f_4c1029697ee358715d3a14a2add817c4",
+      "fingerprint": "7e27c601b2ed4ee3b0f8778cdf6b6d08c3e760bb692fc94123a245b50dc86a6c",
+      "task": {
+        "id": "a_c_id1_poem-goose",
+        "kind": "poetry",
+        "subject": "poetry",
+        "title": "《咏鹅》",
+        "detail": "骆宾王\n鹅，鹅，鹅，曲项向天歌。\n白毛浮绿水，红掌拨清波。",
+        "source": "国家语文课标 2022 · 1-6 年级推荐 · PDF 第 65 页",
+        "minutes": 5,
+        "note": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+        "contentId": "poem-goose",
+        "childId": "c_id1",
+        "mode": "new",
+        "done": true,
+        "version": 1,
+        "updatedBy": "dde6e8974b46a1eddcd7ea3bbb899342f48cad896b47275a6f806062ec5ca14c",
+        "updatedAt": 1791856800000
+      },
+      "createdAt": 1791856800000
+    }
+  }
+}

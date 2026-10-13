@@ -1,0 +1,169 @@
+// Persisted names and IDs are the v1 wire/storage format. Types do not migrate data.
+export type ContentKind = 'poetry' | 'word' | 'sentence' | 'english-reading' | 'reading' | 'math' | 'other';
+export type Subject = 'poetry' | 'english' | 'reading' | 'math' | 'other';
+export type SubjectFilter = Subject | 'all';
+export type SchoolGrade = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
+export type ContentScope = 'starter' | 'foundation' | 'moe-all' | 'tables' | 'shanghai54' | 'shanghai-exam' | 'all';
+export type LearningMode = 'new' | 'review';
+export type TaskMode = LearningMode | 'manual';
+export type CalendarDate = string;
+
+export interface GradeMapping {
+  grade: SchoolGrade;
+  bookId: string;
+  schoolSystem: '5-4';
+  semester: string;
+  edition: string;
+  sourceUrl: string;
+  outlineDestination: string;
+  sourceKind: string;
+  sourcePdfPage?: number;
+  sourcePrintPage?: number;
+  unit?: string;
+  evidence: string;
+  status: 'catalogue_verified';
+}
+
+export interface Content {
+  id: string;
+  kind: ContentKind;
+  title: string;
+  detail: string;
+  source: string;
+  minutes: number;
+  subject?: Subject;
+  workId?: string;
+  note?: string;
+  studyGrade?: SchoolGrade | null;
+  builtin?: false;
+}
+export interface KnowledgeItem extends Content {
+  collections: ContentScope[];
+  author?: string;
+  aliases?: string[];
+  bookIds?: string[];
+  curriculumId?: string;
+  referenceUrl?: string;
+  textSourceUrl?: string;
+  gradeMappings?: GradeMapping[];
+}
+export interface BuiltinReference {
+  id: string;
+  kind: ContentKind;
+  builtin: true;
+  studyGrade?: never;
+}
+export type StoredContent = Content | BuiltinReference;
+// Old plans may contain subject without kind; built-in ledger entries contain only an ID.
+export interface ContentInput extends Partial<Omit<Content, 'id' | 'builtin'>> {
+  id: string;
+  contentId?: string;
+  builtin?: boolean;
+  collections?: ContentScope[];
+}
+export interface LearningContent extends Content { subject: Subject }
+export interface LearningRecord {
+  item: StoredContent;
+  firstSeen: CalendarDate;
+  lastSeen: CalendarDate;
+  completedDates: CalendarDate[];
+  mastered: boolean;
+  version: number;
+}
+export interface LearningLedger {
+  familyId?: string;
+  childId?: string;
+  records: Record<string, LearningRecord>;
+}
+export interface PersistedLedger extends LearningLedger { familyId: string; childId: string }
+export interface Task extends LearningContent {
+  contentId: string;
+  childId: string;
+  mode: TaskMode;
+  done: boolean;
+  version: number;
+  updatedBy: string | null;
+  updatedAt: number | null;
+  pending?: boolean;
+}
+export interface AutoRule {
+  kind: ContentKind;
+  mode: LearningMode;
+  scope: ContentScope;
+  quantity: number;
+}
+export interface Day {
+  familyId?: string;
+  date: CalendarDate;
+  tasks: Task[];
+  generated?: Record<string, Partial<Record<ContentKind, AutoRule & { actual: number }>>>;
+  warnings?: Array<{ childId: string; kind: ContentKind; message: string }>;
+}
+export interface ChildProfile {
+  id: string;
+  name: string;
+  birthDate?: CalendarDate | null;
+  age?: number | null;
+  schoolGrade?: SchoolGrade | null;
+  ageRecordedOn?: CalendarDate | null;
+  version?: number;
+}
+export interface Plan extends ContentInput {
+  childId: string;
+  title: string;
+  subject: Subject;
+  minutes: number;
+  enabled: boolean;
+  schedule?: 'once' | 'daily' | 'library';
+  date?: CalendarDate;
+}
+export interface PlanningFamily {
+  children: Array<{ id: string }>;
+  plans: Plan[];
+  autoPlans?: Record<string, AutoRule[]>;
+}
+export interface Member { id: string; name: string; role: 'owner' | 'guardian' }
+export interface Family extends PlanningFamily {
+  id: string;
+  name: string;
+  ownerId: string;
+  children: ChildProfile[];
+  members: Member[];
+  createdAt: number;
+  activeInviteHash: string | null;
+  autoCreated?: boolean;
+}
+export interface PublicFamily extends Omit<Family, 'createdAt' | 'activeInviteHash' | 'autoCreated'> {
+  myRole: Member['role'];
+  canJoinFamily: boolean;
+}
+export interface HistoryQuery {
+  subject?: SubjectFilter;
+  filter?: 'all' | 'learned' | 'mastered';
+  query?: string;
+  offset?: number;
+}
+export interface CatalogQuery {
+  kind?: ContentKind;
+  subject?: SubjectFilter;
+  scope?: ContentScope;
+  bookId?: string;
+  grade?: SchoolGrade;
+  query?: string;
+}
+export interface KindDefinition { id: ContentKind; subject: Subject; label: string; unit: string; max: number }
+
+export interface DatabaseDocuments {
+  profiles: { familyId: string | null };
+  families: Family;
+  invites: { familyId: string; expiresAt: number; usedAt: number | null };
+  days: Day;
+  receipts: { familyId: string; fingerprint: string; task: Task; createdAt: number };
+  learning: PersistedLedger;
+}
+export type Collection = keyof DatabaseDocuments;
+export interface Transaction {
+  get<C extends Collection>(collection: C, id: string): Promise<DatabaseDocuments[C] | null>;
+  put<C extends Collection>(collection: C, id: string, value: DatabaseDocuments[C]): Promise<void>;
+}
+export interface Store { run<T>(work: (transaction: Transaction) => Promise<T>): Promise<T> }

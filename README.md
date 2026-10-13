@@ -6,6 +6,7 @@
 
 [![Verify](https://github.com/NginxL/family-learning-miniprogram/actions/workflows/verify.yml/badge.svg)](https://github.com/NginxL/family-learning-miniprogram/actions/workflows/verify.yml)
 ![Node.js 20+](https://img.shields.io/badge/Node.js-20%2B-417E38)
+![TypeScript strict](https://img.shields.io/badge/TypeScript-strict-3178C6)
 ![WeChat Mini Program](https://img.shields.io/badge/WeChat-原生小程序-07C160)
 
 [界面预览](#界面预览) · [当前功能](#当前功能) · [知识库覆盖](#知识库覆盖) · [本地运行](#本地运行) · [接入云开发](#接入云开发) · [文档导航](#文档导航)
@@ -115,12 +116,17 @@ npm run configure -- --appid wxYOUR_APP_ID --env YOUR_CLOUDBASE_ENV_ID
 
 ## 工程结构
 
+知识库、学习记录和云函数核心已迁到 TypeScript；页面脚本等仍使用 JavaScript。构建保持现有运行入口，详见[TS 迁移与构建约定](docs/TYPESCRIPT.md)。仓库中的迁移产物尚未上传微信或部署云函数，审核中的版本保持原状。
+
 ```text
+src/shared/                 TS 知识模型、学习记录、接口约定与规则
+src/cloud/                  TS 云函数入口、权限与数据库适配
+src/client/                 TS 云函数调用适配
 miniprogram/                 微信页面、演示模式、同步队列
 cloudfunctions/familyApi/    家庭权限、任务与事务 API
 cloud/database.rules.json   集合的客户端拒绝读写规则
 tests/                      家庭隔离、冲突、离线重试和 SDK 契约测试
-shared/                     客户端与云函数共用的选材、回顾、进度规则
+shared/                     共用规则的生成 JS，供 Node 测试与工具使用
 data/catalogs/              课标目录、原作、词表与教材证据
 scripts/knowledge.js        从源数据生成内置知识库
 docs/                       部署、边界与调研来源
@@ -128,20 +134,21 @@ docs/                       部署、边界与调研来源
 
 | 命令 | 用途 |
 |---|---|
-| `npm run build` | 生成知识库，并同步客户端与云函数共用的规则 |
-| `npm run verify` | 检查 JS/JSON、页面入口、包体与核心行为测试 |
+| `npm run typecheck` | 严格检查 TS 源码与接口调用的类型测试 |
+| `npm run build` | 校验知识源结构，编译 TS 并生成客户端、云函数运行文件 |
+| `npm run verify` | 类型检查、生成文件一致性、JS/JSON、页面入口、包体与行为测试 |
 | `npm audit --prefix cloudfunctions/familyApi --omit=dev` | 检查云函数生产依赖的已知漏洞 |
 
 GitHub Actions 执行构建一致性、行为测试与依赖审计。测试使用隔离内存事务和两个独立客户端缓存，不等于真实云环境或真机验收。
 
-修改 `shared/` 或 `data/catalogs/` 后运行 `npm run build`；生成结果随代码提交，检查脚本会拒绝客户端／云函数不一致的版本。
+修改 `src/` 或 `data/catalogs/` 后运行 `npm run build`；生成结果随代码提交。带 `Generated` 标记的 JS 由 TS 或知识源生成，检查脚本会拒绝过期或被单独修改的产物。
 
 ## 文档导航
 
 | 主题 | 文档 |
 |---|---|
 | 部署与发布 | [云开发部署](docs/DEPLOYMENT.md) · [备案、审核与发布](docs/RELEASE.md) |
-| 实现与验收 | [MVP 功能、同步与权限边界](docs/MVP.md) · [预览图片说明](docs/images/README.md) |
+| 实现与验收 | [MVP 功能、同步与权限边界](docs/MVP.md) · [TS 迁移与构建](docs/TYPESCRIPT.md) · [预览图片说明](docs/images/README.md) |
 | 知识库与来源 | [年级核验](docs/知识库与年级核验.md) · [上海中考覆盖](docs/上海中考知识范围与覆盖.md) · [数据来源与许可](data/catalogs/README.md) |
 | 设计参考 | [GitHub 界面与动线参考](docs/GitHub界面与动线参考.md) |
 

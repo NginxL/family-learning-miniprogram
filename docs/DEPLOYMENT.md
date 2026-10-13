@@ -25,11 +25,14 @@ npm run configure -- --appid wxYOUR_APP_ID --env YOUR_CLOUDBASE_ENV_ID
 `cloud/database.rules.json` 是逐集合清单，不会随源码自动生效。全部配置完成后再部署云函数。所有访问按主键，无需额外复合索引。
 
 ```sh
+npm ci --ignore-scripts
 npm ci --prefix cloudfunctions/familyApi --ignore-scripts
 npm run build
 npm run verify
 npm audit --prefix cloudfunctions/familyApi --omit=dev
 ```
+
+知识库、学习记录和云函数的源码位于 `src/`，以上构建会生成原路径下的 JS；不要直接修改生成文件。类型依赖仅安装在仓库根目录，不加入云函数生产依赖。当前 TS 迁移的兼容范围与验证见[构建约定](TYPESCRIPT.md)。执行构建与测试不会上传小程序或部署云函数。
 
 右键 `cloudfunctions/familyApi`，上传并部署（云端安装依赖），保留函数名 `familyApi`。选择控制台支持的 Node.js 20 或更高运行时，初期超时 20 秒、内存 256 MB。保留锁文件和覆盖配置；确认部署环境遵循这些依赖版本，否则用本地 `npm ci` 后连依赖上传的方式。
 
