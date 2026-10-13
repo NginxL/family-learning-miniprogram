@@ -10,8 +10,8 @@
     "skipLibCheck": true,
     "noEmit": true,
     "lib": ["ES2022"],
-    "types": ["node"],
-    "rootDirs": ["src/shared", "src/cloud/learning"],
+    "types": ["node", "miniprogram-api-typings"],
+    "rootDirs": ["src/shared", "src/cloud/learning", "src/miniprogram/lib/learning"],
     "paths": {
       "wx-server-sdk": ["./cloudfunctions/familyApi/node_modules/wx-server-sdk"]
     }

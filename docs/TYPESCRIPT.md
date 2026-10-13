@@ -1,8 +1,8 @@
-# TypeScript 核心与构建约定
+# TypeScript 工程与构建约定
 
 ## 迁移范围
 
-项目采用渐进迁移。知识库、学习记录规则和云函数接口使用严格类型检查；微信小程序与云函数继续运行编译后的 CommonJS JavaScript。
+项目采用渐进迁移。知识库、学习记录规则、云函数接口、页面及同步队列使用严格类型检查；微信小程序与云函数继续运行编译后的 CommonJS JavaScript。
 
 | 源码 | 负责内容 | 运行产物 |
 |---|---|---|
@@ -11,8 +11,10 @@
 | `src/shared/catalog.ts`、`learning.ts`、`child-profile.ts` | 目录合并、任务生成、历史与掌握、进度、生日计算 | `shared/`、`miniprogram/lib/learning/`、`cloudfunctions/familyApi/learning/` 中的同名 `.js` |
 | `src/cloud/` | 云函数入口、权限与参数校验、业务服务、数据库适配 | `cloudfunctions/familyApi/{index,service,store}.js` |
 | `src/client/cloud-transport.ts` | 小程序的云函数调用与响应信封检查 | `miniprogram/lib/cloud-transport.js` |
+| `src/miniprogram/app.ts`、`pages/` | 应用启动及七个页面的状态、事件、生命周期 | `miniprogram/app.js`、`miniprogram/pages/*/index.js` |
+| `src/miniprogram/lib/` | 同步队列、页面共用逻辑、任务分组与错误信息；客户端模型及页面类型 | 同名运行模块输出到 `miniprogram/lib/`；类型在编译时擦除 |
 
-页面脚本、同步队列、演示适配器和数据采集脚本仍使用 JavaScript。新增 TS 调用方可直接复用共用模型与接口；尚未迁移的 JS 调用方依靠现有运行时校验和行为测试。
+演示适配器 `miniprogram/lib/demo.js`、构建与数据采集脚本仍使用 JavaScript。页面、同步队列和真实云调用共用请求与响应约定；演示适配器通过声明文件接入，并由页面与原生模块加载测试验证。WXML、WXSS、页面路径和运行配置格式保持不变。
 
 ## 开发与生成
 
@@ -24,13 +26,13 @@ npm run build
 npm run verify
 ```
 
-TypeScript 固定为 `6.0.2`，Node 类型固定到 Node 20；均为开发依赖，不进入小程序或云函数生产依赖。`strict`、`noImplicitReturns`、`noFallthroughCasesInSwitch` 已启用。
+TypeScript 固定为 `6.0.2`，Node 类型固定到 Node 20，微信官方 API 类型包 `miniprogram-api-typings` 固定为 `5.2.3`；均为开发依赖，不进入小程序或云函数生产依赖。`strict`、`noImplicitReturns`、`noFallthroughCasesInSwitch` 已启用。
 
 编辑 `src/` 中的 TS 源文件，随后运行 `npm run build`，将源码与生成的 JS 一起提交。带有 `Generated from src/…` 标记的文件不得单独修改。`npm run check` 会重新编译并逐文件比对产物，遗漏构建或手改产物都会失败。
 
 `scripts/typescript-build.js` 在临时目录编译并生成产物映射，退出时删除临时目录；`scripts/sync-shared.js` 写入原有运行目录。构建不包含上传、发布、云函数部署或数据库写入。
 
-`tsconfig.json` 的 `rootDirs` 只用于把云端 `./learning/*` 导入解析到共用 TS 源码；实际部署包中仍由构建脚本放置相应 JS 文件。小程序知识数据继续生成 `.js` 模块，不依赖 Node 的 JSON 加载器。
+`tsconfig.json` 的 `rootDirs` 只用于把云端和小程序的 `learning/*` 导入解析到共用 TS 源码；实际部署包中仍由构建脚本放置相应 JS 文件。构建读取 `miniprogram/app.json` 的页面清单，每个页面都须有对应 TS 源码。小程序知识数据继续生成 `.js` 模块，不依赖 Node 的 JSON 加载器。
 
 ## 数据与接口边界
 
@@ -42,6 +44,12 @@ TypeScript 固定为 `6.0.2`，Node 类型固定到 Node 20；均为开发依赖
 
 以下边界保留受限类型断言：数据库适配器读取本服务维护的 v1 文档；客户端核对响应信封后接收自有服务的操作结果；微信 SDK 声明缺失的 `DYNAMIC_CURRENT_ENV`、`throwOnNotFound` 配置。数据库文档与接口响应没有增加完整的运行时 Schema 解码，SDK 适配由安装包契约测试覆盖。
 
+页面的 `PageDefinition` 约束 `this.data`、事件值和顶层 `setData` 字段，避免把拼错字段或表单字符串直接作为已转换的数据提交。年级选择器的数字来自固定的 0–9 选项；自动计划允许输入框暂时为空，提交前仍检查整数及数量范围。WXML 表达式不由 TypeScript 检查，事件绑定由页面测试核验。
+
+同步队列沿用 `family-learning-v1:<mode>:<envId>` 缓存，演示后端沿用 `demo-backend-v1`。队列条目的 `familyId`、`date`、`taskId`、`done`、`baseVersion`、`mutationId` 原样恢复；30 天任务缓存、8 组历史查询、5 组进度查询和 500 条待同步上限不变。旧缓存中缺省的历史、进度、提示字段仍按原逻辑处理。家庭或账号切换清理旧缓存，收到服务端权限拒绝后清理对应缓存，冲突仍以云端结果为准。
+
+本机缓存由应用自行维护，在 `app.ts` 的存储入口作类型断言，不新增重置缓存或转换数据的步骤。`ClientResults` 仅兼容旧演示响应缺少 `canJoinFamily`、`duplicate` 的情况，不放宽云端接口。`command` 仍自动填入当前家庭 ID，并保留未加载家庭时由服务端拒绝请求的行为。微信抛出的普通错误对象按 `unknown` 处理；缺少有效错误信息时显示既有通用提示。
+
 ## 兼容与验证
 
 | 项目 | 验证依据 |
@@ -49,12 +57,15 @@ TypeScript 固定为 `6.0.2`，Node 类型固定到 Node 20；均为开发依赖
 | 知识内容、内容 ID 与排序 | 对照迁移前提交 `6da5ab3`，全部 1,871 项一致；目录和教材映射测试继续执行 |
 | 接口及数据库格式 | 21 次代表性调用结果、7 份持久化文档与迁移前一致；操作名、字段名、六个集合及缓存 key 保持兼容 |
 | 旧档案读取与更新 | `tests/fixtures/v1-family.json` 保存迁移前生成的虚构数据；`tests/api-contract.test.js` 验证身份、生日、掌握状态、旧记录撤销和已移除成员的拒绝访问 |
-| 编译期约束 | `tests/types/contracts.ts` 同时包含合法调用和预期报错案例；错误案例不再报错时，类型检查也会失败 |
+| 页面与演示数据 | 对照页面迁移前提交 `11b6080`，七个页面的 15 份数据快照及两份本地存储内容一致；模板、样式和路由未改动 |
+| 旧队列恢复 | `tests/fixtures/v1-sync-cache.json` 由迁移前 JS 生成，仅含虚构数据；`tests/client-migration.test.js` 验证旧队列重启、撤销／完成顺序、响应丢失重试及旧缓存缺省字段 |
+| 页面异步生命周期 | `tests/page-lifecycle.test.js` 验证切换孩子、隐藏页面后拒绝过期结果，移除同步订阅和刷新／搜索定时器 |
+| 编译期约束 | `tests/types/contracts.ts`、`tests/types/pages-sync.ts` 同时包含合法调用和预期报错案例，覆盖接口、队列、页面字段及表单类型；错误案例不再报错时，类型检查也会失败 |
 | 非法输入与数据源 | 云接口运行时验证测试、`tests/knowledge-build.test.js` 的非法年级和重复 ID 检查 |
 | 原生入口与同步 | 既有原生 JS 加载、双客户端、离线恢复、重试去重和冲突测试 |
 
-本阶段无需数据库迁移，不生成新家庭，也不改变旧内容的身份。测试不等于真机与真实云环境验收。
+本阶段无需数据库或缓存迁移，不生成新家庭，也不改变旧内容的身份。严格类型检查及 71 项行为测试通过。测试不等于真机与真实云环境验收。
 
 ## 发布状态
 
-截至 2026-10-13，TS 核心迁移仅用于仓库开发，尚未上传微信或部署到云环境。当前审核中的 `1.0.0` 和已部署云函数保持原版本。后续启用迁移产物前，仍需按[部署说明](DEPLOYMENT.md)完成真机验证，并按[发布说明](RELEASE.md)推进版本发布。
+截至 2026-10-13，TS 核心、页面与同步队列迁移仅用于仓库开发，尚未上传微信或部署到云环境。当前审核中的 `1.0.0` 和已部署云函数保持原版本。后续启用迁移产物前，仍需按[部署说明](DEPLOYMENT.md)完成真机验证，并按[发布说明](RELEASE.md)推进版本发布。

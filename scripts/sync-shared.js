@@ -10,4 +10,4 @@ for (const [name, content] of artifacts()) {
 }
 // Native mini-programs register JS modules, not Node JSON modules.
 for (const name of ['knowledge-data', 'resources']) fs.rmSync(path.join(root, `miniprogram/lib/learning/${name}.json`), { force: true });
-console.log('Typed knowledge, learning rules and cloud API compiled to the existing JavaScript entry points.');
+console.log('TypeScript sources and knowledge compiled to the existing mini-program and cloud entry points.');

@@ -116,13 +116,14 @@ npm run configure -- --appid wxYOUR_APP_ID --env YOUR_CLOUDBASE_ENV_ID
 
 ## 工程结构
 
-知识库、学习记录和云函数核心已迁到 TypeScript；页面脚本等仍使用 JavaScript。构建保持现有运行入口，详见[TS 迁移与构建约定](docs/TYPESCRIPT.md)。仓库中的迁移产物尚未上传微信或部署云函数，审核中的版本保持原状。
+知识库、学习记录、云函数核心、七个页面和同步队列已迁到 TypeScript；演示后端及构建脚本仍使用 JavaScript。构建保持现有运行入口和缓存格式，详见[TS 迁移与构建约定](docs/TYPESCRIPT.md)。仓库中的迁移产物尚未上传微信或部署云函数，审核中的版本保持原状。
 
 ```text
 src/shared/                 TS 知识模型、学习记录、接口约定与规则
 src/cloud/                  TS 云函数入口、权限与数据库适配
 src/client/                 TS 云函数调用适配
-miniprogram/                 微信页面、演示模式、同步队列
+src/miniprogram/            TS 应用入口、页面状态与事件、同步队列
+miniprogram/                微信运行产物、模板、样式及演示后端
 cloudfunctions/familyApi/    家庭权限、任务与事务 API
 cloud/database.rules.json   集合的客户端拒绝读写规则
 tests/                      家庭隔离、冲突、离线重试和 SDK 契约测试
@@ -134,7 +135,7 @@ docs/                       部署、边界与调研来源
 
 | 命令 | 用途 |
 |---|---|
-| `npm run typecheck` | 严格检查 TS 源码与接口调用的类型测试 |
+| `npm run typecheck` | 严格检查 TS 源码、页面字段、离线队列与接口调用的类型测试 |
 | `npm run build` | 校验知识源结构，编译 TS 并生成客户端、云函数运行文件 |
 | `npm run verify` | 类型检查、生成文件一致性、JS/JSON、页面入口、包体与行为测试 |
 | `npm audit --prefix cloudfunctions/familyApi --omit=dev` | 检查云函数生产依赖的已知漏洞 |

@@ -1,91 +1,165 @@
-const { chinaDate } = require('./sync-engine');
-const learning = require('./learning/learning');
-const { withCurrentAge } = require('./learning/child-profile');
-const modeLabels = { new: '全新', review: '复习', manual: '家长安排' };
-const decorate = (item) => ({ ...item, kindLabel: learning.definition(learning.kindOf(item)).label,
-  subjectLabel: (learning.subjects.find((subject) => subject.id === item.subject) || {}).label || '其他',
-  modeLabel: modeLabels[item.mode] || '家长安排' });
-function common() {
-  return {
-    data: { family: null, children: [], childId: '', tasks: [], plans: [], members: [], date: chinaDate(), today: chinaDate(),
-      followToday: true, subjectFilter: 'all', subjectOptions: learning.subjects, mode: 'demo', busy: false },
-    onShow() {
-      this.engine = getApp().engine;
-      const navigation = getApp().navigation || {};
-      this.setData({ childId: navigation.childId || this.data.childId, subjectFilter: navigation.subject || this.data.subjectFilter });
-      if (navigation.date) { this.setData({ date: navigation.date, followToday: true }); delete navigation.date; }
-      this.active = true;
-      this.unsubscribe = this.engine.subscribe(() => this.render());
-      this.render(); this.refresh();
-      this.timer = setInterval(() => this.refresh(), 20000);
-    },
-    onHide() { this.cleanup(); },
-    onUnload() { this.cleanup(); },
-    cleanup() { this.active = false; if (this.unsubscribe) this.unsubscribe(); clearInterval(this.timer); },
-    async onPullDownRefresh() { try { await this.refresh(); } finally { wx.stopPullDownRefresh(); } },
-    render() {
-      const snapshot = this.engine.snapshot();
-      const family = snapshot.family;
-      const children = family ? family.children.map((child) => ({ ...withCurrentAge(child, chinaDate()), gradeLabel: learning.gradeLabels[child.schoolGrade || 0] })) : [];
-      const childId = children.some((child) => child.id === this.data.childId) ? this.data.childId : (children[0] && children[0].id) || '';
-      const date = this.data.followToday ? snapshot.today : this.data.date;
-      const day = this.engine.viewDay(date);
-      const allTasks = day.tasks.filter((task) => task.childId === childId).map(decorate);
-      const tasks = allTasks.filter((task) => this.data.subjectFilter === 'all' || task.subject === this.data.subjectFilter);
-      const doneCount = allTasks.filter((task) => task.done).length;
-      const minutes = allTasks.reduce((sum, task) => sum + task.minutes, 0);
-      const plans = (family ? family.plans : []).filter((plan) => plan.childId === childId)
-        .filter((plan) => this.data.subjectFilter === 'all' || plan.subject === this.data.subjectFilter)
-        .map((plan) => ({ ...decorate(plan), scheduleLabel: plan.schedule === 'library' ? '自动内容库' : plan.schedule === 'once' ? `仅 ${plan.date}` : '每天固定' }));
-      let syncLabel = snapshot.status === 'syncing' ? '正在同步…' : snapshot.status === 'online' ? '已同步' : '等待连接';
-      if (snapshot.queue.length) syncLabel += ` · ${snapshot.queue.length} 条待同步`;
-      const members = family ? family.members.map((member) => ({ ...member, isMe: member.id === snapshot.userId, roleLabel: member.role === 'owner' ? '创建者' : '家人' })) : [];
-      const subjectOptions = learning.subjects.map((subject) => ({ ...subject,
-        count: subject.id === 'all' ? allTasks.length : allTasks.filter((task) => task.subject === subject.id).length }));
-      this.setData({ family, children, childId, date, tasks, allTaskCount: allTasks.length, plans, members, today: snapshot.today, subjectOptions,
-        dayWarnings: (day.warnings || []).filter((warning) => warning.childId === childId && (this.data.subjectFilter === 'all' || learning.definition(warning.kind).subject === this.data.subjectFilter)),
-        childIndex: Math.max(0, children.findIndex((child) => child.id === childId)),
-        doneCount, minutes, percent: allTasks.length ? Math.round(doneCount / allTasks.length * 100) : 0,
-        syncLabel, syncError: snapshot.error, notice: snapshot.notice, mode: getApp().mode });
-      if (this.afterRender) this.afterRender({ allTasks });
-    },
-    rememberSelection() { getApp().navigation = { childId: this.data.childId, subject: this.data.subjectFilter }; },
-    selectChild(event) {
-      this.setData({ childId: event.currentTarget.dataset.id }); this.rememberSelection(); this.render();
-      if (this.selectionChanged) this.selectionChanged();
-    },
-    selectSubject(event) {
-      this.setData({ subjectFilter: event.currentTarget.dataset.id }); this.rememberSelection(); this.render();
-      if (this.selectionChanged) this.selectionChanged();
-    },
-    async refresh() {
-      const requested = this.data.date;
-      await this.engine.sync(requested);
-      if (this.data.followToday && requested !== this.data.date) await this.engine.sync(this.data.date);
-      if (this.active && this.afterSync) await this.afterSync();
-    },
-    dismissNotice() { this.engine.dismissNotice(); },
-    openFamily() { wx.switchTab({ url: '/pages/family/index' }); },
-    openPlans() { this.rememberSelection(); wx.switchTab({ url: '/pages/plans/index' }); },
-    openHistory() { this.rememberSelection(); wx.switchTab({ url: '/pages/history/index' }); },
-    openLibrary() { this.rememberSelection(); wx.switchTab({ url: '/pages/library/index' }); },
-    openExamScope() { this.rememberSelection(); getApp().navigation.libraryView = 'exam'; wx.switchTab({ url: '/pages/library/index' }); },
-    openProgress(event) {
-      const id = event && event.currentTarget && event.currentTarget.dataset.id;
-      if (id) this.setData({ childId: id });
-      this.rememberSelection(); wx.navigateTo({ url: '/pages/progress/index' });
-    },
-    openToday() {
-      this.rememberSelection(); getApp().navigation.date = this.data.today;
-      wx.switchTab({ url: '/pages/today/index' });
-    },
-    async perform(action, payload) {
-      if (this.data.busy) return null;
-      this.setData({ busy: true });
-      try { return await this.engine.command(action, payload); }
-      catch (error) { wx.showToast({ title: error.message || '操作失败', icon: 'none', duration: 3000 }); return null; }
-      finally { this.setData({ busy: false }); this.render(); }
+// Generated from src/miniprogram/lib/page.ts. Run npm run build; do not edit this file.
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
     }
-  };
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || (function () {
+    var ownKeys = function(o) {
+        ownKeys = Object.getOwnPropertyNames || function (o) {
+            var ar = [];
+            for (var k in o) if (Object.prototype.hasOwnProperty.call(o, k)) ar[ar.length] = k;
+            return ar;
+        };
+        return ownKeys(o);
+    };
+    return function (mod) {
+        if (mod && mod.__esModule) return mod;
+        var result = {};
+        if (mod != null) for (var k = ownKeys(mod), i = 0; i < k.length; i++) if (k[i] !== "default") __createBinding(result, mod, k[i]);
+        __setModuleDefault(result, mod);
+        return result;
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.decorate = void 0;
+exports.common = common;
+const sync_engine_1 = require("./sync-engine");
+const errors_1 = require("./errors");
+const learning = __importStar(require("./learning/learning"));
+const child_profile_1 = require("./learning/child-profile");
+const modeLabels = { new: '全新', review: '复习', manual: '家长安排' };
+const decorate = (item) => {
+    var _a;
+    return ({ ...item, kindLabel: learning.definition(learning.kindOf(item)).label,
+        subjectLabel: ((_a = learning.subjects.find((subject) => subject.id === item.subject)) === null || _a === void 0 ? void 0 : _a.label) || '其他',
+        modeLabel: modeLabels[item.mode || 'manual'] || '家长安排' });
+};
+exports.decorate = decorate;
+function common() {
+    return {
+        data: { family: null, children: [], childId: '', tasks: [], plans: [], members: [], date: (0, sync_engine_1.chinaDate)(), today: (0, sync_engine_1.chinaDate)(),
+            followToday: true, subjectFilter: 'all', subjectOptions: learning.subjects, mode: 'demo', busy: false },
+        onShow() {
+            this.engine = getApp().engine;
+            const navigation = getApp().navigation || {};
+            this.setData({ childId: navigation.childId || this.data.childId, subjectFilter: navigation.subject || this.data.subjectFilter });
+            if (navigation.date) {
+                this.setData({ date: navigation.date, followToday: true });
+                delete navigation.date;
+            }
+            this.active = true;
+            this.unsubscribe = this.engine.subscribe(() => this.render());
+            this.render();
+            this.refresh();
+            this.timer = setInterval(() => this.refresh(), 20000);
+        },
+        onHide() { this.cleanup(); },
+        onUnload() { this.cleanup(); },
+        cleanup() { this.active = false; if (this.unsubscribe)
+            this.unsubscribe(); clearInterval(this.timer); },
+        async onPullDownRefresh() { try {
+            await this.refresh();
+        }
+        finally {
+            wx.stopPullDownRefresh();
+        } },
+        render() {
+            const snapshot = this.engine.snapshot();
+            const family = snapshot.family;
+            const children = family ? family.children.map((child) => ({ ...(0, child_profile_1.withCurrentAge)(child, (0, sync_engine_1.chinaDate)()), gradeLabel: learning.gradeLabels[child.schoolGrade || 0] })) : [];
+            const childId = children.some((child) => child.id === this.data.childId) ? this.data.childId : (children[0] && children[0].id) || '';
+            const date = this.data.followToday ? snapshot.today : this.data.date;
+            const day = this.engine.viewDay(date);
+            const allTasks = day.tasks.filter((task) => task.childId === childId).map(decorate);
+            const tasks = allTasks.filter((task) => this.data.subjectFilter === 'all' || task.subject === this.data.subjectFilter);
+            const doneCount = allTasks.filter((task) => task.done).length;
+            const minutes = allTasks.reduce((sum, task) => sum + task.minutes, 0);
+            const plans = (family ? family.plans : []).filter((plan) => plan.childId === childId)
+                .filter((plan) => this.data.subjectFilter === 'all' || plan.subject === this.data.subjectFilter)
+                .map((plan) => ({ ...decorate(plan), scheduleLabel: plan.schedule === 'library' ? '自动内容库' : plan.schedule === 'once' ? `仅 ${plan.date}` : '每天固定' }));
+            let syncLabel = snapshot.status === 'syncing' ? '正在同步…' : snapshot.status === 'online' ? '已同步' : '等待连接';
+            if (snapshot.queue.length)
+                syncLabel += ` · ${snapshot.queue.length} 条待同步`;
+            const members = family ? family.members.map((member) => ({ ...member, isMe: member.id === snapshot.userId, roleLabel: member.role === 'owner' ? '创建者' : '家人' })) : [];
+            const subjectOptions = learning.subjects.map((subject) => ({ ...subject,
+                count: subject.id === 'all' ? allTasks.length : allTasks.filter((task) => task.subject === subject.id).length }));
+            this.setData({ family, children, childId, date, tasks, allTaskCount: allTasks.length, plans, members, today: snapshot.today, subjectOptions,
+                dayWarnings: (day.warnings || []).filter((warning) => warning.childId === childId && (this.data.subjectFilter === 'all' || learning.definition(warning.kind).subject === this.data.subjectFilter)),
+                childIndex: Math.max(0, children.findIndex((child) => child.id === childId)),
+                doneCount, minutes, percent: allTasks.length ? Math.round(doneCount / allTasks.length * 100) : 0,
+                syncLabel, syncError: snapshot.error, notice: snapshot.notice, mode: getApp().mode });
+            if (this.afterRender)
+                this.afterRender({ allTasks });
+        },
+        rememberSelection() { getApp().navigation = { childId: this.data.childId, subject: this.data.subjectFilter }; },
+        selectChild(event) {
+            this.setData({ childId: event.currentTarget.dataset.id });
+            this.rememberSelection();
+            this.render();
+            if (this.selectionChanged)
+                this.selectionChanged();
+        },
+        selectSubject(event) {
+            this.setData({ subjectFilter: event.currentTarget.dataset.id });
+            this.rememberSelection();
+            this.render();
+            if (this.selectionChanged)
+                this.selectionChanged();
+        },
+        async refresh() {
+            const requested = this.data.date;
+            await this.engine.sync(requested);
+            if (this.data.followToday && requested !== this.data.date)
+                await this.engine.sync(this.data.date);
+            if (this.active && this.afterSync)
+                await this.afterSync();
+        },
+        dismissNotice() { this.engine.dismissNotice(); },
+        openFamily() { wx.switchTab({ url: '/pages/family/index' }); },
+        openPlans() { this.rememberSelection(); wx.switchTab({ url: '/pages/plans/index' }); },
+        openHistory() { this.rememberSelection(); wx.switchTab({ url: '/pages/history/index' }); },
+        openLibrary() { this.rememberSelection(); wx.switchTab({ url: '/pages/library/index' }); },
+        openExamScope() { this.rememberSelection(); getApp().navigation.libraryView = 'exam'; wx.switchTab({ url: '/pages/library/index' }); },
+        openProgress(event) {
+            const id = event && event.currentTarget && event.currentTarget.dataset.id;
+            if (id)
+                this.setData({ childId: id });
+            this.rememberSelection();
+            wx.navigateTo({ url: '/pages/progress/index' });
+        },
+        openToday() {
+            this.rememberSelection();
+            getApp().navigation.date = this.data.today;
+            wx.switchTab({ url: '/pages/today/index' });
+        },
+        async perform(action, payload) {
+            if (this.data.busy)
+                return null;
+            this.setData({ busy: true });
+            try {
+                return await this.engine.command(action, payload);
+            }
+            catch (error) {
+                wx.showToast({ title: (0, errors_1.errorDetails)(error).message || '操作失败', icon: 'none', duration: 3000 });
+                return null;
+            }
+            finally {
+                this.setData({ busy: false });
+                this.render();
+            }
+        }
+    };
 }
-module.exports = { common, decorate };

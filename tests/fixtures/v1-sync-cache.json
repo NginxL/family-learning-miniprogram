@@ -1,0 +1,548 @@
+{
+  "sourceCommit": "11b608016ce8d455be669ccc6552a9ae39cca14f",
+  "description": "Synthetic pre-TypeScript client cache: learned history, progress, and offline undo/done operations. No production data.",
+  "now": "2026-10-12T02:00:00.000Z",
+  "date": "2026-10-12",
+  "openid": "parent-a",
+  "database": {
+    "families/f_2fbf067e9c68d7aa61a5891ba0cfe876": {
+      "id": "f_2fbf067e9c68d7aa61a5891ba0cfe876",
+      "name": "测试学习小屋",
+      "ownerId": "2fbf067e9c68d7aa61a5891ba0cfe87619f81b8540a1450bff5a5f0481218754",
+      "members": [
+        {
+          "id": "2fbf067e9c68d7aa61a5891ba0cfe87619f81b8540a1450bff5a5f0481218754",
+          "name": "家长甲",
+          "role": "owner"
+        }
+      ],
+      "children": [
+        {
+          "id": "c_id1",
+          "name": "小树",
+          "birthDate": null,
+          "age": null,
+          "schoolGrade": null,
+          "ageRecordedOn": null,
+          "version": 0
+        }
+      ],
+      "plans": [],
+      "autoPlans": {
+        "c_id1": [
+          {
+            "kind": "poetry",
+            "mode": "new",
+            "scope": "starter",
+            "quantity": 1
+          },
+          {
+            "kind": "word",
+            "mode": "new",
+            "scope": "starter",
+            "quantity": 0
+          },
+          {
+            "kind": "sentence",
+            "mode": "new",
+            "scope": "starter",
+            "quantity": 1
+          },
+          {
+            "kind": "reading",
+            "mode": "new",
+            "scope": "starter",
+            "quantity": 0
+          },
+          {
+            "kind": "english-reading",
+            "mode": "new",
+            "scope": "starter",
+            "quantity": 0
+          },
+          {
+            "kind": "math",
+            "mode": "new",
+            "scope": "starter",
+            "quantity": 0
+          },
+          {
+            "kind": "other",
+            "mode": "new",
+            "scope": "starter",
+            "quantity": 0
+          }
+        ]
+      },
+      "createdAt": 1791770400000,
+      "activeInviteHash": null,
+      "autoCreated": false
+    },
+    "profiles/2fbf067e9c68d7aa61a5891ba0cfe87619f81b8540a1450bff5a5f0481218754": {
+      "familyId": "f_2fbf067e9c68d7aa61a5891ba0cfe876"
+    },
+    "days/be744728fb22cffa7fde387ac5cd918bfd7b17c09bd7441425ff80d9e17fcde7": {
+      "familyId": "f_2fbf067e9c68d7aa61a5891ba0cfe876",
+      "date": "2026-10-12",
+      "tasks": [
+        {
+          "id": "a_c_id1_poem-goose",
+          "kind": "poetry",
+          "subject": "poetry",
+          "title": "《咏鹅》",
+          "detail": "骆宾王\n鹅，鹅，鹅，曲项向天歌。\n白毛浮绿水，红掌拨清波。",
+          "source": "国家语文课标 2022 · 1-6 年级推荐 · PDF 第 65 页",
+          "minutes": 5,
+          "note": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+          "contentId": "poem-goose",
+          "childId": "c_id1",
+          "mode": "new",
+          "done": true,
+          "version": 1,
+          "updatedBy": "2fbf067e9c68d7aa61a5891ba0cfe87619f81b8540a1450bff5a5f0481218754",
+          "updatedAt": 1791770400000
+        },
+        {
+          "id": "a_c_id1_sentence-hello",
+          "kind": "sentence",
+          "subject": "english",
+          "title": "Hello!",
+          "detail": "Hello!\n你好！\n\n和家人一人一句，轮流说两遍。",
+          "source": "自编口语练习；非教材单元",
+          "minutes": 3,
+          "contentId": "sentence-hello",
+          "childId": "c_id1",
+          "mode": "new",
+          "done": false,
+          "version": 0,
+          "updatedBy": null,
+          "updatedAt": null
+        }
+      ],
+      "generated": {
+        "c_id1": {
+          "poetry": {
+            "kind": "poetry",
+            "mode": "new",
+            "scope": "starter",
+            "quantity": 1,
+            "actual": 1
+          },
+          "sentence": {
+            "kind": "sentence",
+            "mode": "new",
+            "scope": "starter",
+            "quantity": 1,
+            "actual": 1
+          }
+        }
+      },
+      "warnings": []
+    },
+    "learning/5ec59489117d8a5300fcb72186f1cc562ba540a4f7d0313ebbf8bb016f6897b1": {
+      "familyId": "f_2fbf067e9c68d7aa61a5891ba0cfe876",
+      "childId": "c_id1",
+      "records": {
+        "poem-goose": {
+          "item": {
+            "id": "poem-goose",
+            "kind": "poetry",
+            "builtin": true
+          },
+          "firstSeen": "2026-10-12",
+          "lastSeen": "2026-10-12",
+          "completedDates": [
+            "2026-10-12"
+          ],
+          "mastered": false,
+          "version": 1
+        },
+        "sentence-hello": {
+          "item": {
+            "id": "sentence-hello",
+            "kind": "sentence",
+            "builtin": true
+          },
+          "firstSeen": "2026-10-12",
+          "lastSeen": "2026-10-12",
+          "completedDates": [],
+          "mastered": false,
+          "version": 0
+        }
+      }
+    },
+    "receipts/7fc24a131f4da8ba051ecf419822365631b4dd723f221a27003003d101152d6e": {
+      "familyId": "f_2fbf067e9c68d7aa61a5891ba0cfe876",
+      "fingerprint": "499c25dd13a8c34db485e39a46d98f219e31cd2c891c39f5377d550542ad2bab",
+      "task": {
+        "id": "a_c_id1_poem-goose",
+        "kind": "poetry",
+        "subject": "poetry",
+        "title": "《咏鹅》",
+        "detail": "骆宾王\n鹅，鹅，鹅，曲项向天歌。\n白毛浮绿水，红掌拨清波。",
+        "source": "国家语文课标 2022 · 1-6 年级推荐 · PDF 第 65 页",
+        "minutes": 5,
+        "note": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+        "contentId": "poem-goose",
+        "childId": "c_id1",
+        "mode": "new",
+        "done": true,
+        "version": 1,
+        "updatedBy": "2fbf067e9c68d7aa61a5891ba0cfe87619f81b8540a1450bff5a5f0481218754",
+        "updatedAt": 1791770400000
+      },
+      "createdAt": 1791770400000
+    }
+  },
+  "cache": {
+    "userId": "2fbf067e9c68d7aa61a5891ba0cfe87619f81b8540a1450bff5a5f0481218754",
+    "family": {
+      "id": "f_2fbf067e9c68d7aa61a5891ba0cfe876",
+      "name": "测试学习小屋",
+      "ownerId": "2fbf067e9c68d7aa61a5891ba0cfe87619f81b8540a1450bff5a5f0481218754",
+      "members": [
+        {
+          "id": "2fbf067e9c68d7aa61a5891ba0cfe87619f81b8540a1450bff5a5f0481218754",
+          "name": "家长甲",
+          "role": "owner"
+        }
+      ],
+      "children": [
+        {
+          "id": "c_id1",
+          "name": "小树",
+          "birthDate": null,
+          "age": null,
+          "schoolGrade": null,
+          "ageRecordedOn": null,
+          "version": 0
+        }
+      ],
+      "plans": [],
+      "autoPlans": {
+        "c_id1": [
+          {
+            "kind": "poetry",
+            "mode": "new",
+            "scope": "starter",
+            "quantity": 1
+          },
+          {
+            "kind": "word",
+            "mode": "new",
+            "scope": "starter",
+            "quantity": 0
+          },
+          {
+            "kind": "sentence",
+            "mode": "new",
+            "scope": "starter",
+            "quantity": 1
+          },
+          {
+            "kind": "reading",
+            "mode": "new",
+            "scope": "starter",
+            "quantity": 0
+          },
+          {
+            "kind": "english-reading",
+            "mode": "new",
+            "scope": "starter",
+            "quantity": 0
+          },
+          {
+            "kind": "math",
+            "mode": "new",
+            "scope": "starter",
+            "quantity": 0
+          },
+          {
+            "kind": "other",
+            "mode": "new",
+            "scope": "starter",
+            "quantity": 0
+          }
+        ]
+      },
+      "myRole": "owner",
+      "canJoinFamily": false
+    },
+    "days": {
+      "f_2fbf067e9c68d7aa61a5891ba0cfe876:2026-10-12": {
+        "familyId": "f_2fbf067e9c68d7aa61a5891ba0cfe876",
+        "date": "2026-10-12",
+        "tasks": [
+          {
+            "id": "a_c_id1_poem-goose",
+            "kind": "poetry",
+            "subject": "poetry",
+            "title": "《咏鹅》",
+            "detail": "骆宾王\n鹅，鹅，鹅，曲项向天歌。\n白毛浮绿水，红掌拨清波。",
+            "source": "国家语文课标 2022 · 1-6 年级推荐 · PDF 第 65 页",
+            "minutes": 5,
+            "note": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+            "contentId": "poem-goose",
+            "childId": "c_id1",
+            "mode": "new",
+            "done": true,
+            "version": 1,
+            "updatedBy": "2fbf067e9c68d7aa61a5891ba0cfe87619f81b8540a1450bff5a5f0481218754",
+            "updatedAt": 1791770400000
+          },
+          {
+            "id": "a_c_id1_sentence-hello",
+            "kind": "sentence",
+            "subject": "english",
+            "title": "Hello!",
+            "detail": "Hello!\n你好！\n\n和家人一人一句，轮流说两遍。",
+            "source": "自编口语练习；非教材单元",
+            "minutes": 3,
+            "contentId": "sentence-hello",
+            "childId": "c_id1",
+            "mode": "new",
+            "done": false,
+            "version": 0,
+            "updatedBy": null,
+            "updatedAt": null
+          }
+        ],
+        "generated": {
+          "c_id1": {
+            "poetry": {
+              "kind": "poetry",
+              "mode": "new",
+              "scope": "starter",
+              "quantity": 1,
+              "actual": 1
+            },
+            "sentence": {
+              "kind": "sentence",
+              "mode": "new",
+              "scope": "starter",
+              "quantity": 1,
+              "actual": 1
+            }
+          }
+        },
+        "warnings": []
+      }
+    },
+    "histories": {
+      "[\"f_2fbf067e9c68d7aa61a5891ba0cfe876\",\"c_id1\",null,null,null,0]": {
+        "items": [
+          {
+            "id": "poem-goose",
+            "kind": "poetry",
+            "subject": "poetry",
+            "title": "《咏鹅》",
+            "detail": "骆宾王\n鹅，鹅，鹅，曲项向天歌。\n白毛浮绿水，红掌拨清波。",
+            "source": "国家语文课标 2022 · 1-6 年级推荐 · PDF 第 65 页",
+            "minutes": 5,
+            "note": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+            "contentId": "poem-goose",
+            "firstSeen": "2026-10-12",
+            "lastSeen": "2026-10-12",
+            "lastLearned": "2026-10-12",
+            "learnedCount": 1,
+            "mastered": false,
+            "version": 1
+          }
+        ],
+        "total": 1,
+        "nextOffset": null,
+        "stats": {
+          "seen": 2,
+          "learned": 1,
+          "mastered": 0
+        }
+      }
+    },
+    "progresses": {
+      "[\"f_2fbf067e9c68d7aa61a5891ba0cfe876\",\"c_id1\"]": {
+        "stats": {
+          "learned": 1,
+          "mastered": 0
+        },
+        "subjects": [
+          {
+            "id": "poetry",
+            "label": "古诗文",
+            "learned": 1,
+            "mastered": 0
+          },
+          {
+            "id": "english",
+            "label": "英语",
+            "learned": 0,
+            "mastered": 0
+          },
+          {
+            "id": "reading",
+            "label": "阅读",
+            "learned": 0,
+            "mastered": 0
+          },
+          {
+            "id": "math",
+            "label": "数学",
+            "learned": 0,
+            "mastered": 0
+          },
+          {
+            "id": "other",
+            "label": "其他",
+            "learned": 0,
+            "mastered": 0
+          }
+        ],
+        "foundations": [
+          {
+            "label": "国家课标古诗文 1–6 年级",
+            "total": 75,
+            "learned": 1,
+            "mastered": 0
+          },
+          {
+            "label": "国家英语课标二级词条",
+            "total": 505,
+            "learned": 0,
+            "mastered": 0
+          }
+        ],
+        "grades": [
+          {
+            "grade": 1,
+            "label": "一年级",
+            "stage": "小学",
+            "total": 6,
+            "learned": 1,
+            "mastered": 0,
+            "parentLearned": 0,
+            "parentMastered": 0,
+            "coverage": "partial",
+            "fullGradeComplete": false
+          },
+          {
+            "grade": 2,
+            "label": "二年级",
+            "stage": "小学",
+            "total": 0,
+            "learned": 0,
+            "mastered": 0,
+            "parentLearned": 0,
+            "parentMastered": 0,
+            "coverage": "unverified",
+            "fullGradeComplete": false
+          },
+          {
+            "grade": 3,
+            "label": "三年级",
+            "stage": "小学",
+            "total": 11,
+            "learned": 0,
+            "mastered": 0,
+            "parentLearned": 0,
+            "parentMastered": 0,
+            "coverage": "partial",
+            "fullGradeComplete": false
+          },
+          {
+            "grade": 4,
+            "label": "四年级",
+            "stage": "小学",
+            "total": 0,
+            "learned": 0,
+            "mastered": 0,
+            "parentLearned": 0,
+            "parentMastered": 0,
+            "coverage": "unverified",
+            "fullGradeComplete": false
+          },
+          {
+            "grade": 5,
+            "label": "五年级",
+            "stage": "小学",
+            "total": 0,
+            "learned": 0,
+            "mastered": 0,
+            "parentLearned": 0,
+            "parentMastered": 0,
+            "coverage": "unverified",
+            "fullGradeComplete": false
+          },
+          {
+            "grade": 6,
+            "label": "六年级（预备）",
+            "stage": "初中",
+            "total": 10,
+            "learned": 0,
+            "mastered": 0,
+            "parentLearned": 0,
+            "parentMastered": 0,
+            "coverage": "partial",
+            "fullGradeComplete": false
+          },
+          {
+            "grade": 7,
+            "label": "七年级",
+            "stage": "初中",
+            "total": 2,
+            "learned": 0,
+            "mastered": 0,
+            "parentLearned": 0,
+            "parentMastered": 0,
+            "coverage": "partial",
+            "fullGradeComplete": false
+          },
+          {
+            "grade": 8,
+            "label": "八年级",
+            "stage": "初中",
+            "total": 0,
+            "learned": 0,
+            "mastered": 0,
+            "parentLearned": 0,
+            "parentMastered": 0,
+            "coverage": "unverified",
+            "fullGradeComplete": false
+          },
+          {
+            "grade": 9,
+            "label": "九年级",
+            "stage": "初中",
+            "total": 0,
+            "learned": 0,
+            "mastered": 0,
+            "parentLearned": 0,
+            "parentMastered": 0,
+            "coverage": "unverified",
+            "fullGradeComplete": false
+          }
+        ],
+        "highestGradeStarted": 1,
+        "unclassifiedLearned": 0,
+        "coverageNote": "上海五四制：小学一至五年级，六年级为初中预备年级。仅统计已核对的教材样本或官方目录，学校实际使用版次待确认；未核全年级不计算完成率或推断已学完。"
+      }
+    },
+    "queue": [
+      {
+        "familyId": "f_2fbf067e9c68d7aa61a5891ba0cfe876",
+        "date": "2026-10-12",
+        "taskId": "a_c_id1_poem-goose",
+        "done": false,
+        "baseVersion": 1,
+        "mutationId": "legacy-sync-2"
+      },
+      {
+        "familyId": "f_2fbf067e9c68d7aa61a5891ba0cfe876",
+        "date": "2026-10-12",
+        "taskId": "a_c_id1_sentence-hello",
+        "done": true,
+        "baseVersion": 0,
+        "mutationId": "legacy-sync-3"
+      }
+    ],
+    "notice": ""
+  }
+}

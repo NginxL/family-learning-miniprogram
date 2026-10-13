@@ -1,0 +1,89 @@
+import { common } from '../../lib/page';
+import { gradeLabels } from '../../lib/learning/learning';
+import { ageFromBirthDate } from '../../lib/learning/child-profile';
+import { chinaDate } from '../../lib/sync-engine';
+import type { SchoolGrade } from '../../../shared/models';
+import type { CommonData, CommonMethods, CommonRuntime, DatasetEvent, DisplayChild, FieldEvent, PageDefinition, ValueEvent } from '../../lib/page-types';
+type BirthField = 'editBirthDate' | 'addBirthDate';
+type ChildForm = { name: string; age?: string };
+export interface FamilyData extends CommonData {
+  gradeLabels: string[]; addGrade: SchoolGrade | 0; editGrade: SchoolGrade | 0;
+  editingChild: (Omit<DisplayChild, 'age'> & { age: number | '' }) | null;
+  addingChild: boolean; manageFamily: boolean; editBirthDate: string; addBirthDate: string;
+  editCurrentAge: number | null | undefined; addCurrentAge: number | null;
+  newChildName?: string; newChildAge?: string; inviteCode?: string;
+}
+export interface FamilyMethods extends CommonMethods {
+  changeGrade(event: FieldEvent<string | number, { field: 'editGrade' | 'addGrade' }>): void;
+  changeBirthDate(event: FieldEvent<string, { field: BirthField }>): void;
+  clearBirthDate(event: DatasetEvent<{ field: BirthField }>): void;
+  toggleManageFamily(): void; toggleAddChild(): void;
+  joinFamily(event: ValueEvent<{ code: string; memberName: string }>): Promise<void>;
+  addChild(event: ValueEvent<ChildForm>): Promise<void>;
+  editChild(event: DatasetEvent): void; cancelEdit(): void;
+  saveChild(event: ValueEvent<ChildForm>): Promise<void>;
+  createInvite(): Promise<void>; copyInvite(): void;
+  removeMember(event: DatasetEvent<{ id: string; name: string }>): void;
+  leaveFamily(): void;
+}
+const base = common();
+const ageValue = (value: string | null | undefined) => value === '' || value == null ? null : Number(value);
+const definition: PageDefinition<FamilyData, FamilyMethods, CommonRuntime> = {
+  ...base,
+  data: { ...base.data, gradeLabels, addGrade: 0, editGrade: 0, editingChild: null, addingChild: false, manageFamily: false,
+    editBirthDate: '', addBirthDate: '', editCurrentAge: null, addCurrentAge: null },
+  changeGrade(event) { this.setData({ [event.currentTarget.dataset.field]: Number(event.detail.value) as SchoolGrade | 0 }); },
+  changeBirthDate(event) {
+    const field = event.currentTarget.dataset.field;
+    if (!['editBirthDate', 'addBirthDate'].includes(field)) return;
+    this.setData({ [field]: event.detail.value,
+      [field === 'editBirthDate' ? 'editCurrentAge' : 'addCurrentAge']: ageFromBirthDate(event.detail.value, chinaDate()) });
+  },
+  clearBirthDate(event) {
+    const field = event.currentTarget.dataset.field;
+    if (['editBirthDate', 'addBirthDate'].includes(field)) this.setData({ [field]: '' });
+  },
+  toggleManageFamily() { this.setData({ manageFamily: !this.data.manageFamily }); },
+  toggleAddChild() { this.setData({ addingChild: !this.data.addingChild, editingChild: null }); },
+  async joinFamily(event) {
+    const family = this.data.family;
+    if (family) {
+      const result = await new Promise<{ confirm: boolean }>((resolve) => wx.showModal({ title: '加入家人的家庭？',
+        content: '会切换到家人的学习档案；你原来的记录会保留，退出后可继续使用。', confirmText: '加入', success: resolve, fail: () => resolve({ confirm: false }) }));
+      if (!result.confirm) return;
+    }
+    const result = await this.perform('joinFamily', { ...event.detail.value, ...(family ? { replaceDefaultFamilyId: family.id } : {}) });
+    if (result) { this.setData({ manageFamily: false }); wx.showToast({ title: '已加入家庭', icon: 'success' }); }
+  },
+  async addChild(event) {
+    const result = await this.perform('addChild', { ...event.detail.value, birthDate: this.data.addBirthDate || null,
+      age: ageValue(event.detail.value.age), schoolGrade: this.data.addGrade || null });
+    if (result) this.setData({ newChildName: '', newChildAge: '', addGrade: 0, addBirthDate: '', addCurrentAge: null, addingChild: false });
+  },
+  editChild(event) {
+    const child = this.data.children.find((item) => item.id === event.currentTarget.dataset.id);
+    if (child) this.setData({ editingChild: { ...child, age: child.age == null ? '' : child.age }, editGrade: child.schoolGrade || 0,
+      editBirthDate: child.birthDate || '', editCurrentAge: child.age, addingChild: false });
+  },
+  cancelEdit() { this.setData({ editingChild: null }); },
+  async saveChild(event) {
+    const child = this.data.editingChild;
+    if (!child) return;
+    const result = await this.perform('updateChild', { childId: child.id, baseVersion: child.version || 0,
+      name: event.detail.value.name, birthDate: this.data.editBirthDate || null,
+      age: ageValue(event.detail.value.age), schoolGrade: this.data.editGrade || null });
+    if (result) { this.cancelEdit(); wx.showToast({ title: '档案已保存', icon: 'success' }); }
+  },
+  async createInvite() { const result = await this.perform('createInvite', {}); if (result) this.setData({ inviteCode: result.code }); },
+  copyInvite() { if (this.data.inviteCode) wx.setClipboardData({ data: this.data.inviteCode }); },
+  removeMember(event) {
+    const { id, name } = event.currentTarget.dataset;
+    wx.showModal({ title: `移除${name}？`, content: '对方将无法继续读取或更新这个家庭的数据。', confirmText: '移除',
+      success: async (result) => { if (result.confirm) await this.perform('removeMember', { memberId: id }); } });
+  },
+  leaveFamily() {
+    wx.showModal({ title: '退出这个家庭？', content: '本机待同步记录会清除，请先确认已经同步。家庭中的历史记录会保留。',
+      success: async (result) => { if (result.confirm) await this.perform('leaveFamily', {}); } });
+  }
+};
+Page(definition);

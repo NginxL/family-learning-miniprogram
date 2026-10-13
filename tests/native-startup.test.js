@@ -54,7 +54,7 @@ function nativeRuntime(mode) {
     page = null;
     load(`./pages/${name}/index`);
     assert.ok(page, `${name} did not register`);
-    return { ...page, data: JSON.parse(JSON.stringify(page.data)),
+    return { ...page, data: JSON.parse(JSON.stringify(page.data || {})),
       setData(patch) { Object.assign(this.data, JSON.parse(JSON.stringify(patch))); } };
   }
   return { app, loadPage, cloudCalls: () => cloudCalls };
@@ -62,7 +62,8 @@ function nativeRuntime(mode) {
 
 test('native JavaScript loader starts the demo, registers every page and creates daily tasks without cloud access', async () => {
   const runtime = nativeRuntime('demo');
-  const pages = Object.fromEntries(['today', 'plans', 'library', 'history', 'family', 'progress'].map((name) => [name, runtime.loadPage(name)]));
+  const names = JSON.parse(fs.readFileSync(path.join(root, 'app.json'), 'utf8')).pages.map((entry) => entry.split('/')[1]);
+  const pages = Object.fromEntries(names.map((name) => [name, runtime.loadPage(name)]));
   const { today, family } = pages;
   today.onShow();
   family.onShow();
