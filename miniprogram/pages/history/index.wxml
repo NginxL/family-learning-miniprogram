@@ -14,8 +14,9 @@
     <view wx:for="{{historyItems}}" wx:key="contentId" class="card">
       <view class="row"><view class="pill {{item.subject}}">{{item.kindLabel}}</view><view class="muted">{{item.mastered ? '✓ 已掌握' : item.learnedCount ? '已学过' : '已安排'}}</view></view>
       <view class="task-title" data-id="{{item.contentId}}" bindtap="expandContent">{{item.title}}</view>
+      <view wx:if="{{item.poetryByline}}" class="muted poetry-byline">{{item.poetryByline}}</view>
       <view class="muted" style="margin-top:12rpx">{{item.lastLearned ? '最近学习：' + item.lastLearned + ' · 共 ' + item.learnedCount + ' 天' : '首次安排：' + item.firstSeen}}</view>
-      <view wx:if="{{expandedId === item.contentId}}"><view class="body">{{item.detail || '和家人一起回顾这项内容。'}}</view><view class="muted">{{item.source}}</view><view wx:if="{{item.note}}" class="muted plan-help">{{item.note}}</view></view>
+      <view wx:if="{{expandedId === item.contentId}}"><view class="body">{{item.displayDetail || item.detail || '和家人一起回顾这项内容。'}}</view><view class="muted">{{item.source}}</view><view wx:if="{{item.note}}" class="muted plan-help">{{item.note}}</view></view>
       <view class="row history-actions"><button class="quiet" data-id="{{item.contentId}}" bindtap="expandContent">{{expandedId === item.contentId ? '收起 ↑' : '回顾内容 ↓'}}</button><button wx:if="{{!isChild && item.learnedCount}}" class="quiet" data-id="{{item.contentId}}" disabled="{{busy || historyCached}}" bindtap="toggleMastery">{{item.mastered ? '还需巩固' : '确认已掌握'}}</button></view>
       <button wx:if="{{!isChild && item.learnedCount}}" class="secondary small" data-id="{{item.contentId}}" disabled="{{busy || historyCached}}" bindtap="reviewToday">安排到今日复习</button>
     </view>

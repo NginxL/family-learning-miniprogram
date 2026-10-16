@@ -42,10 +42,13 @@ const learning = __importStar(require("./learning/learning"));
 const child_profile_1 = require("./learning/child-profile");
 const modeLabels = { new: '全新', review: '复习', manual: '家长安排' };
 const decorate = (item) => {
-    var _a;
-    return ({ ...item, kindLabel: learning.definition(learning.kindOf(item)).label,
-        subjectLabel: ((_a = learning.subjects.find((subject) => subject.id === item.subject)) === null || _a === void 0 ? void 0 : _a.label) || '其他',
-        modeLabel: modeLabels[item.mode || 'manual'] || '家长安排' });
+    var _a, _b;
+    const poetry = learning.kindOf(item) === 'poetry' ? learning.catalogById.get(learning.contentId(item)) : undefined;
+    return { ...item, ...(poetry ? { poetryByline: `${poetry.dynasty || '朝代待考'} · ${poetry.author || '作者待考'}`, dynastyNote: poetry.dynastyNote || '',
+            displayDetail: poetry.author && ((_a = item.detail) === null || _a === void 0 ? void 0 : _a.startsWith(`${poetry.author}\n`)) ? item.detail.slice(poetry.author.length + 1) : item.detail || '' } : {}),
+        kindLabel: learning.definition(learning.kindOf(item)).label,
+        subjectLabel: ((_b = learning.subjects.find((subject) => subject.id === item.subject)) === null || _b === void 0 ? void 0 : _b.label) || '其他',
+        modeLabel: modeLabels[item.mode || 'manual'] || '家长安排' };
 };
 exports.decorate = decorate;
 function common() {
@@ -81,7 +84,7 @@ function common() {
             const family = snapshot.family;
             const children = family ? family.children.map((child) => ({ ...(0, child_profile_1.withCurrentAge)(child, (0, sync_engine_1.chinaDate)()), gradeLabel: learning.gradeLabels[child.schoolGrade || 0] })) : [];
             const childId = children.some((child) => child.id === this.data.childId) ? this.data.childId : (children[0] && children[0].id) || '';
-            const date = this.data.followToday ? snapshot.today : this.data.date;
+            const date = this.data.followTomorrow ? (0, sync_engine_1.shiftDate)(snapshot.today, 1) : this.data.followToday ? snapshot.today : this.data.date;
             const day = this.engine.viewDay(date);
             const allTasks = day.tasks.filter((task) => task.childId === childId).map(decorate);
             const tasks = allTasks.filter((task) => this.data.subjectFilter === 'all' || task.subject === this.data.subjectFilter);
@@ -122,7 +125,7 @@ function common() {
         async refresh() {
             const requested = this.data.date;
             await this.engine.sync(requested);
-            if (this.data.followToday && requested !== this.data.date)
+            if ((this.data.followToday || this.data.followTomorrow) && requested !== this.data.date)
                 await this.engine.sync(this.data.date);
             if (this.active && this.afterSync)
                 await this.afterSync();

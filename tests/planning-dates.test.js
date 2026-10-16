@@ -1,0 +1,150 @@
+const test = require('node:test');
+const assert = require('node:assert/strict');
+const { fixture, memoryStorage } = require('./helpers');
+const learning = require('../shared/learning');
+const { shiftDate, SyncEngine } = require('../miniprogram/lib/sync-engine');
+const { createDemo } = require('../miniprogram/lib/demo');
+const { dayKey } = require('../cloudfunctions/familyApi/service');
+const { planningDate, validDate } = require('../cloudfunctions/familyApi/validation');
+const date = '2026-10-12'; const tomorrow = '2026-10-13';
+const event = id => ({ currentTarget: { dataset: { id } } });
+function page(name, engine) {
+  let definition; global.Page = value => { definition = value; };
+  const file = require.resolve(`../miniprogram/pages/${name}/index.js`); delete require.cache[file]; require(file);
+  return { ...definition, engine, active: true, data: structuredClone(definition.data), setData(patch) { Object.assign(this.data, patch); } };
+}
+async function setup() {
+  const f = fixture(); const family = await f.family(); const childId = family.children[0].id;
+  const call = (action, data = {}, user = 'parent-a') => f.call(user, action, { familyId: family.id, childId, ...data });
+  return { f, family, childId, call };
+}
+test('tomorrow is a repeatable projection: reserve today first, never persist preview tasks or future learning', async () => {
+  const { f, family, call } = await setup();
+  const preview = (await call('getDay', { date: tomorrow })).day;
+  const current = (await call('getDay', { date })).day;
+  assert.equal(preview.tasks.length, 2); assert.ok(preview.tasks.every(task => !current.tasks.some(old => old.contentId === task.contentId)));
+  const snapshot = f.inspect();
+  assert.equal(snapshot[`days/${dayKey(family.id, tomorrow)}`], undefined);
+  assert.ok(Object.entries(snapshot).filter(([key]) => key.startsWith('learning/')).every(([, ledger]) => Object.values(ledger.records).every(item => item.lastSeen === date)));
+  assert.deepEqual((await call('getDay', { date: tomorrow })).day, preview);
+  assert.deepEqual(f.inspect(), snapshot, 'viewing tomorrow must not write learning or freeze its automatic selection');
+  f.advance(86400000);
+  assert.deepEqual((await call('getDay', { date: tomorrow })).day, preview, 'without other changes the preview becomes that day’s real tasks');
+});
+test('future manual assignments deduplicate across phones and leave today and history untouched until the date arrives', async () => {
+  const { f, family, call } = await setup(); await f.addParent(family.id);
+  const current = (await call('getDay', { date })).day;
+  const input = { contentId: 'sh54-jiande', date: tomorrow };
+  const first = await call('assignContent', input);
+  assert.deepEqual(await call('assignContent', input, 'parent-b'), first);
+  const persisted = f.inspect()[`days/${dayKey(family.id, tomorrow)}`];
+  assert.equal(persisted.tasks.length, 1); assert.equal(persisted.generated, undefined);
+  assert.equal((await call('getHistory', { filter: 'all', query: '宿建德江' })).total, 0);
+  assert.deepEqual((await call('getDay', { date })).day, current);
+  const preview = (await call('getDay', { date: tomorrow })).day;
+  assert.equal(preview.tasks.filter(task => task.contentId === input.contentId).length, 1);
+  assert.deepEqual((await call('getDay', { date: tomorrow }, 'parent-b')).day, preview);
+  assert.deepEqual(f.inspect()[`days/${dayKey(family.id, tomorrow)}`], persisted);
+  await assert.rejects(call('setTaskDone', { date: tomorrow, taskId: first.task.id, done: true, baseVersion: 0, mutationId: 'future' }), { code: 'INVALID' });
+  await call('assignContent', { ...input, date: '2026-10-20' });
+  f.advance(86400000); const actual = (await call('getDay', { date: tomorrow })).day;
+  assert.equal(actual.tasks.filter(task => task.contentId === input.contentId).length, 1);
+  await call('setTaskDone', { date: tomorrow, taskId: first.task.id, done: true, baseVersion: 0, mutationId: 'arrived' });
+  assert.equal((await call('getHistory', { query: '宿建德江' })).total, 1);
+});
+test('tomorrow refresh reflects saved quantities and review progress while today stays frozen', async () => {
+  const { call } = await setup(); const current = (await call('getDay', { date })).day;
+  const rules = learning.emptyRules().map(rule => rule.kind === 'poetry' ? { ...rule, quantity: 2 } : rule);
+  await call('saveAutoPlans', { rules });
+  assert.equal((await call('getDay', { date: tomorrow })).day.tasks.filter(task => task.kind === 'poetry').length, 2);
+  assert.deepEqual((await call('getDay', { date })).day, current);
+  await call('saveAutoPlans', { rules: rules.map(rule => ({ ...rule, mode: 'review' })) });
+  assert.equal((await call('getDay', { date: tomorrow })).day.tasks.length, 0);
+  const poem = current.tasks.find(task => task.kind === 'poetry');
+  await call('setTaskDone', { date, taskId: poem.id, done: true, baseVersion: 0, mutationId: 'review-source' });
+  const review = (await call('getDay', { date: tomorrow })).day.tasks;
+  assert.equal(review.length, 1); assert.equal(review[0].contentId, poem.contentId); assert.equal(review[0].mode, 'review');
+});
+test('a work pinned to a later date is not auto-assigned early and does not become seen', async () => {
+  const { call, f } = await setup();
+  await call('assignContent', { contentId: 'poem-goose', date: tomorrow });
+  assert.ok(!(await call('getDay', { date })).day.tasks.some(task => task.contentId === 'poem-goose'));
+  assert.equal((await call('getHistory', { filter: 'all', query: '咏鹅' })).total, 0);
+  assert.ok((await call('getDay', { date: tomorrow })).day.tasks.some(task => task.contentId === 'poem-goose'));
+  f.advance(86400000);
+  assert.ok((await call('getDay', { date: tomorrow })).day.tasks.some(task => task.contentId === 'poem-goose'));
+});
+test('dated once/daily plans start on the requested day; disabling a future plan removes it from the projection', async () => {
+  const { call, f } = await setup(); const current = (await call('getDay', { date })).day;
+  for (const schedule of ['once', 'daily']) await call('addPlan', { title: schedule, kind: 'reading', subject: 'reading', minutes: 5, schedule, date: tomorrow });
+  assert.deepEqual((await call('getDay', { date })).day, current);
+  const first = (await call('getDay', { date: tomorrow })).day;
+  assert.ok(first.tasks.some(task => task.title === 'once')); assert.ok(first.tasks.some(task => task.title === 'daily'));
+  await call('setPlanEnabled', { planId: first.tasks.find(task => task.title === 'once').id, enabled: false });
+  assert.ok(!(await call('getDay', { date: tomorrow })).day.tasks.some(task => task.title === 'once'));
+  f.advance(2 * 86400000); const later = (await call('getDay', { date: '2026-10-14' })).day;
+  assert.ok(later.tasks.some(task => task.title === 'daily')); assert.ok(!later.tasks.some(task => task.title === 'once'));
+});
+test('scheduling validates real dates and one-year bounds without relaxing completion or child permissions', async () => {
+  const { call, f, family, childId } = await setup();
+  for (const bad of ['2026-10-11', '2026-02-30', '2027-02-29', '2027-10-13', '', null, false])
+    await assert.rejects(call('assignContent', { contentId: 'poem-goose', date: bad }), { code: 'INVALID' });
+  await call('assignContent', { contentId: 'poem-goose', date: '2027-10-12' });
+  const invite = await call('createInvite', { role: 'child', guardianConsent: true });
+  await f.call('child-a', 'joinFamily', { code: invite.code, memberName: '孩子' });
+  await assert.rejects(call('assignContent', { contentId: 'poem-goose', date: tomorrow }, 'child-a'), { code: 'PARENT_REQUIRED' });
+  await assert.rejects(call('getDay', { date: tomorrow }, 'stranger'), { code: 'FORBIDDEN' });
+  await call('addChild', { name: '另一个孩子' });
+  const visible = (await call('getDay', { date: tomorrow }, 'child-a')).day;
+  assert.ok(visible.tasks.every(task => task.childId === childId)); assert.equal(Object.keys(visible.generated).length, 1);
+  assert.ok(visible.tasks.every(task => !task.done));
+  const now = Date.parse('2027-12-31T16:00:00Z');
+  assert.equal(planningDate('2028-02-29', now), '2028-02-29');
+  assert.throws(() => validDate('2028-02-29', now));
+  assert.equal(shiftDate('2027-12-31', 1), '2028-01-01'); assert.equal(shiftDate('2028-02-28', 1), '2028-02-29');
+});
+test('tomorrow page opens actual next-day groups, supports 20-item expansion, and follows Shanghai midnight', async t => {
+  const { f, call, childId } = await setup();
+  await call('saveAutoPlans', { rules: learning.emptyRules().map(rule => rule.kind === 'word' ? { ...rule, quantity: 30, scope: 'foundation' } : rule) });
+  const { engine } = f.client('parent-a'); await engine.sync(tomorrow);
+  const app = { engine, mode: 'cloud', navigation: {} }; global.getApp = () => app; global.wx = { showToast() {}, switchTab() {} };
+  t.after(() => { delete global.getApp; delete global.wx; delete global.Page; });
+  const plans = page('plans', engine); plans.render();
+  assert.equal(plans.data.editor, 'preview'); assert.equal(plans.data.date, tomorrow); assert.equal(plans.data.planDate, tomorrow);
+  assert.equal(plans.data.tasks.length, 30); assert.equal(plans.data.groups[0].items.length, 0);
+  plans.togglePreview(event('word')); assert.equal(plans.data.groups[0].items.length, 20);
+  plans.showMorePreview(); assert.equal(plans.data.groups[0].items.length, 30);
+  assert.throws(() => engine.enqueue(tomorrow, plans.data.tasks[0].id, true), /未来/); assert.equal(engine.state.queue.length, 0);
+  plans.openLibrary(); assert.equal(app.navigation.libraryDate, tomorrow);
+  const invite = await call('createInvite', { role: 'child', guardianConsent: true }); await f.call('child-a', 'joinFamily', { code: invite.code, memberName: '小树' });
+  const child = f.client('child-a'); await child.engine.sync(tomorrow);
+  const childPage = page('plans', child.engine); childPage.render(); assert.equal(childPage.data.isChild, true); assert.equal(childPage.data.tasks[0].childId, childId);
+  f.advance(86400000); await plans.refresh(); plans.render();
+  assert.equal(plans.data.date, '2026-10-14'); assert.equal(plans.data.planDate, '2026-10-14');
+});
+test('library removes math, preserves legacy math identity, chooses dates, and closes stale household targets', async t => {
+  const { f, family, call } = await setup(); const { engine } = f.client('parent-a'); await engine.sync(date);
+  const app = { engine, mode: 'cloud', navigation: {} }; const toasts = [];
+  global.getApp = () => app; global.wx = { showToast(value) { toasts.push(value.title); } };
+  t.after(() => { delete global.getApp; delete global.wx; delete global.Page; });
+  const library = page('library', engine); library.render();
+  assert.ok(!library.data.subjectOptions.some(item => item.id === 'math')); assert.ok(!library.data.kinds.some(item => item.id === 'math'));
+  assert.ok(learning.searchCatalog().every(item => item.kind !== 'math')); assert.ok(learning.catalogById.has('math-add-1-1'));
+  library.assignItem(event('poem-goose')); assert.equal(library.data.assignDate, date);
+  library.changeAssignDate({ detail: { value: '2026-10-20' } }); await library.confirmAssign();
+  assert.equal(library.data.assignTarget, null); assert.equal(toasts.at(-1), '已加入2026-10-20');
+  assert.ok((await call('getDay', { date: '2026-10-20' })).day.tasks.some(task => task.contentId === 'poem-goose'));
+  library.assignItem(event('poem-goose')); assert.ok(library.data.assignTarget);
+  engine.state.family = { ...engine.state.family, id: 'other-family' }; library.render(); assert.equal(library.data.assignTarget, null);
+  engine.state.family = { ...engine.state.family, id: family.id, myRole: 'child' }; library.render(); library.assignItem(event('poem-goose')); assert.equal(library.data.assignTarget, null);
+});
+test('demo scheduling keeps future records out of history and matches tomorrow preview semantics', async () => {
+  const data = new Map(); const transport = createDemo({ getStorageSync: key => structuredClone(data.get(key)), setStorageSync: (key, value) => data.set(key, structuredClone(value)) });
+  const engine = new SyncEngine({ storage: memoryStorage(), transport }); await engine.sync();
+  const next = shiftDate(engine.today, 1); const childId = engine.state.family.children[0].id;
+  await engine.command('assignContent', { childId, contentId: 'sh54-jiande', date: next }); await engine.sync(next);
+  const preview = engine.viewDay(next); assert.ok(preview.tasks.some(task => task.contentId === 'sh54-jiande'));
+  assert.equal((await engine.getHistory({ childId, filter: 'all', query: '宿建德江' })).total, 0);
+  assert.equal(data.get('demo-backend-v1').days[next].tasks.length, 1, 'only explicit assignment is stored');
+  assert.throws(() => engine.enqueue(next, preview.tasks[0].id, true), /未来/);
+});

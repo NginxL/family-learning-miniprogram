@@ -8,6 +8,31 @@ const tables = require('../data/catalogs/english-moe-2022-tables.json');
 const meanings = require('../data/catalogs/english-foundation-meanings.json');
 const regional = require('../data/catalogs/shanghai-54-evidence.json');
 const framework = require('../data/catalogs/shanghai-zhongkao-framework.json');
+const dynasties = require('../data/catalogs/poetry-dynasties.json');
+
+test('every poetry period has item-level evidence; doubtful authors and compilation periods stay explicit', () => {
+  const poems = learning.catalog.filter(item => item.kind === 'poetry');
+  assert.equal(dynasties.entries.length, poems.length);
+  assert.equal(new Set(dynasties.entries.map(item => item.id)).size, poems.length);
+  for (const item of poems) {
+    const evidence = dynasties.entries.find(entry => entry.id === item.id);
+    assert.ok(evidence && evidence.sources.length && evidence.sources.every(url => url.startsWith('https://')));
+    assert.equal(item.dynasty, evidence.dynasty); assert.equal(item.author, evidence.author);
+  }
+  assert.equal(learning.catalogById.get('poem-goose').dynasty, '唐代');
+  assert.equal(learning.catalogById.get('moe-2022-zh-7-9-048').dynasty, '三国·蜀汉');
+  assert.equal(learning.catalogById.get('sh54-advice-son').dynasty, '三国·蜀汉');
+  assert.equal(learning.catalogById.get('sh54-painting').dynasty, '朝代待考');
+  assert.equal(learning.catalogById.get('sh54-sima-guang').dynasty, '元代');
+  assert.match(learning.catalogById.get('sh54-sima-guang').dynastyNote, /编纂时代/);
+  assert.match(learning.catalogById.get('sh54-archery').dynastyNote, /争议/);
+  const { decorate } = require('../miniprogram/lib/page');
+  const oldTask = learning.taskFrom(learning.catalogById.get('poem-goose'), 'child', 'task', 'new');
+  assert.equal(oldTask.dynasty, undefined, 'metadata does not rewrite legacy wire or stored task shape');
+  assert.equal(decorate(oldTask).poetryByline, '唐代 · 骆宾王');
+  assert.equal(decorate({ id: 'custom', title: '咏鹅', kind: 'poetry', detail: '同名自编内容' }).poetryByline, undefined);
+  assert.ok(learning.searchCatalog({ kind: 'poetry', query: '唐代' }).every(item => item.dynasty === '唐代'));
+});
 
 test('national source inventories retain 75/60 works, 1600 headword groups, 505 stars and 77 separately listed items', () => {
   assert.equal(chinese.entries.length, 135);

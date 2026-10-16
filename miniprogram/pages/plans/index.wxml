@@ -1,13 +1,28 @@
 <view class="page">
-  <view class="eyebrow">把每天的进步，安排好</view><view class="title">学习计划</view>
+  <view class="eyebrow">提前看看，明天学什么</view><view class="title">明日计划</view>
+  <view class="row"><view class="subtitle">{{date}}</view><button class="quiet" bindtap="refresh">{{mode === 'demo' ? '本机保存' : syncLabel}} ↻</button></view>
   <view wx:if="{{mode === 'demo'}}" class="notice">本机演示 · 尚未连接家庭云数据</view>
+  <view wx:if="{{syncError}}" class="notice">{{syncError}}。当前为已保存的预览，联网刷新后更新。</view>
   <block wx:if="{{family}}">
     <view class="tab-row"><view wx:for="{{children}}" wx:key="id" class="chip {{childId === item.id ? 'active' : ''}}" data-id="{{item.id}}" bindtap="selectChild">{{item.name}}</view></view>
     <view class="tab-row subjects"><view wx:for="{{subjectOptions}}" wx:key="id" class="subject-chip {{subjectFilter === item.id ? 'selected' : ''}}" data-id="{{item.id}}" bindtap="selectSubject">{{item.label}}</view></view>
-    <view wx:if="{{isChild}}" class="card"><view class="section">家长为你安排的学习</view><view wx:for="{{visibleRules}}" wx:key="id" class="member">{{item.label}} · 每天 {{item.quantity}} {{item.unit}} · {{item.mode === 'review' ? '复习' : '全新'}}</view><button class="secondary" bindtap="openToday">去今日学习 →</button></view>
-    <block wx:else>
-    <view class="segmented"><view class="segment {{editor === 'auto' ? 'selected' : ''}}" data-id="auto" bindtap="changeEditor">自动安排</view><view class="segment {{editor === 'manual' ? 'selected' : ''}}" data-id="manual" bindtap="changeEditor">家长添加</view></view>
-    <block wx:if="{{editor === 'auto'}}">
+    <view wx:if="{{!isChild}}" class="segmented"><view class="segment {{editor === 'preview' ? 'selected' : ''}}" data-id="preview" bindtap="changeEditor">明日内容</view><view class="segment {{editor === 'auto' ? 'selected' : ''}}" data-id="auto" bindtap="changeEditor">每日数量</view><view class="segment {{editor === 'manual' ? 'selected' : ''}}" data-id="manual" bindtap="changeEditor">家长添加</view></view>
+    <block wx:if="{{editor === 'preview' || isChild}}">
+      <view class="subtitle">共 {{tasks.length}} 项 · 约 {{minutes}} 分钟</view>
+      <view wx:for="{{groups}}" wx:key="id" class="card plan-preview-group">
+        <view class="plan-preview-heading" data-id="{{item.id}}" bindtap="togglePreview"><view class="row"><view class="rule-title">{{item.label}}</view><view class="pill {{item.subject}}">{{item.quantityLabel}}</view></view><view class="subtitle">{{item.modeSummary}}</view><view class="muted">{{item.preview}}</view><view class="plan-expand">{{expandedKind === item.id ? '收起 ↑' : '点击查看内容 ↓'}}</view></view>
+        <block wx:if="{{expandedKind === item.id}}">
+          <view wx:for="{{item.items}}" wx:for-item="task" wx:key="id" class="plan-preview-item"><view class="task-title">{{task.title}}</view><view wx:if="{{task.poetryByline}}" class="muted poetry-byline">{{task.poetryByline}}</view><view class="body"><text selectable="true">{{task.displayDetail || task.detail}}</text></view><view wx:if="{{task.dynastyNote}}" class="muted">{{task.dynastyNote}}</view></view>
+          <button wx:if="{{item.items.length < item.count}}" class="secondary" bindtap="showMorePreview">再看 20 项 · 已展示 {{item.items.length}} / {{item.count}}</button>
+        </block>
+      </view>
+      <view wx:for="{{dayWarnings}}" wx:key="kind" class="notice">{{item.message}}</view>
+      <view wx:if="{{!groups.length}}" class="card empty">{{previewReady ? '明天还没有学习安排' : '正在读取明日安排…'}}</view>
+      <button wx:if="{{!isChild}}" class="primary" bindtap="openLibrary">从知识库添加内容</button>
+      <view class="muted plan-help">自动内容会随今日学习和安排变化而更新，明天首次打开时确定。手动指定日期的内容会保留；到学习当天再完成或提交作业。</view>
+      <button class="quiet" bindtap="openToday">去今日学习 →</button>
+    </block>
+    <block wx:elif="{{editor === 'auto'}}">
       <view class="subtitle">每天 {{dailyCount}} 项 · 数量设为 0 即暂停</view>
       <view wx:for="{{visibleRules}}" wx:key="id" class="card rule-card">
         <view class="row"><view><view class="rule-title">{{item.label}}</view><view class="muted">内容库 {{item.poolCount}} 项</view></view><picker range="{{modes}}" value="{{item.mode === 'review' ? 1 : 0}}" data-id="{{item.id}}" bindchange="changeMode"><view class="mode-picker">{{item.mode === 'review' ? '复习' : '全新'}} ▾</view></picker></view>
@@ -27,6 +42,7 @@
         <view class="rule-title">为 {{children[childIndex].name}} 添加内容</view>
         <label class="label">学习类型</label><picker range="{{kinds}}" range-key="label" value="{{kindIndex}}" bindchange="changeKind"><view class="picker">{{kinds[kindIndex].label}} ▾</view></picker>
         <label class="label">怎样安排</label><picker range="{{schedules}}" value="{{scheduleIndex}}" bindchange="changeSchedule"><view class="picker">{{schedules[scheduleIndex]}} ▾</view></picker>
+        <block wx:if="{{scheduleIndex !== 2}}"><label class="label">{{scheduleIndex === 1 ? '开始日期' : '学习日期'}}</label><picker mode="date" value="{{planDate}}" start="{{today}}" end="{{maxPlanDate}}" bindchange="changePlanDate"><view class="picker">{{planDate}}{{planDate === date ? ' · 明日' : planDate === today ? ' · 今日' : ''}} ▾</view></picker></block>
         <view wx:if="{{scheduleIndex === 2}}" class="muted" style="margin-top:10rpx">保存到内容库，按上方自动安排的数量选取；一条内容计一项。</view>
         <label class="label">名称</label><input name="title" value="{{formTitle}}" maxlength="60" placeholder="例如：apple ／《小池》／绘本第 1–3 页" />
         <label class="label">正文或学习提示</label><textarea name="detail" value="{{formDetail}}" maxlength="2000" placeholder="单词释义、诗文正文、句子，或读书页码和问题" auto-height />
@@ -38,7 +54,6 @@
       <view wx:for="{{plans}}" wx:key="id" class="card"><view class="row"><view class="grow"><view class="pill {{item.subject}}">{{item.kindLabel}} · {{item.scheduleLabel}}</view><view class="task-title">{{item.title}}</view></view><switch checked="{{item.enabled}}" disabled="{{busy}}" color="#27654c" data-id="{{item.id}}" bindchange="togglePlan" /></view></view>
       <view wx:if="{{!plans.length}}" class="muted">还没有手动添加的内容。</view>
       <view class="muted plan-help">暂停只影响后续安排，已生成的任务和学习记录会保留。</view>
-    </block>
     </block>
   </block>
   <view wx:else class="card empty"><view>{{syncError ? '学习档案暂未连接' : '正在准备学习档案…'}}</view><view wx:if="{{syncError}}" class="muted">{{syncError}}</view><button wx:if="{{syncError}}" class="primary" bindtap="refresh">重试连接</button></view>

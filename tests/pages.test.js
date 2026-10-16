@@ -43,7 +43,9 @@ test('all WXML event handlers exist; family profile, manual cross-grade work, li
   family.openProgress({ currentTarget: { dataset: { id: child.id } } });
   assert.equal(navigations.at(-1), '/pages/progress/index');
 
-  const plans = page('plans', engine); plans.render(); plans.setData({ kindIndex: 3, studyGrade: 3 });
+  const plans = page('plans', engine); plans.render();
+  assert.equal(plans.data.editor, 'preview'); assert.ok(plans.data.date > engine.today);
+  plans.setData({ kindIndex: 3, studyGrade: 3, planDate: engine.today });
   await plans.addPlan({ detail: { value: { title: '自主阅读', detail: '说明经过', minutes: '8' } } });
   const task = engine.viewDay(engine.today).tasks.find((item) => item.title === '自主阅读');
   assert.equal(task.studyGrade, 3); engine.enqueue(engine.today, task.id, true); await engine.sync(engine.today);
@@ -53,6 +55,7 @@ test('all WXML event handlers exist; family profile, manual cross-grade work, li
   const library = page('library', engine); library.onShow(); library.cleanup();
   assert.equal(library.data.total, 10);
   await library.assignItem({ currentTarget: { dataset: { id: library.data.items[0].id } } });
+  await library.confirmAssign();
   assert.equal(library.data.items[0].assigned, true);
   progress.openExamScope(); library.onShow(); library.cleanup();
   assert.equal(library.data.view, 'exam'); assert.equal(library.data.resources.examFramework.complete, false);

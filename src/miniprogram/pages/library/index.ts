@@ -1,6 +1,7 @@
 import { common, decorate } from '../../lib/page';
 import * as learning from '../../lib/learning/learning';
 import resources = require('../../lib/learning/resources');
+import { shiftDate } from '../../lib/sync-engine';
 import type { ContentKind, ContentScope, KnowledgeItem, SchoolGrade } from '../../../shared/models';
 import type { LearningApp } from '../../lib/client-models';
 import type { CommonData, CommonMethods, CommonRuntime, DatasetEvent, Decorated, PageDefinition, PickerEvent, ValueEvent } from '../../lib/page-types';
@@ -10,6 +11,8 @@ export interface LibraryData extends CommonData {
   query: string; items: Array<Decorated<KnowledgeItem> & { assigned: boolean; gradeLabel: string; preview?: string }>;
   total: number; hasMore: boolean; expandedId: string; bookId: string; bookTitle: string; resources: typeof resources;
   grade: SchoolGrade | 0; gradeLabels: string[]; coverageOpen: boolean; poemCount: number; wordCount: number;
+  filtersOpen: boolean; assignTarget: { id: string; title: string; familyId: string; childId: string; childName: string } | null;
+  assignDate: string; tomorrow: string; maxPlanDate: string;
 }
 export interface LibraryMethods extends CommonMethods {
   afterRender(): void; updateScopes(): void; selectionChanged(): void; updateItems(): void;
@@ -18,21 +21,24 @@ export interface LibraryMethods extends CommonMethods {
   typeQuery(event: ValueEvent): void; loadMore(): void; expandContent(event: DatasetEvent): void; toggleCoverage(): void;
   showExamContent(event: DatasetEvent<{ kind: ContentKind }>): void;
   showBook(event: DatasetEvent): void; clearBook(): void; copySource(event: DatasetEvent<{ url: string }>): void;
-  assignItem(event: DatasetEvent): Promise<void>;
+  assignItem(event: DatasetEvent): void; closeAssign(): void; keepSheet(): void; toggleFilters(): void;
+  chooseAssignDate(event: DatasetEvent<{ date: string }>): void; changeAssignDate(event: ValueEvent): void; confirmAssign(): Promise<void>;
 }
-interface LibraryRuntime extends CommonRuntime { matchSignature?: string; visibleLimit: number }
+interface LibraryRuntime extends CommonRuntime { matchSignature?: string; visibleLimit: number; preferredDate?: string }
 const base = common();
 const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = {
   ...base,
-  data: { ...base.data, view: 'content', kinds: [{ id: '', label: '全部类型' }, ...learning.kinds], kindIndex: 0,
+  data: { ...base.data, view: 'content', kinds: [{ id: '', label: '全部类型' }, ...learning.kinds.filter((kind) => kind.id !== 'math' && kind.id !== 'other')], kindIndex: 0,
     scopes: [{ id: 'all', label: '全部可用内容' }, { id: 'starter', label: '亲子入门' }], scope: 'all', scopeIndex: 0,
     query: '', items: [], total: 0, hasMore: false, expandedId: '', bookId: '', bookTitle: '', resources,
     grade: 0, gradeLabels: ['全部年级 / 待核对', ...learning.gradeLabels.slice(1)],
     coverageOpen: false, poemCount: learning.catalog.filter((item) => item.kind === 'poetry').length,
-    wordCount: learning.catalog.filter((item) => item.kind === 'word').length },
+    wordCount: learning.catalog.filter((item) => item.kind === 'word').length, filtersOpen: false,
+    assignTarget: null, assignDate: '', tomorrow: '', maxPlanDate: '' },
   onShow() {
     base.onShow.call(this);
     const navigation = getApp<LearningApp>().navigation || {};
+    this.preferredDate = navigation.libraryDate; delete navigation.libraryDate;
     if (navigation.libraryKind !== undefined) {
       const kindIndex = this.data.kinds.findIndex((item) => item.id === navigation.libraryKind);
       this.setData({ kindIndex: Math.max(0, kindIndex), scope: navigation.libraryScope || 'all', grade: 0, bookId: '', bookTitle: '', view: 'content' });
@@ -45,7 +51,15 @@ const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = 
     if (navigation.libraryView === 'exam') { this.setData({ view: 'exam' }); delete navigation.libraryView; }
     this.updateScopes(); this.updateItems();
   },
-  afterRender() { this.updateItems(); },
+  onHide() { this.setData({ assignTarget: null }); base.onHide.call(this); },
+  afterRender() {
+    const target = this.data.assignTarget;
+    this.setData({ subjectOptions: this.data.subjectOptions.filter((subject) => subject.id !== 'math' && subject.id !== 'other'),
+      ...(this.data.subjectFilter === 'math' || this.data.subjectFilter === 'other' ? { subjectFilter: 'all' as const } : {}),
+      tomorrow: shiftDate(this.data.today, 1), maxPlanDate: shiftDate(this.data.today, 365),
+      ...(target && (target.familyId !== this.data.family?.id || target.childId !== this.data.childId || this.data.isChild) ? { assignTarget: null } : {}) });
+    this.updateItems();
+  },
   updateScopes() {
     const kind = this.data.kinds[this.data.kindIndex].id;
     const scopes: LibraryData['scopes'] = kind ? learning.scopeOptions(kind) : [{ id: 'all', label: '全部可用内容' }, { id: 'starter', label: '亲子入门' }];
@@ -66,7 +80,7 @@ const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = 
       items: matches.slice(0, this.visibleLimit).map((item) => ({ ...decorate({ ...item, subject: learning.definition(item.kind).subject }),
         assigned: today.some((task) => learning.contentId(task) === item.id),
         gradeLabel: (item.gradeMappings || []).length ? [...new Set(item.gradeMappings!.map((mapping) => learning.gradeLabels[mapping.grade]))].join('、') + ' · 教材目录已核实' : '年级归属待核对',
-        preview: item.kind === 'poetry' ? item.author : item.detail.split('\n')[1] || '' })) });
+        preview: item.kind === 'poetry' ? decorate(item).poetryByline : item.detail.split('\n')[1] || '' })) });
   },
   changeView(event) { this.setData({ view: event.currentTarget.dataset.id }); },
   changeKind(event) {
@@ -80,6 +94,7 @@ const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = 
   loadMore() { this.visibleLimit += 30; this.updateItems(); },
   expandContent(event) { const id = event.currentTarget.dataset.id; this.setData({ expandedId: this.data.expandedId === id ? '' : id }); },
   toggleCoverage() { this.setData({ coverageOpen: !this.data.coverageOpen }); },
+  toggleFilters() { this.setData({ filtersOpen: !this.data.filtersOpen }); },
   showExamContent(event) {
     const kind = event.currentTarget.dataset.kind;
     const kindIndex = this.data.kinds.findIndex((item) => item.id === kind);
@@ -98,9 +113,27 @@ const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = 
     const url = event.currentTarget.dataset.url;
     if (typeof url === 'string' && url.startsWith('https://')) wx.setClipboardData({ data: url });
   },
-  async assignItem(event) {
-    const result = await this.perform('assignContent', { childId: this.data.childId, contentId: event.currentTarget.dataset.id });
-    if (result) wx.showToast({ title: result.task.done ? '今天已完成这项内容' : '已加入今日任务', icon: 'none' });
+  assignItem(event) {
+    if (!this.data.family || this.data.isChild || this.data.busy) return;
+    const item = this.data.items.find((item) => item.id === event.currentTarget.dataset.id);
+    const child = this.data.children.find((child) => child.id === this.data.childId);
+    if (!item || !child) return;
+    this.setData({ assignTarget: { id: item.id, title: item.title, familyId: this.data.family.id, childId: child.id, childName: child.name },
+      assignDate: this.preferredDate && this.preferredDate >= this.data.today && this.preferredDate <= this.data.maxPlanDate ? this.preferredDate : this.data.today });
+  },
+  closeAssign() { if (!this.data.busy) this.setData({ assignTarget: null }); },
+  keepSheet() {},
+  chooseAssignDate(event) { if (!this.data.busy) this.setData({ assignDate: event.currentTarget.dataset.date }); },
+  changeAssignDate(event) { if (!this.data.busy) this.setData({ assignDate: event.detail.value }); },
+  async confirmAssign() {
+    const target = this.data.assignTarget; const date = this.data.assignDate;
+    if (!target || target.familyId !== this.data.family?.id || target.childId !== this.data.childId || this.data.isChild) return;
+    const result = await this.perform('assignContent', { childId: target.childId, contentId: target.id, date });
+    if (result && this.data.assignTarget === target) {
+      this.setData({ assignTarget: null });
+      const label = date === this.data.today ? '今日' : date === this.data.tomorrow ? '明日' : date;
+      wx.showToast({ title: `已加入${label}`, icon: 'none' });
+    }
   }
 };
 Page(definition);

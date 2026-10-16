@@ -1,19 +1,24 @@
 import { common } from '../../lib/page';
+import { groupTasks } from '../../lib/task-groups';
+import { shiftDate } from '../../lib/sync-engine';
 import * as learning from '../../lib/learning/learning';
-import type { AutoRule, ContentKind, SchoolGrade, SubjectFilter } from '../../../shared/models';
+import type { AutoRule, ContentKind, SchoolGrade, SubjectFilter, Task } from '../../../shared/models';
 import type { LearningApp } from '../../lib/client-models';
-import type { CommonData, CommonMethods, CommonRuntime, DatasetEvent, FieldEvent, PageDefinition, PickerEvent, ValueEvent } from '../../lib/page-types';
+import type { CommonData, CommonMethods, CommonRuntime, DatasetEvent, Decorated, FieldEvent, PageDefinition, PickerEvent, ValueEvent } from '../../lib/page-types';
 export type RuleDraft = Omit<ReturnType<typeof learning.ruleRows>[number], 'quantity'> & { quantity: number | '' };
 export interface PlansData extends CommonData {
-  editor: 'auto' | 'manual'; kinds: typeof learning.kinds; kindIndex: number;
+  editor: 'preview' | 'auto' | 'manual'; kinds: typeof learning.kinds; kindIndex: number;
   schedules: string[]; scheduleIndex: number; modes: string[]; rules: RuleDraft[];
   formTitle: string; formDetail: string; formMinutes: string; draftDirty: boolean;
   studyGrade: SchoolGrade | 0; gradeLabels: string[]; visibleRules?: RuleDraft[]; dailyCount?: number;
+  groups: ReturnType<typeof groupTasks<Decorated<Task>>>; expandedKind: ContentKind | ''; previewLimit: number;
+  planDate: string; maxPlanDate: string; previewReady: boolean;
 }
 export interface PlansMethods extends CommonMethods {
   afterRender(): void; updateVisibleRules(): void;
   changeEditor(event: DatasetEvent<{ id: PlansData['editor'] }>): void;
   changeKind(event: PickerEvent): void; changeSchedule(event: PickerEvent): void; changeStudyGrade(event: PickerEvent): void;
+  changePlanDate(event: ValueEvent): void; togglePreview(event: DatasetEvent<{ id: ContentKind }>): void; showMorePreview(): void;
   updateRule(kind: ContentKind, patch: Partial<Pick<RuleDraft, 'mode' | 'scope' | 'quantity'>>): void;
   changeMode(event: FieldEvent<string | number, { id: ContentKind }>): void;
   changeScope(event: FieldEvent<string | number, { id: ContentKind }>): void;
@@ -24,14 +29,23 @@ export interface PlansMethods extends CommonMethods {
   addPlan(event: ValueEvent<{ title: string; detail: string; minutes: string }>): Promise<void>;
   togglePlan(event: FieldEvent<boolean, { id: string }>): Promise<void>;
 }
-interface PlansRuntime extends CommonRuntime { draftChild?: string; lastSubject?: SubjectFilter }
+interface PlansRuntime extends CommonRuntime { draftChild?: string; lastSubject?: SubjectFilter; previewKey?: string; defaultPlanDate?: string }
 const base = common();
 const definition: PageDefinition<PlansData, PlansMethods, PlansRuntime> = {
   ...base,
-  data: { ...base.data, editor: 'auto', kinds: learning.kinds, kindIndex: 0, schedules: ['仅今天', '每天固定', '加入自动内容库'], scheduleIndex: 0,
+  data: { ...base.data, followToday: false, followTomorrow: true, editor: 'preview', kinds: learning.kinds, kindIndex: 0, schedules: ['仅指定日期', '从指定日期起每天固定', '加入自动内容库'], scheduleIndex: 0,
     modes: ['全新', '复习'], rules: [], formTitle: '', formDetail: '', formMinutes: '5', draftDirty: false,
-    studyGrade: 0, gradeLabels: learning.gradeLabels },
+    studyGrade: 0, gradeLabels: learning.gradeLabels, groups: [], expandedKind: '', previewLimit: 20,
+    planDate: '', maxPlanDate: '', previewReady: false },
   afterRender() {
+    const key = `${this.data.family?.id}:${this.data.childId}:${this.data.date}:${this.data.subjectFilter}`;
+    if (key !== this.previewKey) { this.previewKey = key; this.setData({ expandedKind: '', previewLimit: 20 }); }
+    if (this.defaultPlanDate !== this.data.date) {
+      this.defaultPlanDate = this.data.date; this.setData({ planDate: this.data.date, maxPlanDate: shiftDate(this.data.today, 365) });
+    }
+    this.setData({ groups: groupTasks(this.data.tasks).map((group) => ({ ...group,
+      items: group.id === this.data.expandedKind ? group.items.slice(0, this.data.previewLimit) : [] })),
+      previewReady: Boolean(this.data.family && this.engine.state.days[`${this.data.family.id}:${this.data.date}`]) });
     if (!this.data.family) { this.draftChild = ''; return; }
     if (this.draftChild !== this.data.childId || !this.data.draftDirty) {
       this.draftChild = this.data.childId;
@@ -49,6 +63,15 @@ const definition: PageDefinition<PlansData, PlansMethods, PlansRuntime> = {
       && (rule.id !== 'other' || rule.poolCount || rule.quantity)), dailyCount: this.data.rules.reduce((sum, rule) => sum + (Number(rule.quantity) || 0), 0) });
   },
   changeEditor(event) { this.setData({ editor: event.currentTarget.dataset.id }); },
+  openLibrary() {
+    this.rememberSelection(); getApp<LearningApp>().navigation!.libraryDate = this.data.date;
+    wx.switchTab({ url: '/pages/library/index' });
+  },
+  changePlanDate(event) { this.setData({ planDate: event.detail.value }); },
+  togglePreview(event) {
+    this.setData({ expandedKind: this.data.expandedKind === event.currentTarget.dataset.id ? '' : event.currentTarget.dataset.id, previewLimit: 20 }); this.render();
+  },
+  showMorePreview() { this.setData({ previewLimit: this.data.previewLimit + 20 }); this.render(); },
   changeKind(event) { this.setData({ kindIndex: Number(event.detail.value) }); },
   changeSchedule(event) { this.setData({ scheduleIndex: Number(event.detail.value) }); },
   changeStudyGrade(event) { this.setData({ studyGrade: Number(event.detail.value) as SchoolGrade | 0 }); },
@@ -84,15 +107,16 @@ const definition: PageDefinition<PlansData, PlansMethods, PlansRuntime> = {
       wx.showToast({ title: '请填写范围内的整数数量', icon: 'none' }); return;
     }
     const result = await this.perform('saveAutoPlans', { childId: this.data.childId, rules });
-    if (result) { this.setData({ draftDirty: false }); this.render(); wx.showToast({ title: '每日安排已保存', icon: 'success' }); }
+    if (result) { this.setData({ draftDirty: false, editor: 'preview' }); await this.refresh(); wx.showToast({ title: '每日安排已保存', icon: 'success' }); }
   },
   async addPlan(event) {
     const form = event.detail.value; const kind = this.data.kinds[this.data.kindIndex];
     if (!form.title || !form.title.trim()) { wx.showToast({ title: '请填写学习内容名称', icon: 'none' }); return; }
     const result = await this.perform('addPlan', { childId: this.data.childId, title: form.title, detail: form.detail,
-      minutes: Number(form.minutes || 5), kind: kind.id, subject: kind.subject, schedule: (['once', 'daily', 'library'] as const)[this.data.scheduleIndex], studyGrade: this.data.studyGrade || null });
-    if (result) { this.setData({ formTitle: '', formDetail: '', formMinutes: '5' }); wx.showToast({ title: '已添加', icon: 'success' }); }
+      minutes: Number(form.minutes || 5), kind: kind.id, subject: kind.subject, schedule: (['once', 'daily', 'library'] as const)[this.data.scheduleIndex],
+      ...(this.data.scheduleIndex !== 2 ? { date: this.data.planDate } : {}), studyGrade: this.data.studyGrade || null });
+    if (result) { this.setData({ formTitle: '', formDetail: '', formMinutes: '5' }); await this.refresh(); wx.showToast({ title: '已添加', icon: 'success' }); }
   },
-  async togglePlan(event) { await this.perform('setPlanEnabled', { planId: event.currentTarget.dataset.id, enabled: event.detail.value }); }
+  async togglePlan(event) { if (await this.perform('setPlanEnabled', { planId: event.currentTarget.dataset.id, enabled: event.detail.value })) await this.refresh(); }
 };
 Page(definition);

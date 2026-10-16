@@ -35,14 +35,30 @@ var __importStar = (this && this.__importStar) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 const page_1 = require("../../lib/page");
+const task_groups_1 = require("../../lib/task-groups");
+const sync_engine_1 = require("../../lib/sync-engine");
 const learning = __importStar(require("../../lib/learning/learning"));
 const base = (0, page_1.common)();
 const definition = {
     ...base,
-    data: { ...base.data, editor: 'auto', kinds: learning.kinds, kindIndex: 0, schedules: ['仅今天', '每天固定', '加入自动内容库'], scheduleIndex: 0,
+    data: { ...base.data, followToday: false, followTomorrow: true, editor: 'preview', kinds: learning.kinds, kindIndex: 0, schedules: ['仅指定日期', '从指定日期起每天固定', '加入自动内容库'], scheduleIndex: 0,
         modes: ['全新', '复习'], rules: [], formTitle: '', formDetail: '', formMinutes: '5', draftDirty: false,
-        studyGrade: 0, gradeLabels: learning.gradeLabels },
+        studyGrade: 0, gradeLabels: learning.gradeLabels, groups: [], expandedKind: '', previewLimit: 20,
+        planDate: '', maxPlanDate: '', previewReady: false },
     afterRender() {
+        var _a;
+        const key = `${(_a = this.data.family) === null || _a === void 0 ? void 0 : _a.id}:${this.data.childId}:${this.data.date}:${this.data.subjectFilter}`;
+        if (key !== this.previewKey) {
+            this.previewKey = key;
+            this.setData({ expandedKind: '', previewLimit: 20 });
+        }
+        if (this.defaultPlanDate !== this.data.date) {
+            this.defaultPlanDate = this.data.date;
+            this.setData({ planDate: this.data.date, maxPlanDate: (0, sync_engine_1.shiftDate)(this.data.today, 365) });
+        }
+        this.setData({ groups: (0, task_groups_1.groupTasks)(this.data.tasks).map((group) => ({ ...group,
+                items: group.id === this.data.expandedKind ? group.items.slice(0, this.data.previewLimit) : [] })),
+            previewReady: Boolean(this.data.family && this.engine.state.days[`${this.data.family.id}:${this.data.date}`]) });
         if (!this.data.family) {
             this.draftChild = '';
             return;
@@ -64,6 +80,17 @@ const definition = {
                 && (rule.id !== 'other' || rule.poolCount || rule.quantity)), dailyCount: this.data.rules.reduce((sum, rule) => sum + (Number(rule.quantity) || 0), 0) });
     },
     changeEditor(event) { this.setData({ editor: event.currentTarget.dataset.id }); },
+    openLibrary() {
+        this.rememberSelection();
+        getApp().navigation.libraryDate = this.data.date;
+        wx.switchTab({ url: '/pages/library/index' });
+    },
+    changePlanDate(event) { this.setData({ planDate: event.detail.value }); },
+    togglePreview(event) {
+        this.setData({ expandedKind: this.data.expandedKind === event.currentTarget.dataset.id ? '' : event.currentTarget.dataset.id, previewLimit: 20 });
+        this.render();
+    },
+    showMorePreview() { this.setData({ previewLimit: this.data.previewLimit + 20 }); this.render(); },
     changeKind(event) { this.setData({ kindIndex: Number(event.detail.value) }); },
     changeSchedule(event) { this.setData({ scheduleIndex: Number(event.detail.value) }); },
     changeStudyGrade(event) { this.setData({ studyGrade: Number(event.detail.value) }); },
@@ -104,8 +131,8 @@ const definition = {
         }
         const result = await this.perform('saveAutoPlans', { childId: this.data.childId, rules });
         if (result) {
-            this.setData({ draftDirty: false });
-            this.render();
+            this.setData({ draftDirty: false, editor: 'preview' });
+            await this.refresh();
             wx.showToast({ title: '每日安排已保存', icon: 'success' });
         }
     },
@@ -117,12 +144,15 @@ const definition = {
             return;
         }
         const result = await this.perform('addPlan', { childId: this.data.childId, title: form.title, detail: form.detail,
-            minutes: Number(form.minutes || 5), kind: kind.id, subject: kind.subject, schedule: ['once', 'daily', 'library'][this.data.scheduleIndex], studyGrade: this.data.studyGrade || null });
+            minutes: Number(form.minutes || 5), kind: kind.id, subject: kind.subject, schedule: ['once', 'daily', 'library'][this.data.scheduleIndex],
+            ...(this.data.scheduleIndex !== 2 ? { date: this.data.planDate } : {}), studyGrade: this.data.studyGrade || null });
         if (result) {
             this.setData({ formTitle: '', formDetail: '', formMinutes: '5' });
+            await this.refresh();
             wx.showToast({ title: '已添加', icon: 'success' });
         }
     },
-    async togglePlan(event) { await this.perform('setPlanEnabled', { planId: event.currentTarget.dataset.id, enabled: event.detail.value }); }
+    async togglePlan(event) { if (await this.perform('setPlanEnabled', { planId: event.currentTarget.dataset.id, enabled: event.detail.value }))
+        await this.refresh(); }
 };
 Page(definition);

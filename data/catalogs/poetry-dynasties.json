@@ -1,0 +1,1720 @@
+{
+  "version": 1,
+  "checkedAt": "2026-10-16",
+  "scope": "内置156篇/组古诗文的朝代或时代标签；不等同于上海教材逐字校定。原始转录元数据逐项匹配，有争议或多时期汇编保留说明。",
+  "entries": [
+    {
+      "id": "moe-2022-zh-1-6-001",
+      "title": "江南",
+      "author": "汉乐府",
+      "dynasty": "两汉",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1442367d5cab1866867a"
+    },
+    {
+      "id": "moe-2022-zh-1-6-002",
+      "title": "长歌行",
+      "author": "汉乐府",
+      "dynasty": "两汉",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a04b9367d5cae5c9bff7f"
+    },
+    {
+      "id": "moe-2022-zh-1-6-003",
+      "title": "敕勒歌",
+      "author": "北朝民歌",
+      "dynasty": "南北朝",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1441367d5cab18668673"
+    },
+    {
+      "id": "poem-goose",
+      "title": "咏鹅",
+      "author": "骆宾王",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a144e367d5cab186686cd"
+    },
+    {
+      "id": "poem-wind",
+      "title": "风",
+      "author": "李峤",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a143c367d5cab18668652"
+    },
+    {
+      "id": "poem-willow",
+      "title": "咏柳",
+      "author": "贺知章",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a033b367d5ca0f8313625"
+    },
+    {
+      "id": "moe-2022-zh-1-6-007",
+      "title": "回乡偶书",
+      "author": "贺知章",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1430367d5cab18668604"
+    },
+    {
+      "id": "moe-2022-zh-1-6-008",
+      "title": "凉州词（黄河远上白云间）",
+      "author": "王之涣",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a120a367d5c5b84062a8a"
+    },
+    {
+      "id": "poem-stork-tower",
+      "title": "登鹳雀楼",
+      "author": "王之涣",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1430367d5cab18668605"
+    },
+    {
+      "id": "poem-spring-morning",
+      "title": "春晓",
+      "author": "孟浩然",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a120c367d5c5b84062a98"
+    },
+    {
+      "id": "moe-2022-zh-1-6-011",
+      "title": "凉州词（葡萄美酒夜光杯）",
+      "author": "王翰",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a04b9367d5cae5c9bff7c"
+    },
+    {
+      "id": "moe-2022-zh-1-6-012",
+      "title": "出塞",
+      "author": "王昌龄",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a120a367d5c5b84062a87"
+    },
+    {
+      "id": "moe-2022-zh-1-6-013",
+      "title": "芙蓉楼送辛渐",
+      "author": "王昌龄",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a033b367d5ca0f8313623"
+    },
+    {
+      "id": "moe-2022-zh-1-6-014",
+      "title": "鹿柴",
+      "author": "王维",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a143c367d5cab18668653"
+    },
+    {
+      "id": "moe-2022-zh-1-6-015",
+      "title": "送元二使安西",
+      "author": "王维",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1208367d5c5b84062a85"
+    },
+    {
+      "id": "moe-2022-zh-1-6-016",
+      "title": "九月九日忆山东兄弟",
+      "author": "王维",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a0651367d5c98b4e02a21"
+    },
+    {
+      "id": "poem-quiet-night",
+      "title": "静夜思",
+      "author": "李白",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a0254367d5caccce1aa1a"
+    },
+    {
+      "id": "moe-2022-zh-1-6-018",
+      "title": "古朗月行",
+      "author": "李白",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1432367d5cab1866860b"
+    },
+    {
+      "id": "moe-2022-zh-1-6-019",
+      "title": "望庐山瀑布",
+      "author": "李白",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a04b1367d5cae5c9bff5f"
+    },
+    {
+      "id": "moe-2022-zh-1-6-020",
+      "title": "赠汪伦",
+      "author": "李白",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a04b9367d5cae5c9bff7d"
+    },
+    {
+      "id": "moe-2022-zh-1-6-021",
+      "title": "黄鹤楼送孟浩然之广陵",
+      "author": "李白",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a0340367d5ca0f8313633"
+    },
+    {
+      "id": "poem-baidi",
+      "title": "早发白帝城",
+      "author": "李白",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1435367d5cab18668622"
+    },
+    {
+      "id": "moe-2022-zh-1-6-023",
+      "title": "望天门山",
+      "author": "李白",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1206367d5c5b84062a79"
+    },
+    {
+      "id": "moe-2022-zh-1-6-024",
+      "title": "别董大",
+      "author": "高适",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1448367d5cab1866869d"
+    },
+    {
+      "id": "moe-2022-zh-1-6-025",
+      "title": "绝句（两个黄鹂鸣翠柳）",
+      "author": "杜甫",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a04b1367d5cae5c9bff5c"
+    },
+    {
+      "id": "moe-2022-zh-1-6-026",
+      "title": "春夜喜雨",
+      "author": "杜甫",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a033b367d5ca0f8313629"
+    },
+    {
+      "id": "moe-2022-zh-1-6-027",
+      "title": "绝句（迟日江山丽）",
+      "author": "杜甫",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a14a6367d5cab1866891a"
+    },
+    {
+      "id": "moe-2022-zh-1-6-028",
+      "title": "江畔独步寻花",
+      "author": "杜甫",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a143d367d5cab18668658"
+    },
+    {
+      "id": "moe-2022-zh-1-6-029",
+      "title": "枫桥夜泊",
+      "author": "张继",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1434367d5cab1866861b"
+    },
+    {
+      "id": "moe-2022-zh-1-6-030",
+      "title": "滁州西涧",
+      "author": "韦应物",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1432367d5cab1866860e"
+    },
+    {
+      "id": "moe-2022-zh-1-6-031",
+      "title": "渔歌子",
+      "author": "张志和",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1436367d5cab1866862a"
+    },
+    {
+      "id": "moe-2022-zh-1-6-032",
+      "title": "塞下曲",
+      "author": "卢纶",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a145e367d5cab18668739"
+    },
+    {
+      "id": "moe-2022-zh-1-6-033",
+      "title": "游子吟",
+      "author": "孟郊",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a0340367d5ca0f831362f"
+    },
+    {
+      "id": "moe-2022-zh-1-6-034",
+      "title": "早春呈水部张十八员外",
+      "author": "韩愈",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1433367d5cab18668619"
+    },
+    {
+      "id": "moe-2022-zh-1-6-035",
+      "title": "望洞庭",
+      "author": "刘禹锡",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1434367d5cab1866861e"
+    },
+    {
+      "id": "moe-2022-zh-1-6-036",
+      "title": "浪淘沙",
+      "author": "刘禹锡",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1433367d5cab18668615"
+    },
+    {
+      "id": "moe-2022-zh-1-6-037",
+      "title": "赋得古原草送别",
+      "author": "白居易",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1206367d5c5b84062a74"
+    },
+    {
+      "id": "poem-pond",
+      "title": "池上",
+      "author": "白居易",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1444367d5cab18668687"
+    },
+    {
+      "id": "moe-2022-zh-1-6-039",
+      "title": "忆江南",
+      "author": "白居易",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1208367d5c5b84062a84"
+    },
+    {
+      "id": "moe-2022-zh-1-6-040",
+      "title": "小儿垂钓",
+      "author": "胡令能",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1443367d5cab18668680"
+    },
+    {
+      "id": "poem-farmer-two",
+      "title": "悯农（锄禾日当午）",
+      "author": "李绅",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a144c367d5cab186686bd"
+    },
+    {
+      "id": "moe-2022-zh-1-6-042",
+      "title": "悯农（春种一粒粟）",
+      "author": "李绅",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a144c367d5cab186686bd"
+    },
+    {
+      "id": "poem-river-snow",
+      "title": "江雪",
+      "author": "柳宗元",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a04a1367d5cae5c9bff54"
+    },
+    {
+      "id": "poem-hermit",
+      "title": "寻隐者不遇",
+      "author": "贾岛",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1455367d5cab186686f7"
+    },
+    {
+      "id": "moe-2022-zh-1-6-045",
+      "title": "山行",
+      "author": "杜牧",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1432367d5cab18668609"
+    },
+    {
+      "id": "moe-2022-zh-1-6-046",
+      "title": "清明",
+      "author": "杜牧",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a0254367d5caccce1aa19"
+    },
+    {
+      "id": "moe-2022-zh-1-6-047",
+      "title": "江南春",
+      "author": "杜牧",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a120a367d5c5b84062a89"
+    },
+    {
+      "id": "moe-2022-zh-1-6-048",
+      "title": "蜂",
+      "author": "罗隐",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1449367d5cab186686ab"
+    },
+    {
+      "id": "moe-2022-zh-1-6-049",
+      "title": "江上渔者",
+      "author": "范仲淹",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen4001-5000.json"
+      ],
+      "recordId": "5b9a19bc367d5c0f40d236fb"
+    },
+    {
+      "id": "moe-2022-zh-1-6-050",
+      "title": "元日",
+      "author": "王安石",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a0136367d5c96f4cd2959"
+    },
+    {
+      "id": "moe-2022-zh-1-6-051",
+      "title": "泊船瓜洲",
+      "author": "王安石",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a04b7367d5cae5c9bff71"
+    },
+    {
+      "id": "moe-2022-zh-1-6-052",
+      "title": "书湖阴先生壁",
+      "author": "王安石",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a143e367d5cab1866865d"
+    },
+    {
+      "id": "moe-2022-zh-1-6-053",
+      "title": "六月二十七日望湖楼醉书",
+      "author": "苏轼",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1434367d5cab1866861c"
+    },
+    {
+      "id": "moe-2022-zh-1-6-054",
+      "title": "饮湖上初晴后雨",
+      "author": "苏轼",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a04b9367d5cae5c9bff7a"
+    },
+    {
+      "id": "moe-2022-zh-1-6-055",
+      "title": "惠崇春江晚景",
+      "author": "苏轼",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1439367d5cab1866863a"
+    },
+    {
+      "id": "moe-2022-zh-1-6-056",
+      "title": "题西林壁",
+      "author": "苏轼",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a0f31367d5c3b48e948ff"
+    },
+    {
+      "id": "moe-2022-zh-1-6-057",
+      "title": "夏日绝句",
+      "author": "李清照",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a120a367d5c5b84062a90"
+    },
+    {
+      "id": "moe-2022-zh-1-6-058",
+      "title": "三衢道中",
+      "author": "曾几",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a144c367d5cab186686bf"
+    },
+    {
+      "id": "moe-2022-zh-1-6-059",
+      "title": "示儿",
+      "author": "陆游",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a04b7367d5cae5c9bff73"
+    },
+    {
+      "id": "moe-2022-zh-1-6-060",
+      "title": "秋夜将晓出篱门迎凉有感",
+      "author": "陆游",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1439367d5cab18668638"
+    },
+    {
+      "id": "moe-2022-zh-1-6-061",
+      "title": "四时田园杂兴（昼出耘田夜绩麻）",
+      "author": "范成大",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1458367d5cab1866870b"
+    },
+    {
+      "id": "moe-2022-zh-1-6-062",
+      "title": "四时田园杂兴（梅子金黄杏子肥）",
+      "author": "范成大",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a143d367d5cab1866865a"
+    },
+    {
+      "id": "poem-small-pond",
+      "title": "小池",
+      "author": "杨万里",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a033b367d5ca0f8313626"
+    },
+    {
+      "id": "moe-2022-zh-1-6-064",
+      "title": "晓出净慈寺送林子方",
+      "author": "杨万里",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a0f31367d5c3b48e948fa"
+    },
+    {
+      "id": "moe-2022-zh-1-6-065",
+      "title": "春日",
+      "author": "朱熹",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a0255367d5caccce1aa1c"
+    },
+    {
+      "id": "moe-2022-zh-1-6-066",
+      "title": "观书有感",
+      "author": "朱熹",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1443367d5cab1866867f"
+    },
+    {
+      "id": "moe-2022-zh-1-6-067",
+      "title": "题临安邸",
+      "author": "林升",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a143c367d5cab18668651"
+    },
+    {
+      "id": "moe-2022-zh-1-6-068",
+      "title": "游园不值",
+      "author": "叶绍翁",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1437367d5cab18668634"
+    },
+    {
+      "id": "moe-2022-zh-1-6-069",
+      "title": "乡村四月",
+      "author": "翁卷",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1432367d5cab1866860c"
+    },
+    {
+      "id": "moe-2022-zh-1-6-070",
+      "title": "墨梅",
+      "author": "王冕",
+      "dynasty": "元代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a04b9367d5cae5c9bff81"
+    },
+    {
+      "id": "moe-2022-zh-1-6-071",
+      "title": "石灰吟",
+      "author": "于谦",
+      "dynasty": "明代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1206367d5c5b84062a7a"
+    },
+    {
+      "id": "moe-2022-zh-1-6-072",
+      "title": "竹石",
+      "author": "郑燮",
+      "dynasty": "清代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1208367d5c5b84062a82"
+    },
+    {
+      "id": "moe-2022-zh-1-6-073",
+      "title": "所见",
+      "author": "袁枚",
+      "dynasty": "清代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a143f367d5cab18668666"
+    },
+    {
+      "id": "moe-2022-zh-1-6-074",
+      "title": "己亥杂诗（九州生气恃风雷）",
+      "author": "龚自珍",
+      "dynasty": "清代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a143a367d5cab18668647"
+    },
+    {
+      "id": "moe-2022-zh-1-6-075",
+      "title": "村居",
+      "author": "高鼎",
+      "dynasty": "清代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1436367d5cab18668625"
+    },
+    {
+      "id": "moe-2022-zh-7-9-001",
+      "title": "关雎",
+      "author": "《诗经》",
+      "dynasty": "先秦",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a0254367d5caccce1aa17"
+    },
+    {
+      "id": "moe-2022-zh-7-9-002",
+      "title": "蒹葭",
+      "author": "《诗经》",
+      "dynasty": "先秦",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a0330367d5ca0f831361a"
+    },
+    {
+      "id": "moe-2022-zh-7-9-003",
+      "title": "十五从军征",
+      "author": "汉乐府",
+      "dynasty": "两汉",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a143f367d5cab18668665"
+    },
+    {
+      "id": "moe-2022-zh-7-9-004",
+      "title": "观沧海",
+      "author": "曹操",
+      "dynasty": "两汉",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a033b367d5ca0f8313628"
+    },
+    {
+      "id": "moe-2022-zh-7-9-005",
+      "title": "饮酒",
+      "author": "陶潜",
+      "dynasty": "魏晋",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a11fe367d5c5b84062a72"
+    },
+    {
+      "id": "moe-2022-zh-7-9-006",
+      "title": "木兰诗（木兰辞）",
+      "author": "北朝民歌",
+      "dynasty": "南北朝",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a0136367d5c96f4cd295a"
+    },
+    {
+      "id": "moe-2022-zh-7-9-007",
+      "title": "送杜少府之任蜀州",
+      "author": "王勃",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a11fe367d5c5b84062a6a"
+    },
+    {
+      "id": "moe-2022-zh-7-9-008",
+      "title": "登幽州台歌",
+      "author": "陈子昂",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1437367d5cab18668631"
+    },
+    {
+      "id": "moe-2022-zh-7-9-009",
+      "title": "次北固山下",
+      "author": "王湾",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a04b7367d5cae5c9bff77"
+    },
+    {
+      "id": "moe-2022-zh-7-9-010",
+      "title": "使至塞上",
+      "author": "王维",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a04b2367d5cae5c9bff60"
+    },
+    {
+      "id": "moe-2022-zh-7-9-011",
+      "title": "闻王昌龄左迁龙标遥有此寄",
+      "author": "李白",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a11fe367d5c5b84062a6f"
+    },
+    {
+      "id": "moe-2022-zh-7-9-012",
+      "title": "行路难",
+      "author": "李白",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a04a1367d5cae5c9bff55"
+    },
+    {
+      "id": "moe-2022-zh-7-9-013",
+      "title": "黄鹤楼",
+      "author": "崔颢",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1206367d5c5b84062a76"
+    },
+    {
+      "id": "moe-2022-zh-7-9-014",
+      "title": "望岳",
+      "author": "杜甫",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a04a1367d5cae5c9bff57"
+    },
+    {
+      "id": "moe-2022-zh-7-9-015",
+      "title": "春望",
+      "author": "杜甫",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a0137367d5c96f4cd295b"
+    },
+    {
+      "id": "moe-2022-zh-7-9-016",
+      "title": "茅屋为秋风所破歌",
+      "author": "杜甫",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a0331367d5ca0f831361c"
+    },
+    {
+      "id": "moe-2022-zh-7-9-017",
+      "title": "白雪歌送武判官归京",
+      "author": "岑参",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a0331367d5ca0f8313620"
+    },
+    {
+      "id": "moe-2022-zh-7-9-018",
+      "title": "酬乐天扬州初逢席上见赠",
+      "author": "刘禹锡",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a11fe367d5c5b84062a70"
+    },
+    {
+      "id": "moe-2022-zh-7-9-019",
+      "title": "卖炭翁",
+      "author": "白居易",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a120a367d5c5b84062a88"
+    },
+    {
+      "id": "moe-2022-zh-7-9-020",
+      "title": "钱塘湖春行",
+      "author": "白居易",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a033b367d5ca0f8313627"
+    },
+    {
+      "id": "moe-2022-zh-7-9-021",
+      "title": "雁门太守行",
+      "author": "李贺",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1430367d5cab18668601"
+    },
+    {
+      "id": "moe-2022-zh-7-9-022",
+      "title": "赤壁",
+      "author": "杜牧",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1433367d5cab18668618"
+    },
+    {
+      "id": "moe-2022-zh-7-9-023",
+      "title": "泊秦淮",
+      "author": "杜牧",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1430367d5cab186685fd"
+    },
+    {
+      "id": "moe-2022-zh-7-9-024",
+      "title": "夜雨寄北",
+      "author": "李商隐",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a04b7367d5cae5c9bff72"
+    },
+    {
+      "id": "moe-2022-zh-7-9-025",
+      "title": "无题",
+      "author": "李商隐",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a04a1367d5cae5c9bff53"
+    },
+    {
+      "id": "moe-2022-zh-7-9-026",
+      "title": "相见欢",
+      "author": "李煜",
+      "dynasty": "五代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1431367d5cab18668608"
+    },
+    {
+      "id": "moe-2022-zh-7-9-027",
+      "title": "渔家傲",
+      "author": "范仲淹",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a0340367d5ca0f8313634"
+    },
+    {
+      "id": "moe-2022-zh-7-9-028",
+      "title": "浣溪沙",
+      "author": "晏殊",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a04b1367d5cae5c9bff5e"
+    },
+    {
+      "id": "moe-2022-zh-7-9-029",
+      "title": "登飞来峰",
+      "author": "王安石",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1434367d5cab1866861d"
+    },
+    {
+      "id": "moe-2022-zh-7-9-030",
+      "title": "江城子",
+      "author": "苏轼",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a04b1367d5cae5c9bff5b"
+    },
+    {
+      "id": "moe-2022-zh-7-9-031",
+      "title": "水调歌头",
+      "author": "苏轼",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a0136367d5c96f4cd2953"
+    },
+    {
+      "id": "moe-2022-zh-7-9-032",
+      "title": "渔家傲",
+      "author": "李清照",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a143c367d5cab1866864e"
+    },
+    {
+      "id": "moe-2022-zh-7-9-033",
+      "title": "游山西村",
+      "author": "陆游",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a0340367d5ca0f8313631"
+    },
+    {
+      "id": "moe-2022-zh-7-9-034",
+      "title": "南乡子",
+      "author": "辛弃疾",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1208367d5c5b84062a7e"
+    },
+    {
+      "id": "moe-2022-zh-7-9-035",
+      "title": "破阵子",
+      "author": "辛弃疾",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a033b367d5ca0f8313622"
+    },
+    {
+      "id": "moe-2022-zh-7-9-036",
+      "title": "过零丁洋",
+      "author": "文天祥",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a0331367d5ca0f831361f"
+    },
+    {
+      "id": "moe-2022-zh-7-9-037",
+      "title": "天净沙·秋思",
+      "author": "马致远",
+      "dynasty": "元代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a0330367d5ca0f8313617"
+    },
+    {
+      "id": "moe-2022-zh-7-9-038",
+      "title": "山坡羊·潼关怀古",
+      "author": "张养浩",
+      "dynasty": "元代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1436367d5cab1866862c"
+    },
+    {
+      "id": "moe-2022-zh-7-9-039",
+      "title": "己亥杂诗（浩荡离愁白日斜）",
+      "author": "龚自珍",
+      "dynasty": "清代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a04b7367d5cae5c9bff70"
+    },
+    {
+      "id": "moe-2022-zh-7-9-040",
+      "title": "满江红",
+      "author": "秋瑾",
+      "dynasty": "清代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1448367d5cab186686a0"
+    },
+    {
+      "id": "moe-2022-zh-7-9-041",
+      "title": "《论语》十二章",
+      "author": "《论语》",
+      "dynasty": "先秦",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a143a367d5cab18668648"
+    },
+    {
+      "id": "moe-2022-zh-7-9-042",
+      "title": "曹刿论战",
+      "author": "《左传》",
+      "dynasty": "先秦",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a033f367d5ca0f831362b"
+    },
+    {
+      "id": "moe-2022-zh-7-9-043",
+      "title": "《孟子》三则",
+      "author": "《孟子》",
+      "dynasty": "先秦",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a0f31367d5c3b48e948fc"
+    },
+    {
+      "id": "moe-2022-zh-7-9-044",
+      "title": "北冥有鱼（《庄子》选段）",
+      "author": "《庄子》",
+      "dynasty": "先秦",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a144f367d5cab186686d3"
+    },
+    {
+      "id": "moe-2022-zh-7-9-045",
+      "title": "虽有嘉肴（《礼记》选段）",
+      "author": "《礼记》",
+      "dynasty": "先秦至秦汉",
+      "status": "reviewed",
+      "note": "《礼记》为多时期文献汇编，汉代编定；此处不把编者朝代当作所有篇章的创作年代。",
+      "sources": [
+        "https://www.nlc.cn/migrated/www.nlc.cn/bbjd/202108dzyd/zxyd/no6/202308/P020230801358615416293.pdf"
+      ]
+    },
+    {
+      "id": "moe-2022-zh-7-9-046",
+      "title": "伯牙鼓琴（《吕氏春秋》选段）",
+      "author": "《吕氏春秋》",
+      "dynasty": "先秦",
+      "status": "reviewed",
+      "note": "《吕氏春秋》由战国末期吕不韦组织编纂。",
+      "sources": [
+        "https://www.nlc.cn/web/ziyuanfuwu/ziyuantuijian/new_wjjdsd/wqhg/2024/index.shtml"
+      ]
+    },
+    {
+      "id": "moe-2022-zh-7-9-047",
+      "title": "邹忌讽齐王纳谏",
+      "author": "《战国策》",
+      "dynasty": "先秦（西汉编订）",
+      "status": "reviewed",
+      "note": "《战国策》主要记先秦史事，由西汉刘向编订；原作者并非刘向一人。",
+      "sources": [
+        "https://www.nlc.cn/upload/attachments/2023-12-01/801bba46.pdf"
+      ]
+    },
+    {
+      "id": "moe-2022-zh-7-9-048",
+      "title": "出师表",
+      "author": "诸葛亮",
+      "dynasty": "三国·蜀汉",
+      "status": "reviewed",
+      "sources": [
+        "https://hzdqw.hanzhong.gov.cn/hzdfz/zjsy/202207/cf04e9f6a900457ab6d56d7196267ee8.shtml"
+      ]
+    },
+    {
+      "id": "moe-2022-zh-7-9-049",
+      "title": "桃花源记",
+      "author": "陶潜",
+      "dynasty": "魏晋",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a0136367d5c96f4cd2954"
+    },
+    {
+      "id": "moe-2022-zh-7-9-050",
+      "title": "答谢中书书",
+      "author": "陶弘景",
+      "dynasty": "南北朝",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a11fe367d5c5b84062a6c"
+    },
+    {
+      "id": "moe-2022-zh-7-9-051",
+      "title": "三峡",
+      "author": "郦道元",
+      "dynasty": "南北朝",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a0331367d5ca0f831361e"
+    },
+    {
+      "id": "moe-2022-zh-7-9-052",
+      "title": "马说（杂说四）",
+      "author": "韩愈",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1436367d5cab18668626"
+    },
+    {
+      "id": "moe-2022-zh-7-9-053",
+      "title": "陋室铭",
+      "author": "刘禹锡",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a0136367d5c96f4cd2955"
+    },
+    {
+      "id": "moe-2022-zh-7-9-054",
+      "title": "小石潭记",
+      "author": "柳宗元",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a0254367d5caccce1aa18"
+    },
+    {
+      "id": "moe-2022-zh-7-9-055",
+      "title": "岳阳楼记",
+      "author": "范仲淹",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a0254367d5caccce1aa14"
+    },
+    {
+      "id": "moe-2022-zh-7-9-056",
+      "title": "醉翁亭记",
+      "author": "欧阳修",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a0254367d5caccce1aa16"
+    },
+    {
+      "id": "moe-2022-zh-7-9-057",
+      "title": "爱莲说",
+      "author": "周敦颐",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a0136367d5c96f4cd2956"
+    },
+    {
+      "id": "moe-2022-zh-7-9-058",
+      "title": "记承天寺夜游",
+      "author": "苏轼",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a04b7367d5cae5c9bff74"
+    },
+    {
+      "id": "moe-2022-zh-7-9-059",
+      "title": "送东阳马生序",
+      "author": "宋濂",
+      "dynasty": "明代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a144b367d5cab186686b6"
+    },
+    {
+      "id": "moe-2022-zh-7-9-060",
+      "title": "湖心亭看雪",
+      "author": "张岱",
+      "dynasty": "明代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a0f31367d5c3b48e948fe"
+    },
+    {
+      "id": "sh54-jiande",
+      "title": "宿建德江",
+      "author": "孟浩然",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1439367d5cab1866863c"
+    },
+    {
+      "id": "sh54-xijiangyue",
+      "title": "西江月·夜行黄沙道中",
+      "author": "辛弃疾",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a033f367d5ca0f831362d"
+    },
+    {
+      "id": "sh54-two-children",
+      "title": "两小儿辩日",
+      "author": "列御寇",
+      "dynasty": "先秦（传统归属）",
+      "status": "reviewed",
+      "note": "《列子》传统归于列御寇；今本成书年代有争议，不能据此断定本文写作年代。",
+      "sources": [
+        "https://www.cssn.cn/zx/zgzx/202210/t20221027_5554819.shtml"
+      ]
+    },
+    {
+      "id": "sh54-old-friend",
+      "title": "过故人庄",
+      "author": "孟浩然",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a04b2367d5cae5c9bff64"
+    },
+    {
+      "id": "sh54-cold-food",
+      "title": "寒食",
+      "author": "韩翃",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1437367d5cab18668630"
+    },
+    {
+      "id": "sh54-moon-fifteen",
+      "title": "十五夜望月",
+      "author": "王建",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1455367d5cab186686fe"
+    },
+    {
+      "id": "sh54-cicada",
+      "title": "蝉",
+      "author": "虞世南",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1452367d5cab186686e9"
+    },
+    {
+      "id": "sh54-horse",
+      "title": "马诗（其五）",
+      "author": "李贺",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a145f367d5cab1866873d"
+    },
+    {
+      "id": "sh54-chess",
+      "title": "学弈",
+      "author": "佚名",
+      "dynasty": "先秦",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1439367d5cab1866863f"
+    },
+    {
+      "id": "sh54-jueju-two",
+      "title": "绝句（其二）",
+      "author": "杜甫",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1440367d5cab1866866c"
+    },
+    {
+      "id": "sh54-reading-two",
+      "title": "观书有感（其二）",
+      "author": "朱熹",
+      "dynasty": "宋代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1497367d5cab186688b3"
+    },
+    {
+      "id": "sh54-advice-son",
+      "title": "诫子书",
+      "author": "诸葛亮",
+      "dynasty": "三国·蜀汉",
+      "status": "reviewed",
+      "sources": [
+        "https://hzdqw.hanzhong.gov.cn/hzdfz/zjsy/202207/cf04e9f6a900457ab6d56d7196267ee8.shtml"
+      ]
+    },
+    {
+      "id": "sh54-wolf",
+      "title": "狼",
+      "author": "蒲松龄",
+      "dynasty": "清代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1451367d5cab186686d8"
+    },
+    {
+      "id": "sh54-archery",
+      "title": "关尹子教射",
+      "author": "《列子》",
+      "dynasty": "先秦（传统归属）",
+      "status": "reviewed",
+      "note": "《列子》传统归于列御寇；今本成书年代有争议，不能据此断定本文写作年代。",
+      "sources": [
+        "https://www.cssn.cn/zx/zgzx/202210/t20221027_5554819.shtml"
+      ]
+    },
+    {
+      "id": "sh-exam-dai-song",
+      "title": "书戴嵩画牛",
+      "author": "苏轼",
+      "dynasty": "宋代",
+      "status": "author_period",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a04b7367d5cae5c9bff74"
+    },
+    {
+      "id": "sh54-painting",
+      "title": "画",
+      "author": "教材未署作者",
+      "dynasty": "朝代待考",
+      "status": "unresolved",
+      "note": "已核对的教材样本未署作者与朝代，保留待考，不据同名诗归给王维。",
+      "sources": [
+        "https://keben.app/book/0358"
+      ]
+    },
+    {
+      "id": "sh54-moon-excerpt",
+      "title": "古朗月行（节选）",
+      "author": "李白",
+      "dynasty": "唐代",
+      "status": "author_period",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a04a1367d5cae5c9bff55"
+    },
+    {
+      "id": "sh54-night-reading",
+      "title": "夜书所见",
+      "author": "叶绍翁",
+      "dynasty": "宋代",
+      "status": "author_period",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1437367d5cab18668634"
+    },
+    {
+      "id": "sh54-boat-night",
+      "title": "舟夜书所见",
+      "author": "查慎行",
+      "dynasty": "清代",
+      "status": "reviewed",
+      "sources": [
+        "https://www.nlc.cn/pcab/zx/xw/20221221_214254.shtml"
+      ]
+    },
+    {
+      "id": "sh54-lotus-song",
+      "title": "采莲曲",
+      "author": "王昌龄",
+      "dynasty": "唐代",
+      "status": "author_period",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a033b367d5ca0f8313623"
+    },
+    {
+      "id": "sh54-sima-guang",
+      "title": "司马光",
+      "author": "《宋史·司马光传》（节选）",
+      "dynasty": "元代",
+      "status": "reviewed",
+      "note": "朝代指《宋史》的编纂时代；故事人物司马光生活在北宋。",
+      "sources": [
+        "https://www.nlc.cn/web/zdxm/bbjd/mobile/dtxx/xmdt/20231127_217361.shtml"
+      ]
+    }
+  ]
+}

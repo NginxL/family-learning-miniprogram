@@ -141,10 +141,10 @@ test('adding a child and daily task assigns only to that child and validates unt
     await rejects(f.call('parent-a', 'addPlan', { ...plan, ...invalid }), 'INVALID');
 });
 
-test('dates use Shanghai midnight and reject impossible/future dates', async () => {
+test('dates use Shanghai midnight and reject impossible or out-of-range dates', async () => {
   assert.equal(chinaDate(Date.parse('2026-10-12T16:00:00Z')), '2026-10-13');
   const f = fixture(); const family = await f.family();
-  for (const date of ['2026-02-30', '2026-10-13', '../other', '2020-01-01'])
+  for (const date of ['2026-02-30', '2027-10-13', '../other', '2020-01-01'])
     await rejects(f.call('parent-a', 'getDay', { familyId: family.id, date }), 'INVALID');
 });
 

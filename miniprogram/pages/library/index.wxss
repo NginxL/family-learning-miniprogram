@@ -1,0 +1,7 @@
+.filter-summary { font-size: 24rpx; color: #66786b; padding: 22rpx 0 8rpx; line-height: 1.8; }
+.schedule-mask { position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 100; display: flex; align-items: center; justify-content: center; background: rgba(24, 39, 30, .38); padding: 24rpx; }
+.schedule-sheet { width: 100%; max-width: 680rpx; max-height: 85vh; overflow-y: auto; border-radius: 28rpx; padding: 32rpx; background: #fff; }
+.schedule-shortcuts { display: flex; gap: 16rpx; margin-top: 28rpx; }
+.schedule-shortcuts button { flex: 1; background: #edf2eb; color: #315e43; }
+.schedule-shortcuts button.selected { background: #27654c; color: #fff; }
+.schedule-cancel { margin: 24rpx auto 0; padding: 12rpx 36rpx; }

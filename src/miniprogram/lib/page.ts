@@ -1,4 +1,4 @@
-import { chinaDate } from './sync-engine';
+import { chinaDate, shiftDate } from './sync-engine';
 import type { ApiAction } from '../../shared/api';
 import type { ClientResults, CommandPayloads, LearningApp } from './client-models';
 import type { CommonData, CommonMethods, CommonRuntime, Decoratable, Decorated, PageDefinition } from './page-types';
@@ -6,9 +6,14 @@ import { errorDetails } from './errors';
 import * as learning from './learning/learning';
 import { withCurrentAge } from './learning/child-profile';
 const modeLabels = { new: '全新', review: '复习', manual: '家长安排' };
-const decorate = <T extends Decoratable>(item: T): Decorated<T> => ({ ...item, kindLabel: learning.definition(learning.kindOf(item)).label,
+const decorate = <T extends Decoratable>(item: T): Decorated<T> => {
+  const poetry = learning.kindOf(item) === 'poetry' ? learning.catalogById.get(learning.contentId(item)) : undefined;
+  return { ...item, ...(poetry ? { poetryByline: `${poetry.dynasty || '朝代待考'} · ${poetry.author || '作者待考'}`, dynastyNote: poetry.dynastyNote || '',
+    displayDetail: poetry.author && item.detail?.startsWith(`${poetry.author}\n`) ? item.detail.slice(poetry.author.length + 1) : item.detail || '' } : {}),
+  kindLabel: learning.definition(learning.kindOf(item)).label,
   subjectLabel: learning.subjects.find((subject) => subject.id === item.subject)?.label || '其他',
-  modeLabel: modeLabels[item.mode || 'manual'] || '家长安排' });
+  modeLabel: modeLabels[item.mode || 'manual'] || '家长安排' };
+};
 function common(): PageDefinition<CommonData, CommonMethods, CommonRuntime> {
   return {
     data: { family: null, children: [], childId: '', tasks: [], plans: [], members: [], date: chinaDate(), today: chinaDate(),
@@ -32,7 +37,7 @@ function common(): PageDefinition<CommonData, CommonMethods, CommonRuntime> {
       const family = snapshot.family;
       const children = family ? family.children.map((child) => ({ ...withCurrentAge(child, chinaDate()), gradeLabel: learning.gradeLabels[child.schoolGrade || 0] })) : [];
       const childId = children.some((child) => child.id === this.data.childId) ? this.data.childId : (children[0] && children[0].id) || '';
-      const date = this.data.followToday ? snapshot.today : this.data.date;
+      const date = this.data.followTomorrow ? shiftDate(snapshot.today, 1) : this.data.followToday ? snapshot.today : this.data.date;
       const day = this.engine.viewDay(date);
       const allTasks = day.tasks.filter((task) => task.childId === childId).map(decorate);
       const tasks = allTasks.filter((task) => this.data.subjectFilter === 'all' || task.subject === this.data.subjectFilter);
@@ -65,7 +70,7 @@ function common(): PageDefinition<CommonData, CommonMethods, CommonRuntime> {
     async refresh() {
       const requested = this.data.date;
       await this.engine.sync(requested);
-      if (this.data.followToday && requested !== this.data.date) await this.engine.sync(this.data.date);
+      if ((this.data.followToday || this.data.followTomorrow) && requested !== this.data.date) await this.engine.sync(this.data.date);
       if (this.active && this.afterSync) await this.afterSync();
     },
     dismissNotice() { this.engine.dismissNotice(); },

@@ -22,7 +22,7 @@ export interface ApiPayloads {
   updateChild: ChildScope & ProfileInput & { name: string; baseVersion: number };
   addPlan: ChildScope & {
     title: string; detail?: string; subject: Subject; kind?: ContentKind;
-    schedule?: 'once' | 'daily' | 'library'; minutes: number; studyGrade?: SchoolGrade | null;
+    schedule?: 'once' | 'daily' | 'library'; date?: CalendarDate; minutes: number; studyGrade?: SchoolGrade | null;
   };
   setPlanEnabled: FamilyScope & { planId: string; enabled: boolean };
   saveAutoPlans: ChildScope & { rules: AutoRule[] };
@@ -31,7 +31,7 @@ export interface ApiPayloads {
   getProgress: ChildScope;
   setMastery: ContentRequest & { mastered: boolean; baseVersion: number };
   reviewContent: ContentRequest;
-  assignContent: ContentRequest;
+  assignContent: ContentRequest & { date?: CalendarDate };
   setTaskDone: FamilyScope & { date: CalendarDate; taskId: string; done: boolean; baseVersion: number; mutationId: string };
   uploadHomeworkAttachment: HomeworkScope & { uploadId: string; mime: HomeworkAttachment['mime']; base64: string; duration: number };
   submitHomework: HomeworkScope & { submissionId: string; attachmentIds: string[]; baseVersion: number };

@@ -24,7 +24,7 @@ export function assertKnowledge(value: unknown): asserts value is KnowledgeItem[
     requireField(typeof item.kind === 'string' && kinds.includes(item.kind), `${path}.kind`);
     requireField(typeof item.minutes === 'number' && Number.isFinite(item.minutes) && item.minutes > 0, `${path}.minutes`);
     requireField(strings(item.collections) && item.collections.every((scope) => scopes.includes(scope)), `${path}.collections`);
-    for (const key of ['author', 'workId', 'note', 'curriculumId', 'referenceUrl', 'textSourceUrl'])
+    for (const key of ['author', 'dynasty', 'dynastyNote', 'workId', 'note', 'curriculumId', 'referenceUrl', 'textSourceUrl'])
       requireField(item[key] === undefined || typeof item[key] === 'string', `${path}.${key}`);
     for (const key of ['aliases', 'bookIds']) requireField(item[key] === undefined || strings(item[key]), `${path}.${key}`);
     requireField(item.subject === undefined || (typeof item.subject === 'string' && ['poetry', 'english', 'reading', 'math', 'other'].includes(item.subject)), `${path}.subject`);

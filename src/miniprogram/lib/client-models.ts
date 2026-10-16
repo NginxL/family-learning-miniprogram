@@ -29,6 +29,7 @@ export interface SyncStorage { read(): SyncState | null; write(state: SyncState)
 export interface SyncOptions { transport: ClientTransport; storage: SyncStorage; makeId?: () => string }
 export type AppMode = 'demo' | 'cloud';
 export interface Navigation {
+  libraryDate?: string;
   childId?: string;
   subject?: SubjectFilter;
   date?: string;

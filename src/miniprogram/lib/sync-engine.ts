@@ -6,6 +6,7 @@ const empty = (): SyncState => ({ userId: null, family: null, days: {}, historie
 const clone = <T>(value: T): T => JSON.parse(JSON.stringify(value));
 const dayKey = (familyId: string, date: string) => `${familyId}:${date}`;
 const chinaDate = () => new Date(Date.now() + 8 * 3600000).toISOString().slice(0, 10);
+const shiftDate = (date: string, days: number) => new Date(Date.parse(`${date}T00:00:00Z`) + days * 86400000).toISOString().slice(0, 10);
 
 class SyncEngine {
   readonly transport: ClientTransport;
@@ -48,6 +49,7 @@ class SyncEngine {
   enqueueMany(date: string, taskIds: string[], done: boolean) {
     if (this.state.family?.myRole === 'child') throw Object.assign(new Error('请提交作业，由家长确认完成'), { code: 'PARENT_REQUIRED' });
     if (!this.state.userId || !this.state.family) throw new Error('请先联网加载学习档案');
+    if (date > this.today) throw new Error('未来的学习安排暂不能完成');
     if (!Array.isArray(taskIds) || typeof done !== 'boolean') throw new Error('学习记录无效，请刷新后重试');
     const day = this.viewDay(date);
     const tasks = [...new Set(taskIds)].map((id) => day.tasks.find((task) => task.id === id));
@@ -175,4 +177,4 @@ class SyncEngine {
   }
   dismissNotice() { const next = clone(this.state); next.notice = ''; this.save(next); }
 }
-export { SyncEngine, chinaDate };
+export { SyncEngine, chinaDate, shiftDate };

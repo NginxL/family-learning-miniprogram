@@ -6,6 +6,12 @@ function createDemo(wx) {
   const read = () => wx.getStorageSync('demo-backend-v1') || { family: null, days: {}, ledgers: {} };
   const write = (data) => wx.setStorageSync('demo-backend-v1', data);
   const id = () => `demo_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`;
+  const planDate = (value, today) => {
+    const time = Date.parse(`${value}T00:00:00Z`);
+    if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value) || !Number.isFinite(time)
+      || new Date(time).toISOString().slice(0, 10) !== value || value < today || time - Date.parse(`${today}T00:00:00Z`) > 365 * 86400000) throw new Error('请选择今日起一年内的日期');
+    return value;
+  };
   const profile = (input, today) => {
     const birthDate = input.birthDate == null || input.birthDate === '' ? null : input.birthDate;
     const age = birthDate === null ? (input.age == null ? null : input.age) : ageFromBirthDate(birthDate, today);
@@ -46,11 +52,20 @@ function createDemo(wx) {
     if (['joinFamily', 'createInvite', 'removeMember', 'leaveFamily', 'uploadHomeworkAttachment', 'submitHomework', 'getHomeworkAttachment', 'reviewHomework'].includes(action)) throw new Error('演示模式仅在本机运行；连接云开发后可邀请、提交作业和同步');
     if (!state.family) throw new Error('请先加载学习档案');
     // Index previous demo check-ins so an upgrade retains the family's old learning history.
-    Object.values(state.days).forEach((day) => state.family.children.forEach((child) => {
+    Object.values(state.days).filter((day) => day.date <= today).forEach((day) => state.family.children.forEach((child) => {
       learning.recordTasks(ledgerFor(child.id), day.tasks.filter((task) => task.childId === child.id), day.date);
     }));
     if (action === 'getDay') {
       const date = input.date || today;
+      if (date > today) {
+        planDate(date, today);
+        const current = state.days[today] || { date: today, familyId: state.family.id, tasks: [] };
+        state.family.children.forEach((child) => ledgerFor(child.id));
+        learning.generateDay(state.family, current, state.ledgers); state.days[today] = current;
+        const preview = JSON.parse(JSON.stringify(state.days[date] || { date, familyId: state.family.id, tasks: [] }));
+        learning.generateDay(state.family, preview, JSON.parse(JSON.stringify(state.ledgers)));
+        write(state); return { day: preview, today };
+      }
       const day = state.days[date] || { date, familyId: state.family.id, tasks: [] };
       if (date === today) {
         state.family.children.forEach((child) => ledgerFor(child.id));
@@ -63,6 +78,7 @@ function createDemo(wx) {
     }
     if (action === 'getProgress') return learning.progress(ledgerFor(input.childId));
     if (action === 'setTaskDone') {
+      if (input.date > today) throw new Error('未来的学习安排暂不能完成');
       const task = state.days[input.date] && state.days[input.date].tasks.find((item) => item.id === input.taskId);
       if (!task) throw new Error('任务不存在');
       if (task.version !== input.baseVersion) { const error = new Error('任务已更新，请刷新'); error.code = 'CONFLICT'; throw error; }
@@ -79,14 +95,23 @@ function createDemo(wx) {
         if (entry.version !== input.baseVersion) { const error = new Error('学习记录已更新，请刷新'); error.code = 'CONFLICT'; throw error; }
         entry.mastered = input.mastered; entry.version += 1; write(state); return { mastered: entry.mastered };
       }
-      const day = state.days[today] || { date: today, familyId: state.family.id, tasks: [] };
+      const date = action === 'assignContent' ? planDate(input.date === undefined ? today : input.date, today) : today;
+      if (date > today) {
+        const scheduled = (state.family.scheduledContents || []).filter(item => item.date > today);
+        if (!scheduled.some(item => item.childId === input.childId && item.contentId === input.contentId && item.date === date)) {
+          if (scheduled.length >= 1000) throw new Error('未来安排已达1000项，请在部分完成后再添加');
+          scheduled.push({ childId: input.childId, contentId: input.contentId, date });
+        }
+        state.family.scheduledContents = scheduled;
+      }
+      const day = state.days[date] || { date, familyId: state.family.id, tasks: [] };
       let task = day.tasks.find((item) => item.childId === input.childId && learning.contentId(item) === input.contentId);
       if (!task) {
-        task = learning.taskFrom(action === 'assignContent' ? candidate : entry.item, input.childId, `r_${input.childId}_${input.contentId}`, entry ? (entry.completedDates.length ? 'review' : 'manual') : 'new');
+        task = learning.taskFrom(action === 'assignContent' ? candidate : entry.item, input.childId, `r_${input.childId}_${input.contentId}`, date > today ? 'manual' : entry ? (entry.completedDates.length ? 'review' : 'manual') : 'new');
         day.tasks.push(task);
       }
-      learning.recordTasks(ledger, day.tasks.filter((item) => item.childId === input.childId), today);
-      state.days[today] = day; write(state); return { task, date: today };
+      if (date === today) learning.recordTasks(ledger, day.tasks.filter((item) => item.childId === input.childId), today);
+      state.days[date] = day; write(state); return { task, date };
     }
     if (action === 'addChild') {
       if (!input.name || state.family.children.length >= 5) throw new Error('请输入昵称，最多5个档案');
@@ -104,8 +129,10 @@ function createDemo(wx) {
       if (!input.title || !input.title.trim() || state.family.plans.length >= 100 || !Number.isInteger(input.minutes) || input.minutes < 1 || input.minutes > 120) throw new Error('请填写名称和1–120分钟的时长；最多100项');
       if (!learning.kinds.some((item) => item.id === kind && item.subject === input.subject)) throw new Error('请选择学习类型');
       if (input.studyGrade != null && (!Number.isInteger(input.studyGrade) || input.studyGrade < 1 || input.studyGrade > 9)) throw new Error('内容年级无效');
+      const date = planDate(input.date === undefined ? today : input.date, today);
       state.family.plans.push({ id: id(), childId: input.childId, kind, subject: input.subject, title: input.title.trim(), detail: input.detail || '',
-        minutes: input.minutes, enabled: true, source: '家长自建', schedule: input.schedule || 'daily', date: today,
+        minutes: input.minutes, enabled: true, source: '家长自建', schedule: input.schedule || 'daily', date,
+        ...((input.schedule || 'daily') === 'daily' && input.date !== undefined ? { startDate: date } : {}),
         ...(input.studyGrade ? { studyGrade: input.studyGrade } : {}) });
     } else if (action === 'saveAutoPlans') {
       ledgerFor(input.childId);

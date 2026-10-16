@@ -1,0 +1,4 @@
+.plan-preview-heading { padding: 8rpx 0; }
+.plan-expand { color: #27654c; font-size: 25rpx; margin-top: 20rpx; }
+.plan-preview-item { border-top: 1rpx solid #e5e9e1; padding: 20rpx 0; }
+.plan-preview-item .task-title { margin-top: 0; }

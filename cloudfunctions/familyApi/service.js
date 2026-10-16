@@ -240,9 +240,11 @@ function createService({ store, media, now = Date.now, randomId = () => crypto.r
                 (0, validation_1.requireValue)(isOneOf(schedule, ['once', 'daily', 'library']), 'INVALID', '请选择安排方式');
                 (0, validation_1.requireValue)(isInteger(input.minutes) && input.minutes >= 1 && input.minutes <= 120, 'INVALID', '时长需为1–120分钟');
                 (0, validation_1.requireValue)(input.studyGrade === undefined || input.studyGrade === null || (isInteger(input.studyGrade) && input.studyGrade >= 1 && input.studyGrade <= 9), 'INVALID', '学习年级无效');
+                const date = (0, validation_1.planningDate)(input.date === undefined ? today : input.date, timestamp);
                 family.plans.push({ id: `p_${newId}`, childId: input.childId, title: (0, validation_1.text)(input.title, '任务名称', 60),
                     detail: typeof input.detail === 'string' ? input.detail.trim().slice(0, 2000) : '',
-                    subject: input.subject, kind, schedule, date: today, minutes: input.minutes, enabled: true, source: '家长自建',
+                    subject: input.subject, kind, schedule, date, minutes: input.minutes, enabled: true, source: '家长自建',
+                    ...(schedule === 'daily' && input.date !== undefined ? { startDate: date } : {}),
                     ...(input.studyGrade ? { studyGrade: input.studyGrade } : {}) });
                 await tx.put('families', family.id, family);
                 return reply(action, { family: publicFamily(family, uid, today) });
@@ -274,7 +276,8 @@ function createService({ store, media, now = Date.now, randomId = () => crypto.r
                 return reply(action, { family: publicFamily(family, uid, today) });
             }
             if (action === 'getDay') {
-                const date = (0, validation_1.validDate)(input.date || today, timestamp);
+                const requested = input.date === undefined ? today : input.date;
+                const date = typeof requested === 'string' && requested > today ? (0, validation_1.planningDate)(requested, timestamp) : (0, validation_1.validDate)(requested, timestamp);
                 const id = dayKey(family.id, date);
                 let day = await tx.get('days', id);
                 const beforeDay = JSON.stringify(day);
@@ -285,10 +288,26 @@ function createService({ store, media, now = Date.now, randomId = () => crypto.r
                     originals[child.id] = JSON.stringify(ledgers[child.id]);
                 }
                 // Old assignments are indexed when viewed, but no past tasks are invented.
-                if (date === today) {
+                if (date >= today) {
+                    // Reserve today's real tasks first, even when the app opens on Tomorrow.
+                    // Only the current day and its ledgers are persisted; future automatic tasks are a projection.
+                    if (date > today) {
+                        const currentId = dayKey(family.id, today);
+                        const stored = await tx.get('days', currentId);
+                        const current = stored || { familyId: family.id, date: today, tasks: [] };
+                        const before = JSON.stringify(stored);
+                        learning.generateDay(family, current, ledgers);
+                        if (JSON.stringify(current) !== before)
+                            await saveDay(currentId, current);
+                        for (const child of family.children) {
+                            if (originals[child.id] !== JSON.stringify(ledgers[child.id]))
+                                await saveLedger(ledgers[child.id]);
+                            originals[child.id] = JSON.stringify(ledgers[child.id]);
+                        }
+                    }
                     day = day || { familyId: family.id, date, tasks: [] };
-                    learning.generateDay(family, day, ledgers);
-                    if (JSON.stringify(day) !== beforeDay)
+                    learning.generateDay(family, day, date > today ? clone(ledgers) : ledgers);
+                    if (date === today && JSON.stringify(day) !== beforeDay)
                         await saveDay(id, day);
                 }
                 else if (day) {
@@ -333,18 +352,30 @@ function createService({ store, media, now = Date.now, randomId = () => crypto.r
                     await saveLedger(ledger);
                     return reply(action, { mastered: entry.mastered });
                 }
-                const id = dayKey(family.id, today);
-                const day = (await tx.get('days', id)) || { familyId: family.id, date: today, tasks: [] };
+                const date = action === 'assignContent' ? (0, validation_1.planningDate)(input.date === undefined ? today : input.date, timestamp) : today;
+                if (date > today) {
+                    const scheduled = (family.scheduledContents || []).filter((item) => item.date > today);
+                    if (!scheduled.some((item) => item.childId === input.childId && item.contentId === contentId && item.date === date)) {
+                        (0, validation_1.requireValue)(scheduled.length < 1000, 'LIMIT', '未来安排已达1000项，请在部分完成后再添加');
+                        scheduled.push({ childId: input.childId, contentId, date });
+                        family.scheduledContents = scheduled;
+                        await tx.put('families', family.id, family);
+                    }
+                }
+                const id = dayKey(family.id, date);
+                const day = (await tx.get('days', id)) || { familyId: family.id, date, tasks: [] };
                 let task = day.tasks.find((item) => item.childId === input.childId && learning.contentId(item) === contentId);
                 if (!task) {
-                    const mode = entry ? (entry.completedDates.length ? 'review' : 'manual') : 'new';
+                    const mode = date > today ? 'manual' : entry ? (entry.completedDates.length ? 'review' : 'manual') : 'new';
                     task = learning.taskFrom(action === 'assignContent' ? candidate : entry.item, input.childId, `r_${input.childId}_${contentId}`, mode);
                     day.tasks.push(task);
-                    learning.recordTasks(ledger, day.tasks.filter((item) => item.childId === input.childId), today);
                     await saveDay(id, day);
-                    await saveLedger(ledger);
+                    if (date === today) {
+                        learning.recordTasks(ledger, day.tasks.filter((item) => item.childId === input.childId), date);
+                        await saveLedger(ledger);
+                    }
                 }
-                return reply(action, { task, date: today });
+                return reply(action, { task, date });
             }
             if (action === 'setTaskDone') {
                 const date = (0, validation_1.validDate)(input.date, timestamp);

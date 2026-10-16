@@ -40,6 +40,8 @@ export interface Content {
 export interface KnowledgeItem extends Content {
   collections: ContentScope[];
   author?: string;
+  dynasty?: string;
+  dynastyNote?: string;
   aliases?: string[];
   bookIds?: string[];
   curriculumId?: string;
@@ -116,11 +118,13 @@ export interface Plan extends ContentInput {
   enabled: boolean;
   schedule?: 'once' | 'daily' | 'library';
   date?: CalendarDate;
+  startDate?: CalendarDate;
 }
 export interface PlanningFamily {
   children: Array<{ id: string }>;
   plans: Plan[];
   autoPlans?: Record<string, AutoRule[]>;
+  scheduledContents?: Array<{ childId: string; contentId: string; date: CalendarDate }>;
 }
 export interface Member { id: string; name: string; role: 'owner' | 'guardian' | 'child'; childId?: string }
 export interface Family extends PlanningFamily {
@@ -134,7 +138,7 @@ export interface Family extends PlanningFamily {
   autoCreated?: boolean;
   homeworkBytes?: number;
 }
-export interface PublicFamily extends Omit<Family, 'createdAt' | 'activeInviteHash' | 'autoCreated'> {
+export interface PublicFamily extends Omit<Family, 'createdAt' | 'activeInviteHash' | 'autoCreated' | 'scheduledContents'> {
   myRole: Member['role'];
   canJoinFamily: boolean;
   myChildId?: string;

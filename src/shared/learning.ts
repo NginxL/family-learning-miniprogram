@@ -93,6 +93,7 @@ function generateDay(family: PlanningFamily, day: Day, ledgers: Record<string, L
     recordTasks(ledger, day.tasks.filter((task) => task.childId === child.id), day.date);
     // Existing plans without a schedule preserve the v0.1 daily-repeat semantics.
     family.plans.filter((plan) => plan.childId === child.id && plan.enabled && plan.schedule !== 'library'
+      && (!plan.startDate || plan.startDate <= day.date)
       && (plan.schedule !== 'once' || plan.date === day.date)).forEach((plan) => {
       if (!day.tasks.some((task) => task.childId === child.id && contentId(task) === contentId(plan))) {
         day.tasks.push(taskFrom(plan, child.id, plan.id, 'manual'));
@@ -100,6 +101,11 @@ function generateDay(family: PlanningFamily, day: Day, ledgers: Record<string, L
     });
     recordTasks(ledger, day.tasks.filter((task) => task.childId === child.id), day.date);
     const generated = day.generated![child.id] || {};
+    // Explicit future dates reserve a work without claiming it has been studied.
+    const reserved = new Set([
+      ...(family.scheduledContents || []).filter((item) => item.childId === child.id && item.date > day.date).map((item) => item.contentId),
+      ...family.plans.filter((plan) => plan.childId === child.id && plan.enabled && plan.schedule === 'once' && plan.date && plan.date > day.date).map(contentId)
+    ].map((id) => catalogById.get(id)?.workId || id));
     const rules = (family.autoPlans && family.autoPlans[child.id]) || emptyRules();
     rules.filter((rule) => rule.quantity > 0).forEach((rule) => {
       if (generated[rule.kind]) return;
@@ -116,7 +122,7 @@ function generateDay(family: PlanningFamily, day: Day, ledgers: Record<string, L
           .sort((a, b) => a.completedDates[a.completedDates.length - 1].localeCompare(b.completedDates[b.completedDates.length - 1]) || a.item.id.localeCompare(b.item.id))
           .map((entry) => content(entry.item)).filter((item) => !catalogById.has(item.id) || inScope(catalogById.get(item.id)!, rule.scope || 'starter'));
       }
-      const chosen = pool.filter((item) => !assigned.has(item.id)).slice(0, rule.quantity);
+      const chosen = pool.filter((item) => !assigned.has(item.id) && !reserved.has(item.workId || item.id)).slice(0, rule.quantity);
       chosen.forEach((item) => day.tasks.push(taskFrom(item, child.id, `a_${child.id}_${item.id}`, rule.mode)));
       generated[rule.kind] = { ...rule, actual: chosen.length };
       if (chosen.length < rule.quantity) day.warnings!.push({ childId: child.id, kind: rule.kind,
@@ -153,11 +159,12 @@ function ruleRows(family: PlanningFamily, childId: string) {
 }
 function searchCatalog(input: CatalogQuery = {}) {
   const query = (input.query || '').trim().toLowerCase();
-  return catalog.filter((item) => (!input.kind || item.kind === input.kind)
+  // Retain legacy math IDs for saved tasks/history, but remove them from the selectable library.
+  return catalog.filter((item) => item.kind !== 'math' && (!input.kind || item.kind === input.kind)
     && (!input.subject || input.subject === 'all' || definition(item.kind).subject === input.subject)
     && (!input.scope || inScope(item, input.scope)) && (!input.bookId || (item.bookIds || []).includes(input.bookId))
     && (!input.grade || (item.gradeMappings || []).some((mapping) => mapping.grade === input.grade && mapping.schoolSystem === '5-4' && mapping.status === 'catalogue_verified'))
-    && (!query || `${item.title} ${item.author || ''} ${item.detail}`.toLowerCase().includes(query)));
+    && (!query || `${item.title} ${item.author || ''} ${item.dynasty || ''} ${item.detail}`.toLowerCase().includes(query)));
 }
 const gradeLabels = ['未设置', '一年级', '二年级', '三年级', '四年级', '五年级', '六年级（预备）', '七年级', '八年级', '九年级'];
 function progress(ledger: LearningLedger) {

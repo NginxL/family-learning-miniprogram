@@ -25,4 +25,14 @@ function validDate(value: unknown, now: number): string {
   requireValue(now - parsed <= 366 * 86400000, 'INVALID', '仅支持最近一年内的记录');
   return value;
 }
-export { DomainError, requireValue, text, identifier, validDate, hash, chinaDate };
+// Scheduling is separate from check-ins: future dates must never pass validDate.
+function planningDate(value: unknown, now: number): string {
+  requireValue(typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value), 'INVALID', '日期无效');
+  const parsed = Date.parse(`${value}T00:00:00+08:00`);
+  const today = chinaDate(now);
+  requireValue(Number.isFinite(parsed) && chinaDate(parsed) === value && value >= today
+    && parsed - Date.parse(`${today}T00:00:00+08:00`) <= 365 * 86400000,
+  'INVALID', '请选择今日起一年内的日期');
+  return value;
+}
+export { DomainError, requireValue, text, identifier, validDate, planningDate, hash, chinaDate };

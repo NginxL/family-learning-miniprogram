@@ -6,6 +6,7 @@ exports.requireValue = requireValue;
 exports.text = text;
 exports.identifier = identifier;
 exports.validDate = validDate;
+exports.planningDate = planningDate;
 const crypto = require("node:crypto");
 const hash = (value) => crypto.createHash('sha256').update(value).digest('hex');
 exports.hash = hash;
@@ -32,5 +33,14 @@ function validDate(value, now) {
     const parsed = Date.parse(`${value}T00:00:00+08:00`);
     requireValue(Number.isFinite(parsed) && chinaDate(parsed) === value && value <= chinaDate(now), 'INVALID', '日期无效或尚未到达');
     requireValue(now - parsed <= 366 * 86400000, 'INVALID', '仅支持最近一年内的记录');
+    return value;
+}
+// Scheduling is separate from check-ins: future dates must never pass validDate.
+function planningDate(value, now) {
+    requireValue(typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value), 'INVALID', '日期无效');
+    const parsed = Date.parse(`${value}T00:00:00+08:00`);
+    const today = chinaDate(now);
+    requireValue(Number.isFinite(parsed) && chinaDate(parsed) === value && value >= today
+        && parsed - Date.parse(`${today}T00:00:00+08:00`) <= 365 * 86400000, 'INVALID', '请选择今日起一年内的日期');
     return value;
 }

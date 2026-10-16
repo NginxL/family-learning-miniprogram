@@ -5,6 +5,13 @@ const tables = require('../data/catalogs/english-moe-2022-tables.json');
 const foundationMeanings = require('../data/catalogs/english-foundation-meanings.json').entries;
 const regional = require('../data/catalogs/shanghai-54-evidence.json');
 const examFramework = require('../data/catalogs/shanghai-zhongkao-framework.json');
+const dynasties = require('../data/catalogs/poetry-dynasties.json');
+function period(entry) {
+  const metadata = dynasties.entries.find((item) => item.id === entry.id);
+  if (!metadata || metadata.title !== entry.title || metadata.author !== entry.author || !metadata.dynasty || !metadata.sources.length)
+    throw new Error(`Missing or mismatched dynasty evidence: ${entry.id}`);
+  return { dynasty: metadata.dynasty, ...(metadata.note ? { dynastyNote: metadata.note } : {}) };
+}
 function knowledge() {
   const mappings = new Map();
   // These identify unique works in a named official book's visible outline.
@@ -24,7 +31,7 @@ function knowledge() {
     }
   }));
   const poems = chinese.entries.map((entry) => ({
-    id: entry.id, kind: 'poetry', title: `《${entry.title}》`, author: entry.author,
+    id: entry.id, kind: 'poetry', title: `《${entry.title}》`, author: entry.author, ...period(entry),
     detail: `${entry.author}\n${entry.original}`, minutes: entry.original.length > 300 ? 15 : 5,
     source: `国家语文课标 2022 · ${entry.gradeBand} 年级推荐 · PDF 第 ${entry.sourcePdfPage} 页`,
     referenceUrl: chinese.curriculumSource, textSourceUrl: entry.textSources[0],
@@ -33,7 +40,7 @@ function knowledge() {
     bookIds: mappings.get(entry.id) || [], curriculumId: entry.curriculumId, gradeMappings: gradeMappings.get(entry.id) || []
   }));
   const additional = regional.entries.map((entry) => ({
-    id: entry.id, kind: 'poetry', title: `《${entry.title}》`, author: entry.author,
+    id: entry.id, kind: 'poetry', title: `《${entry.title}》`, author: entry.author, ...period(entry),
     ...(entry.workId ? { workId: entry.workId } : {}),
     detail: `${entry.author}\n${entry.original}`, minutes: entry.original.length > 300 ? 15 : 5,
     source: entry.examEvidence ? '上海 2026 中考评析关联篇目' : entry.sourceUrl.startsWith('https://keben.app/') ? '五四制公开教材样本核对 · 公版原作 / 节选' : '五四制教材目录关联原作 · 正文待逐字核对',
