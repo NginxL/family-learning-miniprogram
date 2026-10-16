@@ -27,7 +27,7 @@ function curriculum(items) {
     return { ...slot, contentBookId: book?.id || '', verifiedCount,
       practiceCount, textbookCount: verifiedCount - practiceCount, availableUnits,
       contentStatus: verifiedCount ? 'partial' : 'pending',
-      contentNote: lower ? `${availableUnits} 个单元已有配套学习内容：${verifiedCount - practiceCount} 项教材字词／古诗与 ${practiceCount} 项原创练习。${lower.subject === 'chinese' ? `识字表 ${lower.inventory.recognitionCount} 字、写字表 ${lower.inventory.writingCount} 字已整理（含另列多音字复习）；` : '目录主题词汇已整理，完整 Word bank 待核验；'}不代表教材全部知识。`
+      contentNote: lower ? `${availableUnits} 个单元已有配套学习内容：${verifiedCount - practiceCount} 项教材字词／古诗与 ${practiceCount} 项原创练习。${lower.subject === 'chinese' ? lower.inventory.recognitionComplete && lower.inventory.writingComplete ? `识字表 ${lower.inventory.recognitionCount} 字、写字表 ${lower.inventory.writingCount} 字已整理（含另列多音字复习）；` : '完整识字表、写字表待原页核实；' : '目录主题词汇已整理，完整 Word bank 待核验；'}不代表教材全部知识。`
         : verifiedCount ? `已核实 ${verifiedCount} 项古诗文年级映射；全册阅读、识字与表达等仍有缺项。` : '尚无已核实的逐课知识清单；不计作整册覆盖。',
       mappingNote: book ? book.verification : '' };
   }) };

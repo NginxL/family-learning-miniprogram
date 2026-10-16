@@ -165,7 +165,24 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 58,
       "source_pdf_page": 65,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 2,
+          "bookId": "chinese-2b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "edition": "根据2022年版课标修订的五四制公开样本；版次与ISBN待核实",
+          "sourceUrl": "https://www.textbook-info.com/post/2459.html",
+          "outlineDestination": "公开样本 PDF 5—6 页目录；印刷第 1 页",
+          "sourcePrintPage": 1,
+          "unit": "第1单元",
+          "unitId": "u1",
+          "mappingType": "textbook_item",
+          "sourceKind": "public_sample",
+          "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "poem-willow"
     },
@@ -1336,7 +1353,24 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 60,
       "source_pdf_page": 67,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 2,
+          "bookId": "chinese-2b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "edition": "根据2022年版课标修订的五四制公开样本；版次与ISBN待核实",
+          "sourceUrl": "https://www.textbook-info.com/post/2459.html",
+          "outlineDestination": "公开样本 PDF 5—6 页目录；印刷第 70 页",
+          "sourcePrintPage": 70,
+          "unit": "第6单元",
+          "unitId": "u6",
+          "mappingType": "textbook_item",
+          "sourceKind": "public_sample",
+          "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-064"
     },
@@ -1519,7 +1553,24 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 2,
+          "bookId": "chinese-2b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "edition": "根据2022年版课标修订的五四制公开样本；版次与ISBN待核实",
+          "sourceUrl": "https://www.textbook-info.com/post/2459.html",
+          "outlineDestination": "公开样本 PDF 5—6 页目录；印刷第 2 页",
+          "sourcePrintPage": 2,
+          "unit": "第1单元",
+          "unitId": "u1",
+          "mappingType": "textbook_item",
+          "sourceKind": "public_sample",
+          "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-075"
     },

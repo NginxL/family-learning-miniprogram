@@ -2,7 +2,7 @@ import type { ApiAction, ApiPayloads } from '../../shared/api';
 import type { Day, Task } from '../../shared/models';
 import type { CacheActions, CacheBodies, CacheBucket, Cached, ClientResults, ClientTransport, CommandPayloads, SyncOptions, SyncSnapshot, SyncState, SyncStatus, SyncStorage } from './client-models';
 import { errorDetails } from './errors';
-const empty = (): SyncState => ({ userId: null, family: null, days: {}, histories: {}, progresses: {}, queue: [], notice: '' });
+const empty = (): SyncState => ({ userId: null, family: null, days: {}, histories: {}, progresses: {}, learningStatuses: {}, queue: [], notice: '' });
 const clone = <T>(value: T): T => JSON.parse(JSON.stringify(value));
 const dayKey = (familyId: string, date: string) => `${familyId}:${date}`;
 const chinaDate = () => new Date(Date.now() + 8 * 3600000).toISOString().slice(0, 10);
@@ -94,16 +94,23 @@ class SyncEngine {
   async getProgress(input: CommandPayloads['getProgress']) {
     return this.cachedRead('getProgress', 'progresses', input, [], 5);
   }
+  async getLearningStatus(input: CommandPayloads['getLearningStatus']) {
+    return this.cachedRead('getLearningStatus', 'learningStatuses', input, [], 5);
+  }
   private cachedRead(action: 'getHistory', bucket: 'histories', input: CommandPayloads['getHistory'], fields: unknown[], max: number): Promise<Cached<ClientResults['getHistory']>>;
   private cachedRead(action: 'getProgress', bucket: 'progresses', input: CommandPayloads['getProgress'], fields: unknown[], max: number): Promise<Cached<ClientResults['getProgress']>>;
+  private cachedRead(action: 'getLearningStatus', bucket: 'learningStatuses', input: CommandPayloads['getLearningStatus'], fields: unknown[], max: number): Promise<Cached<ClientResults['getLearningStatus']>>;
   private async cachedRead(action: CacheActions[CacheBucket], bucket: CacheBucket, input: CommandPayloads['getHistory'], fields: unknown[], max: number): Promise<Cached<CacheBodies[CacheBucket]>> {
     const familyId = this.state.family && this.state.family.id;
     const userId = this.state.userId;
+    const role = this.state.family?.myRole; const boundChild = this.state.family?.myChildId;
+    const sameSession = () => this.state.userId === userId && this.state.family?.id === familyId
+      && this.state.family?.myRole === role && this.state.family?.myChildId === boundChild;
     if (!familyId) throw new Error('请先联网加载学习档案');
     const key = JSON.stringify([familyId, input.childId, ...fields]);
     try {
       const result = await this.transport(action, { ...input, familyId } as ApiPayloads[CacheActions[CacheBucket]]);
-      if (this.state.userId !== userId || !this.state.family || this.state.family.id !== familyId) throw new Error('家庭已切换，请刷新');
+      if (!sameSession()) throw new Error('家庭或身份已切换，请刷新');
       const next = clone(this.state);
       // The overloads pair each API action with its own cache bucket.
       const cache: Record<string, CacheBodies[CacheBucket]> = next[bucket] || (next[bucket] = {});
@@ -113,11 +120,11 @@ class SyncEngine {
     } catch (cause) {
       const error = errorDetails(cause);
       if (error.code === 'FORBIDDEN' || error.code === 'UNAUTHENTICATED') {
-        if (this.state.userId === userId && this.state.family && this.state.family.id === familyId) this.save(empty());
+        if (sameSession()) this.save(empty());
         throw cause;
       }
       const cached = this.state[bucket] && this.state[bucket][key];
-      if (cached && this.state.userId === userId && this.state.family && this.state.family.id === familyId) return { ...clone(cached), cached: true };
+      if (cached && sameSession()) return { ...clone(cached), cached: true };
       throw cause;
     }
   }

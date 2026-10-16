@@ -22,7 +22,7 @@ test('verified lower-primary inventories retain all unit positions and keep pend
         for (const word of unit.words) assert.equal(unitItems.filter(item => item.kind === 'word' && (item.aliases || []).includes(word.text)).length, 1, word.text);
       }
     }
-    if (book.subject === 'chinese') {
+    if (book.subject === 'chinese' && book.inventory.recognitionComplete) {
       const [recognized, positions, written] = expected[book.id];
       assert.equal(book.inventory.recognitionCount, recognized);
       assert.equal(book.units.reduce((n, unit) => n + unit.recognition.join('').length, 0), positions);
@@ -33,8 +33,8 @@ test('verified lower-primary inventories retain all unit positions and keep pend
     }
     assert.equal(learning.searchCatalog({ bookId: book.id, semester: book.semester === '上册' ? '下册' : '上册' }).length, 0);
   }
-  assert.equal(learning.searchCatalog({ grade: 2, semester: '下册' }).length, 0);
-  assert.equal(learning.searchCatalog({ grade: 2, subject: 'english' }).length, 0);
+  assert.equal(learning.searchCatalog({ grade: 2, semester: '下册' }).length, 93);
+  assert.equal(learning.searchCatalog({ grade: 2, subject: 'english' }).length, 165);
 });
 
 test('unit character readings preserve textbook polyphones and original reading aids use context', () => {
@@ -52,6 +52,10 @@ test('unit character readings preserve textbook polyphones and original reading 
   assert.deepEqual(sounds('sh54-zh-2a-u2-reading', '长'), ['cháng', 'cháng']);
   assert.ok(sounds('sh54-zh-2a-u5-reading', '干').every(value => value === 'gān'));
   assert.ok(sounds('sh54-zh-2a-u8-reading', '得').every(value => value === 'de'));
+  assert.deepEqual(sounds('sh54-zh-2b-u5-reading', '倒'), ['dǎo']);
+  assert.deepEqual(sounds('sh54-zh-2b-u5-reading', '重'), ['chóng']);
+  assert.ok(sounds('sh54-zh-2b-u5-reading', '着').every(value => value === 'zhe'));
+  assert.ok(sounds('moe-2022-zh-1-6-075', '长').includes('zhǎng'));
   const phonics = pinyinFor(learning.catalogById.get('sh54-zh-1a-u2-reading')).body.flat();
   assert.ok(phonics.some(token => token.text === 'mǎ' && token.pinyin === ''));
   assert.ok(phonics.some(token => token.text === 'bà' && token.after === '；'));
@@ -77,8 +81,8 @@ test('original unit practice is counted separately from verified textbook progre
   const progress = learning.progress(ledger);
   assert.equal(progress.grades[1].learned, 0);
   assert.equal(progress.grades[1].practice.learned, 1);
-  assert.equal(progress.grades[1].practice.total, 8);
-  assert.equal(progress.grades[1].total, 15);
+  assert.equal(progress.grades[1].practice.total, 96);
+  assert.equal(progress.grades[1].total, 103);
   assert.equal(progress.highestGradeStarted, 0);
   assert.equal(progress.unclassifiedLearned, 0);
 });
@@ -117,8 +121,28 @@ test('book navigation includes vocabulary, sentences and reading and never leaks
   assert.deepEqual(new Set(page.data.items.map(item => item.kind)), new Set(['word', 'sentence', 'english-reading']));
   assert.ok(page.data.items.every(item => item.gradeMappings.some(mapping => mapping.bookId === 'english-1b-sample' && mapping.unitId === 'u8')));
   page.changeGrade({ detail: { value: 2 } });
-  assert.equal(page.data.bookId, ''); assert.equal(page.data.unitIndex, 0); assert.equal(page.data.total, 23);
-  page.changeSemester({ detail: { value: 2 } }); assert.equal(page.data.total, 0);
+  assert.equal(page.data.bookId, ''); assert.equal(page.data.unitIndex, 0); assert.equal(page.data.total, 199);
+  page.changeSemester({ detail: { value: 2 } }); assert.equal(page.data.total, 93);
   page.showBook({ currentTarget: { dataset: { id: 'chinese-1b-sample' } } });
   assert.equal(page.data.semesterIndex, 0); assert.ok(page.data.items.some(item => item.kind === 'poetry')); assert.ok(page.data.items.some(item => item.studyArea === 'literacy'));
+});
+
+test('grade two samples retain different edition evidence, exact unit starts and optional units without inventing unseen tables', () => {
+  const zh = data.books.find(book => book.id === 'chinese-2b-sample');
+  const a = data.books.find(book => book.id === 'english-2a-sample');
+  const b = data.books.find(book => book.id === 'english-2b-sample');
+  assert.equal(zh.sourceEvidence.previewPageCount, 60);
+  assert.equal(zh.inventory.recognitionComplete, false); assert.equal(zh.inventory.writingComplete, false);
+  assert.ok(zh.units.every(unit => !unit.recognition && !unit.writing));
+  assert.deepEqual(zh.units.map(unit => unit.sourcePrintPage), [1, 15, 29, 42, 55, 69, 84, 100]);
+  assert.ok(zh.units[1].lessons.includes('我不是最弱小的'));
+  assert.ok(zh.units[7].lessons.includes('黄帝的传说'));
+  assert.deepEqual(a.units.map(unit => unit.sourcePrintPage), [5, 11, 17, 23, 29, 35, 41, 47, 53, 59]);
+  assert.deepEqual(b.units.map(unit => unit.sourcePrintPage), [1, 7, 13, 19, 25, 31, 37, 43, 49, 55]);
+  assert.equal(a.units.reduce((n, unit) => n + unit.words.length, 0), 43);
+  assert.equal(b.units.reduce((n, unit) => n + unit.words.length, 0), 42);
+  assert.deepEqual(b.units.filter(unit => unit.optional).map(unit => unit.number), [9, 10]);
+  assert.ok(learning.searchCatalog({ bookId: b.id, unitId: 'u9' }).every(item => item.gradeMappings.some(mapping => mapping.bookId === b.id && mapping.unit.endsWith('（拓展）'))));
+  for (const book of [a,b]) assert.equal(book.inventory.wordBankComplete, false);
+  assert.equal(pinyinFor(learning.catalogById.get('sh54-zh-2b-u5-reading')).title.flat().find(token => token.text === '倒').pinyin, 'dǎo');
 });

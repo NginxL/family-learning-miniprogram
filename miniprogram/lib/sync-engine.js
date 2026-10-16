@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.shiftDate = exports.chinaDate = exports.SyncEngine = void 0;
 const errors_1 = require("./errors");
-const empty = () => ({ userId: null, family: null, days: {}, histories: {}, progresses: {}, queue: [], notice: '' });
+const empty = () => ({ userId: null, family: null, days: {}, histories: {}, progresses: {}, learningStatuses: {}, queue: [], notice: '' });
 const clone = (value) => JSON.parse(JSON.stringify(value));
 const dayKey = (familyId, date) => `${familyId}:${date}`;
 const chinaDate = () => new Date(Date.now() + 8 * 3600000).toISOString().slice(0, 10);
@@ -101,16 +101,27 @@ class SyncEngine {
     async getProgress(input) {
         return this.cachedRead('getProgress', 'progresses', input, [], 5);
     }
+    async getLearningStatus(input) {
+        return this.cachedRead('getLearningStatus', 'learningStatuses', input, [], 5);
+    }
     async cachedRead(action, bucket, input, fields, max) {
+        var _a, _b;
         const familyId = this.state.family && this.state.family.id;
         const userId = this.state.userId;
+        const role = (_a = this.state.family) === null || _a === void 0 ? void 0 : _a.myRole;
+        const boundChild = (_b = this.state.family) === null || _b === void 0 ? void 0 : _b.myChildId;
+        const sameSession = () => {
+            var _a, _b, _c;
+            return this.state.userId === userId && ((_a = this.state.family) === null || _a === void 0 ? void 0 : _a.id) === familyId
+                && ((_b = this.state.family) === null || _b === void 0 ? void 0 : _b.myRole) === role && ((_c = this.state.family) === null || _c === void 0 ? void 0 : _c.myChildId) === boundChild;
+        };
         if (!familyId)
             throw new Error('请先联网加载学习档案');
         const key = JSON.stringify([familyId, input.childId, ...fields]);
         try {
             const result = await this.transport(action, { ...input, familyId });
-            if (this.state.userId !== userId || !this.state.family || this.state.family.id !== familyId)
-                throw new Error('家庭已切换，请刷新');
+            if (!sameSession())
+                throw new Error('家庭或身份已切换，请刷新');
             const next = clone(this.state);
             // The overloads pair each API action with its own cache bucket.
             const cache = next[bucket] || (next[bucket] = {});
@@ -123,12 +134,12 @@ class SyncEngine {
         catch (cause) {
             const error = (0, errors_1.errorDetails)(cause);
             if (error.code === 'FORBIDDEN' || error.code === 'UNAUTHENTICATED') {
-                if (this.state.userId === userId && this.state.family && this.state.family.id === familyId)
+                if (sameSession())
                     this.save(empty());
                 throw cause;
             }
             const cached = this.state[bucket] && this.state[bucket][key];
-            if (cached && this.state.userId === userId && this.state.family && this.state.family.id === familyId)
+            if (cached && sameSession())
                 return { ...clone(cached), cached: true };
             throw cause;
         }

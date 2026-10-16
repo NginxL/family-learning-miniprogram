@@ -14,7 +14,7 @@ function page(name, engine) {
 
 test('reading aids exactly retain source punctuation and line breaks, and cover every verified first/second-grade poem', () => {
   assert.equal(Object.keys(pinyinEntries).length, 21);
-  assert.equal(Object.keys(lowerPinyin).length, 55);
+  assert.equal(Object.keys(lowerPinyin).length, 65);
   for (const [id, entry] of Object.entries({ ...pinyinEntries, ...lowerPinyin })) {
     const item = learning.catalogById.get(id); assert.ok(item, id);
     assert.equal(entry.title, item.title); assert.equal(entry.detail, item.detail);
@@ -28,7 +28,8 @@ test('reading aids exactly retain source punctuation and line breaks, and cover 
     assert.equal(textOf(aid.body), item.author && item.detail.startsWith(`${item.author}\n`) ? item.detail.slice(item.author.length + 1) : item.detail);
   }
   for (const item of learning.catalog.filter(item => item.kind === 'reading' || item.kind === 'poetry' && item.gradeMappings?.some(mapping => mapping.grade <= 2))) assert.ok(pinyinFor(item), item.id);
-  assert.equal(learning.searchCatalog({ grade: 2, semester: '下册' }).length, 0, 'unverified books stay empty');
+  assert.ok(learning.searchCatalog({ grade: 2, semester: '下册' }).length > 0);
+  assert.ok(!learning.searchCatalog({ bookId: 'chinese-2b-sample' }).some(item => item.studyArea === 'literacy'), 'unseen character tables stay unavailable');
   const poem = id => pinyinFor(learning.catalogById.get(id)).body.flat();
   assert.equal(poem('poem-goose').find(t => t.text === '曲').pinyin, 'qū');
   assert.equal(poem('poem-baidi').find(t => t.text === '还').pinyin, 'huán');

@@ -1,5 +1,5 @@
 import type { AutoRule, CalendarDate, ContentKind, Day, HistoryQuery, PublicFamily, SchoolGrade, Subject, Task, HomeworkScope, HomeworkView, HomeworkAttachment, PlanningChange, WeeklyTemplateSchedule } from './models';
-import type { history, progress } from './learning';
+import type { history, progress, learningStatus } from './learning';
 
 export interface ProfileInput {
   birthDate?: CalendarDate | null;
@@ -34,6 +34,7 @@ export interface ApiPayloads {
   getDay: FamilyScope & { date?: CalendarDate };
   getHistory: ChildScope & HistoryQuery;
   getProgress: ChildScope;
+  getLearningStatus: ChildScope;
   setMastery: ContentRequest & { mastered: boolean; baseVersion: number };
   reviewContent: ContentRequest;
   assignContent: ContentRequest & { date?: CalendarDate };
@@ -64,6 +65,7 @@ export interface ApiResults {
   getDay: { day: Day; today: CalendarDate };
   getHistory: ReturnType<typeof history>;
   getProgress: ReturnType<typeof progress>;
+  getLearningStatus: ReturnType<typeof learningStatus>;
   setMastery: { mastered: boolean };
   reviewContent: { task: Task; date: CalendarDate };
   assignContent: { task: Task; date: CalendarDate };

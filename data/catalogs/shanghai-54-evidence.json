@@ -660,6 +660,60 @@
           "unitId": "u7"
         }
       ]
+    },
+    {
+      "id": "chinese-2b-sample",
+      "title": "语文 · 2年级下册（五四制）",
+      "url": "https://www.textbook-info.com/post/2459.html",
+      "publisher": "人民教育出版社",
+      "schoolSystem": "五四学制",
+      "grade": 2,
+      "semester": "下册",
+      "edition": "根据2022年版课标修订的五四制公开样本；版次与ISBN待核实",
+      "checkedAt": "2026-10-16",
+      "verification": "公开免费样本完整目录核实；正文至印刷54页，完整字表与学校用书版次待确认。",
+      "schoolAdoption": "待确认",
+      "sourceKind": "public_sample",
+      "fullCoverage": false,
+      "entries": [
+        {
+          "observedTitle": "咏柳",
+          "contentId": "poem-willow",
+          "outlineDestination": "公开样本 PDF 5—6 页目录；印刷第 1 页",
+          "sourcePrintPage": 1,
+          "unit": "第1单元",
+          "unitId": "u1",
+          "status": "目录篇名与册次核实；正文使用已有公版原作，教材逐字一致性待核验",
+          "gradeVerification": "catalogue_verified"
+        },
+        {
+          "observedTitle": "村居",
+          "contentId": "moe-2022-zh-1-6-075",
+          "outlineDestination": "公开样本 PDF 5—6 页目录；印刷第 2 页",
+          "sourcePrintPage": 2,
+          "unit": "第1单元",
+          "unitId": "u1",
+          "status": "目录篇名与册次核实；正文使用已有公版原作，教材逐字一致性待核验",
+          "gradeVerification": "catalogue_verified"
+        },
+        {
+          "observedTitle": "晓出净慈寺送林子方",
+          "contentId": "moe-2022-zh-1-6-064",
+          "outlineDestination": "公开样本 PDF 5—6 页目录；印刷第 70 页",
+          "sourcePrintPage": 70,
+          "unit": "第6单元",
+          "unitId": "u6",
+          "status": "目录篇名与册次核实；正文使用已有公版原作，教材逐字一致性待核验",
+          "gradeVerification": "catalogue_verified"
+        },
+        {
+          "observedTitle": "绝句",
+          "contentId": null,
+          "outlineDestination": "公开样本 PDF 6 页目录；印刷第 69 页",
+          "status": "目录未展示作者或首句，不能唯一识别作品，待正文核实",
+          "gradeVerification": "pending"
+        }
+      ]
     }
   ],
   "entries": [

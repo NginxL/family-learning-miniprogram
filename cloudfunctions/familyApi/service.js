@@ -183,7 +183,7 @@ function createService({ store, media, now = Date.now, randomId = () => crypto.r
             (0, validation_1.requireValue)(family && family.members.some((member) => member.id === uid), 'FORBIDDEN', '你已不在这个家庭中');
             const member = family.members.find((item) => item.id === uid);
             const isChild = member.role === 'child';
-            (0, validation_1.requireValue)(!isChild || ['getDay', 'getHistory', 'getProgress'].includes(String(action)), 'PARENT_REQUIRED', '此操作需要家长确认，孩子只能提交作业');
+            (0, validation_1.requireValue)(!isChild || ['getDay', 'getHistory', 'getProgress', 'getLearningStatus'].includes(String(action)), 'PARENT_REQUIRED', '此操作需要家长确认，孩子只能提交作业');
             const owner = () => (0, validation_1.requireValue)(family.ownerId === uid, 'FORBIDDEN', '只有家庭创建者可以操作');
             function childExists(childId) {
                 (0, validation_1.requireValue)(typeof childId === 'string' && family.children.some((child) => child.id === childId), 'INVALID', '孩子档案不存在');
@@ -429,6 +429,10 @@ function createService({ store, media, now = Date.now, randomId = () => crypto.r
             if (action === 'getProgress') {
                 childExists(input.childId);
                 return reply(action, learning.progress(await readLedger(input.childId)));
+            }
+            if (action === 'getLearningStatus') {
+                childExists(input.childId);
+                return reply(action, learning.learningStatus(await readLedger(input.childId)));
             }
             if (action === 'editPlannedTask') {
                 const date = (0, validation_1.planningDate)(input.date, timestamp);

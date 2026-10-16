@@ -54,6 +54,7 @@ test('photo/audio submission, return, resubmit and parent approval synchronize c
   assert.equal(pending.homework.status, 'pending'); assert.equal(pending.homework.attachments.length, 2);
   assert.ok(!(await f.call('parent-a', 'getDay')).day.tasks.some((task) => task.done));
   assert.equal((await f.call('child-a', 'getHistory')).total, 0);
+  assert.deepEqual((await f.call('child-a', 'getLearningStatus')).items, []);
   const received = await f.call('parent-b', 'getHomeworkAttachment', { attachmentId: b.attachmentId }); assert.equal(received.base64, recording);
   assert.ok(!JSON.stringify(pending).includes('fileId'));
   await assert.rejects(f.call('child-a', 'reviewHomework', { baseVersion: 1, decision: 'approve' }), code('PARENT_REQUIRED'));
@@ -70,6 +71,7 @@ test('photo/audio submission, return, resubmit and parent approval synchronize c
   const task = tasks.find((t) => t.kind === 'poetry'); client.engine.enqueue(date, task.id, false); await client.engine.sync(date);
   assert.equal((await f.call('child-a', 'getHomework')).homework.status, 'returned');
   assert.equal((await f.call('child-a', 'getHistory')).total, 0);
+  assert.deepEqual((await f.call('child-a', 'getLearningStatus')).items, []);
 });
 
 test('retry after lost upload/submit response is idempotent; stale reviewer cannot approve new work', async () => {

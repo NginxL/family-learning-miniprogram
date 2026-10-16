@@ -138,6 +138,7 @@ function createDemo(wx) {
       const result = learning.history(ledgerFor(input.childId), input); write(state); return result;
     }
     if (action === 'getProgress') return learning.progress(ledgerFor(input.childId));
+    if (action === 'getLearningStatus') return learning.learningStatus(ledgerFor(input.childId));
     if (action === 'editPlannedTask') {
       const date = planDate(input.date, today);
       if (date <= today) throw new Error('只能调整未来的未完成安排，今日及历史记录保留');

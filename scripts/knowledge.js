@@ -26,7 +26,8 @@ function knowledge() {
       const grades = gradeMappings.get(entry.contentId) || [];
       grades.push({ grade: book.grade, bookId: book.id, schoolSystem: '5-4', semester: book.semester,
         edition: book.edition, sourceUrl: book.url, outlineDestination: entry.outlineDestination,
-        ...(entry.sourcePdfPage ? { sourcePdfPage: entry.sourcePdfPage, sourcePrintPage: entry.sourcePrintPage, unit: entry.unit } : {}),
+        ...(entry.sourcePdfPage ? { sourcePdfPage: entry.sourcePdfPage } : {}),
+        ...(entry.sourcePrintPage ? { sourcePrintPage: entry.sourcePrintPage, unit: entry.unit } : {}),
         ...(entry.unitId ? { unitId: entry.unitId, mappingType: 'textbook_item' } : {}),
         sourceKind: book.sourceKind || 'official_outline',
         evidence: book.sourceKind === 'public_sample' ? '五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认' : '官方教材目录篇名与册次已核对；正文异文校对另计', status: 'catalogue_verified' });
@@ -70,7 +71,7 @@ module.exports = { knowledge, resources: {
   checkedAt: '2026-10-16',
   curriculum: curriculum(knowledge()),
   examFramework,
-  coverage: '上海五四制：小学1–5、初中6–9年级。语文一上、一下、二上已有整册字表和单元原创练习；英语一上、一下已有各10单元主题词汇、原创例句与阅读。二年级其余册及高年级仍有缺项。原创配套练习不是教材全文，现有进度不代表整年级或中考全量。',
+  coverage: '上海五四制：小学1–5、初中6–9年级。一、二年级语文四册各8单元已有原创阅读，前三册字表已核实；英语四册各10单元已有主题词汇、原创例句与阅读。语文二下完整字表、英语完整 Word bank 和高年级逐课内容仍有缺项。学校印次待确认，现有内容不代表教材或中考全量。',
   books: [...new Map([...regional.books, ...lowerPrimary.bookSummaries()].map(book => [book.id, book])).values()],
   links: [
     { title: '上海 2026 秋季教学用书通知', url: regional.noticeUrl, note: '市级用书目录；学校实际选用版本待确认' },

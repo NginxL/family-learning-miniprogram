@@ -11,7 +11,7 @@ export type ClientResults = { [A in ApiAction]: A extends 'setTaskDone'
 export type ClientTransport = <A extends ApiAction>(action: A, payload: ApiPayloads[A]) => Promise<ClientResults[A]>;
 export type CommandPayloads = { [A in ApiAction]: Omit<ApiPayloads[A], 'familyId'> };
 export type QueuedCheckIn = ApiPayloads['setTaskDone'];
-export type CacheActions = { histories: 'getHistory'; progresses: 'getProgress' };
+export type CacheActions = { histories: 'getHistory'; progresses: 'getProgress'; learningStatuses: 'getLearningStatus' };
 export type CacheBucket = keyof CacheActions;
 export type CacheBodies = { [K in CacheBucket]: ClientResults[CacheActions[K]] };
 export type Cached<T> = T & { cached: boolean };

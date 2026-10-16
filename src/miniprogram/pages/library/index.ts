@@ -3,13 +3,16 @@ import * as learning from '../../lib/learning/learning';
 import resources = require('../../lib/learning/resources');
 import { shiftDate } from '../../lib/sync-engine';
 import { pinyinFor, defaultPinyin, type PinyinText } from '../../lib/pinyin';
+import { errorDetails } from '../../lib/errors';
+import type { ApiResults } from '../../../shared/api';
 import type { ContentKind, ContentScope, KnowledgeItem, SchoolGrade } from '../../../shared/models';
 import type { LearningApp } from '../../lib/client-models';
 import type { CommonData, CommonMethods, CommonRuntime, DatasetEvent, Decorated, PageDefinition, PickerEvent, ValueEvent } from '../../lib/page-types';
 export interface LibraryData extends CommonData {
   view: 'content' | 'exam' | 'books'; kinds: Array<{ id: ContentKind | ''; label: string }>; kindIndex: number;
   scopes: Array<{ id: ContentScope; label: string }>; scope: ContentScope; scopeIndex: number;
-  query: string; items: Array<Decorated<KnowledgeItem> & { assigned: boolean; gradeLabel: string; preview?: string; pinyin: PinyinText | null }>;
+  query: string; items: Array<Decorated<KnowledgeItem> & { assigned: boolean; gradeLabel: string; preview?: string; pinyin: PinyinText | null;
+    learnedLabel: string; lastLearned: string; learnedCount: number }>;
   total: number; hasMore: boolean; expandedId: string; bookId: string; bookTitle: string; resources: typeof resources;
   grade: SchoolGrade | 0; gradeLabels: string[]; coverageOpen: boolean; poemCount: number; wordCount: number;
   filtersOpen: boolean; assignTarget: { id: string; title: string; familyId: string; childId: string; childName: string } | null;
@@ -17,6 +20,7 @@ export interface LibraryData extends CommonData {
   showPinyin: boolean; readingCount: number; englishReadingCount: number;
   curriculumGradeIndex: number; curriculumGradeLabels: string[]; curriculumSlots: typeof resources.curriculum.slots;
   semesterIndex: number; semesterLabels: string[]; bookUnits: Array<{ id: string; label: string }>; unitIndex: number;
+  learningFilterIndex: number; learningFilterLabels: string[]; learningReady: boolean; learningBusy: boolean; learningCached: boolean; learningError: string;
 }
 export interface LibraryMethods extends CommonMethods {
   afterRender(): void; updateScopes(): void; selectionChanged(): void; updateItems(): void;
@@ -30,8 +34,10 @@ export interface LibraryMethods extends CommonMethods {
   togglePinyin(): void;
   changeCurriculumGrade(event: PickerEvent): void;
   changeSemester(event: PickerEvent): void; changeUnit(event: PickerEvent): void;
+  afterSync(): Promise<void>; loadLearningStatus(): Promise<void>; changeLearningFilter(event: PickerEvent): void;
 }
-interface LibraryRuntime extends CommonRuntime { matchSignature?: string; visibleLimit: number; preferredDate?: string; pinyinChoice?: { childId: string; enabled: boolean } }
+interface LibraryRuntime extends CommonRuntime { matchSignature?: string; visibleLimit: number; preferredDate?: string; pinyinChoice?: { childId: string; enabled: boolean };
+  learningScope?: string; learningRequest?: number; learningIndex?: Map<string, ApiResults['getLearningStatus']['items'][number]> }
 const base = common();
 const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = {
   ...base,
@@ -46,7 +52,8 @@ const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = 
     englishReadingCount: learning.catalog.filter((item) => item.kind === 'english-reading').length,
     curriculumGradeIndex: 0, curriculumGradeLabels: learning.gradeLabels.slice(1),
     curriculumSlots: resources.curriculum.slots.filter(slot => slot.grade === 1),
-    semesterIndex: 0, semesterLabels: ['全部学期', '上册', '下册'], bookUnits: [{ id: '', label: '全册内容' }], unitIndex: 0 },
+    semesterIndex: 0, semesterLabels: ['全部学期', '上册', '下册'], bookUnits: [{ id: '', label: '全册内容' }], unitIndex: 0,
+    learningFilterIndex: 0, learningFilterLabels: ['全部学习状态', '还未学过', '已经学过'], learningReady: false, learningBusy: false, learningCached: false, learningError: '' },
   onShow() {
     base.onShow.call(this);
     const navigation = getApp<LearningApp>().navigation || {};
@@ -67,6 +74,12 @@ const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = 
   },
   onHide() { this.setData({ assignTarget: null }); base.onHide.call(this); },
   afterRender() {
+    const scope = JSON.stringify([this.data.family?.id, this.data.childId]);
+    if (this.learningScope !== scope) {
+      this.learningScope = scope; this.learningIndex = new Map(); this.learningRequest = (this.learningRequest || 0) + 1;
+      this.setData({ learningReady: false, learningBusy: false, learningCached: false, learningError: '' });
+      if (this.active) void this.loadLearningStatus();
+    }
     const target = this.data.assignTarget;
     this.setData({ subjectOptions: this.data.subjectOptions.filter((subject) => subject.id !== 'math' && subject.id !== 'other'),
       showPinyin: this.pinyinChoice?.childId === this.data.childId ? this.pinyinChoice.enabled : defaultPinyin(this.data.children.find((child) => child.id === this.data.childId)?.schoolGrade),
@@ -75,6 +88,27 @@ const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = 
       ...(target && (target.familyId !== this.data.family?.id || target.childId !== this.data.childId || this.data.isChild) ? { assignTarget: null } : {}) });
     this.updateItems();
   },
+  afterSync() { return this.loadLearningStatus(); },
+  async loadLearningStatus() {
+    if (!this.data.family || !this.data.childId || !this.active) return;
+    const request = (this.learningRequest || 0) + 1; this.learningRequest = request;
+    const scope = JSON.stringify([this.data.family.id, this.data.childId]);
+    this.setData({ learningBusy: true, learningError: '' });
+    try {
+      const result = await this.engine.getLearningStatus({ childId: this.data.childId });
+      if (!this.active || request !== this.learningRequest || scope !== this.learningScope) return;
+      this.learningIndex = new Map(result.items.map(item => [item.contentId, item]));
+      this.setData({ learningReady: true, learningCached: result.cached }); this.updateItems();
+    } catch (error) {
+      if (this.active && request === this.learningRequest && scope === this.learningScope)
+        this.setData({ learningCached: this.data.learningReady, learningError: errorDetails(error).message || '学习记录暂未加载，请刷新重试' });
+    } finally { if (this.active && request === this.learningRequest) this.setData({ learningBusy: false }); }
+  },
+  changeLearningFilter(event) {
+    const index = Number(event.detail.value); if (!Number.isInteger(index) || index < 0 || index > 2) return;
+    this.setData({ learningFilterIndex: index }); this.updateItems();
+  },
+  cleanup() { base.cleanup.call(this); this.learningRequest = (this.learningRequest || 0) + 1; },
   updateScopes() {
     const kind = this.data.kinds[this.data.kindIndex].id;
     const scopes: LibraryData['scopes'] = kind ? learning.scopeOptions(kind) : [{ id: 'all', label: '全部可用内容' }, { id: 'starter', label: '亲子入门' }];
@@ -89,9 +123,10 @@ const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = 
     const kind = this.data.kinds[this.data.kindIndex].id;
     const semester = this.data.semesterIndex ? this.data.semesterLabels[this.data.semesterIndex] as '上册' | '下册' : undefined;
     const unitId = this.data.bookUnits[this.data.unitIndex]?.id || undefined;
-    const signature = JSON.stringify([kind, this.data.subjectFilter, this.data.scope, this.data.query, this.data.bookId, this.data.grade, semester, unitId]);
+    const signature = JSON.stringify([kind, this.data.subjectFilter, this.data.scope, this.data.query, this.data.bookId, this.data.grade, semester, unitId, this.data.learningFilterIndex, this.data.childId]);
     if (signature !== this.matchSignature) { this.matchSignature = signature; this.visibleLimit = 30; }
-    const matches = learning.searchCatalog({ kind: kind || undefined, subject: this.data.subjectFilter, scope: this.data.scope, query: this.data.query, bookId: this.data.bookId, grade: this.data.grade || undefined, semester, unitId });
+    const matches = learning.searchCatalog({ kind: kind || undefined, subject: this.data.subjectFilter, scope: this.data.scope, query: this.data.query, bookId: this.data.bookId, grade: this.data.grade || undefined, semester, unitId })
+      .filter(item => !this.data.learningReady || !this.data.learningFilterIndex || (this.data.learningFilterIndex === 2) === Boolean(this.learningIndex?.has(item.id)));
     const today = this.engine ? this.engine.viewDay(this.data.today).tasks.filter((task) => task.childId === this.data.childId) : [];
     this.setData({ total: matches.length, hasMore: matches.length > this.visibleLimit,
       items: matches.slice(0, this.visibleLimit).map((item) => ({ ...decorate({ ...item, subject: learning.definition(item.kind).subject }),
@@ -99,6 +134,8 @@ const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = 
         gradeMappings: (item.gradeMappings || []).map(mapping => ({ ...mapping, displayKey: `${mapping.bookId}:${mapping.unitId || mapping.outlineDestination}` })),
         ...(item.studyArea ? { kindLabel: item.studyArea === 'literacy' ? '识字写字' : item.studyArea === 'pinyin' ? '拼音练习' : '语文阅读' } : {}),
         assigned: today.some((task) => learning.contentId(task) === item.id),
+        learnedLabel: this.learningIndex?.has(item.id) ? (this.learningIndex.get(item.id)!.mastered ? '已掌握' : '已学过') : '',
+        lastLearned: this.learningIndex?.get(item.id)?.lastLearned || '', learnedCount: this.learningIndex?.get(item.id)?.learnedCount || 0,
         gradeLabel: (item.gradeMappings || []).length ? [...new Set(item.gradeMappings!.map((mapping) => `${learning.gradeLabels[mapping.grade]}${mapping.semester}`))].join('、')
           + (item.gradeMappings!.every(mapping => mapping.mappingType === 'aligned_practice') ? ' · 单元原创练习' : ' · 教材归属已核实') : ['reading', 'english-reading'].includes(item.kind) ? '自编入门练习 · 非教材课文' : '年级归属待核对',
         preview: item.kind === 'poetry' ? decorate(item).poetryByline : item.detail.split('\n')[1] || '' })) });

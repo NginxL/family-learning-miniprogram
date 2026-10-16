@@ -212,6 +212,13 @@ function generateDay(family: PlanningFamily, day: Day, ledgers: Record<string, L
   });
   return day;
 }
+// A compact, complete index for the library; no pagination or learning text is sent.
+function learningStatus(ledger: LearningLedger) {
+  return { items: Object.values(ledger.records).filter(entry => entry.completedDates.length > 0).map(entry => ({
+    contentId: entry.item.id, learnedCount: entry.completedDates.length,
+    lastLearned: [...entry.completedDates].sort().slice(-1)[0], mastered: entry.mastered
+  })) };
+}
 function history(ledger: LearningLedger, input: HistoryQuery = {}) {
   const subject = input.subject || 'all'; const filter = input.filter || 'learned';
   const query = (input.query || '').trim().toLowerCase();
@@ -282,4 +289,4 @@ function progress(ledger: LearningLedger) {
 }
 export { catalog, catalogById, kinds, subjects, kindOf, definition, contentId, content, defaultRules, emptyRules,
   scopeOptions, inScope, materialPool, recordTasks, taskFrom, generateDay, history, ruleRows, searchCatalog, gradeLabels, progress,
-  planningKey, wasLearned, omitTask, allowsRepeat, templateSet, activeTemplate, templateForDate, templateSummary, freezeTemplateDay };
+  planningKey, wasLearned, omitTask, allowsRepeat, templateSet, activeTemplate, templateForDate, templateSummary, freezeTemplateDay, learningStatus };

@@ -22,6 +22,7 @@ exports.activeTemplate = activeTemplate;
 exports.templateForDate = templateForDate;
 exports.templateSummary = templateSummary;
 exports.freezeTemplateDay = freezeTemplateDay;
+exports.learningStatus = learningStatus;
 const catalog = require("./catalog");
 exports.catalog = catalog;
 const catalogById = new Map(catalog.map((item) => [item.id, item]));
@@ -270,6 +271,13 @@ function generateDay(family, day, ledgers, preview = false) {
         recordTasks(ledger, day.tasks.filter((task) => task.childId === child.id), day.date);
     });
     return day;
+}
+// A compact, complete index for the library; no pagination or learning text is sent.
+function learningStatus(ledger) {
+    return { items: Object.values(ledger.records).filter(entry => entry.completedDates.length > 0).map(entry => ({
+            contentId: entry.item.id, learnedCount: entry.completedDates.length,
+            lastLearned: [...entry.completedDates].sort().slice(-1)[0], mastered: entry.mastered
+        })) };
 }
 function history(ledger, input = {}) {
     const subject = input.subject || 'all';

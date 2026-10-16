@@ -5,7 +5,7 @@ function mapping(book, unit, type, page = unit.sourcePrintPage, pdfPage = unit.s
   return { grade: book.grade, bookId: book.id, schoolSystem: '5-4', semester: book.semester,
     edition: book.edition, sourceUrl: book.sourceUrl, outlineDestination: pdfPage ? `#page=${pdfPage}` : `目录 Unit ${unit.number}，印刷页 ${page}`,
     sourceKind: book.sourceKind, sourcePrintPage: page, ...(pdfPage ? { sourcePdfPage: pdfPage } : {}),
-    unit: `第${unit.number}单元 · ${unit.title}`, unitId: unit.id, mappingType: type,
+    unit: `第${unit.number}单元 · ${unit.title}${unit.optional ? '（拓展）' : ''}`, unitId: unit.id, mappingType: type,
     evidence: type === 'aligned_practice' ? '按已核实单元主题自编；不是教材课文或课后原题。页码为所依据单元的起始位置，学校版次待确认。' : '教材公开样本字词与册次已核实；页码为目录标注的单元起始位置，学校版次待确认。',
     status: 'catalogue_verified' };
 }
@@ -38,6 +38,10 @@ function validate() {
         || unit.practice?.origin !== 'original' || !unit.practice.body || !unit.practice.question || !unit.practice.answer)
         throw Error(`Incomplete unit practice: ${book.id}/${unit.id}`);
       if (book.subject === 'chinese') {
+        if (!book.inventory.recognitionComplete || !book.inventory.writingComplete) {
+          if (unit.recognition || unit.writing) throw Error(`Unverified character inventory: ${book.id}/${unit.id}`);
+          continue;
+        }
         for (const type of ['recognition', 'writing']) {
           if (unit[type].length !== unit[type + 'Reading'].length || unit[type].some((row, i) => [...row].length !== unit[type + 'Reading'][i].split(' ').length))
             throw Error(`Misaligned character readings: ${book.id}/${unit.id}/${type}`);
@@ -63,7 +67,7 @@ function augment(items) {
     };
     const prefix = `sh54-${book.subject === 'chinese' ? 'zh' : 'en'}-${book.grade}${book.semester === '上册' ? 'a' : 'b'}-${unit.id}`;
     if (book.subject === 'chinese') {
-      add({ id: `${prefix}-literacy`, kind: 'reading', title: `识字写字 · 第${unit.number}组`, detail: literacyDetail(unit),
+      if (book.inventory.recognitionComplete && book.inventory.writingComplete) add({ id: `${prefix}-literacy`, kind: 'reading', title: `识字写字 · 第${unit.number}组`, detail: literacyDetail(unit),
         source: '教材字表核实；按单元整理；练习提示自编', minutes: 10, collections: [], studyArea: 'literacy',
         referenceUrl: book.sourceUrl, note: `识字表 PDF ${unit.recognitionPdfPages.join('、')} 页；写字表 PDF ${unit.writingPdfPages.join('、')} 页。含多音字复习项，可分行学习。` }, 'textbook_item');
       add({ id: `${prefix}-reading`, kind: 'reading', title: unit.practice.title, detail: practiceDetail(unit.practice, 'chinese'),
@@ -105,7 +109,7 @@ function pinyin() {
   const entries = {};
   for (const book of data.books.filter(book => book.subject === 'chinese')) for (const unit of book.units) {
     const prefix = `sh54-zh-${book.grade}${book.semester === '上册' ? 'a' : 'b'}-${unit.id}`;
-    entries[`${prefix}-literacy`] = { title: `识字写字 · 第${unit.number}组`, detail: literacyDetail(unit), titleReading: 'shí zì xiě zì dì zǔ',
+    if (book.inventory.recognitionComplete && book.inventory.writingComplete) entries[`${prefix}-literacy`] = { title: `识字写字 · 第${unit.number}组`, detail: literacyDetail(unit), titleReading: 'shí zì xiě zì dì zǔ',
       detailReading: `rèn yī rèn ${unit.recognitionReading.join(' ')} xiě yī xiě ${unit.writingReading.join(' ')} liàn xí měi cì xuǎn yī háng xiān dú zhǔn zài zhē zhù pīn yīn rèn dú xiě zì shí guān chá bǐ huà wèi zhì xuǎn liǎng gè zì zǔ cí` };
     const p = unit.practice;
     entries[`${prefix}-reading`] = { title: p.title, detail: practiceDetail(p, 'chinese'), titleReading: p.titleReading, detailReading: p.detailReading };
@@ -115,6 +119,6 @@ function pinyin() {
 function bookSummaries() {
   return data.books.map(book => ({ id: book.id, title: book.title, grade: book.grade, semester: book.semester,
     subject: book.subject, url: book.sourceUrl, verification: `${book.edition}；学校采用版次待确认。`,
-    units: book.units.map(unit => ({ id: unit.id, label: `第${unit.number}单元 · ${unit.title}` })) }));
+    units: book.units.map(unit => ({ id: unit.id, label: `第${unit.number}单元 · ${unit.title}${unit.optional ? '（拓展）' : ''}` })) }));
 }
 module.exports = { data, augment, pinyin, bookSummaries, practiceDetail, literacyDetail };

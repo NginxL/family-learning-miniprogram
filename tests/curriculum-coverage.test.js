@@ -19,7 +19,7 @@ test('Shanghai curriculum inventories all 36 subject-semesters without turning b
       assert.equal(slot.fullCoverage, false); assert.equal(slot.schoolAdoption, 'pending');
       assert.ok(slot.references.every(ref => coverage.sources.some(source => source.id === ref.sourceId)));
       if (slot.subject === 'english') {
-        if (grade > 1) { assert.equal(slot.verifiedCount, 0); assert.equal(slot.contentBookId, ''); }
+        if (grade > 2) { assert.equal(slot.verifiedCount, 0); assert.equal(slot.contentBookId, ''); }
         if (slot.semester === '下册') assert.ok(slot.references.every(ref => ref.verification === 'historical_resource_listing' && ref.period === '2025学年第二学期'));
       }
       if (slot.contentBookId) {
@@ -30,8 +30,8 @@ test('Shanghai curriculum inventories all 36 subject-semesters without turning b
       }
     }
   }
-  assert.equal(resources.curriculum.slots.filter(slot => slot.availableUnits).length, 5);
-  assert.equal(resources.curriculum.slots.reduce((sum, slot) => sum + slot.availableUnits, 0), 44);
+  assert.equal(resources.curriculum.slots.filter(slot => slot.availableUnits).length, 8);
+  assert.equal(resources.curriculum.slots.reduce((sum, slot) => sum + slot.availableUnits, 0), 72);
   assert.ok(learning.progress({ records: {} }).grades.every(grade => !grade.fullGradeComplete));
 });
 

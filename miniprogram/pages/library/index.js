@@ -39,6 +39,7 @@ const learning = __importStar(require("../../lib/learning/learning"));
 const resources = require("../../lib/learning/resources");
 const sync_engine_1 = require("../../lib/sync-engine");
 const pinyin_1 = require("../../lib/pinyin");
+const errors_1 = require("../../lib/errors");
 const base = (0, page_1.common)();
 const definition = {
     ...base,
@@ -53,7 +54,8 @@ const definition = {
         englishReadingCount: learning.catalog.filter((item) => item.kind === 'english-reading').length,
         curriculumGradeIndex: 0, curriculumGradeLabels: learning.gradeLabels.slice(1),
         curriculumSlots: resources.curriculum.slots.filter(slot => slot.grade === 1),
-        semesterIndex: 0, semesterLabels: ['全部学期', '上册', '下册'], bookUnits: [{ id: '', label: '全册内容' }], unitIndex: 0 },
+        semesterIndex: 0, semesterLabels: ['全部学期', '上册', '下册'], bookUnits: [{ id: '', label: '全册内容' }], unitIndex: 0,
+        learningFilterIndex: 0, learningFilterLabels: ['全部学习状态', '还未学过', '已经学过'], learningReady: false, learningBusy: false, learningCached: false, learningError: '' },
     onShow() {
         base.onShow.call(this);
         const navigation = getApp().navigation || {};
@@ -80,15 +82,57 @@ const definition = {
     },
     onHide() { this.setData({ assignTarget: null }); base.onHide.call(this); },
     afterRender() {
-        var _a, _b, _c;
+        var _a, _b, _c, _d;
+        const scope = JSON.stringify([(_a = this.data.family) === null || _a === void 0 ? void 0 : _a.id, this.data.childId]);
+        if (this.learningScope !== scope) {
+            this.learningScope = scope;
+            this.learningIndex = new Map();
+            this.learningRequest = (this.learningRequest || 0) + 1;
+            this.setData({ learningReady: false, learningBusy: false, learningCached: false, learningError: '' });
+            if (this.active)
+                void this.loadLearningStatus();
+        }
         const target = this.data.assignTarget;
         this.setData({ subjectOptions: this.data.subjectOptions.filter((subject) => subject.id !== 'math' && subject.id !== 'other'),
-            showPinyin: ((_a = this.pinyinChoice) === null || _a === void 0 ? void 0 : _a.childId) === this.data.childId ? this.pinyinChoice.enabled : (0, pinyin_1.defaultPinyin)((_b = this.data.children.find((child) => child.id === this.data.childId)) === null || _b === void 0 ? void 0 : _b.schoolGrade),
+            showPinyin: ((_b = this.pinyinChoice) === null || _b === void 0 ? void 0 : _b.childId) === this.data.childId ? this.pinyinChoice.enabled : (0, pinyin_1.defaultPinyin)((_c = this.data.children.find((child) => child.id === this.data.childId)) === null || _c === void 0 ? void 0 : _c.schoolGrade),
             ...(this.data.subjectFilter === 'math' || this.data.subjectFilter === 'other' ? { subjectFilter: 'all' } : {}),
             tomorrow: (0, sync_engine_1.shiftDate)(this.data.today, 1), maxPlanDate: (0, sync_engine_1.shiftDate)(this.data.today, 365),
-            ...(target && (target.familyId !== ((_c = this.data.family) === null || _c === void 0 ? void 0 : _c.id) || target.childId !== this.data.childId || this.data.isChild) ? { assignTarget: null } : {}) });
+            ...(target && (target.familyId !== ((_d = this.data.family) === null || _d === void 0 ? void 0 : _d.id) || target.childId !== this.data.childId || this.data.isChild) ? { assignTarget: null } : {}) });
         this.updateItems();
     },
+    afterSync() { return this.loadLearningStatus(); },
+    async loadLearningStatus() {
+        if (!this.data.family || !this.data.childId || !this.active)
+            return;
+        const request = (this.learningRequest || 0) + 1;
+        this.learningRequest = request;
+        const scope = JSON.stringify([this.data.family.id, this.data.childId]);
+        this.setData({ learningBusy: true, learningError: '' });
+        try {
+            const result = await this.engine.getLearningStatus({ childId: this.data.childId });
+            if (!this.active || request !== this.learningRequest || scope !== this.learningScope)
+                return;
+            this.learningIndex = new Map(result.items.map(item => [item.contentId, item]));
+            this.setData({ learningReady: true, learningCached: result.cached });
+            this.updateItems();
+        }
+        catch (error) {
+            if (this.active && request === this.learningRequest && scope === this.learningScope)
+                this.setData({ learningCached: this.data.learningReady, learningError: (0, errors_1.errorDetails)(error).message || '学习记录暂未加载，请刷新重试' });
+        }
+        finally {
+            if (this.active && request === this.learningRequest)
+                this.setData({ learningBusy: false });
+        }
+    },
+    changeLearningFilter(event) {
+        const index = Number(event.detail.value);
+        if (!Number.isInteger(index) || index < 0 || index > 2)
+            return;
+        this.setData({ learningFilterIndex: index });
+        this.updateItems();
+    },
+    cleanup() { base.cleanup.call(this); this.learningRequest = (this.learningRequest || 0) + 1; },
     updateScopes() {
         const kind = this.data.kinds[this.data.kindIndex].id;
         const scopes = kind ? learning.scopeOptions(kind) : [{ id: 'all', label: '全部可用内容' }, { id: 'starter', label: '亲子入门' }];
@@ -105,22 +149,28 @@ const definition = {
         const kind = this.data.kinds[this.data.kindIndex].id;
         const semester = this.data.semesterIndex ? this.data.semesterLabels[this.data.semesterIndex] : undefined;
         const unitId = ((_a = this.data.bookUnits[this.data.unitIndex]) === null || _a === void 0 ? void 0 : _a.id) || undefined;
-        const signature = JSON.stringify([kind, this.data.subjectFilter, this.data.scope, this.data.query, this.data.bookId, this.data.grade, semester, unitId]);
+        const signature = JSON.stringify([kind, this.data.subjectFilter, this.data.scope, this.data.query, this.data.bookId, this.data.grade, semester, unitId, this.data.learningFilterIndex, this.data.childId]);
         if (signature !== this.matchSignature) {
             this.matchSignature = signature;
             this.visibleLimit = 30;
         }
-        const matches = learning.searchCatalog({ kind: kind || undefined, subject: this.data.subjectFilter, scope: this.data.scope, query: this.data.query, bookId: this.data.bookId, grade: this.data.grade || undefined, semester, unitId });
+        const matches = learning.searchCatalog({ kind: kind || undefined, subject: this.data.subjectFilter, scope: this.data.scope, query: this.data.query, bookId: this.data.bookId, grade: this.data.grade || undefined, semester, unitId })
+            .filter(item => { var _a; return !this.data.learningReady || !this.data.learningFilterIndex || (this.data.learningFilterIndex === 2) === Boolean((_a = this.learningIndex) === null || _a === void 0 ? void 0 : _a.has(item.id)); });
         const today = this.engine ? this.engine.viewDay(this.data.today).tasks.filter((task) => task.childId === this.data.childId) : [];
         this.setData({ total: matches.length, hasMore: matches.length > this.visibleLimit,
-            items: matches.slice(0, this.visibleLimit).map((item) => ({ ...(0, page_1.decorate)({ ...item, subject: learning.definition(item.kind).subject }),
-                pinyin: (0, pinyin_1.pinyinFor)(item),
-                gradeMappings: (item.gradeMappings || []).map(mapping => ({ ...mapping, displayKey: `${mapping.bookId}:${mapping.unitId || mapping.outlineDestination}` })),
-                ...(item.studyArea ? { kindLabel: item.studyArea === 'literacy' ? '识字写字' : item.studyArea === 'pinyin' ? '拼音练习' : '语文阅读' } : {}),
-                assigned: today.some((task) => learning.contentId(task) === item.id),
-                gradeLabel: (item.gradeMappings || []).length ? [...new Set(item.gradeMappings.map((mapping) => `${learning.gradeLabels[mapping.grade]}${mapping.semester}`))].join('、')
-                    + (item.gradeMappings.every(mapping => mapping.mappingType === 'aligned_practice') ? ' · 单元原创练习' : ' · 教材归属已核实') : ['reading', 'english-reading'].includes(item.kind) ? '自编入门练习 · 非教材课文' : '年级归属待核对',
-                preview: item.kind === 'poetry' ? (0, page_1.decorate)(item).poetryByline : item.detail.split('\n')[1] || '' })) });
+            items: matches.slice(0, this.visibleLimit).map((item) => {
+                var _a, _b, _c, _d, _e;
+                return ({ ...(0, page_1.decorate)({ ...item, subject: learning.definition(item.kind).subject }),
+                    pinyin: (0, pinyin_1.pinyinFor)(item),
+                    gradeMappings: (item.gradeMappings || []).map(mapping => ({ ...mapping, displayKey: `${mapping.bookId}:${mapping.unitId || mapping.outlineDestination}` })),
+                    ...(item.studyArea ? { kindLabel: item.studyArea === 'literacy' ? '识字写字' : item.studyArea === 'pinyin' ? '拼音练习' : '语文阅读' } : {}),
+                    assigned: today.some((task) => learning.contentId(task) === item.id),
+                    learnedLabel: ((_a = this.learningIndex) === null || _a === void 0 ? void 0 : _a.has(item.id)) ? (this.learningIndex.get(item.id).mastered ? '已掌握' : '已学过') : '',
+                    lastLearned: ((_c = (_b = this.learningIndex) === null || _b === void 0 ? void 0 : _b.get(item.id)) === null || _c === void 0 ? void 0 : _c.lastLearned) || '', learnedCount: ((_e = (_d = this.learningIndex) === null || _d === void 0 ? void 0 : _d.get(item.id)) === null || _e === void 0 ? void 0 : _e.learnedCount) || 0,
+                    gradeLabel: (item.gradeMappings || []).length ? [...new Set(item.gradeMappings.map((mapping) => `${learning.gradeLabels[mapping.grade]}${mapping.semester}`))].join('、')
+                        + (item.gradeMappings.every(mapping => mapping.mappingType === 'aligned_practice') ? ' · 单元原创练习' : ' · 教材归属已核实') : ['reading', 'english-reading'].includes(item.kind) ? '自编入门练习 · 非教材课文' : '年级归属待核对',
+                    preview: item.kind === 'poetry' ? (0, page_1.decorate)(item).poetryByline : item.detail.split('\n')[1] || '' });
+            }) });
     },
     changeView(event) { this.setData({ view: event.currentTarget.dataset.id }); },
     changeCurriculumGrade(event) {
