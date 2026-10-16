@@ -1,6 +1,8 @@
+<import src="../../templates/pinyin.wxml" />
 <view class="page">
   <view class="eyebrow">慢慢读 · 一点点积累</view><view class="title">知识库</view>
   <view class="subtitle">{{poemCount}} 篇 / 组古诗文 · {{wordCount}} 项英语词汇</view>
+  <view class="muted">{{readingCount}} 篇语文短文 · {{englishReadingCount}} 篇英语短文</view>
   <view class="tab-row"><view wx:for="{{children}}" wx:key="id" class="chip {{childId === item.id ? 'active' : ''}}" data-id="{{item.id}}" bindtap="selectChild">{{item.name}}</view></view>
   <view class="segmented"><view class="segment {{view === 'content' ? 'selected' : ''}}" data-id="content" bindtap="changeView">选内容</view><view class="segment {{view === 'exam' ? 'selected' : ''}}" data-id="exam" bindtap="changeView">上海中考</view><view class="segment {{view === 'books' ? 'selected' : ''}}" data-id="books" bindtap="changeView">教材与来源</view></view>
   <block wx:if="{{view === 'content'}}">
@@ -19,11 +21,12 @@
     <view wx:if="{{coverageOpen}}" class="notice">{{resources.coverage}}</view>
     <view wx:for="{{items}}" wx:key="id" class="card">
       <view class="row"><view class="pill {{item.subject}}">{{item.kindLabel}}</view><view wx:if="{{item.assigned}}" class="muted">已在今日</view></view>
-      <view class="task-title" data-id="{{item.id}}" bindtap="expandContent">{{item.title}}</view>
+      <view class="task-title" data-id="{{item.id}}" bindtap="expandContent"><template is="pinyinText" data="{{enabled: showPinyin && expandedId === item.id, lines: item.pinyin.title, text: item.title}}" /></view>
       <view class="muted library-preview">{{item.preview}}</view>
       <view class="muted">{{item.gradeLabel}}</view>
       <block wx:if="{{expandedId === item.id}}">
-        <view class="body">{{item.displayDetail || item.detail}}</view><view wx:if="{{item.dynastyNote}}" class="muted">{{item.dynastyNote}}</view><view class="muted">{{item.source}}</view><view wx:if="{{item.note}}" class="muted plan-help">{{item.note}}</view>
+        <button wx:if="{{item.pinyin}}" class="quiet pinyin-toggle" bindtap="togglePinyin">{{showPinyin ? '隐藏拼音' : '显示拼音'}}</button>
+        <view class="body"><template is="pinyinText" data="{{enabled: showPinyin, lines: item.pinyin.body, text: item.displayDetail || item.detail}}" /></view><view wx:if="{{item.dynastyNote}}" class="muted">{{item.dynastyNote}}</view><view class="muted">{{item.source}}</view><view wx:if="{{item.note}}" class="muted plan-help">{{item.note}}</view>
         <view wx:for="{{item.gradeMappings}}" wx:for-item="mapping" wx:key="bookId" class="muted plan-help"><view>{{gradeLabels[mapping.grade]}} {{mapping.semester}} · {{mapping.edition}}</view><view wx:if="{{mapping.sourcePrintPage}}">{{mapping.unit}} · 原书第 {{mapping.sourcePrintPage}} 页 / PDF 第 {{mapping.sourcePdfPage}} 页</view><view>{{mapping.evidence}}</view><button class="quiet" data-url="{{mapping.sourceUrl}}" bindtap="copySource">复制年级依据链接</button></view>
         <view class="tab-row"><button wx:if="{{item.referenceUrl}}" class="quiet" data-url="{{item.referenceUrl}}" bindtap="copySource">复制目录来源链接</button><button wx:if="{{item.textSourceUrl}}" class="quiet" data-url="{{item.textSourceUrl}}" bindtap="copySource">复制正文 / 词典来源</button></view>
       </block>
@@ -52,10 +55,20 @@
   </block>
   <block wx:else>
     <view class="card"><view class="rule-title">内容覆盖</view><view class="body">{{resources.coverage}}</view><view class="muted">语文：国家课标 75 + 60 篇 / 组，另整理 21 项关联原作或节选。英语：1600 个主词条，其中 505 个二级带星词；另有 77 项数词、月份和星期。核对日期 {{resources.checkedAt}}。</view></view>
-    <view class="section">五四制语文教材</view>
-    <view wx:for="{{resources.books}}" wx:key="id" class="card">
-      <view class="rule-title">{{item.title}}</view><view class="muted plan-help">{{item.verification}}</view>
-      <view class="tab-row"><button class="quiet" data-id="{{item.id}}" bindtap="showBook">查看已整理篇目 →</button><button class="quiet" data-url="{{item.url}}" bindtap="copySource">{{item.sourceKind === 'public_sample' ? '复制样本来源链接' : '复制官方教材链接'}}</button></view>
+    <view class="section">上海五四学制 · 逐册覆盖</view>
+    <view class="muted">{{resources.curriculum.target}}</view>
+    <picker range="{{curriculumGradeLabels}}" value="{{curriculumGradeIndex}}" bindchange="changeCurriculumGrade"><view class="picker">{{curriculumGradeLabels[curriculumGradeIndex]}} ▾</view></picker>
+    <view wx:for="{{curriculumSlots}}" wx:key="id" class="card">
+      <view class="row"><view class="rule-title">{{item.subjectLabel}} · {{item.semester}}</view><view class="pill">{{item.verifiedCount ? '部分入库' : '知识待核验'}}</view></view>
+      <view class="body">{{item.contentNote}}</view>
+      <view wx:for="{{item.references}}" wx:for-item="reference" wx:key="title" class="plan-help">
+        <view>{{reference.title}}</view><view class="muted">{{reference.publisher}} · {{reference.period}}</view>
+        <view wx:if="{{reference.verification === 'historical_resource_listing'}}" class="muted">上一学年参考，当前学年下册版次待确认。</view>
+        <button class="quiet" data-url="{{reference.url}}" bindtap="copySource">复制教材来源链接</button>
+      </view>
+      <view class="muted">教材名称已核实；学校选用、全册知识及正文校对分别核验。</view>
+      <view wx:if="{{item.mappingNote}}" class="muted plan-help">{{item.mappingNote}}</view>
+      <button wx:if="{{item.contentBookId}}" class="quiet" data-id="{{item.contentBookId}}" bindtap="showBook">查看已整理篇目 →</button>
     </view>
     <view class="section">官方资源</view>
     <view wx:for="{{resources.links}}" wx:key="url" class="card"><view class="rule-title">{{item.title}}</view><view class="muted plan-help">{{item.note}}</view><button class="quiet" data-url="{{item.url}}" bindtap="copySource">复制链接</button></view>

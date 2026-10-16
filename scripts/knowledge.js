@@ -6,6 +6,7 @@ const foundationMeanings = require('../data/catalogs/english-foundation-meanings
 const regional = require('../data/catalogs/shanghai-54-evidence.json');
 const examFramework = require('../data/catalogs/shanghai-zhongkao-framework.json');
 const dynasties = require('../data/catalogs/poetry-dynasties.json');
+const curriculum = require('./curriculum');
 function period(entry) {
   const metadata = dynasties.entries.find((item) => item.id === entry.id);
   if (!metadata || metadata.title !== entry.title || metadata.author !== entry.author || !metadata.dynasty || !metadata.sources.length)
@@ -64,13 +65,14 @@ function knowledge() {
   return [...poems, ...additional, ...words, ...tableWords];
 }
 module.exports = { knowledge, resources: {
-  checkedAt: '2026-10-12',
+  checkedAt: '2026-10-16',
+  curriculum: curriculum(),
   examFramework,
-  coverage: '国家课标底库已入库；五四制一上、三上公开教材样本及六上、六下、七上官方目录仅覆盖部分古诗文。学校实际版次、其他册次及校内英语词表待核对，不能作为上海中考完整范围。',
+  coverage: '目标为上海五四学制小学1–5、初中6–9年级的语文与英语。国家课标底库已入库，教材逐册清单已建；目前只有部分古诗文年级映射，阅读、词表、语法及表达等仍有缺项，尚未达到九年全量覆盖。',
   books: regional.books,
   links: [
     { title: '上海 2026 秋季教学用书通知', url: regional.noticeUrl, note: '市级用书目录；学校实际选用版本待确认' },
-    { title: '上海智慧教育平台 · 教材配套资源', url: 'https://www.sh.smartedu.cn/teachingMaterial?type=8', note: '所见页面为 2025 学年第二学期，含多个版本' },
+    { title: '上海智慧教育平台 · 教材配套资源', url: 'https://www.sh.smartedu.cn/teachingMaterial?type=11', note: '2026 学年第一学期学生版；与具体学校选用版次分开核验' },
     { title: '国家中小学智慧教育平台 · 教材', url: 'https://basic.smartedu.cn/tchMaterial', note: '完整教材在官方平台登录阅读' }
   ]
 } };

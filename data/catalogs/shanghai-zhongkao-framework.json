@@ -49,7 +49,7 @@
       ],
       "status": "not_built",
       "statusLabel": "仅有亲子阅读入门任务",
-      "available": "6 项自编亲子阅读任务，可记录家长自选阅读。",
+      "available": "6 篇自编语文入门短文，配拼音和读后问题；可记录家长自选阅读。",
       "gap": "现代文、名著、综合运用、写作与评价标准尚未形成中考专项库。",
       "kind": "reading"
     },
@@ -103,10 +103,11 @@
         "sh-english-review-2026",
         "sh-english-review-2025"
       ],
-      "status": "not_built",
-      "statusLabel": "专项材料与评价待建设",
-      "available": "可由家长自建阅读、表达任务并保存完成记录。",
-      "gap": "分级语篇、阅读理解、语篇填空、写作任务和反馈标准尚未形成系统库。"
+      "status": "partial",
+      "statusLabel": "入门短文已收录 · 专项材料与评价待建设",
+      "available": "6 篇自编英语入门短文与读后问题；可由家长补充阅读、表达任务并保存完成记录。",
+      "gap": "面向上海中考的分级语篇、阅读理解、语篇填空、写作任务和反馈标准尚未形成系统库。",
+      "kind": "english-reading"
     }
   ],
   "sources": [

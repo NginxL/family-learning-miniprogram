@@ -1,0 +1,132 @@
+// Curated character-aligned reading aids. Exact source text guards against stale annotations.
+// Tone marks use citation tones for 一/不 and third tones; neutral syllables are unmarked.
+// This is not a textbook transcription or automatic transliteration service.
+export interface PinyinEntry { title: string; detail: string; titleReading: string; detailReading: string }
+export const pinyinEntries: Record<string, PinyinEntry> = {
+  "poem-goose": {
+    "title": "《咏鹅》",
+    "detail": "骆宾王\n鹅，鹅，鹅，曲项向天歌。\n白毛浮绿水，红掌拨清波。",
+    "titleReading": "yǒng é",
+    "detailReading": "luò bīn wáng é é é qū xiàng xiàng tiān gē bái máo fú lǜ shuǐ hóng zhǎng bō qīng bō"
+  },
+  "poem-quiet-night": {
+    "title": "《静夜思》",
+    "detail": "李白\n床前明月光，疑是地上霜。\n举头望明月，低头思故乡。",
+    "titleReading": "jìng yè sī",
+    "detailReading": "lǐ bái chuáng qián míng yuè guāng yí shì dì shàng shuāng jǔ tóu wàng míng yuè dī tóu sī gù xiāng"
+  },
+  "poem-spring-morning": {
+    "title": "《春晓》",
+    "detail": "孟浩然\n春眠不觉晓，处处闻啼鸟。\n夜来风雨声，花落知多少。",
+    "titleReading": "chūn xiǎo",
+    "detailReading": "mèng hào rán chūn mián bù jué xiǎo chù chù wén tí niǎo yè lái fēng yǔ shēng huā luò zhī duō shǎo"
+  },
+  "poem-stork-tower": {
+    "title": "《登鹳雀楼》",
+    "detail": "王之涣\n白日依山尽，黄河入海流。\n欲穷千里目，更上一层楼。",
+    "titleReading": "dēng guàn què lóu",
+    "detailReading": "wáng zhī huàn bái rì yī shān jìn huáng hé rù hǎi liú yù qióng qiān lǐ mù gèng shàng yī céng lóu"
+  },
+  "poem-farmer-two": {
+    "title": "《悯农（锄禾日当午）》",
+    "detail": "李绅\n锄禾日当午，汗滴禾下土。\n谁知盘中餐，粒粒皆辛苦？",
+    "titleReading": "mǐn nóng chú hé rì dāng wǔ",
+    "detailReading": "lǐ shēn chú hé rì dāng wǔ hàn dī hé xià tǔ shuí zhī pán zhōng cān lì lì jiē xīn kǔ"
+  },
+  "poem-river-snow": {
+    "title": "《江雪》",
+    "detail": "柳宗元\n千山鸟飞绝，万径人踪灭。\n孤舟蓑笠翁，独钓寒江雪。",
+    "titleReading": "jiāng xuě",
+    "detailReading": "liǔ zōng yuán qiān shān niǎo fēi jué wàn jìng rén zōng miè gū zhōu suō lì wēng dú diào hán jiāng xuě"
+  },
+  "poem-hermit": {
+    "title": "《寻隐者不遇》",
+    "detail": "贾岛\n松下问童子，言师采药去。\n只在此山中，云深不知处。",
+    "titleReading": "xún yǐn zhě bù yù",
+    "detailReading": "jiǎ dǎo sōng xià wèn tóng zǐ yán shī cǎi yào qù zhǐ zài cǐ shān zhōng yún shēn bù zhī chù"
+  },
+  "poem-wind": {
+    "title": "《风》",
+    "detail": "李峤\n解落三秋叶，能开二月花。\n过江千尺浪，入竹万竿斜。",
+    "titleReading": "fēng",
+    "detailReading": "lǐ jiào jiě luò sān qiū yè néng kāi èr yuè huā guò jiāng qiān chǐ làng rù zhú wàn gān xié"
+  },
+  "poem-pond": {
+    "title": "《池上》",
+    "detail": "白居易\n小娃撑小艇，偷采白莲回。\n不解藏踪迹，浮萍一道开。",
+    "titleReading": "chí shàng",
+    "detailReading": "bái jū yì xiǎo wá chēng xiǎo tǐng tōu cǎi bái lián huí bù jiě cáng zōng jì fú píng yī dào kāi"
+  },
+  "poem-small-pond": {
+    "title": "《小池》",
+    "detail": "杨万里\n泉眼无声惜细流，树阴照水爱晴柔。\n小荷才露尖尖角，早有蜻蜓立上头。",
+    "titleReading": "xiǎo chí",
+    "detailReading": "yáng wàn lǐ quán yǎn wú shēng xī xì liú shù yīn zhào shuǐ ài qíng róu xiǎo hé cái lù jiān jiān jiǎo zǎo yǒu qīng tíng lì shàng tóu"
+  },
+  "poem-willow": {
+    "title": "《咏柳》",
+    "detail": "贺知章\n碧玉妆成一树高，万条垂下绿丝绦。\n不知细叶谁裁出，二月春风似剪刀。",
+    "titleReading": "yǒng liǔ",
+    "detailReading": "hè zhī zhāng bì yù zhuāng chéng yī shù gāo wàn tiáo chuí xià lǜ sī tāo bù zhī xì yè shuí cái chū èr yuè chūn fēng sì jiǎn dāo"
+  },
+  "poem-baidi": {
+    "title": "《早发白帝城》",
+    "detail": "李白\n朝辞白帝彩云间，千里江陵一日还。\n两岸猿声啼不住，轻舟已过万重山。",
+    "titleReading": "zǎo fā bái dì chéng",
+    "detailReading": "lǐ bái zhāo cí bái dì cǎi yún jiān qiān lǐ jiāng líng yī rì huán liǎng àn yuán shēng tí bù zhù qīng zhōu yǐ guò wàn chóng shān"
+  },
+  "moe-2022-zh-1-6-001": {
+    "title": "《江南》",
+    "detail": "汉乐府\n江南可采莲，莲叶何田田，鱼戏莲叶间。\n鱼戏莲叶东，鱼戏莲叶西，鱼戏莲叶南，鱼戏莲叶北。",
+    "titleReading": "jiāng nán",
+    "detailReading": "hàn yuè fǔ jiāng nán kě cǎi lián lián yè hé tián tián yú xì lián yè jiān yú xì lián yè dōng yú xì lián yè xī yú xì lián yè nán yú xì lián yè běi"
+  },
+  "sh54-painting": {
+    "title": "《画》",
+    "detail": "教材未署作者\n远看山有色，近听水无声。\n春去花还在，人来鸟不惊。",
+    "titleReading": "huà",
+    "detailReading": "jiào cái wèi shǔ zuò zhě yuǎn kàn shān yǒu sè jìn tīng shuǐ wú shēng chūn qù huā hái zài rén lái niǎo bù jīng"
+  },
+  "sh54-moon-excerpt": {
+    "title": "《古朗月行（节选）》",
+    "detail": "李白\n小时不识月，呼作白玉盘。\n又疑瑶台镜，飞在青云端。",
+    "titleReading": "gǔ lǎng yuè xíng jié xuǎn",
+    "detailReading": "lǐ bái xiǎo shí bù shí yuè hū zuò bái yù pán yòu yí yáo tái jìng fēi zài qīng yún duān"
+  },
+  "reading-seed": {
+    "title": "一颗小种子",
+    "detail": "小树把一颗种子放进土里。他每天给它一点水。有一天，一片嫩绿的叶子钻了出来。小树开心地说：“你好，小芽！”\n\n想一想：小树怎样照顾种子？",
+    "titleReading": "yī kē xiǎo zhǒng zi",
+    "detailReading": "xiǎo shù bǎ yī kē zhǒng zi fàng jìn tǔ lǐ tā měi tiān gěi tā yī diǎn shuǐ yǒu yī tiān yī piàn nèn lǜ de yè zi zuān le chū lái xiǎo shù kāi xīn de shuō nǐ hǎo xiǎo yá xiǎng yī xiǎng xiǎo shù zěn yàng zhào gù zhǒng zi"
+  },
+  "reading-umbrella": {
+    "title": "两个人的小伞",
+    "detail": "放学时下雨了。小禾带着一把伞，小圆没有带。小禾把伞往小圆那边挪了挪。两个人慢慢走，一起回到了家。\n\n想一想：小禾做了什么？你会怎样帮助朋友？",
+    "titleReading": "liǎng gè rén de xiǎo sǎn",
+    "detailReading": "fàng xué shí xià yǔ le xiǎo hé dài zhe yī bǎ sǎn xiǎo yuán méi yǒu dài xiǎo hé bǎ sǎn wǎng xiǎo yuán nà biān nuó le nuó liǎng gè rén màn màn zǒu yī qǐ huí dào le jiā xiǎng yī xiǎng xiǎo hé zuò le shén me nǐ huì zěn yàng bāng zhù péng you"
+  },
+  "reading-book": {
+    "title": "书签去哪里了",
+    "detail": "小米找不到书签了。她先看桌面，再翻书包，最后在书里找到了它。原来昨天读完书，她已经把书签夹好了。\n\n想一想：小米按什么顺序找书签？",
+    "titleReading": "shū qiān qù nǎ lǐ le",
+    "detailReading": "xiǎo mǐ zhǎo bù dào shū qiān le tā xiān kàn zhuō miàn zài fān shū bāo zuì hòu zài shū lǐ zhǎo dào le tā yuán lái zuó tiān dú wán shū tā yǐ jīng bǎ shū qiān jiā hǎo le xiǎng yī xiǎng xiǎo mǐ àn shén me shùn xù zhǎo shū qiān"
+  },
+  "reading-park": {
+    "title": "公园里的声音",
+    "detail": "清晨，小安走进公园。树上有鸟在叫，草丛里有虫在鸣。风吹过树叶，发出沙沙声。小安闭上眼睛，认真听了一会儿。\n\n想一想：文中写到了哪些声音？",
+    "titleReading": "gōng yuán lǐ de shēng yīn",
+    "detailReading": "qīng chén xiǎo ān zǒu jìn gōng yuán shù shàng yǒu niǎo zài jiào cǎo cóng lǐ yǒu chóng zài míng fēng chuī guò shù yè fā chū shā shā shēng xiǎo ān bì shàng yǎn jing rèn zhēn tīng le yī huì r xiǎng yī xiǎng wén zhōng xiě dào le nǎ xiē shēng yīn"
+  },
+  "reading-share": {
+    "title": "分一分橘子",
+    "detail": "桌上有两个橘子。小贝和弟弟一人拿了一个。他们把橘子剥开，又各留出两瓣给奶奶。奶奶笑了，两个人也笑了。\n\n想一想：小贝和弟弟怎样分享橘子？",
+    "titleReading": "fēn yī fēn jú zi",
+    "detailReading": "zhuō shàng yǒu liǎng gè jú zi xiǎo bèi hé dì di yī rén ná le yī gè tā men bǎ jú zi bāo kāi yòu gè liú chū liǎng bàn gěi nǎi nai nǎi nai xiào le liǎng gè rén yě xiào le xiǎng yī xiǎng xiǎo bèi hé dì di zěn yàng fēn xiǎng jú zi"
+  },
+  "reading-moon": {
+    "title": "窗边看月亮",
+    "detail": "晚上，小舟在窗边看月亮。月亮弯弯的，像一只小船。他拿起笔，把月亮画在纸上，还画了三颗星星。\n\n想一想：你觉得月亮还像什么？",
+    "titleReading": "chuāng biān kàn yuè liang",
+    "detailReading": "wǎn shang xiǎo zhōu zài chuāng biān kàn yuè liang yuè liang wān wān de xiàng yī zhī xiǎo chuán tā ná qǐ bǐ bǎ yuè liang huà zài zhǐ shàng hái huà le sān kē xīng xing xiǎng yī xiǎng nǐ jué de yuè liang hái xiàng shén me"
+  }
+};

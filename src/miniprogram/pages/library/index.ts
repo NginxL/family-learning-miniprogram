@@ -2,17 +2,20 @@ import { common, decorate } from '../../lib/page';
 import * as learning from '../../lib/learning/learning';
 import resources = require('../../lib/learning/resources');
 import { shiftDate } from '../../lib/sync-engine';
+import { pinyinFor, defaultPinyin, type PinyinText } from '../../lib/pinyin';
 import type { ContentKind, ContentScope, KnowledgeItem, SchoolGrade } from '../../../shared/models';
 import type { LearningApp } from '../../lib/client-models';
 import type { CommonData, CommonMethods, CommonRuntime, DatasetEvent, Decorated, PageDefinition, PickerEvent, ValueEvent } from '../../lib/page-types';
 export interface LibraryData extends CommonData {
   view: 'content' | 'exam' | 'books'; kinds: Array<{ id: ContentKind | ''; label: string }>; kindIndex: number;
   scopes: Array<{ id: ContentScope; label: string }>; scope: ContentScope; scopeIndex: number;
-  query: string; items: Array<Decorated<KnowledgeItem> & { assigned: boolean; gradeLabel: string; preview?: string }>;
+  query: string; items: Array<Decorated<KnowledgeItem> & { assigned: boolean; gradeLabel: string; preview?: string; pinyin: PinyinText | null }>;
   total: number; hasMore: boolean; expandedId: string; bookId: string; bookTitle: string; resources: typeof resources;
   grade: SchoolGrade | 0; gradeLabels: string[]; coverageOpen: boolean; poemCount: number; wordCount: number;
   filtersOpen: boolean; assignTarget: { id: string; title: string; familyId: string; childId: string; childName: string } | null;
   assignDate: string; tomorrow: string; maxPlanDate: string;
+  showPinyin: boolean; readingCount: number; englishReadingCount: number;
+  curriculumGradeIndex: number; curriculumGradeLabels: string[]; curriculumSlots: typeof resources.curriculum.slots;
 }
 export interface LibraryMethods extends CommonMethods {
   afterRender(): void; updateScopes(): void; selectionChanged(): void; updateItems(): void;
@@ -23,8 +26,10 @@ export interface LibraryMethods extends CommonMethods {
   showBook(event: DatasetEvent): void; clearBook(): void; copySource(event: DatasetEvent<{ url: string }>): void;
   assignItem(event: DatasetEvent): void; closeAssign(): void; keepSheet(): void; toggleFilters(): void;
   chooseAssignDate(event: DatasetEvent<{ date: string }>): void; changeAssignDate(event: ValueEvent): void; confirmAssign(): Promise<void>;
+  togglePinyin(): void;
+  changeCurriculumGrade(event: PickerEvent): void;
 }
-interface LibraryRuntime extends CommonRuntime { matchSignature?: string; visibleLimit: number; preferredDate?: string }
+interface LibraryRuntime extends CommonRuntime { matchSignature?: string; visibleLimit: number; preferredDate?: string; pinyinChoice?: { childId: string; enabled: boolean } }
 const base = common();
 const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = {
   ...base,
@@ -34,7 +39,11 @@ const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = 
     grade: 0, gradeLabels: ['全部年级 / 待核对', ...learning.gradeLabels.slice(1)],
     coverageOpen: false, poemCount: learning.catalog.filter((item) => item.kind === 'poetry').length,
     wordCount: learning.catalog.filter((item) => item.kind === 'word').length, filtersOpen: false,
-    assignTarget: null, assignDate: '', tomorrow: '', maxPlanDate: '' },
+    assignTarget: null, assignDate: '', tomorrow: '', maxPlanDate: '', showPinyin: false,
+    readingCount: learning.catalog.filter((item) => item.kind === 'reading').length,
+    englishReadingCount: learning.catalog.filter((item) => item.kind === 'english-reading').length,
+    curriculumGradeIndex: 0, curriculumGradeLabels: learning.gradeLabels.slice(1),
+    curriculumSlots: resources.curriculum.slots.filter(slot => slot.grade === 1) },
   onShow() {
     base.onShow.call(this);
     const navigation = getApp<LearningApp>().navigation || {};
@@ -55,6 +64,7 @@ const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = 
   afterRender() {
     const target = this.data.assignTarget;
     this.setData({ subjectOptions: this.data.subjectOptions.filter((subject) => subject.id !== 'math' && subject.id !== 'other'),
+      showPinyin: this.pinyinChoice?.childId === this.data.childId ? this.pinyinChoice.enabled : defaultPinyin(this.data.children.find((child) => child.id === this.data.childId)?.schoolGrade),
       ...(this.data.subjectFilter === 'math' || this.data.subjectFilter === 'other' ? { subjectFilter: 'all' as const } : {}),
       tomorrow: shiftDate(this.data.today, 1), maxPlanDate: shiftDate(this.data.today, 365),
       ...(target && (target.familyId !== this.data.family?.id || target.childId !== this.data.childId || this.data.isChild) ? { assignTarget: null } : {}) });
@@ -78,11 +88,17 @@ const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = 
     const today = this.engine ? this.engine.viewDay(this.data.today).tasks.filter((task) => task.childId === this.data.childId) : [];
     this.setData({ total: matches.length, hasMore: matches.length > this.visibleLimit,
       items: matches.slice(0, this.visibleLimit).map((item) => ({ ...decorate({ ...item, subject: learning.definition(item.kind).subject }),
+        pinyin: pinyinFor(item),
         assigned: today.some((task) => learning.contentId(task) === item.id),
-        gradeLabel: (item.gradeMappings || []).length ? [...new Set(item.gradeMappings!.map((mapping) => learning.gradeLabels[mapping.grade]))].join('、') + ' · 教材目录已核实' : '年级归属待核对',
+        gradeLabel: (item.gradeMappings || []).length ? [...new Set(item.gradeMappings!.map((mapping) => learning.gradeLabels[mapping.grade]))].join('、') + ' · 教材目录已核实' : ['reading', 'english-reading'].includes(item.kind) ? '自编入门练习 · 非教材课文' : '年级归属待核对',
         preview: item.kind === 'poetry' ? decorate(item).poetryByline : item.detail.split('\n')[1] || '' })) });
   },
   changeView(event) { this.setData({ view: event.currentTarget.dataset.id }); },
+  changeCurriculumGrade(event) {
+    const index = Number(event.detail.value);
+    if (!Number.isInteger(index) || index < 0 || index > 8) return;
+    this.setData({ curriculumGradeIndex: index, curriculumSlots: resources.curriculum.slots.filter(slot => slot.grade === index + 1) });
+  },
   changeKind(event) {
     const kindIndex = Number(event.detail.value); const kind = this.data.kinds[kindIndex].id;
     this.setData({ kindIndex, bookId: '', bookTitle: '', subjectFilter: kind ? learning.definition(kind).subject : 'all' });
@@ -95,6 +111,7 @@ const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = 
   expandContent(event) { const id = event.currentTarget.dataset.id; this.setData({ expandedId: this.data.expandedId === id ? '' : id }); },
   toggleCoverage() { this.setData({ coverageOpen: !this.data.coverageOpen }); },
   toggleFilters() { this.setData({ filtersOpen: !this.data.filtersOpen }); },
+  togglePinyin() { this.pinyinChoice = { childId: this.data.childId, enabled: !this.data.showPinyin }; this.setData({ showPinyin: this.pinyinChoice.enabled }); },
   showExamContent(event) {
     const kind = event.currentTarget.dataset.kind;
     const kindIndex = this.data.kinds.findIndex((item) => item.id === kind);

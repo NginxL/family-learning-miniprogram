@@ -66,3 +66,11 @@ button.small, button.quiet { width:auto; flex-shrink:0; }
 .reading { background:#f4e6ee; color:#96617d; }
 button[disabled] { opacity:.5; }
 .library-preview { margin-top:10rpx; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.pinyin-text { font-weight:400; font-size:32rpx; }
+.pinyin-line { min-height:28rpx; line-height:1; }
+.pinyin-unit {display:inline-flex;align-items:flex-end;margin:8rpx 0;vertical-align:bottom;}
+.pinyin-token { display:inline-flex; flex-direction:column; align-items:center; justify-content:flex-end; min-width:1em; padding:0 4rpx; }
+.pinyin-syllable { font-size:23rpx; color:#627568; height:34rpx; line-height:34rpx; white-space:nowrap; }
+.pinyin-glyph { line-height:48rpx; white-space:pre; }
+.pinyin-punctuation { padding:0; min-width:.65em; }
+.pinyin-toggle { min-height:80rpx; margin-top:0; text-align:right; }

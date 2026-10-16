@@ -5,14 +5,14 @@ const kinds: KindDefinition[] = [
   { id: 'poetry', subject: 'poetry', label: '古诗文', unit: '首', max: 5 },
   { id: 'word', subject: 'english', label: '英语单词', unit: '个', max: 30 },
   { id: 'sentence', subject: 'english', label: '英语句子', unit: '句', max: 10 },
-  { id: 'reading', subject: 'reading', label: '阅读', unit: '篇 / 次', max: 5 },
+  { id: 'reading', subject: 'reading', label: '语文阅读', unit: '篇 / 次', max: 5 },
   { id: 'english-reading', subject: 'english', label: '英文阅读', unit: '篇', max: 5 },
   { id: 'math', subject: 'math', label: '数学', unit: '题', max: 20 },
   { id: 'other', subject: 'other', label: '其他', unit: '项', max: 10 }
 ];
 const subjects: Array<{ id: SubjectFilter; label: string }> = [
   { id: 'all', label: '全部' }, { id: 'poetry', label: '古诗文' }, { id: 'english', label: '英语' },
-  { id: 'reading', label: '阅读' }, { id: 'math', label: '数学' }, { id: 'other', label: '其他' }
+  { id: 'reading', label: '语文阅读' }, { id: 'math', label: '数学' }, { id: 'other', label: '其他' }
 ];
 const kindOf = (item: Pick<ContentInput, 'kind' | 'subject'>): ContentKind => item.kind || (item.subject === 'english' ? 'sentence' : item.subject) || 'other';
 const definition = (kind: ContentKind) => kinds.find((entry) => entry.id === kind) || kinds[kinds.length - 1];

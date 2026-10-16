@@ -1,4 +1,5 @@
 import type { Content, KnowledgeItem } from './models';
+import { englishReadings } from './reading-catalog';
 // Stable IDs are shared by the cloud and the demo. Never reuse an ID for different content.
 // Public-domain originals; prompts and all English/reading/maths examples are independently written.
 const poems = [
@@ -53,7 +54,7 @@ const maths: Content[] = Array.from({ length: 20 }, (_, i) => {
 });
 import knowledge = require('./knowledge-data');
 const byId = new Map(knowledge.map((item) => [item.id, item]));
-const starters: KnowledgeItem[] = [...poems, ...words, ...sentences, ...readings, ...maths].map<KnowledgeItem>((item) => {
+const starters: KnowledgeItem[] = [...poems, ...words, ...sentences, ...readings, ...maths, ...englishReadings].map<KnowledgeItem>((item) => {
   const full = byId.get(item.id);
   if (!full) return { ...item, collections: ['starter'] };
   byId.delete(item.id);

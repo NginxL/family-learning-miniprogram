@@ -2,6 +2,7 @@ import { decorate } from '../../lib/page';
 import { groupTasks } from '../../lib/task-groups';
 import { errorDetails } from '../../lib/errors';
 import { parseTaskRoute, type TaskRouteQuery } from '../../lib/task-route';
+import { pinyinFor, defaultPinyin, type PinyinText } from '../../lib/pinyin';
 import type { HomeworkScope, Task } from '../../../shared/models';
 import type { AppMode, LearningApp } from '../../lib/client-models';
 import type { Decorated, PageDefinition } from '../../lib/page-types';
@@ -14,7 +15,9 @@ const PAGE_SIZE = 20;
 
 export interface StudyData {
   group: Omit<Group, 'items'> | null;
-  items: Decorated<Task>[];
+  items: Array<Decorated<Task> & { pinyin: PinyinText | null }>;
+  showPinyin: boolean;
+  hasPinyin: boolean;
   visibleCount: number;
   childName: string;
   date: string;
@@ -39,6 +42,7 @@ export interface StudyMethods {
   refresh(): Promise<void>;
   currentGroup(): Group | null;
   showMore(): void;
+  togglePinyin(): void;
   toggleGroup(): Promise<void>;
   openToday(): void;
   openHomework(): void;
@@ -51,11 +55,12 @@ interface StudyRuntime {
   active?: boolean;
   unsubscribe?: () => boolean;
   timer?: ReturnType<typeof setInterval>;
+  pinyinChoice?: boolean;
 }
 
 const definition: PageDefinition<StudyData, StudyMethods, StudyRuntime> = {
   data: { group: null, items: [], visibleCount: PAGE_SIZE, childName: '', date: '', mode: 'demo', busy: false, isChild: false,
-    loading: true, pageError: '', emptyMessage: '', syncLabel: '', syncError: '', notice: '' },
+    loading: true, pageError: '', emptyMessage: '', syncLabel: '', syncError: '', notice: '', showPinyin: false, hasPinyin: false },
   onLoad(query) {
     this.engine = getApp<LearningApp>().engine;
     this.taskContext = parseTaskRoute(query, this.engine.today);
@@ -103,7 +108,8 @@ const definition: PageDefinition<StudyData, StudyMethods, StudyRuntime> = {
     if (group?.pendingCount) syncLabel += ` · ${group.pendingCount} 项待同步`;
     let summary: StudyData['group'] = null;
     if (group) { const { items, ...info } = group; summary = info; }
-    this.setData({ group: summary, items: (group?.items || []).slice(0, this.data.visibleCount),
+    const items = (group?.items || []).slice(0, this.data.visibleCount).map((item) => ({ ...item, pinyin: pinyinFor(item) }));
+    this.setData({ group: summary, items, hasPinyin: items.some((item) => item.pinyin), showPinyin: this.pinyinChoice ?? defaultPinyin(child?.schoolGrade),
       childName: child?.name || '', date: route?.date || '', mode: getApp<LearningApp>().mode,
       pageError, loading: !pageError && !cached && (snapshot.status === 'syncing' || snapshot.status === 'idle'),
       emptyMessage: !family ? '暂时连接不上学习档案，联网后重试。' : !cached ? '这一天的任务尚未加载，联网后重试。' : '这一天没有这类学习任务。',
@@ -117,6 +123,7 @@ const definition: PageDefinition<StudyData, StudyMethods, StudyRuntime> = {
     if (this.active) this.render();
   },
   showMore() { this.setData({ visibleCount: this.data.visibleCount + PAGE_SIZE }); this.render(); },
+  togglePinyin() { this.pinyinChoice = !this.data.showPinyin; this.setData({ showPinyin: this.pinyinChoice }); },
   async toggleGroup() {
     if (this.submitting || !this.active) return;
     const group = this.currentGroup();

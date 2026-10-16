@@ -1,0 +1,8 @@
+<template name="pinyinText">
+  <view wx:if="{{enabled && lines}}" class="pinyin-text" aria-label="{{text}}">
+    <view wx:for="{{lines}}" wx:for-item="line" wx:key="index" class="pinyin-line">
+      <view wx:for="{{line}}" wx:for-item="token" wx:key="index" class="pinyin-unit"><text wx:if="{{token.before}}" class="pinyin-glyph">{{token.before}}</text><view class="pinyin-token {{token.pinyin ? '' : 'pinyin-punctuation'}}"><text class="pinyin-syllable">{{token.pinyin}}</text><text class="pinyin-glyph">{{token.text}}</text></view><text wx:if="{{token.after}}" class="pinyin-glyph">{{token.after}}</text></view>
+    </view>
+  </view>
+  <text wx:else selectable="true">{{text}}</text>
+</template>

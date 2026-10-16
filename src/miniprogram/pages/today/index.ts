@@ -21,12 +21,17 @@ const definition: PageDefinition<TodayData, TodayMethods, TodayRuntime> = {
   ...base,
   data: { ...base.data, groups: [], groupCount: 0, doneGroupCount: 0, groupPercent: 0 },
   afterRender({ allTasks }) {
+    // Old navigation may remember maths. Keep its records available under All.
+    if (this.data.subjectFilter === 'math') {
+      this.setData({ subjectFilter: 'all', tasks: allTasks, dayWarnings: (this.engine.viewDay(this.data.date).warnings || []).filter((warning) => warning.childId === this.data.childId) });
+      this.rememberSelection();
+    }
     const allGroups = groupTasks(allTasks);
     const groups = allGroups.filter((group) => this.data.subjectFilter === 'all' || group.subject === this.data.subjectFilter);
     const doneGroupCount = allGroups.filter((group) => group.done).length;
     this.setData({ groupCount: allGroups.length, doneGroupCount,
       groupPercent: allGroups.length ? Math.round(doneGroupCount / allGroups.length * 100) : 0,
-      subjectOptions: this.data.subjectOptions.map((subject) => ({ ...subject,
+      subjectOptions: this.data.subjectOptions.filter((subject) => subject.id !== 'math').map((subject) => ({ ...subject,
         count: allGroups.filter((group) => subject.id === 'all' || group.subject === subject.id).length })),
       groups: groups.map(({ items, ...group }) => group) });
   },

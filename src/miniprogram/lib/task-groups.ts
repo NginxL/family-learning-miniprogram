@@ -1,7 +1,7 @@
 import * as learning from './learning/learning';
 import type { ContentKind, Task } from '../../shared/models';
 const labels = { poetry: '读古诗文', word: '背单词', sentence: '读英语句子',
-  'english-reading': '阅读英文文章', reading: '阅读与读书', math: '练数学', other: '其他学习' };
+  'english-reading': '阅读英文文章', reading: '语文阅读与读书', math: '练数学', other: '其他学习' };
 const modes = [{ id: 'new', label: '全新' }, { id: 'review', label: '复习' }, { id: 'manual', label: '家长安排' }];
 
 function groupTasks<T extends Task>(tasks: T[]) {

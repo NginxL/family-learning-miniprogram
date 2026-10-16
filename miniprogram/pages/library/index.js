@@ -38,6 +38,7 @@ const page_1 = require("../../lib/page");
 const learning = __importStar(require("../../lib/learning/learning"));
 const resources = require("../../lib/learning/resources");
 const sync_engine_1 = require("../../lib/sync-engine");
+const pinyin_1 = require("../../lib/pinyin");
 const base = (0, page_1.common)();
 const definition = {
     ...base,
@@ -47,7 +48,11 @@ const definition = {
         grade: 0, gradeLabels: ['全部年级 / 待核对', ...learning.gradeLabels.slice(1)],
         coverageOpen: false, poemCount: learning.catalog.filter((item) => item.kind === 'poetry').length,
         wordCount: learning.catalog.filter((item) => item.kind === 'word').length, filtersOpen: false,
-        assignTarget: null, assignDate: '', tomorrow: '', maxPlanDate: '' },
+        assignTarget: null, assignDate: '', tomorrow: '', maxPlanDate: '', showPinyin: false,
+        readingCount: learning.catalog.filter((item) => item.kind === 'reading').length,
+        englishReadingCount: learning.catalog.filter((item) => item.kind === 'english-reading').length,
+        curriculumGradeIndex: 0, curriculumGradeLabels: learning.gradeLabels.slice(1),
+        curriculumSlots: resources.curriculum.slots.filter(slot => slot.grade === 1) },
     onShow() {
         base.onShow.call(this);
         const navigation = getApp().navigation || {};
@@ -72,12 +77,13 @@ const definition = {
     },
     onHide() { this.setData({ assignTarget: null }); base.onHide.call(this); },
     afterRender() {
-        var _a;
+        var _a, _b, _c;
         const target = this.data.assignTarget;
         this.setData({ subjectOptions: this.data.subjectOptions.filter((subject) => subject.id !== 'math' && subject.id !== 'other'),
+            showPinyin: ((_a = this.pinyinChoice) === null || _a === void 0 ? void 0 : _a.childId) === this.data.childId ? this.pinyinChoice.enabled : (0, pinyin_1.defaultPinyin)((_b = this.data.children.find((child) => child.id === this.data.childId)) === null || _b === void 0 ? void 0 : _b.schoolGrade),
             ...(this.data.subjectFilter === 'math' || this.data.subjectFilter === 'other' ? { subjectFilter: 'all' } : {}),
             tomorrow: (0, sync_engine_1.shiftDate)(this.data.today, 1), maxPlanDate: (0, sync_engine_1.shiftDate)(this.data.today, 365),
-            ...(target && (target.familyId !== ((_a = this.data.family) === null || _a === void 0 ? void 0 : _a.id) || target.childId !== this.data.childId || this.data.isChild) ? { assignTarget: null } : {}) });
+            ...(target && (target.familyId !== ((_c = this.data.family) === null || _c === void 0 ? void 0 : _c.id) || target.childId !== this.data.childId || this.data.isChild) ? { assignTarget: null } : {}) });
         this.updateItems();
     },
     updateScopes() {
@@ -102,11 +108,18 @@ const definition = {
         const today = this.engine ? this.engine.viewDay(this.data.today).tasks.filter((task) => task.childId === this.data.childId) : [];
         this.setData({ total: matches.length, hasMore: matches.length > this.visibleLimit,
             items: matches.slice(0, this.visibleLimit).map((item) => ({ ...(0, page_1.decorate)({ ...item, subject: learning.definition(item.kind).subject }),
+                pinyin: (0, pinyin_1.pinyinFor)(item),
                 assigned: today.some((task) => learning.contentId(task) === item.id),
-                gradeLabel: (item.gradeMappings || []).length ? [...new Set(item.gradeMappings.map((mapping) => learning.gradeLabels[mapping.grade]))].join('、') + ' · 教材目录已核实' : '年级归属待核对',
+                gradeLabel: (item.gradeMappings || []).length ? [...new Set(item.gradeMappings.map((mapping) => learning.gradeLabels[mapping.grade]))].join('、') + ' · 教材目录已核实' : ['reading', 'english-reading'].includes(item.kind) ? '自编入门练习 · 非教材课文' : '年级归属待核对',
                 preview: item.kind === 'poetry' ? (0, page_1.decorate)(item).poetryByline : item.detail.split('\n')[1] || '' })) });
     },
     changeView(event) { this.setData({ view: event.currentTarget.dataset.id }); },
+    changeCurriculumGrade(event) {
+        const index = Number(event.detail.value);
+        if (!Number.isInteger(index) || index < 0 || index > 8)
+            return;
+        this.setData({ curriculumGradeIndex: index, curriculumSlots: resources.curriculum.slots.filter(slot => slot.grade === index + 1) });
+    },
     changeKind(event) {
         const kindIndex = Number(event.detail.value);
         const kind = this.data.kinds[kindIndex].id;
@@ -122,6 +135,7 @@ const definition = {
     expandContent(event) { const id = event.currentTarget.dataset.id; this.setData({ expandedId: this.data.expandedId === id ? '' : id }); },
     toggleCoverage() { this.setData({ coverageOpen: !this.data.coverageOpen }); },
     toggleFilters() { this.setData({ filtersOpen: !this.data.filtersOpen }); },
+    togglePinyin() { this.pinyinChoice = { childId: this.data.childId, enabled: !this.data.showPinyin }; this.setData({ showPinyin: this.pinyinChoice.enabled }); },
     showExamContent(event) {
         const kind = event.currentTarget.dataset.kind;
         const kindIndex = this.data.kinds.findIndex((item) => item.id === kind);

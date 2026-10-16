@@ -90,6 +90,12 @@ test('today summarizes 30 words, opens a scoped detail route and completes, sync
   assert.equal(words().count, 30); assert.equal(words().doneCount, 1);
   assert.ok(today.data.groups.every((group) => !('items' in group)), 'today sends summaries instead of long word lists');
   assert.equal(today.data.subjectOptions.find((subject) => subject.id === 'english').count, 3);
+  assert.equal(today.data.subjectOptions.some((subject) => subject.id === 'math'), false);
+  assert.equal(today.data.groups.find((group) => group.id === 'math').count, 3, 'existing maths tasks remain in All');
+  today.setData({ subjectFilter: 'math' }); today.render();
+  assert.equal(today.data.subjectFilter, 'all'); assert.equal(today.data.tasks.length, 38);
+  assert.equal(app.navigation.subject, 'all', 'stale navigation must not trap today behind a removed filter');
+  assert.equal(today.data.groups.length, 6);
   assert.equal(today.data.groups.find((group) => group.id === 'english-reading').label, '阅读英文文章');
 
   for (const group of today.data.groups) {

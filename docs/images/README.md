@@ -18,14 +18,17 @@
 | [homework-child.png](homework-child.png) | 虚构小树的孩子角色：已提交录音、待家长确认，可以继续添加照片或录音后重新提交 |
 | [homework-parent.png](homework-parent.png) | 同一份虚构作业的家长角色：查看附件、输入反馈、确认完成或退回 |
 | [today.png](today.png) | 今日按类型显示摘要，整张卡片可进入详情，整组完成按钮独立响应 |
-| [study-poetry.png](study-poetry.png) | 《咏鹅》朝代、作者、正文、来源与核验提示，底部整组完成入口 |
+| [study-poetry.png](study-poetry.png) | 《咏鹅》朝代、作者、逐字拼音、正文与来源，保留整组完成入口 |
+| [study-reading.png](study-reading.png) | 自编《一颗小种子》与读后问题，显示拼音辅助 |
 | [study-word.png](study-word.png) | 30 个单词中的第一批 20 项，显示词义与来源；完成按钮作用于全部 30 项 |
-| [study-english-reading.png](study-english-reading.png) | 家长录入的英文短文与整组完成入口 |
+| [study-english-reading.png](study-english-reading.png) | 内置自编英文短文My red bag、读后问题与整组完成入口 |
 | [plans.png](plans.png) | 周六使用「周末轻松」；折叠预览1项自动古诗文与1项手动安排、5个单词、1句英语、1篇英文阅读 |
 | [templates.png](templates.png) | 精简模板编辑：五类数量集中一张卡，改名、新学／复习与内容范围按需展开 |
 | [plans-weekly.png](plans-weekly.png) | 自动安排弹窗：周一至周五使用「上学日」，周六和周日使用「周末轻松」 |
 | [plans-edit.png](plans-edit.png) | 展开明日任务后的调整弹层：选择新日期或删除这一次安排，保留完成记录 |
 | [library.png](library.png) | 古诗文列表显示朝代与作者；高级筛选折叠，数学不再出现在可选列表 |
+| [library-reading.png](library-reading.png) | 语文短文展开后显示拼音，明确自编内容不是教材课文 |
+| [library-curriculum.png](library-curriculum.png) | 按年级检查语文、英语上下册的来源与缺项，书目索引不表示全册知识入库 |
 | [library-date.png](library-date.png) | 为虚构孩子选择今日、明日或一年内指定学习日期 |
 | [history.png](history.png) | 学过的古诗文，包含家长确认掌握与再次安排复习入口 |
 | [progress.png](progress.png) | 在读一年级，学习已涉及三年级部分教材篇目；明确展示统计范围与缺项 |

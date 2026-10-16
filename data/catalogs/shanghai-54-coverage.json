@@ -1,0 +1,898 @@
+{
+  "version": "2026-10-16",
+  "region": "上海市闵行区",
+  "schoolSystem": "5-4",
+  "primaryGrades": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "juniorGrades": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "subjects": [
+    "chinese",
+    "english"
+  ],
+  "complete": false,
+  "target": "小学1–5年级、初中6–9年级（六年级为预备年级）；语文和英语分别覆盖上下学期。",
+  "acceptance": "36个学科册次均须核实教材版本、完整篇目/单元目录、所需知识及学校选用情况，缺项为零后才可声明九年覆盖。",
+  "requiredAreas": {
+    "chinese": [
+      "识字写字与拼音",
+      "古诗文积累",
+      "现代文阅读",
+      "整本书阅读",
+      "表达与习作",
+      "口语交际与综合学习"
+    ],
+    "english": [
+      "语音",
+      "词汇与短语",
+      "语法与句型",
+      "听说",
+      "阅读",
+      "书面表达"
+    ]
+  },
+  "limitations": [
+    "课程目标覆盖九个年级，不限于古诗词和单词。现有入库内容尚未达到九年全量。",
+    "书名、课文目录、正文校对和学校选用分别核验。找到教材入口不提高知识进度覆盖率。",
+    "英语下册来源为2025学年第二学期，部分仍为试用版；不自动认定为2026学年对应下册。",
+    "区域公开来源尚不能确认具体学校的使用版次；国家课标年段不直接转换为上海单一年级。"
+  ],
+  "sources": [
+    {
+      "id": "pep-five-four-20261016",
+      "title": "人民教育出版社教材电子版 · 义务教育（五四学制）· 语文",
+      "url": "https://jc.pep.com.cn/",
+      "checkedAt": "2026-10-16",
+      "scope": "页面实际列出一至九年级上下册，共18册。仅核实教材名称和入口，未将书名目录当作课文目录。"
+    },
+    {
+      "id": "sh-english-2026a",
+      "title": "上海智慧教育平台 · 2026学年第一学期学生版教材配套资源",
+      "url": "https://www.sh.smartedu.cn/teachingMaterial?type=11",
+      "checkedAt": "2026-10-16",
+      "scope": "学生版配套资源表中的教材名称及出版社；不含逐单元词表、课文正文或学校选用证明。"
+    },
+    {
+      "id": "sh-english-2025b",
+      "title": "上海智慧教育平台 · 2025学年第二学期学生版教材配套资源",
+      "url": "https://www.sh.smartedu.cn/teachingMaterial?type=8",
+      "checkedAt": "2026-10-16",
+      "scope": "上一学年下学期的教材名称参考；不能证明2026学年第二学期或未来学年的版次。"
+    }
+  ],
+  "slots": [
+    {
+      "id": "chinese-1a",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "grade": 1,
+      "stage": "primary",
+      "semester": "上册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "义务教育教科书（五·四学制）语文 一年级上册",
+          "publisher": "人民教育出版社",
+          "url": "https://book.pep.com.cn/1211001101242/",
+          "sourceId": "pep-five-four-20261016",
+          "period": "2026-10-16在架目录",
+          "verification": "publisher_listing"
+        }
+      ]
+    },
+    {
+      "id": "chinese-1b",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "grade": 1,
+      "stage": "primary",
+      "semester": "下册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "义务教育教科书（五·四学制）语文 一年级下册",
+          "publisher": "人民教育出版社",
+          "url": "https://book.pep.com.cn/1211001102242/",
+          "sourceId": "pep-five-four-20261016",
+          "period": "2026-10-16在架目录",
+          "verification": "publisher_listing"
+        }
+      ]
+    },
+    {
+      "id": "english-1a",
+      "subject": "english",
+      "subjectLabel": "英语",
+      "grade": 1,
+      "stage": "primary",
+      "semester": "上册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "英语（一年级上册）",
+          "publisher": "上海教育",
+          "url": "https://www.sh.smartedu.cn/teachingMaterial?type=11",
+          "sourceId": "sh-english-2026a",
+          "period": "2026学年第一学期",
+          "verification": "resource_listing"
+        }
+      ]
+    },
+    {
+      "id": "english-1b",
+      "subject": "english",
+      "subjectLabel": "英语",
+      "grade": 1,
+      "stage": "primary",
+      "semester": "下册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "英语（一年级下册）",
+          "publisher": "上海教育",
+          "url": "https://www.sh.smartedu.cn/teachingMaterial?type=8",
+          "sourceId": "sh-english-2025b",
+          "period": "2025学年第二学期",
+          "verification": "historical_resource_listing"
+        }
+      ]
+    },
+    {
+      "id": "chinese-2a",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "grade": 2,
+      "stage": "primary",
+      "semester": "上册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "义务教育教科书（五·四学制）语文 二年级上册",
+          "publisher": "人民教育出版社",
+          "url": "https://book.pep.com.cn/1211001201252/",
+          "sourceId": "pep-five-four-20261016",
+          "period": "2026-10-16在架目录",
+          "verification": "publisher_listing"
+        }
+      ]
+    },
+    {
+      "id": "chinese-2b",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "grade": 2,
+      "stage": "primary",
+      "semester": "下册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "义务教育教科书（五·四学制）语文 二年级下册",
+          "publisher": "人民教育出版社",
+          "url": "https://book.pep.com.cn/1211001202252/",
+          "sourceId": "pep-five-four-20261016",
+          "period": "2026-10-16在架目录",
+          "verification": "publisher_listing"
+        }
+      ]
+    },
+    {
+      "id": "english-2a",
+      "subject": "english",
+      "subjectLabel": "英语",
+      "grade": 2,
+      "stage": "primary",
+      "semester": "上册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "英语（二年级上册）",
+          "publisher": "上海教育",
+          "url": "https://www.sh.smartedu.cn/teachingMaterial?type=11",
+          "sourceId": "sh-english-2026a",
+          "period": "2026学年第一学期",
+          "verification": "resource_listing"
+        }
+      ]
+    },
+    {
+      "id": "english-2b",
+      "subject": "english",
+      "subjectLabel": "英语",
+      "grade": 2,
+      "stage": "primary",
+      "semester": "下册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "英语（二年级下册）",
+          "publisher": "上海教育",
+          "url": "https://www.sh.smartedu.cn/teachingMaterial?type=8",
+          "sourceId": "sh-english-2025b",
+          "period": "2025学年第二学期",
+          "verification": "historical_resource_listing"
+        }
+      ]
+    },
+    {
+      "id": "chinese-3a",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "grade": 3,
+      "stage": "primary",
+      "semester": "上册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "义务教育教科书（五·四学制）语文 三年级上册",
+          "publisher": "人民教育出版社",
+          "url": "https://book.pep.com.cn/1211001301252/",
+          "sourceId": "pep-five-four-20261016",
+          "period": "2026-10-16在架目录",
+          "verification": "publisher_listing"
+        }
+      ]
+    },
+    {
+      "id": "chinese-3b",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "grade": 3,
+      "stage": "primary",
+      "semester": "下册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "义务教育教科书（五·四学制）语文 三年级下册",
+          "publisher": "人民教育出版社",
+          "url": "https://book.pep.com.cn/1211001302252/",
+          "sourceId": "pep-five-four-20261016",
+          "period": "2026-10-16在架目录",
+          "verification": "publisher_listing"
+        }
+      ]
+    },
+    {
+      "id": "english-3a",
+      "subject": "english",
+      "subjectLabel": "英语",
+      "grade": 3,
+      "stage": "primary",
+      "semester": "上册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "义务教育教科书（五·四学制）·英语（三年级上册）",
+          "publisher": "上海教育",
+          "url": "https://www.sh.smartedu.cn/teachingMaterial?type=11",
+          "sourceId": "sh-english-2026a",
+          "period": "2026学年第一学期",
+          "verification": "resource_listing"
+        }
+      ]
+    },
+    {
+      "id": "english-3b",
+      "subject": "english",
+      "subjectLabel": "英语",
+      "grade": 3,
+      "stage": "primary",
+      "semester": "下册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "英语（牛津上海版）（试用本）（三/二）",
+          "publisher": "上海教育",
+          "url": "https://www.sh.smartedu.cn/teachingMaterial?type=8",
+          "sourceId": "sh-english-2025b",
+          "period": "2025学年第二学期",
+          "verification": "historical_resource_listing"
+        },
+        {
+          "title": "英语（新世纪版）（试用本）（三/二）",
+          "publisher": "上海外语教育",
+          "url": "https://www.sh.smartedu.cn/teachingMaterial?type=8",
+          "sourceId": "sh-english-2025b",
+          "period": "2025学年第二学期",
+          "verification": "historical_resource_listing"
+        }
+      ]
+    },
+    {
+      "id": "chinese-4a",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "grade": 4,
+      "stage": "primary",
+      "semester": "上册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "义务教育教科书（五·四学制）语文 四年级上册",
+          "publisher": "人民教育出版社",
+          "url": "https://book.pep.com.cn/1211001401262/",
+          "sourceId": "pep-five-four-20261016",
+          "period": "2026-10-16在架目录",
+          "verification": "publisher_listing"
+        }
+      ]
+    },
+    {
+      "id": "chinese-4b",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "grade": 4,
+      "stage": "primary",
+      "semester": "下册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "义务教育教科书（五·四学制）语文 四年级下册",
+          "publisher": "人民教育出版社",
+          "url": "https://book.pep.com.cn/1211001402192/",
+          "sourceId": "pep-five-four-20261016",
+          "period": "2026-10-16在架目录",
+          "verification": "publisher_listing"
+        }
+      ]
+    },
+    {
+      "id": "english-4a",
+      "subject": "english",
+      "subjectLabel": "英语",
+      "grade": 4,
+      "stage": "primary",
+      "semester": "上册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "义务教育教科书（五·四学制）·英语（四年级上册）",
+          "publisher": "上海教育",
+          "url": "https://www.sh.smartedu.cn/teachingMaterial?type=11",
+          "sourceId": "sh-english-2026a",
+          "period": "2026学年第一学期",
+          "verification": "resource_listing"
+        }
+      ]
+    },
+    {
+      "id": "english-4b",
+      "subject": "english",
+      "subjectLabel": "英语",
+      "grade": 4,
+      "stage": "primary",
+      "semester": "下册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "英语（牛津上海版）（试用本）（四/二）",
+          "publisher": "上海教育",
+          "url": "https://www.sh.smartedu.cn/teachingMaterial?type=8",
+          "sourceId": "sh-english-2025b",
+          "period": "2025学年第二学期",
+          "verification": "historical_resource_listing"
+        },
+        {
+          "title": "英语（新世纪版）（试用本）（四/二）",
+          "publisher": "上海外语教育",
+          "url": "https://www.sh.smartedu.cn/teachingMaterial?type=8",
+          "sourceId": "sh-english-2025b",
+          "period": "2025学年第二学期",
+          "verification": "historical_resource_listing"
+        }
+      ]
+    },
+    {
+      "id": "chinese-5a",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "grade": 5,
+      "stage": "primary",
+      "semester": "上册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "义务教育教科书（五·四学制）语文 五年级上册",
+          "publisher": "人民教育出版社",
+          "url": "https://book.pep.com.cn/1211001501262/",
+          "sourceId": "pep-five-four-20261016",
+          "period": "2026-10-16在架目录",
+          "verification": "publisher_listing"
+        }
+      ]
+    },
+    {
+      "id": "chinese-5b",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "grade": 5,
+      "stage": "primary",
+      "semester": "下册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "义务教育教科书（五·四学制）语文 五年级下册",
+          "publisher": "人民教育出版社",
+          "url": "https://book.pep.com.cn/1211001502192/",
+          "sourceId": "pep-five-four-20261016",
+          "period": "2026-10-16在架目录",
+          "verification": "publisher_listing"
+        }
+      ]
+    },
+    {
+      "id": "english-5a",
+      "subject": "english",
+      "subjectLabel": "英语",
+      "grade": 5,
+      "stage": "primary",
+      "semester": "上册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "义务教育教科书（五·四学制）·英语（五年级上册）",
+          "publisher": "上海教育",
+          "url": "https://www.sh.smartedu.cn/teachingMaterial?type=11",
+          "sourceId": "sh-english-2026a",
+          "period": "2026学年第一学期",
+          "verification": "resource_listing"
+        }
+      ]
+    },
+    {
+      "id": "english-5b",
+      "subject": "english",
+      "subjectLabel": "英语",
+      "grade": 5,
+      "stage": "primary",
+      "semester": "下册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "英语（牛津上海版）（试用本）（五/二）",
+          "publisher": "上海教育",
+          "url": "https://www.sh.smartedu.cn/teachingMaterial?type=8",
+          "sourceId": "sh-english-2025b",
+          "period": "2025学年第二学期",
+          "verification": "historical_resource_listing"
+        },
+        {
+          "title": "英语（新世纪版）（试用本）（五/二）",
+          "publisher": "上海外语教育",
+          "url": "https://www.sh.smartedu.cn/teachingMaterial?type=8",
+          "sourceId": "sh-english-2025b",
+          "period": "2025学年第二学期",
+          "verification": "historical_resource_listing"
+        }
+      ]
+    },
+    {
+      "id": "chinese-6a",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "grade": 6,
+      "stage": "junior",
+      "semester": "上册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "义务教育教科书（五·四学制）语文 六年级上册",
+          "publisher": "人民教育出版社",
+          "url": "https://book.pep.com.cn/1311001601242/",
+          "sourceId": "pep-five-four-20261016",
+          "period": "2026-10-16在架目录",
+          "verification": "publisher_listing"
+        }
+      ]
+    },
+    {
+      "id": "chinese-6b",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "grade": 6,
+      "stage": "junior",
+      "semester": "下册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "义务教育教科书（五·四学制）语文 六年级下册",
+          "publisher": "人民教育出版社",
+          "url": "https://book.pep.com.cn/1311001602242/",
+          "sourceId": "pep-five-four-20261016",
+          "period": "2026-10-16在架目录",
+          "verification": "publisher_listing"
+        }
+      ]
+    },
+    {
+      "id": "english-6a",
+      "subject": "english",
+      "subjectLabel": "英语",
+      "grade": 6,
+      "stage": "junior",
+      "semester": "上册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "义务教育教科书（五·四学制）·英语（六年级上册）",
+          "publisher": "上海教育",
+          "url": "https://www.sh.smartedu.cn/teachingMaterial?type=11",
+          "sourceId": "sh-english-2026a",
+          "period": "2026学年第一学期",
+          "verification": "resource_listing"
+        }
+      ]
+    },
+    {
+      "id": "english-6b",
+      "subject": "english",
+      "subjectLabel": "英语",
+      "grade": 6,
+      "stage": "junior",
+      "semester": "下册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "义务教育教科书（五·四学制）·英语（六年级下册）",
+          "publisher": "上海教育",
+          "url": "https://www.sh.smartedu.cn/teachingMaterial?type=8",
+          "sourceId": "sh-english-2025b",
+          "period": "2025学年第二学期",
+          "verification": "historical_resource_listing"
+        }
+      ]
+    },
+    {
+      "id": "chinese-7a",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "grade": 7,
+      "stage": "junior",
+      "semester": "上册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "义务教育教科书（五·四学制）语文 七年级上册",
+          "publisher": "人民教育出版社",
+          "url": "https://book.pep.com.cn/1311001101242/",
+          "sourceId": "pep-five-four-20261016",
+          "period": "2026-10-16在架目录",
+          "verification": "publisher_listing"
+        }
+      ]
+    },
+    {
+      "id": "chinese-7b",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "grade": 7,
+      "stage": "junior",
+      "semester": "下册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "义务教育教科书（五·四学制）语文 七年级下册",
+          "publisher": "人民教育出版社",
+          "url": "https://book.pep.com.cn/1311001102242/",
+          "sourceId": "pep-five-four-20261016",
+          "period": "2026-10-16在架目录",
+          "verification": "publisher_listing"
+        }
+      ]
+    },
+    {
+      "id": "english-7a",
+      "subject": "english",
+      "subjectLabel": "英语",
+      "grade": 7,
+      "stage": "junior",
+      "semester": "上册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "义务教育教科书（五·四学制）·英语（七年级上册）",
+          "publisher": "上海教育",
+          "url": "https://www.sh.smartedu.cn/teachingMaterial?type=11",
+          "sourceId": "sh-english-2026a",
+          "period": "2026学年第一学期",
+          "verification": "resource_listing"
+        }
+      ]
+    },
+    {
+      "id": "english-7b",
+      "subject": "english",
+      "subjectLabel": "英语",
+      "grade": 7,
+      "stage": "junior",
+      "semester": "下册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "义务教育教科书（五·四学制）·英语（七年级下册）",
+          "publisher": "上海教育",
+          "url": "https://www.sh.smartedu.cn/teachingMaterial?type=8",
+          "sourceId": "sh-english-2025b",
+          "period": "2025学年第二学期",
+          "verification": "historical_resource_listing"
+        }
+      ]
+    },
+    {
+      "id": "chinese-8a",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "grade": 8,
+      "stage": "junior",
+      "semester": "上册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "义务教育教科书（五·四学制）语文 八年级上册",
+          "publisher": "人民教育出版社",
+          "url": "https://book.pep.com.cn/1311001201252/",
+          "sourceId": "pep-five-four-20261016",
+          "period": "2026-10-16在架目录",
+          "verification": "publisher_listing"
+        }
+      ]
+    },
+    {
+      "id": "chinese-8b",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "grade": 8,
+      "stage": "junior",
+      "semester": "下册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "义务教育教科书（五·四学制）语文 八年级下册",
+          "publisher": "人民教育出版社",
+          "url": "https://book.pep.com.cn/1311001202252/",
+          "sourceId": "pep-five-four-20261016",
+          "period": "2026-10-16在架目录",
+          "verification": "publisher_listing"
+        }
+      ]
+    },
+    {
+      "id": "english-8a",
+      "subject": "english",
+      "subjectLabel": "英语",
+      "grade": 8,
+      "stage": "junior",
+      "semester": "上册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "义务教育教科书（五·四学制）·英语（八年级上册）",
+          "publisher": "上海教育",
+          "url": "https://www.sh.smartedu.cn/teachingMaterial?type=11",
+          "sourceId": "sh-english-2026a",
+          "period": "2026学年第一学期",
+          "verification": "resource_listing"
+        }
+      ]
+    },
+    {
+      "id": "english-8b",
+      "subject": "english",
+      "subjectLabel": "英语",
+      "grade": 8,
+      "stage": "junior",
+      "semester": "下册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "义务教育教科书（五·四学制）·英语（八年级下册）",
+          "publisher": "上海教育",
+          "url": "https://www.sh.smartedu.cn/teachingMaterial?type=8",
+          "sourceId": "sh-english-2025b",
+          "period": "2025学年第二学期",
+          "verification": "historical_resource_listing"
+        }
+      ]
+    },
+    {
+      "id": "chinese-9a",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "grade": 9,
+      "stage": "junior",
+      "semester": "上册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "义务教育教科书（五·四学制）语文 九年级上册",
+          "publisher": "人民教育出版社",
+          "url": "https://book.pep.com.cn/1311001301262/",
+          "sourceId": "pep-five-four-20261016",
+          "period": "2026-10-16在架目录",
+          "verification": "publisher_listing"
+        }
+      ]
+    },
+    {
+      "id": "chinese-9b",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "grade": 9,
+      "stage": "junior",
+      "semester": "下册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "义务教育教科书（五·四学制）语文 九年级下册",
+          "publisher": "人民教育出版社",
+          "url": "https://book.pep.com.cn/1311001302192/",
+          "sourceId": "pep-five-four-20261016",
+          "period": "2026-10-16在架目录",
+          "verification": "publisher_listing"
+        }
+      ]
+    },
+    {
+      "id": "english-9a",
+      "subject": "english",
+      "subjectLabel": "英语",
+      "grade": 9,
+      "stage": "junior",
+      "semester": "上册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "义务教育教科书（五·四学制）·英语（九年级上册）",
+          "publisher": "上海教育",
+          "url": "https://www.sh.smartedu.cn/teachingMaterial?type=11",
+          "sourceId": "sh-english-2026a",
+          "period": "2026学年第一学期",
+          "verification": "resource_listing"
+        }
+      ]
+    },
+    {
+      "id": "english-9b",
+      "subject": "english",
+      "subjectLabel": "英语",
+      "grade": 9,
+      "stage": "junior",
+      "semester": "下册",
+      "fullCoverage": false,
+      "schoolAdoption": "pending",
+      "editionStatus": "pending",
+      "contentStatus": "pending",
+      "references": [
+        {
+          "title": "英语（牛津上海版）（试用本）（九/二）",
+          "publisher": "上海教育",
+          "url": "https://www.sh.smartedu.cn/teachingMaterial?type=8",
+          "sourceId": "sh-english-2025b",
+          "period": "2025学年第二学期",
+          "verification": "historical_resource_listing"
+        },
+        {
+          "title": "英语（新世纪版）（试用本）（九/二）",
+          "publisher": "上海外语教育",
+          "url": "https://www.sh.smartedu.cn/teachingMaterial?type=8",
+          "sourceId": "sh-english-2025b",
+          "period": "2025学年第二学期",
+          "verification": "historical_resource_listing"
+        }
+      ]
+    }
+  ]
+}

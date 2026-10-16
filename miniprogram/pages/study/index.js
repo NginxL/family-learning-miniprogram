@@ -5,10 +5,11 @@ const page_1 = require("../../lib/page");
 const task_groups_1 = require("../../lib/task-groups");
 const errors_1 = require("../../lib/errors");
 const task_route_1 = require("../../lib/task-route");
+const pinyin_1 = require("../../lib/pinyin");
 const PAGE_SIZE = 20;
 const definition = {
     data: { group: null, items: [], visibleCount: PAGE_SIZE, childName: '', date: '', mode: 'demo', busy: false, isChild: false,
-        loading: true, pageError: '', emptyMessage: '', syncLabel: '', syncError: '', notice: '' },
+        loading: true, pageError: '', emptyMessage: '', syncLabel: '', syncError: '', notice: '', showPinyin: false, hasPinyin: false },
     onLoad(query) {
         this.engine = getApp().engine;
         this.taskContext = (0, task_route_1.parseTaskRoute)(query, this.engine.today);
@@ -50,6 +51,7 @@ const definition = {
         return (0, task_groups_1.groupTasks)(tasks).find((group) => group.id === route.kind) || null;
     },
     render() {
+        var _a;
         const route = this.taskContext;
         const snapshot = this.engine.snapshot();
         const family = snapshot.family;
@@ -71,7 +73,8 @@ const definition = {
             const { items, ...info } = group;
             summary = info;
         }
-        this.setData({ group: summary, items: ((group === null || group === void 0 ? void 0 : group.items) || []).slice(0, this.data.visibleCount),
+        const items = ((group === null || group === void 0 ? void 0 : group.items) || []).slice(0, this.data.visibleCount).map((item) => ({ ...item, pinyin: (0, pinyin_1.pinyinFor)(item) }));
+        this.setData({ group: summary, items, hasPinyin: items.some((item) => item.pinyin), showPinyin: (_a = this.pinyinChoice) !== null && _a !== void 0 ? _a : (0, pinyin_1.defaultPinyin)(child === null || child === void 0 ? void 0 : child.schoolGrade),
             childName: (child === null || child === void 0 ? void 0 : child.name) || '', date: (route === null || route === void 0 ? void 0 : route.date) || '', mode: getApp().mode,
             pageError, loading: !pageError && !cached && (snapshot.status === 'syncing' || snapshot.status === 'idle'),
             emptyMessage: !family ? '暂时连接不上学习档案，联网后重试。' : !cached ? '这一天的任务尚未加载，联网后重试。' : '这一天没有这类学习任务。',
@@ -91,6 +94,7 @@ const definition = {
             this.render();
     },
     showMore() { this.setData({ visibleCount: this.data.visibleCount + PAGE_SIZE }); this.render(); },
+    togglePinyin() { this.pinyinChoice = !this.data.showPinyin; this.setData({ showPinyin: this.pinyinChoice }); },
     async toggleGroup() {
         if (this.submitting || !this.active)
             return;
