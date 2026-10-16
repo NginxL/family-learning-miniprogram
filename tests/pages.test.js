@@ -24,7 +24,7 @@ test('all WXML event handlers exist; family profile, manual cross-grade work, li
   const engine = new SyncEngine({ transport: createDemo(global.wx), storage: memoryStorage() });
   const app = { engine, mode: 'demo', navigation: {} }; global.getApp = () => app;
   t.after(() => { delete global.wx; delete global.getApp; delete global.Page; });
-  const names = ['today', 'plans', 'library', 'history', 'family', 'progress'];
+  const names = ['today', 'plans', 'library', 'history', 'family', 'progress', 'study'];
   for (const name of names) {
     const instance = page(name, engine);
     const template = fs.readFileSync(path.join(root, `miniprogram/pages/${name}/index.wxml`), 'utf8');
@@ -61,7 +61,7 @@ test('all WXML event handlers exist; family profile, manual cross-grade work, li
   assert.equal(library.data.grade, 0); assert.equal(library.data.subjectFilter, 'english');
 });
 
-test('today collapses 30 words into one activity and completes, syncs and undoes only that child and type', async (t) => {
+test('today summarizes 30 words, opens a scoped detail route and completes, syncs and undoes only that child and type', async (t) => {
   const f = fixture(); const family = await f.family(); await f.addParent(family.id);
   const childId = family.children[0].id; const date = '2026-10-12';
   const call = (action, payload) => f.call('parent-a', action, { familyId: family.id, childId, ...payload });
@@ -74,8 +74,8 @@ test('today collapses 30 words into one activity and completes, syncs and undoes
   const a = f.client('parent-a'); const b = f.client('parent-b'); await a.engine.sync(date); await b.engine.sync(date);
   const firstWord = a.engine.viewDay(date).tasks.find((task) => task.childId === childId && task.kind === 'word');
   a.engine.enqueue(date, firstWord.id, true); await a.engine.sync(date);
-  const toasts = [];
-  global.wx = { showToast: (value) => toasts.push(value.title) };
+  const toasts = []; const navigations = [];
+  global.wx = { showToast: (value) => toasts.push(value.title), navigateTo: (value) => { navigations.push(value); } };
   const app = { engine: a.engine, mode: 'cloud', navigation: {} }; global.getApp = () => app;
   const today = page('today', a.engine); today.render();
   const unsubscribe = a.engine.subscribe(() => today.render());
@@ -85,32 +85,47 @@ test('today collapses 30 words into one activity and completes, syncs and undoes
   assert.equal(today.data.groupCount, 6);
   assert.equal(today.data.allTaskCount, 38);
   assert.equal(words().count, 30); assert.equal(words().doneCount, 1);
-  assert.ok(today.data.groups.every((group) => !group.expanded && !group.items.length));
+  assert.ok(today.data.groups.every((group) => !('items' in group)), 'today sends summaries instead of long word lists');
   assert.equal(today.data.subjectOptions.find((subject) => subject.id === 'english').count, 3);
   assert.equal(today.data.groups.find((group) => group.id === 'english-reading').label, '阅读英文文章');
 
-  today.expandGroup(event('word')); assert.equal(words().items.length, 30);
-  today.expandTask(event(firstWord.id)); a.engine.emit();
-  assert.equal(today.data.expandedGroupId, 'word'); assert.equal(today.data.expandedId, firstWord.id);
+  for (const group of today.data.groups) {
+    today.openGroup(event(group.id));
+    const navigation = navigations.at(-1);
+    const route = new URL(navigation.url, 'https://local.test');
+    assert.equal(route.pathname, '/pages/study/index');
+    assert.deepEqual(Object.fromEntries(route.searchParams), { familyId: family.id, childId, date, kind: group.id });
+    today.openGroup(event(group.id)); assert.equal(navigations.at(-1), navigation, 'a second tap while opening must not stack pages');
+    navigation.complete();
+  }
+  assert.equal(navigations.length, 6);
+  today.openGroup(event('unknown')); assert.equal(navigations.length, 6);
   a.offline(); await today.toggleGroup(event('word'));
   assert.equal(words().done, true); assert.equal(words().pendingCount, 29);
   assert.equal(a.engine.state.queue.length, 29, 'the already completed word is not written again');
   assert.equal(today.data.doneGroupCount, 1); assert.equal(today.data.groupPercent, 17);
   assert.ok(a.engine.viewDay(date).tasks.filter((task) => task.childId !== childId || task.kind !== 'word').every((task) => !task.done));
   today.selectSubject(event('english'));
-  assert.equal(today.data.groups.length, 3); assert.equal(today.data.expandedGroupId, ''); assert.equal(today.data.expandedId, '');
-  today.expandGroup(event('word')); today.selectChild(event(otherChild.id));
-  assert.equal(today.data.expandedGroupId, ''); assert.equal(words().count, 1); assert.equal(words().done, false);
+  assert.equal(today.data.groups.length, 3);
+  today.selectChild(event(otherChild.id));
+  assert.equal(words().count, 1); assert.equal(words().done, false);
   today.selectChild(event(childId)); a.online(); await a.engine.sync(date); await b.engine.sync(date);
   const remoteWords = b.engine.viewDay(date).tasks.filter((task) => task.childId === childId && task.kind === 'word');
   assert.ok(remoteWords.every((task) => task.done && task.version === 1));
   const history = await b.engine.getHistory({ childId });
   assert.equal(history.total, 30); assert.ok(history.items.every((item) => item.kind === 'word' && item.learnedCount === 1 && !item.mastered));
-  today.expandGroup(event('word')); await today.changeDate({ detail: { value: '2026-10-11' } });
-  assert.equal(today.data.expandedGroupId, ''); assert.equal(today.data.groups.length, 0);
-  await today.backToday(); assert.equal(words().done, true); assert.equal(today.data.expandedGroupId, '');
+  await today.changeDate({ detail: { value: '2026-10-11' } });
+  assert.equal(today.data.groups.length, 0);
+  await today.backToday(); assert.equal(words().done, true);
   await today.toggleGroup(event('word')); await b.engine.sync(date);
   assert.ok(b.engine.viewDay(date).tasks.every((task) => !task.done));
   assert.equal((await b.engine.getHistory({ childId })).total, 0);
   assert.equal(today.data.doneGroupCount, 0); assert.deepEqual(toasts, []);
+});
+
+test('the full today card opens details while its group completion button stops tap propagation', () => {
+  const template = fs.readFileSync(path.join(root, 'miniprogram/pages/today/index.wxml'), 'utf8');
+  assert.match(template, /<view[^>]+class="card activity-card"[^>]+bindtap="openGroup"/);
+  assert.match(template, /<button[^>]+catchtap="toggleGroup"/);
+  assert.doesNotMatch(template, /bindtap="toggleGroup"/);
 });

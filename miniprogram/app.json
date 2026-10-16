@@ -6,7 +6,8 @@
     "pages/history/index",
     "pages/family/index",
     "pages/progress/index",
-    "pages/privacy/index"
+    "pages/privacy/index",
+    "pages/study/index"
   ],
   "window": {
     "navigationBarTitleText": "小小日课",

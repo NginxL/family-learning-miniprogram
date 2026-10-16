@@ -7,27 +7,31 @@ const errors_1 = require("../../lib/errors");
 const base = (0, page_1.common)();
 const definition = {
     ...base,
-    data: { ...base.data, groups: [], expandedGroupId: '', expandedId: '', groupCount: 0, doneGroupCount: 0, groupPercent: 0 },
+    data: { ...base.data, groups: [], groupCount: 0, doneGroupCount: 0, groupPercent: 0 },
     afterRender({ allTasks }) {
-        const context = JSON.stringify([this.data.family && this.data.family.id, this.data.childId, this.data.date, this.data.subjectFilter]);
         const allGroups = (0, task_groups_1.groupTasks)(allTasks);
         const groups = allGroups.filter((group) => this.data.subjectFilter === 'all' || group.subject === this.data.subjectFilter);
-        const expandedGroupId = this.groupContext === context && groups.some((group) => group.id === this.data.expandedGroupId) ? this.data.expandedGroupId : '';
-        const openGroup = groups.find((group) => group.id === expandedGroupId);
-        const expandedId = openGroup && openGroup.items.some((task) => task.id === this.data.expandedId) ? this.data.expandedId : '';
-        this.groupContext = context;
         const doneGroupCount = allGroups.filter((group) => group.done).length;
-        this.setData({ expandedGroupId, expandedId, groupCount: allGroups.length, doneGroupCount,
+        this.setData({ groupCount: allGroups.length, doneGroupCount,
             groupPercent: allGroups.length ? Math.round(doneGroupCount / allGroups.length * 100) : 0,
             subjectOptions: this.data.subjectOptions.map((subject) => ({ ...subject,
                 count: allGroups.filter((group) => subject.id === 'all' || group.subject === subject.id).length })),
-            groups: groups.map((group) => ({ ...group, expanded: group.id === expandedGroupId,
-                items: group.id === expandedGroupId ? group.items : [] })) });
+            groups: groups.map(({ items, ...group }) => group) });
     },
-    expandGroup(event) {
-        const id = event.currentTarget.dataset.id;
-        this.setData({ expandedGroupId: this.data.expandedGroupId === id ? '' : id, expandedId: '' });
-        this.render();
+    openGroup(event) {
+        var _a;
+        const group = this.data.groups.find((item) => item.id === event.currentTarget.dataset.id);
+        const family = this.engine.snapshot().family;
+        if (this.openingGroup || !group || !family || family.id !== ((_a = this.data.family) === null || _a === void 0 ? void 0 : _a.id)
+            || !family.children.some((child) => child.id === this.data.childId))
+            return;
+        this.rememberSelection();
+        const query = Object.entries({ familyId: family.id, childId: this.data.childId, date: this.data.date, kind: group.id })
+            .map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+        this.openingGroup = true;
+        wx.navigateTo({ url: `/pages/study/index?${query}`,
+            fail: () => { wx.showToast({ title: '暂时无法打开，请重试', icon: 'none' }); },
+            complete: () => { this.openingGroup = false; } });
     },
     async toggleGroup(event) {
         const date = this.data.date;
@@ -44,8 +48,7 @@ const definition = {
             wx.showToast({ title: (0, errors_1.errorDetails)(error).message || '操作失败', icon: 'none' });
         }
     },
-    expandTask(event) { const id = event.currentTarget.dataset.id; this.setData({ expandedId: this.data.expandedId === id ? '' : id }); },
-    async changeDate(event) { this.setData({ date: event.detail.value, followToday: event.detail.value === this.data.today, expandedId: '' }); this.render(); await this.engine.sync(this.data.date); },
+    async changeDate(event) { this.setData({ date: event.detail.value, followToday: event.detail.value === this.data.today }); this.render(); await this.engine.sync(this.data.date); },
     async backToday() { this.setData({ date: this.data.today, followToday: true }); this.render(); await this.engine.sync(this.data.date); }
 };
 Page(definition);

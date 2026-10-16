@@ -1,0 +1,12 @@
+.study-page { padding-bottom:240rpx; padding-bottom:calc(240rpx + env(safe-area-inset-bottom)); }
+.study-summary { margin-top:20rpx; }
+.sync-button { min-height:80rpx; display:flex; align-items:center; justify-content:center; }
+.study-item .task-title { font-size:36rpx; font-weight:600; overflow-wrap:anywhere; }
+.study-item .body { font-size:32rpx; line-height:2; overflow-wrap:anywhere; }
+.study-note { background:#f5f6f2; border-radius:16rpx; padding:18rpx 22rpx; margin:18rpx 0; font-size:26rpx; white-space:pre-wrap; }
+.study-source { border-top:1rpx solid #edf0e9; padding-top:18rpx; white-space:pre-wrap; overflow-wrap:anywhere; }
+.load-more { min-height:88rpx; }
+.study-end { margin:30rpx 0; text-align:center; }
+.study-footer { position:fixed; bottom:0; left:0; right:0; z-index:10; background:#fff; padding:18rpx 32rpx 24rpx; padding-bottom:calc(24rpx + env(safe-area-inset-bottom)); box-shadow:0 -4rpx 24rpx rgba(37,59,50,.06); }
+.footer-summary { text-align:center; }
+.study-footer button { margin-top:12rpx; min-height:88rpx; }
