@@ -24,7 +24,7 @@
         <view wx:for="{{item.gradeMappings}}" wx:for-item="mapping" wx:key="bookId" class="muted plan-help"><view>{{gradeLabels[mapping.grade]}} {{mapping.semester}} · {{mapping.edition}}</view><view wx:if="{{mapping.sourcePrintPage}}">{{mapping.unit}} · 原书第 {{mapping.sourcePrintPage}} 页 / PDF 第 {{mapping.sourcePdfPage}} 页</view><view>{{mapping.evidence}}</view><button class="quiet" data-url="{{mapping.sourceUrl}}" bindtap="copySource">复制年级依据链接</button></view>
         <view class="tab-row"><button wx:if="{{item.referenceUrl}}" class="quiet" data-url="{{item.referenceUrl}}" bindtap="copySource">复制目录来源链接</button><button wx:if="{{item.textSourceUrl}}" class="quiet" data-url="{{item.textSourceUrl}}" bindtap="copySource">复制正文 / 词典来源</button></view>
       </block>
-      <view class="row" style="margin-top:20rpx"><button class="quiet" data-id="{{item.id}}" bindtap="expandContent">{{expandedId === item.id ? '收起 ↑' : '看看内容 ↓'}}</button><button wx:if="{{family}}" class="small secondary" style="margin:0" data-id="{{item.id}}" bindtap="assignItem" disabled="{{busy}}">{{item.assigned ? '今日已安排' : '加入今日'}}</button></view>
+      <view class="row" style="margin-top:20rpx"><button class="quiet" data-id="{{item.id}}" bindtap="expandContent">{{expandedId === item.id ? '收起 ↑' : '看看内容 ↓'}}</button><button wx:if="{{family && !isChild}}" class="small secondary" style="margin:0" data-id="{{item.id}}" bindtap="assignItem" disabled="{{busy}}">{{item.assigned ? '今日已安排' : '加入今日'}}</button></view>
     </view>
     <view wx:if="{{!items.length}}" class="card empty">{{grade ? '这个筛选范围尚无已核实的年级内容，不代表这个年级没有学习要求。' : '没有匹配的内容，试试其他关键词或范围。'}}</view>
     <button wx:if="{{hasMore}}" class="secondary" bindtap="loadMore">再看 30 项</button>

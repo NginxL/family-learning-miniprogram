@@ -19,7 +19,8 @@ for (const file of walk(root)) {
 const app = JSON.parse(fs.readFileSync(path.join(root, 'miniprogram/app.json')));
 for (const page of app.pages) for (const extension of ['.js', '.wxml']) assert.ok(fs.existsSync(path.join(root, 'miniprogram', page + extension)), `${page}${extension} missing`);
 const rules = JSON.parse(fs.readFileSync(path.join(root, 'cloud/database.rules.json')));
-for (const name of ['families', 'profiles', 'invites', 'days', 'receipts', 'learning']) assert.deepEqual(rules[name], { read: false, write: false });
+for (const name of require('../cloudfunctions/familyApi/store').COLLECTIONS) assert.deepEqual(rules[name], { read: false, write: false });
+assert.deepEqual(JSON.parse(fs.readFileSync(path.join(root, 'cloud/storage.rules.json'))), { read: false, write: false });
 for (const [name, expected] of require('./typescript-build').artifacts()) {
   assert.equal(fs.readFileSync(path.join(root, name), 'utf8'), expected, `Run npm run build: stale ${name}`);
 }

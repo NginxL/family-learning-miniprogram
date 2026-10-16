@@ -28,10 +28,10 @@ function artifacts() {
     };
     for (const name of ['catalog', 'learning', 'child-profile']) add(`shared/${name}.js`,
       [`shared/${name}.js`, `miniprogram/lib/learning/${name}.js`, `cloudfunctions/familyApi/learning/${name}.js`]);
-    for (const name of ['index', 'service', 'store']) add(`cloud/${name}.js`, [`cloudfunctions/familyApi/${name}.js`]);
+    for (const name of ['index', 'service', 'store', 'validation', 'homework']) add(`cloud/${name}.js`, [`cloudfunctions/familyApi/${name}.js`]);
     add('client/cloud-transport.js', ['miniprogram/lib/cloud-transport.js']);
     add('miniprogram/app.js', ['miniprogram/app.js']);
-    for (const name of ['sync-engine', 'task-groups', 'page', 'errors'])
+    for (const name of ['sync-engine', 'task-groups', 'page', 'errors', 'task-route', 'homework-media'])
       add(`miniprogram/lib/${name}.js`, [`miniprogram/lib/${name}.js`]);
     const pages = JSON.parse(fs.readFileSync(path.join(root, 'miniprogram/app.json'), 'utf8')).pages;
     for (const page of pages) add(`miniprogram/${page}.js`, [`miniprogram/${page}.js`]);

@@ -1,26 +1,16 @@
 import { decorate } from '../../lib/page';
 import { groupTasks } from '../../lib/task-groups';
 import { errorDetails } from '../../lib/errors';
-import { kinds } from '../../lib/learning/learning';
-import type { ContentKind, Task } from '../../../shared/models';
+import { parseTaskRoute, type TaskRouteQuery } from '../../lib/task-route';
+import type { HomeworkScope, Task } from '../../../shared/models';
 import type { AppMode, LearningApp } from '../../lib/client-models';
 import type { Decorated, PageDefinition } from '../../lib/page-types';
 import type { SyncEngine } from '../../lib/sync-engine';
 
 type Group = ReturnType<typeof groupTasks<Decorated<Task>>>[number];
-interface StudyRoute { familyId: string; childId: string; date: string; kind: ContentKind }
-type Query = Record<string, string | undefined>;
+type StudyRoute = HomeworkScope;
+type Query = TaskRouteQuery;
 const PAGE_SIZE = 20;
-
-function parseRoute(query: Query, today: string): StudyRoute | null {
-  const { familyId, childId, date, kind } = query;
-  const validId = (value: string | undefined): value is string => typeof value === 'string' && /^[a-zA-Z0-9_-]{1,100}$/.test(value);
-  if (!validId(familyId) || !validId(childId) || !date || !/^\d{4}-\d{2}-\d{2}$/.test(date) || date > today) return null;
-  const time = Date.parse(`${date}T00:00:00Z`);
-  if (!Number.isFinite(time) || new Date(time).toISOString().slice(0, 10) !== date) return null;
-  const definition = kinds.find((item) => item.id === kind);
-  return definition ? { familyId, childId, date, kind: definition.id } : null;
-}
 
 export interface StudyData {
   group: Omit<Group, 'items'> | null;
@@ -30,6 +20,7 @@ export interface StudyData {
   date: string;
   mode: AppMode;
   busy: boolean;
+  isChild: boolean;
   loading: boolean;
   pageError: string;
   emptyMessage: string;
@@ -50,6 +41,7 @@ export interface StudyMethods {
   showMore(): void;
   toggleGroup(): Promise<void>;
   openToday(): void;
+  openHomework(): void;
   dismissNotice(): void;
 }
 interface StudyRuntime {
@@ -62,11 +54,11 @@ interface StudyRuntime {
 }
 
 const definition: PageDefinition<StudyData, StudyMethods, StudyRuntime> = {
-  data: { group: null, items: [], visibleCount: PAGE_SIZE, childName: '', date: '', mode: 'demo', busy: false,
+  data: { group: null, items: [], visibleCount: PAGE_SIZE, childName: '', date: '', mode: 'demo', busy: false, isChild: false,
     loading: true, pageError: '', emptyMessage: '', syncLabel: '', syncError: '', notice: '' },
   onLoad(query) {
     this.engine = getApp<LearningApp>().engine;
-    this.taskContext = parseRoute(query, this.engine.today);
+    this.taskContext = parseTaskRoute(query, this.engine.today);
   },
   onShow() {
     this.cleanup();
@@ -115,7 +107,7 @@ const definition: PageDefinition<StudyData, StudyMethods, StudyRuntime> = {
       childName: child?.name || '', date: route?.date || '', mode: getApp<LearningApp>().mode,
       pageError, loading: !pageError && !cached && (snapshot.status === 'syncing' || snapshot.status === 'idle'),
       emptyMessage: !family ? '暂时连接不上学习档案，联网后重试。' : !cached ? '这一天的任务尚未加载，联网后重试。' : '这一天没有这类学习任务。',
-      syncLabel, syncError: snapshot.error, notice: snapshot.notice || '' });
+      isChild: family?.myRole === 'child', syncLabel, syncError: snapshot.error, notice: snapshot.notice || '' });
   },
   async refresh() {
     if (!this.taskContext) return;
@@ -143,6 +135,11 @@ const definition: PageDefinition<StudyData, StudyMethods, StudyRuntime> = {
       this.submitting = false;
       if (this.active) { this.setData({ busy: false }); this.render(); }
     }
+  },
+  openHomework() {
+    if (!this.taskContext || !this.currentGroup()) return;
+    const query = Object.entries(this.taskContext).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+    wx.navigateTo({ url: `/pages/homework/index?${query}` });
   },
   openToday() { wx.switchTab({ url: '/pages/today/index' }); },
   dismissNotice() { this.engine.dismissNotice(); }

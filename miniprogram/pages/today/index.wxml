@@ -5,6 +5,7 @@
   <view wx:if="{{notice}}" class="notice" bindtap="dismissNotice">{{notice}}　×</view>
   <view wx:if="{{syncError}}" class="notice">{{syncError}}。已保存的任务仍可查看和打卡。</view>
   <block wx:if="{{family}}">
+    <view class="status">{{isChild ? '孩子身份 · 完成由家长确认' : '家长身份'}}</view>
     <view class="tab-row"><view wx:for="{{children}}" wx:key="id" class="chip {{childId === item.id ? 'active' : ''}}" data-id="{{item.id}}" bindtap="selectChild">{{item.name}}</view></view>
     <view class="card hero">
       <view class="row"><view class="grow"><view>{{date === today ? '今天，也进步一点点' : '一起回顾这一天'}}</view><view class="subtitle"><view>{{groupCount}} 类学习 · {{allTaskCount}} 项内容</view><view>约 {{minutes}} 分钟</view></view></view><view class="activity-total"><text class="big-number">{{doneGroupCount}}</text><text> / {{groupCount}}</text><view class="subtitle">类已完成</view></view></view>
@@ -21,7 +22,7 @@
         <view class="activity-expand">查看详情 ›</view>
       </view>
       <view class="muted library-preview">{{group.preview}}</view>
-      <view class="row activity-actions"><view class="muted grow">{{group.doneCount}} / {{group.count}} 已完成<text wx:if="{{group.pendingCount}}"> · 待同步</text></view><button class="small {{group.done ? 'secondary' : 'primary'}}" data-id="{{group.id}}" catchtap="toggleGroup">{{group.done ? '已完成 · 撤销' : group.doneCount ? '完成剩余' : '完成本组'}}</button></view>
+      <view class="row activity-actions"><view class="muted grow">{{group.doneCount}} / {{group.count}} 已完成<text wx:if="{{group.pendingCount}}"> · 待同步</text></view><button wx:if="{{isChild}}" class="small secondary" data-id="{{group.id}}" catchtap="openGroup">{{group.done ? '查看作业' : '查看并提交'}}</button><button wx:else class="small {{group.done ? 'secondary' : 'primary'}}" data-id="{{group.id}}" catchtap="toggleGroup">{{group.done ? '已完成 · 撤销' : group.doneCount ? '完成剩余' : '完成本组'}}</button></view>
     </view>
     <view wx:if="{{!tasks.length}}" class="card empty"><view class="empty-icon">☀</view><view>{{subjectFilter === 'all' ? '这一天还没有学习任务' : '这个科目还没有学习任务'}}</view><view class="subtitle">{{date === today ? '设置每天数量，或由家长添加内容' : '这一天没有已保存的任务记录'}}</view><button wx:if="{{date === today}}" class="secondary" bindtap="openPlans">安排学习内容</button></view>
     <button wx:if="{{date !== today}}" class="secondary" bindtap="backToday">回到今天</button>

@@ -2,7 +2,7 @@
 
 **每天一点积累，看见孩子的学习进步。**
 
-面向家庭的学习计划与进度管理工具。家长安排古诗文、英语、阅读和数学任务，孩子按类型完成每日学习，家人共同记录与回顾。使用微信原生小程序和腾讯云开发 CloudBase，支持本机演示与家庭云同步。
+面向家庭的学习计划与进度管理工具。家长安排古诗文、英语、阅读和数学任务，孩子按类型学习并提交录音或照片，家长确认完成，共同记录与回顾。使用微信原生小程序和腾讯云开发 CloudBase，支持本机演示与家庭云同步。
 
 [![Verify](https://github.com/NginxL/family-learning-miniprogram/actions/workflows/verify.yml/badge.svg)](https://github.com/NginxL/family-learning-miniprogram/actions/workflows/verify.yml)
 ![Node.js 20+](https://img.shields.io/badge/Node.js-20%2B-417E38)
@@ -11,7 +11,7 @@
 
 [界面预览](#界面预览) · [当前功能](#当前功能) · [知识库覆盖](#知识库覆盖) · [本地运行](#本地运行) · [接入云开发](#接入云开发) · [文档导航](#文档导航)
 
-> **发布状态 · 2026-10-16**：账号持有人已确认 `1.0.1` 代码审核通过，首次备案仍在办理，尚未正式发布。仓库中的任务详情页属于后续开发预览，尚未提审。当前可克隆源码运行；默认使用本机演示数据。真实多手机同步需要配置自己的 AppID、云环境并部署云函数。
+> **发布状态 · 2026-10-16**：账号持有人已确认 `1.0.1` 代码审核通过，首次备案仍在办理，尚未正式发布。仓库中的任务详情页、孩子角色及作业提交属于后续开发预览，尚未提审。当前可克隆源码运行；默认使用本机演示数据。真实多手机同步需要配置自己的 AppID、云环境并部署云函数。
 
 ## 界面预览
 
@@ -40,7 +40,9 @@
   </tr>
 </table>
 
-点击学习卡片后查看完整任务：[古诗文详情](docs/images/study-poetry.png) · [单词详情](docs/images/study-word.png) · [英文阅读详情](docs/images/study-english-reading.png)。长列表分批展示，底部可完成或撤销整组。
+点击学习卡片后查看完整任务：[古诗文详情](docs/images/study-poetry.png) · [单词详情](docs/images/study-word.png) · [英文阅读详情](docs/images/study-english-reading.png)。长列表分批展示，家长可完成或撤销整组，孩子进入提交作业。
+
+独立微信角色：[孩子提交作业](docs/images/homework-child.png) · [家长确认与反馈](docs/images/homework-parent.png)。绑定与隐私配置见[使用说明](docs/HOMEWORK.md)。
 
 ## 当前功能
 
@@ -48,9 +50,10 @@
 
 | 场景 | 可以做什么 |
 |---|---|
-| 家庭与孩子 | 首次打开自动准备默认家庭；最多 5 个孩子，生日自动计算周岁，在读年级单独维护。云端可通过一次性邀请码邀请家人 |
+| 家庭与孩子 | 首次打开自动准备默认家庭；最多 5 个孩子，生日自动计算周岁，在读年级单独维护。云端分别邀请家长、绑定孩子独立微信，孩子只访问绑定档案 |
 | 学习计划 | 古诗文、单词、句子、英文阅读、读书、数学分别设置每日数量与全新／复习；家长也可手动添加 |
 | 今日与详情 | 按类型显示摘要，整张卡片进入正文与来源；详情每批 20 项。一组一个完成／撤销入口，每个单词、每篇内容仍保留独立记录 |
+| 作业提交 | 孩子在详情页拍照或录音提交；家长查看附件、确认整组完成或反馈退回。每次最多3份附件，单份512KiB，录音60秒 |
 | 知识库 | 本地搜索，按类型、课标范围与已核实教材年级筛选；查看原文、来源、上海中考依据及覆盖缺项 |
 | 回顾与进度 | 查看学过、家长确认掌握的内容，安排复习；年龄、在读年级和知识积累分别展示，支持近一年日期记录 |
 
@@ -118,7 +121,7 @@ npm run configure -- --appid wxYOUR_APP_ID --env YOUR_CLOUDBASE_ENV_ID
 
 ## 工程结构
 
-知识库、学习记录、云函数核心、七个页面和同步队列已迁到 TypeScript；演示后端及构建脚本仍使用 JavaScript。构建保持现有运行入口和缓存格式，详见[TS 迁移与构建约定](docs/TYPESCRIPT.md)。仓库中的迁移产物尚未上传微信或部署云函数，审核中的版本保持原状。
+知识库、学习记录、云函数核心、页面和同步队列已迁到 TypeScript；演示后端及构建脚本仍使用 JavaScript。构建保持现有运行入口和缓存格式，详见[TS 迁移与构建约定](docs/TYPESCRIPT.md)。已通过审核的 `1.0.1` 小程序包保持不变；新角色与作业功能的部署、隐私配置和真机验收见[作业说明](docs/HOMEWORK.md)。
 
 ```text
 src/shared/                 TS 知识模型、学习记录、接口约定与规则
@@ -127,7 +130,7 @@ src/client/                 TS 云函数调用适配
 src/miniprogram/            TS 应用入口、页面状态与事件、同步队列
 miniprogram/                微信运行产物、模板、样式及演示后端
 cloudfunctions/familyApi/    家庭权限、任务与事务 API
-cloud/database.rules.json   集合的客户端拒绝读写规则
+cloud/                      数据库及云存储的客户端拒绝读写规则
 tests/                      家庭隔离、冲突、离线重试和 SDK 契约测试
 shared/                     共用规则的生成 JS，供 Node 测试与工具使用
 data/catalogs/              课标目录、原作、词表与教材证据
@@ -151,7 +154,7 @@ GitHub Actions 执行构建一致性、行为测试与依赖审计。测试使�
 | 主题 | 文档 |
 |---|---|
 | 部署与发布 | [云开发部署](docs/DEPLOYMENT.md) · [备案、审核与发布](docs/RELEASE.md) |
-| 实现与验收 | [MVP 功能、同步与权限边界](docs/MVP.md) · [TS 迁移与构建](docs/TYPESCRIPT.md) · [预览图片说明](docs/images/README.md) |
+| 实现与验收 | [MVP 功能、同步与权限边界](docs/MVP.md) · [角色绑定与作业](docs/HOMEWORK.md) · [TS 迁移与构建](docs/TYPESCRIPT.md) · [预览图片说明](docs/images/README.md) |
 | 知识库与来源 | [年级核验](docs/知识库与年级核验.md) · [上海中考覆盖](docs/上海中考知识范围与覆盖.md) · [数据来源与许可](data/catalogs/README.md) |
 | 设计参考 | [GitHub 界面与动线参考](docs/GitHub界面与动线参考.md) |
 

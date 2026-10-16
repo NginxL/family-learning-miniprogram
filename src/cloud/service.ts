@@ -1,4 +1,6 @@
 import crypto = require('node:crypto');
+import { DomainError, requireValue, text, identifier, validDate, hash, chinaDate } from './validation';
+import { createHomeworkService, type MediaStore, homeworkKey } from './homework';
 import * as learning from './learning/learning';
 import { ageFromBirthDate, withCurrentAge } from './learning/child-profile';
 import type { ApiAction, ApiData, ApiPayloads, ApiResults, FamilyService, ProfileInput } from '../shared/api';
@@ -9,31 +11,13 @@ const isOneOf = <T>(value: unknown, allowed: readonly T[]): value is T => allowe
 const isInteger = (value: unknown): value is number => Number.isInteger(value);
 const reply = <A extends ApiAction>(_action: A, data: ApiResults[A]): ApiResults[A] => data;
 interface ServiceOptions {
+  media?: MediaStore;
   store: Store; now?: () => number; randomId?: () => string; inviteCode?: () => string;
   defaultChild?: ProfileInput & { name: string };
 }
-const hash = (text: string) => crypto.createHash('sha256').update(text).digest('hex');
 const clone = <T>(value: T): T => JSON.parse(JSON.stringify(value));
 const dayKey = (familyId: string, date: string) => hash(`${familyId}:${date}`);
-const chinaDate = (time: number) => new Date(time + 8 * 3600000).toISOString().slice(0, 10);
 
-class DomainError extends Error {
-  code: string;
-  isDomainError: boolean;
-  constructor(code: string, message: string) { super(message); this.code = code; this.isDomainError = true; }
-}
-function requireValue(condition: unknown, code: string, message: string): asserts condition {
-  if (!condition) throw new DomainError(code, message);
-}
-function text(value: unknown, label: string, max = 40): string {
-  requireValue(typeof value === 'string' && value.trim().length > 0 && value.trim().length <= max,
-    'INVALID', `${label}不能为空，且不能超过${max}字`);
-  return value.trim();
-}
-function identifier(value: unknown): string {
-  requireValue(typeof value === 'string' && /^[a-zA-Z0-9_-]{1,100}$/.test(value), 'INVALID', '编号无效');
-  return value;
-}
 function childProfile(input: Record<string, unknown>, today: string) {
   const birthDate = input.birthDate == null || input.birthDate === '' ? null : input.birthDate;
   const age = birthDate === null ? (input.age == null ? null : input.age) : ageFromBirthDate(birthDate, today);
@@ -43,26 +27,23 @@ function childProfile(input: Record<string, unknown>, today: string) {
   requireValue(schoolGrade === null || (isInteger(schoolGrade) && schoolGrade >= 1 && schoolGrade <= 9), 'INVALID', '在读年级需为1–9，或留空');
   return { birthDate: birthDate as string | null, age: age as number | null, schoolGrade: schoolGrade as SchoolGrade | null, ageRecordedOn: age === null ? null : today };
 }
-function validDate(value: unknown, now: number): string {
-  requireValue(typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value), 'INVALID', '日期无效');
-  const parsed = Date.parse(`${value}T00:00:00+08:00`);
-  requireValue(Number.isFinite(parsed) && chinaDate(parsed) === value && value <= chinaDate(now), 'INVALID', '日期无效或尚未到达');
-  requireValue(now - parsed <= 366 * 86400000, 'INVALID', '仅支持最近一年内的记录');
-  return value;
-}
 function publicFamily(family: Family, uid: string, today: string): PublicFamily {
+  const member = family.members.find((item) => item.id === uid)!;
+  const childId = member.role === 'child' ? member.childId : undefined;
+  requireValue(member.role !== 'child' || (childId && family.children.some((child) => child.id === childId)), 'FORBIDDEN', '孩子绑定状态无效，请联系家长');
   return {
     id: family.id, name: family.name, ownerId: family.ownerId,
-    members: family.members.map(({ id, name, role }) => ({ id, name, role })),
-    children: family.children.map((child) => withCurrentAge(child, today)), plans: clone(family.plans), autoPlans: clone(family.autoPlans || {}),
-    myRole: family.ownerId === uid ? 'owner' : 'guardian',
+    members: family.members.map(({ id, name, role, childId }) => ({ id, name, role, ...(childId ? { childId } : {}) })),
+    children: family.children.filter((child) => !childId || child.id === childId).map((child) => withCurrentAge(child, today)), plans: clone(family.plans.filter((plan) => !childId || plan.childId === childId)), autoPlans: clone(childId ? { [childId]: family.autoPlans?.[childId] || [] } : family.autoPlans || {}),
+    myRole: member.role, ...(childId ? { myChildId: childId } : {}),
     canJoinFamily: family.autoCreated === true && family.ownerId === uid && family.members.length === 1
   };
 }
 
-function createService({ store, now = Date.now, randomId = () => crypto.randomBytes(16).toString('hex'),
+function createService({ store, media, now = Date.now, randomId = () => crypto.randomBytes(16).toString('hex'),
   inviteCode = () => crypto.randomBytes(12).toString('hex').toUpperCase(),
   defaultChild = { name: '孩子', age: 6, schoolGrade: 1 } }: ServiceOptions): FamilyService {
+  const homework = createHomeworkService(store, media);
   async function executeRaw(openid: unknown, action: unknown, rawInput: unknown = {}): Promise<ApiData> {
     requireValue(typeof openid === 'string' && openid.length > 0, 'UNAUTHENTICATED', '请通过微信小程序进入');
     requireValue(isRecord(rawInput), 'INVALID', '请求内容无效');
@@ -71,6 +52,7 @@ function createService({ store, now = Date.now, randomId = () => crypto.randomBy
     const timestamp = now();
     const today = chinaDate(timestamp);
     const newId = randomId();
+    if (homework.handles(action)) return homework.execute(uid, action, input, timestamp);
     const code = action === 'createInvite' ? inviteCode() : null;
 
     return store.run<ApiData>(async (tx) => {
@@ -136,7 +118,10 @@ function createService({ store, now = Date.now, randomId = () => crypto.randomBy
         requireValue(family && family.activeInviteHash === inviteHash, 'INVALID_INVITE', '邀请码已失效');
         requireValue(!profile || profile.familyId !== family.id, 'ALREADY_JOINED', '你已在这个家庭中');
         requireValue(family.members.length < 10, 'LIMIT', '一个家庭最多10位成员');
-        family.members.push({ id: uid, name: text(input.memberName, '你的称呼', 16), role: 'guardian' });
+        const inviteRole = invite.role || 'guardian';
+        if (inviteRole === 'child') requireValue(invite.guardianConsentAt && family.children.some((child) => child.id === invite.childId), 'INVALID_INVITE', '孩子绑定码已失效');
+        family.members.push({ id: uid, name: text(input.memberName, '你的称呼', 16), role: inviteRole,
+          ...(inviteRole === 'child' ? { childId: invite.childId } : {}) });
         family.activeInviteHash = null;
         await tx.put('families', family.id, family);
         await tx.put('profiles', uid, { familyId: family.id });
@@ -147,9 +132,13 @@ function createService({ store, now = Date.now, randomId = () => crypto.randomBy
       requireValue(profile && profile.familyId && profile.familyId === input.familyId, 'FORBIDDEN', '当前账号没有这个家庭的访问权限');
       const family = await tx.get('families', profile.familyId);
       requireValue(family && family.members.some((member) => member.id === uid), 'FORBIDDEN', '你已不在这个家庭中');
+      const member = family.members.find((item) => item.id === uid)!;
+      const isChild = member.role === 'child';
+      requireValue(!isChild || ['getDay', 'getHistory', 'getProgress'].includes(String(action)), 'PARENT_REQUIRED', '此操作需要家长确认，孩子只能提交作业');
       const owner = () => requireValue(family.ownerId === uid, 'FORBIDDEN', '只有家庭创建者可以操作');
       function childExists(childId: unknown): asserts childId is string {
         requireValue(typeof childId === 'string' && family!.children.some((child) => child.id === childId), 'INVALID', '孩子档案不存在');
+        requireValue(!isChild || member.childId === childId, 'FORBIDDEN', '只能查看自己绑定的学习档案');
       }
       const ledgerKey = (childId: string) => hash(`${family.id}:${childId}`);
       const readLedger = async (childId: string): Promise<PersistedLedger> => (await tx.get('learning', ledgerKey(childId))) || { familyId: family.id, childId, records: {} };
@@ -165,10 +154,14 @@ function createService({ store, now = Date.now, randomId = () => crypto.randomBy
 
       if (action === 'createInvite') {
         owner();
+        const role = input.role === undefined ? 'guardian' : input.role;
+        requireValue(role === 'guardian' || role === 'child', 'INVALID', '请选择家长或孩子身份');
+        if (role === 'child') { childExists(input.childId); requireValue(input.guardianConsent === true, 'INVALID', '请由监护人确认孩子提交录音和照片的用途'); }
         const inviteHash = hash(code!);
         const expiresAt = timestamp + 24 * 3600000;
         family.activeInviteHash = inviteHash;
-        await tx.put('invites', inviteHash, { familyId: family.id, expiresAt, usedAt: null });
+        await tx.put('invites', inviteHash, { familyId: family.id, expiresAt, usedAt: null,
+          ...(role === 'child' ? { role, childId: input.childId as string, guardianConsentAt: timestamp } : {}) });
         await tx.put('families', family.id, family);
         return reply(action, { code: code!, expiresAt });
       }
@@ -260,7 +253,10 @@ function createService({ store, now = Date.now, randomId = () => crypto.randomBy
           for (const child of family.children) learning.recordTasks(ledgers[child.id], day.tasks.filter((task) => task.childId === child.id), date);
         }
         for (const child of family.children) if (originals[child.id] !== JSON.stringify(ledgers[child.id])) await saveLedger(ledgers[child.id]);
-        return reply(action, { day: day || { familyId: family.id, date, tasks: [] }, today });
+        const visible = day || { familyId: family.id, date, tasks: [] };
+        return reply(action, { day: isChild ? { ...visible, tasks: visible.tasks.filter((task) => task.childId === member.childId),
+          generated: { [member.childId!]: visible.generated?.[member.childId!] || {} },
+          warnings: (visible.warnings || []).filter((warning) => warning.childId === member.childId) } : visible, today });
       }
       if (action === 'getHistory') {
         childExists(input.childId);
@@ -324,6 +320,14 @@ function createService({ store, now = Date.now, randomId = () => crypto.randomBy
         learning.recordTasks(ledger, day.tasks.filter((item) => item.childId === task.childId), date);
         await saveLedger(ledger);
         await saveDay(id, day);
+        const group = day.tasks.filter((item) => item.childId === task.childId && learning.kindOf(item) === learning.kindOf(task));
+        const hwId = homeworkKey({ familyId: family.id, childId: task.childId, date, kind: learning.kindOf(task) });
+        const submitted = await tx.get('homeworks', hwId);
+        if (submitted && ((group.every((item) => item.done) && submitted.status !== 'approved') || (!task.done && submitted.status === 'approved'))) {
+          Object.assign(submitted, { status: task.done ? 'approved' : 'returned', reviewedBy: uid, reviewedAt: timestamp, version: submitted.version + 1,
+            feedback: task.done ? '' : '家长撤销了完成，请重新提交作业。' });
+          await tx.put('homeworks', hwId, submitted);
+        }
         await tx.put('receipts', receiptId, { familyId: family.id, fingerprint, task: clone(task), createdAt: timestamp });
         return reply(action, { task: clone(task), duplicate: false });
       }

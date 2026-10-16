@@ -42,7 +42,8 @@ function createDemo(wx) {
         plans: [], autoPlans: { [childId]: learning.defaultRules() } };
       write(state); return { family: state.family };
     }
-    if (['joinFamily', 'createInvite', 'removeMember', 'leaveFamily'].includes(action)) throw new Error('演示模式仅在本机运行；连接云开发后可邀请和同步');
+    if (action === 'getHomework') return { homework: null };
+    if (['joinFamily', 'createInvite', 'removeMember', 'leaveFamily', 'uploadHomeworkAttachment', 'submitHomework', 'getHomeworkAttachment', 'reviewHomework'].includes(action)) throw new Error('演示模式仅在本机运行；连接云开发后可邀请、提交作业和同步');
     if (!state.family) throw new Error('请先加载学习档案');
     // Index previous demo check-ins so an upgrade retains the family's old learning history.
     Object.values(state.days).forEach((day) => state.family.children.forEach((child) => {

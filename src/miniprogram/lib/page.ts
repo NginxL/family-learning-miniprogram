@@ -12,7 +12,7 @@ const decorate = <T extends Decoratable>(item: T): Decorated<T> => ({ ...item, k
 function common(): PageDefinition<CommonData, CommonMethods, CommonRuntime> {
   return {
     data: { family: null, children: [], childId: '', tasks: [], plans: [], members: [], date: chinaDate(), today: chinaDate(),
-      followToday: true, subjectFilter: 'all', subjectOptions: learning.subjects, mode: 'demo', busy: false },
+      followToday: true, subjectFilter: 'all', subjectOptions: learning.subjects, mode: 'demo', busy: false, isChild: false },
     onShow() {
       this.engine = getApp<LearningApp>().engine;
       const navigation = getApp<LearningApp>().navigation || {};
@@ -43,10 +43,10 @@ function common(): PageDefinition<CommonData, CommonMethods, CommonRuntime> {
         .map((plan) => ({ ...decorate(plan), scheduleLabel: plan.schedule === 'library' ? '自动内容库' : plan.schedule === 'once' ? `仅 ${plan.date}` : '每天固定' }));
       let syncLabel = snapshot.status === 'syncing' ? '正在同步…' : snapshot.status === 'online' ? '已同步' : '等待连接';
       if (snapshot.queue.length) syncLabel += ` · ${snapshot.queue.length} 条待同步`;
-      const members = family ? family.members.map((member) => ({ ...member, isMe: member.id === snapshot.userId, roleLabel: member.role === 'owner' ? '创建者' : '家人' })) : [];
+      const members = family ? family.members.map((member) => ({ ...member, isMe: member.id === snapshot.userId, roleLabel: member.role === 'child' ? '孩子' : member.role === 'owner' ? '家长 · 管理者' : '家长' })) : [];
       const subjectOptions = learning.subjects.map((subject) => ({ ...subject,
         count: subject.id === 'all' ? allTasks.length : allTasks.filter((task) => task.subject === subject.id).length }));
-      this.setData({ family, children, childId, date, tasks, allTaskCount: allTasks.length, plans, members, today: snapshot.today, subjectOptions,
+      this.setData({ family, children, childId, date, tasks, isChild: family?.myRole === 'child', allTaskCount: allTasks.length, plans, members, today: snapshot.today, subjectOptions,
         dayWarnings: (day.warnings || []).filter((warning) => warning.childId === childId && (this.data.subjectFilter === 'all' || learning.definition(warning.kind).subject === this.data.subjectFilter)),
         childIndex: Math.max(0, children.findIndex((child) => child.id === childId)),
         doneCount, minutes, percent: allTasks.length ? Math.round(doneCount / allTasks.length * 100) : 0,

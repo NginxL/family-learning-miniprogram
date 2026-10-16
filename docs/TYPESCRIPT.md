@@ -6,12 +6,12 @@
 
 | 源码 | 负责内容 | 运行产物 |
 |---|---|---|
-| `src/shared/models.ts` | 知识条目、教材映射、年级、学习档案、任务及六类数据库文档 | 类型在编译时擦除 |
-| `src/shared/api.ts` | 18 种操作各自的请求、返回值与成功／失败响应 | 类型在编译时擦除 |
+| `src/shared/models.ts` | 知识条目、教材映射、年级、学习档案、任务及八类数据库文档 | 类型在编译时擦除 |
+| `src/shared/api.ts` | 各操作的请求、返回值与成功／失败响应 | 类型在编译时擦除 |
 | `src/shared/catalog.ts`、`learning.ts`、`child-profile.ts` | 目录合并、任务生成、历史与掌握、进度、生日计算 | `shared/`、`miniprogram/lib/learning/`、`cloudfunctions/familyApi/learning/` 中的同名 `.js` |
-| `src/cloud/` | 云函数入口、权限与参数校验、业务服务、数据库适配 | `cloudfunctions/familyApi/{index,service,store}.js` |
+| `src/cloud/` | 云函数入口、权限与参数校验、业务服务、数据库适配 | `cloudfunctions/familyApi/{index,service,store,validation,homework}.js` |
 | `src/client/cloud-transport.ts` | 小程序的云函数调用与响应信封检查 | `miniprogram/lib/cloud-transport.js` |
-| `src/miniprogram/app.ts`、`pages/` | 应用启动及七个页面的状态、事件、生命周期 | `miniprogram/app.js`、`miniprogram/pages/*/index.js` |
+| `src/miniprogram/app.ts`、`pages/` | 应用启动及页面的状态、事件、生命周期 | `miniprogram/app.js`、`miniprogram/pages/*/index.js` |
 | `src/miniprogram/lib/` | 同步队列、页面共用逻辑、任务分组与错误信息；客户端模型及页面类型 | 同名运行模块输出到 `miniprogram/lib/`；类型在编译时擦除 |
 
 演示适配器 `miniprogram/lib/demo.js`、构建与数据采集脚本仍使用 JavaScript。页面、同步队列和真实云调用共用请求与响应约定；演示适配器通过声明文件接入，并由页面与原生模块加载测试验证。WXML、WXSS、页面路径和运行配置格式保持不变。
@@ -55,7 +55,7 @@ TypeScript 固定为 `6.0.2`，Node 类型固定到 Node 20，微信官方 API �
 | 项目 | 验证依据 |
 |---|---|
 | 知识内容、内容 ID 与排序 | 对照迁移前提交 `6da5ab3`，全部 1,871 项一致；目录和教材映射测试继续执行 |
-| 接口及数据库格式 | 21 次代表性调用结果、7 份持久化文档与迁移前一致；操作名、字段名、六个集合及缓存 key 保持兼容 |
+| 接口及数据库格式 | 21 次代表性调用结果、7 份持久化文档与迁移前一致；操作名、字段名、原六个集合及缓存 key 保持兼容；作业另增两个集合 |
 | 旧档案读取与更新 | `tests/fixtures/v1-family.json` 保存迁移前生成的虚构数据；`tests/api-contract.test.js` 验证身份、生日、掌握状态、旧记录撤销和已移除成员的拒绝访问 |
 | 页面与演示数据 | 对照页面迁移前提交 `11b6080`，七个页面的 15 份数据快照及两份本地存储内容一致；模板、样式和路由未改动 |
 | 旧队列恢复 | `tests/fixtures/v1-sync-cache.json` 由迁移前 JS 生成，仅含虚构数据；`tests/client-migration.test.js` 验证旧队列重启、撤销／完成顺序、响应丢失重试及旧缓存缺省字段 |
@@ -64,8 +64,8 @@ TypeScript 固定为 `6.0.2`，Node 类型固定到 Node 20，微信官方 API �
 | 非法输入与数据源 | 云接口运行时验证测试、`tests/knowledge-build.test.js` 的非法年级和重复 ID 检查 |
 | 原生入口与同步 | 既有原生 JS 加载、双客户端、离线恢复、重试去重和冲突测试 |
 
-本阶段无需数据库或缓存迁移，不生成新家庭，也不改变旧内容的身份。严格类型检查及 71 项行为测试通过。测试不等于真机与真实云环境验收。
+本阶段无需数据库或缓存迁移，不生成新家庭，也不改变旧内容的身份。严格类型检查及行为测试通过；具体数量以当前 `npm run verify` 为准。测试不等于真机与真实云环境验收。
 
 ## 发布状态
 
-客户端 TS 编译产物已于 2026-10-13 上传为 `1.0.1`；账号持有人已确认手机预览可用及代码审核通过。截至 2026-10-16，首次备案仍在办理，尚未正式发布。云函数 TS 产物尚未重新部署，继续与原服务兼容。任务详情页属于后续开发预览，未覆盖 `1.0.1` 审核包；发布状态见[正式发布](RELEASE.md)。
+客户端 TS 编译产物已于 2026-10-13 上传为 `1.0.1`；账号持有人已确认手机预览可用及代码审核通过。截至 2026-10-16，首次备案仍在办理，尚未正式发布。云函数新增角色与作业接口，继续兼容原家长服务调用。任务详情页、角色与作业属于后续开发预览，未覆盖 `1.0.1` 审核包；发布状态见[正式发布](RELEASE.md)。

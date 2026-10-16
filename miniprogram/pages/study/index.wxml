@@ -5,6 +5,8 @@
   <block wx:if="{{group}}">
     <view class="eyebrow">{{childName}} · {{date}}</view>
     <view class="row"><view class="title grow">{{group.label}}</view><view class="pill {{group.subject}}">{{group.quantityLabel}}</view></view>
+    <view wx:if="{{isChild}}" class="notice">孩子身份 · 学完提交录音或照片，由家长确认完成。</view>
+    <button wx:else class="secondary" bindtap="openHomework">查看孩子提交的作业 →</button>
     <view class="subtitle">{{group.modeSummary}} · 约 {{group.minutes}} 分钟</view>
     <view class="row study-summary"><view class="muted">{{group.doneCount}} / {{group.count}} 已完成</view><button class="quiet sync-button" bindtap="refresh">{{mode === 'demo' ? '本机保存' : syncLabel}} ↻</button></view>
     <view wx:for="{{items}}" wx:key="id" class="card study-item">
@@ -18,7 +20,8 @@
     <view wx:else class="muted study-end">本组共 {{group.count}} 项，已全部展示</view>
     <view class="study-footer">
       <view class="muted footer-summary">{{group.doneCount}} / {{group.count}} 已完成<text wx:if="{{group.pendingCount}}"> · {{group.pendingCount}} 项待同步</text></view>
-      <button class="{{group.done ? 'secondary' : 'primary'}}" disabled="{{busy}}" loading="{{busy}}" bindtap="toggleGroup">{{group.done ? '已完成 · 撤销本组' : group.doneCount ? '完成本组剩余内容' : '完成本组'}}</button>
+      <button wx:if="{{isChild}}" class="primary" bindtap="openHomework">{{group.done ? '查看已确认的作业' : '提交作业'}}</button>
+      <button wx:else class="{{group.done ? 'secondary' : 'primary'}}" disabled="{{busy}}" loading="{{busy}}" bindtap="toggleGroup">{{group.done ? '已完成 · 撤销本组' : group.doneCount ? '完成本组剩余内容' : '完成本组'}}</button>
     </view>
   </block>
   <view wx:else class="card empty">

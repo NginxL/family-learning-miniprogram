@@ -4,25 +4,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const page_1 = require("../../lib/page");
 const task_groups_1 = require("../../lib/task-groups");
 const errors_1 = require("../../lib/errors");
-const learning_1 = require("../../lib/learning/learning");
+const task_route_1 = require("../../lib/task-route");
 const PAGE_SIZE = 20;
-function parseRoute(query, today) {
-    const { familyId, childId, date, kind } = query;
-    const validId = (value) => typeof value === 'string' && /^[a-zA-Z0-9_-]{1,100}$/.test(value);
-    if (!validId(familyId) || !validId(childId) || !date || !/^\d{4}-\d{2}-\d{2}$/.test(date) || date > today)
-        return null;
-    const time = Date.parse(`${date}T00:00:00Z`);
-    if (!Number.isFinite(time) || new Date(time).toISOString().slice(0, 10) !== date)
-        return null;
-    const definition = learning_1.kinds.find((item) => item.id === kind);
-    return definition ? { familyId, childId, date, kind: definition.id } : null;
-}
 const definition = {
-    data: { group: null, items: [], visibleCount: PAGE_SIZE, childName: '', date: '', mode: 'demo', busy: false,
+    data: { group: null, items: [], visibleCount: PAGE_SIZE, childName: '', date: '', mode: 'demo', busy: false, isChild: false,
         loading: true, pageError: '', emptyMessage: '', syncLabel: '', syncError: '', notice: '' },
     onLoad(query) {
         this.engine = getApp().engine;
-        this.taskContext = parseRoute(query, this.engine.today);
+        this.taskContext = (0, task_route_1.parseTaskRoute)(query, this.engine.today);
     },
     onShow() {
         this.cleanup();
@@ -86,7 +75,7 @@ const definition = {
             childName: (child === null || child === void 0 ? void 0 : child.name) || '', date: (route === null || route === void 0 ? void 0 : route.date) || '', mode: getApp().mode,
             pageError, loading: !pageError && !cached && (snapshot.status === 'syncing' || snapshot.status === 'idle'),
             emptyMessage: !family ? '暂时连接不上学习档案，联网后重试。' : !cached ? '这一天的任务尚未加载，联网后重试。' : '这一天没有这类学习任务。',
-            syncLabel, syncError: snapshot.error, notice: snapshot.notice || '' });
+            isChild: (family === null || family === void 0 ? void 0 : family.myRole) === 'child', syncLabel, syncError: snapshot.error, notice: snapshot.notice || '' });
     },
     async refresh() {
         if (!this.taskContext)
@@ -130,6 +119,12 @@ const definition = {
                 this.render();
             }
         }
+    },
+    openHomework() {
+        if (!this.taskContext || !this.currentGroup())
+            return;
+        const query = Object.entries(this.taskContext).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+        wx.navigateTo({ url: `/pages/homework/index?${query}` });
     },
     openToday() { wx.switchTab({ url: '/pages/today/index' }); },
     dismissNotice() { this.engine.dismissNotice(); }

@@ -1,0 +1,41 @@
+<view class="page">
+  <view class="eyebrow">{{childName}} · {{date}}</view><view class="title">{{isChild ? '提交作业' : '查看作业'}}</view>
+  <view class="subtitle">{{label}} · {{isChild ? '提交后等待家长确认' : '确认后本组记为已完成'}}</view>
+  <view wx:if="{{error}}" class="notice">{{error}}</view>
+  <block wx:if="{{valid}}">
+    <view class="card">
+      <view class="row"><view class="section">{{statusLabel || '正在读取…'}}</view><button class="quiet" bindtap="refresh" disabled="{{busy}}">刷新 ↻</button></view>
+      <view wx:if="{{homework.feedback}}" class="notice">家长反馈：{{homework.feedback}}</view>
+      <view wx:for="{{homework.attachments}}" wx:key="id" class="attachment row">
+        <view class="grow">{{item.mime === 'audio/mpeg' ? '录音 · ' + item.duration + ' 秒' : '作业照片'}}</view><button class="secondary small" data-id="{{item.id}}" bindtap="preview" disabled="{{busy || recording}}">{{item.mime === 'audio/mpeg' ? (playingId === item.id ? '停止' : '播放录音') : '查看照片'}}</button>
+      </view>
+      <view wx:if="{{!homework && !loading}}" class="muted">{{isChild ? '拍下完成的内容，或录一段朗读，交给家长看看。' : '孩子还没有提交这组作业。'}}</view>
+    </view>
+    <view wx:if="{{isChild && !done}}" class="card">
+      <view class="section">{{homework ? '重新提交' : '添加作业'}}</view>
+      <view class="muted">最多 3 份照片或录音；录音每段最长 60 秒。只在点击提交后上传。</view>
+      <view wx:for="{{drafts}}" wx:key="id" class="attachment">
+        <image wx:if="{{item.mime !== 'audio/mpeg'}}" class="photo" src="{{item.path}}" mode="aspectFit" data-id="{{item.id}}" bindtap="previewDraft" />
+        <view class="row"><view class="grow">{{item.mime === 'audio/mpeg' ? '录音 · ' + item.duration + ' 秒' : '照片 ' + (index + 1)}}</view><button class="quiet" data-id="{{item.id}}" bindtap="previewDraft">{{item.mime === 'audio/mpeg' ? (playingId === item.id ? '停止' : '试听') : '查看'}}</button><button class="quiet danger" data-id="{{item.id}}" bindtap="removeDraft" disabled="{{busy || recording}}">移除</button></view>
+      </view>
+      <view class="row capture-actions"><button class="secondary grow" bindtap="takePhoto" disabled="{{busy || recording || drafts.length >= 3}}">拍照／选照片</button><button class="secondary grow" bindtap="record" disabled="{{busy || (!recording && drafts.length >= 3)}}">{{recording ? '结束录音' : '录音'}}</button></view>
+      <view wx:if="{{recording}}" class="notice">正在录音…点击「结束录音」保存，最长 60 秒。</view>
+      <button class="primary" bindtap="submit" loading="{{busy}}" disabled="{{busy || loading || recording || !drafts.length}}">提交给家长</button>
+      <view class="muted plan-help">联网后才能提交；离开本页前请提交。提交成功后仍需家长确认，才会计入完成记录。</view>
+    </view>
+    <view wx:if="{{!isChild && homework.status === 'pending'}}" class="card">
+      <view class="section">家长确认</view><textarea value="{{feedback}}" bindinput="changeFeedback" maxlength="200" placeholder="给孩子的反馈（选填）" />
+      <button class="primary" bindtap="approve" loading="{{busy}}" disabled="{{busy || loading}}">确认完成本组</button>
+      <button class="secondary" bindtap="returnWork" disabled="{{busy || loading}}">退回，请孩子再试一次</button>
+    </view>
+  </block>
+  <button class="quiet plan-help" bindtap="openToday">返回今日学习 →</button>
+  <view wx:if="{{privacyRequired}}" class="privacy-overlay">
+    <view class="card privacy-card"><view class="section">作业照片与录音</view>
+      <view class="body">请和家长一起阅读隐私保护指引。仅在你主动选择照片或录音并提交后上传，供你和家庭家长查看、反馈。</view>
+      <button class="quiet" bindtap="openPrivacy">阅读《隐私保护指引》</button>
+      <button id="homework-privacy-agree" class="primary" open-type="agreePrivacyAuthorization" bindagreeprivacyauthorization="agreePrivacy">同意并继续</button>
+      <button class="secondary" bindtap="declinePrivacy">暂不使用</button>
+    </view>
+  </view>
+</view>

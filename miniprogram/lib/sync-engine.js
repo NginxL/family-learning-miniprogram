@@ -39,6 +39,9 @@ class SyncEngine {
         return this.enqueueMany(date, [taskId], done);
     }
     enqueueMany(date, taskIds, done) {
+        var _a;
+        if (((_a = this.state.family) === null || _a === void 0 ? void 0 : _a.myRole) === 'child')
+            throw Object.assign(new Error('请提交作业，由家长确认完成'), { code: 'PARENT_REQUIRED' });
         if (!this.state.userId || !this.state.family)
             throw new Error('请先联网加载学习档案');
         if (!Array.isArray(taskIds) || typeof done !== 'boolean')
@@ -59,21 +62,30 @@ class SyncEngine {
         return changed.length;
     }
     async bootstrap() {
+        var _a, _b, _c, _d, _e;
         const data = await this.transport('bootstrap', { ensureDefault: true });
         const next = clone(this.state);
         const oldFamily = next.family && next.family.id;
         const newFamily = data.family && data.family.id;
-        if (next.userId !== data.userId || oldFamily !== newFamily) {
+        if (next.userId !== data.userId || oldFamily !== newFamily
+            || ((_a = next.family) === null || _a === void 0 ? void 0 : _a.myRole) !== ((_b = data.family) === null || _b === void 0 ? void 0 : _b.myRole) || ((_c = next.family) === null || _c === void 0 ? void 0 : _c.myChildId) !== ((_d = data.family) === null || _d === void 0 ? void 0 : _d.myChildId)) {
             Object.assign(next, empty());
         }
         next.userId = data.userId;
         next.family = data.family;
+        if (((_e = data.family) === null || _e === void 0 ? void 0 : _e.myRole) === 'child' && next.queue.length) {
+            next.queue = [];
+            next.notice = '孩子账号只能提交作业，完成记录由家长确认。';
+        }
         this.today = data.today;
         this.save(next);
     }
     async command(action, payload) {
+        var _a;
         // Membership/plan writes require a connection; only check-ins are queued offline.
         // Keep the v1 null-family request path: the service rejects writes without membership.
+        if (((_a = this.state.family) === null || _a === void 0 ? void 0 : _a.myRole) === 'child' && !['uploadHomeworkAttachment', 'submitHomework', 'getHomework', 'getHomeworkAttachment'].includes(action))
+            throw Object.assign(new Error('此操作需要家长确认'), { code: 'PARENT_REQUIRED' });
         const input = { ...payload, familyId: this.state.family && this.state.family.id };
         const data = await this.transport(action, input);
         await this.sync();

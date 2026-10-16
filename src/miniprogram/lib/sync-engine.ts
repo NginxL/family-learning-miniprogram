@@ -46,6 +46,7 @@ class SyncEngine {
     return this.enqueueMany(date, [taskId], done);
   }
   enqueueMany(date: string, taskIds: string[], done: boolean) {
+    if (this.state.family?.myRole === 'child') throw Object.assign(new Error('请提交作业，由家长确认完成'), { code: 'PARENT_REQUIRED' });
     if (!this.state.userId || !this.state.family) throw new Error('请先联网加载学习档案');
     if (!Array.isArray(taskIds) || typeof done !== 'boolean') throw new Error('学习记录无效，请刷新后重试');
     const day = this.viewDay(date);
@@ -65,17 +66,21 @@ class SyncEngine {
     const next = clone(this.state);
     const oldFamily = next.family && next.family.id;
     const newFamily = data.family && data.family.id;
-    if (next.userId !== data.userId || oldFamily !== newFamily) {
+    if (next.userId !== data.userId || oldFamily !== newFamily
+      || next.family?.myRole !== data.family?.myRole || next.family?.myChildId !== data.family?.myChildId) {
       Object.assign(next, empty());
     }
     next.userId = data.userId;
     next.family = data.family;
+    if (data.family?.myRole === 'child' && next.queue.length) { next.queue = []; next.notice = '孩子账号只能提交作业，完成记录由家长确认。'; }
     this.today = data.today;
     this.save(next);
   }
   async command<A extends ApiAction>(action: A, payload: CommandPayloads[A]): Promise<ClientResults[A]> {
     // Membership/plan writes require a connection; only check-ins are queued offline.
     // Keep the v1 null-family request path: the service rejects writes without membership.
+    if (this.state.family?.myRole === 'child' && !['uploadHomeworkAttachment', 'submitHomework', 'getHomework', 'getHomeworkAttachment'].includes(action))
+      throw Object.assign(new Error('此操作需要家长确认'), { code: 'PARENT_REQUIRED' });
     const input = { ...payload, familyId: this.state.family && this.state.family.id } as ApiPayloads[A];
     const data = await this.transport(action, input);
     await this.sync();

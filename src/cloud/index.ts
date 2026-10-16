@@ -9,7 +9,10 @@ init({ env: cloud.DYNAMIC_CURRENT_ENV });
 // The installed SDK accepts this option; its bundled declaration omits it.
 // tests/sdk-contract.test.js exercises the installed SDK's actual transaction contract.
 const databaseOptions: NonNullable<Parameters<typeof cloud.database>[0]> & { throwOnNotFound: boolean } = { throwOnNotFound: false };
-const service = createService({ store: createCloudStore(cloud.database(databaseOptions)) });
+const service = createService({ store: createCloudStore(cloud.database(databaseOptions)), media: {
+  async upload(path, data) { return (await cloud.uploadFile({ cloudPath: path, fileContent: data })).fileID; },
+  async download(fileId) { return (await cloud.downloadFile({ fileID: fileId })).fileContent; }
+} });
 
 export async function main(event: unknown): Promise<ApiEnvelope> {
   try {

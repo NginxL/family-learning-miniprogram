@@ -1,0 +1,166 @@
+import type { ApiAction, ApiData } from '../shared/api';
+import type { Homework, HomeworkAttachment, HomeworkScope, HomeworkView, Store, Transaction } from '../shared/models';
+import * as learning from './learning/learning';
+import { hash, identifier, requireValue, validDate } from './validation';
+
+export interface MediaStore {
+  upload(path: string, data: Buffer): Promise<string>;
+  download(fileId: string): Promise<Buffer>;
+}
+const MAX_BYTES = 512 * 1024;
+const FAMILY_LIMIT = 100 * 1024 * 1024;
+const actions = ['uploadHomeworkAttachment', 'submitHomework', 'getHomework', 'getHomeworkAttachment', 'reviewHomework'];
+export const homeworkKey = (scope: HomeworkScope) => hash(`${scope.familyId}:${scope.childId}:${scope.date}:${scope.kind}`);
+const sameScope = (a: HomeworkScope, b: HomeworkScope) => homeworkKey(a) === homeworkKey(b);
+
+export function createHomeworkService(store: Store, media?: MediaStore) {
+  function scopeOf(input: Record<string, unknown>, now: number): HomeworkScope {
+    const kind = learning.kinds.find((entry) => entry.id === input.kind);
+    requireValue(kind, 'INVALID', '学习类型无效');
+    return { familyId: identifier(input.familyId), childId: identifier(input.childId), date: validDate(input.date, now), kind: kind.id };
+  }
+  async function access(tx: Transaction, uid: string, scope: HomeworkScope) {
+    const profile = await tx.get('profiles', uid);
+    const family = profile?.familyId === scope.familyId ? await tx.get('families', scope.familyId) : null;
+    const member = family?.members.find((entry) => entry.id === uid);
+    requireValue(family && member, 'FORBIDDEN', '当前账号没有这个家庭的访问权限');
+    requireValue(family.children.some((child) => child.id === scope.childId), 'INVALID', '孩子档案不存在');
+    requireValue(member.role !== 'child' || member.childId === scope.childId, 'FORBIDDEN', '只能查看自己绑定的学习档案');
+    return { family, member };
+  }
+  async function group(tx: Transaction, scope: HomeworkScope) {
+    const day = await tx.get('days', hash(`${scope.familyId}:${scope.date}`));
+    const tasks = (day?.tasks || []).filter((task) => task.childId === scope.childId && learning.kindOf(task) === scope.kind);
+    requireValue(day && tasks.length, 'NOT_FOUND', '这一天没有这类任务，请返回今日刷新');
+    return { day, tasks };
+  }
+  async function view(tx: Transaction, homework: Homework): Promise<HomeworkView> {
+    const attachments: HomeworkView['attachments'] = [];
+    for (const id of homework.attachments) {
+      const item = await tx.get('attachments', id);
+      requireValue(item && item.fileId && sameScope(item, homework), 'UNAVAILABLE', '作业附件暂时不可用');
+      attachments.push({ id: item.id, mime: item.mime, bytes: item.bytes, duration: item.duration });
+    }
+    const { taskVersions, attachments: ids, ...record } = homework;
+    return { ...record, attachments };
+  }
+  return {
+    handles(action: unknown): action is ApiAction { return typeof action === 'string' && actions.includes(action); },
+    async execute(uid: string, action: ApiAction, input: Record<string, unknown>, now: number): Promise<ApiData> {
+      const scope = scopeOf(input, now);
+      const id = homeworkKey(scope);
+      if (action === 'uploadHomeworkAttachment') {
+        requireValue(media, 'UNAVAILABLE', '作业文件服务尚未配置');
+        const uploadId = identifier(input.uploadId);
+        requireValue(typeof input.base64 === 'string' && input.base64.length <= Math.ceil(MAX_BYTES / 3) * 4
+          && input.base64.length >= 4 && /^[A-Za-z0-9+/]+={0,2}$/.test(input.base64), 'INVALID', '附件需小于512KB');
+        const bytes = Buffer.from(input.base64, 'base64');
+        requireValue(bytes.length > 0 && bytes.length <= MAX_BYTES && bytes.toString('base64') === input.base64, 'INVALID', '附件格式无效');
+        const jpeg = input.mime === 'image/jpeg' && bytes.subarray(0, 3).equals(Buffer.from([255, 216, 255]));
+        const png = input.mime === 'image/png' && bytes.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]));
+        const mp3 = input.mime === 'audio/mpeg' && (bytes.subarray(0, 3).toString() === 'ID3' || (bytes[0] === 255 && (bytes[1] & 224) === 224));
+        requireValue(jpeg || png || mp3, 'INVALID', '请使用JPG、PNG照片或MP3录音');
+        requireValue(typeof input.duration === 'number' && Number.isFinite(input.duration)
+          && (mp3 ? input.duration > 0 && input.duration <= 60 : input.duration === 0), 'INVALID', '录音最长60秒');
+        const digest = hash(input.base64);
+        const attachmentId = `a_${hash(`${uid}:${uploadId}`)}`;
+        const attachment = await store.run(async (tx) => {
+          const { family, member } = await access(tx, uid, scope);
+          requireValue(member.role === 'child', 'CHILD_REQUIRED', '请使用绑定的孩子微信提交作业');
+          const { tasks } = await group(tx, scope);
+          requireValue(!tasks.every((task) => task.done), 'CONFLICT', '家长已确认完成，无需重复提交');
+          const existing = await tx.get('attachments', attachmentId);
+          if (existing) {
+            requireValue(sameScope(existing, scope) && existing.digest === digest && existing.mime === input.mime
+              && existing.duration === input.duration, 'INVALID', '上传编号已用于其他附件');
+            return existing;
+          }
+          requireValue((family.homeworkBytes || 0) + bytes.length <= FAMILY_LIMIT, 'LIMIT', '家庭作业附件已达100MB，请联系管理员清理后再试');
+          family.homeworkBytes = (family.homeworkBytes || 0) + bytes.length;
+          const record: HomeworkAttachment = { ...scope, id: attachmentId, authorId: uid, mime: input.mime as HomeworkAttachment['mime'],
+            bytes: bytes.length, duration: input.duration as number, digest, createdAt: now };
+          await tx.put('attachments', attachmentId, record); await tx.put('families', family.id, family);
+          return record;
+        });
+        if (attachment.fileId) return { attachmentId };
+        // Storage writes happen outside retryable database transactions. The path and bytes are immutable on retry.
+        const fileId = await media.upload(`homework/${scope.familyId}/${attachmentId}.${mp3 ? 'mp3' : png ? 'png' : 'jpg'}`, bytes);
+        await store.run(async (tx) => {
+          const { member } = await access(tx, uid, scope);
+          requireValue(member.role === 'child', 'CHILD_REQUIRED', '孩子绑定状态已变更，请刷新');
+          const record = await tx.get('attachments', attachmentId);
+          requireValue(record && record.digest === digest, 'CONFLICT', '附件记录已变更，请重试');
+          await tx.put('attachments', attachmentId, { ...record, fileId });
+          return true;
+        });
+        return { attachmentId };
+      }
+      if (action === 'getHomeworkAttachment') {
+        requireValue(media, 'UNAVAILABLE', '作业文件服务尚未配置');
+        const attachmentId = identifier(input.attachmentId);
+        const readable = async (tx: Transaction) => {
+          await access(tx, uid, scope);
+          const homework = await tx.get('homeworks', id);
+          requireValue(homework?.attachments.includes(attachmentId), 'FORBIDDEN', '附件不属于这份已提交的作业');
+          const attachment = await tx.get('attachments', attachmentId);
+          requireValue(attachment && attachment.fileId && sameScope(attachment, scope), 'NOT_FOUND', '附件不存在');
+          return attachment;
+        };
+        const attachment = await store.run(readable);
+        const bytes = await media.download(attachment.fileId!);
+        requireValue(bytes.length <= MAX_BYTES && hash(bytes.toString('base64')) === attachment.digest, 'UNAVAILABLE', '附件校验失败');
+        await store.run(readable);
+        return { mime: attachment.mime, base64: bytes.toString('base64') };
+      }
+      return store.run<ApiData>(async (tx) => {
+        const { member } = await access(tx, uid, scope);
+        const previous = await tx.get('homeworks', id);
+        if (action === 'getHomework') return { homework: previous ? await view(tx, previous) : null };
+        const { day, tasks } = await group(tx, scope);
+        if (action === 'submitHomework') {
+          requireValue(member.role === 'child', 'CHILD_REQUIRED', '请使用绑定的孩子微信提交作业');
+          const submissionId = identifier(input.submissionId);
+          requireValue(Array.isArray(input.attachmentIds) && input.attachmentIds.length >= 1 && input.attachmentIds.length <= 3
+            && new Set(input.attachmentIds).size === input.attachmentIds.length, 'INVALID', '每次提交1至3份照片或录音');
+          const attachmentIds = input.attachmentIds.map(identifier);
+          if (previous?.submissionId === submissionId) {
+            requireValue(previous.authorId === uid && JSON.stringify(previous.attachments) === JSON.stringify(attachmentIds), 'INVALID', '提交编号已用于其他内容');
+            return { homework: await view(tx, previous) };
+          }
+          requireValue(Number.isInteger(input.baseVersion) && input.baseVersion === (previous?.version || 0), 'CONFLICT', '作业状态已更新，请刷新后再提交');
+          requireValue(!tasks.every((task) => task.done), 'CONFLICT', '家长已确认完成，无需重复提交');
+          for (const attachmentId of attachmentIds) {
+            const attachment = await tx.get('attachments', attachmentId);
+            requireValue(attachment && attachment.fileId && attachment.authorId === uid && sameScope(attachment, scope), 'INVALID', '附件未上传完成或不属于当前作业');
+          }
+          const homework: Homework = { ...scope, id, authorId: uid, submissionId, submittedAt: now,
+            version: (previous?.version || 0) + 1, status: 'pending', feedback: '', attachments: attachmentIds,
+            taskVersions: Object.fromEntries(tasks.map((task) => [task.id, task.version])) };
+          await tx.put('homeworks', id, homework);
+          return { homework: await view(tx, homework) };
+        }
+        requireValue(action === 'reviewHomework', 'INVALID', '未知作业操作');
+        requireValue(member.role === 'owner' || member.role === 'guardian', 'PARENT_REQUIRED', '只有家长可以确认作业');
+        requireValue(previous && previous.status === 'pending' && previous.version === input.baseVersion, 'CONFLICT', '作业已更新，请刷新后再确认');
+        requireValue(input.decision === 'approve' || input.decision === 'return', 'INVALID', '请选择通过或退回');
+        requireValue(input.feedback === undefined || (typeof input.feedback === 'string' && input.feedback.length <= 200), 'INVALID', '反馈不能超过200字');
+        if (input.decision === 'approve') {
+          requireValue(tasks.length === Object.keys(previous.taskVersions).length
+            && tasks.every((task) => previous.taskVersions[task.id] === task.version), 'CONFLICT', '任务已被家长修改，请刷新并让孩子重新提交');
+          for (const task of tasks) {
+            if (!task.done) { task.done = true; task.version++; task.updatedBy = uid; task.updatedAt = now; }
+          }
+          const ledgerId = hash(`${scope.familyId}:${scope.childId}`);
+          const ledger = await tx.get('learning', ledgerId) || { familyId: scope.familyId, childId: scope.childId, records: {} };
+          learning.recordTasks(ledger, day.tasks.filter((task) => task.childId === scope.childId), scope.date);
+          requireValue(Buffer.byteLength(JSON.stringify(ledger)) < 700 * 1024, 'LIMIT', '学习档案容量已满，请联系管理员');
+          await tx.put('learning', ledgerId, ledger); await tx.put('days', hash(`${scope.familyId}:${scope.date}`), day);
+        }
+        Object.assign(previous, { status: input.decision === 'approve' ? 'approved' : 'returned', feedback: input.feedback || '',
+          reviewedBy: uid, reviewedAt: now, version: previous.version + 1 });
+        await tx.put('homeworks', id, previous);
+        return { homework: await view(tx, previous) };
+      });
+    }
+  };
+}

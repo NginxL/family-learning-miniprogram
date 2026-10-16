@@ -122,7 +122,7 @@ export interface PlanningFamily {
   plans: Plan[];
   autoPlans?: Record<string, AutoRule[]>;
 }
-export interface Member { id: string; name: string; role: 'owner' | 'guardian' }
+export interface Member { id: string; name: string; role: 'owner' | 'guardian' | 'child'; childId?: string }
 export interface Family extends PlanningFamily {
   id: string;
   name: string;
@@ -132,11 +132,26 @@ export interface Family extends PlanningFamily {
   createdAt: number;
   activeInviteHash: string | null;
   autoCreated?: boolean;
+  homeworkBytes?: number;
 }
 export interface PublicFamily extends Omit<Family, 'createdAt' | 'activeInviteHash' | 'autoCreated'> {
   myRole: Member['role'];
   canJoinFamily: boolean;
+  myChildId?: string;
 }
+export interface HomeworkScope { familyId: string; childId: string; date: CalendarDate; kind: ContentKind }
+export interface HomeworkAttachment extends HomeworkScope {
+  id: string; authorId: string; mime: 'image/jpeg' | 'image/png' | 'audio/mpeg'; bytes: number;
+  duration: number; digest: string; createdAt: number; fileId?: string;
+}
+export interface Homework extends HomeworkScope {
+  id: string; version: number; submissionId: string; authorId: string; submittedAt: number;
+  status: 'pending' | 'approved' | 'returned'; feedback: string; reviewedBy?: string; reviewedAt?: number;
+  attachments: string[]; taskVersions: Record<string, number>;
+}
+export type HomeworkView = Omit<Homework, 'attachments' | 'taskVersions'> & {
+  attachments: Array<Pick<HomeworkAttachment, 'id' | 'mime' | 'bytes' | 'duration'>>;
+};
 export interface HistoryQuery {
   subject?: SubjectFilter;
   filter?: 'all' | 'learned' | 'mastered';
@@ -156,10 +171,12 @@ export interface KindDefinition { id: ContentKind; subject: Subject; label: stri
 export interface DatabaseDocuments {
   profiles: { familyId: string | null };
   families: Family;
-  invites: { familyId: string; expiresAt: number; usedAt: number | null };
+  invites: { familyId: string; expiresAt: number; usedAt: number | null; role?: 'guardian' | 'child'; childId?: string; guardianConsentAt?: number };
   days: Day;
   receipts: { familyId: string; fingerprint: string; task: Task; createdAt: number };
   learning: PersistedLedger;
+  homeworks: Homework;
+  attachments: HomeworkAttachment;
 }
 export type Collection = keyof DatabaseDocuments;
 export interface Transaction {

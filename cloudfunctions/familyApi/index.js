@@ -11,7 +11,10 @@ init({ env: cloud.DYNAMIC_CURRENT_ENV });
 // The installed SDK accepts this option; its bundled declaration omits it.
 // tests/sdk-contract.test.js exercises the installed SDK's actual transaction contract.
 const databaseOptions = { throwOnNotFound: false };
-const service = (0, service_1.createService)({ store: (0, store_1.createCloudStore)(cloud.database(databaseOptions)) });
+const service = (0, service_1.createService)({ store: (0, store_1.createCloudStore)(cloud.database(databaseOptions)), media: {
+        async upload(path, data) { return (await cloud.uploadFile({ cloudPath: path, fileContent: data })).fileID; },
+        async download(fileId) { return (await cloud.downloadFile({ fileID: fileId })).fileContent; }
+    } });
 async function main(event) {
     try {
         // Never accept identity or private household defaults from the caller.

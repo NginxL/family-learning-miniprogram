@@ -29,6 +29,7 @@ export interface CommonData {
   subjectOptions: Array<{ id: SubjectFilter; label: string; count?: number }>;
   mode: AppMode;
   busy: boolean;
+  isChild: boolean;
   allTaskCount?: number;
   dayWarnings?: Day['warnings'];
   childIndex?: number;

@@ -4,5 +4,7 @@
   "invites": { "read": false, "write": false },
   "days": { "read": false, "write": false },
   "receipts": { "read": false, "write": false },
-  "learning": { "read": false, "write": false }
+  "learning": { "read": false, "write": false },
+  "homeworks": { "read": false, "write": false },
+  "attachments": { "read": false, "write": false }
 }

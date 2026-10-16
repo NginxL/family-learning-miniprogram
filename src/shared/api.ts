@@ -1,4 +1,4 @@
-import type { AutoRule, CalendarDate, ContentKind, Day, HistoryQuery, PublicFamily, SchoolGrade, Subject, Task } from './models';
+import type { AutoRule, CalendarDate, ContentKind, Day, HistoryQuery, PublicFamily, SchoolGrade, Subject, Task, HomeworkScope, HomeworkView, HomeworkAttachment } from './models';
 import type { history, progress } from './learning';
 
 export interface ProfileInput {
@@ -15,7 +15,7 @@ export interface ApiPayloads {
   bootstrap: { ensureDefault?: boolean };
   createFamily: ProfileInput & { name: string; memberName: string; childName: string };
   joinFamily: { code: string; memberName: string; replaceDefaultFamilyId?: string };
-  createInvite: FamilyScope;
+  createInvite: FamilyScope & { role?: 'guardian' | 'child'; childId?: string; guardianConsent?: boolean };
   removeMember: FamilyScope & { memberId: string };
   leaveFamily: FamilyScope;
   addChild: FamilyScope & ProfileInput & { name: string };
@@ -33,6 +33,11 @@ export interface ApiPayloads {
   reviewContent: ContentRequest;
   assignContent: ContentRequest;
   setTaskDone: FamilyScope & { date: CalendarDate; taskId: string; done: boolean; baseVersion: number; mutationId: string };
+  uploadHomeworkAttachment: HomeworkScope & { uploadId: string; mime: HomeworkAttachment['mime']; base64: string; duration: number };
+  submitHomework: HomeworkScope & { submissionId: string; attachmentIds: string[]; baseVersion: number };
+  getHomework: HomeworkScope;
+  getHomeworkAttachment: HomeworkScope & { attachmentId: string };
+  reviewHomework: HomeworkScope & { baseVersion: number; decision: 'approve' | 'return'; feedback?: string };
 }
 export interface ApiResults {
   bootstrap: { userId: string; today: CalendarDate; family: PublicFamily | null };
@@ -53,6 +58,11 @@ export interface ApiResults {
   reviewContent: { task: Task; date: CalendarDate };
   assignContent: { task: Task; date: CalendarDate };
   setTaskDone: { task: Task; duplicate: boolean };
+  uploadHomeworkAttachment: { attachmentId: string };
+  submitHomework: { homework: HomeworkView };
+  getHomework: { homework: HomeworkView | null };
+  getHomeworkAttachment: { mime: HomeworkAttachment['mime']; base64: string };
+  reviewHomework: { homework: HomeworkView };
 }
 export type ApiAction = keyof ApiPayloads;
 export type ApiData = ApiResults[ApiAction];

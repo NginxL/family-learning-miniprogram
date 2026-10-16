@@ -11,7 +11,7 @@ export interface FamilyData extends CommonData {
   editingChild: (Omit<DisplayChild, 'age'> & { age: number | '' }) | null;
   addingChild: boolean; manageFamily: boolean; editBirthDate: string; addBirthDate: string;
   editCurrentAge: number | null | undefined; addCurrentAge: number | null;
-  newChildName?: string; newChildAge?: string; inviteCode?: string;
+  newChildName?: string; newChildAge?: string; inviteCode?: string; inviteLabel?: string;
 }
 export interface FamilyMethods extends CommonMethods {
   changeGrade(event: FieldEvent<string | number, { field: 'editGrade' | 'addGrade' }>): void;
@@ -23,6 +23,7 @@ export interface FamilyMethods extends CommonMethods {
   editChild(event: DatasetEvent): void; cancelEdit(): void;
   saveChild(event: ValueEvent<ChildForm>): Promise<void>;
   createInvite(): Promise<void>; copyInvite(): void;
+  createChildInvite(event: DatasetEvent): Promise<void>;
   removeMember(event: DatasetEvent<{ id: string; name: string }>): void;
   leaveFamily(): void;
 }
@@ -74,7 +75,17 @@ const definition: PageDefinition<FamilyData, FamilyMethods, CommonRuntime> = {
       age: ageValue(event.detail.value.age), schoolGrade: this.data.editGrade || null });
     if (result) { this.cancelEdit(); wx.showToast({ title: '档案已保存', icon: 'success' }); }
   },
-  async createInvite() { const result = await this.perform('createInvite', {}); if (result) this.setData({ inviteCode: result.code }); },
+  async createInvite() { const result = await this.perform('createInvite', {}); if (result) this.setData({ inviteCode: result.code, inviteLabel: '家长邀请码' }); },
+  async createChildInvite(event) {
+    const child = this.data.children.find((item) => item.id === event.currentTarget.dataset.id);
+    if (!child || this.data.family?.myRole !== 'owner') return;
+    const consent = await new Promise<boolean>((resolve) => wx.showModal({ title: `绑定${child.name}的微信`,
+      content: '请确认你是监护人并同意：孩子主动录音或拍照提交作业，文件保存在家庭云空间，仅供孩子和家长查看、反馈。加入后只能查看该孩子的档案，不能完成任务或切换家长身份。',
+      confirmText: '同意并生成', success: (result) => resolve(result.confirm), fail: () => resolve(false) }));
+    if (!consent) return;
+    const result = await this.perform('createInvite', { role: 'child', childId: child.id, guardianConsent: true });
+    if (result) this.setData({ inviteCode: result.code, inviteLabel: `${child.name}的孩子绑定码`, manageFamily: true });
+  },
   copyInvite() { if (this.data.inviteCode) wx.setClipboardData({ data: this.data.inviteCode }); },
   removeMember(event) {
     const { id, name } = event.currentTarget.dataset;

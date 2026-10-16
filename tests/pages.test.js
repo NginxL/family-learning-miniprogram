@@ -24,7 +24,7 @@ test('all WXML event handlers exist; family profile, manual cross-grade work, li
   const engine = new SyncEngine({ transport: createDemo(global.wx), storage: memoryStorage() });
   const app = { engine, mode: 'demo', navigation: {} }; global.getApp = () => app;
   t.after(() => { delete global.wx; delete global.getApp; delete global.Page; });
-  const names = ['today', 'plans', 'library', 'history', 'family', 'progress', 'study'];
+  const names = ['today', 'plans', 'library', 'history', 'family', 'progress', 'study', 'homework'];
   for (const name of names) {
     const instance = page(name, engine);
     const template = fs.readFileSync(path.join(root, `miniprogram/pages/${name}/index.wxml`), 'utf8');
