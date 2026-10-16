@@ -1,13 +1,28 @@
 'use strict';
-const data = require('../data/catalogs/shanghai-54-lower-primary.json');
+const lowerPrimary = require('../data/catalogs/shanghai-54-lower-primary.json');
+const gradeThree = require('../data/catalogs/shanghai-54-grade3.json');
+const data = { ...lowerPrimary, books: [...lowerPrimary.books, ...gradeThree.books] };
+
+function unitLabel(unit) {
+  return unit.displayLabel || `第${unit.number}单元 · ${unit.title}${unit.optional ? '（拓展）' : ''}`;
+}
 
 function mapping(book, unit, type, page = unit.sourcePrintPage, pdfPage = unit.sourcePdfPage) {
-  return { grade: book.grade, bookId: book.id, schoolSystem: '5-4', semester: book.semester,
+  const result = { grade: book.grade, bookId: book.id, schoolSystem: '5-4', semester: book.semester,
+    ...(book.editionStatus ? { editionStatus: book.editionStatus } : {}),
     edition: book.edition, sourceUrl: book.sourceUrl, outlineDestination: pdfPage ? `#page=${pdfPage}` : `目录 Unit ${unit.number}，印刷页 ${page}`,
     sourceKind: book.sourceKind, sourcePrintPage: page, ...(pdfPage ? { sourcePdfPage: pdfPage } : {}),
-    unit: `第${unit.number}单元 · ${unit.title}${unit.optional ? '（拓展）' : ''}`, unitId: unit.id, mappingType: type,
+    unit: unitLabel(unit), unitId: unit.id, mappingType: type,
     evidence: type === 'aligned_practice' ? '按已核实单元主题自编；不是教材课文或课后原题。页码为所依据单元的起始位置，学校版次待确认。' : '教材公开样本字词与册次已核实；页码为目录标注的单元起始位置，学校版次待确认。',
     status: 'catalogue_verified' };
+  if (book.sourceKind === 'official_audio') {
+    result.sourceUrl = book.sourceEvidence.officialResourceUrl;
+    result.outlineDestination = unit.sourceAudioTrack;
+    delete result.sourcePrintPage;
+    delete result.sourcePdfPage;
+    result.evidence = `${book.editionStatus === 'historical_reference' ? '旧版参考；当前新版下册待核实。' : ''}官方配套音频核实单元：${unit.sourceAudioTrack}；提取码 ${book.sourceEvidence.officialResourceCode}；书号 ${book.sourceEvidence.officialResourceIsbn}。${type === 'aligned_practice' ? '阅读与例句自编，不是教材原文。' : ''}纸本原页及学校印次待确认。`;
+  }
+  return result;
 }
 function attach(item, book, unit, type, word) {
   item.collections = [...new Set([...item.collections, 'shanghai54'])];
@@ -25,6 +40,10 @@ function attach(item, book, unit, type, word) {
     delete location.sourcePdfPage;
     location.evidence = `官方配套 Word bank 音频：${word.wordBankAudioTrack}；提取码 ${book.sourceEvidence.officialResourceCode}；书号 ${book.sourceEvidence.officialResourceIsbn}。词项已与目录交叉核对，纸本词表页及学校印次待确认。`;
   }
+  if (word?.vocabularyAudioTrack) {
+    location.outlineDestination = word.vocabularyAudioTrack;
+    location.evidence = `${book.editionStatus === 'historical_reference' ? '旧版参考；当前新版下册待核实。' : ''}官方配套音频 ${book.inventory.vocabularyListName}：${word.vocabularyAudioTrack}；提取码 ${book.sourceEvidence.officialResourceCode}；书号 ${book.sourceEvidence.officialResourceIsbn}。`;
+  }
   if (word?.verificationNote) location.evidence += ` ${word.verificationNote}`;
   item.gradeMappings = [...(item.gradeMappings || []), location];
 }
@@ -39,11 +58,11 @@ function literacyDetail(unit) {
 function validate() {
   const ids = new Set();
   for (const book of data.books) {
-    if (ids.has(book.id) || ![1, 2].includes(book.grade) || !['上册', '下册'].includes(book.semester)
+    if (ids.has(book.id) || ![1, 2, 3].includes(book.grade) || !['上册', '下册'].includes(book.semester)
       || book.schoolSystem !== '5-4' || !book.sourceUrl.startsWith('https://') || book.inventory.fullCoverage)
       throw Error(`Invalid lower-primary book: ${book.id}`);
     ids.add(book.id);
-    const expected = book.subject === 'chinese' ? 8 : 10;
+    const expected = book.expectedUnitCount || (book.subject === 'chinese' ? 8 : 10);
     if (book.units.length !== expected || !book.inventory.unitPracticeComplete) throw Error(`Incomplete unit inventory: ${book.id}`);
     if (book.inventory.wordBankComplete) {
       const bank = book.units.flatMap(unit => unit.wordBankEntries || []);
@@ -84,6 +103,14 @@ function augment(items) {
       attach(item, book, unit, type); byId.set(item.id, item); items.push(item);
     };
     const prefix = `sh54-${book.subject === 'chinese' ? 'zh' : 'en'}-${book.grade}${book.semester === '上册' ? 'a' : 'b'}-${unit.id}`;
+    for (const poem of unit.poems || []) {
+      const item = byId.get(poem.contentId);
+      if (!item || item.kind !== 'poetry') throw Error(`Unknown mapped poem: ${poem.contentId}`);
+      item.collections = [...new Set([...item.collections, 'shanghai54'])];
+      item.bookIds = [...new Set([...(item.bookIds || []), book.id])];
+      item.gradeMappings = [...(item.gradeMappings || []), { ...mapping(book, unit, 'textbook_item', poem.sourcePrintPage, poem.sourcePdfPage),
+        evidence: `人教社五四制官方目录篇名、年级、学期与印刷页已核对；${poem.identityEvidence ? `电子页${poem.identityEvidence.sourcePdfPage}核对作者${poem.identityEvidence.author}及首句“${poem.identityEvidence.firstLine}”；` : ''}正文沿用已核验公版作品。学校印次待确认。` }];
+    }
     if (book.subject === 'chinese') {
       if (book.inventory.recognitionComplete && book.inventory.writingComplete) add({ id: `${prefix}-literacy`, kind: 'reading', title: `识字写字 · 第${unit.number}组`, detail: literacyDetail(unit),
         source: '教材字表核实；按单元整理；练习提示自编', minutes: 10, collections: [], studyArea: 'literacy',
@@ -97,8 +124,9 @@ function augment(items) {
         if (!item) {
           const id = `sh54-word-${word.text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-$/, '')}`;
           item = { id, kind: 'word', title: word.text, detail: `${word.text}\n${word.meaning}`, minutes: 1,
-            source: word.wordBankAudioTrack ? '沪教版官方配套 Word bank 音频；常用义提示自编' : '沪教版教材目录 Topic words；常用义提示自编',
-            collections: [], aliases: [word.text], referenceUrl: word.wordBankAudioTrack ? book.sourceEvidence.officialResourceUrl : book.sourceUrl };
+            source: word.vocabularyAudioTrack ? `沪教版官方配套 ${book.inventory.vocabularyListName} 音频；常用义提示自编`
+              : word.wordBankAudioTrack ? '沪教版官方配套 Word bank 音频；常用义提示自编' : '沪教版教材目录 Topic words；常用义提示自编',
+            collections: [], aliases: [word.text], referenceUrl: word.wordBankAudioTrack || word.vocabularyAudioTrack ? book.sourceEvidence.officialResourceUrl : book.sourceUrl };
           if (byId.has(id)) throw Error(`Ambiguous vocabulary identity: ${word.text}`);
           byId.set(id, item); lexicon.set(word.text, item); items.push(item);
         }
@@ -138,6 +166,6 @@ function pinyin() {
 function bookSummaries() {
   return data.books.map(book => ({ id: book.id, title: book.title, grade: book.grade, semester: book.semester,
     subject: book.subject, url: book.sourceUrl, verification: `${book.edition}；学校采用版次待确认。`,
-    units: book.units.map(unit => ({ id: unit.id, label: `第${unit.number}单元 · ${unit.title}${unit.optional ? '（拓展）' : ''}` })) }));
+    units: book.units.map(unit => ({ id: unit.id, label: unitLabel(unit) })) }));
 }
 module.exports = { data, augment, pinyin, bookSummaries, practiceDetail, literacyDetail };

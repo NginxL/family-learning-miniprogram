@@ -167,7 +167,7 @@ const definition = {
                     assigned: today.some((task) => learning.contentId(task) === item.id),
                     learnedLabel: ((_a = this.learningIndex) === null || _a === void 0 ? void 0 : _a.has(item.id)) ? (this.learningIndex.get(item.id).mastered ? '已掌握' : '已学过') : '',
                     lastLearned: ((_c = (_b = this.learningIndex) === null || _b === void 0 ? void 0 : _b.get(item.id)) === null || _c === void 0 ? void 0 : _c.lastLearned) || '', learnedCount: ((_e = (_d = this.learningIndex) === null || _d === void 0 ? void 0 : _d.get(item.id)) === null || _e === void 0 ? void 0 : _e.learnedCount) || 0,
-                    gradeLabel: (item.gradeMappings || []).length ? [...new Set(item.gradeMappings.map((mapping) => `${learning.gradeLabels[mapping.grade]}${mapping.semester}`))].join('、')
+                    gradeLabel: (item.gradeMappings || []).length ? [...new Set(item.gradeMappings.map((mapping) => `${learning.gradeLabels[mapping.grade]}${mapping.semester}${mapping.editionStatus === 'historical_reference' ? '（旧版参考）' : ''}`))].join('、')
                         + (item.gradeMappings.every(mapping => mapping.mappingType === 'aligned_practice') ? ' · 单元原创练习' : ' · 教材归属已核实') : ['reading', 'english-reading'].includes(item.kind) ? '自编入门练习 · 非教材课文' : '年级归属待核对',
                     preview: item.kind === 'poetry' ? (0, page_1.decorate)(item).poetryByline : item.detail.split('\n')[1] || '' });
             }) });

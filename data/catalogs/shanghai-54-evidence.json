@@ -373,7 +373,8 @@
           "sourcePrintPage": 12,
           "unit": "第一单元·语文园地·日积月累",
           "gradeVerification": "catalogue_verified",
-          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认"
+          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认",
+          "unitId": "u1"
         },
         {
           "observedTitle": "望洞庭",
@@ -383,7 +384,8 @@
           "sourcePrintPage": 14,
           "unit": "第二单元·第4课古诗三首",
           "gradeVerification": "catalogue_verified",
-          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认"
+          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认",
+          "unitId": "u2"
         },
         {
           "observedTitle": "山行",
@@ -393,7 +395,8 @@
           "sourcePrintPage": 14,
           "unit": "第二单元·第4课古诗三首",
           "gradeVerification": "catalogue_verified",
-          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认"
+          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认",
+          "unitId": "u2"
         },
         {
           "observedTitle": "夜书所见",
@@ -403,7 +406,8 @@
           "sourcePrintPage": 15,
           "unit": "第二单元·第4课古诗三首",
           "gradeVerification": "catalogue_verified",
-          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认"
+          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认",
+          "unitId": "u2"
         },
         {
           "observedTitle": "舟夜书所见",
@@ -413,7 +417,8 @@
           "sourcePrintPage": 26,
           "unit": "第二单元·语文园地·日积月累",
           "gradeVerification": "catalogue_verified",
-          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认"
+          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认",
+          "unitId": "u2"
         },
         {
           "observedTitle": "早发白帝城",
@@ -423,7 +428,8 @@
           "sourcePrintPage": 82,
           "unit": "第六单元·语文园地·日积月累",
           "gradeVerification": "catalogue_verified",
-          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认"
+          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认",
+          "unitId": "u6"
         },
         {
           "observedTitle": "鹿柴",
@@ -433,7 +439,8 @@
           "sourcePrintPage": 84,
           "unit": "第七单元·第20课古诗三首",
           "gradeVerification": "catalogue_verified",
-          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认"
+          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认",
+          "unitId": "u7"
         },
         {
           "observedTitle": "望天门山",
@@ -443,7 +450,8 @@
           "sourcePrintPage": 84,
           "unit": "第七单元·第20课古诗三首",
           "gradeVerification": "catalogue_verified",
-          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认"
+          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认",
+          "unitId": "u7"
         },
         {
           "observedTitle": "饮湖上初晴后雨",
@@ -453,7 +461,8 @@
           "sourcePrintPage": 85,
           "unit": "第七单元·第20课古诗三首",
           "gradeVerification": "catalogue_verified",
-          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认"
+          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认",
+          "unitId": "u7"
         },
         {
           "observedTitle": "采莲曲",
@@ -463,7 +472,8 @@
           "sourcePrintPage": 94,
           "unit": "第七单元·语文园地·日积月累",
           "gradeVerification": "catalogue_verified",
-          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认"
+          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认",
+          "unitId": "u7"
         },
         {
           "observedTitle": "司马光",
@@ -473,7 +483,8 @@
           "sourcePrintPage": 96,
           "unit": "第八单元·第23课",
           "gradeVerification": "catalogue_verified",
-          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认"
+          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认",
+          "unitId": "u8"
         }
       ]
     },

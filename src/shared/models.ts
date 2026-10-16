@@ -14,6 +14,7 @@ export interface GradeMapping {
   schoolSystem: '5-4';
   semester: string;
   edition: string;
+  editionStatus?: 'historical_reference' | 'official_resource_verified';
   sourceUrl: string;
   outlineDestination: string;
   sourceKind: string;

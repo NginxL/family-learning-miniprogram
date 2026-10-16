@@ -4,6 +4,7 @@ const coverage = require('../data/catalogs/shanghai-54-coverage.json');
 const resources = require('../shared/resources.json');
 const regional = require('../data/catalogs/shanghai-54-evidence.json');
 const lowerPrimary = require('../data/catalogs/shanghai-54-lower-primary.json');
+const gradeThree = require('../data/catalogs/shanghai-54-grade3.json');
 const learning = require('../shared/learning');
 
 test('Shanghai curriculum inventories all 36 subject-semesters without turning book listings into knowledge coverage', () => {
@@ -19,19 +20,19 @@ test('Shanghai curriculum inventories all 36 subject-semesters without turning b
       assert.equal(slot.fullCoverage, false); assert.equal(slot.schoolAdoption, 'pending');
       assert.ok(slot.references.every(ref => coverage.sources.some(source => source.id === ref.sourceId)));
       if (slot.subject === 'english') {
-        if (grade > 2) { assert.equal(slot.verifiedCount, 0); assert.equal(slot.contentBookId, ''); }
+        if (grade > 3) { assert.equal(slot.verifiedCount, 0); assert.equal(slot.contentBookId, ''); }
         if (slot.semester === '下册') assert.ok(slot.references.every(ref => ref.verification === 'historical_resource_listing' && ref.period === '2025学年第二学期'));
       }
       if (slot.contentBookId) {
-        const book = [...regional.books, ...lowerPrimary.books].find(book => book.id === slot.contentBookId);
+        const book = [...regional.books, ...lowerPrimary.books, ...gradeThree.books].find(book => book.id === slot.contentBookId);
         assert.equal(book.grade, grade); assert.equal(book.semester, slot.semester);
         const actual = learning.searchCatalog({ grade }).filter(item => item.gradeMappings.some(mapping => mapping.bookId === book.id)).length;
         assert.equal(slot.verifiedCount, actual);
       }
     }
   }
-  assert.equal(resources.curriculum.slots.filter(slot => slot.availableUnits).length, 8);
-  assert.equal(resources.curriculum.slots.reduce((sum, slot) => sum + slot.availableUnits, 0), 72);
+  assert.equal(resources.curriculum.slots.filter(slot => slot.availableUnits).length, 12);
+  assert.equal(resources.curriculum.slots.reduce((sum, slot) => sum + slot.availableUnits, 0), 110);
   assert.ok(learning.progress({ records: {} }).grades.every(grade => !grade.fullGradeComplete));
 });
 

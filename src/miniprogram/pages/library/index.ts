@@ -136,7 +136,7 @@ const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = 
         assigned: today.some((task) => learning.contentId(task) === item.id),
         learnedLabel: this.learningIndex?.has(item.id) ? (this.learningIndex.get(item.id)!.mastered ? '已掌握' : '已学过') : '',
         lastLearned: this.learningIndex?.get(item.id)?.lastLearned || '', learnedCount: this.learningIndex?.get(item.id)?.learnedCount || 0,
-        gradeLabel: (item.gradeMappings || []).length ? [...new Set(item.gradeMappings!.map((mapping) => `${learning.gradeLabels[mapping.grade]}${mapping.semester}`))].join('、')
+        gradeLabel: (item.gradeMappings || []).length ? [...new Set(item.gradeMappings!.map((mapping) => `${learning.gradeLabels[mapping.grade]}${mapping.semester}${mapping.editionStatus === 'historical_reference' ? '（旧版参考）' : ''}`))].join('、')
           + (item.gradeMappings!.every(mapping => mapping.mappingType === 'aligned_practice') ? ' · 单元原创练习' : ' · 教材归属已核实') : ['reading', 'english-reading'].includes(item.kind) ? '自编入门练习 · 非教材课文' : '年级归属待核对',
         preview: item.kind === 'poetry' ? decorate(item).poetryByline : item.detail.split('\n')[1] || '' })) });
   },

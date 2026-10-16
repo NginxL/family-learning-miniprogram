@@ -7,6 +7,7 @@ function inventoryNote(book) {
   if (book.subject === 'chinese') return book.inventory.recognitionComplete && book.inventory.writingComplete
     ? `识字表 ${book.inventory.recognitionCount} 字、写字表 ${book.inventory.writingCount} 字已整理（含另列多音字复习）；`
     : '完整识字表、写字表待原页核实；';
+  if (book.inventory.vocabularyListName) return `${book.editionStatus === 'historical_reference' ? '旧版参考，当前新版下册待核实；' : ''}官方配套音频 ${book.inventory.vocabularyListName} 已整理 ${book.inventory.vocabularyCount} 个单元词项（含跨单元复现）；纸本词表完整性待核验；`;
   if (!book.inventory.wordBankComplete) return '目录主题词汇已整理，完整 Word bank 待核验；';
   return book.inventory.wordBankBasis === 'public_sample_pages'
     ? `公开样本 Word bank ${book.inventory.wordBankCount} 项已整理；与官方音频的差异已标注，学校纸本待确认；`

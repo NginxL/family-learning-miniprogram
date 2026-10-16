@@ -32,7 +32,7 @@ TypeScript 固定为 `6.0.2`，Node 类型固定到 Node 20，微信官方 API �
 
 `scripts/typescript-build.js` 在临时目录编译并生成产物映射，退出时删除临时目录；`scripts/sync-shared.js` 写入原有运行目录。构建不包含上传、发布、云函数部署或数据库写入。
 
-`tsconfig.json` 的 `rootDirs` 只用于把云端和小程序的 `learning/*` 导入解析到共用 TS 源码；实际部署包中仍由构建脚本放置相应 JS 文件。构建读取 `miniprogram/app.json` 的页面清单，每个页面都须有对应 TS 源码。小程序知识数据继续生成 `.js` 模块，不依赖 Node 的 JSON 加载器。
+`tsconfig.json` 的 `rootDirs` 只用于把云端和小程序的 `learning/*` 导入解析到共用 TS 源码；实际部署包中仍由构建脚本放置相应 JS 文件。构建读取 `miniprogram/app.json` 的页面清单，每个页面都须有对应 TS 源码。小程序知识数据继续生成 `.js` 模块，不依赖 Node 的 JSON 加载器。 `scripts/data-module.js`在构建时合并重复的长字符串，运行时仍导出普通对象与数组；`tests/data-module.test.js`核对客户端与云端JSON深度相等，包体检查保留2 MiB上限。
 
 ## 数据与接口边界
 

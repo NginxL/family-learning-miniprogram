@@ -37,6 +37,7 @@ export function assertKnowledge(value: unknown): asserts value is KnowledgeItem[
         requireField(object(mapping), `${path}.gradeMappings entry`);
         requireField(typeof mapping.grade === 'number' && Number.isInteger(mapping.grade) && mapping.grade >= 1 && mapping.grade <= 9, `${path}.grade`);
         requireField(mapping.schoolSystem === '5-4' && mapping.status === 'catalogue_verified', `${path}.verification`);
+        requireField(mapping.editionStatus === undefined || ['historical_reference', 'official_resource_verified'].includes(mapping.editionStatus as string), `${path}.editionStatus`);
         for (const key of ['bookId', 'semester', 'edition', 'sourceUrl', 'outlineDestination', 'sourceKind', 'evidence'])
           requireField(typeof mapping[key] === 'string' && mapping[key].length > 0, `${path}.${key}`);
         for (const key of ['sourcePdfPage', 'sourcePrintPage'])

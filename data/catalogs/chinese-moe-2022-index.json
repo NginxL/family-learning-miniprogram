@@ -342,6 +342,8 @@
           "sourcePdfPage": 89,
           "sourcePrintPage": 84,
           "unit": "第七单元·第20课古诗三首",
+          "unitId": "u7",
+          "mappingType": "textbook_item",
           "sourceKind": "public_sample",
           "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
           "status": "catalogue_verified"
@@ -387,7 +389,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 59,
       "source_pdf_page": 66,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 3,
+          "bookId": "chinese-3b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "edition": "五四制官方电子样本；封面审定2024；ISBN及学校印次待确认",
+          "sourceUrl": "https://book.pep.com.cn/1211001302252/",
+          "outlineDestination": "#page=51",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 45,
+          "sourcePdfPage": 51,
+          "unit": "第4单元 · 传统文化",
+          "unitId": "u4",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方目录篇名、年级、学期与印刷页已核对；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-016"
     },
@@ -537,6 +557,8 @@
           "sourcePdfPage": 87,
           "sourcePrintPage": 82,
           "unit": "第六单元·语文园地·日积月累",
+          "unitId": "u6",
+          "mappingType": "textbook_item",
           "sourceKind": "public_sample",
           "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
           "status": "catalogue_verified"
@@ -567,6 +589,8 @@
           "sourcePdfPage": 89,
           "sourcePrintPage": 84,
           "unit": "第七单元·第20课古诗三首",
+          "unitId": "u7",
+          "mappingType": "textbook_item",
           "sourceKind": "public_sample",
           "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
           "status": "catalogue_verified"
@@ -627,7 +651,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 59,
       "source_pdf_page": 66,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 3,
+          "bookId": "chinese-3b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "edition": "五四制官方电子样本；封面审定2024；ISBN及学校印次待确认",
+          "sourceUrl": "https://book.pep.com.cn/1211001302252/",
+          "outlineDestination": "#page=8",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 2,
+          "sourcePdfPage": 8,
+          "unit": "第1单元 · 观察生物",
+          "unitId": "u1",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方目录篇名、年级、学期与印刷页已核对；电子页8核对作者杜甫及首句“迟日江山丽”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-027"
     },
@@ -764,6 +806,8 @@
           "sourcePdfPage": 19,
           "sourcePrintPage": 14,
           "unit": "第二单元·第4课古诗三首",
+          "unitId": "u2",
+          "mappingType": "textbook_item",
           "sourceKind": "public_sample",
           "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
           "status": "catalogue_verified"
@@ -1010,6 +1054,8 @@
           "sourcePdfPage": 19,
           "sourcePrintPage": 14,
           "unit": "第二单元·第4课古诗三首",
+          "unitId": "u2",
+          "mappingType": "textbook_item",
           "sourceKind": "public_sample",
           "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
           "status": "catalogue_verified"
@@ -1028,7 +1074,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 60,
       "source_pdf_page": 67,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 3,
+          "bookId": "chinese-3b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "edition": "五四制官方电子样本；封面审定2024；ISBN及学校印次待确认",
+          "sourceUrl": "https://book.pep.com.cn/1211001302252/",
+          "outlineDestination": "#page=50",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 44,
+          "sourcePdfPage": 50,
+          "unit": "第4单元 · 传统文化",
+          "unitId": "u4",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方目录篇名、年级、学期与印刷页已核对；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-046"
     },
@@ -1097,7 +1161,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 60,
       "source_pdf_page": 67,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 3,
+          "bookId": "chinese-3b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "edition": "五四制官方电子样本；封面审定2024；ISBN及学校印次待确认",
+          "sourceUrl": "https://book.pep.com.cn/1211001302252/",
+          "outlineDestination": "#page=50",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 44,
+          "sourcePdfPage": 50,
+          "unit": "第4单元 · 传统文化",
+          "unitId": "u4",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方目录篇名、年级、学期与印刷页已核对；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-050"
     },
@@ -1191,6 +1273,8 @@
           "sourcePdfPage": 90,
           "sourcePrintPage": 85,
           "unit": "第七单元·第20课古诗三首",
+          "unitId": "u7",
+          "mappingType": "textbook_item",
           "sourceKind": "public_sample",
           "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
           "status": "catalogue_verified"
@@ -1209,7 +1293,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 60,
       "source_pdf_page": 67,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 3,
+          "bookId": "chinese-3b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "edition": "五四制官方电子样本；封面审定2024；ISBN及学校印次待确认",
+          "sourceUrl": "https://book.pep.com.cn/1211001302252/",
+          "outlineDestination": "#page=8",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 2,
+          "sourcePdfPage": 8,
+          "unit": "第1单元 · 观察生物",
+          "unitId": "u1",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方目录篇名、年级、学期与印刷页已核对；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-055"
     },
@@ -1251,7 +1353,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 60,
       "source_pdf_page": 67,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 3,
+          "bookId": "chinese-3b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "edition": "五四制官方电子样本；封面审定2024；ISBN及学校印次待确认",
+          "sourceUrl": "https://book.pep.com.cn/1211001302252/",
+          "outlineDestination": "#page=9",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 3,
+          "sourcePdfPage": 9,
+          "unit": "第1单元 · 观察生物",
+          "unitId": "u1",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方目录篇名、年级、学期与印刷页已核对；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-058"
     },
@@ -1521,6 +1641,8 @@
           "sourcePdfPage": 17,
           "sourcePrintPage": 12,
           "unit": "第一单元·语文园地·日积月累",
+          "unitId": "u1",
+          "mappingType": "textbook_item",
           "sourceKind": "public_sample",
           "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
           "status": "catalogue_verified"
