@@ -12,8 +12,6 @@
       <view class="meter"><view class="meter-fill" style="width:{{groupPercent}}%"></view></view>
     </view>
     <view class="tab-row subjects"><view wx:for="{{subjectOptions}}" wx:key="id" class="subject-chip {{subjectFilter === item.id ? 'selected' : ''}}" data-id="{{item.id}}" bindtap="selectSubject">{{item.label}}<text wx:if="{{item.count}}"> {{item.count}}</text></view></view>
-    <view class="row quick-links"><button class="quiet" bindtap="openPlans">调整计划 →</button><button class="quiet" bindtap="openHistory">回顾学过的内容 →</button></view>
-    <view class="row"><button class="quiet" bindtap="openLibrary">从知识库选一项 →</button><button class="quiet" bindtap="openProgress">知识进度 →</button></view>
     <view class="row"><view class="section">{{date === today ? '今日学习' : '学习记录'}}</view><view class="status" bindtap="refresh">{{mode === 'demo' ? '本机保存' : syncLabel}} ↻</view></view>
     <view wx:for="{{dayWarnings}}" wx:key="kind" class="notice">{{item.message}}</view>
     <view wx:for="{{groups}}" wx:for-item="group" wx:key="id" class="card activity-card" data-id="{{group.id}}" bindtap="openGroup" hover-class="activity-card-pressed" aria-role="button" aria-label="{{group.label}}，{{group.quantityLabel}}，查看学习详情">
