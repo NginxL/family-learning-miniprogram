@@ -95,6 +95,8 @@ export interface AutoRule {
   scope: ContentScope;
   quantity: number;
 }
+export interface DailyTemplate { id: string; name: string; rules: AutoRule[] }
+export interface TemplateSet { templates: DailyTemplate[]; activeId: string; revision: number }
 export interface Day {
   familyId?: string;
   date: CalendarDate;
@@ -129,6 +131,7 @@ export interface PlanningFamily {
   children: Array<{ id: string }>;
   plans: Plan[];
   autoPlans?: Record<string, AutoRule[]>;
+  templateSets?: Record<string, TemplateSet>;
   scheduledContents?: Array<{ childId: string; contentId: string; date: CalendarDate }>;
 }
 export interface Member { id: string; name: string; role: 'owner' | 'guardian' | 'child'; childId?: string }
@@ -182,7 +185,7 @@ export interface DatabaseDocuments {
   families: Family;
   invites: { familyId: string; expiresAt: number; usedAt: number | null; role?: 'guardian' | 'child'; childId?: string; guardianConsentAt?: number };
   days: Day;
-  receipts: { familyId: string; fingerprint: string; createdAt: number } & ({ task: Task } | { planning: PlanningChange });
+  receipts: { familyId: string; fingerprint: string; createdAt: number } & ({ task: Task } | { planning: PlanningChange } | { template: { childId: string } });
   learning: PersistedLedger;
   homeworks: Homework;
   attachments: HomeworkAttachment;

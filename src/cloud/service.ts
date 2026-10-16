@@ -18,6 +18,20 @@ interface ServiceOptions {
 const clone = <T>(value: T): T => JSON.parse(JSON.stringify(value));
 const dayKey = (familyId: string, date: string) => hash(`${familyId}:${date}`);
 
+function validatedRules(value: unknown): AutoRule[] {
+  requireValue(Array.isArray(value) && value.length === learning.kinds.length, 'INVALID', '请提供完整的每日安排');
+  const seen = new Set();
+  return value.map((rule: unknown): AutoRule => {
+    requireValue(isRecord(rule), 'INVALID', '每日安排无效');
+    const kind = learning.kinds.find((item) => item.id === rule.kind);
+    requireValue(kind && !seen.has(kind.id) && isOneOf(rule.mode, ['new', 'review'] as const)
+      && isInteger(rule.quantity) && rule.quantity >= 0 && rule.quantity <= kind.max, 'INVALID', '每日数量或新学／复习类型无效');
+    const scope = rule.scope || 'starter';
+    requireValue(isOneOf(scope, learning.scopeOptions(kind.id).map((item) => item.id)), 'INVALID', '学习内容范围无效');
+    seen.add(kind.id); return { kind: kind.id, mode: rule.mode, quantity: rule.quantity, scope };
+  });
+}
+
 function childProfile(input: Record<string, unknown>, today: string) {
   const birthDate = input.birthDate == null || input.birthDate === '' ? null : input.birthDate;
   const age = birthDate === null ? (input.age == null ? null : input.age) : ageFromBirthDate(birthDate, today);
@@ -35,6 +49,7 @@ function publicFamily(family: Family, uid: string, today: string): PublicFamily 
     id: family.id, name: family.name, ownerId: family.ownerId,
     members: family.members.map(({ id, name, role, childId }) => ({ id, name, role, ...(childId ? { childId } : {}) })),
     children: family.children.filter((child) => !childId || child.id === childId).map((child) => withCurrentAge(child, today)), plans: clone(family.plans.filter((plan) => !childId || plan.childId === childId)), autoPlans: clone(childId ? { [childId]: family.autoPlans?.[childId] || [] } : family.autoPlans || {}),
+    ...(family.templateSets ? { templateSets: clone(childId ? (family.templateSets[childId] ? { [childId]: family.templateSets[childId] } : {}) : family.templateSets) } : {}),
     myRole: member.role, ...(childId ? { myChildId: childId } : {}),
     canJoinFamily: family.autoCreated === true && family.ownerId === uid && family.members.length === 1
   };
@@ -152,6 +167,14 @@ function createService({ store, media, now = Date.now, randomId = () => crypto.r
         await tx.put('days', id, day);
       };
 
+      const freezeCurrentDay = async (childId: string) => {
+        const id = dayKey(family.id, today); const day = await tx.get('days', id);
+        if (!day) return;
+        const before = JSON.stringify(day);
+        learning.freezeTemplateDay(family, day, childId);
+        if (before !== JSON.stringify(day)) await saveDay(id, day);
+      };
+
       if (action === 'createInvite') {
         owner();
         const role = input.role === undefined ? 'guardian' : input.role;
@@ -221,21 +244,57 @@ function createService({ store, media, now = Date.now, randomId = () => crypto.r
       }
       if (action === 'saveAutoPlans') {
         childExists(input.childId);
-        requireValue(Array.isArray(input.rules) && input.rules.length === learning.kinds.length, 'INVALID', '请提供完整的每日安排');
-        const seen = new Set();
-        const rules = input.rules.map((rule: unknown): AutoRule => {
-          requireValue(isRecord(rule), 'INVALID', '每日安排无效');
-          const kind = learning.kinds.find((item) => item.id === rule.kind);
-          requireValue(kind && !seen.has(kind.id) && isOneOf(rule.mode, ['new', 'review'] as const)
-            && isInteger(rule.quantity) && rule.quantity >= 0 && rule.quantity <= kind.max, 'INVALID', '每日数量或新学／复习类型无效');
-          const scope = rule.scope || 'starter';
-          requireValue(isOneOf(scope, learning.scopeOptions(kind.id).map((item) => item.id)), 'INVALID', '学习内容范围无效');
-          seen.add(kind.id); return { kind: kind.id, mode: rule.mode, quantity: rule.quantity, scope };
-        });
+        const rules = validatedRules(input.rules);
+        if (family.templateSets?.[input.childId]) {
+          const set = learning.templateSet(family, input.childId);
+          await freezeCurrentDay(input.childId);
+          set.templates.find((item) => item.id === set.activeId)!.rules = rules;
+          set.revision += 1; family.templateSets[input.childId] = set;
+        }
         family.autoPlans = family.autoPlans || {};
         family.autoPlans[input.childId] = rules;
         await tx.put('families', family.id, family);
         return reply(action, { family: publicFamily(family, uid, today) });
+      }
+      if (action === 'saveDailyTemplate' || action === 'activateDailyTemplate' || action === 'deleteDailyTemplate') {
+        childExists(input.childId);
+        const templateId = identifier(input.templateId); identifier(input.mutationId);
+        requireValue(isInteger(input.baseRevision) && input.baseRevision >= 0, 'INVALID', '模板版本无效');
+        const name = action === 'saveDailyTemplate' ? text(input.name, '模板名称', 24) : undefined;
+        const rules = action === 'saveDailyTemplate' ? validatedRules(input.rules) : undefined;
+        if (action === 'saveDailyTemplate') requireValue(typeof input.activate === 'boolean', 'INVALID', '请选择是否启用模板');
+        const fingerprint = hash(JSON.stringify([action, family.id, input.childId, templateId, input.baseRevision, name, rules, input.activate]));
+        const receiptId = hash(`${uid}:${input.mutationId}`);
+        const receipt = await tx.get('receipts', receiptId);
+        if (receipt) {
+          requireValue(receipt.fingerprint === fingerprint && 'template' in receipt, 'INVALID', '操作编号已用于其他请求');
+          return reply(action, { family: publicFamily(family, uid, today), duplicate: true });
+        }
+        const set = learning.templateSet(family, input.childId);
+        requireValue(set.revision === input.baseRevision, 'CONFLICT', '家人已更新任务模板，请重新载入后再修改');
+        const index = set.templates.findIndex((item) => item.id === templateId);
+        if (action === 'saveDailyTemplate') {
+          requireValue(!set.templates.some((item) => item.id !== templateId && item.name === name), 'INVALID', '已有同名模板，请换一个名称');
+          requireValue(index >= 0 || set.templates.length < 10, 'LIMIT', '每个孩子最多保存10个模板');
+          if (set.activeId === templateId || input.activate) await freezeCurrentDay(input.childId);
+          const template = { id: templateId, name: name!, rules: rules! };
+          if (index >= 0) set.templates[index] = template; else set.templates.push(template);
+          if (input.activate) set.activeId = templateId;
+        } else {
+          requireValue(index >= 0, 'NOT_FOUND', '模板不存在，请刷新');
+          if (action === 'deleteDailyTemplate') {
+            requireValue(set.activeId !== templateId, 'INVALID', '请先启用其他模板，再删除当前模板');
+            set.templates.splice(index, 1);
+          } else {
+            await freezeCurrentDay(input.childId); set.activeId = templateId;
+          }
+        }
+        set.revision += 1;
+        family.templateSets = { ...family.templateSets, [input.childId]: set };
+        family.autoPlans = { ...family.autoPlans, [input.childId]: clone(set.templates.find((item) => item.id === set.activeId)!.rules) };
+        await tx.put('families', family.id, family);
+        await tx.put('receipts', receiptId, { familyId: family.id, fingerprint, template: { childId: input.childId }, createdAt: timestamp });
+        return reply(action, { family: publicFamily(family, uid, today), duplicate: false });
       }
       if (action === 'getDay') {
         const requested = input.date === undefined ? today : input.date;

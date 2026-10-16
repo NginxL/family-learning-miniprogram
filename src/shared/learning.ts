@@ -1,5 +1,5 @@
 import catalog = require('./catalog');
-import type { AutoRule, CatalogQuery, ContentInput, ContentKind, ContentScope, Day, HistoryQuery, KindDefinition, LearningContent, LearningLedger, PlanningFamily, SchoolGrade, StoredContent, SubjectFilter, Task, TaskMode } from './models';
+import type { AutoRule, CatalogQuery, ContentInput, ContentKind, ContentScope, Day, HistoryQuery, KindDefinition, LearningContent, LearningLedger, PlanningFamily, SchoolGrade, StoredContent, SubjectFilter, Task, TaskMode, TemplateSet } from './models';
 const catalogById = new Map(catalog.map((item) => [item.id, item]));
 const kinds: KindDefinition[] = [
   { id: 'poetry', subject: 'poetry', label: '古诗文', unit: '首', max: 5 },
@@ -28,6 +28,28 @@ function contentId(item: ContentInput): string {
 }
 const defaultRules = (): AutoRule[] => kinds.map<AutoRule>((kind) => ({ kind: kind.id, mode: 'new', scope: 'starter', quantity: ['poetry', 'sentence'].includes(kind.id) ? 1 : 0 }));
 const emptyRules = (): AutoRule[] => kinds.map<AutoRule>((kind) => ({ kind: kind.id, mode: 'new', scope: 'starter', quantity: 0 }));
+function templateSet(family: PlanningFamily, childId: string): TemplateSet {
+  const id = `default_${childId}`;
+  return JSON.parse(JSON.stringify(family.templateSets?.[childId] || {
+    templates: [{ id, name: '每日积累', rules: family.autoPlans?.[childId] || emptyRules() }], activeId: id, revision: 0
+  }));
+}
+function activeTemplate(family: PlanningFamily, childId: string) {
+  const set = templateSet(family, childId);
+  return set.templates.find((item) => item.id === set.activeId) || set.templates[0];
+}
+function templateSummary(rules: AutoRule[]): string {
+  return rules.filter((rule) => rule.quantity > 0).map((rule) => {
+    const kind = definition(rule.kind);
+    return `${kind.label} ${rule.quantity}${kind.unit}${rule.mode === 'review' ? '（复习）' : ''}`;
+  }).join(' · ') || '暂停自动安排';
+}
+// A changed active template never fills previously disabled types into an already-generated day.
+function freezeTemplateDay(family: PlanningFamily, day: Day, childId: string): void {
+  const generated = day.generated?.[childId];
+  if (!generated) return;
+  for (const rule of activeTemplate(family, childId).rules) if (!generated[rule.kind]) generated[rule.kind] = { ...rule, actual: 0 };
+}
 function scopeOptions(kind: ContentKind) {
   const options: Array<{ id: ContentScope; label: string }> = [{ id: 'starter', label: '亲子入门' }];
   if (kind === 'poetry') options.push({ id: 'foundation', label: '国家课标 1–6 年级 · 75 篇' },
@@ -148,8 +170,8 @@ function generateDay(family: PlanningFamily, day: Day, ledgers: Record<string, L
       ...(family.scheduledContents || []).filter((item) => item.childId === child.id && item.date > day.date).map((item) => item.contentId),
       ...family.plans.filter((plan) => plan.childId === child.id && plan.enabled && plan.schedule === 'once' && plan.date && plan.date > day.date).map(contentId)
     ].map((id) => catalogById.get(id)?.workId || id));
-    const rules = (family.autoPlans && family.autoPlans[child.id]) || emptyRules();
-    rules.filter((rule) => rule.quantity > 0).forEach((rule) => {
+    const rules = activeTemplate(family, child.id).rules;
+    rules.filter((rule) => rule.quantity > 0 || family.templateSets?.[child.id]).forEach((rule) => {
       if (generated[rule.kind]) return;
       let pool;
       if (rule.mode === 'new') {
@@ -197,8 +219,7 @@ function history(ledger: LearningLedger, input: HistoryQuery = {}) {
     nextOffset: offset + limit < filtered.length ? offset + limit : null,
     stats: { seen: entries.length, learned: entries.filter((entry) => entry.learnedCount > 0).length, mastered: entries.filter((entry) => entry.mastered).length } };
 }
-function ruleRows(family: PlanningFamily, childId: string) {
-  const rules = (family.autoPlans && family.autoPlans[childId]) || emptyRules();
+function ruleRows(family: PlanningFamily, childId: string, rules: AutoRule[] = activeTemplate(family, childId).rules) {
   return kinds.map((kind) => {
     const rule: Omit<AutoRule, 'kind'> = { mode: 'new', quantity: 0, scope: 'starter', ...(rules.find((item) => item.kind === kind.id) || {}) };
     const scopes = scopeOptions(kind.id);
@@ -248,4 +269,4 @@ function progress(ledger: LearningLedger) {
 }
 export { catalog, catalogById, kinds, subjects, kindOf, definition, contentId, content, defaultRules, emptyRules,
   scopeOptions, inScope, materialPool, recordTasks, taskFrom, generateDay, history, ruleRows, searchCatalog, gradeLabels, progress,
-  planningKey, wasLearned, omitTask, allowsRepeat };
+  planningKey, wasLearned, omitTask, allowsRepeat, templateSet, activeTemplate, templateSummary, freezeTemplateDay };

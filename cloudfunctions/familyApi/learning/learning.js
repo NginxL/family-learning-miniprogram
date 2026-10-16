@@ -17,6 +17,10 @@ exports.planningKey = planningKey;
 exports.wasLearned = wasLearned;
 exports.omitTask = omitTask;
 exports.allowsRepeat = allowsRepeat;
+exports.templateSet = templateSet;
+exports.activeTemplate = activeTemplate;
+exports.templateSummary = templateSummary;
+exports.freezeTemplateDay = freezeTemplateDay;
 const catalog = require("./catalog");
 exports.catalog = catalog;
 const catalogById = new Map(catalog.map((item) => [item.id, item]));
@@ -56,6 +60,33 @@ const defaultRules = () => kinds.map((kind) => ({ kind: kind.id, mode: 'new', sc
 exports.defaultRules = defaultRules;
 const emptyRules = () => kinds.map((kind) => ({ kind: kind.id, mode: 'new', scope: 'starter', quantity: 0 }));
 exports.emptyRules = emptyRules;
+function templateSet(family, childId) {
+    var _a, _b;
+    const id = `default_${childId}`;
+    return JSON.parse(JSON.stringify(((_a = family.templateSets) === null || _a === void 0 ? void 0 : _a[childId]) || {
+        templates: [{ id, name: '每日积累', rules: ((_b = family.autoPlans) === null || _b === void 0 ? void 0 : _b[childId]) || emptyRules() }], activeId: id, revision: 0
+    }));
+}
+function activeTemplate(family, childId) {
+    const set = templateSet(family, childId);
+    return set.templates.find((item) => item.id === set.activeId) || set.templates[0];
+}
+function templateSummary(rules) {
+    return rules.filter((rule) => rule.quantity > 0).map((rule) => {
+        const kind = definition(rule.kind);
+        return `${kind.label} ${rule.quantity}${kind.unit}${rule.mode === 'review' ? '（复习）' : ''}`;
+    }).join(' · ') || '暂停自动安排';
+}
+// A changed active template never fills previously disabled types into an already-generated day.
+function freezeTemplateDay(family, day, childId) {
+    var _a;
+    const generated = (_a = day.generated) === null || _a === void 0 ? void 0 : _a[childId];
+    if (!generated)
+        return;
+    for (const rule of activeTemplate(family, childId).rules)
+        if (!generated[rule.kind])
+            generated[rule.kind] = { ...rule, actual: 0 };
+}
 function scopeOptions(kind) {
     const options = [{ id: 'starter', label: '亲子入门' }];
     if (kind === 'poetry')
@@ -189,8 +220,8 @@ function generateDay(family, day, ledgers, preview = false) {
             ...(family.scheduledContents || []).filter((item) => item.childId === child.id && item.date > day.date).map((item) => item.contentId),
             ...family.plans.filter((plan) => plan.childId === child.id && plan.enabled && plan.schedule === 'once' && plan.date && plan.date > day.date).map(contentId)
         ].map((id) => { var _a; return ((_a = catalogById.get(id)) === null || _a === void 0 ? void 0 : _a.workId) || id; }));
-        const rules = (family.autoPlans && family.autoPlans[child.id]) || emptyRules();
-        rules.filter((rule) => rule.quantity > 0).forEach((rule) => {
+        const rules = activeTemplate(family, child.id).rules;
+        rules.filter((rule) => { var _a; return rule.quantity > 0 || ((_a = family.templateSets) === null || _a === void 0 ? void 0 : _a[child.id]); }).forEach((rule) => {
             if (generated[rule.kind])
                 return;
             let pool;
@@ -247,8 +278,7 @@ function history(ledger, input = {}) {
         nextOffset: offset + limit < filtered.length ? offset + limit : null,
         stats: { seen: entries.length, learned: entries.filter((entry) => entry.learnedCount > 0).length, mastered: entries.filter((entry) => entry.mastered).length } };
 }
-function ruleRows(family, childId) {
-    const rules = (family.autoPlans && family.autoPlans[childId]) || emptyRules();
+function ruleRows(family, childId, rules = activeTemplate(family, childId).rules) {
     return kinds.map((kind) => {
         const rule = { mode: 'new', quantity: 0, scope: 'starter', ...(rules.find((item) => item.kind === kind.id) || {}) };
         const scopes = scopeOptions(kind.id);

@@ -45,10 +45,12 @@ const definition = {
     data: { ...base.data, followToday: false, followTomorrow: true, editor: 'preview', kinds: learning.kinds, kindIndex: 0, schedules: ['仅指定日期', '从指定日期起每天固定', '加入自动内容库'], scheduleIndex: 0,
         modes: ['全新', '复习'], rules: [], formTitle: '', formDetail: '', formMinutes: '5', draftDirty: false,
         studyGrade: 0, gradeLabels: learning.gradeLabels, groups: [], expandedKind: '', previewLimit: 20,
-        planDate: '', maxPlanDate: '', previewReady: false, editTarget: null, editDate: '' },
+        planDate: '', maxPlanDate: '', previewReady: false, editTarget: null, editDate: '',
+        templates: [], templateId: '', templateName: '', templateIndex: 0, activeTemplateId: '', activeTemplateName: '', activeTemplateSummary: '',
+        templateRevision: 0, draftTemplateRevision: 0, templateConflict: false, newTemplateDraft: false },
     onHide() { this.setData({ editTarget: null }); base.onHide.call(this); },
     afterRender() {
-        var _a, _b;
+        var _a, _b, _c, _d;
         const target = this.data.editTarget;
         if (target && (this.data.isChild || ((_a = this.data.family) === null || _a === void 0 ? void 0 : _a.id) !== target.familyId || this.data.childId !== target.childId || this.data.date !== target.date))
             this.setData({ editTarget: null });
@@ -65,13 +67,23 @@ const definition = {
                 items: group.id === this.data.expandedKind ? group.items.slice(0, this.data.previewLimit) : [] })),
             previewReady: Boolean(this.data.family && this.engine.state.days[`${this.data.family.id}:${this.data.date}`]) });
         if (!this.data.family) {
-            this.draftChild = '';
+            this.draftScope = '';
+            this.setData({ rules: [], templates: [], templateName: '', draftDirty: false });
             return;
         }
-        if (this.draftChild !== this.data.childId || !this.data.draftDirty) {
-            this.draftChild = this.data.childId;
-            this.setData({ rules: learning.ruleRows(this.data.family, this.data.childId), draftDirty: false });
+        const set = learning.templateSet(this.data.family, this.data.childId);
+        const active = set.templates.find((item) => item.id === set.activeId);
+        this.setData({ templates: set.templates.map((item) => ({ ...item, label: item.name + (item.id === set.activeId ? ' · 使用中' : '') })),
+            activeTemplateId: active.id, activeTemplateName: active.name, activeTemplateSummary: learning.templateSummary(active.rules), templateRevision: set.revision });
+        const scope = `${this.data.family.id}:${this.data.childId}`;
+        if (this.draftScope !== scope) {
+            this.draftScope = scope;
+            this.loadTemplate(active.id);
         }
+        else if (!this.data.draftDirty && !this.data.busy && !((_c = this.templateMutation) === null || _c === void 0 ? void 0 : _c.uncertain))
+            this.loadTemplate(this.data.templateId);
+        else
+            this.setData({ templateConflict: set.revision !== this.data.draftTemplateRevision && !((_d = this.templateMutation) === null || _d === void 0 ? void 0 : _d.uncertain) });
         this.updateVisibleRules();
         if (this.lastSubject !== this.data.subjectFilter) {
             this.lastSubject = this.data.subjectFilter;
@@ -81,10 +93,50 @@ const definition = {
         }
     },
     updateVisibleRules() {
-        this.setData({ visibleRules: this.data.rules.filter((rule) => (this.data.subjectFilter === 'all' || rule.subject === this.data.subjectFilter)
-                && (rule.id !== 'other' || rule.poolCount || rule.quantity)), dailyCount: this.data.rules.reduce((sum, rule) => sum + (Number(rule.quantity) || 0), 0) });
+        this.setData({ visibleRules: this.data.rules.filter((rule) => !['math', 'other'].includes(rule.id) || Number(rule.quantity) > 0), dailyCount: this.data.rules.reduce((sum, rule) => sum + (Number(rule.quantity) || 0), 0) });
     },
     changeEditor(event) { this.setData({ editor: event.currentTarget.dataset.id }); },
+    loadTemplate(id) {
+        if (!this.data.family)
+            return;
+        const set = learning.templateSet(this.data.family, this.data.childId);
+        const template = set.templates.find((item) => item.id === id) || set.templates.find((item) => item.id === set.activeId);
+        this.templateMutation = undefined;
+        this.setData({ templateId: template.id, templateName: template.name, templateIndex: set.templates.findIndex((item) => item.id === template.id),
+            rules: learning.ruleRows(this.data.family, this.data.childId, template.rules), draftDirty: false, newTemplateDraft: false,
+            draftTemplateRevision: set.revision, templateConflict: false });
+        this.updateVisibleRules();
+    },
+    openTemplate() { if (!this.data.draftDirty)
+        this.loadTemplate(this.data.activeTemplateId); this.setData({ editor: 'auto' }); },
+    selectTemplate(event) {
+        if (this.data.busy || this.data.isChild)
+            return;
+        if (this.data.draftDirty) {
+            wx.showToast({ title: '请先保存或放弃当前修改', icon: 'none' });
+            return;
+        }
+        const template = this.data.templates[Number(event.detail.value)];
+        if (template)
+            this.loadTemplate(template.id);
+    },
+    createTemplate() {
+        if (this.data.busy || this.data.isChild || !this.data.family)
+            return;
+        if (this.data.draftDirty) {
+            wx.showToast({ title: '请先保存或放弃当前修改', icon: 'none' });
+            return;
+        }
+        if (this.data.templates.length >= 10) {
+            wx.showToast({ title: '最多10个模板，请先删除闲置模板', icon: 'none' });
+            return;
+        }
+        this.templateMutation = undefined;
+        this.setData({ templateId: `t_${this.engine.makeId()}`, templateName: '', newTemplateDraft: true, draftDirty: true,
+            draftTemplateRevision: this.data.templateRevision, templateConflict: false });
+    },
+    changeTemplateName(event) { if (!this.data.busy && !this.data.isChild)
+        this.setData({ templateName: event.detail.value, draftDirty: true }); },
     openLibrary() {
         this.rememberSelection();
         getApp().navigation.libraryDate = this.data.date;
@@ -152,6 +204,8 @@ const definition = {
     changeSchedule(event) { this.setData({ scheduleIndex: Number(event.detail.value) }); },
     changeStudyGrade(event) { this.setData({ studyGrade: Number(event.detail.value) }); },
     updateRule(kind, patch) {
+        if (this.data.busy || this.data.isChild)
+            return;
         this.setData({ rules: this.data.rules.map((rule) => {
                 if (rule.id !== kind)
                     return rule;
@@ -179,19 +233,80 @@ const definition = {
         const rule = this.data.rules.find((item) => item.id === event.currentTarget.dataset.id);
         this.updateRule(rule.id, { quantity: Math.max(0, Math.min(rule.max, (Number(rule.quantity) || 0) + Number(event.currentTarget.dataset.step))) });
     },
-    resetRules() { this.setData({ draftDirty: false }); this.render(); },
-    async saveAutoPlans() {
+    resetRules() { if (!this.data.busy)
+        this.loadTemplate(this.data.newTemplateDraft ? this.data.activeTemplateId : this.data.templateId); },
+    async saveTemplate() { await this.applyTemplate('saveDailyTemplate', false); },
+    async saveAndUseTemplate() { await this.applyTemplate('saveDailyTemplate', true); },
+    async activateTemplate() { await this.applyTemplate('activateDailyTemplate'); },
+    async deleteTemplate() { await this.applyTemplate('deleteDailyTemplate'); },
+    async applyTemplate(action, activate = false) {
+        var _a, _b, _c, _d, _e;
+        if (this.data.busy || this.data.isChild || !this.data.family)
+            return;
+        if (this.data.templateConflict) {
+            wx.showToast({ title: '请重新载入家人更新后的模板', icon: 'none' });
+            return;
+        }
+        if (action !== 'saveDailyTemplate' && (this.data.newTemplateDraft || this.data.draftDirty)) {
+            wx.showToast({ title: '请先保存或放弃当前修改', icon: 'none' });
+            return;
+        }
         const rules = this.data.rules.map((rule) => ({ kind: rule.id, mode: rule.mode, quantity: rule.quantity, scope: rule.scope }));
         if (!rules.every((rule) => typeof rule.quantity === 'number' && Number.isInteger(rule.quantity) && rule.quantity >= 0 && rule.quantity <= learning.definition(rule.kind).max)) {
             wx.showToast({ title: '请填写范围内的整数数量', icon: 'none' });
             return;
         }
-        const result = await this.perform('saveAutoPlans', { childId: this.data.childId, rules });
-        if (result) {
-            this.setData({ draftDirty: false, editor: 'preview' });
-            await this.refresh();
-            wx.showToast({ title: '每日安排已保存', icon: 'success' });
+        const name = this.data.templateName.trim();
+        if (action === 'saveDailyTemplate' && (!name || name.length > 24)) {
+            wx.showToast({ title: '请填写24字以内的模板名称', icon: 'none' });
+            return;
         }
+        const familyId = this.data.family.id;
+        const childId = this.data.childId;
+        const selected = this.data.templateId;
+        const userId = this.engine.state.userId;
+        const role = (_a = this.engine.state.family) === null || _a === void 0 ? void 0 : _a.myRole;
+        const values = { childId, templateId: selected, baseRevision: this.data.draftTemplateRevision,
+            ...(action === 'saveDailyTemplate' ? { name, rules, activate } : {}) };
+        const fingerprint = JSON.stringify([familyId, action, values]);
+        if (((_b = this.templateMutation) === null || _b === void 0 ? void 0 : _b.fingerprint) !== fingerprint)
+            this.templateMutation = { fingerprint, id: this.engine.makeId() };
+        const payload = { ...values, mutationId: this.templateMutation.id };
+        this.setData({ busy: true });
+        try {
+            const result = action === 'saveDailyTemplate'
+                ? await this.engine.command(action, payload)
+                : await this.engine.command(action, payload);
+            if (this.engine.state.userId === userId && ((_c = this.engine.state.family) === null || _c === void 0 ? void 0 : _c.myRole) === role
+                && ((_d = this.data.family) === null || _d === void 0 ? void 0 : _d.id) === familyId && this.data.childId === childId && this.data.templateId === selected) {
+                // Keep a confirmed template after a failed follow-up sync without replacing newer household fields.
+                const family = this.engine.state.family;
+                const confirmed = learning.templateSet(result.family, childId);
+                if ((family === null || family === void 0 ? void 0 : family.id) === familyId && learning.templateSet(family, childId).revision < confirmed.revision)
+                    this.engine.save({ ...this.engine.state, family: { ...family,
+                            templateSets: { ...family.templateSets, [childId]: confirmed },
+                            autoPlans: { ...family.autoPlans, [childId]: confirmed.templates.find((item) => item.id === confirmed.activeId).rules } } });
+                this.setData({ draftDirty: false, newTemplateDraft: false, templateConflict: false });
+                this.loadTemplate(action === 'deleteDailyTemplate' ? undefined : selected);
+                if (activate || action === 'activateDailyTemplate' || selected === this.data.activeTemplateId)
+                    this.setData({ editor: 'preview' });
+                wx.showToast({ title: action === 'deleteDailyTemplate' ? '模板已删除' : activate || action === 'activateDailyTemplate' ? '已启用，明日按此安排' : '模板已保存', icon: 'none' });
+            }
+        }
+        catch (cause) {
+            const error = (0, errors_1.errorDetails)(cause);
+            if (this.templateMutation)
+                this.templateMutation.uncertain = !['CONFLICT', 'INVALID', 'FORBIDDEN', 'PARENT_REQUIRED', 'LIMIT', 'NOT_FOUND'].includes(error.code || '');
+            if (error.code === 'CONFLICT' && ((_e = this.data.family) === null || _e === void 0 ? void 0 : _e.id) === familyId && this.data.childId === childId)
+                this.setData({ templateConflict: true, draftDirty: true });
+            if (this.active)
+                wx.showToast({ title: error.message || '模板保存失败，请重试', icon: 'none', duration: 3000 });
+        }
+        finally {
+            this.setData({ busy: false });
+            this.render();
+        }
+        await this.refresh();
     },
     async addPlan(event) {
         const form = event.detail.value;

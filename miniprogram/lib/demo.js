@@ -3,7 +3,7 @@ const { chinaDate } = require('./sync-engine');
 const learning = require('./learning/learning');
 const { ageFromBirthDate, withCurrentAge } = require('./learning/child-profile');
 function createDemo(wx) {
-  const read = () => wx.getStorageSync('demo-backend-v1') || { family: null, days: {}, ledgers: {} };
+  const read = () => JSON.parse(JSON.stringify(wx.getStorageSync('demo-backend-v1') || { family: null, days: {}, ledgers: {} }));
   const write = (data) => wx.setStorageSync('demo-backend-v1', data);
   const id = () => `demo_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`;
   const planDate = (value, today) => {
@@ -11,6 +11,11 @@ function createDemo(wx) {
     if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value) || !Number.isFinite(time)
       || new Date(time).toISOString().slice(0, 10) !== value || value < today || time - Date.parse(`${today}T00:00:00Z`) > 365 * 86400000) throw new Error('请选择今日起一年内的日期');
     return value;
+  };
+  const validateRules = rules => {
+      if (!Array.isArray(rules) || rules.length !== learning.kinds.length || new Set(rules.map((rule) => rule.kind)).size !== learning.kinds.length
+        || rules.some((rule) => !learning.kinds.some((kind) => kind.id === rule.kind && Number.isInteger(rule.quantity) && rule.quantity >= 0 && rule.quantity <= kind.max)
+          || !['new', 'review'].includes(rule.mode) || !learning.scopeOptions(rule.kind).some((scope) => scope.id === (rule.scope || 'starter')))) throw new Error('每日数量或类型无效');
   };
   const profile = (input, today) => {
     const birthDate = input.birthDate == null || input.birthDate === '' ? null : input.birthDate;
@@ -55,6 +60,46 @@ function createDemo(wx) {
     Object.values(state.days).filter((day) => day.date <= today).forEach((day) => state.family.children.forEach((child) => {
       learning.recordTasks(ledgerFor(child.id), day.tasks.filter((task) => task.childId === child.id), day.date);
     }));
+    if (['saveDailyTemplate', 'activateDailyTemplate', 'deleteDailyTemplate'].includes(action)) {
+      ledgerFor(input.childId);
+      const invalid = message => Object.assign(new Error(message), { code: 'INVALID' });
+      if (!/^[a-zA-Z0-9_-]{1,100}$/.test(input.templateId || '') || !/^[a-zA-Z0-9_-]{1,100}$/.test(input.mutationId || '')
+        || !Number.isInteger(input.baseRevision) || input.baseRevision < 0) throw invalid('模板编号或版本无效');
+      const name = action === 'saveDailyTemplate' ? String(input.name || '').trim() : undefined;
+      if (action === 'saveDailyTemplate') {
+        if (!name || name.length > 24 || typeof input.activate !== 'boolean') throw invalid('请填写24字以内的模板名称');
+        validateRules(input.rules);
+      }
+      const fingerprint = JSON.stringify([action, input.childId, input.templateId, input.baseRevision, name, input.rules, input.activate]);
+      state.templateReceipts = state.templateReceipts || {};
+      if (state.templateReceipts[input.mutationId]) {
+        if (state.templateReceipts[input.mutationId] !== fingerprint) throw invalid('操作编号已用于其他请求');
+        return { family: state.family, duplicate: true };
+      }
+      const set = learning.templateSet(state.family, input.childId);
+      if (set.revision !== input.baseRevision) throw Object.assign(new Error('家人已更新任务模板，请重新载入后再修改'), { code: 'CONFLICT' });
+      const index = set.templates.findIndex(item => item.id === input.templateId);
+      const freeze = () => { if (state.days[today]) learning.freezeTemplateDay(state.family, state.days[today], input.childId); };
+      if (action === 'saveDailyTemplate') {
+        if (set.templates.some(item => item.id !== input.templateId && item.name === name)) throw invalid('已有同名模板，请换一个名称');
+        if (index < 0 && set.templates.length >= 10) throw invalid('每个孩子最多保存10个模板');
+        if (set.activeId === input.templateId || input.activate) freeze();
+        const template = { id: input.templateId, name, rules: input.rules };
+        if (index >= 0) set.templates[index] = template; else set.templates.push(template);
+        if (input.activate) set.activeId = input.templateId;
+      } else {
+        if (index < 0) throw invalid('模板不存在，请刷新');
+        if (action === 'deleteDailyTemplate') {
+          if (set.activeId === input.templateId) throw invalid('请先启用其他模板，再删除当前模板');
+          set.templates.splice(index, 1);
+        } else { freeze(); set.activeId = input.templateId; }
+      }
+      set.revision += 1;
+      state.family.templateSets = { ...state.family.templateSets, [input.childId]: set };
+      state.family.autoPlans = { ...state.family.autoPlans, [input.childId]: set.templates.find(item => item.id === set.activeId).rules };
+      state.templateReceipts[input.mutationId] = fingerprint;
+      write(state); return { family: state.family, duplicate: false };
+    }
     if (action === 'getDay') {
       const date = input.date || today;
       if (date > today) {
@@ -188,9 +233,13 @@ function createDemo(wx) {
       if (input.schedule === 'once' && learning.wasLearned(ledgerFor(input.childId), state.family.plans[state.family.plans.length - 1])) throw new Error('已学过这项内容，请从回顾中安排复习');
     } else if (action === 'saveAutoPlans') {
       ledgerFor(input.childId);
-      if (!Array.isArray(input.rules) || input.rules.length !== learning.kinds.length || new Set(input.rules.map((rule) => rule.kind)).size !== learning.kinds.length
-        || input.rules.some((rule) => !learning.kinds.some((kind) => kind.id === rule.kind && Number.isInteger(rule.quantity) && rule.quantity >= 0 && rule.quantity <= kind.max)
-          || !['new', 'review'].includes(rule.mode) || !learning.scopeOptions(rule.kind).some((scope) => scope.id === (rule.scope || 'starter')))) throw new Error('每日数量或类型无效');
+      validateRules(input.rules);
+      if (state.family.templateSets && state.family.templateSets[input.childId]) {
+        const set = learning.templateSet(state.family, input.childId);
+        if (state.days[today]) learning.freezeTemplateDay(state.family, state.days[today], input.childId);
+        set.templates.find(item => item.id === set.activeId).rules = input.rules;
+        set.revision += 1; state.family.templateSets[input.childId] = set;
+      }
       state.family.autoPlans = state.family.autoPlans || {};
       state.family.autoPlans[input.childId] = input.rules;
     } else if (action === 'setPlanEnabled') {

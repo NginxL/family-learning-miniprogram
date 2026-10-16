@@ -9,6 +9,7 @@ export interface ProfileInput {
 export interface FamilyScope { familyId: string }
 export interface ChildScope extends FamilyScope { childId: string }
 export interface ContentRequest extends ChildScope { contentId: string }
+export interface TemplateRequest extends ChildScope { templateId: string; baseRevision: number; mutationId: string }
 
 // Keep actions, payloads and results linked. A getHistory call cannot return a day.
 export interface ApiPayloads {
@@ -26,6 +27,9 @@ export interface ApiPayloads {
   };
   setPlanEnabled: FamilyScope & { planId: string; enabled: boolean };
   saveAutoPlans: ChildScope & { rules: AutoRule[] };
+  saveDailyTemplate: TemplateRequest & { name: string; rules: AutoRule[]; activate: boolean };
+  activateDailyTemplate: TemplateRequest;
+  deleteDailyTemplate: TemplateRequest;
   getDay: FamilyScope & { date?: CalendarDate };
   getHistory: ChildScope & HistoryQuery;
   getProgress: ChildScope;
@@ -52,6 +56,9 @@ export interface ApiResults {
   addPlan: { family: PublicFamily };
   setPlanEnabled: { family: PublicFamily };
   saveAutoPlans: { family: PublicFamily };
+  saveDailyTemplate: { family: PublicFamily; duplicate: boolean };
+  activateDailyTemplate: { family: PublicFamily; duplicate: boolean };
+  deleteDailyTemplate: { family: PublicFamily; duplicate: boolean };
   getDay: { day: Day; today: CalendarDate };
   getHistory: ReturnType<typeof history>;
   getProgress: ReturnType<typeof progress>;
