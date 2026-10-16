@@ -9,11 +9,23 @@ function mapping(book, unit, type, page = unit.sourcePrintPage, pdfPage = unit.s
     evidence: type === 'aligned_practice' ? '按已核实单元主题自编；不是教材课文或课后原题。页码为所依据单元的起始位置，学校版次待确认。' : '教材公开样本字词与册次已核实；页码为目录标注的单元起始位置，学校版次待确认。',
     status: 'catalogue_verified' };
 }
-function attach(item, book, unit, type) {
+function attach(item, book, unit, type, word) {
   item.collections = [...new Set([...item.collections, 'shanghai54'])];
   item.bookIds = [...new Set([...(item.bookIds || []), book.id])];
-  const location = item.studyArea === 'literacy' ? mapping(book, unit, type, unit.recognitionPdfPages[0] - 5, unit.recognitionPdfPages[0]) : mapping(book, unit, type);
-  if (item.studyArea === 'literacy') location.evidence = '识字、写字表按公开样本逐字核对；此页为该组识字表所在页，完整页码见字表说明。学校版次待确认。';
+  const location = item.studyArea === 'literacy'
+    ? mapping(book, unit, type, unit.recognitionPrintPages?.[0] || unit.recognitionPdfPages[0] - (book.sourcePageOffset || 5), unit.recognitionPdfPages[0])
+    : word?.wordBankPrintPage ? mapping(book, unit, type, word.wordBankPrintPage, word.wordBankPdfPage) : mapping(book, unit, type);
+  if (item.studyArea === 'literacy') location.evidence = '识字、写字表按原书逐字核对；此页为该组识字表所在页，完整页码见字表说明。学校版次待确认。';
+  if (word?.wordBankPrintPage) location.evidence = '卷末 Word bank 原页与目录主题词逐项核对；页码为该词所在的词表页。学校版次待确认。';
+  if (word?.wordBankAudioTrack) {
+    location.sourceUrl = book.sourceEvidence.officialResourceUrl;
+    location.sourceKind = 'official_audio';
+    location.outlineDestination = `Word bank / Unit ${unit.number}`;
+    delete location.sourcePrintPage;
+    delete location.sourcePdfPage;
+    location.evidence = `官方配套 Word bank 音频：${word.wordBankAudioTrack}；提取码 ${book.sourceEvidence.officialResourceCode}；书号 ${book.sourceEvidence.officialResourceIsbn}。词项已与目录交叉核对，纸本词表页及学校印次待确认。`;
+  }
+  if (word?.verificationNote) location.evidence += ` ${word.verificationNote}`;
   item.gradeMappings = [...(item.gradeMappings || []), location];
 }
 function practiceDetail(practice, language) {
@@ -33,6 +45,12 @@ function validate() {
     ids.add(book.id);
     const expected = book.subject === 'chinese' ? 8 : 10;
     if (book.units.length !== expected || !book.inventory.unitPracticeComplete) throw Error(`Incomplete unit inventory: ${book.id}`);
+    if (book.inventory.wordBankComplete) {
+      const bank = book.units.flatMap(unit => unit.wordBankEntries || []);
+      if (bank.length !== book.inventory.wordBankCount || new Set(bank).size !== bank.length
+        || book.units.some(unit => unit.wordBankEntries.some(text => !unit.words.some(word => word.text === text && (word.wordBankPrintPage || word.wordBankAudioTrack)))))
+        throw Error(`Incomplete Word bank evidence: ${book.id}`);
+    }
     for (const [index, unit] of book.units.entries()) {
       if (unit.number !== index + 1 || unit.id !== `u${index + 1}` || !unit.sourcePrintPage || !unit.title
         || unit.practice?.origin !== 'original' || !unit.practice.body || !unit.practice.question || !unit.practice.answer)
@@ -69,7 +87,7 @@ function augment(items) {
     if (book.subject === 'chinese') {
       if (book.inventory.recognitionComplete && book.inventory.writingComplete) add({ id: `${prefix}-literacy`, kind: 'reading', title: `识字写字 · 第${unit.number}组`, detail: literacyDetail(unit),
         source: '教材字表核实；按单元整理；练习提示自编', minutes: 10, collections: [], studyArea: 'literacy',
-        referenceUrl: book.sourceUrl, note: `识字表 PDF ${unit.recognitionPdfPages.join('、')} 页；写字表 PDF ${unit.writingPdfPages.join('、')} 页。含多音字复习项，可分行学习。` }, 'textbook_item');
+        referenceUrl: book.sourceUrl, note: `识字表电子书第 ${unit.recognitionPdfPages.join('、')} 页；写字表电子书第 ${unit.writingPdfPages.join('、')} 页。含多音字复习项，可分行学习。写字拼音为学习辅助。` }, 'textbook_item');
       add({ id: `${prefix}-reading`, kind: 'reading', title: unit.practice.title, detail: practiceDetail(unit.practice, 'chinese'),
         source: '原创语文阅读与练习 · 依据已核实单元主题编写', minutes: 8, collections: [], studyArea: unit.practice.area,
         referenceUrl: book.sourceUrl, note: '短文、提问与参考答案自编，不是教材课文或标准答案；拼音为阅读辅助。' }, 'aligned_practice');
@@ -79,7 +97,8 @@ function augment(items) {
         if (!item) {
           const id = `sh54-word-${word.text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-$/, '')}`;
           item = { id, kind: 'word', title: word.text, detail: `${word.text}\n${word.meaning}`, minutes: 1,
-            source: '沪教版教材目录 Topic words；常用义提示自编', collections: [], aliases: [word.text], referenceUrl: book.sourceUrl };
+            source: word.wordBankAudioTrack ? '沪教版官方配套 Word bank 音频；常用义提示自编' : '沪教版教材目录 Topic words；常用义提示自编',
+            collections: [], aliases: [word.text], referenceUrl: word.wordBankAudioTrack ? book.sourceEvidence.officialResourceUrl : book.sourceUrl };
           if (byId.has(id)) throw Error(`Ambiguous vocabulary identity: ${word.text}`);
           byId.set(id, item); lexicon.set(word.text, item); items.push(item);
         }
@@ -91,7 +110,7 @@ function augment(items) {
           item.note = '中文为该主题下的常用义提示，不是完整词典释义或教材译文。';
           curatedMeanings.add(item.id);
         }
-        attach(item, book, unit, 'textbook_item');
+        attach(item, book, unit, 'textbook_item', word);
       }
       for (const [i, sentence] of unit.practice.body.split('\n').entries()) add({
         id: `${prefix}-sentence-${i + 1}`, kind: 'sentence', title: sentence,

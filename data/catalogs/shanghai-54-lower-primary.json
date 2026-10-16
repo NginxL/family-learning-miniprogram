@@ -1598,10 +1598,10 @@
       "semester": "下册",
       "title": "语文 · 2年级下册（五四制）",
       "publisher": "人民教育出版社",
-      "edition": "根据2022年版课标修订的五四制公开样本；版次与ISBN待核实",
+      "edition": "人教社官方五四制电子书；封面审定2024；ISBN、印次未载",
       "schoolSystem": "5-4",
-      "sourceUrl": "https://www.textbook-info.com/post/2459.html",
-      "sourceKind": "public_sample",
+      "sourceUrl": "https://book.pep.com.cn/1211001202252/mobile/index.html",
+      "sourceKind": "official_textbook",
       "checkedAt": "2026-10-16",
       "schoolAdoption": "pending",
       "cataloguePages": [
@@ -1609,16 +1609,76 @@
         6
       ],
       "sourceEvidence": {
-        "previewUrl": "https://pan.quark.cn/s/6380b46eb990",
-        "previewPageCount": 60,
-        "note": "公开免费样本PDF 3页封面、4页版权信息、5—6页完整目录；只提供至印刷54页。识字表113、写字表117、词语表120页仅在目录可见，未取得原表。版权页未载ISBN和印次。"
+        "catalogueUrl": "https://jc.pep.com.cn/",
+        "viewerPageCount": 130,
+        "recognitionPrintPages": [
+          113,
+          114,
+          115,
+          116
+        ],
+        "writingPrintPages": [
+          117,
+          118,
+          119
+        ],
+        "reviewCharacters": "啊的发漂炸倒圈重扇喝量尽扫待难",
+        "note": "人教社官方教材目录选择“义务教育（五四学制）→语文→二年级下册”；封面审定2024，版权页未载ISBN与印次。识字表450个生字，另含15个蓝色多音字复习位置；写字表250字。电子书页码比印刷页大6。识字表注音照录原表，写字读音为结合课文语境编写的学习辅助。学校实际采用印次待确认。",
+        "tablePageImages": [
+          {
+            "viewerPage": 119,
+            "printPage": 113,
+            "url": "https://book.pep.com.cn/1211001202252/files/mobile/119.jpg?260122103018",
+            "sha256": "6bd23518787f9da79371b50ba7a9e39e2159ee2abc172c6b1219c18e5a01d668"
+          },
+          {
+            "viewerPage": 120,
+            "printPage": 114,
+            "url": "https://book.pep.com.cn/1211001202252/files/mobile/120.jpg?260122103018",
+            "sha256": "aaac2f1e05b5d8acff15e898e9098ab7200227f656897ab5fb3a762cf8be54a1"
+          },
+          {
+            "viewerPage": 121,
+            "printPage": 115,
+            "url": "https://book.pep.com.cn/1211001202252/files/mobile/121.jpg?260122103018",
+            "sha256": "e03ec2311cf9b00fc4dbe06331c1c14cd0603848e66a5fed463b3b67142aa8ae"
+          },
+          {
+            "viewerPage": 122,
+            "printPage": 116,
+            "url": "https://book.pep.com.cn/1211001202252/files/mobile/122.jpg?260122103018",
+            "sha256": "58127c992062b091d900803abf73bac2d79844c34fcfadf9ce00afefbd023ebb"
+          },
+          {
+            "viewerPage": 123,
+            "printPage": 117,
+            "url": "https://book.pep.com.cn/1211001202252/files/mobile/123.jpg?260122103018",
+            "sha256": "e65629465db9f022b8fc688c029de3d27dd0eb56c5c7ca05b6363e6f5ebeb21e"
+          },
+          {
+            "viewerPage": 124,
+            "printPage": 118,
+            "url": "https://book.pep.com.cn/1211001202252/files/mobile/124.jpg?260122103018",
+            "sha256": "60b92770843926de6a68eaf078ea62af6196fb234c0d1e1dd7abfeb07afb85a9"
+          },
+          {
+            "viewerPage": 125,
+            "printPage": 119,
+            "url": "https://book.pep.com.cn/1211001202252/files/mobile/125.jpg?260122103018",
+            "sha256": "7ce2a7f0b2823747b8eb2ca944206ee147919bf7f64dc6ed15309a1708b0f558"
+          }
+        ]
       },
       "inventory": {
-        "recognitionComplete": false,
-        "writingComplete": false,
+        "recognitionComplete": true,
+        "writingComplete": true,
         "unitPracticeComplete": true,
         "fullTextAvailable": false,
-        "fullCoverage": false
+        "fullCoverage": false,
+        "recognitionCount": 450,
+        "recognitionPositionCount": 465,
+        "recognitionReviewCount": 15,
+        "writingCount": 250
       },
       "units": [
         {
@@ -1643,7 +1703,51 @@
             "area": "reading",
             "titleReading": "gěi chūn tiān xiě yī fēng xìn",
             "detailReading": "zǎo chén xiǎo níng zǒu guò hé biān kàn jiàn liǔ zhī shàng mào chū le nèn yá cǎo dì shàng yī duǒ xiǎo huā gāng gāng zhāng kāi huā bàn tā méi yǒu zhāi huā ér shì huà xià tā de yàng zi huí jiā hòu xiǎo níng xiě dào chūn tiān nǐ bǎ lǜ sè hé huā xiāng dài lái le xiǎng yī xiǎng xiǎo níng yòng shén me bàn fǎ liú xià chūn tiān de yàng zi cān kǎo tā bǎ xiǎo huā huà xià lái yòu xiě le jǐ jù huà liàn yī liàn zhǎo chū biǎo shì yán sè hé qì wèi de cí zài xiě yī jù zì jǐ guān chá dào de chūn tiān"
-          }
+          },
+          "recognition": [
+            "咏贺妆丝裁剪莺拂堤醉趁",
+            "脱袄遮掩探眉吐芽符解触杜鹃",
+            "裹颈寄粒破漏懊丧啊巧绚狐狸籽礼",
+            "邓坛龄格致勃挖额汗仍肯茁移挥扶",
+            "亭咨询剧塔餐厅厕"
+          ],
+          "recognitionReading": [
+            "yǒng hè zhuāng sī cái jiǎn yīng fú dī zuì chèn",
+            "tuō ǎo zhē yǎn tàn méi tǔ yá fú jiě chù dù juān",
+            "guǒ jǐng jì lì pò lòu ào sàng à qiǎo xuàn hú lí zǐ lǐ",
+            "dèng tán líng gé zhì bó wā é hàn réng kěn zhuó yí huī fú",
+            "tíng zī xún jù tǎ cān tīng cè"
+          ],
+          "writing": [
+            "诗碧妆绿丝剪童归",
+            "冲寻眉吐闻柳荡桃",
+            "鲜原叔通巧惊礼",
+            "邓植格引注满",
+            "剧场"
+          ],
+          "writingReading": [
+            "shī bì zhuāng lǜ sī jiǎn tóng guī",
+            "chōng xún méi tǔ wén liǔ dàng táo",
+            "xiān yuán shū tōng qiǎo jīng lǐ",
+            "dèng zhí gé yǐn zhù mǎn",
+            "jù chǎng"
+          ],
+          "recognitionReviewCharacters": [
+            "啊"
+          ],
+          "recognitionPrintPages": [
+            113
+          ],
+          "recognitionPdfPages": [
+            119
+          ],
+          "writingPrintPages": [
+            117
+          ],
+          "writingPdfPages": [
+            123
+          ],
+          "sourcePdfPage": 7
         },
         {
           "id": "u2",
@@ -1667,7 +1771,50 @@
             "area": "reading",
             "titleReading": "yǔ tiān de yī bǎ sǎn",
             "detailReading": "fàng xué shí xià qǐ le yǔ xiǎo níng kàn jiàn tóng xué méi yǒu dài sǎn jiù qǐng tā yī qǐ zǒu dào xiào mén kǒu liǎng gè rén màn màn zǒu sǎn yī zhí fàng zài zhōng jiān děng tóng xué de jiā rén dào le xiǎo níng cái fàng xīn dì huī shǒu gào bié xiǎng yī xiǎng nǎ liǎng chù dòng zuò biǎo xiàn le xiǎo níng de guān xīn cān kǎo yāo qǐng tóng xué yī qǐ chēng sǎn bǎ sǎn fàng zài zhōng jiān děng jiā rén dào le cái gào bié liàn yī liàn yòng shuí shén me shí hòu zuò le shén me jiǎng yī jiàn bāng zhù bié rén de xiǎo shì"
-          }
+          },
+          "recognition": [
+            "迹曾冒蒙瞧泞窝顺荆棘瓣莹觅需献",
+            "糕尝嘛磨粉糖料甘蔗汁熬销售的确应",
+            "弱末亚簇拥随芬芳突紧递摸显娇掀",
+            "程魔术建筑发演营务判饲养"
+          ],
+          "recognitionReading": [
+            "jì céng mào méng qiáo nìng wō shùn jīng jí bàn yíng mì xū xiàn",
+            "gāo cháng ma mó fěn táng liào gān zhè zhī áo xiāo shòu dí què yīng",
+            "ruò mò yà cù yōng suí fēn fāng tū jǐn dì mō xiǎn jiāo xiān",
+            "chéng mó shù jiàn zhù fà yǎn yíng wù pàn sì yǎng"
+          ],
+          "writing": [
+            "雷锋昨背洒汗温暖",
+            "桌尝买具甘汁甜菜劳应",
+            "弱周末母吸芬芳递勇敢",
+            "程术服务"
+          ],
+          "writingReading": [
+            "léi fēng zuó bēi sǎ hàn wēn nuǎn",
+            "zhuō cháng mǎi jù gān zhī tián cài láo yīng",
+            "ruò zhōu mò mǔ xī fēn fāng dì yǒng gǎn",
+            "chéng shù fú wù"
+          ],
+          "recognitionReviewCharacters": [
+            "的",
+            "发"
+          ],
+          "recognitionPrintPages": [
+            113,
+            114
+          ],
+          "recognitionPdfPages": [
+            119,
+            120
+          ],
+          "writingPrintPages": [
+            117
+          ],
+          "writingPdfPages": [
+            123
+          ],
+          "sourcePdfPage": 21
         },
         {
           "id": "u3",
@@ -1691,7 +1838,54 @@
             "area": "reading",
             "titleReading": "zhuō shàng de jié rì kǎ",
             "detailReading": "xiǎo níng gěi jiā lǐ zuò jié rì kǎ tā zài duān wǔ jié de kǎ piàn shàng huà le zòng zi zài zhōng qiū jié de kǎ piàn shàng huà le yuán yuè nǎi nai kàn zhe kǎ piàn shuō tú huà bāng wǒ men jì zhù xí sú wén zì bāng wǒ men shuō qīng yì si xiǎo níng yòu bǎ jié rì de míng zì rèn zhēn xiě hǎo xiǎng yī xiǎng liǎng zhāng kǎ piàn fēn bié huà le shén me cān kǎo duān wǔ jié huà le zòng zi zhōng qiū jié huà le yuán yuè liàn yī liàn dú yī dú zòng yuè jié xuǎn yī gè shú xī de jié rì shuō shuō jiā lǐ zěn yàng guò jié"
-          }
+          },
+          "recognition": [
+            "州谣华涌耸隔峡与陆各谊浓齐奋繁",
+            "传统贴宵巷潮祭扫艾堂乞郎饼赏菊",
+            "甲骨漂贵饰品携易损钱币财赚赔购",
+            "拌菠煎腐茄烤葱炖蘑菇蒸饺炸酱粥蛋",
+            "津酸溜辣乎喷腻绵脆邦"
+          ],
+          "recognitionReading": [
+            "zhōu yáo huá yǒng sǒng gé xiá yǔ lù gè yì nóng qí fèn fán",
+            "chuán tǒng tiē xiāo xiàng cháo jì sǎo ài táng qǐ láng bǐng shǎng jú",
+            "jiǎ gǔ piào guì shì pǐn xié yì sǔn qián bì cái zhuàn péi gòu",
+            "bàn bō jiān fǔ qié kǎo cōng dùn mó gū zhēng jiǎo zhá jiàng zhōu dàn",
+            "jīn suān liū là hū pēn nì mián cuì bāng"
+          ],
+          "writing": [
+            "神州华各族情谊齐",
+            "传统贴街扫龙艾全团真",
+            "甲骨觉品钱币与财",
+            "食茄烤鸭煮鸡蛋饭",
+            "辣乎"
+          ],
+          "writingReading": [
+            "shén zhōu huá gè zú qíng yì qí",
+            "chuán tǒng tiē jiē sǎo lóng ài quán tuán zhēn",
+            "jiǎ gǔ jué pǐn qián bì yǔ cái",
+            "shí qié kǎo yā zhǔ jī dàn fàn",
+            "là hū"
+          ],
+          "recognitionReviewCharacters": [
+            "漂",
+            "炸"
+          ],
+          "recognitionPrintPages": [
+            114
+          ],
+          "recognitionPdfPages": [
+            120
+          ],
+          "writingPrintPages": [
+            117,
+            118
+          ],
+          "writingPdfPages": [
+            123,
+            124
+          ],
+          "sourcePdfPage": 35
         },
         {
           "id": "u4",
@@ -1714,7 +1908,49 @@
             "area": "reading",
             "titleReading": "xiǎo zhǐ chuán de lǚ xíng",
             "detailReading": "xiǎo níng bǎ yī zhāng lán zhǐ zhé chéng xiǎo chuán fàng zài zhuō shàng tā xiǎng xiàng xiǎo chuán shǐ guò huā duǒ zuò de dǎo yù jiàn yī tiáo huì chàng gē de yú hū rán yī zhèn fēng chuī lái zhǐ chuán huá dào le shū páng xiǎo níng xiào zhe shuō jīn tiān xiān zài shū gǎng xiū xī ba xiǎng yī xiǎng gù shì zhōng nǎ xiē shì qing shì xiǎo níng xiǎng xiàng de cān kǎo huā duǒ zuò de dǎo huì chàng gē de yú hé shū gǎng dōu shì xiǎng xiàng chū lái de liàn yī liàn gěi zhǐ chuán ān pái xià yī zhàn yòng liǎng sān jù huà xiě qīng tā kàn jiàn le shén me"
-          }
+          },
+          "recognition": [
+            "梦躺聊蹦郁囱般精境叮咛",
+            "匹郊微泛波纹异恋舍求株拾骑骄傲",
+            "渡荫蔽阿姨撑便冈懂案",
+            "倒翁橡枪控坦克航模型"
+          ],
+          "recognitionReading": [
+            "mèng tǎng liáo bèng yù cōng bān jīng jìng dīng níng",
+            "pǐ jiāo wēi fàn bō wén yì liàn shě qiú zhū shí qí jiāo ào",
+            "dù yīn bì ā yí chēng biàn gāng dǒng àn",
+            "dǎo wēng xiàng qiāng kòng tǎn kè háng mó xíng"
+          ],
+          "writing": [
+            "梦硬铅盒森结苹精灵流",
+            "匹妹波纹恋舍求奔",
+            "旁阿姨弟便教拼音",
+            "坦克"
+          ],
+          "writingReading": [
+            "mèng yìng qiān hé sēn jiē píng jīng líng liú",
+            "pǐ mèi bō wén liàn shě qiú bēn",
+            "páng ā yí dì biàn jiāo pīn yīn",
+            "tǎn kè"
+          ],
+          "recognitionReviewCharacters": [
+            "倒"
+          ],
+          "recognitionPrintPages": [
+            114,
+            115
+          ],
+          "recognitionPdfPages": [
+            120,
+            121
+          ],
+          "writingPrintPages": [
+            118
+          ],
+          "writingPdfPages": [
+            124
+          ],
+          "sourcePdfPage": 48
         },
         {
           "id": "u5",
@@ -1737,7 +1973,47 @@
             "area": "reading",
             "titleReading": "jī mù qiáo yòu dǎo le",
             "detailReading": "xiǎo níng dā le yī zuò jī mù qiáo kě xiǎo chē yī shàng qiáo qiáo jiù dǎo le tā méi yǒu jí zhe chóng dā ér shì kàn kàn qiáo jiǎo fā xiàn liǎng biān bù yī yàng gāo zhè cì tā xiān bǎ qiáo jiǎo bǎi wěn zài fàng qiáo miàn xiǎo chē zhōng yú píng wěn dì guò qù le xiǎng yī xiǎng xiǎo níng dì èr cì dā qiáo shí xiān zuò le shén me cān kǎo xiān bǎ liǎng biān de qiáo jiǎo bǎi wěn zài fàng qiáo miàn liàn yī liàn àn yù dào wèn tí zhǎo yuán yīn xiǎng bàn fǎ kàn jié guǒ de shùn xù jiǎng shù yī cì cháng shì"
-          }
+          },
+          "recognition": [
+            "寓则亡补牢圈叼修堵悔实焦筋喘费截",
+            "室而幅哈审肃晌嘻悦诲",
+            "棚驮坊挡伯浅刚淹哩叹唉蹄既",
+            "厨柜厢商厦洞穴窟窿窖窄"
+          ],
+          "recognitionReading": [
+            "yù zé wáng bǔ láo juàn diāo xiū dǔ huǐ shí jiāo jīn chuǎn fèi jié",
+            "shì ér fú hā shěn sù shǎng xī yuè huì",
+            "péng tuó fáng dǎng bó qiǎn gāng yān li tàn ài tí jì",
+            "chú guì xiāng shāng shà dòng xué kū lóng jiào zhǎi"
+          ],
+          "writing": [
+            "亡补牢劝丢助坏死",
+            "室排而实候班哈举",
+            "愿意麦伯刻突然掉",
+            "商厦洞穴"
+          ],
+          "writingReading": [
+            "wáng bǔ láo quàn diū zhù huài sǐ",
+            "shì pái ér shí hòu bān hā jǔ",
+            "yuàn yì mài bó kè tū rán diào",
+            "shāng shà dòng xué"
+          ],
+          "recognitionReviewCharacters": [
+            "圈"
+          ],
+          "recognitionPrintPages": [
+            115
+          ],
+          "recognitionPdfPages": [
+            121
+          ],
+          "writingPrintPages": [
+            118
+          ],
+          "writingPdfPages": [
+            124
+          ],
+          "sourcePdfPage": 61
         },
         {
           "id": "u6",
@@ -1761,7 +2037,51 @@
             "area": "reading",
             "titleReading": "yǔ hòu de guān chá běn",
             "detailReading": "yī cháng yǔ tíng le xiǎo níng fā xiàn chuāng wài de yè zi shàng guà zhe shuǐ zhū shí bǎn lù de yán sè yě bǐ gāng cái shēn tā bǎ shí jiān hé kàn dào de biàn huà jì zài běn zi shàng guò le yī huì er tā yòu lái guān chá fā xiàn yǒu xiē shuǐ zhū bù jiàn le xiǎng yī xiǎng zěn yàng ràng liǎng cì guān chá fāng biàn bǐ jiào cān kǎo jì xià shí jiān hé guān chá dào de xiàn xiàng zài kàn tóng yī gè dì fāng de biàn huà liàn yī liàn xuǎn yī chù ān quán de dì fāng jì lù tiān qì biàn huà qián hòu kàn dào de bù tóng bù bǎ cāi xiǎng dàng chéng shì shí"
-          }
+          },
+          "recognition": [
+            "甫鸣含岭泊晓净寺宋毕竟",
+            "压蝉蜘蛛响哗渐",
+            "慌针辨忠导盏永闯碰稠稀渠",
+            "宇宙稳必须固杯重态即使饮挤浴桶简",
+            "博馆览技育究哨诊律"
+          ],
+          "recognitionReading": [
+            "fǔ míng hán lǐng bó xiǎo jìng sì sòng bì jìng",
+            "yā chán zhī zhū xiǎng huá jiàn",
+            "huāng zhēn biàn zhōng dǎo zhǎn yǒng chuǎng pèng chóu xī qú",
+            "yǔ zhòu wěn bì xū gù bēi zhòng tài jí shǐ yǐn jǐ yù tǒng jiǎn",
+            "bó guǎn lǎn jì yù jiū shào zhěn lǜ"
+          ],
+          "writing": [
+            "窗含岭泊吴净莲映",
+            "乌黑沉压响新迎扑",
+            "指南针帮忠导永夜特积",
+            "航宇宙或浴桶",
+            "馆所"
+          ],
+          "writingReading": [
+            "chuāng hán lǐng bó wú jìng lián yìng",
+            "wū hēi chén yā xiǎng xīn yíng pū",
+            "zhǐ nán zhēn bāng zhōng dǎo yǒng yè tè jī",
+            "háng yǔ zhòu huò yù tǒng",
+            "guǎn suǒ"
+          ],
+          "recognitionReviewCharacters": [
+            "重"
+          ],
+          "recognitionPrintPages": [
+            115
+          ],
+          "recognitionPdfPages": [
+            121
+          ],
+          "writingPrintPages": [
+            118
+          ],
+          "writingPdfPages": [
+            124
+          ],
+          "sourcePdfPage": 75
         },
         {
           "id": "u7",
@@ -1785,7 +2105,57 @@
             "area": "reading",
             "titleReading": "gè yǒu gè de bàn fǎ",
             "detailReading": "zhǔn bèi bān jí zhǎn shì shí xiǎo níng xiǎng huà hǎi bào kě tā hái huà bù hǎo xiǎo dòng wù tóng zhuō shuō nǐ jiǎng gù shì hěn qīng chu wǒ men yī qǐ zuò ba tóng zhuō huà huà xiǎo níng xiě shuō míng hái liàn xí jiè shào hǎi bào liǎng gè rén fā xiàn hé zuò néng ràng gè zì de cháng chù dōu pài shàng yòng chǎng xiǎng yī xiǎng liǎng gè rén zěn yàng fēn gōng cān kǎo tóng zhuō huà huà xiǎo níng xiě shuō míng bìng jiè shào hǎi bào liàn yī liàn shuō shuō zì jǐ hé péng yǒu gè yǒu yī gè shén me cháng chù shāng liáng yī jiàn kě yǐ hé zuò wán chéng de shì"
-          }
+          },
+          "recognition": [
+            "耷遇咦竖竿舞痛烦扇",
+            "店寂寞罩牌编顾夫完脖趴袜匆蜈蚣",
+            "烂换搬喝坑舒集播茵砍灌缺栽泳愣",
+            "量昆怜另仿佛尽并任何纺竭规待醒挣愉",
+            "扫帚抹拖簸箕玻璃垃圾"
+          ],
+          "recognitionReading": [
+            "dā yù yí shù gān wǔ tòng fán shān",
+            "diàn jì mò zhào pái biān gù fū wán bó pā wà cōng wú gōng",
+            "làn huàn bān hè kēng shū jí bō yīn kǎn guàn quē zāi yǒng lèng",
+            "liáng kūn lián lìng fǎng fú jǐn bìng rèn hé fǎng jié guī dài xǐng zhèng yú",
+            "sào zhǒu mā tuō bò jī bō lí lā jī"
+          ],
+          "writing": [
+            "扇慢遇定病睡根痛",
+            "店决需付夫终期",
+            "蛙卖搬倒泉砍破泳",
+            "仿佛并任何纺织迟",
+            "校内"
+          ],
+          "writingReading": [
+            "shàn màn yù dìng bìng shuì gēn tòng",
+            "diàn jué xū fù fū zhōng qī",
+            "wā mài bān dào quán kǎn pò yǒng",
+            "fǎng fú bìng rèn hé fǎng zhī chí",
+            "xiào nèi"
+          ],
+          "recognitionReviewCharacters": [
+            "扇",
+            "喝",
+            "量",
+            "尽",
+            "扫"
+          ],
+          "recognitionPrintPages": [
+            115,
+            116
+          ],
+          "recognitionPdfPages": [
+            121,
+            122
+          ],
+          "writingPrintPages": [
+            119
+          ],
+          "writingPdfPages": [
+            125
+          ],
+          "sourcePdfPage": 90
         },
         {
           "id": "u8",
@@ -1808,9 +2178,51 @@
             "area": "reading",
             "titleReading": "gù shì xiǎo kǎ piàn",
             "detailReading": "xiǎo níng dú wán yī gè gù shì zuò le sān zhāng xiǎo kǎ piàn dì yī zhāng xiě shuí yù dào le shén me nán tí dì èr zhāng huà tā zěn yàng xiǎng bàn fǎ dì sān zhāng xiě shì qing de jié guǒ jiǎng gěi jiā rén tīng shí xiǎo níng àn shùn xù fān kǎ piàn dà jiā hěn kuài jiù tīng míng bai le xiǎng yī xiǎng sān zhāng kǎ piàn fēn bié jì lù shén me cān kǎo rén wù hé nán tí jiě jué wèn tí de bàn fǎ zuì hòu de jié guǒ liàn yī liàn xuǎn yī gè dú guò de gù shì jiè zhù sān zhāng kǎ piàn fù shù fēn qīng gù shì lǐ de xiǎng xiàng hé shēng huó zhōng de shì shí"
-          }
+          },
+          "recognition": [
+            "射桑值熔类箭翻跨搭裂窜炎滋润腾",
+            "帝创帽启召按设材断替其待段互供善",
+            "洪滥毁毒伤难继续败训疏努驱恢功绩",
+            "钩铲橙柿源涨炬灿垮坟"
+          ],
+          "recognitionReading": [
+            "shè sāng zhí róng lèi jiàn fān kuà dā liè cuàn yán zī rùn téng",
+            "dì chuàng mào qǐ zhào àn shè cái duàn tì qí dāi duàn hù gōng shàn",
+            "hóng làn huǐ dú shāng nàn jì xù bài xùn shū nǔ qū huī gōng jì",
+            "gōu chǎn chéng shì yuán zhǎng jù càn kuǎ fén"
+          ],
+          "writing": [
+            "射最始换值弓炎此",
+            "忽件启召众完却供",
+            "治洪姓带必须仍继续业",
+            "灿烂"
+          ],
+          "writingReading": [
+            "shè zuì shǐ huàn zhí gōng yán cǐ",
+            "hū jiàn qǐ zhào zhòng wán què gōng",
+            "zhì hóng xìng dài bì xū réng jì xù yè",
+            "càn làn"
+          ],
+          "recognitionReviewCharacters": [
+            "待",
+            "难"
+          ],
+          "recognitionPrintPages": [
+            116
+          ],
+          "recognitionPdfPages": [
+            122
+          ],
+          "writingPrintPages": [
+            119
+          ],
+          "writingPdfPages": [
+            125
+          ],
+          "sourcePdfPage": 106
         }
-      ]
+      ],
+      "sourcePageOffset": 6
     },
     {
       "id": "english-1a-sample",
@@ -2785,7 +3197,7 @@
       "semester": "上册",
       "title": "英语 · 2年级上册（沪教版）",
       "publisher": "上海教育出版社",
-      "edition": "2025新版公开样本；版权页、ISBN和印次待核实",
+      "edition": "2025新版公开样本；官方配套书号978-7-5720-3608-8；样本与成书一致性、学校印次待确认",
       "schoolSystem": "5-4",
       "sourceUrl": "https://www.scribd.com/document/894918389/",
       "sourceKind": "public_sample",
@@ -2798,14 +3210,33 @@
       "sourceEvidence": {
         "officialCatalogue": "https://edu.sh.gov.cn/cmsres/2d/2dc160ca4658483e8eaaf76e8f945637/28a7fabd94b936378d6dd4c271c12ad8.pdf",
         "officialApproval": "SD－XS－2025001",
-        "note": "官方2025秋目录确认英语二上、沪教育；公开样本目录原页核对10单元及Topic words。目录含编辑标记，与学校成书一致性待确认。"
+        "note": "预览含编辑标记；Word bank完整两页已核对。上海平台2026学年第一学期二上提取码57203608，对应新华传媒音频页书号978-7-5720-3608-8。预览与该ISBN成书逐页一致性、学校印次待确认。",
+        "wordBankPrintPages": [
+          65,
+          66
+        ],
+        "wordBankPdfPages": [
+          69,
+          70
+        ],
+        "wordBankVerification": "公开预览原页与文字交叉核对，43项与目录Topic words逐项一致；不是课文中所有词。",
+        "officialResourceUrl": "https://mp3.bookmall.com.cn/",
+        "officialResourceCode": "57203608",
+        "officialResourceIsbn": "978-7-5720-3608-8",
+        "officialResourceCatalogue": "https://www.sh.smartedu.cn/teachingMaterial?type=11",
+        "officialAudioDownloadUrl": "https://mp3.bookmall.com.cn/book/download/57203608/22389.shtml",
+        "officialAudioMd5": "d91f992a35467c7973218c47e84bb53d",
+        "officialAudioDifference": "公开预览Word bank含43项；新华传媒官方配套Word bank的74—83轨朗读42项，第1单元未朗读get dressed。两种模型转写一致；该词保留预览页证据并明确标注差异，不据此推断学校纸本删词。"
       },
       "inventory": {
         "topicWordsComplete": true,
-        "wordBankComplete": false,
+        "wordBankComplete": true,
         "unitPracticeComplete": true,
         "fullTextAvailable": false,
-        "fullCoverage": false
+        "fullCoverage": false,
+        "wordBankCount": 43,
+        "wordBankBasis": "public_sample_pages",
+        "officialWordBankAudioCount": 42
       },
       "units": [
         {
@@ -2816,23 +3247,34 @@
           "words": [
             {
               "text": "get up",
-              "meaning": "起床"
+              "meaning": "起床",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             },
             {
               "text": "brush my teeth",
-              "meaning": "刷牙"
+              "meaning": "刷牙",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             },
             {
               "text": "wash my face",
-              "meaning": "洗脸"
+              "meaning": "洗脸",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             },
             {
               "text": "get dressed",
-              "meaning": "穿衣服"
+              "meaning": "穿衣服",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69,
+              "verificationNote": "该词见公开预览Word bank；官方配套二上第74轨未朗读，学校纸本是否保留此词待确认。"
             },
             {
               "text": "have breakfast",
-              "meaning": "吃早饭"
+              "meaning": "吃早饭",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             }
           ],
           "practice": {
@@ -2847,6 +3289,23 @@
             "questionHint": "我把什么放进书包？",
             "answer": "A book. 一本书。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "get up",
+            "brush my teeth",
+            "wash my face",
+            "get dressed",
+            "have breakfast"
+          ],
+          "officialWordBankAudioEntries": [
+            "get up",
+            "brush my teeth",
+            "wash my face",
+            "have breakfast"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "74 Word bank-Unit 1.mp3",
+            "sha256": "2114b497c9179f5ff606fed3bfd99cf9653c5aab53cdbbfeb81f6113e5b8fbee"
           }
         },
         {
@@ -2857,15 +3316,21 @@
           "words": [
             {
               "text": "on the desk",
-              "meaning": "在书桌上"
+              "meaning": "在书桌上",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             },
             {
               "text": "in the box",
-              "meaning": "在盒子里"
+              "meaning": "在盒子里",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             },
             {
               "text": "under the bed",
-              "meaning": "在床下面"
+              "meaning": "在床下面",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             }
           ],
           "practice": {
@@ -2880,6 +3345,20 @@
             "questionHint": "袜子在哪里？",
             "answer": "Under the bed. 床下面。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "on the desk",
+            "in the box",
+            "under the bed"
+          ],
+          "officialWordBankAudioEntries": [
+            "on the desk",
+            "in the box",
+            "under the bed"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "75 Word bank-Unit 2.mp3",
+            "sha256": "4848055c9d6b391c3c6149bd2ac2f9246d1e0764dc9371bc610267ca957c7858"
           }
         },
         {
@@ -2890,15 +3369,21 @@
           "words": [
             {
               "text": "by car",
-              "meaning": "乘小汽车"
+              "meaning": "乘小汽车",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             },
             {
               "text": "on foot",
-              "meaning": "步行"
+              "meaning": "步行",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             },
             {
               "text": "by bus",
-              "meaning": "乘公共汽车"
+              "meaning": "乘公共汽车",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             }
           ],
           "practice": {
@@ -2913,6 +3398,20 @@
             "questionHint": "我的朋友怎样来？",
             "answer": "By bus. 乘公共汽车。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "by car",
+            "on foot",
+            "by bus"
+          ],
+          "officialWordBankAudioEntries": [
+            "by car",
+            "on foot",
+            "by bus"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "76 Word bank-Unit 3.mp3",
+            "sha256": "0789f7875b963fdbe6d50df45517a52d9fada49ae7036cb4583fb8450bdd2b8d"
           }
         },
         {
@@ -2923,23 +3422,33 @@
           "words": [
             {
               "text": "run",
-              "meaning": "跑"
+              "meaning": "跑",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             },
             {
               "text": "jump",
-              "meaning": "跳"
+              "meaning": "跳",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             },
             {
               "text": "play ping-pong",
-              "meaning": "打乒乓球"
+              "meaning": "打乒乓球",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             },
             {
               "text": "play basketball",
-              "meaning": "打篮球"
+              "meaning": "打篮球",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             },
             {
               "text": "play football",
-              "meaning": "踢足球"
+              "meaning": "踢足球",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             }
           ],
           "practice": {
@@ -2954,6 +3463,24 @@
             "questionHint": "我做什么运动？",
             "answer": "Ping-pong. 乒乓球。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "run",
+            "jump",
+            "play ping-pong",
+            "play basketball",
+            "play football"
+          ],
+          "officialWordBankAudioEntries": [
+            "run",
+            "jump",
+            "play ping-pong",
+            "play basketball",
+            "play football"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "77 Word bank-Unit 4.mp3",
+            "sha256": "6da21d9f5471795f5a34df2dade5aeaf5bbab5ef7b4f8f02d7550fb6991e1274"
           }
         },
         {
@@ -2964,23 +3491,33 @@
           "words": [
             {
               "text": "in the sky",
-              "meaning": "在天空中"
+              "meaning": "在天空中",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             },
             {
               "text": "star",
-              "meaning": "星星"
+              "meaning": "星星",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             },
             {
               "text": "sun",
-              "meaning": "太阳"
+              "meaning": "太阳",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             },
             {
               "text": "cloud",
-              "meaning": "云"
+              "meaning": "云",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             },
             {
               "text": "moon",
-              "meaning": "月亮"
+              "meaning": "月亮",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             }
           ],
           "practice": {
@@ -2995,6 +3532,24 @@
             "questionHint": "我在云旁边画什么？",
             "answer": "A small star. 一颗小星星。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "in the sky",
+            "star",
+            "sun",
+            "cloud",
+            "moon"
+          ],
+          "officialWordBankAudioEntries": [
+            "in the sky",
+            "star",
+            "sun",
+            "cloud",
+            "moon"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "78 Word bank-Unit 5.mp3",
+            "sha256": "55e3d09922752deaf60acd5e0200610eafcb1e60e24b74e358b437a983752e22"
           }
         },
         {
@@ -3005,19 +3560,27 @@
           "words": [
             {
               "text": "in the sea",
-              "meaning": "在海里"
+              "meaning": "在海里",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             },
             {
               "text": "seahorse",
-              "meaning": "海马"
+              "meaning": "海马",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             },
             {
               "text": "dolphin",
-              "meaning": "海豚"
+              "meaning": "海豚",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             },
             {
               "text": "clownfish",
-              "meaning": "小丑鱼"
+              "meaning": "小丑鱼",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             }
           ],
           "practice": {
@@ -3032,6 +3595,22 @@
             "questionHint": "我画了什么动物？",
             "answer": "A seahorse. 一只海马。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "in the sea",
+            "seahorse",
+            "dolphin",
+            "clownfish"
+          ],
+          "officialWordBankAudioEntries": [
+            "in the sea",
+            "seahorse",
+            "dolphin",
+            "clownfish"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "79 Word bank-Unit 6.mp3",
+            "sha256": "aef947a9c7b84dc1123c5e0fad05b55a83c6fbc6a855cc82963c5fd992bbbacf"
           }
         },
         {
@@ -3042,19 +3621,27 @@
           "words": [
             {
               "text": "spring",
-              "meaning": "春天"
+              "meaning": "春天",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             },
             {
               "text": "summer",
-              "meaning": "夏天"
+              "meaning": "夏天",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             },
             {
               "text": "autumn",
-              "meaning": "秋天"
+              "meaning": "秋天",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             },
             {
               "text": "winter",
-              "meaning": "冬天"
+              "meaning": "冬天",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             }
           ],
           "practice": {
@@ -3069,6 +3656,22 @@
             "questionHint": "哪幅画里有黄叶？",
             "answer": "The autumn picture. 秋天的画。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "spring",
+            "summer",
+            "autumn",
+            "winter"
+          ],
+          "officialWordBankAudioEntries": [
+            "spring",
+            "summer",
+            "autumn",
+            "winter"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "80 Word bank-Unit 7.mp3",
+            "sha256": "45c18bb999305e17919356d0536d79ea9713fb7108f3cb040fb8f789c4dfb2d7"
           }
         },
         {
@@ -3079,27 +3682,39 @@
           "words": [
             {
               "text": "fruit",
-              "meaning": "水果"
+              "meaning": "水果",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             },
             {
               "text": "apple",
-              "meaning": "苹果"
+              "meaning": "苹果",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             },
             {
               "text": "pear",
-              "meaning": "梨"
+              "meaning": "梨",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             },
             {
               "text": "banana",
-              "meaning": "香蕉"
+              "meaning": "香蕉",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             },
             {
               "text": "grape",
-              "meaning": "葡萄"
+              "meaning": "葡萄",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             },
             {
               "text": "orange",
-              "meaning": "橙子"
+              "meaning": "橙子",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             }
           ],
           "practice": {
@@ -3114,6 +3729,26 @@
             "questionHint": "小盒子里有什么？",
             "answer": "Some grapes. 一些葡萄。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "fruit",
+            "apple",
+            "pear",
+            "banana",
+            "grape",
+            "orange"
+          ],
+          "officialWordBankAudioEntries": [
+            "fruit",
+            "apple",
+            "pear",
+            "banana",
+            "grape",
+            "orange"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "81 Word bank-Unit 8.mp3",
+            "sha256": "1165a4c803f04c974a05e12143e66458cd7270e7ef8364d1d869f6058abc594d"
           }
         },
         {
@@ -3124,23 +3759,33 @@
           "words": [
             {
               "text": "smell",
-              "meaning": "闻"
+              "meaning": "闻",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             },
             {
               "text": "taste",
-              "meaning": "尝"
+              "meaning": "尝",
+              "wordBankPrintPage": 65,
+              "wordBankPdfPage": 69
             },
             {
               "text": "touch",
-              "meaning": "触摸"
+              "meaning": "触摸",
+              "wordBankPrintPage": 66,
+              "wordBankPdfPage": 70
             },
             {
               "text": "see",
-              "meaning": "看见"
+              "meaning": "看见",
+              "wordBankPrintPage": 66,
+              "wordBankPdfPage": 70
             },
             {
               "text": "hear",
-              "meaning": "听见"
+              "meaning": "听见",
+              "wordBankPrintPage": 66,
+              "wordBankPdfPage": 70
             }
           ],
           "practice": {
@@ -3155,6 +3800,24 @@
             "questionHint": "我听见了什么？",
             "answer": "A bird. 鸟叫。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "smell",
+            "taste",
+            "touch",
+            "see",
+            "hear"
+          ],
+          "officialWordBankAudioEntries": [
+            "smell",
+            "taste",
+            "touch",
+            "see",
+            "hear"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "82 Word bank-Unit 9.mp3",
+            "sha256": "78791775861d3d66baa94fb7e3b5969ee0f58d0a13fa35bc51dd6d3a33019016"
           }
         },
         {
@@ -3165,15 +3828,21 @@
           "words": [
             {
               "text": "draw a picture",
-              "meaning": "画一幅画"
+              "meaning": "画一幅画",
+              "wordBankPrintPage": 66,
+              "wordBankPdfPage": 70
             },
             {
               "text": "read a book",
-              "meaning": "读一本书"
+              "meaning": "读一本书",
+              "wordBankPrintPage": 66,
+              "wordBankPdfPage": 70
             },
             {
               "text": "make breakfast",
-              "meaning": "做早饭"
+              "meaning": "做早饭",
+              "wordBankPrintPage": 66,
+              "wordBankPdfPage": 70
             }
           ],
           "practice": {
@@ -3188,6 +3857,20 @@
             "questionHint": "我帮爸爸做什么？",
             "answer": "Make breakfast. 做早饭。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "draw a picture",
+            "read a book",
+            "make breakfast"
+          ],
+          "officialWordBankAudioEntries": [
+            "draw a picture",
+            "read a book",
+            "make breakfast"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "83 Word bank-Unit 10.mp3",
+            "sha256": "2e3dbdc910746ce411bc795a249ab37a607831fec3788cc47c2bb9647dc0c8c2"
           }
         }
       ]
@@ -3199,7 +3882,7 @@
       "semester": "下册",
       "title": "英语 · 2年级下册（沪教版）",
       "publisher": "上海教育出版社",
-      "edition": "沪教版新教材；2026春公开目录样本，版权页待核实",
+      "edition": "沪教版新教材；官方配套书号978-7-5720-4137-2；学校印次待确认",
       "schoolSystem": "5-4",
       "sourceUrl": "https://www.sohu.com/a/972300491_122228582",
       "sourceKind": "public_sample",
@@ -3211,10 +3894,13 @@
       ],
       "inventory": {
         "topicWordsComplete": true,
-        "wordBankComplete": false,
+        "wordBankComplete": true,
         "unitPracticeComplete": true,
         "fullTextAvailable": false,
-        "fullCoverage": false
+        "fullCoverage": false,
+        "wordBankCount": 43,
+        "wordBankBasis": "official_audio_crosschecked_catalogue",
+        "topicWordCount": 42
       },
       "units": [
         {
@@ -3226,19 +3912,23 @@
           "words": [
             {
               "text": "feed the cows",
-              "meaning": "喂奶牛"
+              "meaning": "喂奶牛",
+              "wordBankAudioTrack": "51 Word bank-Unit 1.mp3"
             },
             {
               "text": "see a film",
-              "meaning": "看电影"
+              "meaning": "看电影",
+              "wordBankAudioTrack": "51 Word bank-Unit 1.mp3"
             },
             {
               "text": "visit Grandma and Grandpa",
-              "meaning": "看望奶奶和爷爷"
+              "meaning": "看望奶奶和爷爷",
+              "wordBankAudioTrack": "51 Word bank-Unit 1.mp3"
             },
             {
               "text": "have a good time",
-              "meaning": "玩得愉快"
+              "meaning": "玩得愉快",
+              "wordBankAudioTrack": "51 Word bank-Unit 1.mp3"
             }
           ],
           "practice": {
@@ -3253,6 +3943,22 @@
             "questionHint": "我们喂什么动物？",
             "answer": "The cows. 奶牛。",
             "origin": "original"
+          },
+          "topicWordEntries": [
+            "feed the cows",
+            "see a film",
+            "visit Grandma and Grandpa",
+            "have a good time"
+          ],
+          "wordBankEntries": [
+            "feed the cows",
+            "see a film",
+            "visit Grandma and Grandpa",
+            "have a good time"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "51 Word bank-Unit 1.mp3",
+            "sha256": "e3c82e5ee7532f24733a3a30c6831902592a22a7b50e7b5bf490950db98761e0"
           }
         },
         {
@@ -3264,19 +3970,23 @@
           "words": [
             {
               "text": "do the housework",
-              "meaning": "做家务"
+              "meaning": "做家务",
+              "wordBankAudioTrack": "52 Word bank-Unit 2.mp3"
             },
             {
               "text": "tidy my room",
-              "meaning": "整理我的房间"
+              "meaning": "整理我的房间",
+              "wordBankAudioTrack": "52 Word bank-Unit 2.mp3"
             },
             {
               "text": "make the bed",
-              "meaning": "铺床"
+              "meaning": "铺床",
+              "wordBankAudioTrack": "52 Word bank-Unit 2.mp3"
             },
             {
               "text": "dish",
-              "meaning": "盘子；碟子"
+              "meaning": "盘子；碟子",
+              "wordBankAudioTrack": "52 Word bank-Unit 2.mp3"
             }
           ],
           "practice": {
@@ -3291,6 +4001,22 @@
             "questionHint": "我把盘子放在哪里？",
             "answer": "On the table. 桌上。",
             "origin": "original"
+          },
+          "topicWordEntries": [
+            "do the housework",
+            "tidy my room",
+            "make the bed",
+            "dish"
+          ],
+          "wordBankEntries": [
+            "do the housework",
+            "tidy my room",
+            "make the bed",
+            "dish"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "52 Word bank-Unit 2.mp3",
+            "sha256": "021817d630e26be0dbab83692169159e83de79bc6c9080f22cecaf875d6534c4"
           }
         },
         {
@@ -3302,19 +4028,23 @@
           "words": [
             {
               "text": "happy",
-              "meaning": "开心的"
+              "meaning": "开心的",
+              "wordBankAudioTrack": "53 Word bank-Unit 3.mp3"
             },
             {
               "text": "excited",
-              "meaning": "兴奋的"
+              "meaning": "兴奋的",
+              "wordBankAudioTrack": "53 Word bank-Unit 3.mp3"
             },
             {
               "text": "upset",
-              "meaning": "难过的；心烦的"
+              "meaning": "难过的；心烦的",
+              "wordBankAudioTrack": "53 Word bank-Unit 3.mp3"
             },
             {
               "text": "angry",
-              "meaning": "生气的"
+              "meaning": "生气的",
+              "wordBankAudioTrack": "53 Word bank-Unit 3.mp3"
             }
           ],
           "practice": {
@@ -3329,6 +4059,22 @@
             "questionHint": "最后我感觉怎样？",
             "answer": "Happy. 开心。",
             "origin": "original"
+          },
+          "topicWordEntries": [
+            "happy",
+            "excited",
+            "upset",
+            "angry"
+          ],
+          "wordBankEntries": [
+            "happy",
+            "excited",
+            "upset",
+            "angry"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "53 Word bank-Unit 3.mp3",
+            "sha256": "a4084cec9d057766f8a06587fb4dd1a79a79a3355c508c12dd0e453bf7a115c7"
           }
         },
         {
@@ -3340,15 +4086,18 @@
           "words": [
             {
               "text": "play music",
-              "meaning": "播放音乐；演奏音乐"
+              "meaning": "播放音乐；演奏音乐",
+              "wordBankAudioTrack": "54 Word bank-Unit 4.mp3"
             },
             {
               "text": "sing and dance",
-              "meaning": "唱歌跳舞"
+              "meaning": "唱歌跳舞",
+              "wordBankAudioTrack": "54 Word bank-Unit 4.mp3"
             },
             {
               "text": "talk with the baby",
-              "meaning": "和宝宝说话"
+              "meaning": "和宝宝说话",
+              "wordBankAudioTrack": "54 Word bank-Unit 4.mp3"
             }
           ],
           "practice": {
@@ -3363,6 +4112,20 @@
             "questionHint": "机器人会做饭吗？",
             "answer": "No, it cannot. 不会。",
             "origin": "original"
+          },
+          "topicWordEntries": [
+            "play music",
+            "sing and dance",
+            "talk with the baby"
+          ],
+          "wordBankEntries": [
+            "play music",
+            "sing and dance",
+            "talk with the baby"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "54 Word bank-Unit 4.mp3",
+            "sha256": "37e38c8c4fc0316daf411bbae9860694442aa6390d37fb4521ad4962390f6c42"
           }
         },
         {
@@ -3374,7 +4137,8 @@
           "words": [
             {
               "text": "play a game",
-              "meaning": "玩游戏"
+              "meaning": "玩游戏",
+              "wordBankAudioTrack": "55 Word bank-Unit 5.mp3"
             },
             {
               "text": "talk and share",
@@ -3382,7 +4146,13 @@
             },
             {
               "text": "have a go",
-              "meaning": "试一试"
+              "meaning": "试一试",
+              "wordBankAudioTrack": "55 Word bank-Unit 5.mp3"
+            },
+            {
+              "text": "share",
+              "meaning": "分享",
+              "wordBankAudioTrack": "55 Word bank-Unit 5.mp3"
             }
           ],
           "practice": {
@@ -3397,6 +4167,20 @@
             "questionHint": "我们用什么玩游戏？",
             "answer": "A ball. 一个球。",
             "origin": "original"
+          },
+          "topicWordEntries": [
+            "play a game",
+            "talk and share",
+            "have a go"
+          ],
+          "wordBankEntries": [
+            "play a game",
+            "share",
+            "have a go"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "55 Word bank-Unit 5.mp3",
+            "sha256": "2e32c27e2389cbee0f087d1f36d20a06f06bc65bfe1235d7dc45a860ac16650e"
           }
         },
         {
@@ -3408,19 +4192,23 @@
           "words": [
             {
               "text": "nice",
-              "meaning": "友好的；令人愉快的"
+              "meaning": "友好的；令人愉快的",
+              "wordBankAudioTrack": "56 Word bank-Unit 6.mp3"
             },
             {
               "text": "cook",
-              "meaning": "厨师；做饭"
+              "meaning": "厨师；做饭",
+              "wordBankAudioTrack": "56 Word bank-Unit 6.mp3"
             },
             {
               "text": "great",
-              "meaning": "很棒的"
+              "meaning": "很棒的",
+              "wordBankAudioTrack": "56 Word bank-Unit 6.mp3"
             },
             {
               "text": "teacher",
-              "meaning": "教师"
+              "meaning": "教师",
+              "wordBankAudioTrack": "56 Word bank-Unit 6.mp3"
             }
           ],
           "practice": {
@@ -3435,6 +4223,22 @@
             "questionHint": "我送给妈妈什么？",
             "answer": "A picture. 一幅画。",
             "origin": "original"
+          },
+          "topicWordEntries": [
+            "nice",
+            "cook",
+            "great",
+            "teacher"
+          ],
+          "wordBankEntries": [
+            "nice",
+            "cook",
+            "great",
+            "teacher"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "56 Word bank-Unit 6.mp3",
+            "sha256": "96394cbe14cc4ba87ccd214c116bfcee8a020ca6e6cb1a76e2c195e6b885ffa8"
           }
         },
         {
@@ -3446,19 +4250,23 @@
           "words": [
             {
               "text": "tree",
-              "meaning": "树"
+              "meaning": "树",
+              "wordBankAudioTrack": "57 Word bank-Unit 7.mp3"
             },
             {
               "text": "leaf",
-              "meaning": "叶子"
+              "meaning": "叶子",
+              "wordBankAudioTrack": "57 Word bank-Unit 7.mp3"
             },
             {
               "text": "flower",
-              "meaning": "花"
+              "meaning": "花",
+              "wordBankAudioTrack": "57 Word bank-Unit 7.mp3"
             },
             {
               "text": "grass",
-              "meaning": "草"
+              "meaning": "草",
+              "wordBankAudioTrack": "57 Word bank-Unit 7.mp3"
             }
           ],
           "practice": {
@@ -3473,6 +4281,22 @@
             "questionHint": "叶子落在哪里？",
             "answer": "On the grass. 草地上。",
             "origin": "original"
+          },
+          "topicWordEntries": [
+            "tree",
+            "leaf",
+            "flower",
+            "grass"
+          ],
+          "wordBankEntries": [
+            "tree",
+            "leaf",
+            "flower",
+            "grass"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "57 Word bank-Unit 7.mp3",
+            "sha256": "31758b667ac0758aed1e3721810febda0f3480159b7634c54e0fabf9fd43bf62"
           }
         },
         {
@@ -3484,31 +4308,43 @@
           "words": [
             {
               "text": "duck",
-              "meaning": "鸭子"
+              "meaning": "鸭子",
+              "wordBankAudioTrack": "58 Word bank-Unit 8.mp3"
             },
             {
               "text": "pond",
-              "meaning": "池塘"
+              "meaning": "池塘",
+              "wordBankAudioTrack": "58 Word bank-Unit 8.mp3"
             },
             {
               "text": "frog",
-              "meaning": "青蛙"
+              "meaning": "青蛙",
+              "wordBankAudioTrack": "58 Word bank-Unit 8.mp3"
             },
             {
               "text": "lake",
-              "meaning": "湖"
+              "meaning": "湖",
+              "wordBankAudioTrack": "58 Word bank-Unit 8.mp3"
             },
             {
               "text": "river",
-              "meaning": "河"
+              "meaning": "河",
+              "wordBankAudioTrack": "58 Word bank-Unit 8.mp3"
             },
             {
               "text": "shark",
-              "meaning": "鲨鱼"
+              "meaning": "鲨鱼",
+              "wordBankAudioTrack": "58 Word bank-Unit 8.mp3"
             },
             {
               "text": "sea",
-              "meaning": "海"
+              "meaning": "海",
+              "wordBankAudioTrack": "58 Word bank-Unit 8.mp3"
+            },
+            {
+              "text": "fish",
+              "meaning": "鱼",
+              "wordBankAudioTrack": "58 Word bank-Unit 8.mp3"
             }
           ],
           "practice": {
@@ -3523,6 +4359,29 @@
             "questionHint": "什么在池塘里游泳？",
             "answer": "A duck. 一只鸭子。",
             "origin": "original"
+          },
+          "topicWordEntries": [
+            "duck",
+            "pond",
+            "frog",
+            "lake",
+            "river",
+            "shark",
+            "sea"
+          ],
+          "wordBankEntries": [
+            "duck",
+            "pond",
+            "frog",
+            "lake",
+            "fish",
+            "river",
+            "shark",
+            "sea"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "58 Word bank-Unit 8.mp3",
+            "sha256": "ea92d36d3ca7c8d37e0d42474e757d6f84db7813f314547efc09f05d04d80f07"
           }
         },
         {
@@ -3534,11 +4393,13 @@
           "words": [
             {
               "text": "wash my hands",
-              "meaning": "洗手"
+              "meaning": "洗手",
+              "wordBankAudioTrack": "59 Word bank-Unit 9.mp3"
             },
             {
               "text": "before eating",
-              "meaning": "吃东西之前"
+              "meaning": "吃东西之前",
+              "wordBankAudioTrack": "59 Word bank-Unit 9.mp3"
             },
             {
               "text": "after going to the toilet",
@@ -3546,11 +4407,18 @@
             },
             {
               "text": "dirty",
-              "meaning": "脏的"
+              "meaning": "脏的",
+              "wordBankAudioTrack": "59 Word bank-Unit 9.mp3"
             },
             {
               "text": "clean",
-              "meaning": "干净的"
+              "meaning": "干净的",
+              "wordBankAudioTrack": "59 Word bank-Unit 9.mp3"
+            },
+            {
+              "text": "after using the toilet",
+              "meaning": "上厕所后",
+              "wordBankAudioTrack": "59 Word bank-Unit 9.mp3"
             }
           ],
           "practice": {
@@ -3565,6 +4433,24 @@
             "questionHint": "我什么时候洗手？",
             "answer": "Before eating. 吃东西之前。",
             "origin": "original"
+          },
+          "topicWordEntries": [
+            "wash my hands",
+            "before eating",
+            "after going to the toilet",
+            "dirty",
+            "clean"
+          ],
+          "wordBankEntries": [
+            "wash my hands",
+            "before eating",
+            "after using the toilet",
+            "dirty",
+            "clean"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "59 Word bank-Unit 9.mp3",
+            "sha256": "9f16b23d64614b4577b4f5cbcc5cb8e4e926411b077d241254d9d7092e22c7d7"
           }
         },
         {
@@ -3576,19 +4462,23 @@
           "words": [
             {
               "text": "drink some milk",
-              "meaning": "喝一些牛奶"
+              "meaning": "喝一些牛奶",
+              "wordBankAudioTrack": "60 Word bank-Unit 10.mp3"
             },
             {
               "text": "say good night",
-              "meaning": "说晚安"
+              "meaning": "说晚安",
+              "wordBankAudioTrack": "60 Word bank-Unit 10.mp3"
             },
             {
               "text": "sleep",
-              "meaning": "睡觉"
+              "meaning": "睡觉",
+              "wordBankAudioTrack": "60 Word bank-Unit 10.mp3"
             },
             {
               "text": "read a story",
-              "meaning": "读一个故事"
+              "meaning": "读一个故事",
+              "wordBankAudioTrack": "60 Word bank-Unit 10.mp3"
             }
           ],
           "practice": {
@@ -3603,6 +4493,22 @@
             "questionHint": "谁和我一起读故事？",
             "answer": "Dad. 爸爸。",
             "origin": "original"
+          },
+          "topicWordEntries": [
+            "drink some milk",
+            "say good night",
+            "sleep",
+            "read a story"
+          ],
+          "wordBankEntries": [
+            "drink some milk",
+            "say good night",
+            "sleep",
+            "read a story"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "60 Word bank-Unit 10.mp3",
+            "sha256": "d670ff29af19e4fdc8d536cb992b936700022c78c5a21c8bd5f90c715bcf461a"
           }
         }
       ],
@@ -3612,7 +4518,15 @@
           "2dee592ee5ab5827a3a2c98b98ec417122addfd0d1787255576f81e54a94b3ad",
           "047771e4c0f74bc7bcb44096789a4a3d781c28d79815673f72843489634bdee4"
         ],
-        "note": "目录标明第9、10单元为拓展学习单元，供教师根据实际情况选用；Word bank印刷页61，未取得完整原页。"
+        "note": "上海平台2025学年第二学期二下提取码57204137，对应官方书号978-7-5720-4137-2；音频包MD5已校验。公开目录与官方Word bank有三处差异：第5单元talk and share/音频share；第8单元目录未列fish/音频含fish；第9单元after going to the toilet/音频after using the toilet。两种有证据的词项分别保存，原内容ID不变。卷末纸本原页、学校印次及音频与学校纸本逐项一致性待确认。",
+        "officialResourceUrl": "https://mp3.bookmall.com.cn/",
+        "officialResourceCode": "57204137",
+        "officialResourceIsbn": "978-7-5720-4137-2",
+        "officialAudioDownloadUrl": "https://mp3.bookmall.com.cn/book/download/57204137/22269.shtml",
+        "officialAudioMd5": "c5263699dc24d39c0f98fcdd60d07be7",
+        "wordBankVerification": "新华传媒官方音频包的10段Word bank（51—60轨）完整核对，共43项；拼写与公开目录交叉核对，另补fish、share、after using the toilet。音频转写使用两种模型交叉复核，不以第三方单词卡数量推算完整性。",
+        "wordBankStartPrintPage": 61,
+        "wordBankPrintedPagesVerified": false
       }
     }
   ],

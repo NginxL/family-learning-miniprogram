@@ -3,6 +3,16 @@ const coverage = require('../data/catalogs/shanghai-54-coverage.json');
 const regional = require('../data/catalogs/shanghai-54-evidence.json');
 const lowerPrimary = require('./lower-primary');
 
+function inventoryNote(book) {
+  if (book.subject === 'chinese') return book.inventory.recognitionComplete && book.inventory.writingComplete
+    ? `识字表 ${book.inventory.recognitionCount} 字、写字表 ${book.inventory.writingCount} 字已整理（含另列多音字复习）；`
+    : '完整识字表、写字表待原页核实；';
+  if (!book.inventory.wordBankComplete) return '目录主题词汇已整理，完整 Word bank 待核验；';
+  return book.inventory.wordBankBasis === 'public_sample_pages'
+    ? `公开样本 Word bank ${book.inventory.wordBankCount} 项已整理；与官方音频的差异已标注，学校纸本待确认；`
+    : `官方配套音频 Word bank ${book.inventory.wordBankCount} 项已整理；与目录不同的短语另行保留，纸本原页待确认；`;
+}
+
 // A publisher's book listing is not evidence that its lessons are in the app.
 function curriculum(items) {
   const keys = new Set();
@@ -27,7 +37,7 @@ function curriculum(items) {
     return { ...slot, contentBookId: book?.id || '', verifiedCount,
       practiceCount, textbookCount: verifiedCount - practiceCount, availableUnits,
       contentStatus: verifiedCount ? 'partial' : 'pending',
-      contentNote: lower ? `${availableUnits} 个单元已有配套学习内容：${verifiedCount - practiceCount} 项教材字词／古诗与 ${practiceCount} 项原创练习。${lower.subject === 'chinese' ? lower.inventory.recognitionComplete && lower.inventory.writingComplete ? `识字表 ${lower.inventory.recognitionCount} 字、写字表 ${lower.inventory.writingCount} 字已整理（含另列多音字复习）；` : '完整识字表、写字表待原页核实；' : '目录主题词汇已整理，完整 Word bank 待核验；'}不代表教材全部知识。`
+      contentNote: lower ? `${availableUnits} 个单元已有配套学习内容：${verifiedCount - practiceCount} 项教材字词／古诗与 ${practiceCount} 项原创练习。${inventoryNote(lower)}不代表教材全部知识。`
         : verifiedCount ? `已核实 ${verifiedCount} 项古诗文年级映射；全册阅读、识字与表达等仍有缺项。` : '尚无已核实的逐课知识清单；不计作整册覆盖。',
       mappingNote: book ? book.verification : '' };
   }) };

@@ -71,7 +71,7 @@ module.exports = { knowledge, resources: {
   checkedAt: '2026-10-16',
   curriculum: curriculum(knowledge()),
   examFramework,
-  coverage: '上海五四制：小学1–5、初中6–9年级。一、二年级语文四册各8单元已有原创阅读，前三册字表已核实；英语四册各10单元已有主题词汇、原创例句与阅读。语文二下完整字表、英语完整 Word bank 和高年级逐课内容仍有缺项。学校印次待确认，现有内容不代表教材或中考全量。',
+  coverage: '上海五四制：小学1–5、初中6–9年级。一、二年级语文四册字表及32份单元原创练习已整理；英语四册各10单元已有主题词汇、原创例句与阅读。二上样本 Word bank、二下官方音频 Word bank 各43项，版本差异已标注。学校纸本、一年级完整 Word bank 及高年级逐课内容待核验，现有内容不代表教材或中考全量。',
   books: [...new Map([...regional.books, ...lowerPrimary.bookSummaries()].map(book => [book.id, book])).values()],
   links: [
     { title: '上海 2026 秋季教学用书通知', url: regional.noticeUrl, note: '市级用书目录；学校实际选用版本待确认' },

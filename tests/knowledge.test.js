@@ -47,7 +47,7 @@ test('national source inventories retain 75/60 works, 1600 headword groups, 505 
   assert.equal(tables.entries.length, 77);
   assert.deepEqual(tables.entries.reduce((counts, entry) => ({ ...counts, [entry.table]: (counts[entry.table] || 0) + 1 }), {}), { '基数词': 30, '序数词': 28, '月份': 12, '星期': 7 });
   assert.equal(learning.catalog.filter((item) => item.kind === 'poetry').length, 159);
-  assert.equal(learning.catalog.filter((item) => item.kind === 'word').length, 1747);
+  assert.equal(learning.catalog.filter((item) => item.kind === 'word').length, 1748);
 });
 
 test('content identity preserves case and distinct same-title works; default scopes are deliberately limited', () => {

@@ -6,7 +6,7 @@ const { pinyinFor } = require('../miniprogram/lib/pinyin');
 const { fixture } = require('./helpers');
 
 test('verified lower-primary inventories retain all unit positions and keep pending books out of grade filters', () => {
-  const expected = { 'chinese-1a-sample': [280, 284, 100], 'chinese-1b-sample': [410, 419, 200], 'chinese-2a-sample': [460, 480, 250] };
+  const expected = { 'chinese-1a-sample': [280, 284, 100], 'chinese-1b-sample': [410, 419, 200], 'chinese-2a-sample': [460, 480, 250], 'chinese-2b-sample': [450, 465, 250] };
   for (const book of data.books) {
     assert.equal(book.inventory.fullCoverage, false); assert.equal(book.schoolAdoption, 'pending');
     const items = learning.searchCatalog({ bookId: book.id });
@@ -33,8 +33,8 @@ test('verified lower-primary inventories retain all unit positions and keep pend
     }
     assert.equal(learning.searchCatalog({ bookId: book.id, semester: book.semester === '上册' ? '下册' : '上册' }).length, 0);
   }
-  assert.equal(learning.searchCatalog({ grade: 2, semester: '下册' }).length, 93);
-  assert.equal(learning.searchCatalog({ grade: 2, subject: 'english' }).length, 165);
+  assert.equal(learning.searchCatalog({ grade: 2, semester: '下册' }).length, 104);
+  assert.equal(learning.searchCatalog({ grade: 2, subject: 'english' }).length, 168);
 });
 
 test('unit character readings preserve textbook polyphones and original reading aids use context', () => {
@@ -52,6 +52,11 @@ test('unit character readings preserve textbook polyphones and original reading 
   assert.deepEqual(sounds('sh54-zh-2a-u2-reading', '长'), ['cháng', 'cháng']);
   assert.ok(sounds('sh54-zh-2a-u5-reading', '干').every(value => value === 'gān'));
   assert.ok(sounds('sh54-zh-2a-u8-reading', '得').every(value => value === 'de'));
+  for (const [unit, character, sound] of [[2, '的', 'dí'], [2, '蔗', 'zhè'], [3, '炸', 'zhá'], [4, '倒', 'dǎo'], [5, '圈', 'juàn'],
+    [6, '泊', 'bó'], [7, '喝', 'hè'], [7, '尽', 'jǐn'], [7, '扫', 'sào'], [8, '待', 'dāi'], [8, '难', 'nàn']]) {
+    assert.ok(sounds(`sh54-zh-2b-u${unit}-literacy`, character).includes(sound), `${character}/${sound}`);
+  }
+  assert.deepEqual(sounds('sh54-zh-2b-u7-literacy', '扇'), ['shān', 'shàn']);
   assert.deepEqual(sounds('sh54-zh-2b-u5-reading', '倒'), ['dǎo']);
   assert.deepEqual(sounds('sh54-zh-2b-u5-reading', '重'), ['chóng']);
   assert.ok(sounds('sh54-zh-2b-u5-reading', '着').every(value => value === 'zhe'));
@@ -59,6 +64,55 @@ test('unit character readings preserve textbook polyphones and original reading 
   const phonics = pinyinFor(learning.catalogById.get('sh54-zh-1a-u2-reading')).body.flat();
   assert.ok(phonics.some(token => token.text === 'mǎ' && token.pinyin === ''));
   assert.ok(phonics.some(token => token.text === 'bà' && token.after === '；'));
+});
+
+test('Chinese 2B distinguishes 450 new characters from 15 review positions and uses its own page offset', () => {
+  const book = data.books.find(book => book.id === 'chinese-2b-sample');
+  const newCharacters = [];
+  for (const unit of book.units) {
+    const characters = [...unit.recognition.join('')];
+    for (const reviewed of unit.recognitionReviewCharacters) {
+      assert.ok(characters.includes(reviewed)); characters.splice(characters.indexOf(reviewed), 1);
+    }
+    newCharacters.push(...characters);
+    const item = learning.catalogById.get(`sh54-zh-2b-${unit.id}-literacy`);
+    const evidence = item.gradeMappings.find(mapping => mapping.bookId === book.id);
+    assert.equal(evidence.sourcePrintPage, unit.recognitionPrintPages[0]);
+    assert.equal(evidence.sourcePdfPage, evidence.sourcePrintPage + 6);
+    assert.equal(item.gradeMappings[0].sourceUrl, book.sourceUrl);
+  }
+  assert.equal(newCharacters.length, 450); assert.equal(new Set(newCharacters).size, 450);
+  assert.equal(book.units.flatMap(unit => unit.recognitionReviewCharacters).length, 15);
+  assert.equal(book.units[0].recognition[0], '咏贺妆丝裁剪莺拂堤醉趁');
+  assert.equal(book.units[7].writing.at(-1), '灿烂');
+});
+
+test('Word bank additions keep old learning identities and distinguish printed sample from official audio evidence', () => {
+  const b = data.books.find(book => book.id === 'english-2b-sample');
+  assert.deepEqual(b.units.map(unit => unit.wordBankEntries.length), [4, 4, 4, 3, 3, 4, 4, 8, 5, 4]);
+  const items = learning.searchCatalog({ bookId: b.id });
+  for (const id of ['word-fish', 'word-share', 'sh54-word-after-using-the-toilet']) {
+    const mapping = items.find(item => item.id === id).gradeMappings.find(mapping => mapping.bookId === b.id);
+    assert.equal(mapping.sourceKind, 'official_audio');
+    assert.equal(mapping.sourcePrintPage, undefined); // No invented paper page from an audio track.
+    assert.match(mapping.evidence, /57204137/);
+  }
+  for (const id of ['sh54-word-talk-and-share', 'sh54-word-after-going-to-the-toilet']) {
+    assert.ok(items.some(item => item.id === id));
+    assert.equal(items.find(item => item.id === id).gradeMappings.find(mapping => mapping.bookId === b.id).sourceKind, 'public_sample');
+  }
+  assert.match(learning.catalogById.get('sh54-word-after-using-the-toilet').source, /Word bank 音频/);
+  const a = data.books.find(book => book.id === 'english-2a-sample');
+  assert.equal(a.units.flatMap(unit => unit.officialWordBankAudioEntries).length, 42);
+  const dressed = learning.catalogById.get('sh54-word-get-dressed').gradeMappings.find(mapping => mapping.bookId === a.id);
+  assert.equal(dressed.sourcePrintPage, 65); assert.equal(dressed.sourcePdfPage, 69);
+  assert.match(dressed.evidence, /未朗读/);
+  const oldWords = ['word-fish', 'word-share', 'sh54-word-talk-and-share', 'sh54-word-after-going-to-the-toilet'];
+  const ledger = { records: {} };
+  learning.recordTasks(ledger, oldWords.map(id => ({ ...learning.taskFrom(learning.catalogById.get(id), 'child', 'old', 'new'), done: true })), '2026-10-12');
+  const family = { children: [{ id: 'child' }], plans: [], autoPlans: { child: learning.emptyRules().map(rule => ({ ...rule, quantity: rule.kind === 'word' ? 60 : 0, scope: 'shanghai54' })) } };
+  const next = learning.generateDay(family, { date: '2026-10-13', tasks: [] }, { child: ledger });
+  assert.ok(next.tasks.every(task => !oldWords.includes(task.contentId)));
 });
 
 test('textbook word variants reuse canonical learning IDs; new practice does not duplicate old history', () => {
@@ -82,7 +136,7 @@ test('original unit practice is counted separately from verified textbook progre
   assert.equal(progress.grades[1].learned, 0);
   assert.equal(progress.grades[1].practice.learned, 1);
   assert.equal(progress.grades[1].practice.total, 96);
-  assert.equal(progress.grades[1].total, 103);
+  assert.equal(progress.grades[1].total, 114);
   assert.equal(progress.highestGradeStarted, 0);
   assert.equal(progress.unclassifiedLearned, 0);
 });
@@ -121,8 +175,8 @@ test('book navigation includes vocabulary, sentences and reading and never leaks
   assert.deepEqual(new Set(page.data.items.map(item => item.kind)), new Set(['word', 'sentence', 'english-reading']));
   assert.ok(page.data.items.every(item => item.gradeMappings.some(mapping => mapping.bookId === 'english-1b-sample' && mapping.unitId === 'u8')));
   page.changeGrade({ detail: { value: 2 } });
-  assert.equal(page.data.bookId, ''); assert.equal(page.data.unitIndex, 0); assert.equal(page.data.total, 199);
-  page.changeSemester({ detail: { value: 2 } }); assert.equal(page.data.total, 93);
+  assert.equal(page.data.bookId, ''); assert.equal(page.data.unitIndex, 0); assert.equal(page.data.total, 210);
+  page.changeSemester({ detail: { value: 2 } }); assert.equal(page.data.total, 104);
   page.showBook({ currentTarget: { dataset: { id: 'chinese-1b-sample' } } });
   assert.equal(page.data.semesterIndex, 0); assert.ok(page.data.items.some(item => item.kind === 'poetry')); assert.ok(page.data.items.some(item => item.studyArea === 'literacy'));
 });
@@ -131,18 +185,25 @@ test('grade two samples retain different edition evidence, exact unit starts and
   const zh = data.books.find(book => book.id === 'chinese-2b-sample');
   const a = data.books.find(book => book.id === 'english-2a-sample');
   const b = data.books.find(book => book.id === 'english-2b-sample');
-  assert.equal(zh.sourceEvidence.previewPageCount, 60);
-  assert.equal(zh.inventory.recognitionComplete, false); assert.equal(zh.inventory.writingComplete, false);
-  assert.ok(zh.units.every(unit => !unit.recognition && !unit.writing));
+  assert.equal(zh.sourceKind, 'official_textbook');
+  assert.equal(zh.inventory.recognitionComplete, true); assert.equal(zh.inventory.writingComplete, true);
+  assert.deepEqual(zh.sourceEvidence.recognitionPrintPages, [113, 114, 115, 116]);
+  assert.deepEqual(zh.sourceEvidence.writingPrintPages, [117, 118, 119]);
   assert.deepEqual(zh.units.map(unit => unit.sourcePrintPage), [1, 15, 29, 42, 55, 69, 84, 100]);
   assert.ok(zh.units[1].lessons.includes('我不是最弱小的'));
   assert.ok(zh.units[7].lessons.includes('黄帝的传说'));
   assert.deepEqual(a.units.map(unit => unit.sourcePrintPage), [5, 11, 17, 23, 29, 35, 41, 47, 53, 59]);
   assert.deepEqual(b.units.map(unit => unit.sourcePrintPage), [1, 7, 13, 19, 25, 31, 37, 43, 49, 55]);
   assert.equal(a.units.reduce((n, unit) => n + unit.words.length, 0), 43);
-  assert.equal(b.units.reduce((n, unit) => n + unit.words.length, 0), 42);
+  assert.equal(b.units.reduce((n, unit) => n + unit.words.length, 0), 45);
   assert.deepEqual(b.units.filter(unit => unit.optional).map(unit => unit.number), [9, 10]);
   assert.ok(learning.searchCatalog({ bookId: b.id, unitId: 'u9' }).every(item => item.gradeMappings.some(mapping => mapping.bookId === b.id && mapping.unit.endsWith('（拓展）'))));
-  for (const book of [a,b]) assert.equal(book.inventory.wordBankComplete, false);
+  for (const book of [a,b]) {
+    assert.equal(book.inventory.wordBankComplete, true);
+    assert.equal(book.units.flatMap(unit => unit.wordBankEntries).length, 43);
+  }
+  assert.equal(a.inventory.wordBankBasis, 'public_sample_pages');
+  assert.equal(b.inventory.wordBankBasis, 'official_audio_crosschecked_catalogue');
+  assert.equal(b.sourceEvidence.wordBankPrintedPagesVerified, false);
   assert.equal(pinyinFor(learning.catalogById.get('sh54-zh-2b-u5-reading')).title.flat().find(token => token.text === '倒').pinyin, 'dǎo');
 });
