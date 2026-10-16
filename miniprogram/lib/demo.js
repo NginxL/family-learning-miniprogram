@@ -60,17 +60,28 @@ function createDemo(wx) {
     Object.values(state.days).filter((day) => day.date <= today).forEach((day) => state.family.children.forEach((child) => {
       learning.recordTasks(ledgerFor(child.id), day.tasks.filter((task) => task.childId === child.id), day.date);
     }));
-    if (['saveDailyTemplate', 'activateDailyTemplate', 'deleteDailyTemplate'].includes(action)) {
+    if (['saveDailyTemplate', 'activateDailyTemplate', 'deleteDailyTemplate', 'saveTemplateSchedule'].includes(action)) {
       ledgerFor(input.childId);
       const invalid = message => Object.assign(new Error(message), { code: 'INVALID' });
-      if (!/^[a-zA-Z0-9_-]{1,100}$/.test(input.templateId || '') || !/^[a-zA-Z0-9_-]{1,100}$/.test(input.mutationId || '')
+      const templateId = action === 'saveTemplateSchedule' ? input.activeId : input.templateId;
+      if (!/^[a-zA-Z0-9_-]{1,100}$/.test(templateId || '') || !/^[a-zA-Z0-9_-]{1,100}$/.test(input.mutationId || '')
         || !Number.isInteger(input.baseRevision) || input.baseRevision < 0) throw invalid('模板编号或版本无效');
       const name = action === 'saveDailyTemplate' ? String(input.name || '').trim() : undefined;
       if (action === 'saveDailyTemplate') {
         if (!name || name.length > 24 || typeof input.activate !== 'boolean') throw invalid('请填写24字以内的模板名称');
         validateRules(input.rules);
       }
-      const fingerprint = JSON.stringify([action, input.childId, input.templateId, input.baseRevision, name, input.rules, input.activate]);
+      let weeklySchedule = null;
+      if (action === 'saveTemplateSchedule') {
+        if (input.weeklySchedule !== null) {
+          if (!input.weeklySchedule || Array.isArray(input.weeklySchedule)
+            || !['weekdaysTemplateId', 'weekendTemplateId'].every(key => typeof input.weeklySchedule[key] === 'string' && /^[a-zA-Z0-9_-]{1,100}$/.test(input.weeklySchedule[key]))) throw invalid('星期安排无效');
+          weeklySchedule = { weekdaysTemplateId: input.weeklySchedule.weekdaysTemplateId, weekendTemplateId: input.weeklySchedule.weekendTemplateId };
+        }
+      }
+      const fingerprint = JSON.stringify(action === 'saveTemplateSchedule'
+        ? [action, input.childId, templateId, input.baseRevision, weeklySchedule]
+        : [action, input.childId, input.templateId, input.baseRevision, name, input.rules, input.activate]);
       state.templateReceipts = state.templateReceipts || {};
       if (state.templateReceipts[input.mutationId]) {
         if (state.templateReceipts[input.mutationId] !== fingerprint) throw invalid('操作编号已用于其他请求');
@@ -78,12 +89,16 @@ function createDemo(wx) {
       }
       const set = learning.templateSet(state.family, input.childId);
       if (set.revision !== input.baseRevision) throw Object.assign(new Error('家人已更新任务模板，请重新载入后再修改'), { code: 'CONFLICT' });
-      const index = set.templates.findIndex(item => item.id === input.templateId);
+      const index = set.templates.findIndex(item => item.id === templateId);
       const freeze = () => { if (state.days[today]) learning.freezeTemplateDay(state.family, state.days[today], input.childId); };
-      if (action === 'saveDailyTemplate') {
+      if (action === 'saveTemplateSchedule') {
+        if (index < 0 || (weeklySchedule && ![weeklySchedule.weekdaysTemplateId, weeklySchedule.weekendTemplateId].every(id => set.templates.some(item => item.id === id)))) throw invalid('请选择当前孩子已有的模板');
+        freeze(); set.activeId = templateId;
+        if (weeklySchedule) set.weeklySchedule = weeklySchedule; else delete set.weeklySchedule;
+      } else if (action === 'saveDailyTemplate') {
         if (set.templates.some(item => item.id !== input.templateId && item.name === name)) throw invalid('已有同名模板，请换一个名称');
         if (index < 0 && set.templates.length >= 10) throw invalid('每个孩子最多保存10个模板');
-        if (set.activeId === input.templateId || input.activate) freeze();
+        if (set.activeId === input.templateId || learning.templateForDate(state.family, input.childId, today).id === input.templateId || input.activate) freeze();
         const template = { id: input.templateId, name, rules: input.rules };
         if (index >= 0) set.templates[index] = template; else set.templates.push(template);
         if (input.activate) set.activeId = input.templateId;
@@ -91,6 +106,7 @@ function createDemo(wx) {
         if (index < 0) throw invalid('模板不存在，请刷新');
         if (action === 'deleteDailyTemplate') {
           if (set.activeId === input.templateId) throw invalid('请先启用其他模板，再删除当前模板');
+          if (set.weeklySchedule && [set.weeklySchedule.weekdaysTemplateId, set.weeklySchedule.weekendTemplateId].includes(input.templateId)) throw invalid('请先调整星期安排，再删除这个模板');
           set.templates.splice(index, 1);
         } else { freeze(); set.activeId = input.templateId; }
       }

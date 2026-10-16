@@ -19,6 +19,7 @@ exports.omitTask = omitTask;
 exports.allowsRepeat = allowsRepeat;
 exports.templateSet = templateSet;
 exports.activeTemplate = activeTemplate;
+exports.templateForDate = templateForDate;
 exports.templateSummary = templateSummary;
 exports.freezeTemplateDay = freezeTemplateDay;
 const catalog = require("./catalog");
@@ -71,6 +72,13 @@ function activeTemplate(family, childId) {
     const set = templateSet(family, childId);
     return set.templates.find((item) => item.id === set.activeId) || set.templates[0];
 }
+function templateForDate(family, childId, date) {
+    const set = templateSet(family, childId);
+    // The input is a Shanghai calendar date. UTC parsing avoids the device/server timezone shifting its weekday.
+    const weekday = new Date(`${date}T00:00:00Z`).getUTCDay();
+    const id = set.weeklySchedule ? (weekday === 0 || weekday === 6 ? set.weeklySchedule.weekendTemplateId : set.weeklySchedule.weekdaysTemplateId) : set.activeId;
+    return set.templates.find((item) => item.id === id) || set.templates.find((item) => item.id === set.activeId) || set.templates[0];
+}
 function templateSummary(rules) {
     return rules.filter((rule) => rule.quantity > 0).map((rule) => {
         const kind = definition(rule.kind);
@@ -83,7 +91,7 @@ function freezeTemplateDay(family, day, childId) {
     const generated = (_a = day.generated) === null || _a === void 0 ? void 0 : _a[childId];
     if (!generated)
         return;
-    for (const rule of activeTemplate(family, childId).rules)
+    for (const rule of templateForDate(family, childId, day.date).rules)
         if (!generated[rule.kind])
             generated[rule.kind] = { ...rule, actual: 0 };
 }
@@ -220,7 +228,7 @@ function generateDay(family, day, ledgers, preview = false) {
             ...(family.scheduledContents || []).filter((item) => item.childId === child.id && item.date > day.date).map((item) => item.contentId),
             ...family.plans.filter((plan) => plan.childId === child.id && plan.enabled && plan.schedule === 'once' && plan.date && plan.date > day.date).map(contentId)
         ].map((id) => { var _a; return ((_a = catalogById.get(id)) === null || _a === void 0 ? void 0 : _a.workId) || id; }));
-        const rules = activeTemplate(family, child.id).rules;
+        const rules = templateForDate(family, child.id, day.date).rules;
         rules.filter((rule) => { var _a; return rule.quantity > 0 || ((_a = family.templateSets) === null || _a === void 0 ? void 0 : _a[child.id]); }).forEach((rule) => {
             if (generated[rule.kind])
                 return;

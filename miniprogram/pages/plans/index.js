@@ -47,10 +47,13 @@ const definition = {
         studyGrade: 0, gradeLabels: learning.gradeLabels, groups: [], expandedKind: '', previewLimit: 20,
         planDate: '', maxPlanDate: '', previewReady: false, editTarget: null, editDate: '',
         templates: [], templateId: '', templateName: '', templateIndex: 0, activeTemplateId: '', activeTemplateName: '', activeTemplateSummary: '',
-        templateRevision: 0, draftTemplateRevision: 0, templateConflict: false, newTemplateDraft: false },
-    onHide() { this.setData({ editTarget: null }); base.onHide.call(this); },
+        templateRevision: 0, draftTemplateRevision: 0, templateConflict: false, newTemplateDraft: false,
+        previewTemplateId: '', previewTemplateName: '', previewTemplateSummary: '', weeklyEnabled: false, weekdayLabel: '',
+        templateAdvanced: false, templateCanDelete: false, scheduleDraft: null, scheduleConflict: false, scheduleRows: [] },
+    onHide() { this.setData({ editTarget: null, scheduleDraft: null }); base.onHide.call(this); },
+    render() { this.setData({ subjectFilter: 'all' }); base.render.call(this); },
     afterRender() {
-        var _a, _b, _c, _d;
+        var _a, _b, _c, _d, _e;
         const target = this.data.editTarget;
         if (target && (this.data.isChild || ((_a = this.data.family) === null || _a === void 0 ? void 0 : _a.id) !== target.familyId || this.data.childId !== target.childId || this.data.date !== target.date))
             this.setData({ editTarget: null });
@@ -68,22 +71,33 @@ const definition = {
             previewReady: Boolean(this.data.family && this.engine.state.days[`${this.data.family.id}:${this.data.date}`]) });
         if (!this.data.family) {
             this.draftScope = '';
-            this.setData({ rules: [], templates: [], templateName: '', draftDirty: false });
+            this.setData({ rules: [], templates: [], templateName: '', draftDirty: false, scheduleDraft: null });
             return;
         }
         const set = learning.templateSet(this.data.family, this.data.childId);
         const active = set.templates.find((item) => item.id === set.activeId);
-        this.setData({ templates: set.templates.map((item) => ({ ...item, label: item.name + (item.id === set.activeId ? ' · 使用中' : '') })),
-            activeTemplateId: active.id, activeTemplateName: active.name, activeTemplateSummary: learning.templateSummary(active.rules), templateRevision: set.revision });
-        const scope = `${this.data.family.id}:${this.data.childId}`;
+        const preview = learning.templateForDate(this.data.family, this.data.childId, this.data.date);
+        this.setData({ templates: set.templates.map((item) => ({ ...item, label: item.name + (set.weeklySchedule
+                    ? [set.weeklySchedule.weekdaysTemplateId, set.weeklySchedule.weekendTemplateId].includes(item.id) ? ' · 已安排' : ''
+                    : item.id === set.activeId ? ' · 每天使用' : '') })),
+            activeTemplateId: active.id, activeTemplateName: active.name, activeTemplateSummary: learning.templateSummary(active.rules), templateRevision: set.revision,
+            previewTemplateId: preview.id, previewTemplateName: preview.name, previewTemplateSummary: learning.templateSummary(preview.rules), weeklyEnabled: Boolean(set.weeklySchedule),
+            weekdayLabel: ['周日', '周一', '周二', '周三', '周四', '周五', '周六'][new Date(`${this.data.date}T00:00:00Z`).getUTCDay()] });
+        const scope = `${this.engine.state.userId}:${this.data.family.myRole}:${this.data.family.id}:${this.data.childId}`;
         if (this.draftScope !== scope) {
             this.draftScope = scope;
-            this.loadTemplate(active.id);
+            this.setData({ scheduleDraft: null, templateAdvanced: false });
+            this.loadTemplate(preview.id);
         }
         else if (!this.data.draftDirty && !this.data.busy && !((_c = this.templateMutation) === null || _c === void 0 ? void 0 : _c.uncertain))
             this.loadTemplate(this.data.templateId);
         else
             this.setData({ templateConflict: set.revision !== this.data.draftTemplateRevision && !((_d = this.templateMutation) === null || _d === void 0 ? void 0 : _d.uncertain) });
+        const schedule = this.data.scheduleDraft;
+        if (schedule)
+            this.setData({ scheduleConflict: set.revision !== schedule.baseRevision && !((_e = this.scheduleMutation) === null || _e === void 0 ? void 0 : _e.uncertain),
+                scheduleRows: (schedule.weekly ? [{ slot: 'weekdaysTemplateId', label: '周一至周五' }, { slot: 'weekendTemplateId', label: '周六、周日' }]
+                    : [{ slot: 'activeId', label: '每天使用' }]).map((row) => ({ ...row, index: set.templates.findIndex((item) => item.id === schedule[row.slot]) })) });
         this.updateVisibleRules();
         if (this.lastSubject !== this.data.subjectFilter) {
             this.lastSubject = this.data.subjectFilter;
@@ -93,7 +107,11 @@ const definition = {
         }
     },
     updateVisibleRules() {
-        this.setData({ visibleRules: this.data.rules.filter((rule) => !['math', 'other'].includes(rule.id) || Number(rule.quantity) > 0), dailyCount: this.data.rules.reduce((sum, rule) => sum + (Number(rule.quantity) || 0), 0) });
+        var _a, _b;
+        const set = this.data.family && learning.templateSet(this.data.family, this.data.childId);
+        this.setData({ visibleRules: this.data.rules.filter((rule) => !['math', 'other'].includes(rule.id) || Number(rule.quantity) > 0), dailyCount: this.data.rules.reduce((sum, rule) => sum + (Number(rule.quantity) || 0), 0),
+            templateCanDelete: Boolean(set && !this.data.newTemplateDraft && set.activeId !== this.data.templateId
+                && ![(_a = set.weeklySchedule) === null || _a === void 0 ? void 0 : _a.weekdaysTemplateId, (_b = set.weeklySchedule) === null || _b === void 0 ? void 0 : _b.weekendTemplateId].includes(this.data.templateId)) });
     },
     changeEditor(event) { this.setData({ editor: event.currentTarget.dataset.id }); },
     loadTemplate(id) {
@@ -108,7 +126,90 @@ const definition = {
         this.updateVisibleRules();
     },
     openTemplate() { if (!this.data.draftDirty)
-        this.loadTemplate(this.data.activeTemplateId); this.setData({ editor: 'auto' }); },
+        this.loadTemplate(this.data.previewTemplateId); this.setData({ editor: 'auto' }); },
+    toggleTemplateAdvanced() { this.setData({ templateAdvanced: !this.data.templateAdvanced }); },
+    adoptTemplates(result, childId) {
+        const family = this.engine.state.family;
+        const confirmed = learning.templateSet(result, childId);
+        if ((family === null || family === void 0 ? void 0 : family.id) === result.id && learning.templateSet(family, childId).revision < confirmed.revision)
+            this.engine.save({ ...this.engine.state, family: { ...family,
+                    templateSets: { ...family.templateSets, [childId]: confirmed },
+                    autoPlans: { ...family.autoPlans, [childId]: confirmed.templates.find((item) => item.id === confirmed.activeId).rules } } });
+    },
+    openSchedule() {
+        var _a, _b;
+        if (this.data.busy || this.data.isChild || !this.data.family)
+            return;
+        if (this.data.draftDirty) {
+            this.setData({ editor: 'auto' });
+            wx.showToast({ title: '请先保存或放弃模板修改', icon: 'none' });
+            return;
+        }
+        const set = learning.templateSet(this.data.family, this.data.childId);
+        this.scheduleMutation = undefined;
+        this.setData({ scheduleDraft: { familyId: this.data.family.id, childId: this.data.childId, baseRevision: set.revision, activeId: set.activeId,
+                weekly: Boolean(set.weeklySchedule), weekdaysTemplateId: ((_a = set.weeklySchedule) === null || _a === void 0 ? void 0 : _a.weekdaysTemplateId) || set.activeId,
+                weekendTemplateId: ((_b = set.weeklySchedule) === null || _b === void 0 ? void 0 : _b.weekendTemplateId) || set.activeId }, scheduleConflict: false });
+        this.render();
+    },
+    closeSchedule() { if (!this.data.busy)
+        this.setData({ scheduleDraft: null }); },
+    changeWeekly(event) {
+        if (!this.data.busy && !this.data.isChild && this.data.scheduleDraft) {
+            this.setData({ scheduleDraft: { ...this.data.scheduleDraft, weekly: event.detail.value } });
+            this.render();
+        }
+    },
+    chooseScheduleTemplate(event) {
+        const template = this.data.templates[Number(event.detail.value)];
+        const slot = event.currentTarget.dataset.slot;
+        if (template && this.data.scheduleDraft && !this.data.busy && !this.data.isChild) {
+            this.setData({ scheduleDraft: { ...this.data.scheduleDraft, [slot]: template.id } });
+            this.render();
+        }
+    },
+    async saveSchedule() {
+        var _a, _b, _c, _d, _e;
+        const target = this.data.scheduleDraft;
+        if (!target || this.data.busy || this.data.isChild || ((_a = this.data.family) === null || _a === void 0 ? void 0 : _a.id) !== target.familyId || this.data.childId !== target.childId)
+            return;
+        if (this.data.scheduleConflict) {
+            wx.showToast({ title: '请重新载入家人更新后的安排', icon: 'none' });
+            return;
+        }
+        const values = { childId: target.childId, activeId: target.activeId, baseRevision: target.baseRevision,
+            weeklySchedule: target.weekly ? { weekdaysTemplateId: target.weekdaysTemplateId, weekendTemplateId: target.weekendTemplateId } : null };
+        const fingerprint = JSON.stringify([target.familyId, values]);
+        if (((_b = this.scheduleMutation) === null || _b === void 0 ? void 0 : _b.fingerprint) !== fingerprint)
+            this.scheduleMutation = { fingerprint, id: this.engine.makeId() };
+        const userId = this.engine.state.userId;
+        const role = (_c = this.engine.state.family) === null || _c === void 0 ? void 0 : _c.myRole;
+        this.setData({ busy: true });
+        try {
+            const result = await this.engine.command('saveTemplateSchedule', { ...values, mutationId: this.scheduleMutation.id });
+            if (this.engine.state.userId === userId && ((_d = this.engine.state.family) === null || _d === void 0 ? void 0 : _d.myRole) === role && this.data.scheduleDraft === target
+                && ((_e = this.data.family) === null || _e === void 0 ? void 0 : _e.id) === target.familyId && this.data.childId === target.childId) {
+                this.adoptTemplates(result.family, target.childId);
+                this.setData({ scheduleDraft: null });
+                this.loadTemplate(learning.templateForDate(this.engine.state.family, target.childId, this.data.date).id);
+                wx.showToast({ title: target.weekly ? '已保存，每周自动安排' : '已保存，每天使用同一模板', icon: 'none' });
+            }
+        }
+        catch (cause) {
+            const error = (0, errors_1.errorDetails)(cause);
+            if (this.scheduleMutation)
+                this.scheduleMutation.uncertain = !['CONFLICT', 'INVALID', 'FORBIDDEN', 'PARENT_REQUIRED', 'NOT_FOUND'].includes(error.code || '');
+            if (error.code === 'CONFLICT' && this.data.scheduleDraft === target)
+                this.setData({ scheduleConflict: true });
+            if (this.active)
+                wx.showToast({ title: error.message || '安排保存失败，请重试', icon: 'none', duration: 3000 });
+        }
+        finally {
+            this.setData({ busy: false });
+            this.render();
+        }
+        await this.refresh();
+    },
     selectTemplate(event) {
         if (this.data.busy || this.data.isChild)
             return;
@@ -280,12 +381,7 @@ const definition = {
             if (this.engine.state.userId === userId && ((_c = this.engine.state.family) === null || _c === void 0 ? void 0 : _c.myRole) === role
                 && ((_d = this.data.family) === null || _d === void 0 ? void 0 : _d.id) === familyId && this.data.childId === childId && this.data.templateId === selected) {
                 // Keep a confirmed template after a failed follow-up sync without replacing newer household fields.
-                const family = this.engine.state.family;
-                const confirmed = learning.templateSet(result.family, childId);
-                if ((family === null || family === void 0 ? void 0 : family.id) === familyId && learning.templateSet(family, childId).revision < confirmed.revision)
-                    this.engine.save({ ...this.engine.state, family: { ...family,
-                            templateSets: { ...family.templateSets, [childId]: confirmed },
-                            autoPlans: { ...family.autoPlans, [childId]: confirmed.templates.find((item) => item.id === confirmed.activeId).rules } } });
+                this.adoptTemplates(result.family, childId);
                 this.setData({ draftDirty: false, newTemplateDraft: false, templateConflict: false });
                 this.loadTemplate(action === 'deleteDailyTemplate' ? undefined : selected);
                 if (activate || action === 'activateDailyTemplate' || selected === this.data.activeTemplateId)

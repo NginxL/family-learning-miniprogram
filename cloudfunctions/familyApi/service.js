@@ -298,16 +298,27 @@ function createService({ store, media, now = Date.now, randomId = () => crypto.r
                 await tx.put('families', family.id, family);
                 return reply(action, { family: publicFamily(family, uid, today) });
             }
-            if (action === 'saveDailyTemplate' || action === 'activateDailyTemplate' || action === 'deleteDailyTemplate') {
+            if (action === 'saveDailyTemplate' || action === 'activateDailyTemplate' || action === 'deleteDailyTemplate' || action === 'saveTemplateSchedule') {
                 childExists(input.childId);
-                const templateId = (0, validation_1.identifier)(input.templateId);
+                const templateId = (0, validation_1.identifier)(action === 'saveTemplateSchedule' ? input.activeId : input.templateId);
                 (0, validation_1.identifier)(input.mutationId);
                 (0, validation_1.requireValue)(isInteger(input.baseRevision) && input.baseRevision >= 0, 'INVALID', '模板版本无效');
                 const name = action === 'saveDailyTemplate' ? (0, validation_1.text)(input.name, '模板名称', 24) : undefined;
                 const rules = action === 'saveDailyTemplate' ? validatedRules(input.rules) : undefined;
                 if (action === 'saveDailyTemplate')
                     (0, validation_1.requireValue)(typeof input.activate === 'boolean', 'INVALID', '请选择是否启用模板');
-                const fingerprint = (0, validation_1.hash)(JSON.stringify([action, family.id, input.childId, templateId, input.baseRevision, name, rules, input.activate]));
+                let weeklySchedule = null;
+                if (action === 'saveTemplateSchedule') {
+                    (0, validation_1.requireValue)(input.weeklySchedule === null || isRecord(input.weeklySchedule), 'INVALID', '星期安排无效');
+                    if (input.weeklySchedule)
+                        weeklySchedule = {
+                            weekdaysTemplateId: (0, validation_1.identifier)(input.weeklySchedule.weekdaysTemplateId), weekendTemplateId: (0, validation_1.identifier)(input.weeklySchedule.weekendTemplateId)
+                        };
+                }
+                // Keep the existing fingerprint shape so pre-upgrade template retries remain valid.
+                const fingerprint = (0, validation_1.hash)(JSON.stringify(action === 'saveTemplateSchedule'
+                    ? [action, family.id, input.childId, templateId, input.baseRevision, weeklySchedule]
+                    : [action, family.id, input.childId, templateId, input.baseRevision, name, rules, input.activate]));
                 const receiptId = (0, validation_1.hash)(`${uid}:${input.mutationId}`);
                 const receipt = await tx.get('receipts', receiptId);
                 if (receipt) {
@@ -317,10 +328,20 @@ function createService({ store, media, now = Date.now, randomId = () => crypto.r
                 const set = learning.templateSet(family, input.childId);
                 (0, validation_1.requireValue)(set.revision === input.baseRevision, 'CONFLICT', '家人已更新任务模板，请重新载入后再修改');
                 const index = set.templates.findIndex((item) => item.id === templateId);
-                if (action === 'saveDailyTemplate') {
+                if (action === 'saveTemplateSchedule') {
+                    (0, validation_1.requireValue)(index >= 0 && (!weeklySchedule || [weeklySchedule.weekdaysTemplateId, weeklySchedule.weekendTemplateId]
+                        .every((id) => set.templates.some((item) => item.id === id))), 'INVALID', '请选择当前孩子已有的模板');
+                    await freezeCurrentDay(input.childId);
+                    set.activeId = templateId;
+                    if (weeklySchedule)
+                        set.weeklySchedule = weeklySchedule;
+                    else
+                        delete set.weeklySchedule;
+                }
+                else if (action === 'saveDailyTemplate') {
                     (0, validation_1.requireValue)(!set.templates.some((item) => item.id !== templateId && item.name === name), 'INVALID', '已有同名模板，请换一个名称');
                     (0, validation_1.requireValue)(index >= 0 || set.templates.length < 10, 'LIMIT', '每个孩子最多保存10个模板');
-                    if (set.activeId === templateId || input.activate)
+                    if (set.activeId === templateId || learning.templateForDate(family, input.childId, today).id === templateId || input.activate)
                         await freezeCurrentDay(input.childId);
                     const template = { id: templateId, name: name, rules: rules };
                     if (index >= 0)
@@ -334,6 +355,7 @@ function createService({ store, media, now = Date.now, randomId = () => crypto.r
                     (0, validation_1.requireValue)(index >= 0, 'NOT_FOUND', '模板不存在，请刷新');
                     if (action === 'deleteDailyTemplate') {
                         (0, validation_1.requireValue)(set.activeId !== templateId, 'INVALID', '请先启用其他模板，再删除当前模板');
+                        (0, validation_1.requireValue)(!set.weeklySchedule || ![set.weeklySchedule.weekdaysTemplateId, set.weeklySchedule.weekendTemplateId].includes(templateId), 'INVALID', '请先调整星期安排，再删除这个模板');
                         set.templates.splice(index, 1);
                     }
                     else {

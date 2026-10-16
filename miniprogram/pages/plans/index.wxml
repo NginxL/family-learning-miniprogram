@@ -1,17 +1,16 @@
 <view class="page">
-  <view class="eyebrow">提前看看，明天学什么</view><view class="title">明日计划</view>
-  <view class="row"><view class="subtitle">{{date}}</view><button class="quiet" bindtap="refresh">{{mode === 'demo' ? '本机保存' : syncLabel}} ↻</button></view>
+  <view class="row"><view class="title">明日计划</view><button class="quiet" bindtap="refresh">{{mode === 'demo' ? '本机保存' : syncLabel}} ↻</button></view>
+  <view class="subtitle">{{date}} · {{weekdayLabel}}{{children.length === 1 ? ' · ' + children[0].name : ''}}</view>
   <view wx:if="{{mode === 'demo'}}" class="notice">本机演示 · 尚未连接家庭云数据</view>
   <view wx:if="{{syncError}}" class="notice">{{syncError}}。当前为已保存的预览，联网刷新后更新。</view>
   <block wx:if="{{family}}">
-    <view class="tab-row"><view wx:for="{{children}}" wx:key="id" class="chip {{childId === item.id ? 'active' : ''}}" data-id="{{item.id}}" bindtap="selectChild">{{item.name}}</view></view>
-    <view wx:if="{{editor !== 'auto' || isChild}}" class="tab-row subjects"><view wx:for="{{subjectOptions}}" wx:key="id" class="subject-chip {{subjectFilter === item.id ? 'selected' : ''}}" data-id="{{item.id}}" bindtap="selectSubject">{{item.label}}</view></view>
-    <view wx:if="{{!isChild}}" class="segmented"><view class="segment {{editor === 'preview' ? 'selected' : ''}}" data-id="preview" bindtap="changeEditor">明日内容</view><view class="segment {{editor === 'auto' ? 'selected' : ''}}" data-id="auto" bindtap="changeEditor">任务模板</view><view class="segment {{editor === 'manual' ? 'selected' : ''}}" data-id="manual" bindtap="changeEditor">家长添加</view></view>
+    <view wx:if="{{children.length > 1}}" class="tab-row"><view wx:for="{{children}}" wx:key="id" class="chip {{childId === item.id ? 'active' : ''}}" data-id="{{item.id}}" bindtap="selectChild">{{item.name}}</view></view>
+    <view wx:if="{{!isChild}}" class="segmented"><view class="segment {{editor === 'preview' ? 'selected' : ''}}" data-id="preview" bindtap="changeEditor">明日内容</view><view class="segment {{editor === 'auto' ? 'selected' : ''}}" data-id="auto" bindtap="changeEditor">任务模板</view><view class="segment {{editor === 'manual' ? 'selected' : ''}}" data-id="manual" bindtap="changeEditor">添加任务</view></view>
     <block wx:if="{{editor === 'preview' || isChild}}">
-      <view class="card template-overview"><view class="muted">正在使用的每日模板</view><view class="row"><view class="rule-title grow">{{activeTemplateName}}</view><button wx:if="{{!isChild}}" class="quiet" bindtap="openTemplate">修改模板 →</button></view><view class="muted">{{activeTemplateSummary}}</view></view>
+      <view class="card template-overview"><view class="row"><view class="grow"><view class="muted">明天使用{{weeklyEnabled ? ' · 按星期安排' : ''}}</view><view class="rule-title">{{previewTemplateName}}</view></view><button wx:if="{{!isChild}}" class="quiet" bindtap="openSchedule" disabled="{{busy}}">自动安排 ›</button></view></view>
       <view class="subtitle">共 {{tasks.length}} 项 · 约 {{minutes}} 分钟</view>
       <view wx:for="{{groups}}" wx:key="id" class="card plan-preview-group">
-        <view class="plan-preview-heading" data-id="{{item.id}}" bindtap="togglePreview"><view class="row"><view class="rule-title">{{item.label}}</view><view class="pill {{item.subject}}">{{item.quantityLabel}}</view></view><view class="subtitle">{{item.modeSummary}}</view><view class="muted">{{item.preview}}</view><view class="plan-expand">{{expandedKind === item.id ? '收起 ↑' : '点击查看内容 ↓'}}</view></view>
+        <view class="plan-preview-heading" data-id="{{item.id}}" bindtap="togglePreview"><view class="row"><view class="rule-title">{{item.label}}</view><view class="pill {{item.subject}}">{{item.quantityLabel}}</view></view><view class="muted plan-preview-text">{{item.preview}}</view><view class="plan-expand">{{item.modeSummary}} · {{expandedKind === item.id ? '收起 ↑' : '查看 ↓'}}</view></view>
         <block wx:if="{{expandedKind === item.id}}">
           <view wx:for="{{item.items}}" wx:for-item="task" wx:key="id" class="plan-preview-item"><view class="task-title">{{task.title}}</view><view wx:if="{{task.poetryByline}}" class="muted poetry-byline">{{task.poetryByline}}</view><view class="body"><text selectable="true">{{task.displayDetail || task.detail}}</text></view><view wx:if="{{task.dynastyNote}}" class="muted">{{task.dynastyNote}}</view><button wx:if="{{!isChild && !task.done}}" class="secondary plan-edit-button" data-id="{{task.id}}" bindtap="editTask" disabled="{{busy}}">修改日期 / 删除</button></view>
           <button wx:if="{{item.items.length < item.count}}" class="secondary" bindtap="showMorePreview">再看 20 项 · 已展示 {{item.items.length}} / {{item.count}}</button>
@@ -20,33 +19,38 @@
       <view wx:for="{{dayWarnings}}" wx:key="kind" class="notice">{{item.message}}</view>
       <view wx:if="{{!groups.length}}" class="card empty">{{previewReady ? '明天还没有学习安排' : '正在读取明日安排…'}}</view>
       <button wx:if="{{!isChild}}" class="primary" bindtap="openLibrary">从知识库添加内容</button>
-      <view class="muted plan-help">同一孩子同一天的相同内容只安排一次；新学和普通添加过滤已学内容。主动复习及每天固定的安排保留。展开任务可改期或删除，不影响已完成记录。</view>
-      <view class="muted plan-help">自动内容随今日学习更新，明天首次打开时确定。删除或改期只调整这一次，自动任务不会在当天补回。</view>
-      <button class="quiet" bindtap="openToday">去今日学习 →</button>
+      <view class="muted plan-help">展开任务可改期或删除，已完成记录保留。</view>
     </block>
     <block wx:elif="{{editor === 'auto'}}">
+      <button class="schedule-entry" bindtap="openSchedule" disabled="{{busy}}"><view class="row"><text>自动安排</text><text>{{weeklyEnabled ? '按星期使用模板' : '每天使用同一模板'}} ›</text></view></button>
       <view class="card template-editor">
-        <view class="row"><view class="rule-title">{{children[childIndex].name}}的任务模板</view><button class="quiet" bindtap="createTemplate" disabled="{{busy}}">＋ 新建</button></view>
-        <picker range="{{templates}}" range-key="label" value="{{templateIndex}}" bindchange="selectTemplate" disabled="{{busy || draftDirty}}"><view class="picker">{{newTemplateDraft ? '正在新建模板' : templates[templateIndex].label}} ▾</view></picker>
-        <label class="label">模板名称</label><input value="{{templateName}}" bindinput="changeTemplateName" maxlength="24" placeholder="例如：日常积累、周末练习" disabled="{{busy}}" />
-        <view class="muted template-caption">每个孩子启用一个模板，后续每天自动使用，无需重复设置。</view>
-        <view wx:if="{{!newTemplateDraft && templateId !== activeTemplateId}}" class="template-actions"><button class="secondary" bindtap="activateTemplate" disabled="{{busy || draftDirty || templateConflict}}">启用此模板</button><button class="quiet" bindtap="deleteTemplate" disabled="{{busy || draftDirty || templateConflict}}">删除模板</button></view>
+        <view class="row"><view class="rule-title">任务模板</view><button class="quiet" bindtap="createTemplate" disabled="{{busy}}">＋ 新建</button></view>
+        <picker range="{{templates}}" range-key="label" value="{{templateIndex}}" bindchange="selectTemplate" disabled="{{busy || draftDirty}}"><view class="picker">{{newTemplateDraft ? '新模板' : templates[templateIndex].label}} ▾</view></picker>
+        <input wx:if="{{newTemplateDraft}}" class="template-name" value="{{templateName}}" bindinput="changeTemplateName" maxlength="24" placeholder="模板名称，例如：上学日" disabled="{{busy}}" />
+        <view class="quantity-list">
+          <view wx:for="{{visibleRules}}" wx:key="id" class="quantity-row">
+            <view class="grow"><view>{{item.label}}</view><view class="muted">{{item.unit}}</view></view>
+            <view class="stepper"><button class="step" data-id="{{item.id}}" data-step="-1" bindtap="stepQuantity" disabled="{{busy}}">−</button><input class="quantity" type="number" maxlength="2" value="{{item.quantity}}" data-id="{{item.id}}" bindinput="changeQuantity" disabled="{{busy}}" /><button class="step" data-id="{{item.id}}" data-step="1" bindtap="stepQuantity" disabled="{{busy}}">＋</button></view>
+          </view>
+        </view>
+        <view class="muted">每天 {{dailyCount}} 项 · 0 表示不安排</view>
+        <button class="quiet advanced-toggle" bindtap="toggleTemplateAdvanced">{{templateAdvanced ? '收起更多设置 ↑' : '更多设置 · 新学／复习、范围 ↓'}}</button>
+        <block wx:if="{{templateAdvanced}}">
+          <block wx:if="{{!newTemplateDraft}}"><label class="label">模板名称</label><input class="template-name" value="{{templateName}}" bindinput="changeTemplateName" maxlength="24" placeholder="模板名称" disabled="{{busy}}" /></block>
+          <view wx:for="{{visibleRules}}" wx:key="id" class="rule-settings">
+            <view class="row"><view>{{item.label}}</view><picker range="{{modes}}" value="{{item.mode === 'review' ? 1 : 0}}" data-id="{{item.id}}" bindchange="changeMode" disabled="{{busy}}"><view class="mode-picker">{{item.mode === 'review' ? '复习' : '全新'}} ▾</view></picker></view>
+            <picker range="{{item.scopes}}" range-key="label" value="{{item.scopeIndex}}" data-id="{{item.id}}" bindchange="changeScope" disabled="{{busy}}"><view class="picker">{{item.scopes[item.scopeIndex].label}} ▾</view></picker>
+            <button class="quiet" data-id="{{item.id}}" bindtap="browseRule">查看内容 · {{item.poolCount}} 项 →</button>
+            <view wx:if="{{item.id === 'english-reading' && !item.poolCount}}" class="muted">请先在「添加任务」中录入英文文章，加入自动内容库。</view>
+          </view>
+          <view class="muted plan-help">全新过滤曾经安排过的内容；复习从已学内容中选择。内容不足时提示缺额。课标范围不代表完整的上海教材。</view>
+          <button wx:if="{{templateCanDelete && !newTemplateDraft}}" class="quiet template-delete" bindtap="deleteTemplate" disabled="{{busy || draftDirty || templateConflict}}">删除这个模板</button>
+        </block>
       </view>
-      <view wx:if="{{templateConflict}}" class="notice">家人已更新模板，你的草稿已保留。请重新载入最新配置后再修改。<button class="quiet" bindtap="resetRules" disabled="{{busy}}">放弃草稿并重新载入</button></view>
-      <view class="subtitle">模板每天 {{dailyCount}} 项 · 数量设为 0 即暂停该类型</view>
-      <view wx:for="{{visibleRules}}" wx:key="id" class="card rule-card">
-        <view class="row"><view><view class="rule-title">{{item.label}}</view><view class="muted">内容库 {{item.poolCount}} 项</view></view><picker range="{{modes}}" value="{{item.mode === 'review' ? 1 : 0}}" data-id="{{item.id}}" bindchange="changeMode"><view class="mode-picker">{{item.mode === 'review' ? '复习' : '全新'}} ▾</view></picker></view>
-        <picker range="{{item.scopes}}" range-key="label" value="{{item.scopeIndex}}" data-id="{{item.id}}" bindchange="changeScope"><view class="picker" style="margin-top:18rpx">{{item.scopes[item.scopeIndex].label}} ▾</view></picker>
-        <view class="row" style="margin-top:24rpx"><view class="muted">每天 · {{item.unit}}（0–{{item.max}}）</view><view class="stepper"><button class="step" data-id="{{item.id}}" data-step="-1" bindtap="stepQuantity">−</button><input class="quantity" type="number" maxlength="2" value="{{item.quantity}}" data-id="{{item.id}}" bindinput="changeQuantity" /><button class="step" data-id="{{item.id}}" data-step="1" bindtap="stepQuantity">＋</button></view></view>
-        <button class="quiet" data-id="{{item.id}}" bindtap="browseRule">看看这些内容 →</button>
-        <view wx:if="{{item.id === 'english-reading' && !item.poolCount}}" class="muted plan-help">可在「家长添加」中选择英文阅读，再加入自动内容库。</view>
-      </view>
-      <view wx:if="{{!visibleRules.length}}" class="card empty">先在「家长添加」中补充这一类内容库。</view>
-      <view class="muted plan-help">全新过滤已学和曾经安排过的内容；复习从已学内容中选择。修改使用中的模板或启用其他模板后，明日预览更新，今日已生成的任务和完成记录保留。内容不足时提示缺额。</view>
-      <button class="primary" bindtap="saveTemplate" loading="{{busy}}" disabled="{{busy || templateConflict}}">{{templateId === activeTemplateId ? '保存模板 · 后续自动使用' : '保存模板'}}</button>
-      <button wx:if="{{templateId !== activeTemplateId}}" class="secondary template-use" bindtap="saveAndUseTemplate" disabled="{{busy || templateConflict}}">保存并启用</button>
-      <view class="row" style="margin-top:18rpx"><button wx:if="{{draftDirty}}" class="quiet" bindtap="resetRules" disabled="{{busy}}">放弃未保存修改</button><button class="quiet" bindtap="openToday">查看今日任务 →</button></view>
-      <view class="muted plan-help">默认亲子入门，可扩大到课标范围。课标学段不是上海五四制年级；校内教材全量仍在核对。家长加入的内容库也会参与安排。</view>
+      <view wx:if="{{templateConflict}}" class="notice">家人已更新模板，你的草稿已保留。<button class="quiet" bindtap="resetRules" disabled="{{busy}}">放弃草稿并重新载入</button></view>
+      <button class="primary" bindtap="saveTemplate" loading="{{busy}}" disabled="{{busy || templateConflict}}">保存模板</button>
+      <button wx:if="{{draftDirty}}" class="quiet discard-draft" bindtap="resetRules" disabled="{{busy}}">放弃修改</button>
+      <view class="muted plan-help">新模板保存后，可在「自动安排」中选择使用。今日任务和已完成记录保留。</view>
     </block>
     <block wx:else>
       <view class="card"><form bindsubmit="addPlan">
@@ -77,6 +81,19 @@
       <button class="secondary edit-delete" bindtap="deleteTask" disabled="{{busy}}">删除这次安排</button>
       <view class="muted plan-help">已完成的学习记录和历史进度会保留。</view>
       <button class="quiet edit-cancel" bindtap="closeEdit" disabled="{{busy}}">取消</button>
+    </view>
+  </view>
+  <view wx:if="{{scheduleDraft}}" class="edit-mask">
+    <view class="edit-sheet schedule-sheet">
+      <view class="rule-title">自动安排</view>
+      <view class="row weekly-switch"><view class="grow">按星期使用不同模板</view><switch checked="{{scheduleDraft.weekly}}" bindchange="changeWeekly" color="#27654c" disabled="{{busy}}" /></view>
+      <view wx:for="{{scheduleRows}}" wx:key="slot" class="schedule-choice">
+        <view class="label">{{item.label}}</view><picker range="{{templates}}" range-key="name" value="{{item.index}}" data-slot="{{item.slot}}" bindchange="chooseScheduleTemplate" disabled="{{busy}}"><view class="picker">{{item.index >= 0 ? templates[item.index].name : '模板已变更，请重新载入'}} ▾</view></picker>
+      </view>
+      <view wx:if="{{scheduleConflict}}" class="notice">家人已更新模板或安排。<button class="quiet" bindtap="openSchedule" disabled="{{busy}}">重新载入</button></view>
+      <view class="muted plan-help">{{scheduleDraft.weekly ? '按自然星期循环，后续每天自动选择模板。' : '后续每天使用选中的模板。'}}今日已生成的任务保持不变。</view>
+      <button class="primary" bindtap="saveSchedule" loading="{{busy}}" disabled="{{busy || scheduleConflict}}">保存安排</button>
+      <button class="quiet edit-cancel" bindtap="closeSchedule" disabled="{{busy}}">取消</button>
     </view>
   </view>
 </view>

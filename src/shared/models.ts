@@ -96,7 +96,8 @@ export interface AutoRule {
   quantity: number;
 }
 export interface DailyTemplate { id: string; name: string; rules: AutoRule[] }
-export interface TemplateSet { templates: DailyTemplate[]; activeId: string; revision: number }
+export interface WeeklyTemplateSchedule { weekdaysTemplateId: string; weekendTemplateId: string }
+export interface TemplateSet { templates: DailyTemplate[]; activeId: string; revision: number; weeklySchedule?: WeeklyTemplateSchedule }
 export interface Day {
   familyId?: string;
   date: CalendarDate;

@@ -9,6 +9,16 @@
 .edit-cancel { margin: 24rpx auto 0; padding: 12rpx 36rpx; }
 .template-overview .rule-title { overflow-wrap: anywhere; }
 .template-editor .picker { margin-top: 18rpx; }
-.template-caption, .template-use { margin-top: 18rpx; }
-.template-actions { display: flex; align-items: center; gap: 16rpx; margin-top: 18rpx; }
-.template-actions .secondary { flex: 1; }
+.plan-preview-text { margin-top: 12rpx; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.plan-expand { margin-top: 10rpx; }
+.schedule-entry { width: 100%; padding: 24rpx 4rpx 0; text-align: left; font-size: 26rpx; color: #52675b; background: transparent; line-height: 1.6; }
+.schedule-entry::after { border: 0; }
+.template-name { margin-bottom: 12rpx; }
+.quantity-list { margin: 12rpx 0 22rpx; }
+.quantity-row { display: flex; gap: 16rpx; align-items: center; justify-content: space-between; padding: 16rpx 0; border-bottom: 1rpx solid #eef0eb; font-size: 29rpx; }
+.quantity-row .muted { font-size: 22rpx; }
+.advanced-toggle { margin-top: 24rpx; }
+.rule-settings { padding: 24rpx 0; border-top: 1rpx solid #e5e9e1; }
+.template-delete { margin-top: 24rpx; color: #a53d32; }
+.discard-draft { margin-top: 20rpx; }
+.weekly-switch { margin-top: 26rpx; }

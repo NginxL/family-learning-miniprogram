@@ -38,6 +38,13 @@ function activeTemplate(family: PlanningFamily, childId: string) {
   const set = templateSet(family, childId);
   return set.templates.find((item) => item.id === set.activeId) || set.templates[0];
 }
+function templateForDate(family: PlanningFamily, childId: string, date: string) {
+  const set = templateSet(family, childId);
+  // The input is a Shanghai calendar date. UTC parsing avoids the device/server timezone shifting its weekday.
+  const weekday = new Date(`${date}T00:00:00Z`).getUTCDay();
+  const id = set.weeklySchedule ? (weekday === 0 || weekday === 6 ? set.weeklySchedule.weekendTemplateId : set.weeklySchedule.weekdaysTemplateId) : set.activeId;
+  return set.templates.find((item) => item.id === id) || set.templates.find((item) => item.id === set.activeId) || set.templates[0];
+}
 function templateSummary(rules: AutoRule[]): string {
   return rules.filter((rule) => rule.quantity > 0).map((rule) => {
     const kind = definition(rule.kind);
@@ -48,7 +55,7 @@ function templateSummary(rules: AutoRule[]): string {
 function freezeTemplateDay(family: PlanningFamily, day: Day, childId: string): void {
   const generated = day.generated?.[childId];
   if (!generated) return;
-  for (const rule of activeTemplate(family, childId).rules) if (!generated[rule.kind]) generated[rule.kind] = { ...rule, actual: 0 };
+  for (const rule of templateForDate(family, childId, day.date).rules) if (!generated[rule.kind]) generated[rule.kind] = { ...rule, actual: 0 };
 }
 function scopeOptions(kind: ContentKind) {
   const options: Array<{ id: ContentScope; label: string }> = [{ id: 'starter', label: '亲子入门' }];
@@ -170,7 +177,7 @@ function generateDay(family: PlanningFamily, day: Day, ledgers: Record<string, L
       ...(family.scheduledContents || []).filter((item) => item.childId === child.id && item.date > day.date).map((item) => item.contentId),
       ...family.plans.filter((plan) => plan.childId === child.id && plan.enabled && plan.schedule === 'once' && plan.date && plan.date > day.date).map(contentId)
     ].map((id) => catalogById.get(id)?.workId || id));
-    const rules = activeTemplate(family, child.id).rules;
+    const rules = templateForDate(family, child.id, day.date).rules;
     rules.filter((rule) => rule.quantity > 0 || family.templateSets?.[child.id]).forEach((rule) => {
       if (generated[rule.kind]) return;
       let pool;
@@ -269,4 +276,4 @@ function progress(ledger: LearningLedger) {
 }
 export { catalog, catalogById, kinds, subjects, kindOf, definition, contentId, content, defaultRules, emptyRules,
   scopeOptions, inScope, materialPool, recordTasks, taskFrom, generateDay, history, ruleRows, searchCatalog, gradeLabels, progress,
-  planningKey, wasLearned, omitTask, allowsRepeat, templateSet, activeTemplate, templateSummary, freezeTemplateDay };
+  planningKey, wasLearned, omitTask, allowsRepeat, templateSet, activeTemplate, templateForDate, templateSummary, freezeTemplateDay };

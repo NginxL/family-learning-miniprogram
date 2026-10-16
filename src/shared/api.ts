@@ -1,4 +1,4 @@
-import type { AutoRule, CalendarDate, ContentKind, Day, HistoryQuery, PublicFamily, SchoolGrade, Subject, Task, HomeworkScope, HomeworkView, HomeworkAttachment, PlanningChange } from './models';
+import type { AutoRule, CalendarDate, ContentKind, Day, HistoryQuery, PublicFamily, SchoolGrade, Subject, Task, HomeworkScope, HomeworkView, HomeworkAttachment, PlanningChange, WeeklyTemplateSchedule } from './models';
 import type { history, progress } from './learning';
 
 export interface ProfileInput {
@@ -30,6 +30,7 @@ export interface ApiPayloads {
   saveDailyTemplate: TemplateRequest & { name: string; rules: AutoRule[]; activate: boolean };
   activateDailyTemplate: TemplateRequest;
   deleteDailyTemplate: TemplateRequest;
+  saveTemplateSchedule: ChildScope & { activeId: string; weeklySchedule: WeeklyTemplateSchedule | null; baseRevision: number; mutationId: string };
   getDay: FamilyScope & { date?: CalendarDate };
   getHistory: ChildScope & HistoryQuery;
   getProgress: ChildScope;
@@ -59,6 +60,7 @@ export interface ApiResults {
   saveDailyTemplate: { family: PublicFamily; duplicate: boolean };
   activateDailyTemplate: { family: PublicFamily; duplicate: boolean };
   deleteDailyTemplate: { family: PublicFamily; duplicate: boolean };
+  saveTemplateSchedule: { family: PublicFamily; duplicate: boolean };
   getDay: { day: Day; today: CalendarDate };
   getHistory: ReturnType<typeof history>;
   getProgress: ReturnType<typeof progress>;
