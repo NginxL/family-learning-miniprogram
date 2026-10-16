@@ -22,6 +22,7 @@
 | [study-word.png](study-word.png) | 30 个单词中的第一批 20 项，显示词义与来源；完成按钮作用于全部 30 项 |
 | [study-english-reading.png](study-english-reading.png) | 家长录入的英文短文与整组完成入口 |
 | [plans.png](plans.png) | 明日按类型折叠的任务预览：2项自动古诗文与1项手动安排、30个单词、1句英语、1篇阅读 |
+| [plans-edit.png](plans-edit.png) | 展开明日任务后的调整弹层：选择新日期或删除这一次安排，保留完成记录 |
 | [library.png](library.png) | 古诗文列表显示朝代与作者；高级筛选折叠，数学不再出现在可选列表 |
 | [library-date.png](library-date.png) | 为虚构孩子选择今日、明日或一年内指定学习日期 |
 | [history.png](history.png) | 学过的古诗文，包含家长确认掌握与再次安排复习入口 |

@@ -1,4 +1,4 @@
-import type { AutoRule, CalendarDate, ContentKind, Day, HistoryQuery, PublicFamily, SchoolGrade, Subject, Task, HomeworkScope, HomeworkView, HomeworkAttachment } from './models';
+import type { AutoRule, CalendarDate, ContentKind, Day, HistoryQuery, PublicFamily, SchoolGrade, Subject, Task, HomeworkScope, HomeworkView, HomeworkAttachment, PlanningChange } from './models';
 import type { history, progress } from './learning';
 
 export interface ProfileInput {
@@ -32,6 +32,7 @@ export interface ApiPayloads {
   setMastery: ContentRequest & { mastered: boolean; baseVersion: number };
   reviewContent: ContentRequest;
   assignContent: ContentRequest & { date?: CalendarDate };
+  editPlannedTask: FamilyScope & { date: CalendarDate; taskId: string; contentId: string; baseVersion: number; planRevision: number; mutationId: string; targetDate?: CalendarDate };
   setTaskDone: FamilyScope & { date: CalendarDate; taskId: string; done: boolean; baseVersion: number; mutationId: string };
   uploadHomeworkAttachment: HomeworkScope & { uploadId: string; mime: HomeworkAttachment['mime']; base64: string; duration: number };
   submitHomework: HomeworkScope & { submissionId: string; attachmentIds: string[]; baseVersion: number };
@@ -57,6 +58,7 @@ export interface ApiResults {
   setMastery: { mastered: boolean };
   reviewContent: { task: Task; date: CalendarDate };
   assignContent: { task: Task; date: CalendarDate };
+  editPlannedTask: PlanningChange & { duplicate: boolean };
   setTaskDone: { task: Task; duplicate: boolean };
   uploadHomeworkAttachment: { attachmentId: string };
   submitHomework: { homework: HomeworkView };

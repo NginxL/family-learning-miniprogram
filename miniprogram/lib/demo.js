@@ -63,7 +63,7 @@ function createDemo(wx) {
         state.family.children.forEach((child) => ledgerFor(child.id));
         learning.generateDay(state.family, current, state.ledgers); state.days[today] = current;
         const preview = JSON.parse(JSON.stringify(state.days[date] || { date, familyId: state.family.id, tasks: [] }));
-        learning.generateDay(state.family, preview, JSON.parse(JSON.stringify(state.ledgers)));
+        learning.generateDay(state.family, preview, JSON.parse(JSON.stringify(state.ledgers)), true);
         write(state); return { day: preview, today };
       }
       const day = state.days[date] || { date, familyId: state.family.id, tasks: [] };
@@ -77,6 +77,54 @@ function createDemo(wx) {
       const result = learning.history(ledgerFor(input.childId), input); write(state); return result;
     }
     if (action === 'getProgress') return learning.progress(ledgerFor(input.childId));
+    if (action === 'editPlannedTask') {
+      const date = planDate(input.date, today);
+      if (date <= today) throw new Error('只能调整未来的未完成安排，今日及历史记录保留');
+      const targetDate = input.targetDate === undefined ? undefined : planDate(input.targetDate, today);
+      if (targetDate === date) throw new Error('请选择不同的学习日期');
+      const fingerprint = JSON.stringify([date, input.taskId, input.contentId, input.baseVersion, input.planRevision, targetDate]);
+      state.planReceipts = state.planReceipts || {};
+      const receipt = state.planReceipts[input.mutationId];
+      if (receipt) {
+        if (receipt.fingerprint !== fingerprint) throw new Error('操作编号已用于其他请求');
+        return { ...receipt.result, duplicate: true };
+      }
+      const copy = value => JSON.parse(JSON.stringify(value));
+      const source = state.days[date] || { familyId: state.family.id, date, tasks: [] };
+      if ((source.planRevision || 0) !== input.planRevision) throw Object.assign(new Error('家人已调整这天的计划，请刷新后再操作'), { code: 'CONFLICT' });
+      state.family.children.forEach(child => ledgerFor(child.id));
+      const ledgers = copy(state.ledgers);
+      learning.generateDay(state.family, copy(state.days[today] || { date: today, tasks: [] }), ledgers);
+      const task = learning.generateDay(state.family, copy(source), copy(ledgers), true).tasks.find(item => item.id === input.taskId && item.contentId === input.contentId);
+      if (!task || task.version !== input.baseVersion) throw Object.assign(new Error('任务已变化，请刷新明日计划后再操作'), { code: 'CONFLICT' });
+      if (task.done) throw new Error('已完成的学习记录不能删除或改期');
+      let merged = false;
+      if (targetDate) {
+        const repeatAllowed = learning.allowsRepeat(state.family, task);
+        if (!repeatAllowed && learning.wasLearned(ledgers[task.childId], task)) throw new Error('已学过这项内容，请从回顾中安排复习');
+        const target = state.days[targetDate] || { familyId: state.family.id, date: targetDate, tasks: [] };
+        const matches = item => item.childId === task.childId && learning.planningKey(item) === learning.planningKey(task);
+        const existing = target.tasks.find(matches);
+        const projected = learning.generateDay(state.family, copy(target), copy(ledgers), targetDate > today).tasks.find(matches);
+        merged = Boolean(existing || projected);
+        if (!existing) {
+          if (projected && projected.id.startsWith('a_')) learning.omitTask(target, projected);
+          target.tasks.push({ ...copy(task), id: `r_${task.childId}_${task.contentId}`, mode: task.mode === 'review' ? 'review' : 'manual', ...(repeatAllowed ? { repeatAllowed: true } : {}), version: task.version + 1, updatedBy: 'demo-parent', updatedAt: Date.now() });
+          target.planRevision = (target.planRevision || 0) + 1;
+        }
+        state.days[targetDate] = target;
+      }
+      learning.omitTask(source, task); state.days[date] = source;
+      state.family.scheduledContents = (state.family.scheduledContents || []).filter(item => item.date > today
+        && !(item.childId === task.childId && item.date === date && (item.contentId === task.contentId || (learning.catalogById.has(item.contentId) && learning.planningKey({ id: item.contentId }) === learning.planningKey(task)))));
+      if (targetDate && targetDate > today && !state.family.scheduledContents.some(item => item.childId === task.childId && item.contentId === task.contentId && item.date === targetDate)) {
+        if (state.family.scheduledContents.length >= 1000) throw new Error('未来安排已达1000项，请在部分完成后再添加');
+        state.family.scheduledContents.push({ childId: task.childId, contentId: task.contentId, date: targetDate });
+      }
+      const result = { date, ...(targetDate ? { targetDate } : {}), merged };
+      state.planReceipts[input.mutationId] = { fingerprint, result };
+      write(state); return { ...result, duplicate: false };
+    }
     if (action === 'setTaskDone') {
       if (input.date > today) throw new Error('未来的学习安排暂不能完成');
       const task = state.days[input.date] && state.days[input.date].tasks.find((item) => item.id === input.taskId);
@@ -96,6 +144,8 @@ function createDemo(wx) {
         entry.mastered = input.mastered; entry.version += 1; write(state); return { mastered: entry.mastered };
       }
       const date = action === 'assignContent' ? planDate(input.date === undefined ? today : input.date, today) : today;
+      const material = action === 'assignContent' ? candidate : entry.item;
+      if (action === 'assignContent' && learning.wasLearned(ledger, material)) throw new Error('已学过这项内容，请从回顾中安排复习');
       if (date > today) {
         const scheduled = (state.family.scheduledContents || []).filter(item => item.date > today);
         if (!scheduled.some(item => item.childId === input.childId && item.contentId === input.contentId && item.date === date)) {
@@ -105,10 +155,11 @@ function createDemo(wx) {
         state.family.scheduledContents = scheduled;
       }
       const day = state.days[date] || { date, familyId: state.family.id, tasks: [] };
-      let task = day.tasks.find((item) => item.childId === input.childId && learning.contentId(item) === input.contentId);
+      let task = day.tasks.find((item) => item.childId === input.childId && learning.planningKey(item) === learning.planningKey(material));
       if (!task) {
         task = learning.taskFrom(action === 'assignContent' ? candidate : entry.item, input.childId, `r_${input.childId}_${input.contentId}`, date > today ? 'manual' : entry ? (entry.completedDates.length ? 'review' : 'manual') : 'new');
         day.tasks.push(task);
+        day.planRevision = (day.planRevision || 0) + 1;
       }
       if (date === today) learning.recordTasks(ledger, day.tasks.filter((item) => item.childId === input.childId), today);
       state.days[date] = day; write(state); return { task, date };
@@ -134,6 +185,7 @@ function createDemo(wx) {
         minutes: input.minutes, enabled: true, source: '家长自建', schedule: input.schedule || 'daily', date,
         ...((input.schedule || 'daily') === 'daily' && input.date !== undefined ? { startDate: date } : {}),
         ...(input.studyGrade ? { studyGrade: input.studyGrade } : {}) });
+      if (input.schedule === 'once' && learning.wasLearned(ledgerFor(input.childId), state.family.plans[state.family.plans.length - 1])) throw new Error('已学过这项内容，请从回顾中安排复习');
     } else if (action === 'saveAutoPlans') {
       ledgerFor(input.childId);
       if (!Array.isArray(input.rules) || input.rules.length !== learning.kinds.length || new Set(input.rules.map((rule) => rule.kind)).size !== learning.kinds.length

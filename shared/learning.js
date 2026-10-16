@@ -13,6 +13,10 @@ exports.history = history;
 exports.ruleRows = ruleRows;
 exports.searchCatalog = searchCatalog;
 exports.progress = progress;
+exports.planningKey = planningKey;
+exports.wasLearned = wasLearned;
+exports.omitTask = omitTask;
+exports.allowsRepeat = allowsRepeat;
 const catalog = require("./catalog");
 exports.catalog = catalog;
 const catalogById = new Map(catalog.map((item) => [item.id, item]));
@@ -115,18 +119,67 @@ function materialPool(family, childId, scope = 'all') {
     const custom = family.plans.filter((plan) => plan.childId === childId && plan.enabled && plan.schedule === 'library');
     return [...new Map([...catalog.filter((item) => inScope(item, scope)), ...custom.map(content)].map((item) => [item.id, item])).values()];
 }
-function generateDay(family, day, ledgers) {
+// Catalogue excerpts share a work; custom exercises need matching text, not just matching titles.
+function planningKey(item) {
+    const builtin = catalogById.get(contentId(item));
+    if (builtin)
+        return `work:${builtin.workId || builtin.id}`;
+    const compact = (value) => value.trim().replace(/\s+/g, ' ');
+    return JSON.stringify([kindOf(item), normalizedTitle(item.title), compact(item.detail || '')]);
+}
+function wasLearned(ledger, item) {
+    const key = planningKey(item);
+    return Object.values(ledger.records).some((entry) => entry.completedDates.length > 0 && planningKey(entry.item) === key);
+}
+function allowsRepeat(family, task) {
+    return task.mode === 'review' || task.repeatAllowed === true || family.plans.some((plan) => plan.id === task.id
+        && plan.childId === task.childId && (!plan.schedule || plan.schedule === 'daily'));
+}
+function omitTask(day, task) {
+    const key = planningKey(task);
+    day.tasks = day.tasks.filter((item) => item.done || item.childId !== task.childId || planningKey(item) !== key);
+    day.omitted = day.omitted || [];
+    if (!day.omitted.some((item) => item.childId === task.childId && item.key === key)) {
+        day.omitted.push({ childId: task.childId, key, kind: task.kind, automatic: task.id.startsWith('a_') });
+    }
+    day.planRevision = (day.planRevision || 0) + 1;
+}
+function generateDay(family, day, ledgers, preview = false) {
+    const filterPlanned = preview || !day.generated;
+    const learnedKeys = new Map(family.children.map((child) => [child.id, new Set(Object.values(ledgers[child.id].records)
+            .filter((entry) => entry.completedDates.length).map((entry) => planningKey(entry.item)))]));
+    const doneKeys = new Set(day.tasks.filter((task) => task.done).map((task) => JSON.stringify([task.childId, planningKey(task)])));
+    const pendingKeys = new Set();
+    // Completed snapshots are immutable here, even if old versions stored duplicates.
+    day.tasks = day.tasks.filter((task) => {
+        var _a;
+        if (task.done)
+            return true;
+        const key = JSON.stringify([task.childId, planningKey(task)]);
+        if (doneKeys.has(key) || pendingKeys.has(key))
+            return false;
+        if (filterPlanned && !allowsRepeat(family, task) && ((_a = learnedKeys.get(task.childId)) === null || _a === void 0 ? void 0 : _a.has(planningKey(task))))
+            return false;
+        pendingKeys.add(key);
+        return true;
+    });
     day.generated = day.generated || {};
     day.warnings = day.warnings || [];
     family.children.forEach((child) => {
         const ledger = ledgers[child.id];
+        const omitted = (day.omitted || []).filter((item) => item.childId === child.id);
+        const omittedKeys = new Set(omitted.map((item) => item.key));
+        const assignedKeys = new Set(day.tasks.filter((task) => task.childId === child.id).map(planningKey));
         recordTasks(ledger, day.tasks.filter((task) => task.childId === child.id), day.date);
         // Existing plans without a schedule preserve the v0.1 daily-repeat semantics.
         family.plans.filter((plan) => plan.childId === child.id && plan.enabled && plan.schedule !== 'library'
             && (!plan.startDate || plan.startDate <= day.date)
             && (plan.schedule !== 'once' || plan.date === day.date)).forEach((plan) => {
-            if (!day.tasks.some((task) => task.childId === child.id && contentId(task) === contentId(plan))) {
+            var _a;
+            const key = planningKey(plan);
+            if (!assignedKeys.has(key) && !omittedKeys.has(key) && (plan.schedule !== 'once' || !((_a = learnedKeys.get(child.id)) === null || _a === void 0 ? void 0 : _a.has(key)))) {
                 day.tasks.push(taskFrom(plan, child.id, plan.id, 'manual'));
+                assignedKeys.add(key);
             }
         });
         recordTasks(ledger, day.tasks.filter((task) => task.childId === child.id), day.date);
@@ -140,11 +193,11 @@ function generateDay(family, day, ledgers) {
         rules.filter((rule) => rule.quantity > 0).forEach((rule) => {
             if (generated[rule.kind])
                 return;
-            const assigned = new Set(day.tasks.filter((task) => task.childId === child.id).map(contentId));
             let pool;
             if (rule.mode === 'new') {
                 const seenWorks = new Set(Object.values(ledger.records).map((entry) => { const item = content(entry.item); return item.workId || item.id; }));
-                pool = materialPool(family, child.id, rule.scope || 'starter').filter((item) => item.kind === rule.kind && !seenWorks.has(item.workId || item.id));
+                const seenKeys = new Set(Object.values(ledger.records).map((entry) => planningKey(entry.item)));
+                pool = materialPool(family, child.id, rule.scope || 'starter').filter((item) => item.kind === rule.kind && !seenWorks.has(item.workId || item.id) && !seenKeys.has(planningKey(item)));
                 // A work and its textbook excerpt are separate study units, but are not new twice.
                 const selectedWorks = new Set();
                 pool = pool.filter((item) => { const id = item.workId || item.id; if (selectedWorks.has(id))
@@ -155,12 +208,22 @@ function generateDay(family, day, ledgers) {
                     .sort((a, b) => a.completedDates[a.completedDates.length - 1].localeCompare(b.completedDates[b.completedDates.length - 1]) || a.item.id.localeCompare(b.item.id))
                     .map((entry) => content(entry.item)).filter((item) => !catalogById.has(item.id) || inScope(catalogById.get(item.id), rule.scope || 'starter'));
             }
-            const chosen = pool.filter((item) => !assigned.has(item.id) && !reserved.has(item.workId || item.id)).slice(0, rule.quantity);
+            const quantity = Math.max(0, rule.quantity - omitted.filter((item) => item.kind === rule.kind && item.automatic).length);
+            const chosen = [];
+            for (const item of pool) {
+                const key = planningKey(item);
+                if (chosen.length >= quantity)
+                    break;
+                if (assignedKeys.has(key) || omittedKeys.has(key) || reserved.has(item.workId || item.id))
+                    continue;
+                chosen.push(item);
+                assignedKeys.add(key);
+            }
             chosen.forEach((item) => day.tasks.push(taskFrom(item, child.id, `a_${child.id}_${item.id}`, rule.mode)));
             generated[rule.kind] = { ...rule, actual: chosen.length };
-            if (chosen.length < rule.quantity)
+            if (chosen.length < quantity)
                 day.warnings.push({ childId: child.id, kind: rule.kind,
-                    message: `${definition(rule.kind).label}：计划 ${rule.quantity}，已安排 ${chosen.length}。${rule.mode === 'new' ? '全新内容不足，可在计划里补充内容库或改为复习。' : '可复习内容不足，完成学习后再安排复习。'}` });
+                    message: `${definition(rule.kind).label}：计划 ${quantity}，已安排 ${chosen.length}。${rule.mode === 'new' ? '全新内容不足，可在明日计划里补充内容库或改为复习。' : '可复习内容不足，完成学习后再安排复习。'}` });
         });
         day.generated[child.id] = generated;
         recordTasks(ledger, day.tasks.filter((task) => task.childId === child.id), day.date);

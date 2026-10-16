@@ -87,6 +87,7 @@ export interface Task extends LearningContent {
   updatedBy: string | null;
   updatedAt: number | null;
   pending?: boolean;
+  repeatAllowed?: true;
 }
 export interface AutoRule {
   kind: ContentKind;
@@ -100,7 +101,11 @@ export interface Day {
   tasks: Task[];
   generated?: Record<string, Partial<Record<ContentKind, AutoRule & { actual: number }>>>;
   warnings?: Array<{ childId: string; kind: ContentKind; message: string }>;
+  planRevision?: number;
+  // Date-local exceptions survive regenerated previews; automatic removals also reduce that day's quota.
+  omitted?: Array<{ childId: string; key: string; kind: ContentKind; automatic: boolean }>;
 }
+export interface PlanningChange { date: CalendarDate; targetDate?: CalendarDate; merged: boolean }
 export interface ChildProfile {
   id: string;
   name: string;
@@ -177,7 +182,7 @@ export interface DatabaseDocuments {
   families: Family;
   invites: { familyId: string; expiresAt: number; usedAt: number | null; role?: 'guardian' | 'child'; childId?: string; guardianConsentAt?: number };
   days: Day;
-  receipts: { familyId: string; fingerprint: string; task: Task; createdAt: number };
+  receipts: { familyId: string; fingerprint: string; createdAt: number } & ({ task: Task } | { planning: PlanningChange });
   learning: PersistedLedger;
   homeworks: Homework;
   attachments: HomeworkAttachment;

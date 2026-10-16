@@ -12,14 +12,15 @@
       <view wx:for="{{groups}}" wx:key="id" class="card plan-preview-group">
         <view class="plan-preview-heading" data-id="{{item.id}}" bindtap="togglePreview"><view class="row"><view class="rule-title">{{item.label}}</view><view class="pill {{item.subject}}">{{item.quantityLabel}}</view></view><view class="subtitle">{{item.modeSummary}}</view><view class="muted">{{item.preview}}</view><view class="plan-expand">{{expandedKind === item.id ? '收起 ↑' : '点击查看内容 ↓'}}</view></view>
         <block wx:if="{{expandedKind === item.id}}">
-          <view wx:for="{{item.items}}" wx:for-item="task" wx:key="id" class="plan-preview-item"><view class="task-title">{{task.title}}</view><view wx:if="{{task.poetryByline}}" class="muted poetry-byline">{{task.poetryByline}}</view><view class="body"><text selectable="true">{{task.displayDetail || task.detail}}</text></view><view wx:if="{{task.dynastyNote}}" class="muted">{{task.dynastyNote}}</view></view>
+          <view wx:for="{{item.items}}" wx:for-item="task" wx:key="id" class="plan-preview-item"><view class="task-title">{{task.title}}</view><view wx:if="{{task.poetryByline}}" class="muted poetry-byline">{{task.poetryByline}}</view><view class="body"><text selectable="true">{{task.displayDetail || task.detail}}</text></view><view wx:if="{{task.dynastyNote}}" class="muted">{{task.dynastyNote}}</view><button wx:if="{{!isChild && !task.done}}" class="secondary plan-edit-button" data-id="{{task.id}}" bindtap="editTask" disabled="{{busy}}">修改日期 / 删除</button></view>
           <button wx:if="{{item.items.length < item.count}}" class="secondary" bindtap="showMorePreview">再看 20 项 · 已展示 {{item.items.length}} / {{item.count}}</button>
         </block>
       </view>
       <view wx:for="{{dayWarnings}}" wx:key="kind" class="notice">{{item.message}}</view>
       <view wx:if="{{!groups.length}}" class="card empty">{{previewReady ? '明天还没有学习安排' : '正在读取明日安排…'}}</view>
       <button wx:if="{{!isChild}}" class="primary" bindtap="openLibrary">从知识库添加内容</button>
-      <view class="muted plan-help">自动内容会随今日学习和安排变化而更新，明天首次打开时确定。手动指定日期的内容会保留；到学习当天再完成或提交作业。</view>
+      <view class="muted plan-help">同一孩子同一天的相同内容只安排一次；新学和普通添加过滤已学内容。主动复习及每天固定的安排保留。展开任务可改期或删除，不影响已完成记录。</view>
+      <view class="muted plan-help">自动内容随今日学习更新，明天首次打开时确定。删除或改期只调整这一次，自动任务不会在当天补回。</view>
       <button class="quiet" bindtap="openToday">去今日学习 →</button>
     </block>
     <block wx:elif="{{editor === 'auto'}}">
@@ -57,4 +58,15 @@
     </block>
   </block>
   <view wx:else class="card empty"><view>{{syncError ? '学习档案暂未连接' : '正在准备学习档案…'}}</view><view wx:if="{{syncError}}" class="muted">{{syncError}}</view><button wx:if="{{syncError}}" class="primary" bindtap="refresh">重试连接</button></view>
+  <view wx:if="{{editTarget}}" class="edit-mask">
+    <view class="edit-sheet">
+      <view class="rule-title">调整学习安排</view><view class="task-title">{{editTarget.title}}</view>
+      <view class="muted">原日期：{{editTarget.date}} · 仅调整这一次</view>
+      <label class="label">改到哪一天</label><picker mode="date" value="{{editDate}}" start="{{today}}" end="{{maxPlanDate}}" bindchange="changeEditDate" disabled="{{busy}}"><view class="picker">{{editDate}} ▾</view></picker>
+      <button class="primary" bindtap="saveTaskDate" loading="{{busy}}" disabled="{{busy || editDate === editTarget.date}}">保存日期</button>
+      <button class="secondary edit-delete" bindtap="deleteTask" disabled="{{busy}}">删除这次安排</button>
+      <view class="muted plan-help">已完成的学习记录和历史进度会保留。</view>
+      <button class="quiet edit-cancel" bindtap="closeEdit" disabled="{{busy}}">取消</button>
+    </view>
+  </view>
 </view>

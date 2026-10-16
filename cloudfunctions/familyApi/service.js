@@ -246,6 +246,8 @@ function createService({ store, media, now = Date.now, randomId = () => crypto.r
                     subject: input.subject, kind, schedule, date, minutes: input.minutes, enabled: true, source: '家长自建',
                     ...(schedule === 'daily' && input.date !== undefined ? { startDate: date } : {}),
                     ...(input.studyGrade ? { studyGrade: input.studyGrade } : {}) });
+                if (schedule === 'once')
+                    (0, validation_1.requireValue)(!learning.wasLearned(await readLedger(input.childId), family.plans[family.plans.length - 1]), 'ALREADY_LEARNED', '已学过这项内容，请从回顾中安排复习');
                 await tx.put('families', family.id, family);
                 return reply(action, { family: publicFamily(family, uid, today) });
             }
@@ -306,7 +308,7 @@ function createService({ store, media, now = Date.now, randomId = () => crypto.r
                         }
                     }
                     day = day || { familyId: family.id, date, tasks: [] };
-                    learning.generateDay(family, day, date > today ? clone(ledgers) : ledgers);
+                    learning.generateDay(family, day, date > today ? clone(ledgers) : ledgers, date > today);
                     if (date === today && JSON.stringify(day) !== beforeDay)
                         await saveDay(id, day);
                 }
@@ -319,6 +321,7 @@ function createService({ store, media, now = Date.now, randomId = () => crypto.r
                         await saveLedger(ledgers[child.id]);
                 const visible = day || { familyId: family.id, date, tasks: [] };
                 return reply(action, { day: isChild ? { ...visible, tasks: visible.tasks.filter((task) => task.childId === member.childId),
+                        omitted: (visible.omitted || []).filter((item) => item.childId === member.childId),
                         generated: { [member.childId]: ((_a = visible.generated) === null || _a === void 0 ? void 0 : _a[member.childId]) || {} },
                         warnings: (visible.warnings || []).filter((warning) => warning.childId === member.childId) } : visible, today });
             }
@@ -333,6 +336,70 @@ function createService({ store, media, now = Date.now, randomId = () => crypto.r
             if (action === 'getProgress') {
                 childExists(input.childId);
                 return reply(action, learning.progress(await readLedger(input.childId)));
+            }
+            if (action === 'editPlannedTask') {
+                const date = (0, validation_1.planningDate)(input.date, timestamp);
+                (0, validation_1.requireValue)(date > today, 'INVALID', '只能调整未来的未完成安排，今日及历史记录保留');
+                const targetDate = input.targetDate === undefined ? undefined : (0, validation_1.planningDate)(input.targetDate, timestamp);
+                (0, validation_1.requireValue)(targetDate !== date, 'INVALID', '请选择不同的学习日期');
+                (0, validation_1.identifier)(input.taskId);
+                (0, validation_1.identifier)(input.contentId);
+                (0, validation_1.identifier)(input.mutationId);
+                (0, validation_1.requireValue)(isInteger(input.baseVersion) && input.baseVersion >= 0 && isInteger(input.planRevision) && input.planRevision >= 0, 'INVALID', '计划版本无效');
+                const receiptId = (0, validation_1.hash)(`${uid}:${input.mutationId}`);
+                const fingerprint = (0, validation_1.hash)(JSON.stringify([action, family.id, date, input.taskId, input.contentId, input.baseVersion, input.planRevision, targetDate]));
+                const receipt = await tx.get('receipts', receiptId);
+                if (receipt) {
+                    (0, validation_1.requireValue)(receipt.fingerprint === fingerprint && 'planning' in receipt, 'INVALID', '操作编号已用于其他请求');
+                    return reply(action, { ...receipt.planning, duplicate: true });
+                }
+                const id = dayKey(family.id, date);
+                const source = (await tx.get('days', id)) || { familyId: family.id, date, tasks: [] };
+                (0, validation_1.requireValue)((source.planRevision || 0) === input.planRevision, 'CONFLICT', '家人已调整这天的计划，请刷新后再操作');
+                // Reconstruct the same preview without creating or changing any learning records.
+                const ledgers = {};
+                for (const child of family.children)
+                    ledgers[child.id] = await readLedger(child.id);
+                const current = (await tx.get('days', dayKey(family.id, today))) || { familyId: family.id, date: today, tasks: [] };
+                learning.generateDay(family, current, ledgers);
+                const preview = learning.generateDay(family, clone(source), clone(ledgers), true);
+                const task = preview.tasks.find((item) => item.id === input.taskId && item.contentId === input.contentId);
+                (0, validation_1.requireValue)(task && task.version === input.baseVersion, 'CONFLICT', '任务已变化，请刷新明日计划后再操作');
+                (0, validation_1.requireValue)(!task.done, 'COMPLETED', '已完成的学习记录不能删除或改期');
+                let merged = false;
+                if (targetDate) {
+                    const repeatAllowed = learning.allowsRepeat(family, task);
+                    (0, validation_1.requireValue)(repeatAllowed || !learning.wasLearned(ledgers[task.childId], task), 'ALREADY_LEARNED', '已学过这项内容，请从回顾中安排复习');
+                    const targetId = dayKey(family.id, targetDate);
+                    const target = (await tx.get('days', targetId)) || { familyId: family.id, date: targetDate, tasks: [] };
+                    const matches = (item) => item.childId === task.childId && learning.planningKey(item) === learning.planningKey(task);
+                    const existing = target.tasks.find(matches);
+                    const projected = learning.generateDay(family, clone(target), clone(ledgers), targetDate > today).tasks.find(matches);
+                    merged = Boolean(existing || projected);
+                    if (!existing) {
+                        if (projected === null || projected === void 0 ? void 0 : projected.id.startsWith('a_'))
+                            learning.omitTask(target, projected);
+                        target.tasks.push({ ...clone(task), id: `r_${task.childId}_${task.contentId}`, mode: task.mode === 'review' ? 'review' : 'manual',
+                            ...(repeatAllowed ? { repeatAllowed: true } : {}),
+                            version: task.version + 1, updatedBy: uid, updatedAt: timestamp });
+                        target.planRevision = (target.planRevision || 0) + 1;
+                        await saveDay(targetId, target);
+                    }
+                    // Moving into today creates an uncompleted task only. No ledger is rewritten by this operation.
+                }
+                learning.omitTask(source, task);
+                await saveDay(id, source);
+                family.scheduledContents = (family.scheduledContents || []).filter((item) => item.date > today
+                    && !(item.childId === task.childId && item.date === date && (item.contentId === task.contentId
+                        || (learning.catalogById.has(item.contentId) && learning.planningKey({ id: item.contentId }) === learning.planningKey(task)))));
+                if (targetDate && targetDate > today && !family.scheduledContents.some((item) => item.childId === task.childId && item.contentId === task.contentId && item.date === targetDate)) {
+                    (0, validation_1.requireValue)(family.scheduledContents.length < 1000, 'LIMIT', '未来安排已达1000项，请在部分完成后再添加');
+                    family.scheduledContents.push({ childId: task.childId, contentId: task.contentId, date: targetDate });
+                }
+                await tx.put('families', family.id, family);
+                const result = { date, ...(targetDate ? { targetDate } : {}), merged };
+                await tx.put('receipts', receiptId, { familyId: family.id, fingerprint, planning: result, createdAt: timestamp });
+                return reply(action, { ...result, duplicate: false });
             }
             if (action === 'setMastery' || action === 'reviewContent' || action === 'assignContent') {
                 childExists(input.childId);
@@ -353,6 +420,8 @@ function createService({ store, media, now = Date.now, randomId = () => crypto.r
                     return reply(action, { mastered: entry.mastered });
                 }
                 const date = action === 'assignContent' ? (0, validation_1.planningDate)(input.date === undefined ? today : input.date, timestamp) : today;
+                const material = action === 'assignContent' ? candidate : entry.item;
+                (0, validation_1.requireValue)(action === 'reviewContent' || !learning.wasLearned(ledger, material), 'ALREADY_LEARNED', '已学过这项内容，请从回顾中安排复习');
                 if (date > today) {
                     const scheduled = (family.scheduledContents || []).filter((item) => item.date > today);
                     if (!scheduled.some((item) => item.childId === input.childId && item.contentId === contentId && item.date === date)) {
@@ -364,11 +433,12 @@ function createService({ store, media, now = Date.now, randomId = () => crypto.r
                 }
                 const id = dayKey(family.id, date);
                 const day = (await tx.get('days', id)) || { familyId: family.id, date, tasks: [] };
-                let task = day.tasks.find((item) => item.childId === input.childId && learning.contentId(item) === contentId);
+                let task = day.tasks.find((item) => item.childId === input.childId && learning.planningKey(item) === learning.planningKey(material));
                 if (!task) {
                     const mode = date > today ? 'manual' : entry ? (entry.completedDates.length ? 'review' : 'manual') : 'new';
                     task = learning.taskFrom(action === 'assignContent' ? candidate : entry.item, input.childId, `r_${input.childId}_${contentId}`, mode);
                     day.tasks.push(task);
+                    day.planRevision = (day.planRevision || 0) + 1;
                     await saveDay(id, day);
                     if (date === today) {
                         learning.recordTasks(ledger, day.tasks.filter((item) => item.childId === input.childId), date);
@@ -386,7 +456,7 @@ function createService({ store, media, now = Date.now, randomId = () => crypto.r
                 const fingerprint = (0, validation_1.hash)(JSON.stringify([family.id, date, input.taskId, input.done, input.baseVersion]));
                 const receipt = await tx.get('receipts', receiptId);
                 if (receipt) {
-                    (0, validation_1.requireValue)(receipt.fingerprint === fingerprint, 'INVALID', '操作编号已用于其他请求');
+                    (0, validation_1.requireValue)(receipt.fingerprint === fingerprint && 'task' in receipt, 'INVALID', '操作编号已用于其他请求');
                     return reply(action, { task: receipt.task, duplicate: true });
                 }
                 const id = dayKey(family.id, date);
