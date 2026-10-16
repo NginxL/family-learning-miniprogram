@@ -29,6 +29,7 @@ export function assertKnowledge(value: unknown): asserts value is KnowledgeItem[
     for (const key of ['aliases', 'bookIds']) requireField(item[key] === undefined || strings(item[key]), `${path}.${key}`);
     requireField(item.subject === undefined || (typeof item.subject === 'string' && ['poetry', 'english', 'reading', 'math', 'other'].includes(item.subject)), `${path}.subject`);
     requireField(item.builtin === undefined || item.builtin === false, `${path}.builtin`);
+    requireField(item.studyArea === undefined || ['literacy', 'pinyin', 'reading'].includes(item.studyArea as string), `${path}.studyArea`);
     requireField(item.studyGrade == null || (typeof item.studyGrade === 'number' && Number.isInteger(item.studyGrade) && item.studyGrade >= 1 && item.studyGrade <= 9), `${path}.studyGrade`);
     if (item.gradeMappings !== undefined) {
       requireField(Array.isArray(item.gradeMappings), `${path}.gradeMappings`);
@@ -41,6 +42,9 @@ export function assertKnowledge(value: unknown): asserts value is KnowledgeItem[
         for (const key of ['sourcePdfPage', 'sourcePrintPage'])
           requireField(mapping[key] === undefined || (typeof mapping[key] === 'number' && Number.isInteger(mapping[key]) && mapping[key] > 0), `${path}.${key}`);
         requireField(mapping.unit === undefined || typeof mapping.unit === 'string', `${path}.unit`);
+        requireField(['上册', '下册'].includes(mapping.semester as string), `${path}.semester`);
+        requireField(mapping.unitId === undefined || (typeof mapping.unitId === 'string' && /^u\d+$/.test(mapping.unitId)), `${path}.unitId`);
+        requireField(mapping.mappingType === undefined || ['textbook_item', 'aligned_practice'].includes(mapping.mappingType as string), `${path}.mappingType`);
       });
     }
   });

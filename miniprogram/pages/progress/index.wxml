@@ -11,8 +11,9 @@
       <view class="notice">{{progress.highestGradeStarted ? '已涉及 ' + highestLabel + ' 的部分教材篇目。' : '尚无已完成且年级已核实的篇目。'}}这表示学习涉及的范围，不代表达到该年级的综合水平。</view>
       <view class="section">上海五四制 · 按年级看积累</view><view class="muted">{{progress.coverageNote}}</view>
       <view wx:for="{{progress.grades}}" wx:key="grade" class="card"><view class="row"><view class="rule-title">{{item.label}}</view><view class="muted">{{item.stage}}</view></view>
-        <view wx:if="{{item.total}}" class="subtitle">已核实 {{item.total}} 项中的：学过 {{item.learned}} · 已掌握 {{item.mastered}}</view><view wx:else class="subtitle">教材年级映射待核对</view>
-        <view class="muted">{{item.total ? '目前仅覆盖部分古诗文，未覆盖整年级知识。' : '暂无可据以计算整年级进度的完整知识清单。'}}</view>
+        <view wx:if="{{item.total}}" class="subtitle">教材内容 {{item.total}} 项中的：学过 {{item.learned}} · 已掌握 {{item.mastered}}</view><view wx:else class="subtitle">教材年级映射待核对</view>
+        <view wx:if="{{item.practice.total}}" class="subtitle">单元原创练习：学过 {{item.practice.learned}} / {{item.practice.total}} · 已掌握 {{item.practice.mastered}}</view>
+        <view class="muted">{{item.total ? '当前只统计已整理的字词、古诗等内容，未覆盖整年级知识。' : '暂无可据以计算整年级进度的完整知识清单。'}}</view>
         <view wx:if="{{item.parentLearned}}" class="subtitle">家长标注：学过 {{item.parentLearned}} · 已掌握 {{item.parentMastered}}</view>
         <button wx:if="{{item.total}}" class="quiet" data-grade="{{item.grade}}" bindtap="browseGrade">查看已核实内容 →</button>
       </view>

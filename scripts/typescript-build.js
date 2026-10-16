@@ -5,6 +5,7 @@ const path = require('node:path');
 const { execFileSync } = require('node:child_process');
 const root = path.resolve(__dirname, '..');
 const { knowledge, resources } = require('./knowledge');
+const lowerPrimary = require('./lower-primary');
 
 // Build and check share one map; checked-in JS is never a second source of truth.
 function artifacts() {
@@ -15,6 +16,8 @@ function artifacts() {
     const items = knowledge();
     assertKnowledge(items);
     const files = new Map();
+    files.set('miniprogram/lib/lower-primary-pinyin.js', '// Generated from the verified lower-primary catalogue. Run npm run build.\nmodule.exports = '
+      + JSON.stringify({ ...lowerPrimary.pinyin(), ...lowerPrimary.data.extraPinyin }) + ';\n');
     for (const [name, value] of [['knowledge-data.json', items], ['resources.json', resources]]) {
       const serialized = JSON.stringify(value);
       for (const folder of ['shared', 'cloudfunctions/familyApi/learning']) files.set(`${folder}/${name}`, serialized + '\n');

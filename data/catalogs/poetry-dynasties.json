@@ -1715,6 +1715,39 @@
       "sources": [
         "https://www.nlc.cn/web/zdxm/bbjd/mobile/dtxx/xmdt/20231127_217361.shtml"
       ]
+    },
+    {
+      "id": "sh54-painted-rooster",
+      "title": "画鸡",
+      "author": "唐寅",
+      "dynasty": "明代",
+      "status": "reviewed",
+      "sources": [
+        "https://keben.app/book/0359"
+      ],
+      "note": "公开教材样本 PDF 第 115 页署名与朝代。"
+    },
+    {
+      "id": "sh54-plum-blossoms",
+      "title": "梅花",
+      "author": "王安石",
+      "dynasty": "宋代",
+      "status": "reviewed",
+      "sources": [
+        "https://keben.app/book/0352"
+      ],
+      "note": "公开教材样本 PDF 第 17 页署名与朝代。"
+    },
+    {
+      "id": "sh54-mountain-temple",
+      "title": "夜宿山寺",
+      "author": "李白",
+      "dynasty": "唐代",
+      "status": "reviewed",
+      "sources": [
+        "https://keben.app/book/0352"
+      ],
+      "note": "公开教材样本 PDF 第 98 页署名与朝代。"
     }
   ]
 }

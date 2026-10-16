@@ -1,5 +1,6 @@
 import * as learning from './learning/learning';
 import { pinyinEntries } from './pinyin-data';
+import lowerPrimaryEntries = require('./lower-primary-pinyin');
 import type { ContentInput, SchoolGrade } from '../../shared/models';
 
 export interface PinyinToken { text: string; pinyin: string; before?: string; after?: string }
@@ -10,7 +11,8 @@ function annotate(text: string, reading: string): PinyinToken[][] | null {
   const syllables = reading.split(/\s+/); let index = 0;
   const lines = text.split('\n').map((line) => {
     const tokens: PinyinToken[] = [];
-    for (const character of line) {
+    // Latin syllables in phonics exercises wrap as whole words, never as separate letters.
+    for (const character of line.match(/[A-Za-z\u00c0-\u024f]+|[^]/gu) || []) {
       const pinyin = han.test(character) ? syllables[index++] : '';
       if (character === '儿' && pinyin === 'r' && tokens.length && tokens[tokens.length - 1].pinyin) {
         tokens[tokens.length - 1].text += character;
@@ -37,7 +39,7 @@ function annotate(text: string, reading: string): PinyinToken[][] | null {
 function pinyinFor(item: ContentInput): PinyinText | null {
   if (!['poetry', 'reading'].includes(learning.kindOf(item))) return null;
   const id = learning.contentId(item);
-  const entry = pinyinEntries[id];
+  const entry = pinyinEntries[id] || lowerPrimaryEntries[id];
   // A same-title custom task or an old snapshot with different text must never inherit these sounds.
   if (!entry || item.title !== entry.title || item.detail !== entry.detail) return null;
   const title = annotate(entry.title, entry.titleReading);

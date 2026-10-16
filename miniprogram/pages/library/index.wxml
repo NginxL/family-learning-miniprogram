@@ -2,22 +2,24 @@
 <view class="page">
   <view class="eyebrow">慢慢读 · 一点点积累</view><view class="title">知识库</view>
   <view class="subtitle">{{poemCount}} 篇 / 组古诗文 · {{wordCount}} 项英语词汇</view>
-  <view class="muted">{{readingCount}} 篇语文短文 · {{englishReadingCount}} 篇英语短文</view>
+  <view class="muted">{{readingCount}} 项语文阅读与练习 · {{englishReadingCount}} 篇英语短文</view>
   <view class="tab-row"><view wx:for="{{children}}" wx:key="id" class="chip {{childId === item.id ? 'active' : ''}}" data-id="{{item.id}}" bindtap="selectChild">{{item.name}}</view></view>
   <view class="segmented"><view class="segment {{view === 'content' ? 'selected' : ''}}" data-id="content" bindtap="changeView">选内容</view><view class="segment {{view === 'exam' ? 'selected' : ''}}" data-id="exam" bindtap="changeView">上海中考</view><view class="segment {{view === 'books' ? 'selected' : ''}}" data-id="books" bindtap="changeView">教材与来源</view></view>
   <block wx:if="{{view === 'content'}}">
     <view class="tab-row subjects"><view wx:for="{{subjectOptions}}" wx:key="id" class="subject-chip {{subjectFilter === item.id ? 'selected' : ''}}" data-id="{{item.id}}" bindtap="selectSubject">{{item.label}}</view></view>
     <input value="{{query}}" maxlength="80" placeholder="搜篇名、朝代、作者或单词" bindinput="typeQuery" />
-    <view class="filter-summary" bindtap="toggleFilters">{{kinds[kindIndex].label}} · {{gradeLabels[grade]}} · {{scopes[scopeIndex].label}} {{filtersOpen ? '↑' : '· 筛选 ↓'}}</view>
+    <view class="filter-summary" bindtap="toggleFilters">{{kinds[kindIndex].label}} · {{gradeLabels[grade]}} · {{semesterLabels[semesterIndex]}} {{filtersOpen ? '↑' : '· 筛选 ↓'}}</view>
     <block wx:if="{{filtersOpen}}">
     <view class="row"><picker class="grow" range="{{kinds}}" range-key="label" value="{{kindIndex}}" bindchange="changeKind"><view class="picker">{{kinds[kindIndex].label}} ▾</view></picker></view>
     <picker range="{{scopes}}" range-key="label" value="{{scopeIndex}}" bindchange="changeScope"><view class="picker">{{scopes[scopeIndex].label}} ▾</view></picker>
     <picker range="{{gradeLabels}}" value="{{grade}}" bindchange="changeGrade"><view class="picker">{{gradeLabels[grade]}} ▾</view></picker>
-    <view wx:if="{{grade}}" class="muted">只列入五四制教材目录已核实的篇目；不是整年级知识清单。</view>
+    <picker range="{{semesterLabels}}" value="{{semesterIndex}}" bindchange="changeSemester"><view class="picker">{{semesterLabels[semesterIndex]}} ▾</view></picker>
+    <view wx:if="{{grade || semesterIndex}}" class="muted">教材字词、古诗与单元原创练习分别标注；尚未覆盖整年级。</view>
     </block>
     <view wx:if="{{bookId}}" class="notice" bindtap="clearBook">{{bookTitle}} · 清除筛选 ×</view>
+    <picker wx:if="{{bookId && bookUnits.length > 1}}" range="{{bookUnits}}" range-key="label" value="{{unitIndex}}" bindchange="changeUnit"><view class="picker">{{bookUnits[unitIndex].label}} ▾</view></picker>
     <view class="row"><view class="section">可选内容 {{total}} 项</view><button class="quiet" bindtap="openPlans">设每日数量 →</button></view>
-    <view class="muted" bindtap="toggleCoverage">国家课标底库 + 部分五四制教材篇目 {{coverageOpen ? '↑' : '· 查看覆盖范围 ↓'}}</view>
+    <view class="muted" bindtap="toggleCoverage">国家课标底库 + 五四制教材关联内容 {{coverageOpen ? '↑' : '· 查看覆盖范围 ↓'}}</view>
     <view wx:if="{{coverageOpen}}" class="notice">{{resources.coverage}}</view>
     <view wx:for="{{items}}" wx:key="id" class="card">
       <view class="row"><view class="pill {{item.subject}}">{{item.kindLabel}}</view><view wx:if="{{item.assigned}}" class="muted">已在今日</view></view>
@@ -27,7 +29,7 @@
       <block wx:if="{{expandedId === item.id}}">
         <button wx:if="{{item.pinyin}}" class="quiet pinyin-toggle" bindtap="togglePinyin">{{showPinyin ? '隐藏拼音' : '显示拼音'}}</button>
         <view class="body"><template is="pinyinText" data="{{enabled: showPinyin, lines: item.pinyin.body, text: item.displayDetail || item.detail}}" /></view><view wx:if="{{item.dynastyNote}}" class="muted">{{item.dynastyNote}}</view><view class="muted">{{item.source}}</view><view wx:if="{{item.note}}" class="muted plan-help">{{item.note}}</view>
-        <view wx:for="{{item.gradeMappings}}" wx:for-item="mapping" wx:key="bookId" class="muted plan-help"><view>{{gradeLabels[mapping.grade]}} {{mapping.semester}} · {{mapping.edition}}</view><view wx:if="{{mapping.sourcePrintPage}}">{{mapping.unit}} · 原书第 {{mapping.sourcePrintPage}} 页 / PDF 第 {{mapping.sourcePdfPage}} 页</view><view>{{mapping.evidence}}</view><button class="quiet" data-url="{{mapping.sourceUrl}}" bindtap="copySource">复制年级依据链接</button></view>
+        <view wx:for="{{item.gradeMappings}}" wx:for-item="mapping" wx:key="displayKey" class="muted plan-help"><view>{{gradeLabels[mapping.grade]}} {{mapping.semester}} · {{mapping.edition}}</view><view wx:if="{{mapping.sourcePrintPage}}">{{mapping.unit}} · 原书第 {{mapping.sourcePrintPage}} 页<text wx:if="{{mapping.sourcePdfPage}}"> / PDF 第 {{mapping.sourcePdfPage}} 页</text></view><view>{{mapping.evidence}}</view><button class="quiet" data-url="{{mapping.sourceUrl}}" bindtap="copySource">复制年级依据链接</button></view>
         <view class="tab-row"><button wx:if="{{item.referenceUrl}}" class="quiet" data-url="{{item.referenceUrl}}" bindtap="copySource">复制目录来源链接</button><button wx:if="{{item.textSourceUrl}}" class="quiet" data-url="{{item.textSourceUrl}}" bindtap="copySource">复制正文 / 词典来源</button></view>
       </block>
       <view class="row" style="margin-top:20rpx"><button class="quiet" data-id="{{item.id}}" bindtap="expandContent">{{expandedId === item.id ? '收起 ↑' : '看看内容 ↓'}}</button><button wx:if="{{family && !isChild}}" class="small secondary" style="margin:0" data-id="{{item.id}}" bindtap="assignItem" disabled="{{busy}}">安排日期</button></view>
@@ -54,7 +56,7 @@
     <view wx:for="{{resources.examFramework.historicalReferences}}" wx:key="id" class="card"><view class="rule-title">{{item.title}}</view><view class="muted plan-help">{{item.note}}</view><button class="quiet" data-url="{{item.url}}" bindtap="copySource">复制历史资料链接</button></view>
   </block>
   <block wx:else>
-    <view class="card"><view class="rule-title">内容覆盖</view><view class="body">{{resources.coverage}}</view><view class="muted">语文：国家课标 75 + 60 篇 / 组，另整理 21 项关联原作或节选。英语：1600 个主词条，其中 505 个二级带星词；另有 77 项数词、月份和星期。核对日期 {{resources.checkedAt}}。</view></view>
+    <view class="card"><view class="rule-title">内容覆盖</view><view class="body">{{resources.coverage}}</view><view class="muted">国家底库：古诗文 75 + 60 篇 / 组；英语 1600 个主词条，其中 505 个二级带星词，另有 77 项另列表。教材补充、原创练习与底库分别计数。核对日期 {{resources.checkedAt}}。</view></view>
     <view class="section">上海五四学制 · 逐册覆盖</view>
     <view class="muted">{{resources.curriculum.target}}</view>
     <picker range="{{curriculumGradeLabels}}" value="{{curriculumGradeIndex}}" bindchange="changeCurriculumGrade"><view class="picker">{{curriculumGradeLabels[curriculumGradeIndex]}} ▾</view></picker>
@@ -68,7 +70,7 @@
       </view>
       <view class="muted">教材名称已核实；学校选用、全册知识及正文校对分别核验。</view>
       <view wx:if="{{item.mappingNote}}" class="muted plan-help">{{item.mappingNote}}</view>
-      <button wx:if="{{item.contentBookId}}" class="quiet" data-id="{{item.contentBookId}}" bindtap="showBook">查看已整理篇目 →</button>
+      <button wx:if="{{item.contentBookId && item.verifiedCount}}" class="quiet" data-id="{{item.contentBookId}}" bindtap="showBook">查看学习内容 →</button>
     </view>
     <view class="section">官方资源</view>
     <view wx:for="{{resources.links}}" wx:key="url" class="card"><view class="rule-title">{{item.title}}</view><view class="muted plan-help">{{item.note}}</view><button class="quiet" data-url="{{item.url}}" bindtap="copySource">复制链接</button></view>

@@ -46,8 +46,8 @@ test('national source inventories retain 75/60 works, 1600 headword groups, 505 
   assert.deepEqual(new Set(Object.keys(meanings.entries)), new Set(english.entries.filter((entry) => entry.level2).map((entry) => entry.word)));
   assert.equal(tables.entries.length, 77);
   assert.deepEqual(tables.entries.reduce((counts, entry) => ({ ...counts, [entry.table]: (counts[entry.table] || 0) + 1 }), {}), { '基数词': 30, '序数词': 28, '月份': 12, '星期': 7 });
-  assert.equal(learning.catalog.filter((item) => item.kind === 'poetry').length, 156);
-  assert.equal(learning.catalog.filter((item) => item.kind === 'word').length, 1677);
+  assert.equal(learning.catalog.filter((item) => item.kind === 'poetry').length, 159);
+  assert.equal(learning.catalog.filter((item) => item.kind === 'word').length, 1703);
 });
 
 test('content identity preserves case and distinct same-title works; default scopes are deliberately limited', () => {
@@ -67,16 +67,17 @@ test('content identity preserves case and distinct same-title works; default sco
 });
 
 test('grade mappings require a named five-four textbook and an observed title; national bands never become individual grades', () => {
-  const mappings = learning.catalog.flatMap((item) => (item.gradeMappings || []).map((mapping) => ({ item, mapping })));
-  assert.equal(mappings.length, 29);
+  const mappings = learning.catalog.filter(item => item.kind === 'poetry').flatMap((item) => (item.gradeMappings || []).map((mapping) => ({ item, mapping })));
+  assert.equal(mappings.length, 43);
   for (const { item, mapping } of mappings) {
     const book = regional.books.find((entry) => entry.id === mapping.bookId);
     assert.ok(book && book.url === mapping.sourceUrl && mapping.outlineDestination);
     assert.ok(book.entries.some((entry) => entry.contentId === item.id && entry.outlineDestination === mapping.outlineDestination));
     assert.equal(mapping.schoolSystem, '5-4'); assert.equal(mapping.status, 'catalogue_verified');
   }
-  assert.equal(learning.searchCatalog({ grade: 2 }).length, 0, 'unverified grades are not invented from national scope');
-  assert.equal(learning.searchCatalog({ grade: 1 }).length, 6);
+  assert.equal(learning.searchCatalog({ grade: 2, semester: '下册' }).length, 0, 'unverified books are not invented from national scope');
+  assert.equal(learning.searchCatalog({ kind: 'poetry', grade: 2 }).length, 7);
+  assert.equal(learning.searchCatalog({ kind: 'poetry', grade: 1 }).length, 13);
   assert.equal(learning.searchCatalog({ grade: 3 }).length, 11);
   assert.equal(learning.searchCatalog({ grade: 6 }).length, 10);
   assert.equal(learning.searchCatalog({ grade: 7 }).length, 2);

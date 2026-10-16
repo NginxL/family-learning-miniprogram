@@ -35,6 +35,8 @@
           "sourcePdfPage": 67,
           "sourcePrintPage": 62,
           "unit": "第五单元·阅读第2课",
+          "unitId": "u5",
+          "mappingType": "textbook_item",
           "sourceKind": "public_sample",
           "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
           "status": "catalogue_verified"
@@ -67,7 +69,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 58,
       "source_pdf_page": 65,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 2,
+          "bookId": "chinese-2a-sample",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "edition": "封面标注审定2024；公开样本未载ISBN及印次",
+          "sourceUrl": "https://keben.app/book/0352",
+          "outlineDestination": "#page=87",
+          "sourcePdfPage": 87,
+          "sourcePrintPage": 82,
+          "unit": "第7单元",
+          "unitId": "u7",
+          "mappingType": "textbook_item",
+          "sourceKind": "public_sample",
+          "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-003"
     },
@@ -93,6 +113,8 @@
           "sourcePdfPage": 21,
           "sourcePrintPage": 16,
           "unit": "第一单元·语文园地一·日积月累",
+          "unitId": "u1",
+          "mappingType": "textbook_item",
           "sourceKind": "public_sample",
           "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
           "status": "catalogue_verified"
@@ -123,6 +145,8 @@
           "sourcePdfPage": 107,
           "sourcePrintPage": 102,
           "unit": "第八单元·语文园地八·日积月累",
+          "unitId": "u8",
+          "mappingType": "textbook_item",
           "sourceKind": "public_sample",
           "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
           "status": "catalogue_verified"
@@ -183,7 +207,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 58,
       "source_pdf_page": 65,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 2,
+          "bookId": "chinese-2a-sample",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "edition": "封面标注审定2024；公开样本未载ISBN及印次",
+          "sourceUrl": "https://keben.app/book/0352",
+          "outlineDestination": "#page=44",
+          "sourcePdfPage": 44,
+          "sourcePrintPage": 39,
+          "unit": "第4单元",
+          "unitId": "u4",
+          "mappingType": "textbook_item",
+          "sourceKind": "public_sample",
+          "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "poem-stork-tower"
     },
@@ -197,7 +239,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 59,
       "source_pdf_page": 66,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 1,
+          "bookId": "chinese-1b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "edition": "封面标注审定2024；公开样本未载ISBN及印次",
+          "sourceUrl": "https://keben.app/book/0359",
+          "outlineDestination": "#page=17",
+          "sourcePdfPage": 17,
+          "sourcePrintPage": 12,
+          "unit": "第1单元",
+          "unitId": "u1",
+          "mappingType": "textbook_item",
+          "sourceKind": "public_sample",
+          "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "poem-spring-morning"
     },
@@ -324,7 +384,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 59,
       "source_pdf_page": 66,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 1,
+          "bookId": "chinese-1b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "edition": "封面标注审定2024；公开样本未载ISBN及印次",
+          "sourceUrl": "https://keben.app/book/0359",
+          "outlineDestination": "#page=44",
+          "sourcePdfPage": 44,
+          "sourcePrintPage": 39,
+          "unit": "第4单元",
+          "unitId": "u4",
+          "mappingType": "textbook_item",
+          "sourceKind": "public_sample",
+          "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "poem-quiet-night"
     },
@@ -352,7 +430,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 59,
       "source_pdf_page": 66,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 2,
+          "bookId": "chinese-2a-sample",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "edition": "封面标注审定2024；公开样本未载ISBN及印次",
+          "sourceUrl": "https://keben.app/book/0352",
+          "outlineDestination": "#page=45",
+          "sourcePdfPage": 45,
+          "sourcePrintPage": 40,
+          "unit": "第4单元",
+          "unitId": "u4",
+          "mappingType": "textbook_item",
+          "sourceKind": "public_sample",
+          "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-019"
     },
@@ -366,7 +462,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 59,
       "source_pdf_page": 66,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 1,
+          "bookId": "chinese-1b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "edition": "封面标注审定2024；公开样本未载ISBN及印次",
+          "sourceUrl": "https://keben.app/book/0359",
+          "outlineDestination": "#page=40",
+          "sourcePdfPage": 40,
+          "sourcePrintPage": 35,
+          "unit": "第3单元",
+          "unitId": "u3",
+          "mappingType": "textbook_item",
+          "sourceKind": "public_sample",
+          "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-020"
     },
@@ -679,7 +793,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 60,
       "source_pdf_page": 67,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 1,
+          "bookId": "chinese-1b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "edition": "封面标注审定2024；公开样本未载ISBN及印次",
+          "sourceUrl": "https://keben.app/book/0359",
+          "outlineDestination": "#page=66",
+          "sourcePdfPage": 66,
+          "sourcePrintPage": 61,
+          "unit": "第6单元",
+          "unitId": "u6",
+          "mappingType": "textbook_item",
+          "sourceKind": "public_sample",
+          "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "poem-pond"
     },
@@ -707,7 +839,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 60,
       "source_pdf_page": 67,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 2,
+          "bookId": "chinese-2a-sample",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "edition": "封面标注审定2024；公开样本未载ISBN及印次",
+          "sourceUrl": "https://keben.app/book/0352",
+          "outlineDestination": "#page=42",
+          "sourcePdfPage": 42,
+          "sourcePrintPage": 37,
+          "unit": "第3单元",
+          "unitId": "u3",
+          "mappingType": "textbook_item",
+          "sourceKind": "public_sample",
+          "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-040"
     },
@@ -733,6 +883,8 @@
           "sourcePdfPage": 63,
           "sourcePrintPage": 58,
           "unit": "第四单元·语文园地四·日积月累",
+          "unitId": "u4",
+          "mappingType": "textbook_item",
           "sourceKind": "public_sample",
           "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
           "status": "catalogue_verified"
@@ -765,7 +917,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 60,
       "source_pdf_page": 67,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 2,
+          "bookId": "chinese-2a-sample",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "edition": "封面标注审定2024；公开样本未载ISBN及印次",
+          "sourceUrl": "https://keben.app/book/0352",
+          "outlineDestination": "#page=86",
+          "sourcePdfPage": 86,
+          "sourcePrintPage": 81,
+          "unit": "第7单元",
+          "unitId": "u7",
+          "mappingType": "textbook_item",
+          "sourceKind": "public_sample",
+          "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "poem-river-snow"
     },
@@ -779,7 +949,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 60,
       "source_pdf_page": 67,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 1,
+          "bookId": "chinese-1b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "edition": "封面标注审定2024；公开样本未载ISBN及印次",
+          "sourceUrl": "https://keben.app/book/0359",
+          "outlineDestination": "#page=28",
+          "sourcePdfPage": 28,
+          "sourcePrintPage": 23,
+          "unit": "第2单元",
+          "unitId": "u2",
+          "mappingType": "textbook_item",
+          "sourceKind": "public_sample",
+          "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "poem-hermit"
     },
@@ -1116,7 +1304,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 60,
       "source_pdf_page": 67,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 1,
+          "bookId": "chinese-1b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "edition": "封面标注审定2024；公开样本未载ISBN及印次",
+          "sourceUrl": "https://keben.app/book/0359",
+          "outlineDestination": "#page=67",
+          "sourcePdfPage": 67,
+          "sourcePrintPage": 62,
+          "unit": "第6单元",
+          "unitId": "u6",
+          "mappingType": "textbook_item",
+          "sourceKind": "public_sample",
+          "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "poem-small-pond"
     },

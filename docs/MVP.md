@@ -9,7 +9,7 @@
 | 家长可保存多个模板，按每天或周一至周五／周末自动使用；旧数量配置继承，修改保留今日任务、单次调整与完成记录 | `src/shared/learning.ts`、`src/cloud/service.ts`、`src/miniprogram/pages/plans/index.ts`、`tests/templates.test.js`、`tests/weekly-templates.test.js`；周末切换、跨月跨年、时区、并发、重试与旧接口兼容测试 | 真机模板输入、选择器及两个微信账号实际编辑 |
 | 家长可删除或改期未来未完成任务，同日去重，新学与普通添加过滤已学内容 | `src/cloud/service.ts`、`src/shared/learning.ts`、`tests/planning-edits.test.js`；自动预览、手动任务、并发修改、重试和完成记录保留测试 | 真机编辑弹层和两个微信账号实际操作 |
 | 知识库支持今日、明日及一年内指定日期；明日预览不生成未来学习记录 | `src/cloud/service.ts`、`src/shared/learning.ts`、`tests/planning-dates.test.js`；同日去重、未来预留、跨午夜及两端读取测试 | 真机日期选择器与多手机实际操作 |
-| 156 项古诗文均有朝代或时代标签；《画》明确保留待考；知识库不再提供数学筛选或内容 | `data/catalogs/poetry-dynasties.json`、`tests/knowledge.test.js`；来源记录与争议说明见[数据说明](../data/catalogs/README.md) | 上海教材逐字校对仍以原核验状态为准 |
+| 159 项古诗文均有朝代或时代标签；《画》明确保留待考；知识库不再提供数学筛选或内容 | `data/catalogs/poetry-dynasties.json`、`tests/knowledge.test.js`；来源记录与争议说明见[数据说明](../data/catalogs/README.md) | 上海教材逐字校对仍以原核验状态为准 |
 | 孩子独立微信绑定档案，提交附件后由家长确认；旧家长接口继续兼容 | `src/cloud/service.ts`、`src/cloud/homework.ts`、`tests/homework.test.js`、`tests/api-contract.test.js`；角色越权、兄弟姐妹隔离、重试和退回重交测试通过 | 两个真实微信账号、录音／拍照原生权限与播放；后台隐私声明 |
 | 微信上下文提供后端身份 | `cloudfunctions/familyApi/index.js`；[官方调用说明](https://docs.cloudbase.net/recipes/add-cloud-function-wechat-miniprogram)；微信云开发控制台已关联目标环境，用户已在真机确认默认档案与「已同步」 | 两个账号真机同步 |
 | 家庭隔离、任务版本控制在服务端执行 | `service.js`、`tests/family.test.js` | 云规则生效、真机验收 |

@@ -60,7 +60,7 @@ test('all WXML event handlers exist; family profile, manual cross-grade work, li
   progress.openExamScope(); library.onShow(); library.cleanup();
   assert.equal(library.data.view, 'exam'); assert.equal(library.data.resources.examFramework.complete, false);
   library.showExamContent({ currentTarget: { dataset: { kind: 'word' } } });
-  assert.equal(library.data.view, 'content'); assert.equal(library.data.total, 1677);
+  assert.equal(library.data.view, 'content'); assert.equal(library.data.total, learning.searchCatalog({ kind: 'word' }).length);
   assert.equal(library.data.grade, 0); assert.equal(library.data.subjectFilter, 'english');
 });
 

@@ -20,6 +20,8 @@ export interface GradeMapping {
   sourcePdfPage?: number;
   sourcePrintPage?: number;
   unit?: string;
+  unitId?: string;
+  mappingType?: 'textbook_item' | 'aligned_practice';
   evidence: string;
   status: 'catalogue_verified';
 }
@@ -38,6 +40,7 @@ export interface Content {
   builtin?: false;
 }
 export interface KnowledgeItem extends Content {
+  studyArea?: 'literacy' | 'pinyin' | 'reading';
   collections: ContentScope[];
   author?: string;
   dynasty?: string;
@@ -177,6 +180,8 @@ export interface CatalogQuery {
   scope?: ContentScope;
   bookId?: string;
   grade?: SchoolGrade;
+  semester?: '上册' | '下册';
+  unitId?: string;
   query?: string;
 }
 export interface KindDefinition { id: ContentKind; subject: Subject; label: string; unit: string; max: number }

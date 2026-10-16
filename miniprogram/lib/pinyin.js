@@ -38,13 +38,15 @@ exports.defaultPinyin = void 0;
 exports.pinyinFor = pinyinFor;
 const learning = __importStar(require("./learning/learning"));
 const pinyin_data_1 = require("./pinyin-data");
+const lowerPrimaryEntries = require("./lower-primary-pinyin");
 const han = /[\u3400-\u9fff]/;
 function annotate(text, reading) {
     const syllables = reading.split(/\s+/);
     let index = 0;
     const lines = text.split('\n').map((line) => {
         const tokens = [];
-        for (const character of line) {
+        // Latin syllables in phonics exercises wrap as whole words, never as separate letters.
+        for (const character of line.match(/[A-Za-z\u00c0-\u024f]+|[^]/gu) || []) {
             const pinyin = han.test(character) ? syllables[index++] : '';
             if (character === '儿' && pinyin === 'r' && tokens.length && tokens[tokens.length - 1].pinyin) {
                 tokens[tokens.length - 1].text += character;
@@ -81,7 +83,7 @@ function pinyinFor(item) {
     if (!['poetry', 'reading'].includes(learning.kindOf(item)))
         return null;
     const id = learning.contentId(item);
-    const entry = pinyin_data_1.pinyinEntries[id];
+    const entry = pinyin_data_1.pinyinEntries[id] || lowerPrimaryEntries[id];
     // A same-title custom task or an old snapshot with different text must never inherit these sounds.
     if (!entry || item.title !== entry.title || item.detail !== entry.detail)
         return null;

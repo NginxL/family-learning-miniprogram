@@ -2,6 +2,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const learning = require('../shared/learning');
 const { pinyinEntries } = require('../miniprogram/lib/pinyin-data');
+const lowerPinyin = require('../miniprogram/lib/lower-primary-pinyin');
 const { pinyinFor, defaultPinyin } = require('../miniprogram/lib/pinyin');
 const { fixture } = require('./helpers');
 const textOf = (lines) => lines.map(line => line.map(token => (token.before || '') + token.text + (token.after || '')).join('')).join('\n');
@@ -13,7 +14,8 @@ function page(name, engine) {
 
 test('reading aids exactly retain source punctuation and line breaks, and cover every verified first/second-grade poem', () => {
   assert.equal(Object.keys(pinyinEntries).length, 21);
-  for (const [id, entry] of Object.entries(pinyinEntries)) {
+  assert.equal(Object.keys(lowerPinyin).length, 55);
+  for (const [id, entry] of Object.entries({ ...pinyinEntries, ...lowerPinyin })) {
     const item = learning.catalogById.get(id); assert.ok(item, id);
     assert.equal(entry.title, item.title); assert.equal(entry.detail, item.detail);
     for (const [text, reading] of [[entry.title, entry.titleReading], [entry.detail, entry.detailReading]]) {
@@ -25,8 +27,8 @@ test('reading aids exactly retain source punctuation and line breaks, and cover 
     assert.equal(textOf(aid.title), item.title);
     assert.equal(textOf(aid.body), item.author && item.detail.startsWith(`${item.author}\n`) ? item.detail.slice(item.author.length + 1) : item.detail);
   }
-  for (const item of learning.catalog.filter(item => item.kind === 'reading' || item.gradeMappings?.some(mapping => mapping.grade <= 2))) assert.ok(pinyinFor(item), item.id);
-  assert.equal(learning.searchCatalog({ grade: 2 }).length, 0, 'reading aids never manufacture unverified textbook grade mappings');
+  for (const item of learning.catalog.filter(item => item.kind === 'reading' || item.kind === 'poetry' && item.gradeMappings?.some(mapping => mapping.grade <= 2))) assert.ok(pinyinFor(item), item.id);
+  assert.equal(learning.searchCatalog({ grade: 2, semester: '下册' }).length, 0, 'unverified books stay empty');
   const poem = id => pinyinFor(learning.catalogById.get(id)).body.flat();
   assert.equal(poem('poem-goose').find(t => t.text === '曲').pinyin, 'qū');
   assert.equal(poem('poem-baidi').find(t => t.text === '还').pinyin, 'huán');
@@ -84,6 +86,7 @@ test('library and study show switchable pinyin for first/second grade with no le
   t.after(() => { delete global.wx; delete global.getApp; delete global.Page; });
   const library = page('library', engine); library.render();
   library.changeKind({ detail: { value: library.data.kinds.findIndex(kind => kind.id === 'reading') } });
+  library.changeScope({ detail: { value: library.data.scopes.findIndex(scope => scope.id === 'starter') } });
   assert.equal(library.data.items.length, 6); assert.equal(library.data.showPinyin, true);
   assert.ok(library.data.items.every(item => item.pinyin && item.gradeLabel === '自编入门练习 · 非教材课文'));
   library.expandContent({ currentTarget: { dataset: { id: 'reading-seed' } } });

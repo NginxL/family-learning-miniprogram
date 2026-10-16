@@ -101,6 +101,8 @@ function scopeOptions(kind) {
         options.push({ id: 'foundation', label: '国家课标 1–6 年级 · 75 篇' }, { id: 'moe-all', label: '国家课标全部 · 135 篇 / 组' }, { id: 'shanghai54', label: '五四教材已整理篇目 · 部分' });
     if (kind === 'word')
         options.push({ id: 'foundation', label: '国家课标二级 · 505 词条' }, { id: 'moe-all', label: '国家课标全部 · 1600 词条' }, { id: 'tables', label: '数词、月份、星期 · 77 项' });
+    if (['word', 'sentence', 'reading', 'english-reading'].includes(kind))
+        options.push({ id: 'shanghai54', label: '上海教材关联 · 已整理部分' });
     options.push({ id: 'all', label: '全部可用内容' });
     return options;
 }
@@ -300,7 +302,9 @@ function searchCatalog(input = {}) {
     return catalog.filter((item) => item.kind !== 'math' && (!input.kind || item.kind === input.kind)
         && (!input.subject || input.subject === 'all' || definition(item.kind).subject === input.subject)
         && (!input.scope || inScope(item, input.scope)) && (!input.bookId || (item.bookIds || []).includes(input.bookId))
-        && (!input.grade || (item.gradeMappings || []).some((mapping) => mapping.grade === input.grade && mapping.schoolSystem === '5-4' && mapping.status === 'catalogue_verified'))
+        && (!(input.grade || input.semester || input.unitId) || (item.gradeMappings || []).some((mapping) => (!input.grade || mapping.grade === input.grade) && (!input.semester || mapping.semester === input.semester)
+            && (!input.bookId || mapping.bookId === input.bookId) && (!input.unitId || mapping.unitId === input.unitId)
+            && mapping.schoolSystem === '5-4' && mapping.status === 'catalogue_verified'))
         && (!query || `${item.title} ${item.author || ''} ${item.dynasty || ''} ${item.detail}`.toLowerCase().includes(query)));
 }
 const gradeLabels = ['未设置', '一年级', '二年级', '三年级', '四年级', '五年级', '六年级（预备）', '七年级', '八年级', '九年级'];
@@ -312,10 +316,12 @@ function progress(ledger) {
     const count = (items) => ({ total: items.length, learned: items.filter((item) => learned(item.id)).length, mastered: items.filter((item) => mastered(item.id)).length });
     const grades = Array.from({ length: 9 }, (_, index) => {
         const grade = (index + 1);
-        const items = catalog.filter((item) => (item.gradeMappings || []).some((mapping) => mapping.grade === grade && mapping.schoolSystem === '5-4' && mapping.status === 'catalogue_verified'));
+        const gradeItems = catalog.filter((item) => (item.gradeMappings || []).some((mapping) => mapping.grade === grade && mapping.schoolSystem === '5-4' && mapping.status === 'catalogue_verified'));
+        const items = gradeItems.filter(item => item.gradeMappings.some(mapping => mapping.grade === grade && mapping.mappingType !== 'aligned_practice'));
+        const practiceItems = gradeItems.filter(item => !items.includes(item));
         const stats = count(items);
         const parentItems = records.filter((entry) => entry.item.studyGrade === grade);
-        return { grade, label: gradeLabels[grade], stage: grade <= 5 ? '小学' : '初中', ...stats,
+        return { grade, label: gradeLabels[grade], stage: grade <= 5 ? '小学' : '初中', ...stats, practice: count(practiceItems),
             parentLearned: parentItems.filter((entry) => entry.completedDates.length).length,
             parentMastered: parentItems.filter((entry) => entry.completedDates.length && entry.mastered).length,
             coverage: items.length ? 'partial' : 'unverified', fullGradeComplete: false };
@@ -332,6 +338,6 @@ function progress(ledger) {
         ],
         grades, highestGradeStarted: Math.max(0, ...grades.filter((grade) => grade.learned > 0).map((grade) => grade.grade)),
         unclassifiedLearned: records.filter((entry) => entry.completedDates.length && !classified.has(entry.item.id)).length,
-        coverageNote: '上海五四制：小学一至五年级，六年级为初中预备年级。仅统计已核对的教材样本或官方目录，学校实际使用版次待确认；未核全年级不计算完成率或推断已学完。'
+        coverageNote: '上海五四制：小学一至五年级，六年级为初中预备年级。教材字词、古诗与单元原创练习分别统计，学校实际使用版次待确认；未核全年级不计算完成率或推断已学完。'
     };
 }

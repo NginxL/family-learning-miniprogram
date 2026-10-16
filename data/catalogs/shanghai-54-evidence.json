@@ -1,5 +1,5 @@
 {
-  "version": "2026-10-12",
+  "version": "2026-10-16",
   "scope": "国家平台五四制部分目录、两册公开教材样本中的古诗文及公版原作。非上海中考完整清单，不证明学校选用版次。",
   "noticeUrl": "https://edu.sh.gov.cn/xxgk2_zdgz_jcjy_04/20260810/339e915d906842caaf98736d562df96a.html",
   "books": [
@@ -287,7 +287,8 @@
           "sourcePrintPage": 16,
           "unit": "第一单元·语文园地一·日积月累",
           "gradeVerification": "catalogue_verified",
-          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认"
+          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认",
+          "unitId": "u1"
         },
         {
           "observedTitle": "画",
@@ -297,7 +298,8 @@
           "sourcePrintPage": 29,
           "unit": "第二单元·语文园地二·日积月累",
           "gradeVerification": "catalogue_verified",
-          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认"
+          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认",
+          "unitId": "u2"
         },
         {
           "observedTitle": "悯农（其二）",
@@ -307,7 +309,8 @@
           "sourcePrintPage": 58,
           "unit": "第四单元·语文园地四·日积月累",
           "gradeVerification": "catalogue_verified",
-          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认"
+          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认",
+          "unitId": "u4"
         },
         {
           "observedTitle": "江南",
@@ -317,7 +320,8 @@
           "sourcePrintPage": 62,
           "unit": "第五单元·阅读第2课",
           "gradeVerification": "catalogue_verified",
-          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认"
+          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认",
+          "unitId": "u5"
         },
         {
           "observedTitle": "古朗月行（节选）",
@@ -327,7 +331,8 @@
           "sourcePrintPage": 82,
           "unit": "第六单元·语文园地六·日积月累",
           "gradeVerification": "catalogue_verified",
-          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认"
+          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认",
+          "unitId": "u6"
         },
         {
           "observedTitle": "风",
@@ -337,7 +342,8 @@
           "sourcePrintPage": 102,
           "unit": "第八单元·语文园地八·日积月累",
           "gradeVerification": "catalogue_verified",
-          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认"
+          "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认",
+          "unitId": "u8"
         }
       ]
     },
@@ -468,6 +474,190 @@
           "unit": "第八单元·第23课",
           "gradeVerification": "catalogue_verified",
           "status": "所核电子样本篇名、年级、位置已核实；学校实际版次待确认"
+        }
+      ]
+    },
+    {
+      "id": "chinese-1b-sample",
+      "title": "语文 · 1年级下册（五四制）",
+      "url": "https://keben.app/book/0359",
+      "publisher": "人民教育出版社",
+      "schoolSystem": "五四学制",
+      "sourceKind": "public_sample",
+      "grade": 1,
+      "semester": "下册",
+      "edition": "封面标注审定2024；公开样本未载ISBN及印次",
+      "checkedAt": "2026-10-16",
+      "verification": "公开样本目录、古诗、识字写字表已核对；现代课文不等于配套原创练习，学校版次待确认。",
+      "entries": [
+        {
+          "observedTitle": "春晓",
+          "contentId": "poem-spring-morning",
+          "outlineDestination": "#page=17",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 12,
+          "sourcePdfPage": 17,
+          "unit": "第1单元",
+          "status": "公开样本古诗核对",
+          "unitId": "u1"
+        },
+        {
+          "observedTitle": "寻隐者不遇",
+          "contentId": "poem-hermit",
+          "outlineDestination": "#page=28",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 23,
+          "sourcePdfPage": 28,
+          "unit": "第2单元",
+          "status": "公开样本古诗核对",
+          "unitId": "u2"
+        },
+        {
+          "observedTitle": "赠汪伦",
+          "contentId": "moe-2022-zh-1-6-020",
+          "outlineDestination": "#page=40",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 35,
+          "sourcePdfPage": 40,
+          "unit": "第3单元",
+          "status": "公开样本古诗核对",
+          "unitId": "u3"
+        },
+        {
+          "observedTitle": "静夜思",
+          "contentId": "poem-quiet-night",
+          "outlineDestination": "#page=44",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 39,
+          "sourcePdfPage": 44,
+          "unit": "第4单元",
+          "status": "公开样本古诗核对",
+          "unitId": "u4"
+        },
+        {
+          "observedTitle": "池上",
+          "contentId": "poem-pond",
+          "outlineDestination": "#page=66",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 61,
+          "sourcePdfPage": 66,
+          "unit": "第6单元",
+          "status": "公开样本古诗核对",
+          "unitId": "u6"
+        },
+        {
+          "observedTitle": "小池",
+          "contentId": "poem-small-pond",
+          "outlineDestination": "#page=67",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 62,
+          "sourcePdfPage": 67,
+          "unit": "第6单元",
+          "status": "公开样本古诗核对",
+          "unitId": "u6"
+        },
+        {
+          "observedTitle": "画鸡",
+          "contentId": "sh54-painted-rooster",
+          "outlineDestination": "#page=115",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 110,
+          "sourcePdfPage": 115,
+          "unit": "第8单元",
+          "status": "公开样本古诗核对",
+          "unitId": "u8"
+        }
+      ]
+    },
+    {
+      "id": "chinese-2a-sample",
+      "title": "语文 · 2年级上册（五四制）",
+      "url": "https://keben.app/book/0352",
+      "publisher": "人民教育出版社",
+      "schoolSystem": "五四学制",
+      "sourceKind": "public_sample",
+      "grade": 2,
+      "semester": "上册",
+      "edition": "封面标注审定2024；公开样本未载ISBN及印次",
+      "checkedAt": "2026-10-16",
+      "verification": "公开样本目录、古诗、识字写字表已核对；现代课文不等于配套原创练习，学校版次待确认。",
+      "entries": [
+        {
+          "observedTitle": "梅花",
+          "contentId": "sh54-plum-blossoms",
+          "outlineDestination": "#page=17",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 12,
+          "sourcePdfPage": 17,
+          "unit": "第1单元",
+          "status": "公开样本古诗核对",
+          "unitId": "u1"
+        },
+        {
+          "observedTitle": "小儿垂钓",
+          "contentId": "moe-2022-zh-1-6-040",
+          "outlineDestination": "#page=42",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 37,
+          "sourcePdfPage": 42,
+          "unit": "第3单元",
+          "status": "公开样本古诗核对",
+          "unitId": "u3"
+        },
+        {
+          "observedTitle": "登鹳雀楼",
+          "contentId": "poem-stork-tower",
+          "outlineDestination": "#page=44",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 39,
+          "sourcePdfPage": 44,
+          "unit": "第4单元",
+          "status": "公开样本古诗核对",
+          "unitId": "u4"
+        },
+        {
+          "observedTitle": "望庐山瀑布",
+          "contentId": "moe-2022-zh-1-6-019",
+          "outlineDestination": "#page=45",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 40,
+          "sourcePdfPage": 45,
+          "unit": "第4单元",
+          "status": "公开样本古诗核对",
+          "unitId": "u4"
+        },
+        {
+          "observedTitle": "江雪",
+          "contentId": "poem-river-snow",
+          "outlineDestination": "#page=86",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 81,
+          "sourcePdfPage": 86,
+          "unit": "第7单元",
+          "status": "公开样本古诗核对",
+          "unitId": "u7"
+        },
+        {
+          "observedTitle": "敕勒歌",
+          "contentId": "moe-2022-zh-1-6-003",
+          "outlineDestination": "#page=87",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 82,
+          "sourcePdfPage": 87,
+          "unit": "第7单元",
+          "status": "公开样本古诗核对",
+          "unitId": "u7"
+        },
+        {
+          "observedTitle": "夜宿山寺",
+          "contentId": "sh54-mountain-temple",
+          "outlineDestination": "#page=98",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 93,
+          "sourcePdfPage": 98,
+          "unit": "第7单元",
+          "status": "公开样本古诗核对",
+          "unitId": "u7"
         }
       ]
     }
@@ -655,6 +845,30 @@
       "original": "群儿戏于庭，一儿登瓮，足跌没水中。众皆弃去，光持石击瓮破之，水迸，儿得活。",
       "sourceUrl": "https://keben.app/book/0357",
       "reviewStatus": "公版原作／节选已对照所核电子样本原页；样本封面审定2024，ISBN、印次与学校实际采用版本待确认"
+    },
+    {
+      "id": "sh54-painted-rooster",
+      "title": "画鸡",
+      "author": "唐寅",
+      "original": "头上红冠不用裁，满身雪白走将来。\n平生不敢轻言语，一叫千门万户开。",
+      "sourceUrl": "https://keben.app/book/0359",
+      "reviewStatus": "五四制公开样本 PDF 第 115 页古代原作已核对；学校版次待确认。"
+    },
+    {
+      "id": "sh54-plum-blossoms",
+      "title": "梅花",
+      "author": "王安石",
+      "original": "墙角数枝梅，凌寒独自开。\n遥知不是雪，为有暗香来。",
+      "sourceUrl": "https://keben.app/book/0352",
+      "reviewStatus": "五四制公开样本 PDF 第 17 页古代原作已核对；学校版次待确认。"
+    },
+    {
+      "id": "sh54-mountain-temple",
+      "title": "夜宿山寺",
+      "author": "李白",
+      "original": "危楼高百尺，手可摘星辰。\n不敢高声语，恐惊天上人。",
+      "sourceUrl": "https://keben.app/book/0352",
+      "reviewStatus": "五四制公开样本 PDF 第 98 页古代原作已核对；学校版次待确认。"
     }
   ]
 }

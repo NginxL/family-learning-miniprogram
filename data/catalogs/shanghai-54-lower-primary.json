@@ -1,0 +1,2628 @@
+{
+  "version": "2026-10-16",
+  "scope": "上海五四制低年级：核实的教材词字、古诗；原创阅读与练习按单元主题关联。单元配套完成不等于教材全部知识或全文覆盖。",
+  "books": [
+    {
+      "id": "chinese-1a-sample",
+      "subject": "chinese",
+      "grade": 1,
+      "semester": "上册",
+      "title": "语文 · 1年级上册（五四制）",
+      "publisher": "人民教育出版社",
+      "edition": "封面标注审定2024；公开样本未载ISBN及印次",
+      "schoolSystem": "5-4",
+      "sourceUrl": "https://keben.app/book/0358",
+      "sourceKind": "public_sample",
+      "checkedAt": "2026-10-16",
+      "schoolAdoption": "pending",
+      "sampleSha256": "f4ecb0e056210b932312f6fd1f335b54f46a6482c23191afab998633e4313987",
+      "cataloguePages": [
+        4,
+        5,
+        6
+      ],
+      "inventory": {
+        "recognitionCount": 280,
+        "writingCount": 100,
+        "recognitionComplete": true,
+        "writingComplete": true,
+        "unitPracticeComplete": true,
+        "fullTextAvailable": false,
+        "fullCoverage": false
+      },
+      "units": [
+        {
+          "id": "u1",
+          "number": 1,
+          "title": "识字与生活",
+          "sourcePrintPage": 8,
+          "sourcePdfPage": 13,
+          "lessons": [
+            "天地人",
+            "金木水火土",
+            "口耳目手足",
+            "日月山川",
+            "语文园地一"
+          ],
+          "recognition": [
+            "天地人你我他",
+            "一二三四五上下",
+            "口耳目手足站坐",
+            "日月山川水火田禾",
+            "六七八九十"
+          ],
+          "writing": [
+            "一二三上",
+            "口耳目手",
+            "日火田禾",
+            "六七八十"
+          ],
+          "recognitionPdfPages": [
+            110
+          ],
+          "writingPdfPages": [
+            113
+          ],
+          "recognitionReading": [
+            "tiān dì rén nǐ wǒ tā",
+            "yī èr sān sì wǔ shàng xià",
+            "kǒu ěr mù shǒu zú zhàn zuò",
+            "rì yuè shān chuān shuǐ huǒ tián hé",
+            "liù qī bā jiǔ shí"
+          ],
+          "recognitionCount": 33,
+          "writingReading": [
+            "yī èr sān shàng",
+            "kǒu ěr mù shǒu",
+            "rì huǒ tián hé",
+            "liù qī bā shí"
+          ],
+          "writingCount": 16,
+          "practice": {
+            "title": "门前的小树",
+            "body": "门前有一棵小树。我站在树下，抬头看天。小鸟飞来，落在树上。我轻轻招手，没有大声叫。",
+            "question": "我站在哪里？小鸟落在哪里？",
+            "answer": "我站在树下，小鸟落在树上。",
+            "skill": "选“上、下”各说一句话。",
+            "origin": "original",
+            "area": "reading",
+            "titleReading": "mén qián de xiǎo shù",
+            "detailReading": "mén qián yǒu yī kē xiǎo shù wǒ zhàn zài shù xià tái tóu kàn tiān xiǎo niǎo fēi lái luò zài shù shàng wǒ qīng qīng zhāo shǒu méi yǒu dà shēng jiào xiǎng yī xiǎng wǒ zhàn zài nǎ lǐ xiǎo niǎo luò zài nǎ lǐ cān kǎo wǒ zhàn zài shù xià xiǎo niǎo luò zài shù shàng liàn yī liàn xuǎn shàng xià gè shuō yī jù huà"
+          }
+        },
+        {
+          "id": "u2",
+          "number": 2,
+          "title": "汉语拼音：单韵母与声母",
+          "sourcePrintPage": 20,
+          "sourcePdfPage": 25,
+          "lessons": [
+            "a o e",
+            "i u ü",
+            "b p m f",
+            "d t n l",
+            "语文园地二"
+          ],
+          "recognition": [
+            "爸妈",
+            "大马路土",
+            "本学校班级姓名王"
+          ],
+          "writing": [
+            "九王"
+          ],
+          "recognitionPdfPages": [
+            110
+          ],
+          "writingPdfPages": [
+            113
+          ],
+          "recognitionReading": [
+            "bà mā",
+            "dà mǎ lù tǔ",
+            "běn xué xiào bān jí xìng míng wáng"
+          ],
+          "recognitionCount": 14,
+          "writingReading": [
+            "jiǔ wáng"
+          ],
+          "writingCount": 2,
+          "practice": {
+            "title": "拼音小站一",
+            "body": "先读单韵母：a o e i u ü。\n再读声母：b p m f d t n l。\n试着拼读：bā bá bǎ bà；mā má mǎ mà。",
+            "question": "“马”在 mǎ、mà 中选哪个？",
+            "answer": "mǎ。声母要轻短，韵母要响亮。",
+            "skill": "读一读：bà ba，mā ma，dà mǎ。",
+            "origin": "original",
+            "area": "pinyin",
+            "titleReading": "pīn yīn xiǎo zhàn yī",
+            "detailReading": "xiān dú dān yùn mǔ zài dú shēng mǔ shì zhe pīn dú xiǎng yī xiǎng mǎ zài zhōng xuǎn nǎ ge cān kǎo shēng mǔ yào qīng duǎn yùn mǔ yào xiǎng liàng liàn yī liàn dú yī dú"
+          }
+        },
+        {
+          "id": "u3",
+          "number": 3,
+          "title": "汉语拼音：继续学习声母",
+          "sourcePrintPage": 32,
+          "sourcePdfPage": 37,
+          "lessons": [
+            "g k h",
+            "j q x",
+            "z c s",
+            "zh ch sh r",
+            "y w",
+            "语文园地三"
+          ],
+          "recognition": [
+            "哥弟画花",
+            "打棋积木",
+            "字词句子",
+            "桌纸读书",
+            "鱼鸭乌鸦",
+            "午星期语文数写会"
+          ],
+          "writing": [
+            "午下"
+          ],
+          "recognitionPdfPages": [
+            110
+          ],
+          "writingPdfPages": [
+            113
+          ],
+          "recognitionReading": [
+            "gē dì huà huā",
+            "dǎ qí jī mù",
+            "zì cí jù zǐ",
+            "zhuō zhǐ dú shū",
+            "yú yā wū yā",
+            "wǔ xīng qī yǔ wén shù xiě huì"
+          ],
+          "recognitionCount": 28,
+          "writingReading": [
+            "wǔ xià"
+          ],
+          "writingCount": 2,
+          "practice": {
+            "title": "拼音小站二",
+            "body": "先读：g k h j q x z c s zh ch sh r y w。\n再拼：gē ge，xī guā，zhī zhū。\n比较：z—zh，c—ch，s—sh。",
+            "question": "“西瓜”的“西”是 xī 还是 shī？",
+            "answer": "xī。两组声母的发音位置不同。",
+            "skill": "慢慢拼读：qì qiú，yǔ yī，wū yā。",
+            "origin": "original",
+            "area": "pinyin",
+            "titleReading": "pīn yīn xiǎo zhàn èr",
+            "detailReading": "xiān dú zài pīn bǐ jiào xiǎng yī xiǎng xī guā de xī shì hái shì cān kǎo liǎng zǔ shēng mǔ de fā yīn wèi zhì bù tóng liàn yī liàn màn màn pīn dú"
+          }
+        },
+        {
+          "id": "u4",
+          "number": 4,
+          "title": "汉语拼音：复韵母与鼻韵母",
+          "sourcePrintPage": 45,
+          "sourcePdfPage": 50,
+          "lessons": [
+            "ai ei ui",
+            "ao ou iu",
+            "ie üe er",
+            "an en in un ün",
+            "ang eng ing ong",
+            "语文园地四"
+          ],
+          "recognition": [
+            "白菜西瓜果",
+            "小桥流柳",
+            "开雪夜色美",
+            "蓝云草原",
+            "冰自行车",
+            "晚昨今明个这去年"
+          ],
+          "writing": [
+            "个去"
+          ],
+          "recognitionPdfPages": [
+            111
+          ],
+          "writingPdfPages": [
+            113
+          ],
+          "recognitionReading": [
+            "bái cài xī guā guǒ",
+            "xiǎo qiáo liú liǔ",
+            "kāi xuě yè sè měi",
+            "lán yún cǎo yuán",
+            "bīng zì xíng chē",
+            "wǎn zuó jīn míng gè zhè qù nián"
+          ],
+          "recognitionCount": 30,
+          "writingReading": [
+            "gè qù"
+          ],
+          "writingCount": 2,
+          "practice": {
+            "title": "拼音小站三",
+            "body": "读一读：ai ei ui；ao ou iu；ie üe er。\n分两组读：an en in un ün；ang eng ing ong。\n拼读：bái cài，liú shuǐ，bái yún。",
+            "question": "“白”是 bái 还是 bǎi？",
+            "answer": "bái。",
+            "skill": "比较读：in—ing，en—eng；再读 jīn、jīng。",
+            "origin": "original",
+            "area": "pinyin",
+            "titleReading": "pīn yīn xiǎo zhàn sān",
+            "detailReading": "dú yī dú fēn liǎng zǔ dú pīn dú xiǎng yī xiǎng bái shì hái shì cān kǎo liàn yī liàn bǐ jiào dú zài dú"
+          }
+        },
+        {
+          "id": "u5",
+          "number": 5,
+          "title": "阅读：四季景色",
+          "sourcePrintPage": 60,
+          "sourcePdfPage": 65,
+          "lessons": [
+            "秋天",
+            "江南",
+            "雪地里的小画家",
+            "四季",
+            "语文园地五"
+          ],
+          "recognition": [
+            "秋气了树叶黄片从来飞",
+            "江南可采莲戏间东北",
+            "的家鸡竹牙用几步没参加",
+            "鸟说是春青蛙夏着皮地就冬",
+            "男女关正反先后内外"
+          ],
+          "writing": [
+            "了子大人",
+            "可叶东西",
+            "竹马牙用几",
+            "四小鸟是天",
+            "女开关先"
+          ],
+          "recognitionPdfPages": [
+            111
+          ],
+          "writingPdfPages": [
+            113
+          ],
+          "recognitionReading": [
+            "qiū qì le shù yè huáng piàn cóng lái fēi",
+            "jiāng nán kě cǎi lián xì jiān dōng běi",
+            "de jiā jī zhú yá yòng jǐ bù méi cān jiā",
+            "niǎo shuō shì chūn qīng wā xià zhe pí de jiù dōng",
+            "nán nǚ guān zhèng fǎn xiān hòu nèi wài"
+          ],
+          "recognitionCount": 51,
+          "writingReading": [
+            "le zǐ dà rén",
+            "kě yè dōng xī",
+            "zhú mǎ yá yòng jǐ",
+            "sì xiǎo niǎo shì tiān",
+            "nǚ kāi guān xiān"
+          ],
+          "writingCount": 22,
+          "practice": {
+            "title": "树叶的颜色",
+            "body": "秋风吹来，树叶慢慢变黄。一片叶子落在草地上。小川捡起叶子，放在画纸旁。他用黄色的笔，画下秋天的树。",
+            "question": "叶子落在哪里？小川用什么颜色画树？",
+            "answer": "草地上；黄色。",
+            "skill": "用“秋天到了，……”说一句话。",
+            "origin": "original",
+            "area": "reading",
+            "titleReading": "shù yè de yán sè",
+            "detailReading": "qiū fēng chuī lái shù yè màn màn biàn huáng yī piàn yè zi luò zài cǎo dì shàng xiǎo chuān jiǎn qǐ yè zi fàng zài huà zhǐ páng tā yòng huáng sè de bǐ huà xià qiū tiān de shù xiǎng yī xiǎng yè zi luò zài nǎ lǐ xiǎo chuān yòng shén me yán sè huà shù cān kǎo cǎo dì shàng huáng sè liàn yī liàn yòng qiū tiān dào le shuō yī jù huà"
+          }
+        },
+        {
+          "id": "u6",
+          "number": 6,
+          "title": "识字：发现汉字",
+          "sourcePrintPage": 73,
+          "sourcePdfPage": 78,
+          "lessons": [
+            "对韵歌",
+            "日月明",
+            "小书包",
+            "升国旗",
+            "语文园地六"
+          ],
+          "recognition": [
+            "对歌雨风虫清绿桃红",
+            "力尖尘众双林森不条心金",
+            "包尺作业笔刀宝贝少课早",
+            "升国旗中们声起多么向立",
+            "老师工厂医院生门卫"
+          ],
+          "writing": [
+            "云雨虫山水",
+            "力男土木心",
+            "尺本刀不少",
+            "中五风立正",
+            "工厂门卫"
+          ],
+          "recognitionPdfPages": [
+            111
+          ],
+          "writingPdfPages": [
+            113
+          ],
+          "recognitionReading": [
+            "duì gē yǔ fēng chóng qīng lǜ táo hóng",
+            "lì jiān chén zhòng shuāng lín sēn bù tiáo xīn jīn",
+            "bāo chǐ zuò yè bǐ dāo bǎo bèi shǎo kè zǎo",
+            "shēng guó qí zhōng men shēng qǐ duō me xiàng lì",
+            "lǎo shī gōng chǎng yī yuàn shēng mén wèi"
+          ],
+          "recognitionCount": 51,
+          "writingReading": [
+            "yún yǔ chóng shān shuǐ",
+            "lì nán tǔ mù xīn",
+            "chǐ běn dāo bù shǎo",
+            "zhōng wǔ fēng lì zhèng",
+            "gōng chǎng mén wèi"
+          ],
+          "writingCount": 24,
+          "practice": {
+            "title": "整理小书包",
+            "body": "上学前，小禾打开书包。她先放书，再放铅笔盒。尺子还在桌上，她也放了进去。书包收好了，她对妈妈说：“我准备好了！”",
+            "question": "小禾最后放进了什么？",
+            "answer": "尺子。",
+            "skill": "按“先……再……”说说你怎样整理书包。",
+            "origin": "original",
+            "area": "reading",
+            "titleReading": "zhěng lǐ xiǎo shū bāo",
+            "detailReading": "shàng xué qián xiǎo hé dǎ kāi shū bāo tā xiān fàng shū zài fàng qiān bǐ hé chǐ zi hái zài zhuō shàng tā yě fàng le jìn qù shū bāo shōu hǎo le tā duì mā ma shuō wǒ zhǔn bèi hǎo le xiǎng yī xiǎng xiǎo hé zuì hòu fàng jìn le shén me cān kǎo chǐ zi liàn yī liàn àn xiān zài shuō shuō nǐ zěn yàng zhěng lǐ shū bāo"
+          }
+        },
+        {
+          "id": "u7",
+          "number": 7,
+          "title": "阅读：观察与表达",
+          "sourcePrintPage": 84,
+          "sourcePdfPage": 89,
+          "lessons": [
+            "小小的船",
+            "影子",
+            "两件宝",
+            "语文园地七"
+          ],
+          "recognition": [
+            "船弯儿两头在里看见闪",
+            "影前常黑狗左右它好朋友",
+            "件有和做也办到又才能",
+            "爷奶叔姐妹"
+          ],
+          "writing": [
+            "月儿头里见",
+            "在我左右",
+            "和也又才",
+            "爸妈"
+          ],
+          "recognitionPdfPages": [
+            112
+          ],
+          "writingPdfPages": [
+            113
+          ],
+          "recognitionReading": [
+            "chuán wān ér liǎng tóu zài lǐ kàn jiàn shǎn",
+            "yǐng qián cháng hēi gǒu zuǒ yòu tā hǎo péng yǒu",
+            "jiàn yǒu hé zuò yě bàn dào yòu cái néng",
+            "yé nǎi shū jiě mèi"
+          ],
+          "recognitionCount": 36,
+          "writingReading": [
+            "yuè ér tóu lǐ jiàn",
+            "zài wǒ zuǒ yòu",
+            "hé yě yòu cái",
+            "bà mā"
+          ],
+          "writingCount": 15,
+          "practice": {
+            "title": "墙上的影子",
+            "body": "傍晚，阳光照进屋里。小安举起手，墙上也出现一只“小手”。他把手张开，影子也张开。他笑着请爸爸一起看。",
+            "question": "墙上的“小手”是什么？",
+            "answer": "小安的手的影子。",
+            "skill": "用“我看见……”说出一种观察。",
+            "origin": "original",
+            "area": "reading",
+            "titleReading": "qiáng shàng de yǐng zi",
+            "detailReading": "bàng wǎn yáng guāng zhào jìn wū lǐ xiǎo ān jǔ qǐ shǒu qiáng shàng yě chū xiàn yī zhī xiǎo shǒu tā bǎ shǒu zhāng kāi yǐng zi yě zhāng kāi tā xiào zhe qǐng bà ba yī qǐ kàn xiǎng yī xiǎng qiáng shàng de xiǎo shǒu shì shén me cān kǎo xiǎo ān de shǒu de yǐng zi liàn yī liàn yòng wǒ kàn jiàn shuō chū yī zhǒng guān chá"
+          }
+        },
+        {
+          "id": "u8",
+          "number": 8,
+          "title": "阅读：动物与办法",
+          "sourcePrintPage": 95,
+          "sourcePdfPage": 100,
+          "lessons": [
+            "比尾巴",
+            "乌鸦喝水",
+            "雨点儿",
+            "语文园地八"
+          ],
+          "recognition": [
+            "比尾巴谁长短把伞兔最公",
+            "喝只处找着许石出法放进高",
+            "点数彩半空问回答方久更长",
+            "牛羊爪元拼音"
+          ],
+          "writing": [
+            "比巴长公",
+            "只多办石出",
+            "来半你有",
+            "牛羊爪白"
+          ],
+          "recognitionPdfPages": [
+            112
+          ],
+          "writingPdfPages": [
+            113
+          ],
+          "recognitionReading": [
+            "bǐ wěi bā shuí cháng duǎn bǎ sǎn tù zuì gōng",
+            "hē zhī chù zhǎo zháo xǔ shí chū fǎ fàng jìn gāo",
+            "diǎn shǔ cǎi bàn kōng wèn huí dá fāng jiǔ gèng zhǎng",
+            "niú yáng zhuǎ yuán pīn yīn"
+          ],
+          "recognitionCount": 41,
+          "writingReading": [
+            "bǐ bā cháng gōng",
+            "zhī duō bàn shí chū",
+            "lái bàn nǐ yǒu",
+            "niú yáng zhuǎ bái"
+          ],
+          "writingCount": 17,
+          "practice": {
+            "title": "球滚到床下了",
+            "body": "小球滚到床下，小宁伸手够不到。他看了看，拿来长尺子，轻轻把球拨出来。妈妈说：“先想办法，再动手，做得好！”",
+            "question": "小宁用什么取出小球？",
+            "answer": "长尺子。",
+            "skill": "把事情按“球滚进去—想办法—取出来”说一遍。",
+            "origin": "original",
+            "area": "reading",
+            "titleReading": "qiú gǔn dào chuáng xià le",
+            "detailReading": "xiǎo qiú gǔn dào chuáng xià xiǎo níng shēn shǒu gòu bù dào tā kàn le kàn ná lái cháng chǐ zi qīng qīng bǎ qiú bō chū lái mā ma shuō xiān xiǎng bàn fǎ zài dòng shǒu zuò de hǎo xiǎng yī xiǎng xiǎo níng yòng shén me qǔ chū xiǎo qiú cān kǎo cháng chǐ zi liàn yī liàn bǎ shì qíng àn qiú gǔn jìn qù xiǎng bàn fǎ qǔ chū lái shuō yī biàn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "chinese-1b-sample",
+      "subject": "chinese",
+      "grade": 1,
+      "semester": "下册",
+      "title": "语文 · 1年级下册（五四制）",
+      "publisher": "人民教育出版社",
+      "edition": "封面标注审定2024；公开样本未载ISBN及印次",
+      "schoolSystem": "5-4",
+      "sourceUrl": "https://keben.app/book/0359",
+      "sourceKind": "public_sample",
+      "checkedAt": "2026-10-16",
+      "schoolAdoption": "pending",
+      "sampleSha256": "679ea50def4d1d039d19863a2137a19d778de5ac96e02998989d1e2464016e0c",
+      "cataloguePages": [
+        4,
+        5,
+        6
+      ],
+      "inventory": {
+        "recognitionCount": 410,
+        "writingCount": 200,
+        "recognitionComplete": true,
+        "writingComplete": true,
+        "unitPracticeComplete": true,
+        "fullTextAvailable": false,
+        "fullCoverage": false
+      },
+      "units": [
+        {
+          "id": "u1",
+          "number": 1,
+          "title": "识字：春天与汉字",
+          "sourcePrintPage": 2,
+          "sourcePdfPage": 7,
+          "lessons": [
+            "春夏秋冬",
+            "姓氏歌",
+            "小青蛙",
+            "猜字谜",
+            "语文园地一"
+          ],
+          "recognition": [
+            "霜吹落降飘游池入",
+            "氏什李张弓古胡吴言孙",
+            "河晴眼睛保护苗吃事情请让",
+            "猜边凉喜欢时怕攻令感动万无",
+            "识组计算减式图形卡合唱团"
+          ],
+          "writing": [
+            "春冬吹花飞入",
+            "什么古胡双言",
+            "青清晴苗请生",
+            "字红动万无明",
+            "文卡片合"
+          ],
+          "recognitionPdfPages": [
+            119
+          ],
+          "writingPdfPages": [
+            122
+          ],
+          "recognitionReading": [
+            "shuāng chuī luò jiàng piāo yóu chí rù",
+            "shì shén lǐ zhāng gōng gǔ hú wú yán sūn",
+            "hé qíng yǎn jīng bǎo hù miáo chī shì qíng qǐng ràng",
+            "cāi biān liáng xǐ huān shí pà gōng lìng gǎn dòng wàn wú",
+            "shí zǔ jì suàn jiǎn shì tú xíng kǎ hé chàng tuán"
+          ],
+          "recognitionCount": 55,
+          "writingReading": [
+            "chūn dōng chuī huā fēi rù",
+            "shén me gǔ hú shuāng yán",
+            "qīng qīng qíng miáo qǐng shēng",
+            "zì hóng dòng wàn wú míng",
+            "wén kǎ piàn hé"
+          ],
+          "writingCount": 28,
+          "practice": {
+            "title": "春天的小路",
+            "body": "春风吹过小路，草地绿了。小雨看见一朵花，还看见两只小鸟。她慢慢走，轻轻看，没有摘花。她把春天画在本子里。",
+            "question": "小雨看见了什么？怎样留下春天的样子？",
+            "answer": "花和小鸟；把看到的景物画下来。",
+            "skill": "读一读“青、清、晴、请”，给它们各组一个词。",
+            "origin": "original",
+            "area": "reading",
+            "titleReading": "chūn tiān de xiǎo lù",
+            "detailReading": "chūn fēng chuī guò xiǎo lù cǎo dì lǜ le xiǎo yǔ kàn jiàn yī duǒ huā hái kàn jiàn liǎng zhī xiǎo niǎo tā màn màn zǒu qīng qīng kàn méi yǒu zhāi huā tā bǎ chūn tiān huà zài běn zi lǐ xiǎng yī xiǎng xiǎo yǔ kàn jiàn le shén me zěn yàng liú xià chūn tiān de yàng zi cān kǎo huā hé xiǎo niǎo bǎ kàn dào de jǐng wù huà xià lái liàn yī liàn dú yī dú qīng qīng qíng qǐng gěi tā men gè zǔ yī gè cí"
+          }
+        },
+        {
+          "id": "u2",
+          "number": 2,
+          "title": "阅读：家乡与愿望",
+          "sourcePrintPage": 16,
+          "sourcePdfPage": 21,
+          "lessons": [
+            "热爱中国共产党",
+            "吃水不忘挖井人",
+            "我多想去看看",
+            "语文园地二"
+          ],
+          "recognition": [
+            "热爱共产党太阳光怀抱幸福成",
+            "井城村毛主席住乡亲战士想念",
+            "告诉走京座安广场非宽丽洁",
+            "认连选圈涂填试练"
+          ],
+          "writing": [
+            "共产党太阳光",
+            "井主江住方后",
+            "告的会北京广",
+            "写认"
+          ],
+          "recognitionPdfPages": [
+            119
+          ],
+          "writingPdfPages": [
+            122
+          ],
+          "recognitionReading": [
+            "rè ài gòng chǎn dǎng tài yáng guāng huái bào xìng fú chéng",
+            "jǐng chéng cūn máo zhǔ xí zhù xiāng qīn zhàn shì xiǎng niàn",
+            "gào sù zǒu jīng zuò ān guǎng chǎng fēi kuān lì jié",
+            "rèn lián xuǎn quān tú tián shì liàn"
+          ],
+          "recognitionCount": 46,
+          "writingReading": [
+            "gòng chǎn dǎng tài yáng guāng",
+            "jǐng zhǔ jiāng zhù fāng hòu",
+            "gào de huì běi jīng guǎng",
+            "xiě rèn"
+          ],
+          "writingCount": 20,
+          "practice": {
+            "title": "给远方的朋友",
+            "body": "小宁想让朋友认识自己的家乡。他画了一条小河，又画了一座小桥。他在画旁写：“这是我每天上学经过的地方。欢迎你来看看！”",
+            "question": "小宁怎样介绍家乡？",
+            "answer": "画家乡的小河、小桥，再写一句介绍。",
+            "skill": "说一说“我想去……，因为……”。",
+            "origin": "original",
+            "area": "reading",
+            "titleReading": "gěi yuǎn fāng de péng yǒu",
+            "detailReading": "xiǎo níng xiǎng ràng péng yǒu rèn shi zì jǐ de jiā xiāng tā huà le yī tiáo xiǎo hé yòu huà le yī zuò xiǎo qiáo tā zài huà páng xiě zhè shì wǒ měi tiān shàng xué jīng guò de dì fang huān yíng nǐ lái kàn kàn xiǎng yī xiǎng xiǎo níng zěn yàng jiè shào jiā xiāng cān kǎo huà jiā xiāng de xiǎo hé xiǎo qiáo zài xiě yī jù jiè shào liàn yī liàn shuō yī shuō wǒ xiǎng qù yīn wèi"
+          }
+        },
+        {
+          "id": "u3",
+          "number": 3,
+          "title": "阅读：伙伴与快乐",
+          "sourcePrintPage": 26,
+          "sourcePdfPage": 31,
+          "lessons": [
+            "小公鸡和小鸭子",
+            "树和喜鹊",
+            "怎么都快乐",
+            "语文园地三"
+          ],
+          "recognition": [
+            "玩得急直哭跟忽然听喊快己背",
+            "只很孤单种每都邻居叫招呼乐",
+            "怎独跳绳当还乐得羽球劲轮排",
+            "母页止斤寸丁千全元"
+          ],
+          "writing": [
+            "走河说让自己",
+            "从好们叫他回",
+            "快乐当书画毛",
+            "止斤寸丁千元"
+          ],
+          "recognitionPdfPages": [
+            119,
+            120
+          ],
+          "writingPdfPages": [
+            122,
+            123
+          ],
+          "recognitionReading": [
+            "wán de jí zhí kū gēn hū rán tīng hǎn kuài jǐ bèi",
+            "zhǐ hěn gū dān zhòng měi dōu lín jū jiào zhāo hū lè",
+            "zěn dú tiào shéng dāng hái yuè děi yǔ qiú jìn lún pái",
+            "mǔ yè zhǐ jīn cùn dīng qiān quán yuán"
+          ],
+          "recognitionCount": 48,
+          "writingReading": [
+            "zǒu hé shuō ràng zì jǐ",
+            "cóng hǎo men jiào tā huí",
+            "kuài lè dāng shū huà máo",
+            "zhǐ jīn cùn dīng qiān yuán"
+          ],
+          "writingCount": 24,
+          "practice": {
+            "title": "一起搭小屋",
+            "body": "小雨带来积木，小林带来小车。他们一起搭小屋。屋顶老是倒，小雨扶着，小林把两边搭齐。小屋站稳了，两个人都笑了。",
+            "question": "小屋为什么后来站稳了？",
+            "answer": "两个人分工合作，把两边搭齐了。",
+            "skill": "邀请家人一起玩，把玩法说明白。",
+            "origin": "original",
+            "area": "reading",
+            "titleReading": "yī qǐ dā xiǎo wū",
+            "detailReading": "xiǎo yǔ dài lái jī mù xiǎo lín dài lái xiǎo chē tā men yī qǐ dā xiǎo wū wū dǐng lǎo shì dǎo xiǎo yǔ fú zhe xiǎo lín bǎ liǎng biān dā qí xiǎo wū zhàn wěn le liǎng gè rén dōu xiào le xiǎng yī xiǎng xiǎo wū wèi shén me hòu lái zhàn wěn le cān kǎo liǎng gè rén fēn gōng hé zuò bǎ liǎng biān dā qí le liàn yī liàn yāo qǐng jiā rén yī qǐ wán bǎ wán fǎ shuō míng bai"
+          }
+        },
+        {
+          "id": "u4",
+          "number": 4,
+          "title": "阅读：夜晚与亲情",
+          "sourcePrintPage": 39,
+          "sourcePdfPage": 44,
+          "lessons": [
+            "静夜思",
+            "夜色",
+            "端午粽",
+            "语文园地四"
+          ],
+          "recognition": [
+            "静思床疑举望低故",
+            "胆敢勇讲窗乱拉样笑再睡觉",
+            "端粽节总煮盼米枣甜分鲜肉了",
+            "册支台电视部机衣裤被"
+          ],
+          "writing": [
+            "思床前地故乡",
+            "色把讲样笑再",
+            "节米间分吃肉",
+            "册支电衣"
+          ],
+          "recognitionPdfPages": [
+            120
+          ],
+          "writingPdfPages": [
+            123
+          ],
+          "recognitionReading": [
+            "jìng sī chuáng yí jǔ wàng dī gù",
+            "dǎn gǎn yǒng jiǎng chuāng luàn lā yàng xiào zài shuì jiào",
+            "duān zòng jié zǒng zhǔ pàn mǐ zǎo tián fēn xiān ròu liǎo",
+            "cè zhī tái diàn shì bù jī yī kù bèi"
+          ],
+          "recognitionCount": 43,
+          "writingReading": [
+            "sī chuáng qián dì gù xiāng",
+            "sè bǎ jiǎng yàng xiào zài",
+            "jié mǐ jiān fēn chī ròu",
+            "cè zhī diàn yī"
+          ],
+          "writingCount": 22,
+          "practice": {
+            "title": "夜里的小灯",
+            "body": "夜里，小禾睡不着。窗外的树影轻轻动，她有一点害怕。妈妈陪她看：风吹动树枝，树影就动了。知道原因后，小禾安心地闭上眼睛。",
+            "question": "树影为什么会动？",
+            "answer": "风吹动了树枝。",
+            "skill": "说一说你害怕时可以向谁求助。",
+            "origin": "original",
+            "area": "reading",
+            "titleReading": "yè lǐ de xiǎo dēng",
+            "detailReading": "yè lǐ xiǎo hé shuì bù zháo chuāng wài de shù yǐng qīng qīng dòng tā yǒu yī diǎn hài pà mā ma péi tā kàn fēng chuī dòng shù zhī shù yǐng jiù dòng le zhī dào yuán yīn hòu xiǎo hé ān xīn de bì shàng yǎn jing xiǎng yī xiǎng shù yǐng wèi shén me huì dòng cān kǎo fēng chuī dòng le shù zhī liàn yī liàn shuō yī shuō nǐ hài pà shí kě yǐ xiàng shuí qiú zhù"
+          }
+        },
+        {
+          "id": "u5",
+          "number": 5,
+          "title": "识字：偏旁与积累",
+          "sourcePrintPage": 48,
+          "sourcePdfPage": 53,
+          "lessons": [
+            "动物儿歌",
+            "古对今",
+            "操场上",
+            "人之初",
+            "语文园地五"
+          ],
+          "recognition": [
+            "物捉迷藏造蚂蚁运食粮房结网",
+            "圆严寒酷暑暖晨细朝霞夕杨香",
+            "操拔拍跑踢铃真闹丢沙身体",
+            "之初相近习远教道专幼玉知义",
+            "饭饱茶泡轻穿袍鞭炮"
+          ],
+          "writing": [
+            "物造运欢房网",
+            "对今雪细夕语",
+            "打皮跑足沙包",
+            "近习远学玉义",
+            "饱抱"
+          ],
+          "recognitionPdfPages": [
+            120
+          ],
+          "writingPdfPages": [
+            123
+          ],
+          "recognitionReading": [
+            "wù zhuō mí cáng zào mǎ yǐ yùn shí liáng fáng jié wǎng",
+            "yuán yán hán kù shǔ nuǎn chén xì zhāo xiá xī yáng xiāng",
+            "cāo bá pāi pǎo tī líng zhēn nào diū shā shēn tǐ",
+            "zhī chū xiāng jìn xí yuǎn jiào dào zhuān yòu yù zhī yì",
+            "fàn bǎo chá pào qīng chuān páo biān pào"
+          ],
+          "recognitionCount": 60,
+          "writingReading": [
+            "wù zào yùn huān fáng wǎng",
+            "duì jīn xuě xì xī yǔ",
+            "dǎ pí pǎo zú shā bāo",
+            "jìn xí yuǎn xué yù yì",
+            "bǎo bào"
+          ],
+          "writingCount": 26,
+          "practice": {
+            "title": "操场边的发现",
+            "body": "小川在操场上拍球，小雨在旁边跳绳。休息时，他们发现“拍”和“打”都有提手旁，“跑”和“跳”都有足字旁。汉字里也藏着小线索。",
+            "question": "哪两个字都有足字旁？",
+            "answer": "跑、跳。",
+            "skill": "用动作演示“拍、打、跑、跳”，再读出字。",
+            "origin": "original",
+            "area": "reading",
+            "titleReading": "cāo chǎng biān de fā xiàn",
+            "detailReading": "xiǎo chuān zài cāo chǎng shàng pāi qiú xiǎo yǔ zài páng biān tiào shéng xiū xī shí tā men fā xiàn pāi hé dǎ dōu yǒu tí shǒu páng pǎo hé tiào dōu yǒu zú zì páng hàn zì lǐ yě cáng zhe xiǎo xiàn suǒ xiǎng yī xiǎng nǎ liǎng gè zì dōu yǒu zú zì páng cān kǎo pǎo tiào liàn yī liàn yòng dòng zuò yǎn shì pāi dǎ pǎo tiào zài dú chū zì"
+          }
+        },
+        {
+          "id": "u6",
+          "number": 6,
+          "title": "阅读：夏天的发现",
+          "sourcePrintPage": 61,
+          "sourcePdfPage": 66,
+          "lessons": [
+            "古诗二首：池上、小池",
+            "浪花",
+            "荷叶圆圆",
+            "要下雨了",
+            "语文园地六"
+          ],
+          "recognition": [
+            "诗首偷浮萍泉惜照柔荷露角",
+            "浪迈悄泪次给壳虾装像淘娃",
+            "珠摇篮亮晶停坪展透翅膀朵",
+            "要腰阴沉呀忙呢吗面空闷吧消息",
+            "棍豆汤蚊扇椅牵织斗"
+          ],
+          "writing": [
+            "首池采尖角早",
+            "玩眼泪它贝气",
+            "机台唱伞朵美",
+            "这看鱼面问加",
+            "豆斗"
+          ],
+          "recognitionPdfPages": [
+            120,
+            121
+          ],
+          "writingPdfPages": [
+            123,
+            124
+          ],
+          "recognitionReading": [
+            "shī shǒu tōu fú píng quán xī zhào róu hé lù jiǎo",
+            "làng mài qiāo lèi cì gěi ké xiā zhuāng xiàng táo wá",
+            "zhū yáo lán liàng jīng tíng píng zhǎn tòu chì bǎng duǒ",
+            "yào yāo yīn chén ya máng ne ma miàn kòng mēn ba xiāo xī",
+            "gùn dòu tāng wén shàn yǐ qiān zhī dǒu"
+          ],
+          "recognitionCount": 59,
+          "writingReading": [
+            "shǒu chí cǎi jiān jiǎo zǎo",
+            "wán yǎn lèi tā bèi qì",
+            "jī tái chàng sǎn duǒ měi",
+            "zhè kàn yú miàn wèn jiā",
+            "dòu dǒu"
+          ],
+          "writingCount": 26,
+          "practice": {
+            "title": "荷叶上的小水珠",
+            "body": "雨停了，荷叶上有几颗小水珠。风轻轻吹，水珠滚来滚去，像圆圆的小珠子。一只蜻蜓飞来，又飞向池边。小宁站在岸上看，没有伸手去抓。",
+            "question": "小水珠像什么？",
+            "answer": "圆圆的小珠子。",
+            "skill": "用“圆圆的……”说一种你见过的东西。",
+            "origin": "original",
+            "area": "reading",
+            "titleReading": "hé yè shàng de xiǎo shuǐ zhū",
+            "detailReading": "yǔ tíng le hé yè shàng yǒu jǐ kē xiǎo shuǐ zhū fēng qīng qīng chuī shuǐ zhū gǔn lái gǔn qù xiàng yuán yuán de xiǎo zhū zi yī zhī qīng tíng fēi lái yòu fēi xiàng chí biān xiǎo níng zhàn zài àn shàng kàn méi yǒu shēn shǒu qù zhuā xiǎng yī xiǎng xiǎo shuǐ zhū xiàng shén me cān kǎo yuán yuán de xiǎo zhū zi liàn yī liàn yòng yuán yuán de shuō yī zhǒng nǐ jiàn guò de dōng xī"
+          }
+        },
+        {
+          "id": "u7",
+          "number": 7,
+          "title": "阅读：习惯与表达",
+          "sourcePrintPage": 78,
+          "sourcePdfPage": 83,
+          "lessons": [
+            "文具的家",
+            "一分钟",
+            "动物王国开大会",
+            "小猴子下山",
+            "语文园地七"
+          ],
+          "recognition": [
+            "具铅新平盒些此仔检查所伙伴",
+            "钟迟背灯等啊决定已经位表",
+            "虎熊通注意遍百为因舌理呀忘第",
+            "猴块结兴掰扛往棵满扔摘捧追",
+            "刷梳巾皂洗澡脸盆"
+          ],
+          "writing": [
+            "笔知道放平安",
+            "灯车站课坐老师",
+            "国都百听时点林",
+            "高兴着往瓜兔进",
+            "巾洗"
+          ],
+          "recognitionPdfPages": [
+            121
+          ],
+          "writingPdfPages": [
+            124
+          ],
+          "recognitionReading": [
+            "jù qiān xīn píng hé xiē cǐ zǐ jiǎn chá suǒ huǒ bàn",
+            "zhōng chí bēi dēng děng a jué dìng yǐ jīng wèi biǎo",
+            "hǔ xióng tōng zhù yì biàn bǎi wèi yīn shé lǐ yā wàng dì",
+            "hóu kuài jiē xìng bāi káng wǎng kē mǎn rēng zhāi pěng zhuī",
+            "shuā shū jīn zào xǐ zǎo liǎn pén"
+          ],
+          "recognitionCount": 60,
+          "writingReading": [
+            "bǐ zhī dào fàng píng ān",
+            "dēng chē zhàn kè zuò lǎo shī",
+            "guó dōu bǎi tīng shí diǎn lín",
+            "gāo xìng zhe wǎng guā tù jìn",
+            "jīn xǐ"
+          ],
+          "writingCount": 29,
+          "practice": {
+            "title": "一张小纸条",
+            "body": "小川怕忘记带水杯，就在书包旁放了一张纸条。第二天，他看见纸条，装好水杯，又检查了书本。走到门口，他说：“今天我没有落下东西！”",
+            "question": "纸条帮小川记住了什么？",
+            "answer": "带水杯。",
+            "skill": "给自己写一个提醒，只写一件事。",
+            "origin": "original",
+            "area": "reading",
+            "titleReading": "yī zhāng xiǎo zhǐ tiáo",
+            "detailReading": "xiǎo chuān pà wàng jì dài shuǐ bēi jiù zài shū bāo páng fàng le yī zhāng zhǐ tiáo dì èr tiān tā kàn jiàn zhǐ tiáo zhuāng hǎo shuǐ bēi yòu jiǎn chá le shū běn zǒu dào mén kǒu tā shuō jīn tiān wǒ méi yǒu là xià dōng xī xiǎng yī xiǎng zhǐ tiáo bāng xiǎo chuān jì zhù le shén me cān kǎo dài shuǐ bēi liàn yī liàn gěi zì jǐ xiě yī gè tí xǐng zhǐ xiě yī jiàn shì"
+          }
+        },
+        {
+          "id": "u8",
+          "number": 8,
+          "title": "阅读：观察与判断",
+          "sourcePrintPage": 98,
+          "sourcePdfPage": 103,
+          "lessons": [
+            "棉花姑娘",
+            "咕咚",
+            "小壁虎借尾巴",
+            "语文园地八"
+          ],
+          "recognition": [
+            "棉姑娘病她治燕帮害别干惊奇",
+            "咕咚熟掉湖吓啦鹿象野拦哪那领",
+            "壁借咬难哪爬您拨赶摆过孩转",
+            "吵现顶胖票户交父"
+          ],
+          "writing": [
+            "她空还干身星久",
+            "吓为怕家象没到",
+            "向边行草赶过找",
+            "页户交父"
+          ],
+          "recognitionPdfPages": [
+            121
+          ],
+          "writingPdfPages": [
+            124
+          ],
+          "recognitionReading": [
+            "mián gū niáng bìng tā zhì yàn bāng hài bié gàn jīng qí",
+            "gū dōng shú diào hú xià la lù xiàng yě lán nǎ nà lǐng",
+            "bì jiè yǎo nán na pá nín bō gǎn bǎi guò hái zhuǎn",
+            "chǎo xiàn dǐng pàng piào hù jiāo fù"
+          ],
+          "recognitionCount": 48,
+          "writingReading": [
+            "tā kōng hái gàn shēn xīng jiǔ",
+            "xià wèi pà jiā xiàng méi dào",
+            "xiàng biān xíng cǎo gǎn guò zhǎo",
+            "yè hù jiāo fù"
+          ],
+          "writingCount": 25,
+          "practice": {
+            "title": "先看清楚",
+            "body": "树下忽然响了一声。小兔以为有大怪物，正想跑，小鹿请它等一等。它们站远一点看，原来是树枝落下，碰到了空桶。小兔松了一口气。",
+            "question": "声音是什么发出来的？",
+            "answer": "树枝碰到空桶。",
+            "skill": "说一说：还没有看清楚时，能不能急着下结论？",
+            "origin": "original",
+            "area": "reading",
+            "titleReading": "xiān kàn qīng chǔ",
+            "detailReading": "shù xià hū rán xiǎng le yī shēng xiǎo tù yǐ wéi yǒu dà guài wù zhèng xiǎng pǎo xiǎo lù qǐng tā děng yī děng tā men zhàn yuǎn yī diǎn kàn yuán lái shì shù zhī luò xià pèng dào le kōng tǒng xiǎo tù sōng le yī kǒu qì xiǎng yī xiǎng shēng yīn shì shén me fā chū lái de cān kǎo shù zhī pèng dào kōng tǒng liàn yī liàn shuō yī shuō hái méi yǒu kàn qīng chǔ shí néng bù néng jí zhe xià jié lùn"
+          }
+        }
+      ],
+      "poems": [
+        {
+          "unit": 1,
+          "sourcePrintPage": 12,
+          "sourcePdfPage": 17,
+          "contentId": "poem-spring-morning",
+          "title": "春晓"
+        },
+        {
+          "unit": 2,
+          "sourcePrintPage": 23,
+          "sourcePdfPage": 28,
+          "contentId": "poem-hermit",
+          "title": "寻隐者不遇"
+        },
+        {
+          "unit": 3,
+          "sourcePrintPage": 35,
+          "sourcePdfPage": 40,
+          "contentId": "moe-2022-zh-1-6-020",
+          "title": "赠汪伦"
+        },
+        {
+          "unit": 4,
+          "sourcePrintPage": 39,
+          "sourcePdfPage": 44,
+          "contentId": "poem-quiet-night",
+          "title": "静夜思"
+        },
+        {
+          "unit": 6,
+          "sourcePrintPage": 61,
+          "sourcePdfPage": 66,
+          "contentId": "poem-pond",
+          "title": "池上"
+        },
+        {
+          "unit": 6,
+          "sourcePrintPage": 62,
+          "sourcePdfPage": 67,
+          "contentId": "poem-small-pond",
+          "title": "小池"
+        },
+        {
+          "unit": 8,
+          "sourcePrintPage": 110,
+          "sourcePdfPage": 115,
+          "contentId": "sh54-painted-rooster",
+          "title": "画鸡"
+        }
+      ]
+    },
+    {
+      "id": "chinese-2a-sample",
+      "subject": "chinese",
+      "grade": 2,
+      "semester": "上册",
+      "title": "语文 · 2年级上册（五四制）",
+      "publisher": "人民教育出版社",
+      "edition": "封面标注审定2024；公开样本未载ISBN及印次",
+      "schoolSystem": "5-4",
+      "sourceUrl": "https://keben.app/book/0352",
+      "sourceKind": "public_sample",
+      "checkedAt": "2026-10-16",
+      "schoolAdoption": "pending",
+      "sampleSha256": "83227deb5d49d71fd0fa6835b27ed88e8f4f44b62fa2076ce619529f65b0ef5a",
+      "cataloguePages": [
+        4,
+        5
+      ],
+      "inventory": {
+        "recognitionCount": 460,
+        "writingCount": 250,
+        "recognitionComplete": true,
+        "writingComplete": true,
+        "unitPracticeComplete": true,
+        "fullTextAvailable": false,
+        "fullCoverage": false
+      },
+      "units": [
+        {
+          "id": "u1",
+          "number": 1,
+          "title": "阅读：自然中的变化",
+          "sourcePrintPage": 1,
+          "sourcePdfPage": 6,
+          "lessons": [
+            "小蝌蚪找妈妈",
+            "我是什么",
+            "植物妈妈有办法",
+            "语文园地一"
+          ],
+          "recognition": [
+            "蝌蚪脑袋灰甩活腿教迎嘴龟披蹲肚鼓",
+            "汽越温滴奔海洋发坏没庄稼屋带灾种管",
+            "植如脚旅准备送纷挂挺钻底炸离粗得",
+            "朗雾暴雷阵冻夹"
+          ],
+          "writing": [
+            "两条哪宽那短孩成",
+            "升连起海洋许作办法",
+            "如已经别轻发胆肚更识",
+            "转夹"
+          ],
+          "recognitionPdfPages": [
+            113
+          ],
+          "writingPdfPages": [
+            118
+          ],
+          "recognitionReading": [
+            "kē dǒu nǎo dài huī shuǎi huó tuǐ jiāo yíng zuǐ guī pī dūn dù gǔ",
+            "qì yuè wēn dī bēn hǎi yáng fā huài mò zhuāng jià wū dài zāi zhǒng guǎn",
+            "zhí rú jiǎo lǚ zhǔn bèi sòng fēn guà tǐng zuān dǐ zhà lí cū dé",
+            "lǎng wù bào léi zhèn dòng jiā"
+          ],
+          "recognitionCount": 56,
+          "writingReading": [
+            "liǎng tiáo nǎ kuān nà duǎn hái chéng",
+            "shēng lián qǐ hǎi yáng xǔ zuò bàn fǎ",
+            "rú yǐ jīng bié qīng fā dǎn dù gèng shí",
+            "zhuǎn jiā"
+          ],
+          "writingCount": 29,
+          "practice": {
+            "title": "杯壁上的水珠",
+            "body": "小宁把一杯冷水放在桌上。不久，杯子外面出现了小水珠。他先擦干杯壁，再过一会儿看，又有水珠了。爸爸说：“我们把看到的现象记下来，再找原因。”",
+            "question": "小宁怎样观察水珠？",
+            "answer": "先擦干杯壁，过一会儿再看，并记录现象。",
+            "skill": "用“先……再……”说明一次观察，不把猜想当事实。",
+            "origin": "original",
+            "area": "reading",
+            "titleReading": "bēi bì shàng de shuǐ zhū",
+            "detailReading": "xiǎo níng bǎ yī bēi lěng shuǐ fàng zài zhuō shàng bù jiǔ bēi zi wài miàn chū xiàn le xiǎo shuǐ zhū tā xiān cā gān bēi bì zài guò yī huì er kàn yòu yǒu shuǐ zhū le bà ba shuō wǒ men bǎ kàn dào de xiàn xiàng jì xià lái zài zhǎo yuán yīn xiǎng yī xiǎng xiǎo níng zěn yàng guān chá shuǐ zhū cān kǎo xiān cā gān bēi bì guò yī huì er zài kàn bìng jì lù xiàn xiàng liàn yī liàn yòng xiān zài shuō míng yī cì guān chá bù bǎ cāi xiǎng dāng shì shí"
+          }
+        },
+        {
+          "id": "u2",
+          "number": 2,
+          "title": "识字：自然与生活",
+          "sourcePrintPage": 16,
+          "sourcePdfPage": 21,
+          "lessons": [
+            "场景歌",
+            "树之歌",
+            "拍手歌",
+            "田家四季歌",
+            "语文园地二"
+          ],
+          "recognition": [
+            "帆港湾塘稻行垂园溪丛翠群队铜号",
+            "榕壮梧桐掌枫松柏桦守银杏杉化桂",
+            "世界孔雀锦雄鹰翔雁深猛灵休猫",
+            "季蝴蝶麦嫩肥农勤归戴场谷虽辛苦制",
+            "丑恨诚虚假漠助贫富饥"
+          ],
+          "writing": [
+            "处块座园群队领",
+            "树之杨松柏化金桂",
+            "拍世界彩丛休朋友保护",
+            "季肥农事谷体虽辛苦初",
+            "丑诚"
+          ],
+          "recognitionPdfPages": [
+            113,
+            114
+          ],
+          "writingPdfPages": [
+            118
+          ],
+          "recognitionReading": [
+            "fān gǎng wān táng dào háng chuí yuán xī cóng cuì qún duì tóng hào",
+            "róng zhuàng wú tóng zhǎng fēng sōng bǎi huà shǒu yín xìng shān huà guì",
+            "shì jiè kǒng què jǐn xióng yīng xiáng yàn shēn měng líng xiū māo",
+            "jì hú dié mài nèn féi nóng qín guī dài cháng gǔ suī xīn kǔ zhì",
+            "chǒu hèn chéng xū jiǎ mò zhù pín fù jī"
+          ],
+          "recognitionCount": 70,
+          "writingReading": [
+            "chù kuài zuò yuán qún duì lǐng",
+            "shù zhī yáng sōng bǎi huà jīn guì",
+            "pāi shì jiè cǎi cóng xiū péng yǒu bǎo hù",
+            "jì féi nóng shì gǔ tǐ suī xīn kǔ chū",
+            "chǒu chéng"
+          ],
+          "writingCount": 37,
+          "practice": {
+            "title": "小树观察本",
+            "body": "公园里有两棵树，一棵叶子细细长长，一棵叶子像小扇子。小禾画下叶子的样子，再请大人一起查树名。她没有只凭树的高矮判断。",
+            "question": "小禾记录了叶子的什么特点？",
+            "answer": "叶子的形状。",
+            "skill": "选一片落叶，用颜色、形状两个方面描述。",
+            "origin": "original",
+            "area": "reading",
+            "titleReading": "xiǎo shù guān chá běn",
+            "detailReading": "gōng yuán lǐ yǒu liǎng kē shù yī kē yè zi xì xì cháng cháng yī kē yè zi xiàng xiǎo shàn zi xiǎo hé huà xià yè zi de yàng zi zài qǐng dà rén yī qǐ chá shù míng tā méi yǒu zhǐ píng shù de gāo ǎi pàn duàn xiǎng yī xiǎng xiǎo hé jì lù le yè zi de shén me tè diǎn cān kǎo yè zi de xíng zhuàng liàn yī liàn xuǎn yī piàn luò yè yòng yán sè xíng zhuàng liǎng gè fāng miàn miáo shù"
+          }
+        },
+        {
+          "id": "u3",
+          "number": 3,
+          "title": "阅读：想象与观察",
+          "sourcePrintPage": 28,
+          "sourcePdfPage": 33,
+          "lessons": [
+            "彩虹",
+            "去外婆家",
+            "数星星的孩子",
+            "语文园地三"
+          ],
+          "recognition": [
+            "虹浇壶提洒挑镜拿系荡裙",
+            "婆候趣舅或留份喂逃曲者服扑鼻",
+            "珍撒碧靠仰颗距变祖勺绕转楚汉刻研",
+            "弹钢琴捏泥围滚铁环滑梯"
+          ],
+          "writing": [
+            "丽提吗圆哥秋挂啊",
+            "宝活些总给诉曲名香",
+            "数晚奶您爷很变勺张汉",
+            "图泥铁环"
+          ],
+          "recognitionPdfPages": [
+            114
+          ],
+          "writingPdfPages": [
+            118,
+            119
+          ],
+          "recognitionReading": [
+            "hóng jiāo hú tí sǎ tiāo jìng ná jì dàng qún",
+            "pó hòu qù jiù huò liú fèn wèi táo qǔ zhě fú pū bí",
+            "zhēn sǎ bì kào yǎng kē jù biàn zǔ sháo rào zhuàn chǔ hàn kè yán",
+            "tán gāng qín niē ní wéi gǔn tiě huán huá tī"
+          ],
+          "recognitionCount": 52,
+          "writingReading": [
+            "lì tí ma yuán gē qiū guà a",
+            "bǎo huó xiē zǒng gěi sù qǔ míng xiāng",
+            "shǔ wǎn nǎi nín yé hěn biàn sháo zhāng hàn",
+            "tú ní tiě huán"
+          ],
+          "writingCount": 31,
+          "practice": {
+            "title": "我的小望远镜",
+            "body": "小雨把两个纸筒并排粘好，做成一个“小望远镜”。她站在窗边，看见楼下的花坛。她知道纸筒不会让东西变近，却可以帮她专心观察一个地方。",
+            "question": "纸筒真的让东西变近了吗？",
+            "answer": "没有；它帮助小雨集中观察。",
+            "skill": "介绍一件手工作品，说清材料和制作顺序。",
+            "origin": "original",
+            "area": "reading",
+            "titleReading": "wǒ de xiǎo wàng yuǎn jìng",
+            "detailReading": "xiǎo yǔ bǎ liǎng gè zhǐ tǒng bìng pái zhān hǎo zuò chéng yī gè xiǎo wàng yuǎn jìng tā zhàn zài chuāng biān kàn jiàn lóu xià de huā tán tā zhī dào zhǐ tǒng bù huì ràng dōng xī biàn jìn què kě yǐ bāng tā zhuān xīn guān chá yī gè dì fang xiǎng yī xiǎng zhǐ tǒng zhēn de ràng dōng xī biàn jìn le ma cān kǎo méi yǒu tā bāng zhù xiǎo yǔ jí zhōng guān chá liàn yī liàn jiè shào yī jiàn shǒu gōng zuò pǐn shuō qīng cái liào hé zhì zuò shùn xù"
+          }
+        },
+        {
+          "id": "u4",
+          "number": 4,
+          "title": "阅读：山水风光",
+          "sourcePrintPage": 39,
+          "sourcePdfPage": 44,
+          "lessons": [
+            "古诗二首：登鹳雀楼、望庐山瀑布",
+            "黄山奇石",
+            "日月潭",
+            "葡萄沟",
+            "语文园地四"
+          ],
+          "recognition": [
+            "登唐依尽欲穷层瀑布炉紫烟遥",
+            "闻景区省秀神仙盘指巨伸都著抢状岩",
+            "潭茂盛胜央岛隐约倒映整童吸引客",
+            "葡萄沟坡密枝淡好族够收市干钉分颜味",
+            "订效丰昌付卧铺改签退更维码"
+          ],
+          "writing": [
+            "依尽穷层照炉烟川直银",
+            "仙顶巨位闪狗形状",
+            "湖区胜岛弯现就外",
+            "份枝客城市孔钉味",
+            "号丰"
+          ],
+          "recognitionPdfPages": [
+            114,
+            115
+          ],
+          "writingPdfPages": [
+            119
+          ],
+          "recognitionReading": [
+            "dēng táng yī jìn yù qióng céng pù bù lú zǐ yān yáo",
+            "wén jǐng qū shěng xiù shén xiān pán zhǐ jù shēn dū zhù qiǎng zhuàng yán",
+            "tán mào shèng shèng yāng dǎo yǐn yuē dào yìng zhěng tóng xī yǐn kè",
+            "pú táo gōu pō mì zhī dàn hào zú gòu shōu shì gān dìng fèn yán wèi",
+            "dìng xiào fēng chāng fù wò pù gǎi qiān tuì gēng wéi mǎ"
+          ],
+          "recognitionCount": 74,
+          "writingReading": [
+            "yī jìn qióng céng zhào lú yān chuān zhí yín",
+            "xiān dǐng jù wèi shǎn gǒu xíng zhuàng",
+            "hú qū shèng dǎo wān xiàn jiù wài",
+            "fèn zhī kè chéng shì kǒng dìng wèi",
+            "hào fēng"
+          ],
+          "writingCount": 36,
+          "practice": {
+            "title": "湖边的一天",
+            "body": "清晨，湖面平平的，像一面大镜子。中午，风吹起小波纹，岸边的树影晃动起来。傍晚，夕阳把湖面染成金色。同一片湖，一天里有不同的样子。",
+            "question": "短文按什么顺序写湖面？",
+            "answer": "清晨、中午、傍晚的时间顺序。",
+            "skill": "用“像……”描述一处景物，并说出相似的地方。",
+            "origin": "original",
+            "area": "reading",
+            "titleReading": "hú biān de yī tiān",
+            "detailReading": "qīng chén hú miàn píng píng de xiàng yī miàn dà jìng zi zhōng wǔ fēng chuī qǐ xiǎo bō wén àn biān de shù yǐng huàng dòng qǐ lái bàng wǎn xī yáng bǎ hú miàn rǎn chéng jīn sè tóng yī piàn hú yī tiān lǐ yǒu bù tóng de yàng zi xiǎng yī xiǎng duǎn wén àn shén me shùn xù xiě hú miàn cān kǎo qīng chén zhōng wǔ bàng wǎn de shí jiān shùn xù liàn yī liàn yòng xiàng miáo shù yī chù jǐng wù bìng shuō chū xiāng sì de dì fang"
+          }
+        },
+        {
+          "id": "u5",
+          "number": 5,
+          "title": "阅读：故事里的道理",
+          "sourcePrintPage": 54,
+          "sourcePdfPage": 59,
+          "lessons": [
+            "坐井观天",
+            "寒号鸟",
+            "我要的是葫芦",
+            "语文园地五"
+          ],
+          "recognition": [
+            "观沿渴话弄错际抬信",
+            "号当鹊寻枯却劝刮死将且狂冷重复哀唤",
+            "葫芦谢以盯赛怪慢",
+            "轿救摩托防渔货科考察"
+          ],
+          "writing": [
+            "观呀答话抬能信",
+            "阵做冻第像冷冰亮",
+            "种棵以次想邻居吧奇怪",
+            "货科"
+          ],
+          "recognitionPdfPages": [
+            115
+          ],
+          "writingPdfPages": [
+            119
+          ],
+          "recognitionReading": [
+            "guān yán kě huà nòng cuò jì tái xìn",
+            "háo dàng què xún kū què quàn guā sǐ jiāng qiě kuáng lěng chóng fù āi huàn",
+            "hú lú xiè yǐ dīng sài guài màn",
+            "jiào jiù mó tuō fáng yú huò kē kǎo chá"
+          ],
+          "recognitionCount": 44,
+          "writingReading": [
+            "guān ya dá huà tái néng xìn",
+            "zhèn zuò dòng dì xiàng lěng bīng liàng",
+            "zhòng kē yǐ cì xiǎng lín jū ba qí guài",
+            "huò kē"
+          ],
+          "writingCount": 27,
+          "practice": {
+            "title": "小芽的提醒",
+            "body": "小熊只盼着花开，不愿每天看花盆。小兔提醒它，泥土太干了。小熊说：“等开花了再浇水吧。”过了几天，叶子低下了头。小熊赶快请教怎样照顾花。",
+            "question": "小熊只注意了什么，忽略了什么？",
+            "answer": "只盼花开，忽略了浇水和观察。",
+            "skill": "如果你是小兔，怎样有礼貌地劝说它？",
+            "origin": "original",
+            "area": "reading",
+            "titleReading": "xiǎo yá de tí xǐng",
+            "detailReading": "xiǎo xióng zhǐ pàn zhe huā kāi bù yuàn měi tiān kàn huā pén xiǎo tù tí xǐng tā ní tǔ tài gān le xiǎo xióng shuō děng kāi huā le zài jiāo shuǐ ba guò le jǐ tiān yè zi dī xià le tóu xiǎo xióng gǎn kuài qǐng jiào zěn yàng zhào gù huā xiǎng yī xiǎng xiǎo xióng zhǐ zhù yì le shén me hū lüè le shén me cān kǎo zhǐ pàn huā kāi hū lüè le jiāo shuǐ hé guān chá liàn yī liàn rú guǒ nǐ shì xiǎo tù zěn yàng yǒu lǐ mào de quàn shuō tā"
+          }
+        },
+        {
+          "id": "u6",
+          "number": 6,
+          "title": "阅读：人物与行动",
+          "sourcePrintPage": 67,
+          "sourcePdfPage": 72,
+          "lessons": [
+            "八角楼上",
+            "朱德的扁担",
+            "难忘的泼水节",
+            "刘胡兰",
+            "语文园地六"
+          ],
+          "recognition": [
+            "楼艰斗代临腊军薄章握凝觉油辉革命利",
+            "朱德扁担同志伍敌根据抽陡鞋疼敬",
+            "泼民度特周恩敲铺龙串容踩始盛碗祝寿",
+            "刘兰派由于卖员捕买似踏烈荣岁题",
+            "锋蜜峰蜂爆争抄炒幕墓慕"
+          ],
+          "writing": [
+            "楼代穿视利路",
+            "同志军敌常非每战士戴",
+            "难忘民因理串裤令",
+            "反村由于员被声岁消息",
+            "抄炒"
+          ],
+          "recognitionPdfPages": [
+            115,
+            116
+          ],
+          "writingPdfPages": [
+            119,
+            120
+          ],
+          "recognitionReading": [
+            "lóu jiān dòu dài lín là jūn báo zhāng wò níng jué yóu huī gé mìng lì",
+            "zhū dé biǎn dàn tóng zhì wǔ dí gēn jù chōu dǒu xié téng jìng",
+            "pō mín dù tè zhōu ēn qiāo pū lóng chuàn róng cǎi shǐ chéng wǎn zhù shòu",
+            "liú lán pài yóu yú mài yuán bǔ mǎi shì tà liè róng suì tí",
+            "fēng mì fēng fēng bào zhēng chāo chǎo mù mù mù"
+          ],
+          "recognitionCount": 75,
+          "writingReading": [
+            "lóu dài chuān shì lì lù",
+            "tóng zhì jūn dí cháng fēi měi zhàn shì dài",
+            "nán wàng mín yīn lǐ chuàn kù lìng",
+            "fǎn cūn yóu yú yuán bèi shēng suì xiāo xī",
+            "chāo chǎo"
+          ],
+          "writingCount": 36,
+          "practice": {
+            "title": "一本送回的书",
+            "body": "小林在楼道捡到一本书。书里没有名字，他没有把它带走。他和爸爸把书送到服务台，又留下找到书的地点。第二天，失主领回了书，向他们道谢。",
+            "question": "小林做了哪些事帮助失主？",
+            "answer": "把书送到服务台，说明找到书的地点。",
+            "skill": "写一张留言条，包含对象、事情、姓名和时间。",
+            "origin": "original",
+            "area": "reading",
+            "titleReading": "yī běn sòng huí de shū",
+            "detailReading": "xiǎo lín zài lóu dào jiǎn dào yī běn shū shū lǐ méi yǒu míng zì tā méi yǒu bǎ tā dài zǒu tā hé bà ba bǎ shū sòng dào fú wù tái yòu liú xià zhǎo dào shū de dì diǎn dì èr tiān shī zhǔ lǐng huí le shū xiàng tā men dào xiè xiǎng yī xiǎng xiǎo lín zuò le nǎ xiē shì bāng zhù shī zhǔ cān kǎo bǎ shū sòng dào fú wù tái shuō míng zhǎo dào shū de dì diǎn liàn yī liàn xiě yī zhāng liú yán tiáo bāo hán duì xiàng shì qíng xìng míng hé shí jiān"
+          }
+        },
+        {
+          "id": "u7",
+          "number": 7,
+          "title": "阅读：观察与想象",
+          "sourcePrintPage": 81,
+          "sourcePdfPage": 86,
+          "lessons": [
+            "古诗二首：江雪、敕勒歌",
+            "雾在哪里",
+            "雪孩子",
+            "语文园地七"
+          ],
+          "recognition": [
+            "绝径踪灭舟钓似庐笼盖苍茫",
+            "论暗岸街梁甚至切躲该悠闲散失",
+            "堆累添柴烧旺闭哎旁冲哇终浑淋晒",
+            "漱饿沼泽宁杠杆栋库闸羔蝗"
+          ],
+          "writing": [
+            "绝灭舟独阴似野低",
+            "论船猫切该散步失",
+            "要伙伴歌得闭忙谁汽",
+            "饥饿宁库"
+          ],
+          "recognitionPdfPages": [
+            116
+          ],
+          "writingPdfPages": [
+            120
+          ],
+          "recognitionReading": [
+            "jué jìng zōng miè zhōu diào sì lú lǒng gài cāng máng",
+            "lùn àn àn jiē liáng shèn zhì qiè duǒ gāi yōu xián sàn shī",
+            "duī lèi tiān chái shāo wàng bì āi páng chōng wa zhōng hún lín shài",
+            "shù è zhǎo zé níng gàng gǎn dòng kù zhá gāo huáng"
+          ],
+          "recognitionCount": 53,
+          "writingReading": [
+            "jué miè zhōu dú yīn sì yě dī",
+            "lùn chuán māo qiè gāi sàn bù shī",
+            "yào huǒ bàn gē de bì máng shuí qì",
+            "jī è níng kù"
+          ],
+          "writingCount": 29,
+          "practice": {
+            "title": "雾慢慢散了",
+            "body": "清晨，窗外的楼像披着一层薄纱。小禾先看见近处的树，看不清远处的桥。太阳升高后，雾慢慢散了，桥也露出来了。她把两次看到的样子画在同一页纸上。",
+            "question": "雾散前后，小禾看见的有什么变化？",
+            "answer": "先看不清远处的桥，后来能看清了。",
+            "skill": "用“先……后来……”比较两个时刻的景物。",
+            "origin": "original",
+            "area": "reading",
+            "titleReading": "wù màn màn sàn le",
+            "detailReading": "qīng chén chuāng wài de lóu xiàng pī zhe yī céng báo shā xiǎo hé xiān kàn jiàn jìn chù de shù kàn bù qīng yuǎn chù de qiáo tài yáng shēng gāo hòu wù màn màn sàn le qiáo yě lù chū lái le tā bǎ liǎng cì kàn dào de yàng zi huà zài tóng yī yè zhǐ shàng xiǎng yī xiǎng wù sàn qián hòu xiǎo hé kàn jiàn de yǒu shén me biàn huà cān kǎo xiān kàn bù qīng yuǎn chù de qiáo hòu lái néng kàn qīng le liàn yī liàn yòng xiān hòu lái bǐ jiào liǎng gè shí kè de jǐng wù"
+          }
+        },
+        {
+          "id": "u8",
+          "number": 8,
+          "title": "阅读：相处与成长",
+          "sourcePrintPage": 95,
+          "sourcePdfPage": 100,
+          "lessons": [
+            "称赞",
+            "纸船和风筝",
+            "快乐的小河",
+            "语文园地八"
+          ],
+          "recognition": [
+            "称赞刺猬板凳但极傍苹泄接除疲劳",
+            "筝鼠折漂扎乘抓线莓俩架受愿朝取",
+            "撞怨软呜慈祥量跌摔擦咱推驶坚硬",
+            "狼猩鹤蛇鸽蚕蚯蚓骆驼狮"
+          ],
+          "writing": [
+            "拿仔极送椅怎拉收接",
+            "纸抓线吵但受句哭",
+            "游戏爱呢跳咱",
+            "狼蛇"
+          ],
+          "recognitionPdfPages": [
+            116,
+            117
+          ],
+          "writingPdfPages": [
+            120
+          ],
+          "recognitionReading": [
+            "chēng zàn cì wèi bǎn dèng dàn jí bàng píng xiè jiē chú pí láo",
+            "zhēng shǔ zhé piāo zā chéng zhuā xiàn méi liǎ jià shòu yuàn cháo qǔ",
+            "zhuàng yuàn ruǎn wū cí xiáng liàng diē shuāi cā zán tuī shǐ jiān yìng",
+            "láng xīng hè shé gē cán qiū yǐn luò tuó shī"
+          ],
+          "recognitionCount": 56,
+          "writingReading": [
+            "ná zǐ jí sòng yǐ zěn lā shōu jiē",
+            "zhǐ zhuā xiàn chǎo dàn shòu jù kū",
+            "yóu xì ài ne tiào zán",
+            "láng shé"
+          ],
+          "writingCount": 25,
+          "practice": {
+            "title": "两张小卡片",
+            "body": "小雨做的纸船有点歪，她想放弃。朋友说：“你的颜色配得很漂亮，我们再把船边折齐吧。”小雨重新试了一次。放学时，她也给朋友写了一张鼓励的小卡片。",
+            "question": "朋友怎样帮助小雨？",
+            "answer": "先肯定做得好的地方，再提出具体建议。",
+            "skill": "给家人一句真诚而具体的称赞。",
+            "origin": "original",
+            "area": "reading",
+            "titleReading": "liǎng zhāng xiǎo kǎ piàn",
+            "detailReading": "xiǎo yǔ zuò de zhǐ chuán yǒu diǎn wāi tā xiǎng fàng qì péng yǒu shuō nǐ de yán sè pèi de hěn piào liang wǒ men zài bǎ chuán biān zhé qí ba xiǎo yǔ chóng xīn shì le yī cì fàng xué shí tā yě gěi péng yǒu xiě le yī zhāng gǔ lì de xiǎo kǎ piàn xiǎng yī xiǎng péng yǒu zěn yàng bāng zhù xiǎo yǔ cān kǎo xiān kěn dìng zuò de hǎo de dì fang zài tí chū jù tǐ jiàn yì liàn yī liàn gěi jiā rén yī jù zhēn chéng ér jù tǐ de chēng zàn"
+          }
+        }
+      ],
+      "poems": [
+        {
+          "unit": 1,
+          "sourcePrintPage": 12,
+          "sourcePdfPage": 17,
+          "contentId": "sh54-plum-blossoms",
+          "title": "梅花"
+        },
+        {
+          "unit": 3,
+          "sourcePrintPage": 37,
+          "sourcePdfPage": 42,
+          "contentId": "moe-2022-zh-1-6-040",
+          "title": "小儿垂钓"
+        },
+        {
+          "unit": 4,
+          "sourcePrintPage": 39,
+          "sourcePdfPage": 44,
+          "contentId": "poem-stork-tower",
+          "title": "登鹳雀楼"
+        },
+        {
+          "unit": 4,
+          "sourcePrintPage": 40,
+          "sourcePdfPage": 45,
+          "contentId": "moe-2022-zh-1-6-019",
+          "title": "望庐山瀑布"
+        },
+        {
+          "unit": 7,
+          "sourcePrintPage": 81,
+          "sourcePdfPage": 86,
+          "contentId": "poem-river-snow",
+          "title": "江雪"
+        },
+        {
+          "unit": 7,
+          "sourcePrintPage": 82,
+          "sourcePdfPage": 87,
+          "contentId": "moe-2022-zh-1-6-003",
+          "title": "敕勒歌"
+        },
+        {
+          "unit": 7,
+          "sourcePrintPage": 93,
+          "sourcePdfPage": 98,
+          "contentId": "sh54-mountain-temple",
+          "title": "夜宿山寺"
+        }
+      ]
+    },
+    {
+      "id": "english-1a-sample",
+      "subject": "english",
+      "grade": 1,
+      "semester": "上册",
+      "title": "英语 · 1年级上册（沪教版）",
+      "publisher": "上海教育出版社",
+      "edition": "国家教材委员会2024审核通过；公开目录样本",
+      "schoolSystem": "5-4",
+      "sourceUrl": "https://www.textbook-info.com/post/1392.html",
+      "sourceKind": "public_sample",
+      "checkedAt": "2026-10-16",
+      "schoolAdoption": "pending",
+      "catalogueImages": [
+        "https://www.textbook-info.com/zb_users/upload/2024/09/202409221727014245279618.jpg",
+        "https://www.textbook-info.com/zb_users/upload/2024/09/202409221727014245310690.jpg"
+      ],
+      "inventory": {
+        "topicWordsComplete": true,
+        "wordBankComplete": false,
+        "unitPracticeComplete": true,
+        "fullTextAvailable": false,
+        "fullCoverage": false
+      },
+      "units": [
+        {
+          "id": "u1",
+          "number": 1,
+          "title": "Greetings",
+          "sourcePrintPage": 5,
+          "words": [
+            {
+              "text": "morning",
+              "meaning": "早晨；上午"
+            },
+            {
+              "text": "afternoon",
+              "meaning": "下午"
+            },
+            {
+              "text": "evening",
+              "meaning": "晚上"
+            }
+          ],
+          "practice": {
+            "title": "A day with Ben",
+            "body": "Good morning, Mum!\nGood afternoon, Tom!\nGood evening, Dad!",
+            "translation": [
+              "早上好，妈妈！",
+              "下午好，汤姆！",
+              "晚上好，爸爸！"
+            ],
+            "question": "Who do I greet in the evening?",
+            "questionHint": "晚上我向谁问好？",
+            "answer": "Dad. 爸爸。",
+            "origin": "original"
+          }
+        },
+        {
+          "id": "u2",
+          "number": 2,
+          "title": "New friends",
+          "sourcePrintPage": 11,
+          "words": [
+            {
+              "text": "hello",
+              "meaning": "你好"
+            },
+            {
+              "text": "friend",
+              "meaning": "朋友"
+            },
+            {
+              "text": "welcome",
+              "meaning": "欢迎"
+            },
+            {
+              "text": "name",
+              "meaning": "名字"
+            },
+            {
+              "text": "hi",
+              "meaning": "嗨；你好"
+            }
+          ],
+          "practice": {
+            "title": "A new friend",
+            "body": "My name is Lily.\nThis is my friend, Tom.\nWelcome to our class, Tom!",
+            "translation": [
+              "我的名字是莉莉。",
+              "这是我的朋友汤姆。",
+              "欢迎来到我们班，汤姆！"
+            ],
+            "question": "Who is Lily’s friend?",
+            "questionHint": "莉莉的朋友是谁？",
+            "answer": "Tom. 汤姆。",
+            "origin": "original"
+          }
+        },
+        {
+          "id": "u3",
+          "number": 3,
+          "title": "My schoolbag",
+          "sourcePrintPage": 17,
+          "words": [
+            {
+              "text": "pack",
+              "meaning": "收拾；打包"
+            },
+            {
+              "text": "my",
+              "meaning": "我的"
+            },
+            {
+              "text": "schoolbag",
+              "meaning": "书包"
+            },
+            {
+              "text": "book",
+              "meaning": "书"
+            },
+            {
+              "text": "pencil",
+              "meaning": "铅笔"
+            },
+            {
+              "text": "ruler",
+              "meaning": "尺子"
+            },
+            {
+              "text": "eraser",
+              "meaning": "橡皮"
+            },
+            {
+              "text": "pencil case",
+              "meaning": "铅笔盒"
+            }
+          ],
+          "practice": {
+            "title": "My pencil case",
+            "body": "I pack my schoolbag.\nMy book is in the bag.\nMy pencil and eraser are in the pencil case.",
+            "translation": [
+              "我收拾书包。",
+              "我的书在包里。",
+              "我的铅笔和橡皮在铅笔盒里。"
+            ],
+            "question": "Where is the eraser?",
+            "questionHint": "橡皮在哪里？",
+            "answer": "In the pencil case. 在铅笔盒里。",
+            "origin": "original"
+          }
+        },
+        {
+          "id": "u4",
+          "number": 4,
+          "title": "My classroom",
+          "sourcePrintPage": 23,
+          "words": [
+            {
+              "text": "clean",
+              "meaning": "打扫；干净的"
+            },
+            {
+              "text": "classroom",
+              "meaning": "教室"
+            },
+            {
+              "text": "desk",
+              "meaning": "书桌"
+            },
+            {
+              "text": "door",
+              "meaning": "门"
+            },
+            {
+              "text": "chair",
+              "meaning": "椅子"
+            },
+            {
+              "text": "on duty",
+              "meaning": "值日"
+            },
+            {
+              "text": "blackboard",
+              "meaning": "黑板"
+            },
+            {
+              "text": "floor",
+              "meaning": "地板"
+            }
+          ],
+          "practice": {
+            "title": "Our tidy room",
+            "body": "I am on duty today.\nI clean the desk.\nMy friend cleans the blackboard.",
+            "translation": [
+              "今天我值日。",
+              "我擦桌子。",
+              "我的朋友擦黑板。"
+            ],
+            "question": "Who cleans the desk?",
+            "questionHint": "谁擦桌子？",
+            "answer": "I do. 我擦桌子。",
+            "origin": "original"
+          }
+        },
+        {
+          "id": "u5",
+          "number": 5,
+          "title": "Lovely faces",
+          "sourcePrintPage": 29,
+          "words": [
+            {
+              "text": "face",
+              "meaning": "脸"
+            },
+            {
+              "text": "eye",
+              "meaning": "眼睛"
+            },
+            {
+              "text": "ear",
+              "meaning": "耳朵"
+            },
+            {
+              "text": "nose",
+              "meaning": "鼻子"
+            },
+            {
+              "text": "mouth",
+              "meaning": "嘴"
+            }
+          ],
+          "practice": {
+            "title": "A funny face",
+            "body": "I draw two eyes.\nI draw a nose and a mouth.\nThis is a funny face.",
+            "translation": [
+              "我画两只眼睛。",
+              "我画一个鼻子和一张嘴。",
+              "这是一张有趣的脸。"
+            ],
+            "question": "How many eyes do I draw?",
+            "questionHint": "我画了几只眼睛？",
+            "answer": "Two. 两只。",
+            "origin": "original"
+          }
+        },
+        {
+          "id": "u6",
+          "number": 6,
+          "title": "My family",
+          "sourcePrintPage": 35,
+          "words": [
+            {
+              "text": "family",
+              "meaning": "家庭"
+            },
+            {
+              "text": "mum",
+              "meaning": "妈妈"
+            },
+            {
+              "text": "dad",
+              "meaning": "爸爸"
+            },
+            {
+              "text": "brother",
+              "meaning": "兄弟"
+            },
+            {
+              "text": "sister",
+              "meaning": "姐妹"
+            },
+            {
+              "text": "me",
+              "meaning": "我（宾格）"
+            },
+            {
+              "text": "love",
+              "meaning": "爱"
+            },
+            {
+              "text": "warm",
+              "meaning": "温暖的"
+            },
+            {
+              "text": "happy",
+              "meaning": "快乐的"
+            }
+          ],
+          "practice": {
+            "title": "We are together",
+            "body": "This is my family.\nMum, Dad and my sister are with me.\nWe are happy together.",
+            "translation": [
+              "这是我的家人。",
+              "妈妈、爸爸和妹妹跟我在一起。",
+              "我们在一起很开心。"
+            ],
+            "question": "Who is with me?",
+            "questionHint": "谁跟我在一起？",
+            "answer": "Mum, Dad and my sister. 妈妈、爸爸和妹妹。",
+            "origin": "original"
+          }
+        },
+        {
+          "id": "u7",
+          "number": 7,
+          "title": "Animals in our lives",
+          "sourcePrintPage": 41,
+          "words": [
+            {
+              "text": "helpful",
+              "meaning": "有帮助的"
+            },
+            {
+              "text": "animal",
+              "meaning": "动物"
+            },
+            {
+              "text": "horse",
+              "meaning": "马"
+            },
+            {
+              "text": "dog",
+              "meaning": "狗"
+            },
+            {
+              "text": "hen",
+              "meaning": "母鸡"
+            },
+            {
+              "text": "bee",
+              "meaning": "蜜蜂"
+            },
+            {
+              "text": "cat",
+              "meaning": "猫"
+            }
+          ],
+          "practice": {
+            "title": "At the farm",
+            "body": "I see a hen and a horse.\nA dog runs by the tree.\nThe animals live on the farm.",
+            "translation": [
+              "我看见一只母鸡和一匹马。",
+              "一只狗从树旁跑过。",
+              "这些动物住在农场。"
+            ],
+            "question": "Which animal runs by the tree?",
+            "questionHint": "哪种动物从树旁跑过？",
+            "answer": "A dog. 一只狗。",
+            "origin": "original"
+          }
+        },
+        {
+          "id": "u8",
+          "number": 8,
+          "title": "Have a go!",
+          "sourcePrintPage": 47,
+          "words": [
+            {
+              "text": "bird",
+              "meaning": "鸟"
+            },
+            {
+              "text": "hill",
+              "meaning": "小山"
+            },
+            {
+              "text": "fly away",
+              "meaning": "飞走"
+            },
+            {
+              "text": "come back",
+              "meaning": "回来"
+            },
+            {
+              "text": "flap wings",
+              "meaning": "拍打翅膀"
+            }
+          ],
+          "practice": {
+            "title": "The little bird",
+            "body": "A little bird is on the hill.\nIt flaps its wings and flies away.\nIn the evening, it comes back.",
+            "translation": [
+              "一只小鸟在山上。",
+              "它拍着翅膀飞走了。",
+              "晚上，它回来了。"
+            ],
+            "question": "When does the bird come back?",
+            "questionHint": "小鸟什么时候回来？",
+            "answer": "In the evening. 晚上。",
+            "origin": "original"
+          }
+        },
+        {
+          "id": "u9",
+          "number": 9,
+          "title": "Yes, I can!",
+          "sourcePrintPage": 53,
+          "words": [
+            {
+              "text": "wash",
+              "meaning": "洗"
+            },
+            {
+              "text": "tie shoelaces",
+              "meaning": "系鞋带"
+            },
+            {
+              "text": "take a photo",
+              "meaning": "拍照"
+            }
+          ],
+          "practice": {
+            "title": "I can help",
+            "body": "I can wash my hands.\nI can tie my shoelaces.\nDad can take a photo of me.",
+            "translation": [
+              "我会洗手。",
+              "我会系鞋带。",
+              "爸爸会给我拍照。"
+            ],
+            "question": "What can Dad do?",
+            "questionHint": "爸爸会做什么？",
+            "answer": "Take a photo. 拍照。",
+            "origin": "original"
+          }
+        },
+        {
+          "id": "u10",
+          "number": 10,
+          "title": "Fun numbers",
+          "sourcePrintPage": 59,
+          "words": [
+            {
+              "text": "one",
+              "meaning": "一"
+            },
+            {
+              "text": "two",
+              "meaning": "二"
+            },
+            {
+              "text": "three",
+              "meaning": "三"
+            },
+            {
+              "text": "four",
+              "meaning": "四"
+            },
+            {
+              "text": "five",
+              "meaning": "五"
+            },
+            {
+              "text": "six",
+              "meaning": "六"
+            }
+          ],
+          "practice": {
+            "title": "Six little stars",
+            "body": "I draw one big star.\nThen I draw five little stars.\nNow I have six stars.",
+            "translation": [
+              "我画一颗大星星。",
+              "然后我画五颗小星星。",
+              "现在我画了六颗星星。"
+            ],
+            "question": "How many stars are there?",
+            "questionHint": "一共有几颗星星？",
+            "answer": "Six. 六颗。",
+            "origin": "original"
+          }
+        }
+      ]
+    },
+    {
+      "id": "english-1b-sample",
+      "subject": "english",
+      "grade": 1,
+      "semester": "下册",
+      "title": "英语 · 1年级下册（沪教版）",
+      "publisher": "上海教育出版社",
+      "edition": "国家教材委员会2024审核通过；公开目录样本",
+      "schoolSystem": "5-4",
+      "sourceUrl": "https://www.sohu.com/a/989386156_120904083",
+      "sourceKind": "public_sample",
+      "checkedAt": "2026-10-16",
+      "schoolAdoption": "pending",
+      "catalogueImages": [
+        "https://q8.itc.cn/q_70/images01/20260224/8eaf38f139694748b748a11966c461ab.jpeg",
+        "https://q4.itc.cn/q_70/images01/20260224/7364b22f9d734953b490aae6a2c33d38.jpeg"
+      ],
+      "inventory": {
+        "topicWordsComplete": true,
+        "wordBankComplete": false,
+        "unitPracticeComplete": true,
+        "fullTextAvailable": false,
+        "fullCoverage": false
+      },
+      "units": [
+        {
+          "id": "u1",
+          "number": 1,
+          "title": "Back to school",
+          "sourcePrintPage": 1,
+          "words": [
+            {
+              "text": "fine",
+              "meaning": "身体好的"
+            },
+            {
+              "text": "busy",
+              "meaning": "忙碌的"
+            },
+            {
+              "text": "tired",
+              "meaning": "累的"
+            },
+            {
+              "text": "happy",
+              "meaning": "开心的"
+            },
+            {
+              "text": "great",
+              "meaning": "很好的"
+            }
+          ],
+          "practice": {
+            "title": "Back with my friends",
+            "body": "I am happy to see my friends.\nWe are busy at school.\nIn the evening, I am tired.",
+            "translation": [
+              "见到朋友们我很开心。",
+              "我们在学校很忙。",
+              "到了晚上，我累了。"
+            ],
+            "question": "How do I feel in the evening?",
+            "questionHint": "到了晚上，我感觉怎样？",
+            "answer": "Tired. 累了。",
+            "origin": "original"
+          }
+        },
+        {
+          "id": "u2",
+          "number": 2,
+          "title": "Lunch time",
+          "sourcePrintPage": 7,
+          "words": [
+            {
+              "text": "lunch",
+              "meaning": "午餐"
+            },
+            {
+              "text": "time",
+              "meaning": "时间"
+            },
+            {
+              "text": "meatball",
+              "meaning": "肉丸"
+            },
+            {
+              "text": "rice",
+              "meaning": "米饭"
+            },
+            {
+              "text": "vegetable",
+              "meaning": "蔬菜"
+            },
+            {
+              "text": "soup",
+              "meaning": "汤"
+            },
+            {
+              "text": "apple",
+              "meaning": "苹果"
+            }
+          ],
+          "practice": {
+            "title": "A warm lunch",
+            "body": "It is lunch time.\nI have rice, vegetables and soup.\nI have an apple, too.",
+            "translation": [
+              "午餐时间到了。",
+              "我吃米饭和蔬菜，还喝汤。",
+              "我还吃一个苹果。"
+            ],
+            "question": "What fruit do I have?",
+            "questionHint": "我吃了什么水果？",
+            "answer": "An apple. 一个苹果。",
+            "origin": "original"
+          }
+        },
+        {
+          "id": "u3",
+          "number": 3,
+          "title": "Colours in the park",
+          "sourcePrintPage": 13,
+          "words": [
+            {
+              "text": "colour",
+              "meaning": "颜色"
+            },
+            {
+              "text": "yellow",
+              "meaning": "黄色（的）"
+            },
+            {
+              "text": "red",
+              "meaning": "红色（的）"
+            },
+            {
+              "text": "blue",
+              "meaning": "蓝色（的）"
+            },
+            {
+              "text": "green",
+              "meaning": "绿色（的）"
+            }
+          ],
+          "practice": {
+            "title": "Colours around us",
+            "body": "The sky is blue.\nThe grass is green.\nI see a yellow flower by the tree.",
+            "translation": [
+              "天空是蓝色的。",
+              "草是绿色的。",
+              "我看见树旁有一朵黄色的花。"
+            ],
+            "question": "What colour is the flower?",
+            "questionHint": "花是什么颜色？",
+            "answer": "Yellow. 黄色。",
+            "origin": "original"
+          }
+        },
+        {
+          "id": "u4",
+          "number": 4,
+          "title": "In the playground",
+          "sourcePrintPage": 19,
+          "words": [
+            {
+              "text": "playground",
+              "meaning": "操场"
+            },
+            {
+              "text": "slide",
+              "meaning": "滑梯"
+            },
+            {
+              "text": "swing",
+              "meaning": "秋千"
+            },
+            {
+              "text": "seesaw",
+              "meaning": "跷跷板"
+            },
+            {
+              "text": "hold on tight",
+              "meaning": "抓紧"
+            },
+            {
+              "text": "be careful",
+              "meaning": "当心"
+            }
+          ],
+          "practice": {
+            "title": "Taking turns",
+            "body": "We play in the playground.\nLily is on the swing.\nI wait for my turn by the slide.",
+            "translation": [
+              "我们在操场上玩。",
+              "莉莉在荡秋千。",
+              "我在滑梯旁等着轮到我。"
+            ],
+            "question": "Who is on the swing?",
+            "questionHint": "谁在荡秋千？",
+            "answer": "Lily. 莉莉。",
+            "origin": "original"
+          }
+        },
+        {
+          "id": "u5",
+          "number": 5,
+          "title": "Weather",
+          "sourcePrintPage": 25,
+          "words": [
+            {
+              "text": "weather",
+              "meaning": "天气"
+            },
+            {
+              "text": "sunny",
+              "meaning": "晴朗的"
+            },
+            {
+              "text": "rainy",
+              "meaning": "下雨的"
+            },
+            {
+              "text": "windy",
+              "meaning": "刮风的"
+            },
+            {
+              "text": "cloudy",
+              "meaning": "多云的"
+            },
+            {
+              "text": "snowy",
+              "meaning": "下雪的"
+            }
+          ],
+          "practice": {
+            "title": "A change in the weather",
+            "body": "It is cloudy in the morning.\nIt is rainy in the afternoon.\nI read a book at home.",
+            "translation": [
+              "早上多云。",
+              "下午下雨。",
+              "我在家读书。"
+            ],
+            "question": "What is the weather like in the afternoon?",
+            "questionHint": "下午天气怎样？",
+            "answer": "Rainy. 下雨。",
+            "origin": "original"
+          }
+        },
+        {
+          "id": "u6",
+          "number": 6,
+          "title": "Clothes",
+          "sourcePrintPage": 31,
+          "words": [
+            {
+              "text": "clothes",
+              "meaning": "衣服"
+            },
+            {
+              "text": "shirt",
+              "meaning": "衬衫"
+            },
+            {
+              "text": "trousers",
+              "meaning": "裤子"
+            },
+            {
+              "text": "sock",
+              "meaning": "袜子"
+            },
+            {
+              "text": "shoe",
+              "meaning": "鞋"
+            },
+            {
+              "text": "hat",
+              "meaning": "帽子"
+            },
+            {
+              "text": "dress",
+              "meaning": "连衣裙"
+            },
+            {
+              "text": "skirt",
+              "meaning": "裙子"
+            }
+          ],
+          "practice": {
+            "title": "Getting ready",
+            "body": "I put on my blue shirt.\nMy socks and shoes are by the bed.\nNow I am ready to go.",
+            "translation": [
+              "我穿上蓝衬衫。",
+              "我的袜子和鞋在床边。",
+              "现在我准备好出门了。"
+            ],
+            "question": "Where are the shoes?",
+            "questionHint": "鞋在哪里？",
+            "answer": "By the bed. 在床边。",
+            "origin": "original"
+          }
+        },
+        {
+          "id": "u7",
+          "number": 7,
+          "title": "After school",
+          "sourcePrintPage": 37,
+          "words": [
+            {
+              "text": "game",
+              "meaning": "游戏"
+            },
+            {
+              "text": "hide-and-seek",
+              "meaning": "捉迷藏"
+            },
+            {
+              "text": "ready",
+              "meaning": "准备好的"
+            },
+            {
+              "text": "play",
+              "meaning": "玩"
+            },
+            {
+              "text": "move-and-freeze",
+              "meaning": "动一动再定住的游戏"
+            },
+            {
+              "text": "skip rope",
+              "meaning": "跳绳"
+            },
+            {
+              "text": "throw sandbags",
+              "meaning": "扔沙包"
+            }
+          ],
+          "practice": {
+            "title": "After class",
+            "body": "We play a game after school.\nTom skips rope.\nLily and I throw sandbags.",
+            "translation": [
+              "放学后我们玩游戏。",
+              "汤姆跳绳。",
+              "莉莉和我扔沙包。"
+            ],
+            "question": "Who skips rope?",
+            "questionHint": "谁跳绳？",
+            "answer": "Tom. 汤姆。",
+            "origin": "original"
+          }
+        },
+        {
+          "id": "u8",
+          "number": 8,
+          "title": "Traffic safety",
+          "sourcePrintPage": 43,
+          "words": [
+            {
+              "text": "traffic light",
+              "meaning": "交通信号灯"
+            },
+            {
+              "text": "stop",
+              "meaning": "停止"
+            },
+            {
+              "text": "go",
+              "meaning": "走"
+            },
+            {
+              "text": "wait",
+              "meaning": "等待"
+            },
+            {
+              "text": "zebra crossing",
+              "meaning": "斑马线"
+            }
+          ],
+          "practice": {
+            "title": "Across the road",
+            "body": "The traffic light is red.\nMum and I stop and wait.\nWe cross at the zebra crossing when it is safe.",
+            "translation": [
+              "交通灯是红色的。",
+              "妈妈和我停下等待。",
+              "确认安全后，我们从斑马线过街。"
+            ],
+            "question": "Where do we cross the road?",
+            "questionHint": "我们从哪里过街？",
+            "answer": "At the zebra crossing. 从斑马线过街。",
+            "origin": "original"
+          }
+        },
+        {
+          "id": "u9",
+          "number": 9,
+          "title": "I see animals",
+          "sourcePrintPage": 49,
+          "words": [
+            {
+              "text": "panda",
+              "meaning": "大熊猫"
+            },
+            {
+              "text": "see",
+              "meaning": "看见"
+            },
+            {
+              "text": "look at",
+              "meaning": "看"
+            },
+            {
+              "text": "tiger",
+              "meaning": "老虎"
+            },
+            {
+              "text": "elephant",
+              "meaning": "大象"
+            },
+            {
+              "text": "monkey",
+              "meaning": "猴子"
+            },
+            {
+              "text": "climb a tree",
+              "meaning": "爬树"
+            },
+            {
+              "text": "swim",
+              "meaning": "游泳"
+            }
+          ],
+          "practice": {
+            "title": "A day at the zoo",
+            "body": "I see a big elephant.\nA monkey climbs a tree.\nA panda eats near the tree.",
+            "translation": [
+              "我看见一头大象。",
+              "一只猴子爬树。",
+              "一只熊猫在树旁吃东西。"
+            ],
+            "question": "Which animal climbs a tree?",
+            "questionHint": "哪种动物爬树？",
+            "answer": "A monkey. 一只猴子。",
+            "origin": "original"
+          }
+        },
+        {
+          "id": "u10",
+          "number": 10,
+          "title": "I like toys",
+          "sourcePrintPage": 55,
+          "words": [
+            {
+              "text": "kite",
+              "meaning": "风筝"
+            },
+            {
+              "text": "toy car",
+              "meaning": "玩具汽车"
+            },
+            {
+              "text": "toy boat",
+              "meaning": "玩具船"
+            },
+            {
+              "text": "ball",
+              "meaning": "球"
+            },
+            {
+              "text": "cute",
+              "meaning": "可爱的"
+            },
+            {
+              "text": "gift",
+              "meaning": "礼物"
+            },
+            {
+              "text": "toy train",
+              "meaning": "玩具火车"
+            }
+          ],
+          "practice": {
+            "title": "A toy for my friend",
+            "body": "I have a toy car and a ball.\nMy friend has a toy boat.\nWe play with our toys together.",
+            "translation": [
+              "我有一辆玩具汽车和一个球。",
+              "我的朋友有一艘玩具船。",
+              "我们一起玩玩具。"
+            ],
+            "question": "What does my friend have?",
+            "questionHint": "我的朋友有什么？",
+            "answer": "A toy boat. 一艘玩具船。",
+            "origin": "original"
+          }
+        }
+      ]
+    }
+  ],
+  "pending": [
+    {
+      "grade": 2,
+      "semester": "下册",
+      "subject": "chinese",
+      "reason": "官方书目可确认；新版完整目录、字表与正文样本尚未取得，旧版不替代新版。",
+      "sourceUrl": "https://book.pep.com.cn/1211001202252/"
+    },
+    {
+      "grade": 2,
+      "semester": "上册",
+      "subject": "english",
+      "reason": "上海官方教材配套书目可确认；公开二手教学目录不能替代教材词表核验。",
+      "sourceUrl": "https://www.sh.smartedu.cn/teachingMaterial?type=11"
+    },
+    {
+      "grade": 2,
+      "semester": "下册",
+      "subject": "english",
+      "reason": "2025学年第二学期配套书目可确认；当前版次、完整目录与词表尚待原书核验。",
+      "sourceUrl": "https://www.sh.smartedu.cn/teachingMaterial?type=8"
+    }
+  ],
+  "extraPinyin": {
+    "sh54-painted-rooster": {
+      "title": "《画鸡》",
+      "detail": "唐寅\n头上红冠不用裁，满身雪白走将来。\n平生不敢轻言语，一叫千门万户开。",
+      "titleReading": "huà jī",
+      "detailReading": "táng yín tóu shàng hóng guān bù yòng cái mǎn shēn xuě bái zǒu jiāng lái píng shēng bù gǎn qīng yán yǔ yī jiào qiān mén wàn hù kāi"
+    },
+    "sh54-plum-blossoms": {
+      "title": "《梅花》",
+      "detail": "王安石\n墙角数枝梅，凌寒独自开。\n遥知不是雪，为有暗香来。",
+      "titleReading": "méi huā",
+      "detailReading": "wáng ān shí qiáng jiǎo shù zhī méi líng hán dú zì kāi yáo zhī bù shì xuě wèi yǒu àn xiāng lái"
+    },
+    "sh54-mountain-temple": {
+      "title": "《夜宿山寺》",
+      "detail": "李白\n危楼高百尺，手可摘星辰。\n不敢高声语，恐惊天上人。",
+      "titleReading": "yè sù shān sì",
+      "detailReading": "lǐ bái wēi lóu gāo bǎi chǐ shǒu kě zhāi xīng chén bù gǎn gāo shēng yǔ kǒng jīng tiān shàng rén"
+    },
+    "moe-2022-zh-1-6-020": {
+      "title": "《赠汪伦》",
+      "detail": "李白\n李白乘舟将欲行，忽闻岸上踏歌声。\n桃花潭水深千尺，不及汪伦送我情。",
+      "titleReading": "zèng wāng lún",
+      "detailReading": "lǐ bái lǐ bái chéng zhōu jiāng yù xíng hū wén àn shàng tà gē shēng táo huā tán shuǐ shēn qiān chǐ bù jí wāng lún sòng wǒ qíng"
+    },
+    "moe-2022-zh-1-6-040": {
+      "title": "《小儿垂钓》",
+      "detail": "胡令能\n蓬头稚子学垂纶，侧坐莓苔草映身。\n路人借问遥招手，怕得鱼惊不应人。",
+      "titleReading": "xiǎo ér chuí diào",
+      "detailReading": "hú lìng néng péng tóu zhì zǐ xué chuí lún cè zuò méi tái cǎo yìng shēn lù rén jiè wèn yáo zhāo shǒu pà dé yú jīng bù yìng rén"
+    },
+    "moe-2022-zh-1-6-019": {
+      "title": "《望庐山瀑布》",
+      "detail": "李白\n日照香炉生紫烟，遥看瀑布挂前川。\n飞流直下三千尺，疑是银河落九天。",
+      "titleReading": "wàng lú shān pù bù",
+      "detailReading": "lǐ bái rì zhào xiāng lú shēng zǐ yān yáo kàn pù bù guà qián chuān fēi liú zhí xià sān qiān chǐ yí shì yín hé luò jiǔ tiān"
+    },
+    "moe-2022-zh-1-6-003": {
+      "title": "《敕勒歌》",
+      "detail": "北朝民歌\n敕勒川，阴山下。天似穹庐，笼盖四野。\n天苍苍，野茫茫。风吹草低见牛羊。",
+      "titleReading": "chì lè gē",
+      "detailReading": "běi cháo mín gē chì lè chuān yīn shān xià tiān sì qióng lú lóng gài sì yě tiān cāng cāng yě máng máng fēng chuī cǎo dī xiàn niú yáng"
+    }
+  }
+}

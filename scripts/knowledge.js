@@ -7,6 +7,7 @@ const regional = require('../data/catalogs/shanghai-54-evidence.json');
 const examFramework = require('../data/catalogs/shanghai-zhongkao-framework.json');
 const dynasties = require('../data/catalogs/poetry-dynasties.json');
 const curriculum = require('./curriculum');
+const lowerPrimary = require('./lower-primary');
 function period(entry) {
   const metadata = dynasties.entries.find((item) => item.id === entry.id);
   if (!metadata || metadata.title !== entry.title || metadata.author !== entry.author || !metadata.dynasty || !metadata.sources.length)
@@ -26,6 +27,7 @@ function knowledge() {
       grades.push({ grade: book.grade, bookId: book.id, schoolSystem: '5-4', semester: book.semester,
         edition: book.edition, sourceUrl: book.url, outlineDestination: entry.outlineDestination,
         ...(entry.sourcePdfPage ? { sourcePdfPage: entry.sourcePdfPage, sourcePrintPage: entry.sourcePrintPage, unit: entry.unit } : {}),
+        ...(entry.unitId ? { unitId: entry.unitId, mappingType: 'textbook_item' } : {}),
         sourceKind: book.sourceKind || 'official_outline',
         evidence: book.sourceKind === 'public_sample' ? '五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认' : '官方教材目录篇名与册次已核对；正文异文校对另计', status: 'catalogue_verified' });
       gradeMappings.set(entry.contentId, grades);
@@ -62,14 +64,14 @@ function knowledge() {
     minutes: 1, referenceUrl: tables.sourceUrl, collections: ['tables'],
     note: '另列表，不计入课标 1600 个主词条或 505 个带星词。'
   }));
-  return [...poems, ...additional, ...words, ...tableWords];
+  return lowerPrimary.augment([...poems, ...additional, ...words, ...tableWords]);
 }
 module.exports = { knowledge, resources: {
   checkedAt: '2026-10-16',
-  curriculum: curriculum(),
+  curriculum: curriculum(knowledge()),
   examFramework,
-  coverage: '目标为上海五四学制小学1–5、初中6–9年级的语文与英语。国家课标底库已入库，教材逐册清单已建；目前只有部分古诗文年级映射，阅读、词表、语法及表达等仍有缺项，尚未达到九年全量覆盖。',
-  books: regional.books,
+  coverage: '上海五四制：小学1–5、初中6–9年级。语文一上、一下、二上已有整册字表和单元原创练习；英语一上、一下已有各10单元主题词汇、原创例句与阅读。二年级其余册及高年级仍有缺项。原创配套练习不是教材全文，现有进度不代表整年级或中考全量。',
+  books: [...new Map([...regional.books, ...lowerPrimary.bookSummaries()].map(book => [book.id, book])).values()],
   links: [
     { title: '上海 2026 秋季教学用书通知', url: regional.noticeUrl, note: '市级用书目录；学校实际选用版本待确认' },
     { title: '上海智慧教育平台 · 教材配套资源', url: 'https://www.sh.smartedu.cn/teachingMaterial?type=11', note: '2026 学年第一学期学生版；与具体学校选用版次分开核验' },
