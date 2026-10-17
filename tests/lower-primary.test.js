@@ -33,7 +33,7 @@ test('verified lower-primary inventories retain all unit positions and keep pend
     }
     assert.equal(learning.searchCatalog({ bookId: book.id, semester: book.semester === '上册' ? '下册' : '上册' }).length, 0);
   }
-  assert.equal(learning.searchCatalog({ grade: 2, semester: '下册' }).length, 104);
+  assert.equal(learning.searchCatalog({ grade: 2, semester: '下册' }).length, 110);
   assert.equal(learning.searchCatalog({ grade: 2, subject: 'english' }).length, 168);
 });
 
@@ -136,7 +136,7 @@ test('original unit practice is counted separately from verified textbook progre
   assert.equal(progress.grades[1].learned, 0);
   assert.equal(progress.grades[1].practice.learned, 1);
   assert.equal(progress.grades[1].practice.total, 96);
-  assert.equal(progress.grades[1].total, 114);
+  assert.equal(progress.grades[1].total, 120);
   assert.equal(progress.highestGradeStarted, 0);
   assert.equal(progress.unclassifiedLearned, 0);
 });
@@ -175,8 +175,8 @@ test('book navigation includes vocabulary, sentences and reading and never leaks
   assert.deepEqual(new Set(page.data.items.map(item => item.kind)), new Set(['word', 'sentence', 'english-reading']));
   assert.ok(page.data.items.every(item => item.gradeMappings.some(mapping => mapping.bookId === 'english-1b-sample' && mapping.unitId === 'u8')));
   page.changeGrade({ detail: { value: 2 } });
-  assert.equal(page.data.bookId, ''); assert.equal(page.data.unitIndex, 0); assert.equal(page.data.total, 210);
-  page.changeSemester({ detail: { value: 2 } }); assert.equal(page.data.total, 104);
+  assert.equal(page.data.bookId, ''); assert.equal(page.data.unitIndex, 0); assert.equal(page.data.total, 216);
+  page.changeSemester({ detail: { value: 2 } }); assert.equal(page.data.total, 110);
   page.showBook({ currentTarget: { dataset: { id: 'chinese-1b-sample' } } });
   assert.equal(page.data.semesterIndex, 0); assert.ok(page.data.items.some(item => item.kind === 'poetry')); assert.ok(page.data.items.some(item => item.studyArea === 'literacy'));
 });

@@ -63,25 +63,28 @@ test('35 grade-five poetry locations preserve canonical identities and distingui
   assert.match(learning.catalogById.get('sh54-caiwei-excerpt').note, /节选/);
 });
 
-test('grade-five English has traceable official audio items without claiming an unseen complete printed word bank', () => {
+test('grade-five English separates complete printed Words to use from lower-semester historical audio', () => {
   const [, , a, b] = data.books;
   assert.equal(a.sourceEvidence.officialResourceIsbn, '978-7-5720-4355-0');
   assert.equal(b.sourceEvidence.officialResourceIsbn, '978-7-5444-1656-6');
-  for (const [book, count] of [[a, 112], [b, 98]]) {
-    assert.equal(book.units.flatMap(u => u.words).length, count);
+  for (const [book, count] of [[a, 113], [b, 98]]) {
+    assert.equal(book.units.flatMap(u => u.words).length, book === a ? 122 : count);
     assert.equal(book.inventory.vocabularyCount, count); assert.equal(book.inventory.wordBankComplete, false);
     for (const u of book.units) {
       assert.match(u.vocabularyAudioEvidence.sha256, /^[a-f0-9]{64}$/);
-      assert.ok(u.words.every(w => w.vocabularyAudioTrack === u.vocabularyAudioEvidence.track));
+      if (book === a) assert.ok(u.words.every(w => w.vocabularyPrintPage || w.topicCataloguePdfPage));
+      else assert.ok(u.words.every(w => w.vocabularyAudioTrack === u.vocabularyAudioEvidence.track));
     }
     for (const item of learning.searchCatalog({ bookId: book.id })) {
       const m = item.gradeMappings.find(m => m.bookId === book.id);
-      assert.equal(m.sourceKind, 'official_audio');
-      assert.equal(m.sourcePrintPage, undefined); assert.equal(m.sourcePdfPage, undefined);
+      if (book === a) { assert.equal(m.sourceKind, 'official_textbook'); assert.ok(m.sourcePdfPage > 0); }
+      else { assert.equal(m.sourceKind, 'official_audio'); assert.equal(m.sourcePrintPage, undefined); assert.equal(m.sourcePdfPage, undefined); }
       if (book === b) assert.equal(m.editionStatus, 'historical_reference');
     }
   }
-  assert.ok(a.sourceEvidence.pendingVocabulary.length > 0);
+  assert.equal(a.sourceEvidence.pendingVocabulary.length, 0);
+  assert.ok(a.units[3].words.some(w => w.text === 'toe' && w.vocabularyPrintPage === 89));
+  assert.equal(a.inventory.vocabularyListComplete, true);
   assert.equal(a.units[5].vocabularyAudioEvidence.contextTrack.track, '37 Unit 6 Fun time.mp3');
   assert.match(learning.catalogById.get('word-will').detail, /意志；决心/);
   assert.match(learning.catalogById.get('word-mouse').detail, /老鼠；鼠标/);
@@ -110,7 +113,7 @@ test('39 grade-five groups expose original readable content with questions and r
     assert.equal(learning.searchCatalog({ bookId: book.id, grade: 4 }).length, 0);
   }
   const p = learning.progress({ records: {} }).grades[4];
-  assert.equal(p.total, 255); assert.equal(p.practice.total, 127); assert.equal(p.fullGradeComplete, false);
+  assert.equal(p.total, 263); assert.equal(p.practice.total, 127); assert.equal(p.fullGradeComplete, false);
 });
 
 test('grade-five reading aids keep reviewed polyphonic character and sentence readings', () => {

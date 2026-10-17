@@ -19,7 +19,9 @@ function knowledge() {
   // These identify unique works in a named official book's visible outline.
   // Ambiguous/truncated titles and unexpanded groups remain candidates, never grade facts.
   const gradeMappings = new Map();
-  regional.books.forEach((book) => book.entries.filter((entry) => entry.contentId).forEach((entry) => {
+  // Detailed inventories replace earlier outline-only mappings for the same book.
+  regional.books.filter(book => !lowerPrimary.data.books.some(detailed => detailed.id === book.id && detailed.replacesOutlineMappings))
+    .forEach((book) => book.entries.filter((entry) => entry.contentId).forEach((entry) => {
     const list = mappings.get(entry.contentId) || [];
     list.push(book.id); mappings.set(entry.contentId, list);
     if (entry.gradeVerification === 'catalogue_verified' && entry.outlineDestination) {
@@ -71,7 +73,7 @@ module.exports = { knowledge, resources: {
   checkedAt: '2026-10-17',
   curriculum: curriculum(knowledge()),
   examFramework,
-  coverage: '上海五四制：小学1–5、初中6–9年级。一至五年级语文十册字表及81份单元／栏目原创练习已整理；四、五下为2019审定样本。英语一、二年级四册各10单元，三至五年级上册新版各10单元、下册旧版参考各12单元已有词汇、原创例句和阅读。三至五年级新版下册、英语纸本全词表及初中逐课内容待核验；现有内容不代表教材或中考全量。',
+  coverage: '上海五四制：小学1–5、初中6–9年级。一至五年级语文十册字表及81组原创练习已整理，四、五下为2019审定样本。六年级语文两册各7单元及课外诵读附录已有26处古诗文映射和16篇原创练习。四、五上英语卷末词表与目录主题词已核对；六年级英语两册533个单元词项已逐项核实，12单元与Starter已有原创阅读、例句及语法提示。三上英语纸本、三至五年级新版下册及七至九年级逐课知识仍有缺口；不是全教材或中考全量。',
   books: [...new Map([...regional.books, ...lowerPrimary.bookSummaries()].map(book => [book.id, book])).values()],
   links: [
     { title: '上海 2026 秋季教学用书通知', url: regional.noticeUrl, note: '市级用书目录；学校实际选用版本待确认' },

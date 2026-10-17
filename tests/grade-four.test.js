@@ -42,22 +42,23 @@ test('grade-four Chinese keeps the 2024/2019 editions distinct and verifies exac
   assert.match(resources.curriculum.slots.find(slot => slot.contentBookId === b.id).contentNote, /历史审定样本/);
 });
 
-test('sixteen grade-four ancient works have observed author/opening-line identities and avoid duplicate national works', () => {
-  assert.equal(data.poems.length, 8);
+test('twenty-three grade-four ancient works have observed author/opening-line identities and avoid duplicate national works', () => {
+  assert.equal(data.poems.length, 11);
   for (const book of data.books.slice(0, 2)) {
     const poems = book.units.flatMap(unit => unit.poems || []);
-    assert.equal(poems.length, 8);
+    assert.equal(poems.length, book.semester === '上册' ? 12 : 11);
     for (const p of poems) {
       const item = learning.catalogById.get(p.contentId);
       assert.ok(item.detail.includes(p.identityEvidence.firstLine));
       assert.equal(item.author, p.identityEvidence.author);
       assert.equal(item.gradeMappings.filter(m => m.bookId === book.id).length, 1);
-      assert.equal(p.sourcePdfPage, p.sourcePrintPage + 6);
-      assert.ok(book.sourceEvidence.images[`zh4${book.semester === '上册' ? 'a' : 'b'}-${p.sourcePdfPage}.jpg`]);
+      assert.equal(p.sourcePdfPage, p.sourcePrintPage + (p.sourceKind === 'official_textbook' ? 5 : 6));
+      if (p.sourceKind === 'official_textbook') assert.match(p.sourceUrl, /basic.smartedu.cn/);
+      else assert.ok(book.sourceEvidence.images[`zh4${book.semester === '上册' ? 'a' : 'b'}-${p.sourcePdfPage}.jpg`]);
     }
   }
   const poems = learning.searchCatalog({ grade: 4, kind: 'poetry' });
-  assert.equal(poems.length, 16);
+  assert.equal(poems.length, 23);
   assert.ok(poems.some(p => p.id === 'moe-2022-zh-1-6-011'));
   assert.ok(!poems.some(p => p.id === 'moe-2022-zh-1-6-008'), 'Wang Han Liangzhouci is not Wang Zhihuan Liangzhouci');
   assert.match(learning.catalogById.get('sh54-xinshi').detail, /树头新绿未成阴/);
@@ -66,7 +67,7 @@ test('sixteen grade-four ancient works have observed author/opening-line identit
   assert.equal(learning.catalogById.get('sh54-jingwei').dynasty, '成书年代待考');
 });
 
-test('English grade-four unit words retain official audio provenance and historical lower-semester scope', () => {
+test('English grade-four unit words distinguish verified printed upper-semester words from historical lower-semester audio', () => {
   const [, , a, b] = data.books;
   assert.equal(a.sourceEvidence.officialResourceIsbn, '978-7-5720-4356-7');
   assert.equal(b.sourceEvidence.officialResourceIsbn, '978-7-5444-1653-5');
@@ -74,14 +75,13 @@ test('English grade-four unit words retain official audio provenance and histori
   assert.equal(a.units[3].title, 'Our birthday'); assert.equal(b.units[7].title, 'Time');
   assert.equal(b.units[3].displayLabel, 'Module 2 / Unit 1 · Sports');
   for (const [book, count] of [[a, 141], [b, 61]]) {
-    assert.equal(book.units.flatMap(unit => unit.words).length, count);
+    assert.equal(book.units.flatMap(unit => unit.words).length, book === a ? 146 : count);
     assert.equal(book.inventory.vocabularyCount, count);
     assert.equal(book.inventory.wordBankComplete, false);
     for (const item of learning.searchCatalog({ bookId: book.id })) {
       const m = item.gradeMappings.find(m => m.bookId === book.id);
-      assert.equal(m.sourceKind, 'official_audio');
-      assert.equal(m.sourcePrintPage, undefined); assert.equal(m.sourcePdfPage, undefined);
-      assert.match(m.outlineDestination, /\.mp3$/);
+      if (book === a) { assert.equal(m.sourceKind, 'official_textbook'); assert.ok(m.sourcePdfPage > 0); }
+      else { assert.equal(m.sourceKind, 'official_audio'); assert.equal(m.sourcePrintPage, undefined); assert.equal(m.sourcePdfPage, undefined); assert.match(m.outlineDestination, /\.mp3$/); }
       if (book === b) { assert.equal(m.editionStatus, 'historical_reference'); assert.match(m.evidence, /旧版参考/); }
     }
   }
@@ -119,7 +119,7 @@ test('all 38 grade-four units expose readable content, aligned sentences, questi
     }
     assert.equal(learning.searchCatalog({ bookId: book.id, grade: 3 }).length, 0);
   }
-  assert.equal(learning.progress({ records: {} }).grades[3].total, 229);
+  assert.equal(learning.progress({ records: {} }).grades[3].total, 241);
   assert.equal(learning.progress({ records: {} }).grades[3].practice.total, 126);
 });
 

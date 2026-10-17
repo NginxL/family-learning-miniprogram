@@ -1,0 +1,5032 @@
+{
+  "version": "2026-10-17",
+  "scope": "上海五四制六年级（初中）语文、英语上下册；官方原书目录、古诗文原页和英语单元词表；原创练习可直接学习。学校印次和未逐课整理的知识仍待确认。",
+  "books": [
+    {
+      "id": "chinese-6a",
+      "subject": "chinese",
+      "grade": 6,
+      "semester": "上册",
+      "title": "语文六年级上册（五四制·2022课标修订）",
+      "publisher": "人民教育出版社",
+      "edition": "国家平台五四制2022课标修订原书；纸本ISBN、版次及学校印次待确认",
+      "editionStatus": "official_resource_verified",
+      "schoolSystem": "5-4",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=2ca4002f-cb3d-4a21-bcfe-ebb94032a400&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourceKind": "official_textbook",
+      "checkedAt": "2026-10-17",
+      "schoolAdoption": "pending",
+      "sourcePageOffset": 7,
+      "cataloguePages": [
+        4,
+        5,
+        6
+      ],
+      "sourceEvidence": {
+        "totalPdfPages": 147,
+        "copyrightPdfPage": 3,
+        "cataloguePdfPages": [
+          4,
+          5,
+          6
+        ],
+        "checkedAgainst": "国家平台原书正文目录、作者出处与原页逐字核对；不以平台侧栏作正文证据。",
+        "copyrightExcluded": [
+          "毛泽东诗词及其他仍受保护的现代课文仅保留题名、主题和学习指引，不复制正文。"
+        ],
+        "pending": "未逐课列全现代课文阅读要点、课内字词、文言实词及所有栏目；学校实际印次待确认。",
+        "transcriptionSha256": "018821bf9166ee1124af88c28a10c8fa0bd61cd2031ffddfb71293d238231ae7"
+      },
+      "expectedUnitCount": 8,
+      "unitGroupingNote": "7个教材单元与1组课外古诗词诵读附录",
+      "inventory": {
+        "recognitionComplete": false,
+        "writingComplete": false,
+        "characterInventoryStructure": "lesson_based",
+        "unitPracticeComplete": true,
+        "fullTextAvailable": false,
+        "fullCoverage": false
+      },
+      "units": [
+        {
+          "id": "u1",
+          "number": 1,
+          "title": "景物与感受",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "草原",
+            "丁香结",
+            "诗词三首"
+          ],
+          "sourcePrintPage": 1,
+          "sourcePdfPage": 8,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "雨后的操场",
+            "body": "雨停后，我走到操场边。跑道上的积水像一条细长的带子，把云的影子留了下来。风掠过树梢，几滴水落在我的手背上。我原本还为运动会延期闷闷不乐，此刻却慢下脚步，数起水洼里摇晃的树叶。远处传来同学的笑声，灰暗的天空似乎也明亮了一些。操场并没有变大，天气也没有完全放晴，改变的是我看它的心情。",
+            "question": "作者的心情如何变化？找出一处能表现变化的景物描写。",
+            "answer": "由失落变得平静、愉快；数水洼中摇晃的树叶、觉得天空明亮，表现了观察方式随心情改变。",
+            "skill": "观察熟悉的地方，分别写出心情不同时注意到的细节。",
+            "titleReading": "yǔ hòu de cāo chǎng",
+            "detailReading": "yǔ tíng hòu wǒ zǒu dào cāo chǎng biān pǎo dào shàng de jī shuǐ xiàng yī tiáo xì cháng de dài zi bǎ yún de yǐng zi liú le xià lái fēng lüè guò shù shāo jǐ dī shuǐ luò zài wǒ de shǒu bèi shàng wǒ yuán běn hái wèi yùn dòng huì yán qī mèn mèn bù lè cǐ kè què màn xià jiǎo bù shù qǐ shuǐ wā lǐ yáo huàng de shù yè yuǎn chù chuán lái tóng xué de xiào shēng huī àn de tiān kōng sì hū yě míng liàng le yī xiē cāo chǎng bìng méi yǒu biàn dà tiān qì yě méi yǒu wán quán fàng qíng gǎi biàn de shì wǒ kàn tā de xīn qíng xiǎng yī xiǎng zuò zhě de xīn qíng rú hé biàn huà zhǎo chū yī chù néng biǎo xiàn biàn huà de jǐng wù miáo xiě cān kǎo yóu shī luò biàn dé píng jìng yú kuài shù shuǐ wā zhōng yáo huàng de shù yè jué de tiān kōng míng liàng biǎo xiàn le guān chá fāng shì suí xīn qíng gǎi biàn liàn yī liàn guān chá shú xī de dì fāng fēn bié xiě chū xīn qíng bù tóng shí zhù yì dào de xì jié"
+          },
+          "poems": [
+            {
+              "contentId": "sh54-jiande",
+              "sourcePrintPage": 11,
+              "sourcePdfPage": 18,
+              "identityEvidence": {
+                "author": "孟浩然",
+                "firstLine": "移舟泊烟渚",
+                "sourcePdfPage": 18
+              }
+            },
+            {
+              "contentId": "moe-2022-zh-1-6-053",
+              "sourcePrintPage": 12,
+              "sourcePdfPage": 19,
+              "identityEvidence": {
+                "author": "苏轼",
+                "firstLine": "黑云翻墨未遮山",
+                "sourcePdfPage": 19
+              }
+            },
+            {
+              "contentId": "sh54-xijiangyue",
+              "sourcePrintPage": 12,
+              "sourcePdfPage": 19,
+              "identityEvidence": {
+                "author": "辛弃疾",
+                "firstLine": "明月别枝惊鹊",
+                "sourcePdfPage": 19
+              }
+            }
+          ]
+        },
+        {
+          "id": "u2",
+          "number": 2,
+          "title": "革命传统与活动",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "七律·长征",
+            "狼牙山五壮士",
+            "开国大典",
+            "我的战友邱少云"
+          ],
+          "sourcePrintPage": 21,
+          "sourcePdfPage": 28,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "一次接力赛",
+            "body": "最后一棒开始时，我们班落后了半圈。跑道内侧，同学们举起小旗，为每一位奔跑的人加油。小宁接过接力棒，先稳住步子，再在弯道后加速。他没有追上第一名，却比自己练习时快了许多。比赛结束，队员们没有互相埋怨，而是围在一起，看记录员写下的交接时间。下一次训练，他们决定先练交接动作。热闹的赛场上，我记住的不只是名次，还有大家一起寻找改进办法的样子。",
+            "question": "哪些句子写整个赛场，哪些句子重点写一个人？结尾表达了什么看法？",
+            "answer": "小旗和加油声写场面，小宁稳住步子、加速写个人；结尾重视合作与改进。",
+            "skill": "用先写场面、再写人物动作的方法记录一次真实活动。",
+            "titleReading": "yī cì jiē lì sài",
+            "detailReading": "zuì hòu yī bàng kāi shǐ shí wǒ men bān luò hòu le bàn quān pǎo dào nèi cè tóng xué men jǔ qǐ xiǎo qí wèi měi yī wèi bēn pǎo de rén jiā yóu xiǎo níng jiē guò jiē lì bàng xiān wěn zhù bù zi zài zài wān dào hòu jiā sù tā méi yǒu zhuī shàng dì yì míng què bǐ zì jǐ liàn xí shí kuài le xǔ duō bǐ sài jié shù duì yuán men méi yǒu hù xiāng mán yuàn ér shì wéi zài yì qǐ kàn jì lù yuán xiě xià de jiāo jiē shí jiān xià yī cì xùn liàn tā men jué dìng xiān liàn jiāo jiē dòng zuò rè nào de sài chǎng shàng wǒ jì zhù de bù zhǐ shì míng cì hái yǒu dà jiā yì qǐ xún zhǎo gǎi jìn bàn fǎ de yàng zi xiǎng yī xiǎng nǎ xiē jù zi xiě zhěng gè sài chǎng nǎ xiē jù zi zhòng diǎn xiě yí gè rén jié wěi biǎo dá le shén me kàn fǎ cān kǎo xiǎo qí hé jiā yóu shēng xiě chǎng miàn xiǎo níng wěn zhù bù zi jiā sù xiě gè rén jié wěi zhòng shì hé zuò yǔ gǎi jìn liàn yī liàn yòng xiān xiě chǎng miàn zài xiě rén wù dòng zuò de fāng fǎ jì lù yī cì zhēn shí huó dòng"
+          },
+          "poems": []
+        },
+        {
+          "id": "u3",
+          "number": 3,
+          "title": "阅读目的与说明",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "竹节人",
+            "宇宙生命之谜",
+            "故宫博物院",
+            "古代诗歌三首"
+          ],
+          "sourcePrintPage": 45,
+          "sourcePdfPage": 52,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "同一张地图",
+            "body": "小组拿到一份城市公园介绍，里面有历史故事、植物说明和游览地图。小雨要找从北门到湖边最近的路线，先看地图上的路口；阿宁想观察水生植物，就仔细阅读植物说明；小禾准备介绍公园的来历，便寻找历史部分。三人读的是同一份资料，却圈出了不同的信息。最后他们互相解释选择的理由，把路线、观察点和讲解内容合成一张游览卡。资料不必每次都从头读到尾，明确目的才能决定哪里略读、哪里细读。",
+            "question": "三个人为什么圈出不同的信息？如果只想知道闭园时间，应先找什么？",
+            "answer": "他们的阅读目的不同；可先找开放时间或游客须知，不必先读完整历史故事。",
+            "skill": "为一份说明资料提出两个不同问题，并说明各自的查找路径。",
+            "titleReading": "tóng yī zhāng dì tú",
+            "detailReading": "xiǎo zǔ ná dào yī fèn chéng shì gōng yuán jiè shào lǐ miàn yǒu lì shǐ gù shì zhí wù shuō míng hé yóu lǎn dì tú xiǎo yǔ yào zhǎo cóng běi mén dào hú biān zuì jìn de lù xiàn xiān kàn dì tú shàng de lù kǒu ā níng xiǎng guān chá shuǐ shēng zhí wù jiù zǐ xì yuè dú zhí wù shuō míng xiǎo hé zhǔn bèi jiè shào gōng yuán de lái lì biàn xún zhǎo lì shǐ bù fèn sān rén dú de shì tóng yī fèn zī liào què quān chū le bù tóng de xìn xī zuì hòu tā men hù xiāng jiě shì xuǎn zé de lǐ yóu bǎ lù xiàn guān chá diǎn hé jiǎng jiě nèi róng hé chéng yī zhāng yóu lǎn kǎ zī liào bù bì měi cì dōu cóng tóu dú dào wěi míng què mù dì cái néng jué dìng nǎ lǐ lüè dú nǎ lǐ xì dú xiǎng yī xiǎng sān gè rén wèi shén me quān chū bù tóng de xìn xī rú guǒ zhǐ xiǎng zhī dào bì yuán shí jiān yīng xiān zhǎo shén me cān kǎo tā men de yuè dú mù dì bù tóng kě xiān zhǎo kāi fàng shí jiān huò yóu kè xū zhī bù bì xiān dú wán zhěng lì shǐ gù shì liàn yī liàn wèi yī fèn shuō míng zī liào tí chū liǎng gè bù tóng wèn tí bìng shuō míng gè zì de chá zhǎo lù jìng"
+          },
+          "poems": [
+            {
+              "contentId": "moe-2022-zh-1-6-036",
+              "sourcePrintPage": 62,
+              "sourcePdfPage": 69,
+              "identityEvidence": {
+                "author": "刘禹锡",
+                "firstLine": "九曲黄河万里沙",
+                "sourcePdfPage": 69
+              }
+            },
+            {
+              "contentId": "moe-2022-zh-1-6-047",
+              "sourcePrintPage": 62,
+              "sourcePdfPage": 69,
+              "identityEvidence": {
+                "author": "杜牧",
+                "firstLine": "千里莺啼绿映红",
+                "sourcePdfPage": 69
+              }
+            },
+            {
+              "contentId": "moe-2022-zh-1-6-052",
+              "sourcePrintPage": 63,
+              "sourcePdfPage": 70,
+              "identityEvidence": {
+                "author": "王安石",
+                "firstLine": "茅檐长扫净无苔",
+                "sourcePdfPage": 70
+              }
+            }
+          ]
+        },
+        {
+          "id": "u4",
+          "number": 4,
+          "title": "小说人物与情节",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "桥",
+            "穷人",
+            "金色的鱼钩"
+          ],
+          "sourcePrintPage": 67,
+          "sourcePdfPage": 74,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "窗边的空座位",
+            "body": "新来的同学总坐在窗边，很少说话。分组做纸桥时，大家忙着画漂亮的桥面，他却反复折一条旧纸。有人说他没参与，他没有争辩，只把纸条折成波浪形，放在两个纸杯之间。第一座平纸桥很快弯了，波浪形的桥却稳稳托住几枚硬币。大家围过来问方法，他的脸慢慢红了。第二天分组，窗边的座位仍然空着——他已经被同学叫到中间，和大家一起试新的桥。",
+            "question": "人物主要通过哪些行为被认识？结尾的空座位和开头有什么不同？",
+            "answer": "通过反复折纸、不争辩、展示纸桥等动作认识他；开头表现疏离，结尾说明他已融入小组。",
+            "skill": "不用“聪明”“热心”等评价词，用动作描写一个人物。",
+            "titleReading": "chuāng biān de kōng zuò wèi",
+            "detailReading": "xīn lái de tóng xué zǒng zuò zài chuāng biān hěn shǎo shuō huà fēn zǔ zuò zhǐ qiáo shí dà jiā máng zhe huà piào liàng de qiáo miàn tā què fǎn fù zhé yī tiáo jiù zhǐ yǒu rén shuō tā méi cān yù tā méi yǒu zhēng biàn zhǐ bǎ zhǐ tiáo zhé chéng bō làng xíng fàng zài liǎng gè zhǐ bēi zhī jiān dì yī zuò píng zhǐ qiáo hěn kuài wān le bō làng xíng de qiáo què wěn wěn tuō zhù jǐ méi yìng bì dà jiā wéi guò lái wèn fāng fǎ tā de liǎn màn màn hóng le dì èr tiān fèn zǔ chuāng biān de zuò wèi réng rán kōng zhe tā yǐ jīng bèi tóng xué jiào dào zhōng jiān hé dà jiā yì qǐ shì xīn de qiáo xiǎng yī xiǎng rén wù zhǔ yào tōng guò nǎ xiē xíng wéi bèi rèn shí jié wěi de kōng zuò wèi hé kāi tóu yǒu shén me bù tóng cān kǎo tōng guò fǎn fù zhé zhǐ bù zhēng biàn zhǎn shì zhǐ qiáo děng dòng zuò rèn shí tā kāi tóu biǎo xiàn shū lí jié wěi shuō míng tā yǐ róng rù xiǎo zǔ liàn yī liàn bù yòng cōng míng rè xīn děng píng jià cí yòng dòng zuò miáo xiě yí gè rén wù"
+          },
+          "poems": []
+        },
+        {
+          "id": "u5",
+          "number": 5,
+          "title": "细节与感受",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "灯光",
+            "盼",
+            "小站"
+          ],
+          "sourcePrintPage": 89,
+          "sourcePdfPage": 96,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "门口的一盏灯",
+            "body": "每天晚饭前，爷爷会把门口的灯打开。我一直觉得天还亮，这样太早。一个下雨的傍晚，我放学后整理教室，回家比平时晚。走到巷口时，路面映着零碎的灯光，我一眼认出了家门口那团暖黄色。爷爷没有问为什么这么晚，只把干毛巾递过来。后来我才知道，他开灯是想让我转过街角就看见回家的方向。灯泡并不特别明亮，可我记得雨水从伞沿滴下时，心里忽然安定下来的感觉。",
+            "question": "哪两个细节表现爷爷的关心？作者对开灯这件事的理解如何改变？",
+            "answer": "提前开灯、递干毛巾表现关心；由觉得多余，变为理解这盏灯让人安心。",
+            "skill": "选一件小事，用感官细节写出真实感受。",
+            "titleReading": "mén kǒu de yī zhǎn dēng",
+            "detailReading": "měi tiān wǎn fàn qián yé yé huì bǎ mén kǒu de dēng dǎ kāi wǒ yì zhí jué de tiān hái liàng zhè yàng tài zǎo yí gè xià yǔ de bàng wǎn wǒ fàng xué hòu zhěng lǐ jiào shì huí jiā bǐ píng shí wǎn zǒu dào xiàng kǒu shí lù miàn yìng zhe líng suì de dēng guāng wǒ yī yǎn rèn chū le jiā mén kǒu nà tuán nuǎn huáng sè yé yé méi yǒu wèn wèi shén me zhè me wǎn zhǐ bǎ gàn máo jīn dì guò lái hòu lái wǒ cái zhī dào tā kāi dēng shì xiǎng ràng wǒ zhuǎn guò jiē jiǎo jiù kàn jiàn huí jiā de fāng xiàng dēng pào bìng bù tè bié míng liàng kě wǒ jì de yǔ shuǐ cóng sǎn yán dī xià shí xīn lǐ hū rán ān dìng xià lái de gǎn jué xiǎng yī xiǎng nǎ liǎng gè xì jié biǎo xiàn yé yé de guān xīn zuò zhě duì kāi dēng zhè jiàn shì de lǐ jiě rú hé gǎi biàn cān kǎo tí qián kāi dēng dì gàn máo jīn biǎo xiàn guān xīn yóu jué de duō yú biàn wèi lǐ jiě zhè zhǎn dēng ràng rén ān xīn liàn yī liàn xuǎn yī jiàn xiǎo shì yòng gǎn guān xì jié xiě chū zhēn shí gǎn shòu"
+          },
+          "poems": []
+        },
+        {
+          "id": "u6",
+          "number": 6,
+          "title": "阅读分享与诗歌表达",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "毛主席在花山",
+            "十里长街送总理",
+            "飞夺泸定桥",
+            "囚歌"
+          ],
+          "sourcePrintPage": 103,
+          "sourcePdfPage": 110,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "怎样做一页诗歌选集",
+            "body": "小组准备编一本诗歌选集。阿宁想按作者排序，小禾建议按主题分类。讨论后，大家决定先选“勇气”这个主题，每人找一首作品，记录作者、出处和选入理由。朗读时，他们发现同一句诗可以读得急促，也可以读得坚定，于是回到前后文讨论语气。最后的选集没有堆满装饰，每页只留下核实过的原文、简短的推荐语和出处。分享会上，大家先说明选择依据，再谈自己的感受，也认真区分作品原句和自己的解释。",
+            "question": "编选集时为什么要记录出处？如何判断朗读语气是否合适？",
+            "answer": "出处帮助核实原文并尊重作者；朗读语气应结合语境、情感与关键词判断，不能只求响亮。",
+            "skill": "选一首公版诗，写推荐语，并给原文与自己的解释作清楚区分。",
+            "titleReading": "zěn yàng zuò yī yè shī gē xuǎn jí",
+            "detailReading": "xiǎo zǔ zhǔn bèi biān yī běn shī gē xuǎn jí ā níng xiǎng àn zuò zhě pái xù xiǎo hé jiàn yì àn zhǔ tí fēn lèi tǎo lùn hòu dà jiā jué dìng xiān xuǎn yǒng qì zhè ge zhǔ tí měi rén zhǎo yī shǒu zuò pǐn jì lù zuò zhě chū chǔ hé xuǎn rù lǐ yóu lǎng dú shí tā men fā xiàn tóng yī jù shī kě yǐ dú dé jí cù yě kě yǐ dú dé jiān dìng yú shì huí dào qián hòu wén tǎo lùn yǔ qì zuì hòu de xuǎn jí méi yǒu duī mǎn zhuāng shì měi yè zhǐ liú xià hé shí guò de yuán wén jiǎn duǎn de tuī jiàn yǔ hé chū chǔ fēn xiǎng huì shàng dà jiā xiān shuō míng xuǎn zé yī jù zài tán zì jǐ de gǎn shòu yě rèn zhēn qū fēn zuò pǐn yuán jù hé zì jǐ de jiě shì xiǎng yī xiǎng biān xuǎn jí shí wèi shén me yào jì lù chū chǔ rú hé pàn duàn lǎng dú yǔ qì shì fǒu hé shì cān kǎo chū chǔ bāng zhù hé shí yuán wén bìng zūn zhòng zuò zhě lǎng dú yǔ qì yīng jié hé yǔ jìng qíng gǎn yǔ guān jiàn cí pàn duàn bù néng zhǐ qiú xiǎng liàng liàn yī liàn xuǎn yī shǒu gōng bǎn shī xiě tuī jiàn yǔ bìng gěi yuán wén yǔ zì jǐ de jiě shì zuò qīng chǔ qū fēn"
+          },
+          "poems": [
+            {
+              "contentId": "sh54-qiuge",
+              "sourcePrintPage": 112,
+              "sourcePdfPage": 119,
+              "identityEvidence": {
+                "author": "叶挺",
+                "firstLine": "为人进出的门紧锁着",
+                "sourcePdfPage": 119
+              }
+            }
+          ]
+        },
+        {
+          "id": "u7",
+          "number": 7,
+          "title": "科学与思辨",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "表里的生物",
+            "真理诞生于一百个问号之后",
+            "他们那时候多有趣啊",
+            "文言二则"
+          ],
+          "sourcePrintPage": 115,
+          "sourcePdfPage": 122,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "会跑的小纸船",
+            "body": "小禾发现，向水面滴一点洗洁精，小纸船便向前移动。她猜想船是被液体“推走”的，却没有马上把猜想写成结论。她用清水重复实验，再分别改变滴液的位置和用量，把结果记在表中。有一次船没有动，她检查后发现水盆里残留了洗洁精。换水重做后，现象重新出现。老师提醒她，观察到现象、提出解释和证明解释是三件不同的事。她在报告末尾写道：结果支持了某种解释，但还需要查资料、做更多对照。",
+            "question": "小禾怎样处理一次不符合预想的结果？为什么不能只凭一次观察就下结论？",
+            "answer": "她检查条件并换水重做；单次结果可能受多种条件影响，需要对照、重复与证据。",
+            "skill": "设计一个安全的小观察，分开记录事实、猜想与待验证问题。",
+            "titleReading": "huì pǎo de xiǎo zhǐ chuán",
+            "detailReading": "xiǎo hé fā xiàn xiàng shuǐ miàn dī yì diǎn xǐ jié jīng xiǎo zhǐ chuán biàn xiàng qián yí dòng tā cāi xiǎng chuán shì bèi yè tǐ tuī zǒu de què méi yǒu mǎ shàng bǎ cāi xiǎng xiě chéng jié lùn tā yòng qīng shuǐ chóng fù shí yàn zài fēn bié gǎi biàn dī yè de wèi zhì hé yòng liàng bǎ jié guǒ jì zài biǎo zhōng yǒu yī cì chuán méi yǒu dòng tā jiǎn chá hòu fā xiàn shuǐ pén lǐ cán liú le xǐ jié jīng huàn shuǐ zhòng zuò hòu xiàn xiàng chóng xīn chū xiàn lǎo shī tí xǐng tā guān chá dào xiàn xiàng tí chū jiě shì hé zhèng míng jiě shì shì sān jiàn bù tóng de shì tā zài bào gào mò wěi xiě dào jié guǒ zhī chí le mǒu zhǒng jiě shì dàn hái xū yào chá zī liào zuò gèng duō duì zhào xiǎng yī xiǎng xiǎo hé zěn yàng chǔ lǐ yī cì bù fú hé yù xiǎng de jié guǒ wèi shén me bù néng zhǐ píng yī cì guān chá jiù xià jié lùn cān kǎo tā jiǎn chá tiáo jiàn bìng huàn shuǐ zhòng zuò dān cì jié guǒ kě néng shòu duō zhǒng tiáo jiàn yǐng xiǎng xū yào duì zhào chóng fù yǔ zhèng jù liàn yī liàn shè jì yí gè ān quán de xiǎo guān chá fēn kāi jì lù shì shí cāi xiǎng yǔ dài yàn zhèng wèn tí"
+          },
+          "poems": [
+            {
+              "contentId": "sh54-two-children",
+              "sourcePrintPage": 128,
+              "sourcePdfPage": 135,
+              "identityEvidence": {
+                "author": "《列子》",
+                "firstLine": "孔子东游",
+                "sourcePdfPage": 135
+              }
+            },
+            {
+              "contentId": "sh54-caochong",
+              "sourcePrintPage": 129,
+              "sourcePdfPage": 136,
+              "identityEvidence": {
+                "author": "陈寿",
+                "firstLine": "邓哀王冲字仓舒",
+                "sourcePdfPage": 136
+              }
+            }
+          ]
+        },
+        {
+          "id": "u8",
+          "number": 8,
+          "title": "课外古诗词诵读",
+          "titleOrigin": "editorial_summary",
+          "lessons": [],
+          "sourcePrintPage": 134,
+          "sourcePdfPage": 141,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "把两首送别诗放在一起",
+            "body": "读送别诗时，小组先找人物、地点和关键动作，再比较诗人怎样表达离情。一位同学只凭标题就判断两首诗情绪相同，另一位则提醒他细看景物和语气：同样写朋友离开，有的借一杯酒表达牵挂，有的用开阔景象传递勉励。大家没有把自己的想象当成原文事实，而是在纸上分成“诗中写到”和“我的理解”两栏。比较之后，他们发现，背熟诗句是起点，联系具体词句说明感受，才能把阅读理解说清楚。",
+            "question": "“诗中写到”和“我的理解”为什么要分栏？比较诗歌时可以关注哪些方面？",
+            "answer": "分栏可以区分证据与解释；可比较人物关系、景物、动作、语气和情感。",
+            "skill": "任选两首已学古诗，引用各一处关键词说明相同点或不同点。",
+            "titleReading": "bǎ liǎng shǒu sòng bié shī fàng zài yì qǐ",
+            "detailReading": "dú sòng bié shī shí xiǎo zǔ xiān zhǎo rén wù dì diǎn hé guān jiàn dòng zuò zài bǐ jiào shī rén zěn yàng biǎo dá lí qíng yī wèi tóng xué zhǐ píng biāo tí jiù pàn duàn liǎng shǒu shī qíng xù xiāng tóng lìng yī wèi zé tí xǐng tā xì kàn jǐng wù hé yǔ qì tóng yàng xiě péng yǒu lí kāi yǒu de jiè yī bēi jiǔ biǎo dá qiān guà yǒu de yòng kāi kuò jǐng xiàng chuán dì miǎn lì dà jiā méi yǒu bǎ zì jǐ de xiǎng xiàng dàng chéng yuán wén shì shí ér shì zài zhǐ shàng fēn chéng shī zhōng xiě dào hé wǒ de lǐ jiě liǎng lán bǐ jiào zhī hòu tā men fā xiàn bèi shú shī jù shì qǐ diǎn lián xì jù tǐ cí jù shuō míng gǎn shòu cái néng bǎ yuè dú lǐ jiě shuō qīng chǔ xiǎng yī xiǎng shī zhōng xiě dào hé wǒ de lǐ jiě wèi shén me yào fēn lán bǐ jiào shī gē shí kě yǐ guān zhù nǎ xiē fāng miàn cān kǎo fēn lán kě yǐ qū fēn zhèng jù yǔ jiě shì kě bǐ jiào rén wù guān xì jǐng wù dòng zuò yǔ qì hé qíng gǎn liàn yī liàn rèn xuǎn liǎng shǒu yǐ xué gǔ shī yǐn yòng gè yī chù guān jiàn cí shuō míng xiāng tóng diǎn huò bù tóng diǎn"
+          },
+          "poems": [
+            {
+              "contentId": "sh54-old-friend",
+              "sourcePrintPage": 134,
+              "sourcePdfPage": 141,
+              "identityEvidence": {
+                "author": "孟浩然",
+                "firstLine": "故人具鸡黍",
+                "sourcePdfPage": 141
+              }
+            },
+            {
+              "contentId": "moe-2022-zh-1-6-015",
+              "sourcePrintPage": 135,
+              "sourcePdfPage": 142,
+              "identityEvidence": {
+                "author": "王维",
+                "firstLine": "渭城朝雨浥轻尘",
+                "sourcePdfPage": 142
+              }
+            },
+            {
+              "contentId": "moe-2022-zh-1-6-028",
+              "sourcePrintPage": 136,
+              "sourcePdfPage": 143,
+              "identityEvidence": {
+                "author": "杜甫",
+                "firstLine": "黄师塔前江水东",
+                "sourcePdfPage": 143
+              }
+            },
+            {
+              "contentId": "moe-2022-zh-1-6-065",
+              "sourcePrintPage": 137,
+              "sourcePdfPage": 144,
+              "identityEvidence": {
+                "author": "朱熹",
+                "firstLine": "胜日寻芳泗水滨",
+                "sourcePdfPage": 144
+              }
+            }
+          ],
+          "displayLabel": "附录 · 课外古诗词诵读"
+        }
+      ],
+      "replacesOutlineMappings": true
+    },
+    {
+      "id": "chinese-6b",
+      "subject": "chinese",
+      "grade": 6,
+      "semester": "下册",
+      "title": "语文六年级下册（五四制·2022课标修订）",
+      "publisher": "人民教育出版社",
+      "edition": "国家平台五四制2022课标修订原书；纸本ISBN、版次及学校印次待确认",
+      "editionStatus": "official_resource_verified",
+      "schoolSystem": "5-4",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=a953eeec-db0c-4c8b-860f-aa94f4727b6b&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourceKind": "official_textbook",
+      "checkedAt": "2026-10-17",
+      "schoolAdoption": "pending",
+      "sourcePageOffset": 7,
+      "cataloguePages": [
+        4,
+        5,
+        6
+      ],
+      "sourceEvidence": {
+        "totalPdfPages": 146,
+        "copyrightPdfPage": 3,
+        "cataloguePdfPages": [
+          4,
+          5,
+          6
+        ],
+        "checkedAgainst": "国家平台原书正文目录、作者出处与原页逐字核对；不以平台侧栏作正文证据。",
+        "copyrightExcluded": [
+          "毛泽东诗词及其他仍受保护的现代课文仅保留题名、主题和学习指引，不复制正文。"
+        ],
+        "pending": "未逐课列全现代课文阅读要点、课内字词、文言实词及所有栏目；学校实际印次待确认。",
+        "transcriptionSha256": "699fc0d5d8f0e41af00ce1fdb2bd8eb12d9d301adeccbfdf3466c720b30ad586"
+      },
+      "expectedUnitCount": 8,
+      "unitGroupingNote": "7个教材单元与1组课外古诗词诵读附录",
+      "inventory": {
+        "recognitionComplete": false,
+        "writingComplete": false,
+        "characterInventoryStructure": "lesson_based",
+        "unitPracticeComplete": true,
+        "fullTextAvailable": false,
+        "fullCoverage": false
+      },
+      "units": [
+        {
+          "id": "u1",
+          "number": 1,
+          "title": "风俗与节日",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "北京的春节",
+            "腊八粥",
+            "藏戏",
+            "古诗三首"
+          ],
+          "sourcePrintPage": 1,
+          "sourcePdfPage": 8,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "一碗汤圆里的变化",
+            "body": "元宵节前，奶奶教我们包汤圆。她先把糯米粉加水揉匀，再把面团分成小块。我最想写清包馅这一步：拇指慢慢压出小窝，放入馅料，手掌合拢轻轻转动。奶奶说，过去家里只在节日做，如今平日也能吃到，但一家人围坐着动手的习惯没有变。我在记录中详细写了包馅和围坐交谈的场景，买粉、洗碗等步骤只简略带过。风俗不只是一个名称，也藏在人们怎样相处的细节中。",
+            "question": "文章为什么详写包馅与交谈，略写其他步骤？哪一点表现了风俗中的“不变”？",
+            "answer": "详写部分突出亲人共同参与的感受；一家人围坐动手的习惯仍然保留。",
+            "skill": "记录一项真实家庭习惯，区分详写和略写内容，不把一家习惯说成所有人的风俗。",
+            "titleReading": "yī wǎn tāng yuán lǐ de biàn huà",
+            "detailReading": "yuán xiāo jié qián nǎi nǎi jiào wǒ men bāo tāng yuán tā xiān bǎ nuò mǐ fěn jiā shuǐ róu yún zài bǎ miàn tuán fēn chéng xiǎo kuài wǒ zuì xiǎng xiě qīng bāo xiàn zhè yī bù mǔ zhǐ màn màn yā chū xiǎo wō fàng rù xiàn liào shǒu zhǎng hé lǒng qīng qīng zhuǎn dòng nǎi nǎi shuō guò qù jiā lǐ zhǐ zài jié rì zuò rú jīn píng rì yě néng chī dào dàn yī jiā rén wéi zuò zhe dòng shǒu de xí guàn méi yǒu biàn wǒ zài jì lù zhōng xiáng xì xiě le bāo xiàn hé wéi zuò jiāo tán de chǎng jǐng mǎi fěn xǐ wǎn děng bù zhòu zhǐ jiǎn lüè dài guò fēng sú bù zhǐ shì yí gè míng chēng yě cáng zài rén men zěn yàng xiāng chǔ de xì jié zhōng xiǎng yī xiǎng wén zhāng wèi shén me xiáng xiě bāo xiàn yǔ jiāo tán lüè xiě qí tā bù zhòu nǎ yì diǎn biǎo xiàn le fēng sú zhōng de bù biàn cān kǎo xiáng xiě bù fèn tū chū qīn rén gòng tóng cān yù de gǎn shòu yī jiā rén wéi zuò dòng shǒu de xí guàn réng rán bǎo liú liàn yī liàn jì lù yī xiàng zhēn shí jiā tíng xí guàn qū fēn xiáng xiě hé lüè xiě nèi róng bù bǎ yī jiā xí guàn shuō chéng suǒ yǒu rén de fēng sú"
+          },
+          "poems": [
+            {
+              "contentId": "sh54-tiaotiao-qianniuxing",
+              "sourcePrintPage": 13,
+              "sourcePdfPage": 20,
+              "identityEvidence": {
+                "author": "《古诗十九首》",
+                "firstLine": "迢迢牵牛星",
+                "sourcePdfPage": 20
+              }
+            },
+            {
+              "contentId": "sh54-cold-food",
+              "sourcePrintPage": 14,
+              "sourcePdfPage": 21,
+              "identityEvidence": {
+                "author": "韩翃",
+                "firstLine": "春城无处不飞花",
+                "sourcePdfPage": 21
+              }
+            },
+            {
+              "contentId": "sh54-moon-fifteen",
+              "sourcePrintPage": 14,
+              "sourcePdfPage": 21,
+              "identityEvidence": {
+                "author": "王建",
+                "firstLine": "中庭地白树栖鸦",
+                "sourcePdfPage": 21
+              }
+            },
+            {
+              "contentId": "sh54-shengchazi",
+              "sourcePrintPage": 15,
+              "sourcePdfPage": 22,
+              "identityEvidence": {
+                "author": "欧阳修",
+                "firstLine": "去年元夜时",
+                "sourcePdfPage": 22
+              },
+              "textVariantNote": "课后延伸阅读，不是本课要求背诵的三首诗。"
+            }
+          ]
+        },
+        {
+          "id": "u2",
+          "number": 2,
+          "title": "人物志向与责任",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "为人民服务",
+            "十六年前的回忆",
+            "董存瑞舍身炸暗堡",
+            "古诗三首"
+          ],
+          "sourcePrintPage": 19,
+          "sourcePdfPage": 26,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "图书角的值日表",
+            "body": "图书角总有几本书找不到原位。新值日员阿宁没有先责怪借书的人，而是观察了三天：标签太小，低年级同学看不清；借还记录放得太高，也不方便填写。她和同学重新设计了颜色标签，把记录本移到桌边，又邀请大家试用。一周后，散乱的书少了。分享时，她没有说“我让所有人变自觉了”，而是说明哪些改变帮助了大家。她想把图书角照顾好，也学会了让自己的愿望变成可检查、可改进的行动。",
+            "question": "阿宁的行动怎样体现责任心？她为什么没有把结果简单归因于“大家变自觉”？",
+            "answer": "先观察困难，再设计改进并检验效果，体现负责；结果与标签、记录位置等具体条件有关。",
+            "skill": "写一个愿望，并列出可执行的第一步和检验方法。",
+            "titleReading": "tú shū jiǎo de zhí rì biǎo",
+            "detailReading": "tú shū jiǎo zǒng yǒu jǐ běn shū zhǎo bú dào yuán wèi xīn zhí rì yuán ā níng méi yǒu xiān zé guài jiè shū de rén ér shì guān chá le sān tiān biāo qiān tài xiǎo dī nián jí tóng xué kàn bù qīng jiè hái jì lù fàng dé tài gāo yě bù fāng biàn tián xiě tā hé tóng xué chóng xīn shè jì le yán sè biāo qiān bǎ jì lù běn yí dào zhuō biān yòu yāo qǐng dà jiā shì yòng yī zhōu hòu sǎn luàn de shū shǎo le fēn xiǎng shí tā méi yǒu shuō wǒ ràng suǒ yǒu rén biàn zì jué le ér shì shuō míng nǎ xiē gǎi biàn bāng zhù le dà jiā tā xiǎng bǎ tú shū jiǎo zhào gù hǎo yě xué huì le ràng zì jǐ de yuàn wàng biàn chéng kě jiǎn chá kě gǎi jìn de xíng dòng xiǎng yī xiǎng ā níng de xíng dòng zěn yàng tǐ xiàn zé rèn xīn tā wèi shén me méi yǒu bǎ jié guǒ jiǎn dān guī yīn yú dà jiā biàn zì jué cān kǎo xiān guān chá kùn nán zài shè jì gǎi jìn bìng jiǎn yàn xiào guǒ tǐ xiàn fù zé jié guǒ yǔ biāo qiān jì lù wèi zhì děng jù tǐ tiáo jiàn yǒu guān liàn yī liàn xiě yí gè yuàn wàng bìng liè chū kě zhí xíng de dì yī bù hé jiǎn yàn fāng fǎ"
+          },
+          "poems": [
+            {
+              "contentId": "sh54-cicada",
+              "sourcePrintPage": 30,
+              "sourcePdfPage": 37,
+              "identityEvidence": {
+                "author": "虞世南",
+                "firstLine": "垂緌饮清露",
+                "sourcePdfPage": 37
+              }
+            },
+            {
+              "contentId": "sh54-horse",
+              "sourcePrintPage": 30,
+              "sourcePdfPage": 37,
+              "identityEvidence": {
+                "author": "李贺",
+                "firstLine": "大漠沙如雪",
+                "sourcePdfPage": 37
+              }
+            },
+            {
+              "contentId": "moe-2022-zh-1-6-072",
+              "sourcePrintPage": 31,
+              "sourcePdfPage": 38,
+              "identityEvidence": {
+                "author": "郑燮",
+                "firstLine": "咬定青山不放松",
+                "sourcePdfPage": 38
+              }
+            }
+          ]
+        },
+        {
+          "id": "u3",
+          "number": 3,
+          "title": "真情与学习",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "匆匆",
+            "那个星期天",
+            "别了，语文课",
+            "文言二则"
+          ],
+          "sourcePrintPage": 35,
+          "sourcePdfPage": 42,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "最后一次值日",
+            "body": "学期最后一天，我负责擦黑板。平时嫌麻烦的角落，这次却擦了两遍。粉笔盒里剩下几截短短的粉笔，窗台上还有同学照顾了一学期的小盆栽。我把花盆移到便于搬走的位置，才发现盆底压着一张写有浇水日期的纸。回想起我们轮流照顾它的日子，我有些舍不得。走出教室前，我回头看了一眼，没有说什么，只把门轻轻关上。以前总觉得一个学期很长，到了分别时，才知道许多小事已经成为共同的记忆。",
+            "question": "文章没有直接反复说“难过”，怎样表达不舍？哪处动作最能支持你的判断？",
+            "answer": "通过擦两遍、关注旧物、回头看和轻关门等细节表达不舍；可选择一处说明理由。",
+            "skill": "写一段真实经历，用动作和具体事物表现情感。",
+            "titleReading": "zuì hòu yī cì zhí rì",
+            "detailReading": "xué qī zuì hòu yī tiān wǒ fù zé cā hēi bǎn píng shí xián má fán de jiǎo luò zhè cì què cā le liǎng biàn fěn bǐ hé lǐ shèng xià jǐ jié duǎn duǎn de fěn bǐ chuāng tái shàng hái yǒu tóng xué zhào gù le yī xué qī de xiǎo pén zāi wǒ bǎ huā pén yí dào biàn yú bān zǒu de wèi zhì cái fā xiàn pén dǐ yā zhe yī zhāng xiě yǒu jiāo shuǐ rì qī de zhǐ huí xiǎng qǐ wǒ men lún liú zhào gù tā de rì zi wǒ yǒu xiē shě bù dé zǒu chū jiào shì qián wǒ huí tóu kàn le yī yǎn méi yǒu shuō shén me zhǐ bǎ mén qīng qīng guān shàng yǐ qián zǒng jué de yí gè xué qī hěn zhǎng dào le fēn bié shí cái zhī dào xǔ duō xiǎo shì yǐ jīng chéng wéi gòng tóng de jì yì xiǎng yī xiǎng wén zhāng méi yǒu zhí jiē fǎn fù shuō nán guò zěn yàng biǎo dá bù shě nǎ chù dòng zuò zuì néng zhī chí nǐ de pàn duàn cān kǎo tōng guò cā liǎng biàn guān zhù jiù wù huí tóu kàn hé qīng guān mén děng xì jié biǎo dá bù shě kě xuǎn zé yī chù shuō míng lǐ yóu liàn yī liàn xiě yī duàn zhēn shí jīng lì yòng dòng zuò hé jù tǐ shì wù biǎo xiàn qíng gǎn"
+          },
+          "poems": [
+            {
+              "contentId": "sh54-chess",
+              "sourcePrintPage": 46,
+              "sourcePdfPage": 53,
+              "identityEvidence": {
+                "author": "《孟子》",
+                "firstLine": "弈秋",
+                "sourcePdfPage": 53
+              }
+            },
+            {
+              "contentId": "sh54-archery",
+              "sourcePrintPage": 47,
+              "sourcePdfPage": 54,
+              "identityEvidence": {
+                "author": "《列子》",
+                "firstLine": "列子学射",
+                "sourcePdfPage": 54
+              }
+            }
+          ]
+        },
+        {
+          "id": "u4",
+          "number": 4,
+          "title": "名著阅读与人物",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "万卡",
+            "小抄写员",
+            "骑鹅旅行记（节选）"
+          ],
+          "sourcePrintPage": 51,
+          "sourcePdfPage": 58,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "读到不同意见时",
+            "body": "读书会上，两个同学对故事中的主人公看法不同。小雨认为他勇敢，因为他主动承担了一件困难的事；阿宁觉得他也有鲁莽的一面，因为行动前没有听完别人的提醒。老师请他们回到相关章节，分别说明当时的处境、选择和后果。讨论后，两人发现这些看法并不一定互相排斥：人物可能既有值得欣赏的品质，也有需要改变的弱点。他们在阅读记录中补上页码，并写下后续章节是否改变了自己的判断。",
+            "question": "两个不同评价为什么可能同时成立？评价人物时至少需要什么依据？",
+            "answer": "人物有多个方面；评价应结合具体情节、处境、行动与后果，而不是只贴标签。",
+            "skill": "给正在读的作品人物写两条评价，每条配一处可核对的情节。",
+            "titleReading": "dú dào bù tóng yì jiàn shí",
+            "detailReading": "dú shū huì shàng liǎng gè tóng xué duì gù shì zhōng de zhǔ rén gōng kàn fǎ bù tóng xiǎo yǔ rèn wéi tā yǒng gǎn yīn wèi tā zhǔ dòng chéng dān le yī jiàn kùn nán de shì ā níng jué de tā yě yǒu lǔ mǎng de yí miàn yīn wèi xíng dòng qián méi yǒu tīng wán bié rén de tí xǐng lǎo shī qǐng tā men huí dào xiāng guān zhāng jié fēn bié shuō míng dāng shí de chǔ jìng xuǎn zé hé hòu guǒ tǎo lùn hòu liǎng rén fā xiàn zhè xiē kàn fǎ bìng bù yí dìng hù xiāng pái chì rén wù kě néng jì yǒu zhí de xīn shǎng de pǐn zhì yě yǒu xū yào gǎi biàn de ruò diǎn tā men zài yuè dú jì lù zhōng bǔ shàng yè mǎ bìng xiě xià hòu xù zhāng jié shì fǒu gǎi biàn le zì jǐ de pàn duàn xiǎng yī xiǎng liǎng gè bù tóng píng jià wèi shén me kě néng tóng shí chéng lì píng jià rén wù shí zhì shǎo xū yào shén me yī jù cān kǎo rén wù yǒu duō gè fāng miàn píng jià yīng jié hé jù tǐ qíng jié chǔ jìng xíng dòng yǔ hòu guǒ ér bú shì zhǐ tiē biāo qiān liàn yī liàn gěi zhèng zài dú de zuò pǐn rén wù xiě liǎng tiáo píng jià měi tiáo pèi yī chù kě hé duì de qíng jié"
+          },
+          "poems": []
+        },
+        {
+          "id": "u5",
+          "number": 5,
+          "title": "建设与贡献",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "詹天佑",
+            "中国有能力解决好吃饭问题",
+            "绚丽的彩虹"
+          ],
+          "sourcePrintPage": 75,
+          "sourcePdfPage": 82,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "一张被修改的设计图",
+            "body": "小组要为班级做一架展示模型。第一张设计图很漂亮，真正动手时却发现纸板太薄，支架会弯。负责设计的小禾有些失望，但她没有把图藏起来，而是请同学标出受力和连接处的问题。大家换了折叠方式，增加横向支撑，又测量模型能承受多少重量。展示时，他们把第一张和最后一张图并排放着，说明修改的依据。老师说，解决问题的价值，不只在最后的作品，也在面对限制时愿意听取意见、用证据改进的过程。",
+            "question": "小组如何应对设计中的限制？为什么把两张图一起展示？",
+            "answer": "通过检查结构、改折法、加支撑和测量改进；两张图展示了问题与修改依据。",
+            "skill": "写一段感谢合作伙伴的话，结合具体行动说明“有你真好”。",
+            "titleReading": "yī zhāng bèi xiū gǎi de shè jì tú",
+            "detailReading": "xiǎo zǔ yào wèi bān jí zuò yī jià zhǎn shì mó xíng dì yī zhāng shè jì tú hěn piào liàng zhēn zhèng dòng shǒu shí què fā xiàn zhǐ bǎn tài báo zhī jià huì wān fù zé shè jì de xiǎo hé yǒu xiē shī wàng dàn tā méi yǒu bǎ tú cáng qǐ lái ér shì qǐng tóng xué biāo chū shòu lì hé lián jiē chù de wèn tí dà jiā huàn le zhé dié fāng shì zēng jiā héng xiàng zhī chēng yòu cè liáng mó xíng néng chéng shòu duō shǎo zhòng liàng zhǎn shì shí tā men bǎ dì yī zhāng hé zuì hòu yī zhāng tú bìng pái fàng zhe shuō míng xiū gǎi de yī jù lǎo shī shuō jiě jué wèn tí de jià zhí bù zhǐ zài zuì hòu de zuò pǐn yě zài miàn duì xiàn zhì shí yuàn yì tīng qǔ yì jiàn yòng zhèng jù gǎi jìn de guò chéng xiǎng yī xiǎng xiǎo zǔ rú hé yìng duì shè jì zhōng de xiàn zhì wèi shén me bǎ liǎng zhāng tú yì qǐ zhǎn shì cān kǎo tōng guò jiǎn chá jié gòu gǎi zhé fǎ jiā zhī chēng hé cè liáng gǎi jìn liǎng zhāng tú zhǎn shì le wèn tí yǔ xiū gǎi yī jù liàn yī liàn xiě yī duàn gǎn xiè hé zuò huǒ bàn de huà jié hé jù tǐ xíng dòng shuō míng yǒu nǐ zhēn hǎo"
+          },
+          "poems": []
+        },
+        {
+          "id": "u6",
+          "number": 6,
+          "title": "环境与责任",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "只有一个地球",
+            "青山不老",
+            "三黑和土地"
+          ],
+          "sourcePrintPage": 93,
+          "sourcePdfPage": 100,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "一份可以执行的倡议",
+            "body": "班级想减少活动后的垃圾。第一份倡议写着“大家一定要保护环境”，却没有说明怎么做。大家观察一次活动后发现，最多的是一次性杯子和混在一起的包装。修改后的倡议提出：自带可重复使用的水杯，在场地出口设置清楚的分类标识，每组留两人检查清理情况。试行一周后，他们统计垃圾袋数量，也记录哪些做法不方便。倡议没有夸大一周的效果，而是把数据和问题一起贴出，请大家继续提出建议。",
+            "question": "第二份倡议比第一份具体在哪里？评价效果时为什么也要记录问题？",
+            "answer": "提出了对象、行动和分工；记录问题有助于了解效果的限制并继续改进。",
+            "skill": "为身边一件事写三条可执行建议，注明谁做、何时做、怎样检查。",
+            "titleReading": "yī fèn kě yǐ zhí xíng de chàng yì",
+            "detailReading": "bān jí xiǎng jiǎn shǎo huó dòng hòu de lā jī dì yī fèn chàng yì xiě zhe dà jiā yí dìng yào bǎo hù huán jìng què méi yǒu shuō míng zěn me zuò dà jiā guān chá yī cì huó dòng hòu fā xiàn zuì duō de shì yí cì xìng bēi zi hé hùn zài yì qǐ de bāo zhuāng xiū gǎi hòu de chàng yì tí chū zì dài kě chóng fù shǐ yòng de shuǐ bēi zài chǎng dì chū kǒu shè zhì qīng chǔ de fēn lèi biāo shí měi zǔ liú liǎng rén jiǎn chá qīng lǐ qíng kuàng shì xíng yī zhōu hòu tā men tǒng jì lā jī dài shù liàng yě jì lù nǎ xiē zuò fǎ bù fāng biàn chàng yì méi yǒu kuā dà yī zhōu de xiào guǒ ér shì bǎ shù jù hé wèn tí yì qǐ tiē chū qǐng dà jiā jì xù tí chū jiàn yì xiǎng yī xiǎng dì èr fèn chàng yì bǐ dì yī fèn jù tǐ zài nǎ lǐ píng jià xiào guǒ shí wèi shén me yě yào jì lù wèn tí cān kǎo tí chū le duì xiàng xíng dòng hé fēn gōng jì lù wèn tí yǒu zhù yú liǎo jiě xiào guǒ de xiàn zhì bìng jì xù gǎi jìn liàn yī liàn wèi shēn biān yī jiàn shì xiě sān tiáo kě zhí xíng jiàn yì zhù míng shuí zuò hé shí zuò zěn yàng jiǎn chá"
+          },
+          "poems": []
+        },
+        {
+          "id": "u7",
+          "number": 7,
+          "title": "鲁迅与家风",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "好的故事",
+            "我的伯父鲁迅先生",
+            "有的人——纪念鲁迅有感"
+          ],
+          "sourcePrintPage": 107,
+          "sourcePdfPage": 114,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "一本借来的书",
+            "body": "周末，我把借来的书放在餐桌上，一不小心溅上了水。我想等纸干了再还，也许别人不会注意。父亲没有替我找借口，而是让我想一想：如果自己的书被弄坏，希望借书的人怎样做？我给同学说明情况，问他愿意接受修补还是更换。同学说可以一起压平书页，但谢谢我先告诉他。晚饭时，父亲没有夸我“从不犯错”，只说，守信不是永远不出问题，而是出了问题愿意说明、承担并设法补救。",
+            "question": "父亲用什么方式帮助“我”理解守信？故事中的补救包含哪些步骤？",
+            "answer": "通过换位思考引导；主动说明、征求对方意见并承担补救责任。",
+            "skill": "用一件具体小事说明你理解的一条家风，不只写口号。",
+            "titleReading": "yī běn jiè lái de shū",
+            "detailReading": "zhōu mò wǒ bǎ jiè lái de shū fàng zài cān zhuō shàng yí bù xiǎo xīn jiàn shàng le shuǐ wǒ xiǎng děng zhǐ gàn le zài hái yě xǔ bié rén bú huì zhù yì fù qīn méi yǒu tì wǒ zhǎo jiè kǒu ér shì ràng wǒ xiǎng yī xiǎng rú guǒ zì jǐ de shū bèi nòng huài xī wàng jiè shū de rén zěn yàng zuò wǒ gěi tóng xué shuō míng qíng kuàng wèn tā yuàn yì jiē shòu xiū bǔ hái shì gēng huàn tóng xué shuō kě yǐ yì qǐ yā píng shū yè dàn xiè xiè wǒ xiān gào sù tā wǎn fàn shí fù qīn méi yǒu kuā wǒ cóng bù fàn cuò zhǐ shuō shǒu xìn bú shì yǒng yuǎn bù chū wèn tí ér shì chū le wèn tí yuàn yì shuō míng chéng dān bìng shè fǎ bǔ jiù xiǎng yī xiǎng fù qīn yòng shén me fāng shì bāng zhù wǒ lǐ jiě shǒu xìn gù shì zhōng de bǔ jiù bāo hán nǎ xiē bù zhòu cān kǎo tōng guò huàn wèi sī kǎo yǐn dǎo zhǔ dòng shuō míng zhēng qiú duì fāng yì jiàn bìng chéng dān bǔ jiù zé rèn liàn yī liàn yòng yī jiàn jù tǐ xiǎo shì shuō míng nǐ lǐ jiě de yī tiáo jiā fēng bù zhǐ xiě kǒu hào"
+          },
+          "poems": []
+        },
+        {
+          "id": "u8",
+          "number": 8,
+          "title": "课外古诗词诵读",
+          "titleOrigin": "editorial_summary",
+          "lessons": [],
+          "sourcePrintPage": 133,
+          "sourcePdfPage": 140,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "诗句里的新理解",
+            "body": "小组读到一首写行船的诗，有人只注意船很大，有人留意水位变化。大家先把诗中实际写出的景象理清，再讨论它可能带来的启发。一位同学想到了自己解题的经历：方法不合适时，再用力也难见进展；理解条件后，问题突然顺畅起来。另一位提醒，生活联想可以帮助理解，但不能替代对诗句本身的解释。最后他们把原文、景象说明和个人联想分开记录，朗读时也更能体会前后两幅画面的变化。",
+            "question": "怎样区分诗中景象与个人联想？为什么两者不能互相替代？",
+            "answer": "景象须以词句为依据，联想来自个人经验；联想不能冒充原文明确说出的事实。",
+            "skill": "选一首诗，先用自己的话说明景象，再写一条有依据的启发。",
+            "titleReading": "shī jù lǐ de xīn lǐ jiě",
+            "detailReading": "xiǎo zǔ dú dào yī shǒu xiě xíng chuán de shī yǒu rén zhǐ zhù yì chuán hěn dà yǒu rén liú yì shuǐ wèi biàn huà dà jiā xiān bǎ shī zhōng shí jì xiě chū de jǐng xiàng lǐ qīng zài tǎo lùn tā kě néng dài lái de qǐ fā yī wèi tóng xué xiǎng dào le zì jǐ jiě tí de jīng lì fāng fǎ bù hé shì shí zài yòng lì yě nán jiàn jìn zhǎn lǐ jiě tiáo jiàn hòu wèn tí tū rán shùn chàng qǐ lái lìng yī wèi tí xǐng shēng huó lián xiǎng kě yǐ bāng zhù lǐ jiě dàn bù néng tì dài duì shī jù běn shēn de jiě shì zuì hòu tā men bǎ yuán wén jǐng xiàng shuō míng hé gè rén lián xiǎng fēn kāi jì lù lǎng dú shí yě gèng néng tǐ huì qián hòu liǎng fú huà miàn de biàn huà xiǎng yī xiǎng zěn yàng qū fēn shī zhōng jǐng xiàng yǔ gè rén lián xiǎng wèi shén me liǎng zhě bù néng hù xiāng tì dài cān kǎo jǐng xiàng xū yǐ cí jù wèi yī jù lián xiǎng lái zì gè rén jīng yàn lián xiǎng bù néng mào chōng yuán wén míng què shuō chū de shì shí liàn yī liàn xuǎn yī shǒu shī xiān yòng zì jǐ de huà shuō míng jǐng xiàng zài xiě yī tiáo yǒu yī jù de qǐ fā"
+          },
+          "poems": [
+            {
+              "contentId": "moe-2022-zh-1-6-002",
+              "sourcePrintPage": 133,
+              "sourcePdfPage": 140,
+              "identityEvidence": {
+                "author": "汉乐府",
+                "firstLine": "青青园中葵",
+                "sourcePdfPage": 140
+              }
+            },
+            {
+              "contentId": "sh54-jueju-two",
+              "sourcePrintPage": 134,
+              "sourcePdfPage": 141,
+              "identityEvidence": {
+                "author": "杜甫",
+                "firstLine": "江碧鸟逾白",
+                "sourcePdfPage": 141
+              }
+            },
+            {
+              "contentId": "sh54-huaizhong-wanbo",
+              "sourcePrintPage": 135,
+              "sourcePdfPage": 142,
+              "identityEvidence": {
+                "author": "苏舜钦",
+                "firstLine": "春阴垂野草青青",
+                "sourcePdfPage": 142
+              }
+            },
+            {
+              "contentId": "sh54-reading-two",
+              "sourcePrintPage": 136,
+              "sourcePdfPage": 143,
+              "identityEvidence": {
+                "author": "朱熹",
+                "firstLine": "昨夜江边春水生",
+                "sourcePdfPage": 143
+              },
+              "textVariantNote": "按本册采用“蒙冲”；保留既有ID及学习记录。"
+            }
+          ],
+          "displayLabel": "附录 · 课外古诗词诵读"
+        }
+      ],
+      "replacesOutlineMappings": true
+    },
+    {
+      "id": "english-6a-2024",
+      "subject": "english",
+      "grade": 6,
+      "semester": "上册",
+      "title": "英语六年级上册（五四制·2022课标修订）",
+      "publisher": "上海教育出版社",
+      "edition": "国家平台五四制2022课标修订原书，封面审核通过2024；配套资源ISBN 978-7-5720-2811-3；纸本ISBN、版次及学校印次待确认",
+      "editionStatus": "official_resource_verified",
+      "schoolSystem": "5-4",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=060066ae-cd3b-d133-02c2-e34685671790&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourceKind": "official_textbook",
+      "checkedAt": "2026-10-17",
+      "schoolAdoption": "pending",
+      "sourcePageOffset": 9,
+      "expectedUnitCount": 7,
+      "unitGroupingNote": "6个教材单元与1组Starter预备篇",
+      "cataloguePages": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "sourceEvidence": {
+        "officialResourceUrl": "https://mp3.bookmall.com.cn/",
+        "officialResourceCode": "57202811",
+        "officialResourceIsbn": "978-7-5720-2811-3",
+        "audioDownloadUrl": "https://mp3.bookmall.com.cn/book/download/57202811/22406.shtml",
+        "audioArchiveSha256": "fda8f222a071a13cd24c9557b6f044030026bbe09a1c58f4bfb169f5eb2d6391",
+        "audioArchiveMd5": "767508aac977a215cf8ac7c4ab788048",
+        "wordBankPrintedPagesVerified": true,
+        "vocabularyPrintPages": [
+          134,
+          135,
+          136,
+          137,
+          138,
+          139
+        ],
+        "vocabularyPdfPages": [
+          143,
+          144,
+          145,
+          146,
+          147,
+          148
+        ],
+        "copyrightPdfPage": 3,
+        "totalPdfPages": 162,
+        "scope": "完整 Words and expressions in each unit；含跨单元复现，不把字母排序表重复计数。专名表、数词表、课文全文及所有语法栏目不计作完整覆盖。",
+        "transcriptionSha256": "67d553204c681dd571f2424cbacb3b0a104b5edc0bfa84cfa2f9800199785b79"
+      },
+      "inventory": {
+        "topicWordsComplete": false,
+        "wordBankComplete": false,
+        "vocabularyListName": "Words and expressions in each unit",
+        "vocabularyListComplete": true,
+        "vocabularyScope": "official_textbook_unit_vocabulary",
+        "unitPracticeComplete": true,
+        "fullTextAvailable": false,
+        "fullCoverage": false,
+        "vocabularyCount": 277
+      },
+      "units": [
+        {
+          "id": "u0",
+          "number": 0,
+          "displayLabel": "预备篇 · Starter",
+          "title": "Getting ready for middle school",
+          "sourcePrintPage": 2,
+          "sourcePdfPage": 11,
+          "words": [],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "Ready for a New Stage",
+            "body": "Hello, my name is Lin, and I am starting middle school this year.\nI enjoy drawing and asking questions about nature.\nIn my schoolbag, I keep a notebook for new English words.\nWhen I meet an unfamiliar word, I check a dictionary and write a useful example.\nI plan a short practice every day and review my notes on Friday.\nA small, steady plan helps me see my progress.",
+            "translation": [
+              "你好，我叫林，今年开始读初中。",
+              "我喜欢画画，也喜欢提出有关自然的问题。",
+              "书包里，我放了一本记录新英语单词的本子。",
+              "遇到陌生单词时，我查词典，并写下一个有用的例句。",
+              "我计划每天短时间练习，周五复习笔记。",
+              "一个持续的小计划帮助我看到进步。"
+            ],
+            "question": "1. What does Lin enjoy?\n2. How does Lin learn a new word?\n3. When does Lin review the notes?",
+            "questionHint": "兴趣是什么？怎样学新词？何时复习？",
+            "answer": "1. Drawing and asking questions. 2. Using a dictionary and an example. 3. On Friday.",
+            "grammar": "自我介绍可用I am…、I like/enjoy…；安排学习时说明具体时间与动作。"
+          }
+        },
+        {
+          "id": "u1",
+          "number": 1,
+          "title": "School life",
+          "sourcePrintPage": 12,
+          "sourcePdfPage": 21,
+          "words": [
+            {
+              "text": "life",
+              "meaning": "生活；生命",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "break",
+              "meaning": "休息；课间休息",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "ICT",
+              "meaning": "信息通信技术",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "geography",
+              "meaning": "地理",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "history",
+              "meaning": "历史",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "more",
+              "meaning": "更多",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "instruction",
+              "meaning": "指令；说明",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "experiment",
+              "meaning": "实验",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "activity",
+              "meaning": "活动",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "club",
+              "meaning": "社团",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "calligraphy",
+              "meaning": "书法",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "join",
+              "meaning": "加入",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "technology",
+              "meaning": "技术；科技",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "everyone",
+              "meaning": "每个人",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "lab",
+              "meaning": "实验室",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "field",
+              "meaning": "场地；田野",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "grade",
+              "meaning": "年级",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "excuse",
+              "meaning": "原谅",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "excuse me",
+              "meaning": "劳驾；对不起",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "of course",
+              "meaning": "当然",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "project",
+              "meaning": "项目；课题",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "start",
+              "meaning": "开始",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "topic",
+              "meaning": "话题",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "online",
+              "meaning": "在线的；在线",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "receive",
+              "meaning": "收到",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "reply",
+              "meaning": "答复",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "group",
+              "meaning": "小组",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "most",
+              "meaning": "最",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "a.m.",
+              "meaning": "上午",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "end",
+              "meaning": "结束",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "p.m.",
+              "meaning": "下午",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "difference",
+              "meaning": "不同之处",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "same",
+              "meaning": "相同的",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "during",
+              "meaning": "在……期间",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "outside",
+              "meaning": "在外面",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "noon",
+              "meaning": "中午",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "connect",
+              "meaning": "连接",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "comment",
+              "meaning": "评论",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            }
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "Our Friday Club",
+            "body": "Our school has a gardening club, and I go there every Friday.\nWe keep a notebook beside each plant and record its growth.\nMy partner usually measures the leaves while I take photos.\nToday we notice that one plant needs more light.\nWe move it closer to the window and plan to check it next week.\nThe club helps us ask questions and work together.",
+            "translation": [
+              "学校有园艺社团，我每周五都去参加。",
+              "我们在每株植物旁放一本记录本，记录它的生长。",
+              "我的搭档通常测量叶子，我则负责拍照。",
+              "今天我们发现一株植物需要更多光照。",
+              "我们把它移到窗边，计划下周检查。",
+              "社团帮助我们提出问题并合作。"
+            ],
+            "question": "1. When does the writer visit the club?\n2. Why do they move one plant?\n3. What do they plan to do next?",
+            "questionHint": "何时参加社团？为何移动植物？下一步是什么？",
+            "answer": "1. Every Friday. 2. It needs more light. 3. Check it next week.",
+            "grammar": "一般现在时常写习惯：I go every Friday. 第三人称单数加-s：My partner measures the leaves."
+          }
+        },
+        {
+          "id": "u2",
+          "number": 2,
+          "title": "Family ties",
+          "sourcePrintPage": 26,
+          "sourcePdfPage": 35,
+          "words": [
+            {
+              "text": "tie",
+              "meaning": "联系；纽带",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "relation",
+              "meaning": "关系",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "introduce",
+              "meaning": "介绍",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "classmate",
+              "meaning": "同班同学",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "relative",
+              "meaning": "亲属",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "only",
+              "meaning": "唯一的",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "only child",
+              "meaning": "独生子女",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "twin",
+              "meaning": "双胞胎中的一个",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "husband",
+              "meaning": "丈夫",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "wife",
+              "meaning": "妻子",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "son",
+              "meaning": "儿子",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "daughter",
+              "meaning": "女儿",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "other",
+              "meaning": "其他的",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 143,
+              "additionalSense": true
+            },
+            {
+              "text": "member",
+              "meaning": "成员",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "add",
+              "meaning": "添加",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "note",
+              "meaning": "笔记；记录",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "album",
+              "meaning": "相册",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "teach",
+              "meaning": "教",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "homework",
+              "meaning": "家庭作业",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "guitar",
+              "meaning": "吉他",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "elder",
+              "meaning": "年长的",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "sofa",
+              "meaning": "沙发",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "round",
+              "meaning": "圆的",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "dark",
+              "meaning": "深色的；黑暗的",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "chess",
+              "meaning": "国际象棋",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "duty",
+              "meaning": "职责",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "born",
+              "meaning": "出生",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "weekend",
+              "meaning": "周末",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "thing",
+              "meaning": "事情；东西",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "enough",
+              "meaning": "足够地",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "Well done!",
+              "meaning": "做得好",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "dish",
+              "meaning": "盘子；一道菜",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "usually",
+              "meaning": "通常",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "quick",
+              "meaning": "快的",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "together",
+              "meaning": "一起",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "flat",
+              "meaning": "公寓",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "fun",
+              "meaning": "乐趣",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "celebration",
+              "meaning": "庆祝活动",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "prepare",
+              "meaning": "准备",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "decorate",
+              "meaning": "装饰",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "living room",
+              "meaning": "客厅",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "balloon",
+              "meaning": "气球",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "set",
+              "meaning": "摆放",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "surprised",
+              "meaning": "感到惊讶的",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "super-excited",
+              "meaning": "非常兴奋的",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "joy",
+              "meaning": "喜悦",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "jump for joy",
+              "meaning": "高兴得跳起来",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            }
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "A Family Surprise",
+            "body": "It is Saturday afternoon, and our family is preparing a small celebration.\nGrandpa is coming home after a long visit to his brother.\nMum is cooking his favourite dish while Dad is setting the table.\nMy sister and I are putting family photos into an album.\nWe write a short note below each photo to explain the happy moment.\nWhen Grandpa arrives, he sits with us and opens the album slowly.",
+            "translation": [
+              "周六下午，我们全家正在准备一场小小的庆祝活动。",
+              "爷爷去看望弟弟一段时间后要回家了。",
+              "妈妈正在做爷爷爱吃的菜，爸爸正在摆餐具。",
+              "姐姐和我正在把家庭照片放进相册。",
+              "我们在每张照片下面写简短的话，说明那段快乐时光。",
+              "爷爷到家后，和我们坐在一起，慢慢打开相册。"
+            ],
+            "question": "1. Who is returning home?\n2. What are the children making?\n3. Why do they add notes?",
+            "questionHint": "谁要回家？孩子们在制作什么？为何配文字？",
+            "answer": "1. Grandpa. 2. A family album. 3. To explain the happy moments.",
+            "grammar": "现在进行时写正在发生的动作：am/is/are + 动词-ing。We are preparing a celebration."
+          }
+        },
+        {
+          "id": "u3",
+          "number": 3,
+          "title": "Food",
+          "sourcePrintPage": 40,
+          "sourcePdfPage": 49,
+          "words": [
+            {
+              "text": "something",
+              "meaning": "某事；某物",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "beef",
+              "meaning": "牛肉",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "tofu",
+              "meaning": "豆腐",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "pepper",
+              "meaning": "甜椒",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "cabbage",
+              "meaning": "卷心菜",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "onion",
+              "meaning": "洋葱",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "carrot",
+              "meaning": "胡萝卜",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "watermelon",
+              "meaning": "西瓜",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "cucumber",
+              "meaning": "黄瓜",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "strawberry",
+              "meaning": "草莓",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "pear",
+              "meaning": "梨",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "yogurt",
+              "meaning": "酸奶",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "cheese",
+              "meaning": "奶酪",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "corn",
+              "meaning": "玉米",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "butter",
+              "meaning": "黄油",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "oil",
+              "meaning": "食用油",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "salt",
+              "meaning": "盐",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "bean",
+              "meaning": "豆",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "product",
+              "meaning": "产品",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "grain",
+              "meaning": "谷物",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "rainbow",
+              "meaning": "彩虹",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 144,
+              "additionalSense": true
+            },
+            {
+              "text": "balanced",
+              "meaning": "均衡的",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "diet",
+              "meaning": "日常饮食",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "each",
+              "meaning": "每个",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "plenty",
+              "meaning": "大量",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "plenty of",
+              "meaning": "大量的",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "choice",
+              "meaning": "选择",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "list",
+              "meaning": "清单",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "few",
+              "meaning": "很少的",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "a few",
+              "meaning": "几个",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "pleasure",
+              "meaning": "愉快",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "ingredient",
+              "meaning": "原料；配料",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "tasty",
+              "meaning": "好吃的",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "need",
+              "meaning": "需要",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "fridge",
+              "meaning": "冰箱",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "surprise",
+              "meaning": "惊喜；使惊讶",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "blog",
+              "meaning": "博客",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "as",
+              "meaning": "作为",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "soy sauce",
+              "meaning": "酱油",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "into",
+              "meaning": "进入；到……里面",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "piece",
+              "meaning": "一块；一片",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "fry",
+              "meaning": "煎；炒",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "finally",
+              "meaning": "最后",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "boil",
+              "meaning": "煮沸",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "side",
+              "meaning": "一边",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "side dish",
+              "meaning": "配菜",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "mutton",
+              "meaning": "羊肉",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "recipe",
+              "meaning": "食谱",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "beat",
+              "meaning": "搅打",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "chopsticks",
+              "meaning": "筷子",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "bowl",
+              "meaning": "碗",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "menu",
+              "meaning": "菜单",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            }
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "A Lunch Plan",
+            "body": "Our class is planning a picnic lunch for six people.\nWe choose some rice, a few carrots, and a little oil for a warm dish.\nThere is plenty of fruit, so we do not buy more sweets.\nBefore cooking, we wash our hands and ask an adult to help with the hot pan.\nEveryone brings a bottle of water and a reusable bowl.\nOur menu gives us different kinds of food without leaving much waste.",
+            "translation": [
+              "我们班正在为六个人计划野餐午饭。",
+              "我们选了一些米饭、几根胡萝卜和少量油来做一道热菜。",
+              "水果已经很充足，所以我们不再买糖果。",
+              "做饭前，我们洗手，并请成人帮忙使用热锅。",
+              "每个人都带一瓶水和一只可重复使用的碗。",
+              "我们的菜单提供不同种类的食物，同时减少剩余浪费。"
+            ],
+            "question": "1. How many people is the lunch for?\n2. Why do they avoid buying more sweets?\n3. Who helps with the hot pan?",
+            "questionHint": "几人用餐？为什么不再买糖果？谁帮忙用热锅？",
+            "answer": "1. Six. 2. They already have plenty of fruit. 3. An adult.",
+            "grammar": "可数名词可用a few：a few carrots。不可数名词可用a little：a little oil。some可用于两类名词。"
+          }
+        },
+        {
+          "id": "u4",
+          "number": 4,
+          "title": "Sports",
+          "sourcePrintPage": 54,
+          "sourcePdfPage": 63,
+          "words": [
+            {
+              "text": "date",
+              "meaning": "日期",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "ground",
+              "meaning": "场地；地面",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "sports ground",
+              "meaning": "运动场",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "gym",
+              "meaning": "体育馆；健身房",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "team",
+              "meaning": "队伍",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "high",
+              "meaning": "高的",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "rope",
+              "meaning": "绳子",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "kick",
+              "meaning": "踢",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "rock",
+              "meaning": "岩石",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "climb",
+              "meaning": "攀爬",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "rock climbing",
+              "meaning": "攀岩",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "kung fu",
+              "meaning": "功夫",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "active",
+              "meaning": "活跃的；积极的",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "part",
+              "meaning": "部分",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "take part in",
+              "meaning": "参加",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "baseball",
+              "meaning": "棒球",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "volleyball",
+              "meaning": "排球",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "badminton",
+              "meaning": "羽毛球",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "tennis",
+              "meaning": "网球",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "pull",
+              "meaning": "拉",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "jog",
+              "meaning": "慢跑",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "safety",
+              "meaning": "安全",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "ankle",
+              "meaning": "脚踝",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 145,
+              "additionalSense": true
+            },
+            {
+              "text": "match",
+              "meaning": "比赛",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "gear",
+              "meaning": "活动装备",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "example",
+              "meaning": "例子",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "for example",
+              "meaning": "例如",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "warm up",
+              "meaning": "热身",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "watch out",
+              "meaning": "当心",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "matter",
+              "meaning": "事情；问题",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "What's the matter?",
+              "meaning": "怎么了",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true,
+              "textbookForm": "What’s the matter?"
+            },
+            {
+              "text": "happen",
+              "meaning": "发生",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "just",
+              "meaning": "只是",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "fall",
+              "meaning": "跌倒",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "guess",
+              "meaning": "猜",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "knee",
+              "meaning": "膝盖",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "How come?",
+              "meaning": "怎么回事",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "seem",
+              "meaning": "似乎",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "problem",
+              "meaning": "难题",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "score",
+              "meaning": "得分",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "goal",
+              "meaning": "球门；进球得分；目标",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "goalkeeper",
+              "meaning": "守门员",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "hold",
+              "meaning": "拿住；保持",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "throw",
+              "meaning": "投掷",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "point",
+              "meaning": "得分",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "control",
+              "meaning": "控制",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "mind",
+              "meaning": "头脑；留意",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "powerful",
+              "meaning": "强有力的",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "style",
+              "meaning": "风格",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "moment",
+              "meaning": "片刻",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "report",
+              "meaning": "报告；报道",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "newspaper",
+              "meaning": "报纸",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "court",
+              "meaning": "球场",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "against",
+              "meaning": "与……对阵",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "shoot",
+              "meaning": "射门；投篮",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "basket",
+              "meaning": "篮筐",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "tie",
+              "meaning": "打成平手",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "track",
+              "meaning": "跑道",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            }
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "More Than a Score",
+            "body": "Our basketball team loses its first match by two points.\nWho can help us understand the result?\nOur teacher asks us to watch a short recording and notice how we pass the ball.\nWe find that the player with the ball often misses a teammate near the basket.\nAt the next practice, we warm up and then practise looking before passing.\nThe score matters, but learning to work as a team matters too.",
+            "translation": [
+              "我们的篮球队在首场比赛中输了两分。",
+              "谁能帮助我们理解这个结果呢？",
+              "老师让我们看一段录像，观察传球方式。",
+              "我们发现持球人常常没有注意到篮筐旁的队友。",
+              "下次训练时，我们先热身，再练习传球前观察。",
+              "比分很重要，学会团队合作也很重要。"
+            ],
+            "question": "1. What problem do they notice?\n2. Who guides the team?\n3. What do they practise next?",
+            "questionHint": "发现了什么问题？谁指导他们？接着练什么？",
+            "answer": "1. Missing an available teammate. 2. Their teacher. 3. Looking before passing.",
+            "grammar": "What询问事物或内容，Who询问人：What do we practise? Who helps us?"
+          }
+        },
+        {
+          "id": "u5",
+          "number": 5,
+          "title": "Animals and us",
+          "sourcePrintPage": 68,
+          "sourcePdfPage": 77,
+          "words": [
+            {
+              "text": "amazing",
+              "meaning": "令人惊叹的",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "website",
+              "meaning": "网站",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "feed",
+              "meaning": "喂养",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "herd",
+              "meaning": "放牧",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "goat",
+              "meaning": "山羊",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "remember",
+              "meaning": "记得",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "collect",
+              "meaning": "收集",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "recognise",
+              "meaning": "认出",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "care",
+              "meaning": "照顾",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "take care of",
+              "meaning": "照料",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "prefer",
+              "meaning": "更喜欢",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "get along with",
+              "meaning": "与……和睦相处",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "sign",
+              "meaning": "指示牌",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "bite",
+              "meaning": "咬",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "warning",
+              "meaning": "警告",
+              "vocabularyPrintPage": 137,
+              "vocabularyPdfPage": 146,
+              "additionalSense": true
+            },
+            {
+              "text": "peck",
+              "meaning": "啄",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "sweet",
+              "meaning": "甜的；糖果",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "calf",
+              "meaning": "小牛",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "loud",
+              "meaning": "大声的",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "noise",
+              "meaning": "噪声",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "meaning",
+              "meaning": "意思",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "shout",
+              "meaning": "喊叫",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "jacket",
+              "meaning": "夹克",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "if",
+              "meaning": "如果",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "snack",
+              "meaning": "小吃",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "could",
+              "meaning": "可以；能",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "hen",
+              "meaning": "母鸡",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "diary",
+              "meaning": "日记",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "cookie",
+              "meaning": "曲奇饼",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "direct",
+              "meaning": "指引",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "yard",
+              "meaning": "院子",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "glad",
+              "meaning": "高兴的",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "believe",
+              "meaning": "相信",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "unforgettable",
+              "meaning": "难忘的",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "smooth",
+              "meaning": "光滑的",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "neck",
+              "meaning": "脖子",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "friendly",
+              "meaning": "友好的",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "ride",
+              "meaning": "骑；乘坐",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            }
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "A Careful Farm Visit",
+            "body": "Our class visits a small farm with a guide.\nBefore entering, we read signs about how to stay safe around animals.\nA calf comes close, but we ask the guide before touching it.\nWe do not feed it our snacks because the wrong food may make it ill.\nLater we watch a farmer feed the goats and clean their yard.\nI write in my diary that caring for animals requires knowledge and patience.",
+            "translation": [
+              "我们班跟着向导参观一座小农场。",
+              "进入前，我们阅读有关怎样安全接近动物的告示。",
+              "一头小牛走近了，但我们先问过向导才触摸它。",
+              "我们不拿自己的零食喂它，因为不合适的食物可能使它生病。",
+              "随后我们观看农场主喂山羊并清理院子。",
+              "我在日记里写道，照顾动物需要知识和耐心。"
+            ],
+            "question": "1. Where does the class go?\n2. Why do they keep their snacks?\n3. How do they learn the rules?",
+            "questionHint": "去哪里？为何不拿零食喂动物？怎样了解规则？",
+            "answer": "1. A farm. 2. The wrong food may make animals ill. 3. By reading signs and asking the guide.",
+            "grammar": "Where问地点，When问时间，Why问原因，How问方式。回答Why时可用because说明理由。"
+          }
+        },
+        {
+          "id": "u6",
+          "number": 6,
+          "title": "Travelling around China",
+          "sourcePrintPage": 82,
+          "sourcePdfPage": 91,
+          "words": [
+            {
+              "text": "around",
+              "meaning": "在……周围",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "vacation",
+              "meaning": "假期",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "trip",
+              "meaning": "旅行",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "popular",
+              "meaning": "受欢迎的",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "tour",
+              "meaning": "游览",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "tip",
+              "meaning": "小建议",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "footprint",
+              "meaning": "脚印",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "hike",
+              "meaning": "徒步旅行",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "nature",
+              "meaning": "自然",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "enjoy",
+              "meaning": "喜欢；享受",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "local",
+              "meaning": "当地的",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "lazy",
+              "meaning": "懒散的；悠闲的",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "roof",
+              "meaning": "屋顶",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "ski",
+              "meaning": "滑雪",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "reason",
+              "meaning": "原因",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "drive",
+              "meaning": "开车",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "shall",
+              "meaning": "将要；用于征求意见",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "afraid",
+              "meaning": "害怕的",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "I'm afraid",
+              "meaning": "恐怕",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true,
+              "textbookForm": "I’m afraid"
+            },
+            {
+              "text": "expensive",
+              "meaning": "昂贵的",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "price",
+              "meaning": "价格",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "ticket",
+              "meaning": "票",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "better",
+              "meaning": "更好的；更好地",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "convenient",
+              "meaning": "方便的",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "speed",
+              "meaning": "速度",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "high-speed",
+              "meaning": "高速的",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "comfortable",
+              "meaning": "舒适的",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "view",
+              "meaning": "景色；看法",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "carry",
+              "meaning": "携带",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "plan",
+              "meaning": "计划",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "own",
+              "meaning": "自己的",
+              "vocabularyPrintPage": 138,
+              "vocabularyPdfPage": 147,
+              "additionalSense": true
+            },
+            {
+              "text": "historical",
+              "meaning": "与历史有关的",
+              "vocabularyPrintPage": 139,
+              "vocabularyPdfPage": 148,
+              "additionalSense": true
+            },
+            {
+              "text": "such",
+              "meaning": "这样的",
+              "vocabularyPrintPage": 139,
+              "vocabularyPdfPage": 148,
+              "additionalSense": true
+            },
+            {
+              "text": "such as",
+              "meaning": "例如",
+              "vocabularyPrintPage": 139,
+              "vocabularyPdfPage": 148,
+              "additionalSense": true
+            },
+            {
+              "text": "palace",
+              "meaning": "宫殿",
+              "vocabularyPrintPage": 139,
+              "vocabularyPdfPage": 148,
+              "additionalSense": true
+            },
+            {
+              "text": "museum",
+              "meaning": "博物馆",
+              "vocabularyPrintPage": 139,
+              "vocabularyPdfPage": 148,
+              "additionalSense": true
+            },
+            {
+              "text": "national",
+              "meaning": "国家的",
+              "vocabularyPrintPage": 139,
+              "vocabularyPdfPage": 148,
+              "additionalSense": true
+            },
+            {
+              "text": "forest",
+              "meaning": "森林",
+              "vocabularyPrintPage": 139,
+              "vocabularyPdfPage": 148,
+              "additionalSense": true
+            },
+            {
+              "text": "mountain",
+              "meaning": "山",
+              "vocabularyPrintPage": 139,
+              "vocabularyPdfPage": 148,
+              "additionalSense": true
+            },
+            {
+              "text": "postcard",
+              "meaning": "明信片",
+              "vocabularyPrintPage": 139,
+              "vocabularyPdfPage": 148,
+              "additionalSense": true
+            },
+            {
+              "text": "volunteer",
+              "meaning": "志愿者",
+              "vocabularyPrintPage": 139,
+              "vocabularyPdfPage": 148,
+              "additionalSense": true
+            },
+            {
+              "text": "opera",
+              "meaning": "歌剧",
+              "vocabularyPrintPage": 139,
+              "vocabularyPdfPage": 148,
+              "additionalSense": true
+            },
+            {
+              "text": "myself",
+              "meaning": "我自己",
+              "vocabularyPrintPage": 139,
+              "vocabularyPdfPage": 148,
+              "additionalSense": true
+            },
+            {
+              "text": "enjoy oneself",
+              "meaning": "玩得愉快",
+              "vocabularyPrintPage": 139,
+              "vocabularyPdfPage": 148,
+              "additionalSense": true
+            }
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "A Plan That Can Change",
+            "body": "Our family is going to visit a nearby city during the holiday.\nWe compare train times and ticket prices before choosing a morning train.\nOn the first day, we are going to walk through an old neighbourhood.\nIf it rains, we will visit a museum instead of taking a long walk.\nWe also leave some free time because travelling should not be a race.\nAt home, I prepare a small notebook for new words and observations.",
+            "translation": [
+              "假期里，我们一家计划去附近一座城市。",
+              "我们比较车次时间和票价后，选了一班上午的火车。",
+              "第一天，我们打算步行参观一片老街区。",
+              "如果下雨，我们就去博物馆，不走长路。",
+              "我们还留出一些自由时间，因为旅行不应该像赛跑。",
+              "在家里，我准备了一本小本子，记录新词和观察。"
+            ],
+            "question": "1. What do they compare?\n2. What will they do in the rain?\n3. Why do they leave free time?",
+            "questionHint": "比较什么？雨天做什么？为何留自由时间？",
+            "answer": "1. Train times and prices. 2. Visit a museum. 3. To avoid rushing.",
+            "grammar": "be going to + 动词原形常表达计划：We are going to visit a city. 人称变化时调整am/is/are。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "english-6b-2024",
+      "subject": "english",
+      "grade": 6,
+      "semester": "下册",
+      "title": "英语六年级下册（五四制·2022课标修订）",
+      "publisher": "上海教育出版社",
+      "edition": "国家平台五四制2022课标修订原书，封面审核通过2024；配套资源ISBN 978-7-5720-3250-9；纸本ISBN、版次及学校印次待确认",
+      "editionStatus": "official_resource_verified",
+      "schoolSystem": "5-4",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ec3945f9-9e54-f3f1-471c-45d9675fa73b&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourceKind": "official_textbook",
+      "checkedAt": "2026-10-17",
+      "schoolAdoption": "pending",
+      "sourcePageOffset": 7,
+      "expectedUnitCount": 6,
+      "unitGroupingNote": "6个教材单元",
+      "cataloguePages": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "sourceEvidence": {
+        "officialResourceUrl": "https://mp3.bookmall.com.cn/",
+        "officialResourceCode": "57203250",
+        "officialResourceIsbn": "978-7-5720-3250-9",
+        "audioDownloadUrl": "https://mp3.bookmall.com.cn/book/download/57203250/22080.shtml",
+        "audioArchiveSha256": "1aac80e17d6b7131eae1a94ccdce1aa5acd11a7303eef86f0a922984c6b40bef",
+        "audioArchiveMd5": "2e0da177c3ea2260c51a2e8d8a75add8",
+        "wordBankPrintedPagesVerified": true,
+        "vocabularyPrintPages": [
+          119,
+          120,
+          121,
+          122,
+          123
+        ],
+        "vocabularyPdfPages": [
+          126,
+          127,
+          128,
+          129,
+          130
+        ],
+        "copyrightPdfPage": 3,
+        "totalPdfPages": 146,
+        "scope": "完整 Words and expressions in each unit；含跨单元复现，不把字母排序表重复计数。专名表、数词表、课文全文及所有语法栏目不计作完整覆盖。",
+        "transcriptionSha256": "2b71746f88703fbe2dfaef361b59008be473b2f795d6554b50ce164861fa12c4"
+      },
+      "inventory": {
+        "topicWordsComplete": false,
+        "wordBankComplete": false,
+        "vocabularyListName": "Words and expressions in each unit",
+        "vocabularyListComplete": true,
+        "vocabularyScope": "official_textbook_unit_vocabulary",
+        "unitPracticeComplete": true,
+        "fullTextAvailable": false,
+        "fullCoverage": false,
+        "vocabularyCount": 256
+      },
+      "units": [
+        {
+          "id": "u1",
+          "number": 1,
+          "title": "Everyone is different",
+          "sourcePrintPage": 2,
+          "sourcePdfPage": 9,
+          "words": [
+            {
+              "text": "different",
+              "meaning": "不同的",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "notice",
+              "meaning": "注意；通知",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "swan",
+              "meaning": "天鹅",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "partner",
+              "meaning": "伙伴",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "slim",
+              "meaning": "苗条的",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "fat",
+              "meaning": "胖的",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "curly",
+              "meaning": "卷曲的",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "straight",
+              "meaning": "直的",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "T-shirt",
+              "meaning": "T恤衫",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "jeans",
+              "meaning": "牛仔裤",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "size",
+              "meaning": "大小；尺码",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "shape",
+              "meaning": "形状",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "skin",
+              "meaning": "皮肤",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "special",
+              "meaning": "特别的",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "number",
+              "meaning": "数字；编号",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "than",
+              "meaning": "比",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "fair",
+              "meaning": "浅色的；白皙的",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "talent",
+              "meaning": "天赋",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "programme",
+              "meaning": "节目单；计划",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "hall",
+              "meaning": "礼堂",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "butterfly",
+              "meaning": "蝴蝶",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "violin",
+              "meaning": "小提琴",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "host",
+              "meaning": "主持人",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "sound",
+              "meaning": "听起来；声音",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "exciting",
+              "meaning": "令人兴奋的",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "anything",
+              "meaning": "任何事情",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "someone",
+              "meaning": "某人",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "drum",
+              "meaning": "鼓；打鼓",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "voice",
+              "meaning": "嗓音",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "person",
+              "meaning": "人",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "hobby",
+              "meaning": "爱好",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "personality",
+              "meaning": "性格",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "ability",
+              "meaning": "能力",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "accept",
+              "meaning": "接受",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "wise",
+              "meaning": "明智的",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "without",
+              "meaning": "没有",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "doubt",
+              "meaning": "疑问",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "laugh",
+              "meaning": "笑",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "laugh at",
+              "meaning": "嘲笑",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "smile",
+              "meaning": "微笑",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "feather",
+              "meaning": "羽毛",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "future",
+              "meaning": "未来",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "skill",
+              "meaning": "技能",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "unique",
+              "meaning": "独特的",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "mean",
+              "meaning": "意思是",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "noticeboard",
+              "meaning": "布告栏",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            },
+            {
+              "text": "would",
+              "meaning": "用于礼貌建议或邀请",
+              "vocabularyPrintPage": 119,
+              "vocabularyPdfPage": 126,
+              "additionalSense": true
+            }
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "A Place for Every Talent",
+            "body": "Our class will hold a small talent show next month.\nSome students will sing or play the violin, but not everyone wants to be on stage.\nMing enjoys drawing, so he will design the noticeboard.\nI prefer organising things, and I will help the host prepare the programme.\nWe agree not to laugh at anyone who makes a mistake.\nDifferent abilities can all help us create a welcoming event.",
+            "translation": [
+              "我们班下个月要举办一场小型才艺展示。",
+              "一些同学要唱歌或拉小提琴，但并非人人都想上台。",
+              "明喜欢画画，因此他将设计布告栏。",
+              "我更喜欢组织工作，我将帮主持人准备节目单。",
+              "我们约定不嘲笑任何犯错的人。",
+              "不同的能力都能帮助我们办一场友善的活动。"
+            ],
+            "question": "1. What will Ming do?\n2. Must everyone perform on stage?\n3. What agreement helps people feel accepted?",
+            "questionHint": "明做什么？每个人都要上台吗？什么约定帮助大家感到被接纳？",
+            "answer": "1. Design the noticeboard. 2. No. 3. Not laughing at mistakes.",
+            "grammar": "will + 动词原形表达将来的安排或判断：Ming will design a noticeboard. 否定为will not或won’t。"
+          }
+        },
+        {
+          "id": "u2",
+          "number": 2,
+          "title": "Rules around us",
+          "sourcePrintPage": 16,
+          "sourcePdfPage": 23,
+          "words": [
+            {
+              "text": "rule",
+              "meaning": "规则",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "underground",
+              "meaning": "地铁",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "lean",
+              "meaning": "倚靠",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "litter",
+              "meaning": "乱扔垃圾；垃圾",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "gap",
+              "meaning": "空隙",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "else",
+              "meaning": "其他",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "station",
+              "meaning": "车站",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "announcement",
+              "meaning": "通告",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "passenger",
+              "meaning": "乘客",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "lift",
+              "meaning": "电梯",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "platform",
+              "meaning": "站台",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "line",
+              "meaning": "线；队列",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "rush",
+              "meaning": "冲；匆忙赶路",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "smoke",
+              "meaning": "吸烟",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "seat",
+              "meaning": "座位",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "anyone",
+              "meaning": "任何人",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "leave",
+              "meaning": "离开；留下",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "rubbish",
+              "meaning": "垃圾",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "glove",
+              "meaning": "手套",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "broken",
+              "meaning": "破损的",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "container",
+              "meaning": "容器",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "ready",
+              "meaning": "准备好的",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "follow",
+              "meaning": "遵守；跟随",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "stay",
+              "meaning": "保持",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "grow",
+              "meaning": "逐渐变得；生长",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "important",
+              "meaning": "重要的",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "take turns",
+              "meaning": "轮流",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "model",
+              "meaning": "模型",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "pay",
+              "meaning": "付钱；给予",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "attention",
+              "meaning": "注意",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "pay attention to",
+              "meaning": "注意……",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "dream",
+              "meaning": "梦想",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "gate",
+              "meaning": "大门",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            }
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "Rules With a Reason",
+            "body": "At the station, we stand behind the line and wait for the train.\nWe must let passengers get off before we get on.\nA younger child asks why we must not lean against the doors.\nHis father explains that the doors need space to open and close safely.\nThe child then reminds his brother to keep the doorway clear.\nKnowing the reason behind a rule helps us follow it more carefully.",
+            "translation": [
+              "在车站，我们站在线后等候列车。",
+              "我们必须先让乘客下车再上车。",
+              "一个小孩子问，为什么不能靠着车门。",
+              "父亲解释，车门需要空间才能安全开关。",
+              "孩子随后提醒哥哥不要堵住门口。",
+              "了解规则背后的原因，能帮助我们更认真地遵守规则。"
+            ],
+            "question": "1. Who gets off first?\n2. Why should the doorway stay clear?\n3. What does the child do after learning the reason?",
+            "questionHint": "谁先下车？为何保持门口畅通？孩子了解原因后做了什么？",
+            "answer": "1. Passengers already on the train. 2. So doors work safely. 3. He reminds his brother.",
+            "grammar": "祈使句常用动词原形：Keep the doorway clear. must表示必须，mustn’t表示禁止。"
+          }
+        },
+        {
+          "id": "u3",
+          "number": 3,
+          "title": "Festivals across cultures",
+          "sourcePrintPage": 30,
+          "sourcePdfPage": 37,
+          "words": [
+            {
+              "text": "festival",
+              "meaning": "节日",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "across",
+              "meaning": "穿过；横过",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "culture",
+              "meaning": "文化",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "luck",
+              "meaning": "运气",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "spring roll",
+              "meaning": "春卷",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "porridge",
+              "meaning": "粥",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "lucky",
+              "meaning": "幸运的",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "click",
+              "meaning": "点击",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "eve",
+              "meaning": "前夕",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "tradition",
+              "meaning": "传统",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "country",
+              "meaning": "国家",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "wealth",
+              "meaning": "财富",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "hope",
+              "meaning": "希望",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "pass",
+              "meaning": "传递",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "pass on",
+              "meaning": "传给下一个人",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "midnight",
+              "meaning": "午夜",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "international",
+              "meaning": "国际的",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "event",
+              "meaning": "活动；事件",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "square",
+              "meaning": "广场",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "symphony",
+              "meaning": "交响乐",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "theatre",
+              "meaning": "剧院",
+              "vocabularyPrintPage": 120,
+              "vocabularyPdfPage": 127,
+              "additionalSense": true
+            },
+            {
+              "text": "firework",
+              "meaning": "烟花",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "concert",
+              "meaning": "音乐会",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "prince",
+              "meaning": "王子",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "check",
+              "meaning": "检查",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "check out",
+              "meaning": "查看",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "information",
+              "meaning": "信息",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "since",
+              "meaning": "自……以来",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "performance",
+              "meaning": "表演",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "really",
+              "meaning": "真正地",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "perform",
+              "meaning": "演出",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "invite",
+              "meaning": "邀请",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "hate",
+              "meaning": "讨厌",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "refuse",
+              "meaning": "拒绝",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "celebrate",
+              "meaning": "庆祝",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "calendar",
+              "meaning": "日历",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "lunar calendar",
+              "meaning": "农历",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "full",
+              "meaning": "满的",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "post",
+              "meaning": "寄送；发帖",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "mostly",
+              "meaning": "主要地",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "tonight",
+              "meaning": "今晚",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "harvest",
+              "meaning": "收获",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "traditional",
+              "meaning": "传统的",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "nut",
+              "meaning": "坚果",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "sugar",
+              "meaning": "糖",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "experience",
+              "meaning": "经历；经验",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "meal",
+              "meaning": "一餐",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "count",
+              "meaning": "数数",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            }
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "Our Festival Display",
+            "body": "Last week, our class made a display about family celebrations.\nEach student interviewed an adult and brought one story to school.\nMy grandmother described how she made spring rolls with her sisters.\nAnother student showed photos of a meal shared with neighbours.\nWe noticed that traditions could differ even within the same festival.\nWe wrote whose experience each story described instead of saying everyone celebrated in the same way.",
+            "translation": [
+              "上周，我们班制作了有关家庭庆祝活动的展板。",
+              "每位同学采访一位成人，并带来一个故事。",
+              "奶奶讲述了她和姐妹们一起做春卷的经历。",
+              "另一位同学展示了与邻居共餐的照片。",
+              "我们注意到，即使同一个节日，习俗也可能不同。",
+              "我们写明每个故事是谁的经历，没有说所有人都用同样方式庆祝。"
+            ],
+            "question": "1. What did students do before making the display?\n2. What did the writer’s grandmother describe?\n3. Why did they name the source of each story?",
+            "questionHint": "制作前做了什么？奶奶讲了什么？为何标明故事来源？",
+            "answer": "1. Interviewed an adult. 2. Making spring rolls. 3. To avoid treating one family’s experience as everyone’s tradition.",
+            "grammar": "一般过去时常配合last week等过去时间。规则动词常加-ed，make变made，bring变brought。"
+          }
+        },
+        {
+          "id": "u4",
+          "number": 4,
+          "title": "Weather and our lives",
+          "sourcePrintPage": 44,
+          "sourcePdfPage": 51,
+          "words": [
+            {
+              "text": "search",
+              "meaning": "搜寻",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "airport",
+              "meaning": "机场",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "location",
+              "meaning": "位置",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "capital",
+              "meaning": "首都",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "wet",
+              "meaning": "湿的",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "foggy",
+              "meaning": "有雾的",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "north",
+              "meaning": "北方",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "quite",
+              "meaning": "相当",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "temperature",
+              "meaning": "温度",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "drop",
+              "meaning": "下降",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "degree",
+              "meaning": "度",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "dry",
+              "meaning": "干燥的",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "south",
+              "meaning": "南方",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "still",
+              "meaning": "仍然",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "wind",
+              "meaning": "风",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "cloud",
+              "meaning": "云",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "fog",
+              "meaning": "雾",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "skate",
+              "meaning": "滑冰",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "picnic",
+              "meaning": "野餐",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "news",
+              "meaning": "新闻",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "heat",
+              "meaning": "热",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "wave",
+              "meaning": "波浪",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "heatwave",
+              "meaning": "热浪",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "hit",
+              "meaning": "达到某个水平",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "several",
+              "meaning": "几个",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "break",
+              "meaning": "打破",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "record",
+              "meaning": "纪录；记录",
+              "vocabularyPrintPage": 121,
+              "vocabularyPdfPage": 128,
+              "additionalSense": true
+            },
+            {
+              "text": "reach",
+              "meaning": "达到",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "break out",
+              "meaning": "突然发生",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "area",
+              "meaning": "地区",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "action",
+              "meaning": "行动",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "pupil",
+              "meaning": "小学生",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "uniform",
+              "meaning": "制服；校服",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "indoors",
+              "meaning": "在室内",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "leaf",
+              "meaning": "叶子",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "fact",
+              "meaning": "事实",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "in fact",
+              "meaning": "事实上",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "average",
+              "meaning": "平均的",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "increase",
+              "meaning": "增加",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "coal",
+              "meaning": "煤",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "cause",
+              "meaning": "引起；原因",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "worse",
+              "meaning": "更差的",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "soon",
+              "meaning": "不久",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "regards",
+              "meaning": "问候",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            }
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "Checking the Forecast",
+            "body": "It is cloudy this morning, and our class plans to walk to a park.\nThe forecast says it will rain heavily in the afternoon.\nOur teacher checks the update before we leave.\nWe visit the park early and return before lunch.\nIt is important to prepare for weather changes instead of guessing from one cloud.\nBack in class, we compare our observations with the forecast and record the differences.",
+            "translation": [
+              "今天早晨多云，我们班计划步行去公园。",
+              "预报说下午会下大雨。",
+              "出发前，老师查看了最新预报。",
+              "我们早些到公园，并在午饭前返回。",
+              "准备应对天气变化很重要，不能只凭一朵云猜测。",
+              "回到教室，我们把观察与预报作比较，并记录差别。"
+            ],
+            "question": "1. Why do they return early?\n2. What does the teacher check?\n3. What do they compare afterwards?",
+            "questionHint": "为何早返？老师检查什么？回来后比较什么？",
+            "answer": "1. Heavy rain is forecast. 2. The latest forecast. 3. Observations and the forecast.",
+            "grammar": "天气句可用It作主语：It is cloudy. It is important to prepare…中的It代指后面的不定式内容。"
+          }
+        },
+        {
+          "id": "u5",
+          "number": 5,
+          "title": "Green neighbourhood",
+          "sourcePrintPage": 58,
+          "sourcePdfPage": 65,
+          "words": [
+            {
+              "text": "neighbourhood",
+              "meaning": "街区",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "build",
+              "meaning": "建造",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "reduce",
+              "meaning": "减少",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "recycle",
+              "meaning": "回收利用",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "bottle",
+              "meaning": "瓶子",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "repair",
+              "meaning": "修理",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "item",
+              "meaning": "一件物品",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "sort",
+              "meaning": "分类",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "cloth",
+              "meaning": "布",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "pick",
+              "meaning": "挑选；拿起",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "pick up",
+              "meaning": "捡起",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "plastic",
+              "meaning": "塑料；塑料的",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "waste",
+              "meaning": "废物；浪费",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "electricity",
+              "meaning": "电",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "tap",
+              "meaning": "水龙头",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "brush",
+              "meaning": "刷",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "tooth",
+              "meaning": "牙齿",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "bin",
+              "meaning": "垃圾桶",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "save",
+              "meaning": "节省；挽救",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "mix",
+              "meaning": "混合",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "store",
+              "meaning": "商店",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "even",
+              "meaning": "甚至",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "huge",
+              "meaning": "巨大的",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "government",
+              "meaning": "政府",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "encourage",
+              "meaning": "鼓励",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "public",
+              "meaning": "公共的",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "transport",
+              "meaning": "交通运输",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "environmental",
+              "meaning": "环境的",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "electric",
+              "meaning": "电的",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "building",
+              "meaning": "建筑物",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "low",
+              "meaning": "低的",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "energy",
+              "meaning": "能源",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "low-energy",
+              "meaning": "低能耗的",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "however",
+              "meaning": "然而",
+              "vocabularyPrintPage": 122,
+              "vocabularyPdfPage": 129,
+              "additionalSense": true
+            },
+            {
+              "text": "alone",
+              "meaning": "独自",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "planet",
+              "meaning": "行星",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "mankind",
+              "meaning": "人类",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "daily",
+              "meaning": "每日的",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            }
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "Repair Before Replacing",
+            "body": "There is a repair table at our neighbourhood activity day.\nPeople bring loose buttons, broken toy wheels, and bags with small holes.\nWe can help sort the items, but adults handle sharp tools and electrical repairs.\nBefore throwing something away, we ask whether it can be repaired or reused.\nSome items cannot be fixed, so we follow local instructions for sorting the waste.\nThe activity teaches us that reducing waste often begins with a careful choice.",
+            "translation": [
+              "社区活动日设有一个修理台。",
+              "人们带来松动的纽扣、坏掉的玩具轮子和破了小洞的包。",
+              "我们可以帮忙分类，但锋利工具和电器修理由成人处理。",
+              "丢弃东西前，我们先问它能否修好或再用。",
+              "有些物品修不好，我们便按当地要求分类处理。",
+              "活动让我们明白，减少浪费常常始于一次认真选择。"
+            ],
+            "question": "1. What can children help with?\n2. Who handles sharp tools?\n3. What question do people ask before discarding an item?",
+            "questionHint": "孩子帮什么？谁使用锋利工具？扔东西前问什么？",
+            "answer": "1. Sorting items. 2. Adults. 3. Whether it can be repaired or reused.",
+            "grammar": "can表示能力或可以，may可用于较礼貌地请求许可，should表达建议：We should reduce waste."
+          }
+        },
+        {
+          "id": "u6",
+          "number": 6,
+          "title": "Famous people in history",
+          "sourcePrintPage": 72,
+          "sourcePdfPage": 79,
+          "words": [
+            {
+              "text": "changer",
+              "meaning": "改变者",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "scientist",
+              "meaning": "科学家",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "change",
+              "meaning": "改变",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "publish",
+              "meaning": "出版",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "theory",
+              "meaning": "理论",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "invent",
+              "meaning": "发明",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "inexpensive",
+              "meaning": "不贵的",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "bulb",
+              "meaning": "电灯泡",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "discover",
+              "meaning": "发现",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "general",
+              "meaning": "普遍的",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "smart",
+              "meaning": "聪明的",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "inventor",
+              "meaning": "发明家",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "real",
+              "meaning": "真正的",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "power",
+              "meaning": "电力；力量",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "power station",
+              "meaning": "发电站",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "die",
+              "meaning": "死亡",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "successful",
+              "meaning": "成功的",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "invention",
+              "meaning": "发明",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "saver",
+              "meaning": "救助者",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "medicine",
+              "meaning": "药；医学",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "Traditional Chinese Medicine (TCM)",
+              "meaning": "中医药",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "spend",
+              "meaning": "花费；度过",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "sick",
+              "meaning": "生病的",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "soldier",
+              "meaning": "士兵",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "lose",
+              "meaning": "失去",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "admire",
+              "meaning": "钦佩",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "pardon",
+              "meaning": "请再说一遍",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "herb",
+              "meaning": "药草",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "pain",
+              "meaning": "疼痛",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "beg",
+              "meaning": "恳求",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "beg your pardon",
+              "meaning": "请再说一遍；请原谅",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "poem",
+              "meaning": "诗",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "act",
+              "meaning": "表演；行为",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "marry",
+              "meaning": "结婚",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "married",
+              "meaning": "已婚的",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "create",
+              "meaning": "创造",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "character",
+              "meaning": "人物角色",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "stage",
+              "meaning": "舞台",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "million",
+              "meaning": "百万",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "millions of",
+              "meaning": "数以百万计的",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "mark",
+              "meaning": "标记",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "level",
+              "meaning": "水平",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "until",
+              "meaning": "直到……为止",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "weigh",
+              "meaning": "称重",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "weight",
+              "meaning": "重量",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            },
+            {
+              "text": "stamp",
+              "meaning": "邮票",
+              "vocabularyPrintPage": 123,
+              "vocabularyPdfPage": 130,
+              "additionalSense": true
+            }
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "A Reliable Biography Card",
+            "body": "Our group is making a card about a scientist for the school display.\nThere are two books and a museum page on our desk as sources.\nWe compare dates carefully because a discovery and its publication may happen in different years.\nWe also describe the work of other people who helped the project.\nWhen a detail cannot be checked, we leave it out instead of inventing an exciting story.\nOur card is short, but each claim has a source that readers can check.",
+            "translation": [
+              "我们小组正在为学校展览制作一张科学家介绍卡。",
+              "我们用两本书和一个博物馆网页作为资料。",
+              "我们仔细比较日期，因为发现与发表可能发生在不同年份。",
+              "我们也介绍帮助这一项目的其他人的工作。",
+              "一个细节无法核实时，我们会删去它，而不是编造动人的故事。",
+              "卡片虽然简短，但每一项事实都有读者可以核查的来源。"
+            ],
+            "question": "1. Why do they compare dates?\n2. What do they do with an unverified detail?\n3. How can readers check their work?",
+            "questionHint": "为何核对日期？未核实细节怎么处理？读者如何核查？",
+            "answer": "1. Discovery and publication dates may differ. 2. Leave it out. 3. Read the listed sources.",
+            "grammar": "There is/are表示存在，谓语要与后面的名词相配：There is a book. There are two books."
+          }
+        }
+      ]
+    }
+  ],
+  "poems": [
+    {
+      "id": "sh54-qiuge",
+      "title": "囚歌",
+      "author": "叶挺",
+      "original": "为人进出的门紧锁着，\n为狗爬出的洞敞开着，\n一个声音高叫着：\n——爬出来吧，给你自由！\n我渴望自由，\n但我深深地知道——\n人的身躯怎能从狗洞子里爬出！\n我希望有一天，\n地下的烈火，\n将我连这活棺材一齐烧掉，\n我应该在烈火与热血中得到永生！",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=2ca4002f-cb3d-4a21-bcfe-ebb94032a400&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "五四制原书印刷页112／电子页119题名、作者出处及原文已核对；仅收录公版原作，不含现代注释。"
+    },
+    {
+      "id": "sh54-caochong",
+      "title": "曹冲称象",
+      "author": "陈寿",
+      "original": "邓哀王冲字仓舒。少聪察岐嶷，生五六岁，智意所及，有若成人之智。时孙权曾致巨象，太祖欲知其斤重，访之群下，咸莫能出其理。冲曰：“置象大船之上，而刻其水痕所至，称物以载之，则校可知矣。”太祖大悦，即施行焉。",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=2ca4002f-cb3d-4a21-bcfe-ebb94032a400&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "五四制原书印刷页129／电子页136题名、作者出处及原文已核对；仅收录公版原作，不含现代注释。"
+    },
+    {
+      "id": "sh54-tiaotiao-qianniuxing",
+      "title": "迢迢牵牛星",
+      "author": "《古诗十九首》",
+      "original": "迢迢牵牛星，皎皎河汉女。\n纤纤擢素手，札札弄机杼。\n终日不成章，泣涕零如雨。\n河汉清且浅，相去复几许。\n盈盈一水间，脉脉不得语。",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=a953eeec-db0c-4c8b-860f-aa94f4727b6b&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "五四制原书印刷页13／电子页20题名、作者出处及原文已核对；仅收录公版原作，不含现代注释。"
+    },
+    {
+      "id": "sh54-shengchazi",
+      "title": "生查子",
+      "author": "欧阳修",
+      "original": "去年元夜时，花市灯如昼。\n月上柳梢头，人约黄昏后。\n今年元夜时，月与灯依旧。\n不见去年人，泪湿春衫袖。",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=a953eeec-db0c-4c8b-860f-aa94f4727b6b&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "五四制原书印刷页15／电子页22题名、作者出处及原文已核对；仅收录公版原作，不含现代注释。课后拓展，非本课要求背诵的三首诗。"
+    },
+    {
+      "id": "sh54-huaizhong-wanbo",
+      "title": "淮中晚泊犊头",
+      "author": "苏舜钦",
+      "original": "春阴垂野草青青，时有幽花一树明。\n晚泊孤舟古祠下，满川风雨看潮生。",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=a953eeec-db0c-4c8b-860f-aa94f4727b6b&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "五四制原书印刷页135／电子页142题名、作者出处及原文已核对；仅收录公版原作，不含现代注释。"
+    }
+  ]
+}

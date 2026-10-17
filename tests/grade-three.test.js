@@ -36,14 +36,14 @@ test('PEP five-four grade three retains 250 new and 250 writing characters per s
   assert.equal(b.units[7].recognition.at(-1), '咳嗽唠叨吆讽诫辩');
 });
 
-test('the observed author and opening line distinguish the 3B Jueju from the unmapped same-title 2B poem', () => {
+test('the observed author and opening line distinguish the 3B Jueju from the separately verified same-title 2B poem', () => {
   const poem = data.books[1].units[0].poems.find(item => item.contentId === 'moe-2022-zh-1-6-027');
   assert.deepEqual(poem.identityEvidence, { author: '杜甫', firstLine: '迟日江山丽', sourcePdfPage: 8 });
   const item = learning.catalogById.get(poem.contentId);
   assert.match(item.detail, /迟日江山丽/);
   assert.ok(item.gradeMappings.some(mapping => mapping.bookId === 'chinese-3b-sample' && /首句/.test(mapping.evidence)));
   assert.ok(!item.gradeMappings.some(mapping => mapping.bookId === 'chinese-2b-sample'));
-  assert.equal(learning.searchCatalog({ kind: 'poetry', grade: 3, semester: '下册' }).length, 6);
+  assert.equal(learning.searchCatalog({ kind: 'poetry', grade: 3, semester: '下册' }).length, 10);
 });
 
 test('English grade three keeps audio evidence, verified unit structure and the historical lower-semester edition explicit', () => {

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-16",
-  "scope": "内置156篇/组古诗文的朝代或时代标签；不等同于上海教材逐字校定。原始转录元数据逐项匹配，有争议或多时期汇编保留说明。",
+  "checkedAt": "2026-10-17",
+  "scope": "内置古诗文逐项朝代或时代标签；原书作者／出处与既有来源分别核对；存在争议或未注明时代时保留说明。",
   "entries": [
     {
       "id": "moe-2022-zh-1-6-001",
@@ -1512,12 +1512,13 @@
     {
       "id": "sh54-two-children",
       "title": "两小儿辩日",
-      "author": "列御寇",
-      "dynasty": "先秦（传统归属）",
+      "author": "《列子》",
+      "dynasty": "成书时代有争议",
       "status": "reviewed",
-      "note": "《列子》传统归于列御寇；今本成书年代有争议，不能据此断定本文写作年代。",
+      "note": "成书时代有争议。原书《列子》注：旧题列御寇著，据后人考证可能为晋人作品；不把故事发生时代直接认定为成书朝代。",
       "sources": [
-        "https://www.cssn.cn/zx/zgzx/202210/t20221027_5554819.shtml"
+        "https://www.cssn.cn/zx/zgzx/202210/t20221027_5554819.shtml",
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=2ca4002f-cb3d-4a21-bcfe-ebb94032a400&catalogType=tchMaterial&subCatalog=tchMaterial"
       ]
     },
     {
@@ -1578,13 +1579,15 @@
     {
       "id": "sh54-chess",
       "title": "学弈",
-      "author": "佚名",
+      "author": "《孟子》",
       "dynasty": "先秦",
       "status": "source_record",
       "sources": [
-        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=a953eeec-db0c-4c8b-860f-aa94f4727b6b&catalogType=tchMaterial&subCatalog=tchMaterial"
       ],
-      "recordId": "5b9a1439367d5cab1866863f"
+      "recordId": "5b9a1439367d5cab1866863f",
+      "note": "按教材署《孟子》，一般认为孟子与其弟子共同编著。"
     },
     {
       "id": "sh54-jueju-two",
@@ -1604,7 +1607,8 @@
       "dynasty": "宋代",
       "status": "source_record",
       "sources": [
-        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=a953eeec-db0c-4c8b-860f-aa94f4727b6b&catalogType=tchMaterial&subCatalog=tchMaterial"
       ],
       "recordId": "5b9a1497367d5cab186688b3"
     },
@@ -1633,11 +1637,12 @@
       "id": "sh54-archery",
       "title": "关尹子教射",
       "author": "《列子》",
-      "dynasty": "先秦（传统归属）",
+      "dynasty": "成书时代有争议",
       "status": "reviewed",
-      "note": "《列子》传统归于列御寇；今本成书年代有争议，不能据此断定本文写作年代。",
+      "note": "成书时代有争议。原书《列子》注：旧题列御寇著，据后人考证可能为晋人作品；不把故事发生时代直接认定为成书朝代。",
       "sources": [
-        "https://www.cssn.cn/zx/zgzx/202210/t20221027_5554819.shtml"
+        "https://www.cssn.cn/zx/zgzx/202210/t20221027_5554819.shtml",
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=a953eeec-db0c-4c8b-860f-aa94f4727b6b&catalogType=tchMaterial&subCatalog=tchMaterial"
       ]
     },
     {
@@ -2007,6 +2012,139 @@
         "https://keben.app/book/0342"
       ],
       "note": "与辛弃疾《清平乐·村居》区分。"
+    },
+    {
+      "id": "sh54-dizigui-conduct-excerpt",
+      "title": "弟子规（节选）",
+      "author": "《弟子规》",
+      "dynasty": "清代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=6f1d8652-05df-432b-8ee4-6a5652ec677e&catalogType=tchMaterial&subCatalog=tchMaterial",
+        "https://audit.zibo.gov.cn/art/2016/8/29/art_373_543609.html"
+      ],
+      "note": "原书署《弟子规》；清代李毓秀撰《训蒙文》，贾存仁修订为《弟子规》。"
+    },
+    {
+      "id": "sh54-solar-terms-song",
+      "title": "二十四节气歌",
+      "author": "传统歌诀",
+      "dynasty": "年代待考",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=6f1d8652-05df-432b-8ee4-6a5652ec677e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "教材未标明歌诀或蒙学选段形成时代，保留待考，不推定朝代。"
+    },
+    {
+      "id": "sh54-shouzhudaitu",
+      "title": "守株待兔",
+      "author": "《韩非子》",
+      "dynasty": "先秦",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=bd1e1af7-f570-436d-afa4-f326691676f4&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "按教材作者标注；文言选段按作品成书时代标注。"
+    },
+    {
+      "id": "sh54-dalinsi-taohua",
+      "title": "大林寺桃花",
+      "author": "白居易",
+      "dynasty": "唐代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=bd1e1af7-f570-436d-afa4-f326691676f4&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "按教材作者标注；文言选段按作品成书时代标注。"
+    },
+    {
+      "id": "sh54-zeng-liujingwen",
+      "title": "赠刘景文",
+      "author": "苏轼",
+      "dynasty": "宋代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d3b5a21b-f8d1-4633-8231-407100c8204d&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "按教材作者标注；文言选段按作品成书时代标注。"
+    },
+    {
+      "id": "sh54-change",
+      "title": "嫦娥",
+      "author": "李商隐",
+      "dynasty": "唐代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d3b5a21b-f8d1-4633-8231-407100c8204d&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "按教材作者标注；文言选段按作品成书时代标注。"
+    },
+    {
+      "id": "sh54-duzuo-jingtingshan",
+      "title": "独坐敬亭山",
+      "author": "李白",
+      "dynasty": "唐代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=750e0014-1488-4774-9f73-8781de6faf51&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "按教材作者标注；文言选段按作品成书时代标注。"
+    },
+    {
+      "id": "sh54-qiuge",
+      "title": "囚歌",
+      "author": "叶挺",
+      "dynasty": "近现代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=2ca4002f-cb3d-4a21-bcfe-ebb94032a400&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处注释核实；作品年代与书中人物所处时代分别判断。"
+    },
+    {
+      "id": "sh54-caochong",
+      "title": "曹冲称象",
+      "author": "陈寿",
+      "dynasty": "西晋",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=2ca4002f-cb3d-4a21-bcfe-ebb94032a400&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处注释核实；作品年代与书中人物所处时代分别判断。"
+    },
+    {
+      "id": "sh54-tiaotiao-qianniuxing",
+      "title": "迢迢牵牛星",
+      "author": "《古诗十九首》",
+      "dynasty": "东汉",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=a953eeec-db0c-4c8b-860f-aa94f4727b6b&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书说明作者不详，一般认为产生于东汉末年；沿用作品出处，不虚构个人作者。"
+    },
+    {
+      "id": "sh54-shengchazi",
+      "title": "生查子",
+      "author": "欧阳修",
+      "dynasty": "宋代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=a953eeec-db0c-4c8b-860f-aa94f4727b6b&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处注释核实；作品年代与书中人物所处时代分别判断。"
+    },
+    {
+      "id": "sh54-huaizhong-wanbo",
+      "title": "淮中晚泊犊头",
+      "author": "苏舜钦",
+      "dynasty": "宋代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=a953eeec-db0c-4c8b-860f-aa94f4727b6b&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处注释核实；作品年代与书中人物所处时代分别判断。"
     }
   ]
 }

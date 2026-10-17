@@ -6,7 +6,8 @@ const lowerPrimary = require('./lower-primary');
 function inventoryNote(book) {
   if (book.subject === 'chinese') return book.inventory.recognitionComplete && book.inventory.writingComplete
     ? `${book.editionStatus === 'historical_reference' ? '历史审定样本，新版下册待核实；' : ''}识字表 ${book.inventory.recognitionCount} 字、写字表 ${book.inventory.writingCount} 字已整理（含另列多音字复习）；`
-    : '完整识字表、写字表待原页核实；';
+    : book.grade >= 6 ? '课内字词与文言知识尚未逐课列全；' : '完整识字表、写字表待原页核实；';
+  if (book.inventory.vocabularyListComplete) return `原书 ${book.inventory.vocabularyListName} ${book.inventory.vocabularyCount} 个单元词项已逐项核对（含跨单元复现）；`;
   if (book.inventory.vocabularyListName) return `${book.editionStatus === 'historical_reference' ? '旧版参考，当前新版下册待核实；' : ''}官方配套音频 ${book.inventory.vocabularyListName} 已整理 ${book.inventory.vocabularyCount} 个单元词项（含跨单元复现）；纸本词表完整性待核验；`;
   if (!book.inventory.wordBankComplete) return '目录主题词汇已整理，完整 Word bank 待核验；';
   return book.inventory.wordBankBasis === 'public_sample_pages'

@@ -658,6 +658,11 @@
             "url": "https://book.pep.com.cn/1211001302252/files/mobile/65.jpg?260122103532",
             "sha256": "64e4afbe4a434907702fcc45e5776796b999811d1d90342116f46cea8a78f268"
           }
+        },
+        "poetryReview": {
+          "url": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=bd1e1af7-f570-436d-afa4-f326691676f4&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "checkedAt": "2026-10-17",
+          "basis": "原书逐处检索日积月累，并核对作者／出处、首句和印刷页；电子页与出版社查看器偏移分别保留。"
         }
       },
       "inventory": {
@@ -759,6 +764,19 @@
               "contentId": "moe-2022-zh-1-6-058",
               "sourcePrintPage": 3,
               "sourcePdfPage": 9
+            },
+            {
+              "contentId": "moe-2022-zh-1-6-039",
+              "sourcePrintPage": 14,
+              "sourcePdfPage": 19,
+              "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=bd1e1af7-f570-436d-afa4-f326691676f4&catalogType=tchMaterial&subCatalog=tchMaterial",
+              "sourceKind": "official_textbook",
+              "identityEvidence": {
+                "sourcePdfPage": 19,
+                "author": "白居易",
+                "firstLine": "江南好，风景旧曾谙。"
+              },
+              "checkedAt": "2026-10-17"
             }
           ]
         },
@@ -825,7 +843,22 @@
             "skill": "用自己的话说出道理，再举一个学习或生活中的例子。",
             "titleReading": "zhǐ děng fēng de fān chuán",
             "detailReading": "xiǎo mù chuán yǒu yī miàn piào liàng de fān zǒng děng zhe dà fēng bǎ zì jǐ sòng dào yuǎn fāng péng yǒu tí xǐng tā jiǎn chá chuán dǐ tā què shuō fēng lái le zì rán jiù néng zǒu dà fēng zhōng yú lái le xiǎo chuán què yīn chuán dǐ jī shuǐ wāi zài àn biān xiū hǎo chuán dǐ hòu tā cái míng bái jī huì dào lái yǐ qián yě yào bǎ gāi zuò de shì zuò hǎo xiǎng yī xiǎng xiǎo chuán yù dào wèn tí de yuán yīn shì shén me nǐ néng cóng zhōng xiǎng dào shén me dào lǐ cān kǎo tā zhǐ děng jī huì ér méi yǒu zhǔn bèi hū lüè le chuán dǐ jī shuǐ chéng gōng xū yào tí qián zuò hǎo néng zuò de zhǔn bèi liàn yī liàn yòng zì jǐ de huà shuō chū dào lǐ zài jǔ yī gè xué xí huò shēng huó zhōng de lì zi"
-          }
+          },
+          "poems": [
+            {
+              "contentId": "sh54-shouzhudaitu",
+              "sourcePrintPage": 16,
+              "sourcePdfPage": 21,
+              "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=bd1e1af7-f570-436d-afa4-f326691676f4&catalogType=tchMaterial&subCatalog=tchMaterial",
+              "sourceKind": "official_textbook",
+              "identityEvidence": {
+                "sourcePdfPage": 21,
+                "author": "《韩非子》",
+                "firstLine": "宋人有耕者，田中有株。"
+              },
+              "checkedAt": "2026-10-17"
+            }
+          ]
         },
         {
           "id": "u3",
@@ -882,7 +915,22 @@
             "skill": "用“先、再、接着、最后”介绍一次简单、安全的观察活动。",
             "titleReading": "huì xī shuǐ de zhǐ qiáo",
             "detailReading": "xiǎo lín bǎ liǎng zhī bēi zi bìng pái bǎi hǎo yī zhī zhuāng qīng shuǐ yī zhī kōng zhe tā bǎ yī tiáo zhǐ jīn zhé chéng cháng tiáo yī duān fàng jìn shuǐ lǐ lìng yī duān dā jìn kōng bēi guò le yī huì er zhǐ jīn màn màn shī le kōng bēi lǐ yě yǒu le shuǐ tā jì xià cái liào hé biàn huà yòu xiǎng bǐ jiào bù tóng zhǐ jīn de xiào guǒ shí yàn shí mā mā zài páng biān bāng tā bǎo chí zhuō miàn zhěng jié xiǎng yī xiǎng duǎn wén àn shén me shùn xù jiè shào shí yàn rú guǒ yào gōng píng bǐ jiào liǎng zhǒng zhǐ jīn nǎ xiē tiáo jiàn yīng jǐn liàng xiāng tóng cān kǎo àn zhǔn bèi cāo zuò guān chá de shùn xù bēi zi shuǐ liàng zhǐ jīn cháng dù hé guān chá shí jiān děng tiáo jiàn yīng jǐn liàng xiāng tóng liàn yī liàn yòng xiān zài jiē zhe zuì hòu jiè shào yī cì jiǎn dān ān quán de guān chá huó dòng"
-          }
+          },
+          "poems": [
+            {
+              "contentId": "moe-2022-zh-1-6-030",
+              "sourcePrintPage": 42,
+              "sourcePdfPage": 47,
+              "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=bd1e1af7-f570-436d-afa4-f326691676f4&catalogType=tchMaterial&subCatalog=tchMaterial",
+              "sourceKind": "official_textbook",
+              "identityEvidence": {
+                "sourcePdfPage": 47,
+                "author": "韦应物",
+                "firstLine": "独怜幽草涧边生，上有黄鹂深树鸣。"
+              },
+              "checkedAt": "2026-10-17"
+            }
+          ]
         },
         {
           "id": "u4",
@@ -1151,7 +1199,22 @@
             "skill": "选择一个会变化的景象，按观察顺序写出两次不同的样子。",
             "titleReading": "bàng wǎn de yún",
             "detailReading": "bàng wǎn yī duǒ cháng cháng de yún xiān xiàng yī tiáo yú guò le yī huì er wěi ba sàn kāi yòu xiàng yī bǎ shàn zi yún biān bèi yáng guāng zhào chéng jīn sè yún xīn què dài zhe yī diǎn huī xiǎo nán gāng xiǎng huà xià lái fēng yòu bǎ tā tuī yuǎn le tiān kōng de biàn huà tài kuài tā jué dìng yòng jǐ jù duǎn huà jì xià kàn dào de xíng zhuàng hé yán sè xiǎng yī xiǎng duǎn wén cóng nǎ liǎng gè fāng miàn xiě yún de biàn huà wèi shén me xiǎo nán gǎi yòng duǎn huà jì lù cān kǎo cóng xíng zhuàng hé yán sè xiě biàn huà yún biàn huà hěn kuài jiǎn duǎn jì lù biàn yú jí shí liú xià guān chá liàn yī liàn xuǎn zé yī gè huì biàn huà de jǐng xiàng àn guān chá shùn xù xiě chū liǎng cì bù tóng de yàng zi"
-          }
+          },
+          "poems": [
+            {
+              "contentId": "sh54-dalinsi-taohua",
+              "sourcePrintPage": 94,
+              "sourcePdfPage": 99,
+              "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=bd1e1af7-f570-436d-afa4-f326691676f4&catalogType=tchMaterial&subCatalog=tchMaterial",
+              "sourceKind": "official_textbook",
+              "identityEvidence": {
+                "sourcePdfPage": 99,
+                "author": "白居易",
+                "firstLine": "人间四月芳菲尽，山寺桃花始盛开。"
+              },
+              "checkedAt": "2026-10-17"
+            }
+          ]
         },
         {
           "id": "u8",
@@ -1241,7 +1304,9 @@
         "officialResourceIsbn": "978-7-5720-4357-4",
         "audioArchiveSha256": "4d046cfef815025db66240ce55c16c932df0ed1426cafc710052e1ee02cf328e",
         "wordBankPrintedPagesVerified": false,
-        "scope": "Words to use 录音可确认词项；纸本词形、标点和完整性待交叉核验；第10单元 flour/flower 同音项暂不列为教材词条"
+        "scope": "Words to use 录音可确认词项；纸本词形、标点和完整性待交叉核验；第10单元 flour/flower 同音项暂不列为教材词条",
+        "nationalTextbookUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=319f0cb8-03af-70e7-7c8e-5a2241688ade&catalogType=tchMaterial&subCatalog=tchMaterial",
+        "paperVerificationStatus": "国家平台已核实五四制、册次、出版社与配套音频；PDF阅读器持续加载，纸本词表仍待核实。"
       },
       "inventory": {
         "topicWordsComplete": false,
@@ -3277,6 +3342,24 @@
           }
         }
       ]
+    }
+  ],
+  "poems": [
+    {
+      "id": "sh54-shouzhudaitu",
+      "title": "守株待兔",
+      "author": "《韩非子》",
+      "original": "宋人有耕者，田中有株。兔走触株，折颈而死。因释其耒而守株，冀复得兔。兔不可复得，而身为宋国笑。",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=bd1e1af7-f570-436d-afa4-f326691676f4&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "国家平台五四制原书印刷页16、电子页21题名、出处与公版正文已核对；仅录原文，不含现代注释；学校印次待确认。"
+    },
+    {
+      "id": "sh54-dalinsi-taohua",
+      "title": "大林寺桃花",
+      "author": "白居易",
+      "original": "人间四月芳菲尽，山寺桃花始盛开。\n长恨春归无觅处，不知转入此中来。",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=bd1e1af7-f570-436d-afa4-f326691676f4&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "国家平台五四制原书印刷页94、电子页99题名、出处与公版正文已核对；仅录原文，不含现代注释；学校印次待确认。"
     }
   ]
 }

@@ -10,6 +10,7 @@ const regional = require('../data/catalogs/shanghai-54-evidence.json');
 const gradeThree = require('../data/catalogs/shanghai-54-grade3.json');
 const gradeFour = require('../data/catalogs/shanghai-54-grade4.json');
 const gradeFive = require('../data/catalogs/shanghai-54-grade5.json');
+const inventories = require('../scripts/lower-primary').data.books;
 const framework = require('../data/catalogs/shanghai-zhongkao-framework.json');
 const dynasties = require('../data/catalogs/poetry-dynasties.json');
 
@@ -49,8 +50,8 @@ test('national source inventories retain 75/60 works, 1600 headword groups, 505 
   assert.deepEqual(new Set(Object.keys(meanings.entries)), new Set(english.entries.filter((entry) => entry.level2).map((entry) => entry.word)));
   assert.equal(tables.entries.length, 77);
   assert.deepEqual(tables.entries.reduce((counts, entry) => ({ ...counts, [entry.table]: (counts[entry.table] || 0) + 1 }), {}), { '基数词': 30, '序数词': 28, '月份': 12, '星期': 7 });
-  assert.equal(learning.catalog.filter((item) => item.kind === 'poetry').length, 182);
-  assert.equal(learning.catalog.filter((item) => item.kind === 'word').length, 1973);
+  assert.equal(learning.catalog.filter((item) => item.kind === 'poetry').length, 194);
+  assert.equal(learning.catalog.filter((item) => item.kind === 'word').length, 2093);
 });
 
 test('content identity preserves case and distinct same-title works; default scopes are deliberately limited', () => {
@@ -71,29 +72,28 @@ test('content identity preserves case and distinct same-title works; default sco
 
 test('grade mappings require a named five-four textbook and an observed title; national bands never become individual grades', () => {
   const mappings = learning.catalog.filter(item => item.kind === 'poetry').flatMap((item) => (item.gradeMappings || []).map((mapping) => ({ item, mapping })));
-  assert.equal(mappings.length, 103);
+  assert.equal(mappings.length, 136);
   for (const { item, mapping } of mappings) {
-    const book = regional.books.find((entry) => entry.id === mapping.bookId);
-    const official = [...gradeThree.books, ...gradeFour.books, ...gradeFive.books].find(entry => entry.id === mapping.bookId);
+    const book = regional.books.find(entry => entry.id === mapping.bookId);
+    const detailed = inventories.find(entry => entry.id === mapping.bookId);
+    const poem = detailed?.units.flatMap(unit => unit.poems || []).find(poem => poem.contentId === item.id
+      && poem.sourcePdfPage === mapping.sourcePdfPage && poem.sourcePrintPage === mapping.sourcePrintPage);
     assert.ok(mapping.outlineDestination);
-    if (book) {
-      assert.equal(book.url, mapping.sourceUrl);
+    if (poem) assert.equal(mapping.sourceUrl, poem.sourceUrl || detailed.sourceUrl);
+    else {
+      assert.equal(book?.url, mapping.sourceUrl);
       assert.ok(book.entries.some(entry => entry.contentId === item.id && entry.outlineDestination === mapping.outlineDestination));
-    } else {
-      assert.equal(official?.sourceUrl, mapping.sourceUrl);
-      assert.ok(official.units.some(unit => (unit.poems || []).some(poem => poem.contentId === item.id
-        && poem.sourcePdfPage === mapping.sourcePdfPage && poem.sourcePrintPage === mapping.sourcePrintPage)));
     }
     assert.equal(mapping.schoolSystem, '5-4'); assert.equal(mapping.status, 'catalogue_verified');
   }
-  assert.equal(learning.searchCatalog({ kind: 'poetry', grade: 2, semester: '下册' }).length, 3, 'only uniquely identified poems from the new sample are mapped');
-  assert.ok(!learning.searchCatalog({ kind: 'poetry', grade: 2, semester: '下册' }).some(item => item.title.includes('绝句')), 'ambiguous title without author or first line stays pending');
-  assert.equal(learning.searchCatalog({ kind: 'poetry', grade: 2 }).length, 10);
+  assert.equal(learning.searchCatalog({ kind: 'poetry', grade: 2, semester: '下册' }).length, 9, 'new original-page evidence fills the six missing 2B locations');
+  assert.ok(learning.catalogById.get('moe-2022-zh-1-6-025').gradeMappings.some(m => m.grade === 2 && /两个黄鹂/.test(m.evidence)));
+  assert.equal(learning.searchCatalog({ kind: 'poetry', grade: 2 }).length, 16);
   assert.equal(learning.searchCatalog({ kind: 'poetry', grade: 1 }).length, 13);
-  assert.equal(learning.searchCatalog({ grade: 3 }).length, 373);
-  assert.equal(learning.searchCatalog({ grade: 6 }).length, 10);
+  assert.equal(learning.searchCatalog({ grade: 3 }).length, 377);
+  assert.equal(learning.searchCatalog({ grade: 6 }).length, 664);
   assert.equal(learning.searchCatalog({ grade: 7 }).length, 2);
-  assert.equal(learning.catalogById.get('sh54-cicada').gradeMappings.length, 0, 'candidate without verified locator stays pending');
+  assert.equal(learning.catalogById.get('sh54-cicada').gradeMappings.length, 1, 'sixth-grade original page now verifies the formerly pending candidate');
   for (const entry of index.entries) assert.deepEqual(entry.shanghai_textbook_mapping || [], learning.catalog.find((item) => item.curriculumId === entry.id).gradeMappings);
 });
 
@@ -127,9 +127,9 @@ test('all built-in content fits in a compact ledger and history resolves the ori
   const ledger = { records: {} };
   const tasks = learning.catalog.map((item, index) => ({ ...learning.taskFrom(item, 'child', `task${index}`, 'new'), done: true }));
   learning.recordTasks(ledger, tasks, '2026-10-12');
-  // Grade-five additions fit below 550 KiB; the unchanged 700 KiB persisted guard
-  // still reserves at least 150 KiB for custom entries and further learning dates.
-  assert.ok(Buffer.byteLength(JSON.stringify(ledger)) < 550 * 1024);
+  // Grade-six additions fit below 600 KiB; the unchanged 700 KiB persisted guard
+  // still reserves at least 100 KiB for custom entries and further learning dates.
+  assert.ok(Buffer.byteLength(JSON.stringify(ledger)) < 600 * 1024);
   assert.ok(Object.values(ledger.records).every((entry) => entry.item.builtin));
   const result = learning.history(ledger, { query: '出师表' });
   assert.ok(result.items.some((item) => item.detail.includes('先帝创业未半')));

@@ -9,99 +9,159 @@
       "url": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=2ca4002f-cb3d-4a21-bcfe-ebb94032a400&catalogType=tchMaterial&subCatalog=tchMaterial",
       "publisher": "人民教育出版社",
       "schoolSystem": "五四学制",
-      "checkedAt": "2026-10-12",
-      "verification": "部分目录核验，不是全册知识点；日积月累、课外诵读组内篇目和逐字正文仍有缺口。",
+      "checkedAt": "2026-10-17",
+      "verification": "目录与古诗文原页已核对；详细单元与页码见六年级清单；未逐课列全教材知识。",
       "entries": [
         {
           "observedTitle": "宿建德江",
           "contentId": "sh54-jiande",
-          "outlineDestination": "#%5B18%2C%22XYZ%22%2Cnull%2Cnull%2Cnull%5D",
-          "status": "目录篇名已读取；正文及学校采用版本待核验",
-          "gradeVerification": "catalogue_verified"
+          "outlineDestination": "#page=18",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 11,
+          "sourcePdfPage": 18,
+          "unitId": "u1",
+          "unit": "景物与感受",
+          "status": "目录、作者出处及原文已核对；学校印次待确认"
         },
         {
-          "observedTitle": "六月二十七日望湖楼醉书（其一）",
+          "observedTitle": "六月二十七日望湖楼醉书",
           "contentId": "moe-2022-zh-1-6-053",
-          "outlineDestination": "#%5B19%2C%22XYZ%22%2Cnull%2Cnull%2Cnull%5D",
-          "status": "目录篇名已读取；正文及学校采用版本待核验",
-          "gradeVerification": "catalogue_verified"
+          "outlineDestination": "#page=19",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 12,
+          "sourcePdfPage": 19,
+          "unitId": "u1",
+          "unit": "景物与感受",
+          "status": "目录、作者出处及原文已核对；学校印次待确认"
         },
         {
           "observedTitle": "西江月·夜行黄沙道中",
           "contentId": "sh54-xijiangyue",
-          "outlineDestination": "#%5B19%2C%22XYZ%22%2Cnull%2Cnull%2Cnull%5D",
-          "status": "目录篇名已读取；正文及学校采用版本待核验",
-          "gradeVerification": "catalogue_verified"
+          "outlineDestination": "#page=19",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 12,
+          "sourcePdfPage": 19,
+          "unitId": "u1",
+          "unit": "景物与感受",
+          "status": "目录、作者出处及原文已核对；学校印次待确认"
         },
         {
-          "observedTitle": "浪淘沙（其一）",
+          "observedTitle": "浪淘沙",
           "contentId": "moe-2022-zh-1-6-036",
-          "outlineDestination": "#%5B69%2C%22XYZ%22%2Cnull%2Cnull%2Cnull%5D",
-          "status": "目录篇名已读取；正文及学校采用版本待核验",
-          "gradeVerification": "pending"
+          "outlineDestination": "#page=69",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 62,
+          "sourcePdfPage": 69,
+          "unitId": "u3",
+          "unit": "阅读目的与说明",
+          "status": "目录、作者出处及原文已核对；学校印次待确认"
         },
         {
           "observedTitle": "江南春",
           "contentId": "moe-2022-zh-1-6-047",
-          "outlineDestination": "#%5B69%2C%22XYZ%22%2Cnull%2Cnull%2Cnull%5D",
-          "status": "目录篇名已读取；正文及学校采用版本待核验",
-          "gradeVerification": "catalogue_verified"
+          "outlineDestination": "#page=69",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 62,
+          "sourcePdfPage": 69,
+          "unitId": "u3",
+          "unit": "阅读目的与说明",
+          "status": "目录、作者出处及原文已核对；学校印次待确认"
         },
         {
-          "observedTitle": "书湖阴先生壁（其一）",
+          "observedTitle": "书湖阴先生壁",
           "contentId": "moe-2022-zh-1-6-052",
-          "outlineDestination": "#%5B70%2C%22XYZ%22%2Cnull%2Cnull%2Cnull%5D",
-          "status": "目录篇名已读取；正文及学校采用版本待核验",
-          "gradeVerification": "catalogue_verified"
+          "outlineDestination": "#page=70",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 63,
+          "sourcePdfPage": 70,
+          "unitId": "u3",
+          "unit": "阅读目的与说明",
+          "status": "目录、作者出处及原文已核对；学校印次待确认"
+        },
+        {
+          "observedTitle": "囚歌",
+          "contentId": "sh54-qiuge",
+          "outlineDestination": "#page=119",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 112,
+          "sourcePdfPage": 119,
+          "unitId": "u6",
+          "unit": "阅读分享与诗歌表达",
+          "status": "目录、作者出处及原文已核对；学校印次待确认"
         },
         {
           "observedTitle": "两小儿辩日",
           "contentId": "sh54-two-children",
-          "outlineDestination": "#%5B135%2C%22XYZ%22%2Cnull%2Cnull%2Cnull%5D",
-          "status": "目录篇名已读取；正文及学校采用版本待核验",
-          "gradeVerification": "catalogue_verified"
+          "outlineDestination": "#page=135",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 128,
+          "sourcePdfPage": 135,
+          "unitId": "u7",
+          "unit": "科学与思辨",
+          "status": "目录、作者出处及原文已核对；学校印次待确认"
         },
         {
           "observedTitle": "曹冲称象",
-          "contentId": null,
-          "outlineDestination": "#%5B136%2C%22XYZ%22%2Cnull%2Cnull%2Cnull%5D",
-          "status": "目录条目；子篇目或完整标题待核对",
-          "gradeVerification": "pending"
+          "contentId": "sh54-caochong",
+          "outlineDestination": "#page=136",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 129,
+          "sourcePdfPage": 136,
+          "unitId": "u7",
+          "unit": "科学与思辨",
+          "status": "目录、作者出处及原文已核对；学校印次待确认"
         },
         {
           "observedTitle": "过故人庄",
           "contentId": "sh54-old-friend",
-          "outlineDestination": "#%5B141%2C%22XYZ%22%2Cnull%2Cnull%2Cnull%5D",
-          "status": "目录篇名已读取；正文及学校采用版本待核验",
-          "gradeVerification": "catalogue_verified"
+          "outlineDestination": "#page=141",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 134,
+          "sourcePdfPage": 141,
+          "unitId": "u8",
+          "unit": "课外古诗词诵读",
+          "status": "目录、作者出处及原文已核对；学校印次待确认"
         },
         {
           "observedTitle": "送元二使安西",
           "contentId": "moe-2022-zh-1-6-015",
-          "outlineDestination": "#%5B142%2C%22XYZ%22%2Cnull%2Cnull%2Cnull%5D",
-          "status": "目录篇名已读取；正文及学校采用版本待核验",
-          "gradeVerification": "catalogue_verified"
+          "outlineDestination": "#page=142",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 135,
+          "sourcePdfPage": 142,
+          "unitId": "u8",
+          "unit": "课外古诗词诵读",
+          "status": "目录、作者出处及原文已核对；学校印次待确认"
         },
         {
-          "observedTitle": "江畔独步寻花（其五）",
+          "observedTitle": "江畔独步寻花",
           "contentId": "moe-2022-zh-1-6-028",
-          "outlineDestination": "#%5B143%2C%22XYZ%22%2Cnull%2Cnull%2Cnull%5D",
-          "status": "目录篇名已读取；正文及学校采用版本待核验",
-          "gradeVerification": "catalogue_verified"
+          "outlineDestination": "#page=143",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 136,
+          "sourcePdfPage": 143,
+          "unitId": "u8",
+          "unit": "课外古诗词诵读",
+          "status": "目录、作者出处及原文已核对；学校印次待确认"
         },
         {
           "observedTitle": "春日",
           "contentId": "moe-2022-zh-1-6-065",
-          "outlineDestination": "#%5B144%2C%22XYZ%22%2Cnull%2Cnull%2Cnull%5D",
-          "status": "目录篇名已读取；正文及学校采用版本待核验",
-          "gradeVerification": "catalogue_verified"
+          "outlineDestination": "#page=144",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 137,
+          "sourcePdfPage": 144,
+          "unitId": "u8",
+          "unit": "课外古诗词诵读",
+          "status": "目录、作者出处及原文已核对；学校印次待确认"
         }
       ],
       "grade": 6,
       "semester": "上册",
       "edition": "根据2022年版课程标准修订",
       "schoolAdoption": "待确认",
-      "fullCoverage": false
+      "fullCoverage": false,
+      "sourceKind": "official_textbook"
     },
     {
       "id": "chinese-6b",
@@ -109,99 +169,159 @@
       "url": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=a953eeec-db0c-4c8b-860f-aa94f4727b6b&catalogType=tchMaterial&subCatalog=tchMaterial",
       "publisher": "人民教育出版社",
       "schoolSystem": "五四学制",
-      "checkedAt": "2026-10-12",
-      "verification": "部分目录核验，不是全册知识点；日积月累、课外诵读组内篇目和逐字正文仍有缺口。",
+      "checkedAt": "2026-10-17",
+      "verification": "目录与古诗文原页已核对；详细单元与页码见六年级清单；未逐课列全教材知识。",
       "entries": [
         {
-          "observedTitle": "迢迢牵牛",
-          "contentId": null,
-          "outlineDestination": "",
-          "status": "目录条目；子篇目或完整标题待核对",
-          "gradeVerification": "pending"
+          "observedTitle": "迢迢牵牛星",
+          "contentId": "sh54-tiaotiao-qianniuxing",
+          "outlineDestination": "#page=20",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 13,
+          "sourcePdfPage": 20,
+          "unitId": "u1",
+          "unit": "风俗与节日",
+          "status": "目录、作者出处及原文已核对；学校印次待确认"
         },
         {
           "observedTitle": "寒食",
           "contentId": "sh54-cold-food",
-          "outlineDestination": "",
-          "status": "目录篇名已读取；正文及学校采用版本待核验",
-          "gradeVerification": "pending"
+          "outlineDestination": "#page=21",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 14,
+          "sourcePdfPage": 21,
+          "unitId": "u1",
+          "unit": "风俗与节日",
+          "status": "目录、作者出处及原文已核对；学校印次待确认"
         },
         {
           "observedTitle": "十五夜望月",
           "contentId": "sh54-moon-fifteen",
-          "outlineDestination": "",
-          "status": "目录篇名已读取；正文及学校采用版本待核验",
-          "gradeVerification": "pending"
+          "outlineDestination": "#page=21",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 14,
+          "sourcePdfPage": 21,
+          "unitId": "u1",
+          "unit": "风俗与节日",
+          "status": "目录、作者出处及原文已核对；学校印次待确认"
+        },
+        {
+          "observedTitle": "生查子",
+          "contentId": "sh54-shengchazi",
+          "outlineDestination": "#page=22",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 15,
+          "sourcePdfPage": 22,
+          "unitId": "u1",
+          "unit": "风俗与节日",
+          "status": "目录、作者出处及原文已核对；学校印次待确认"
         },
         {
           "observedTitle": "蝉",
           "contentId": "sh54-cicada",
-          "outlineDestination": "",
-          "status": "目录篇名已读取；正文及学校采用版本待核验",
-          "gradeVerification": "pending"
+          "outlineDestination": "#page=37",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 30,
+          "sourcePdfPage": 37,
+          "unitId": "u2",
+          "unit": "人物志向与责任",
+          "status": "目录、作者出处及原文已核对；学校印次待确认"
         },
         {
           "observedTitle": "马诗（其五）",
           "contentId": "sh54-horse",
-          "outlineDestination": "",
-          "status": "目录篇名已读取；正文及学校采用版本待核验",
-          "gradeVerification": "pending"
+          "outlineDestination": "#page=37",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 30,
+          "sourcePdfPage": 37,
+          "unitId": "u2",
+          "unit": "人物志向与责任",
+          "status": "目录、作者出处及原文已核对；学校印次待确认"
         },
         {
           "observedTitle": "竹石",
           "contentId": "moe-2022-zh-1-6-072",
-          "outlineDestination": "",
-          "status": "目录篇名已读取；正文及学校采用版本待核验",
-          "gradeVerification": "pending"
+          "outlineDestination": "#page=38",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 31,
+          "sourcePdfPage": 38,
+          "unitId": "u2",
+          "unit": "人物志向与责任",
+          "status": "目录、作者出处及原文已核对；学校印次待确认"
         },
         {
           "observedTitle": "学弈",
           "contentId": "sh54-chess",
-          "outlineDestination": "",
-          "status": "目录篇名已读取；正文及学校采用版本待核验",
-          "gradeVerification": "pending"
+          "outlineDestination": "#page=53",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 46,
+          "sourcePdfPage": 53,
+          "unitId": "u3",
+          "unit": "真情与学习",
+          "status": "目录、作者出处及原文已核对；学校印次待确认"
         },
         {
           "observedTitle": "关尹子教射",
           "contentId": "sh54-archery",
-          "outlineDestination": "",
-          "status": "目录篇名已读取；正文及学校采用版本待核验",
-          "gradeVerification": "pending"
+          "outlineDestination": "#page=54",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 47,
+          "sourcePdfPage": 54,
+          "unitId": "u3",
+          "unit": "真情与学习",
+          "status": "目录、作者出处及原文已核对；学校印次待确认"
         },
         {
           "observedTitle": "长歌行",
           "contentId": "moe-2022-zh-1-6-002",
-          "outlineDestination": "",
-          "status": "目录篇名已读取；正文及学校采用版本待核验",
-          "gradeVerification": "pending"
+          "outlineDestination": "#page=140",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 133,
+          "sourcePdfPage": 140,
+          "unitId": "u8",
+          "unit": "课外古诗词诵读",
+          "status": "目录、作者出处及原文已核对；学校印次待确认"
         },
         {
           "observedTitle": "绝句（其二）",
           "contentId": "sh54-jueju-two",
-          "outlineDestination": "",
-          "status": "目录篇名已读取；正文及学校采用版本待核验",
-          "gradeVerification": "pending"
+          "outlineDestination": "#page=141",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 134,
+          "sourcePdfPage": 141,
+          "unitId": "u8",
+          "unit": "课外古诗词诵读",
+          "status": "目录、作者出处及原文已核对；学校印次待确认"
         },
         {
-          "observedTitle": "淮中晚泊犊",
-          "contentId": null,
-          "outlineDestination": "",
-          "status": "目录条目；子篇目或完整标题待核对",
-          "gradeVerification": "pending"
+          "observedTitle": "淮中晚泊犊头",
+          "contentId": "sh54-huaizhong-wanbo",
+          "outlineDestination": "#page=142",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 135,
+          "sourcePdfPage": 142,
+          "unitId": "u8",
+          "unit": "课外古诗词诵读",
+          "status": "目录、作者出处及原文已核对；学校印次待确认"
         },
         {
           "observedTitle": "观书有感（其二）",
           "contentId": "sh54-reading-two",
-          "outlineDestination": "",
-          "status": "目录篇名已读取；正文及学校采用版本待核验",
-          "gradeVerification": "pending"
+          "outlineDestination": "#page=143",
+          "gradeVerification": "catalogue_verified",
+          "sourcePrintPage": 136,
+          "sourcePdfPage": 143,
+          "unitId": "u8",
+          "unit": "课外古诗词诵读",
+          "status": "目录、作者出处及原文已核对；学校印次待确认"
         }
       ],
       "grade": 6,
       "semester": "下册",
       "edition": "根据2022年版课程标准修订",
       "schoolAdoption": "待确认",
-      "fullCoverage": false
+      "fullCoverage": false,
+      "sourceKind": "official_textbook"
     },
     {
       "id": "chinese-7a",
@@ -733,99 +853,96 @@
       "title": "宿建德江",
       "author": "孟浩然",
       "original": "移舟泊烟渚，日暮客愁新。\n野旷天低树，江清月近人。",
-      "sourceUrl": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=2ca4002f-cb3d-4a21-bcfe-ebb94032a400&catalogType=tchMaterial&subCatalog=tchMaterial",
       "transcriptionRecordId": "5b9a1439367d5cab1866863c",
-      "reviewStatus": "公版原作参考；教材逐字校对待确认"
+      "reviewStatus": "五四制原书印刷页11／电子页18篇名、作者、正文已核对；学校采用印次待确认。"
     },
     {
       "id": "sh54-xijiangyue",
       "title": "西江月·夜行黄沙道中",
       "author": "辛弃疾",
       "original": "明月别枝惊鹊，清风半夜鸣蝉。稻花香里说丰年，听取蛙声一片。\n七八个星天外，两三点雨山前。旧时茅店社林边，路转溪桥忽见。",
-      "sourceUrl": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=2ca4002f-cb3d-4a21-bcfe-ebb94032a400&catalogType=tchMaterial&subCatalog=tchMaterial",
       "transcriptionRecordId": "5b9a033f367d5ca0f831362d",
-      "reviewStatus": "公版原作参考；教材逐字校对待确认"
+      "reviewStatus": "五四制原书印刷页12／电子页19篇名、作者、正文已核对；学校采用印次待确认。"
     },
     {
       "id": "sh54-two-children",
       "title": "两小儿辩日",
-      "author": "列御寇",
-      "original": "孔子东游，见两小儿辩日，问其故。\n一儿曰：“我以日始出时去人近，而日中时远也。”\n一儿以日初出远，而日中时近也。\n一儿曰：“日初出大如车盖，及日中则如盘盂，此不为远者小而近者大乎？”\n一儿曰：“日初出沧沧凉凉，及其日中如探汤，此不为近者热而远者凉乎？”\n孔子不能决也。\n两小儿笑曰：“孰为汝多知乎？”",
-      "sourceUrl": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
-      "transcriptionRecordId": "5b9a120a367d5c5b84062a8d",
-      "reviewStatus": "公版原作参考；教材逐字校对待确认"
+      "author": "《列子》",
+      "original": "孔子东游，见两小儿辩斗，问其故。\n一儿曰：“我以日始出时去人近，而日中时远也。”\n一儿曰：“我以日初出远，而日中时近也。”\n一儿曰：“日初出大如车盖，及日中则如盘盂，此不为远者小而近者大乎？”\n一儿曰：“日初出沧沧凉凉，及其日中如探汤，此不为近者热而远者凉乎？”\n孔子不能决也。\n两小儿笑曰：“孰为汝多知乎？”",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=2ca4002f-cb3d-4a21-bcfe-ebb94032a400&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "五四制原书印刷页128／电子页135逐字核对；沿用既有内容ID。"
     },
     {
       "id": "sh54-old-friend",
       "title": "过故人庄",
       "author": "孟浩然",
       "original": "故人具鸡黍，邀我至田家。\n绿树村边合，青山郭外斜。\n开轩面场圃，把酒话桑麻。\n待到重阳日，还来就菊花。",
-      "sourceUrl": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=2ca4002f-cb3d-4a21-bcfe-ebb94032a400&catalogType=tchMaterial&subCatalog=tchMaterial",
       "transcriptionRecordId": "5b9a04b2367d5cae5c9bff64",
-      "reviewStatus": "公版原作参考；教材逐字校对待确认"
+      "reviewStatus": "五四制原书印刷页134／电子页141篇名、作者、正文已核对；学校采用印次待确认。"
     },
     {
       "id": "sh54-cold-food",
       "title": "寒食",
       "author": "韩翃",
       "original": "春城无处不飞花，寒食东风御柳斜。\n日暮汉宫传蜡烛，轻烟散入五侯家。",
-      "sourceUrl": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=a953eeec-db0c-4c8b-860f-aa94f4727b6b&catalogType=tchMaterial&subCatalog=tchMaterial",
       "transcriptionRecordId": "5b9a1437367d5cab18668630",
-      "reviewStatus": "公版原作参考；教材逐字校对待确认"
+      "reviewStatus": "五四制原书印刷页14／电子页21篇名、作者、正文已核对；学校采用印次待确认。"
     },
     {
       "id": "sh54-moon-fifteen",
       "title": "十五夜望月",
       "author": "王建",
       "original": "中庭地白树栖鸦，冷露无声湿桂花。\n今夜月明人尽望，不知秋思落谁家。",
-      "sourceUrl": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=a953eeec-db0c-4c8b-860f-aa94f4727b6b&catalogType=tchMaterial&subCatalog=tchMaterial",
       "transcriptionRecordId": "5b9a1455367d5cab186686fe",
-      "reviewStatus": "公版原作参考；教材逐字校对待确认"
+      "reviewStatus": "五四制原书印刷页14／电子页21篇名、作者、正文已核对；学校采用印次待确认。"
     },
     {
       "id": "sh54-cicada",
       "title": "蝉",
       "author": "虞世南",
       "original": "垂緌饮清露，流响出疏桐。\n居高声自远，非是藉秋风。",
-      "sourceUrl": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=a953eeec-db0c-4c8b-860f-aa94f4727b6b&catalogType=tchMaterial&subCatalog=tchMaterial",
       "transcriptionRecordId": "5b9a1452367d5cab186686e9",
-      "reviewStatus": "公版原作参考；教材逐字校对待确认"
+      "reviewStatus": "五四制原书印刷页30／电子页37篇名、作者、正文已核对；学校采用印次待确认。"
     },
     {
       "id": "sh54-horse",
       "title": "马诗（其五）",
       "author": "李贺",
       "original": "大漠沙如雪，燕山月似钩。\n何当金络脑，快走踏清秋。",
-      "sourceUrl": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=a953eeec-db0c-4c8b-860f-aa94f4727b6b&catalogType=tchMaterial&subCatalog=tchMaterial",
       "transcriptionRecordId": "5b9a145f367d5cab1866873d",
-      "reviewStatus": "公版原作参考；教材逐字校对待确认"
+      "reviewStatus": "五四制原书印刷页30／电子页37篇名、作者、正文已核对；学校采用印次待确认。"
     },
     {
       "id": "sh54-chess",
       "title": "学弈",
-      "author": "佚名",
+      "author": "《孟子》",
       "original": "弈秋，通国之善弈者也。使弈秋诲二人弈，其一人专心致志，惟弈秋之为听；一人虽听之，一心以为有鸿鹄将至，思援弓缴而射之。虽与之俱学，弗若之矣。为是其智弗若与？曰：非然也。",
-      "sourceUrl": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
-      "transcriptionRecordId": "5b9a1439367d5cab1866863f",
-      "reviewStatus": "公版原作参考；教材逐字校对待确认"
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=a953eeec-db0c-4c8b-860f-aa94f4727b6b&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "五四制原书印刷页46／电子页53逐字核对；沿用既有内容ID。"
     },
     {
       "id": "sh54-jueju-two",
       "title": "绝句（其二）",
       "author": "杜甫",
       "original": "江碧鸟逾白，山青花欲燃。\n今春看又过，何日是归年。",
-      "sourceUrl": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=a953eeec-db0c-4c8b-860f-aa94f4727b6b&catalogType=tchMaterial&subCatalog=tchMaterial",
       "transcriptionRecordId": "5b9a1440367d5cab1866866c",
-      "reviewStatus": "公版原作参考；教材逐字校对待确认"
+      "reviewStatus": "五四制原书印刷页134／电子页141篇名、作者、正文已核对；学校采用印次待确认。"
     },
     {
       "id": "sh54-reading-two",
       "title": "观书有感（其二）",
       "author": "朱熹",
-      "original": "昨夜江边春水生，艨艟巨舰一毛轻。\n向来枉费推移力，此日中流自在行。",
-      "sourceUrl": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
-      "transcriptionRecordId": "5b9a1497367d5cab186688b3",
-      "reviewStatus": "公版原作参考；教材逐字校对待确认"
+      "original": "昨夜江边春水生，蒙冲巨舰一毛轻。\n向来枉费推移力，此日中流自在行。",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=a953eeec-db0c-4c8b-860f-aa94f4727b6b&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "五四制原书印刷页136／电子页143逐字核对；沿用既有内容ID。本册用“蒙冲”，与旧录“艨艟”为异体词形。"
     },
     {
       "id": "sh54-advice-son",
@@ -849,9 +966,9 @@
       "id": "sh54-archery",
       "title": "关尹子教射",
       "author": "《列子》",
-      "original": "列子学射，中矣。请于关尹子。尹子曰：“子知子之所以中者乎？”对曰：“弗知也。”关尹子曰：“未可。”退而习之。三年，又以报关尹子。尹子曰：“子知子之所以中乎？”列子曰：“知之矣。”关尹子曰：“可矣，守而勿失也。非独射也，为国与身皆如之。故圣人不察存亡，而察其所以然。”",
-      "sourceUrl": "https://m.gushiwen.cn/shiwenv_d65ec6893e7d.aspx",
-      "reviewStatus": "公版原作参考；教材逐字校对待确认"
+      "original": "列子学射，中矣。请于关尹子。尹子曰：“子知子之所以中者乎？”对曰：“弗知也。”关尹子曰：“未可。”退而习之。三年，又以报关尹子。尹子曰：“子知子之所以中乎？”列子曰：“知之矣。”关尹子曰：“可矣，守而勿失也。非独射也，为国与身亦皆如之。故圣人不察存亡而察其所以然。”",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=a953eeec-db0c-4c8b-860f-aa94f4727b6b&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "五四制原书印刷页47／电子页54逐字核对；沿用既有内容ID。"
     },
     {
       "id": "sh-exam-dai-song",

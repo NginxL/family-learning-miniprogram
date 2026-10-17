@@ -1466,11 +1466,11 @@
       "semester": "上册",
       "title": "英语五年级上册（五四制·2026秋资源）",
       "publisher": "上海教育出版社",
-      "edition": "2026学年第一学期官方五四制配套资源；ISBN 978-7-5720-4355-0；学校纸本印次待确认",
+      "edition": "国家平台五四制2022课标修订原书；配套资源ISBN 978-7-5720-4355-0；纸本ISBN与学校印次待确认",
       "editionStatus": "official_resource_verified",
       "schoolSystem": "5-4",
-      "sourceUrl": "https://www.sh.smartedu.cn/teachingMaterial?type=11",
-      "sourceKind": "official_audio",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=48dadfac-0bda-3a13-38a3-f3d072aff528&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourceKind": "official_textbook",
       "checkedAt": "2026-10-17",
       "schoolAdoption": "pending",
       "expectedUnitCount": 10,
@@ -1481,21 +1481,38 @@
         "audioArchiveSha256": "8bb7071d03f9b531869f9feda8d4e14267566a9f36ce5f2279eaaa64b7ebca97",
         "audioArchiveMd5": "fa79f65cd7a3617f07c877325225194b",
         "audioDownloadUrl": "https://mp3.bookmall.com.cn/book/download/57204355/22322.shtml",
-        "wordBankPrintedPagesVerified": false,
-        "scope": "Words to use 已核实音频词项；纸本拼写、完整性和学校印次待确认",
-        "pendingVocabulary": [
-          "Unit 4 音频 tour 前的同音候选词待纸本拼写核实，未计入词项数。"
-        ]
+        "wordBankPrintedPagesVerified": true,
+        "scope": "完整 Words to use 与目录 Topic words；不代表课文所有词或全教材知识。",
+        "pendingVocabulary": [],
+        "nationalTextbookUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=48dadfac-0bda-3a13-38a3-f3d072aff528&catalogType=tchMaterial&subCatalog=tchMaterial",
+        "paperVerificationStatus": "国家平台扫描原页逐项核对 Words to use 词形与单元；印次待学校纸本确认。",
+        "vocabularyPrintPages": [
+          89,
+          90,
+          91
+        ],
+        "vocabularyPdfPages": [
+          96,
+          97,
+          98
+        ],
+        "cataloguePdfPages": [
+          5,
+          7
+        ],
+        "copyrightPdfPage": 3,
+        "totalPdfPages": 101
       },
       "inventory": {
-        "topicWordsComplete": false,
+        "topicWordsComplete": true,
         "wordBankComplete": false,
         "vocabularyListName": "Words to use",
-        "vocabularyScope": "official_audio_words_to_use_selection",
+        "vocabularyScope": "official_textbook_unit_vocabulary",
         "unitPracticeComplete": true,
         "fullTextAvailable": false,
         "fullCoverage": false,
-        "vocabularyCount": 112
+        "vocabularyCount": 113,
+        "vocabularyListComplete": true
       },
       "units": [
         {
@@ -1503,69 +1520,86 @@
           "number": 1,
           "title": "Clubs in our school",
           "sourcePrintPage": 9,
-          "sourcePageBasis": "official_audio_announcement",
+          "sourcePageBasis": "official_textbook_catalogue",
           "sourceAudioTrack": "05 Unit 1 Big task.mp3",
           "words": [
             {
               "text": "gardening",
               "meaning": "园艺",
-              "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "storytelling",
               "meaning": "讲故事",
-              "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "join",
               "meaning": "加入；参加",
-              "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "take photos",
               "meaning": "拍照",
-              "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "moment",
               "meaning": "片刻；时刻",
-              "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "view",
               "meaning": "景色；视野",
-              "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。",
-              "additionalSense": true
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "additionalSense": true,
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "how about",
               "meaning": "……怎么样",
-              "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "good idea",
               "meaning": "好主意",
-              "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "I would like to give it a try",
               "meaning": "我想试一试",
-              "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "don't worry",
               "meaning": "别担心",
-              "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
+            },
+            {
+              "text": "art",
+              "meaning": "美术",
+              "topicCataloguePdfPage": 5,
+              "additionalSense": true,
+              "verificationNote": "目录 Topic words 补充词；不计入卷末 Words to use 词项数。"
             }
           ],
           "vocabularyAudioEvidence": {
@@ -1587,120 +1621,139 @@
             "question": "Why do the children keep a photo diary?",
             "questionHint": "孩子们为什么写照片日记？",
             "answer": "To notice how their plants change."
-          }
+          },
+          "sourcePdfPage": 16
         },
         {
           "id": "u2",
           "number": 2,
           "title": "Traditional games",
           "sourcePrintPage": 17,
-          "sourcePageBasis": "official_audio_announcement",
+          "sourcePageBasis": "official_textbook_catalogue",
           "sourceAudioTrack": "11 Unit 2 Big task.mp3",
           "words": [
             {
               "text": "traditional",
               "meaning": "传统的",
-              "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "Chinese yo-yo",
               "meaning": "空竹",
-              "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "kite flying",
               "meaning": "放风筝",
-              "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96,
+              "textbookForm": "kite-flying"
             },
             {
               "text": "dragon dance",
               "meaning": "舞龙",
-              "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "tug of war",
               "meaning": "拔河",
-              "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "stamp",
               "meaning": "邮票；印章；盖章",
-              "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。",
-              "additionalSense": true
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "additionalSense": true,
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "prize",
               "meaning": "奖品；奖项",
-              "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "style",
               "meaning": "风格；样式",
-              "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "action",
               "meaning": "动作；行动",
-              "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。",
-              "additionalSense": true
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "additionalSense": true,
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "straight",
               "meaning": "直的；笔直地",
-              "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。",
-              "additionalSense": true
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "additionalSense": true,
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "keep up with",
               "meaning": "跟上",
-              "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "control",
               "meaning": "控制",
-              "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "pace",
               "meaning": "步伐；节奏",
-              "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "not exactly",
               "meaning": "不完全是",
-              "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "excellent",
               "meaning": "优秀的；极好的",
-              "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "slow down",
               "meaning": "放慢",
-              "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "Let's try again",
               "meaning": "让我们再试一次",
-              "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             }
           ],
           "vocabularyAudioEvidence": {
@@ -1722,78 +1775,104 @@
             "question": "What advice helps the child?",
             "questionHint": "什么建议帮到了这个孩子？",
             "answer": "Slow down and control the pace."
-          }
+          },
+          "sourcePdfPage": 24
         },
         {
           "id": "u3",
           "number": 3,
           "title": "Amazing plants",
           "sourcePrintPage": 25,
-          "sourcePageBasis": "official_audio_announcement",
+          "sourcePageBasis": "official_textbook_catalogue",
           "sourceAudioTrack": "17 Unit 3 Big task.mp3",
           "words": [
             {
               "text": "root",
               "meaning": "根",
-              "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。",
-              "additionalSense": true
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "additionalSense": true,
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "take in",
               "meaning": "吸收",
-              "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "stem",
               "meaning": "茎",
-              "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。",
-              "additionalSense": true
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "additionalSense": true,
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "thin",
               "meaning": "细的；薄的",
-              "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。",
-              "additionalSense": true
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "additionalSense": true,
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "water lily",
               "meaning": "睡莲",
-              "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "react",
               "meaning": "作出反应",
-              "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "pinecone",
               "meaning": "松果",
-              "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96,
+              "textbookForm": "pine cone"
             },
             {
               "text": "protect",
               "meaning": "保护",
-              "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "morning glory",
               "meaning": "牵牛花",
-              "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "Isn't it amazing",
               "meaning": "这不是很奇妙吗",
-              "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
+            },
+            {
+              "text": "leaf",
+              "meaning": "叶子",
+              "topicCataloguePdfPage": 5,
+              "additionalSense": true,
+              "verificationNote": "目录 Topic words 补充词；不计入卷末 Words to use 词项数。"
+            },
+            {
+              "text": "soil",
+              "meaning": "土壤",
+              "topicCataloguePdfPage": 5,
+              "additionalSense": true,
+              "verificationNote": "目录 Topic words 补充词；不计入卷末 Words to use 词项数。"
             }
           ],
           "vocabularyAudioEvidence": {
@@ -1815,82 +1894,116 @@
             "question": "Why do the pupils repeat the activity?",
             "questionHint": "学生为什么重复活动？",
             "answer": "To check their observations before making a conclusion."
-          }
+          },
+          "sourcePdfPage": 32
         },
         {
           "id": "u4",
           "number": 4,
           "title": "Together with animals",
           "sourcePrintPage": 33,
-          "sourcePageBasis": "official_audio_announcement",
+          "sourcePageBasis": "official_textbook_catalogue",
           "sourceAudioTrack": "23 Unit 4 Big task.mp3",
           "words": [
             {
               "text": "safari park",
               "meaning": "野生动物园",
-              "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "tiger",
               "meaning": "老虎",
-              "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "lion",
               "meaning": "狮子",
-              "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "get close to",
               "meaning": "接近",
-              "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "whale",
               "meaning": "鲸",
-              "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
+            },
+            {
+              "text": "toe",
+              "meaning": "脚趾",
+              "additionalSense": true,
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96,
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。"
             },
             {
               "text": "tour",
               "meaning": "游览；旅行",
-              "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "giraffe",
               "meaning": "长颈鹿",
-              "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 89,
+              "vocabularyPdfPage": 96
             },
             {
               "text": "keeper",
               "meaning": "饲养员；看守人",
-              "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "hair",
               "meaning": "毛发；头发",
-              "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。",
-              "additionalSense": true
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "additionalSense": true,
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "hippo",
               "meaning": "河马",
-              "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "dive",
               "meaning": "潜水；俯冲",
-              "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
+            },
+            {
+              "text": "panda",
+              "meaning": "熊猫",
+              "topicCataloguePdfPage": 5,
+              "additionalSense": true,
+              "verificationNote": "目录 Topic words 补充词；不计入卷末 Words to use 词项数。"
+            },
+            {
+              "text": "elephant",
+              "meaning": "大象",
+              "topicCataloguePdfPage": 5,
+              "additionalSense": true,
+              "verificationNote": "目录 Topic words 补充词；不计入卷末 Words to use 词项数。"
             }
           ],
           "vocabularyAudioEvidence": {
@@ -1916,88 +2029,108 @@
             "question": "How do the visitors take a closer picture?",
             "questionHint": "游客怎样拍到近一些的画面？",
             "answer": "They use the zoom on their camera."
-          }
+          },
+          "sourcePdfPage": 40
         },
         {
           "id": "u5",
           "number": 5,
           "title": "Seeing a doctor",
           "sourcePrintPage": 41,
-          "sourcePageBasis": "official_audio_announcement",
+          "sourcePageBasis": "official_textbook_catalogue",
           "sourceAudioTrack": "29 Unit 5 Big task.mp3",
           "words": [
             {
               "text": "cough",
               "meaning": "咳嗽",
-              "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "runny nose",
               "meaning": "流鼻涕",
-              "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "nurse",
               "meaning": "护士",
-              "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "temperature",
               "meaning": "温度；体温",
-              "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "fever",
               "meaning": "发烧",
-              "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "medicine",
               "meaning": "药",
-              "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "Take it easy",
               "meaning": "别紧张；放轻松",
-              "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "check",
               "meaning": "检查",
-              "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。",
-              "additionalSense": true
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "additionalSense": true,
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "reduce",
               "meaning": "减少；降低",
-              "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "pain",
               "meaning": "疼痛",
-              "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "How can I help you",
               "meaning": "我能帮你什么",
-              "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "I'm afraid",
               "meaning": "恐怕；我担心",
-              "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
+            },
+            {
+              "text": "doctor",
+              "meaning": "医生",
+              "topicCataloguePdfPage": 5,
+              "additionalSense": true,
+              "verificationNote": "目录 Topic words 补充词；不计入卷末 Words to use 词项数。"
             }
           ],
           "vocabularyAudioEvidence": {
@@ -2019,79 +2152,90 @@
             "question": "What information does Leo record first?",
             "questionHint": "利奥首先记录了什么？",
             "answer": "When his cough began."
-          }
+          },
+          "sourcePdfPage": 48
         },
         {
           "id": "u6",
           "number": 6,
           "title": "Try my best",
           "sourcePrintPage": 49,
-          "sourcePageBasis": "official_audio_announcement",
+          "sourcePageBasis": "official_textbook_catalogue",
           "sourceAudioTrack": "35 Unit 6 Big task.mp3",
           "words": [
             {
               "text": "try my best",
               "meaning": "尽我最大的努力",
-              "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "succeed",
               "meaning": "成功",
-              "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "will",
               "meaning": "意志；决心；将；会（表示将来）；愿意",
-              "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。 Unit 6 Fun time 语境为名词“意志、决心”，同时保留助动词常用义。",
-              "additionalSense": true
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "additionalSense": true,
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "front",
               "meaning": "前面",
-              "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。",
-              "additionalSense": true
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "additionalSense": true,
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "practice",
               "meaning": "练习",
-              "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。",
-              "additionalSense": true
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "additionalSense": true,
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "better",
               "meaning": "更好的；更好地",
-              "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。",
-              "additionalSense": true
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "additionalSense": true,
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "give up",
               "meaning": "放弃",
-              "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "chalk",
               "meaning": "粉笔",
-              "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "You did great today",
               "meaning": "你今天表现得很好",
-              "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "What else",
               "meaning": "还有什么",
-              "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             }
           ],
           "vocabularyAudioEvidence": {
@@ -2117,83 +2261,104 @@
             "question": "What change makes Nina speak more clearly?",
             "questionHint": "什么改变让妮娜讲得更清楚？",
             "answer": "She adds pauses and practises them."
-          }
+          },
+          "sourcePdfPage": 56
         },
         {
           "id": "u7",
           "number": 7,
           "title": "Great scientists",
           "sourcePrintPage": 57,
-          "sourcePageBasis": "official_audio_announcement",
+          "sourcePageBasis": "official_textbook_catalogue",
           "sourceAudioTrack": "41 Unit 7 Big task.mp3",
           "words": [
             {
               "text": "scientist",
               "meaning": "科学家",
-              "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "explore",
               "meaning": "探索",
-              "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "space",
               "meaning": "太空；空间",
-              "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。",
-              "additionalSense": true
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "additionalSense": true,
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "discover",
               "meaning": "发现",
-              "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "fan",
               "meaning": "风扇；扇子；爱好者；迷",
-              "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。 本单元为“爱好者、迷”；保留同一词头的风扇义。",
-              "additionalSense": true
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "additionalSense": true,
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "research",
               "meaning": "研究",
-              "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "hybrid rice",
               "meaning": "杂交水稻",
-              "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "creative",
               "meaning": "有创造力的",
-              "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "hardworking",
               "meaning": "勤奋的",
-              "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97,
+              "textbookForm": "hard-working"
             },
             {
               "text": "be known as",
               "meaning": "被称为",
-              "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97,
+              "textbookForm": "(be) known as"
             },
             {
               "text": "invent",
               "meaning": "发明",
-              "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
+            },
+            {
+              "text": "famous",
+              "meaning": "著名的",
+              "topicCataloguePdfPage": 7,
+              "additionalSense": true,
+              "verificationNote": "目录 Topic words 补充词；不计入卷末 Words to use 词项数。"
             }
           ],
           "vocabularyAudioEvidence": {
@@ -2215,75 +2380,93 @@
             "question": "What do the pupils record for each answer?",
             "questionHint": "学生为每个答案记录了什么？",
             "answer": "The evidence for it."
-          }
+          },
+          "sourcePdfPage": 64
         },
         {
           "id": "u8",
           "number": 8,
           "title": "Useful inventions",
           "sourcePrintPage": 65,
-          "sourcePageBasis": "official_audio_announcement",
+          "sourcePageBasis": "official_textbook_catalogue",
           "sourceAudioTrack": "47 Unit 8 Big task.mp3",
           "words": [
             {
               "text": "useful",
               "meaning": "有用的",
-              "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "invention",
               "meaning": "发明；发明物",
-              "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "problem",
               "meaning": "问题",
-              "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "wheel",
               "meaning": "轮子",
-              "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "printing",
               "meaning": "印刷",
-              "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "television",
               "meaning": "电视",
-              "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "robot",
               "meaning": "机器人",
-              "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "electric fan",
               "meaning": "电风扇",
-              "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "washing machine",
               "meaning": "洗衣机",
-              "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
             },
             {
               "text": "housework",
               "meaning": "家务",
-              "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 90,
+              "vocabularyPdfPage": 97
+            },
+            {
+              "text": "light",
+              "meaning": "灯",
+              "topicCataloguePdfPage": 7,
+              "additionalSense": true,
+              "verificationNote": "目录 Topic words 补充词；不计入卷末 Words to use 词项数。"
             }
           ],
           "vocabularyAudioEvidence": {
@@ -2305,76 +2488,87 @@
             "question": "Why do the pupils make the base wider?",
             "questionHint": "学生为什么把底部加宽？",
             "answer": "So that the holder stays upright."
-          }
+          },
+          "sourcePdfPage": 72
         },
         {
           "id": "u9",
           "number": 9,
           "title": "Using computers",
           "sourcePrintPage": 73,
-          "sourcePageBasis": "official_audio_announcement",
+          "sourcePageBasis": "official_textbook_catalogue",
           "sourceAudioTrack": "53 Unit 9 Big task.mp3",
           "words": [
             {
               "text": "laptop",
               "meaning": "笔记本电脑",
-              "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 91,
+              "vocabularyPdfPage": 98
             },
             {
               "text": "password",
               "meaning": "密码",
-              "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 91,
+              "vocabularyPdfPage": 98
             },
             {
               "text": "mouse",
               "meaning": "老鼠；鼠标",
-              "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。 本单元为“鼠标”；保留同一词头的老鼠义。",
-              "additionalSense": true
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "additionalSense": true,
+              "vocabularyPrintPage": 91,
+              "vocabularyPdfPage": 98
             },
             {
               "text": "click",
               "meaning": "点击",
-              "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 91,
+              "vocabularyPdfPage": 98
             },
             {
               "text": "keyboard",
               "meaning": "键盘",
-              "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 91,
+              "vocabularyPdfPage": 98
             },
             {
               "text": "best-known",
               "meaning": "最著名的",
-              "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 91,
+              "vocabularyPdfPage": 98
             },
             {
               "text": "email",
               "meaning": "电子邮件；发电子邮件",
-              "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 91,
+              "vocabularyPdfPage": 98
             },
             {
               "text": "delete",
               "meaning": "删除",
-              "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 91,
+              "vocabularyPdfPage": 98
             },
             {
               "text": "symbol",
               "meaning": "符号",
-              "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 91,
+              "vocabularyPdfPage": 98
             },
             {
               "text": "good luck",
               "meaning": "祝你好运",
-              "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 91,
+              "vocabularyPdfPage": 98
             }
           ],
           "vocabularyAudioEvidence": {
@@ -2400,84 +2594,103 @@
             "question": "What does Ben do when a message asks for his password?",
             "questionHint": "消息索要密码时，本怎么做？",
             "answer": "He stops and asks his parent for help."
-          }
+          },
+          "sourcePdfPage": 80
         },
         {
           "id": "u10",
           "number": 10,
           "title": "A greener life",
           "sourcePrintPage": 81,
-          "sourcePageBasis": "official_audio_announcement",
+          "sourcePageBasis": "official_textbook_catalogue",
           "sourceAudioTrack": "59 Unit 10 Big task.mp3",
           "words": [
             {
               "text": "reuse",
               "meaning": "再次使用",
-              "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 91,
+              "vocabularyPdfPage": 98
             },
             {
               "text": "recycle",
               "meaning": "回收利用",
-              "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 91,
+              "vocabularyPdfPage": 98
             },
             {
               "text": "throw away",
               "meaning": "扔掉",
-              "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 91,
+              "vocabularyPdfPage": 98
             },
             {
               "text": "plastic",
               "meaning": "塑料；塑料的",
-              "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 91,
+              "vocabularyPdfPage": 98
             },
             {
               "text": "cloth",
               "meaning": "布；布料",
-              "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。",
-              "additionalSense": true
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "additionalSense": true,
+              "vocabularyPrintPage": 91,
+              "vocabularyPdfPage": 98
             },
             {
               "text": "turn off",
               "meaning": "关掉",
-              "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 91,
+              "vocabularyPdfPage": 98
             },
             {
               "text": "tap",
               "meaning": "水龙头",
-              "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。",
-              "additionalSense": true
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "additionalSense": true,
+              "vocabularyPrintPage": 91,
+              "vocabularyPdfPage": 98
             },
             {
               "text": "wood",
               "meaning": "木材",
-              "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。",
-              "additionalSense": true
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "additionalSense": true,
+              "vocabularyPrintPage": 91,
+              "vocabularyPdfPage": 98
             },
             {
               "text": "swim by",
               "meaning": "游过",
-              "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 91,
+              "vocabularyPdfPage": 98
             },
             {
               "text": "lie around",
               "meaning": "散放；闲置",
-              "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 91,
+              "vocabularyPdfPage": 98
             },
             {
               "text": "pick up",
               "meaning": "捡起",
-              "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
-              "verificationNote": "依据官方音频核实词项；词形归并为学习用词头，大小写和标点作规范化，纸本词表及学校印次待确认。"
+              "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
+              "vocabularyPrintPage": 91,
+              "vocabularyPdfPage": 98
+            },
+            {
+              "text": "reduce",
+              "meaning": "减少",
+              "topicCataloguePdfPage": 7,
+              "additionalSense": true,
+              "verificationNote": "目录 Topic words 补充词；不计入卷末 Words to use 词项数。"
             }
           ],
           "vocabularyAudioEvidence": {
@@ -2499,8 +2712,14 @@
             "question": "Name two new uses for the jars.",
             "questionHint": "说出罐子的两种新用途。",
             "answer": "A pencil holder and a vase."
-          }
+          },
+          "sourcePdfPage": 88
         }
+      ],
+      "sourcePageOffset": 7,
+      "cataloguePages": [
+        5,
+        7
       ]
     },
     {

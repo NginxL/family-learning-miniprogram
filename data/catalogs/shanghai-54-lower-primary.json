@@ -1602,7 +1602,7 @@
       "schoolSystem": "5-4",
       "sourceUrl": "https://book.pep.com.cn/1211001202252/mobile/index.html",
       "sourceKind": "official_textbook",
-      "checkedAt": "2026-10-16",
+      "checkedAt": "2026-10-17",
       "schoolAdoption": "pending",
       "cataloguePages": [
         5,
@@ -1667,7 +1667,12 @@
             "url": "https://book.pep.com.cn/1211001202252/files/mobile/125.jpg?260122103018",
             "sha256": "7ce2a7f0b2823747b8eb2ca944206ee147919bf7f64dc6ed15309a1708b0f558"
           }
-        ]
+        ],
+        "poetryReview": {
+          "url": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=6f1d8652-05df-432b-8ee4-6a5652ec677e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "checkedAt": "2026-10-17",
+          "basis": "原书逐处检索日积月累，并核对作者／出处、首句和印刷页；电子页与出版社查看器偏移分别保留。"
+        }
       },
       "inventory": {
         "recognitionComplete": true,
@@ -1747,7 +1752,23 @@
           "writingPdfPages": [
             123
           ],
-          "sourcePdfPage": 7
+          "sourcePdfPage": 7,
+          "poems": [
+            {
+              "contentId": "moe-2022-zh-1-6-037",
+              "sourcePrintPage": 12,
+              "sourcePdfPage": 17,
+              "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=6f1d8652-05df-432b-8ee4-6a5652ec677e&catalogType=tchMaterial&subCatalog=tchMaterial",
+              "sourceKind": "official_textbook",
+              "identityEvidence": {
+                "sourcePdfPage": 17,
+                "author": "白居易",
+                "firstLine": "离离原上草，一岁一枯荣。"
+              },
+              "checkedAt": "2026-10-17",
+              "textVariantNote": "本册只要求前四句“离离原上草”至“春风吹又生”；学习卡保留原作全文，后四句为拓展。"
+            }
+          ]
         },
         {
           "id": "u2",
@@ -2013,7 +2034,22 @@
           "writingPdfPages": [
             124
           ],
-          "sourcePdfPage": 61
+          "sourcePdfPage": 61,
+          "poems": [
+            {
+              "contentId": "sh54-dizigui-conduct-excerpt",
+              "sourcePrintPage": 67,
+              "sourcePdfPage": 72,
+              "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=6f1d8652-05df-432b-8ee4-6a5652ec677e&catalogType=tchMaterial&subCatalog=tchMaterial",
+              "sourceKind": "official_textbook",
+              "identityEvidence": {
+                "sourcePdfPage": 72,
+                "author": "《弟子规》",
+                "firstLine": "冠必正，纽必结，袜与履，俱紧切。"
+              },
+              "checkedAt": "2026-10-17"
+            }
+          ]
         },
         {
           "id": "u6",
@@ -2081,7 +2117,35 @@
           "writingPdfPages": [
             124
           ],
-          "sourcePdfPage": 75
+          "sourcePdfPage": 75,
+          "poems": [
+            {
+              "contentId": "moe-2022-zh-1-6-025",
+              "sourcePrintPage": 69,
+              "sourcePdfPage": 74,
+              "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=6f1d8652-05df-432b-8ee4-6a5652ec677e&catalogType=tchMaterial&subCatalog=tchMaterial",
+              "sourceKind": "official_textbook",
+              "identityEvidence": {
+                "sourcePdfPage": 74,
+                "author": "杜甫",
+                "firstLine": "两个黄鹂鸣翠柳，一行白鹭上青天。"
+              },
+              "checkedAt": "2026-10-17"
+            },
+            {
+              "contentId": "sh54-solar-terms-song",
+              "sourcePrintPage": 80,
+              "sourcePdfPage": 85,
+              "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=6f1d8652-05df-432b-8ee4-6a5652ec677e&catalogType=tchMaterial&subCatalog=tchMaterial",
+              "sourceKind": "official_textbook",
+              "identityEvidence": {
+                "sourcePdfPage": 85,
+                "author": "传统歌诀",
+                "firstLine": "春雨惊春清谷天，夏满芒夏暑相连。"
+              },
+              "checkedAt": "2026-10-17"
+            }
+          ]
         },
         {
           "id": "u7",
@@ -2155,7 +2219,22 @@
           "writingPdfPages": [
             125
           ],
-          "sourcePdfPage": 90
+          "sourcePdfPage": 90,
+          "poems": [
+            {
+              "contentId": "moe-2022-zh-1-6-042",
+              "sourcePrintPage": 98,
+              "sourcePdfPage": 103,
+              "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=6f1d8652-05df-432b-8ee4-6a5652ec677e&catalogType=tchMaterial&subCatalog=tchMaterial",
+              "sourceKind": "official_textbook",
+              "identityEvidence": {
+                "sourcePdfPage": 103,
+                "author": "李绅",
+                "firstLine": "春种一粒粟，秋收万颗子。"
+              },
+              "checkedAt": "2026-10-17"
+            }
+          ]
         },
         {
           "id": "u8",
@@ -2219,7 +2298,22 @@
           "writingPdfPages": [
             125
           ],
-          "sourcePdfPage": 106
+          "sourcePdfPage": 106,
+          "poems": [
+            {
+              "contentId": "moe-2022-zh-1-6-049",
+              "sourcePrintPage": 111,
+              "sourcePdfPage": 116,
+              "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=6f1d8652-05df-432b-8ee4-6a5652ec677e&catalogType=tchMaterial&subCatalog=tchMaterial",
+              "sourceKind": "official_textbook",
+              "identityEvidence": {
+                "sourcePdfPage": 116,
+                "author": "范仲淹",
+                "firstLine": "江上往来人，但爱鲈鱼美。"
+              },
+              "checkedAt": "2026-10-17"
+            }
+          ]
         }
       ],
       "sourcePageOffset": 6
@@ -2235,7 +2329,7 @@
       "schoolSystem": "5-4",
       "sourceUrl": "https://www.textbook-info.com/post/1392.html",
       "sourceKind": "public_sample",
-      "checkedAt": "2026-10-16",
+      "checkedAt": "2026-10-17",
       "schoolAdoption": "pending",
       "catalogueImages": [
         "https://www.textbook-info.com/zb_users/upload/2024/09/202409221727014245279618.jpg",
@@ -2243,10 +2337,12 @@
       ],
       "inventory": {
         "topicWordsComplete": true,
-        "wordBankComplete": false,
+        "wordBankComplete": true,
         "unitPracticeComplete": true,
         "fullTextAvailable": false,
-        "fullCoverage": false
+        "fullCoverage": false,
+        "wordBankCount": 59,
+        "wordBankBasis": "official_audio_crosschecked_catalogue"
       },
       "units": [
         {
@@ -2257,15 +2353,21 @@
           "words": [
             {
               "text": "morning",
-              "meaning": "早晨；上午"
+              "meaning": "早晨；上午",
+              "wordBankAudioTrack": "72 Word bank-Unit 1.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "afternoon",
-              "meaning": "下午"
+              "meaning": "下午",
+              "wordBankAudioTrack": "72 Word bank-Unit 1.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "evening",
-              "meaning": "晚上"
+              "meaning": "晚上",
+              "wordBankAudioTrack": "72 Word bank-Unit 1.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             }
           ],
           "practice": {
@@ -2280,6 +2382,16 @@
             "questionHint": "晚上我向谁问好？",
             "answer": "Dad. 爸爸。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "morning",
+            "afternoon",
+            "evening"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "72 Word bank-Unit 1.mp3",
+            "sha256": "815c3a7f5856998a4ca47b753206b813c8c365ae3d7a070f1be911702ecbf4e6",
+            "section": "Unit 1"
           }
         },
         {
@@ -2290,23 +2402,33 @@
           "words": [
             {
               "text": "hello",
-              "meaning": "你好"
+              "meaning": "你好",
+              "wordBankAudioTrack": "73 Word bank-Unit 2.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "friend",
-              "meaning": "朋友"
+              "meaning": "朋友",
+              "wordBankAudioTrack": "73 Word bank-Unit 2.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "welcome",
-              "meaning": "欢迎"
+              "meaning": "欢迎",
+              "wordBankAudioTrack": "73 Word bank-Unit 2.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "name",
-              "meaning": "名字"
+              "meaning": "名字",
+              "wordBankAudioTrack": "73 Word bank-Unit 2.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "hi",
-              "meaning": "嗨；你好"
+              "meaning": "嗨；你好",
+              "wordBankAudioTrack": "73 Word bank-Unit 2.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             }
           ],
           "practice": {
@@ -2321,6 +2443,18 @@
             "questionHint": "莉莉的朋友是谁？",
             "answer": "Tom. 汤姆。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "hello",
+            "friend",
+            "welcome",
+            "name",
+            "hi"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "73 Word bank-Unit 2.mp3",
+            "sha256": "09aef51f0ed9bea66d12b1e7ff47b9808e1f9d4b30eeb56718537266e81b3ccc",
+            "section": "Unit 2"
           }
         },
         {
@@ -2331,35 +2465,51 @@
           "words": [
             {
               "text": "pack",
-              "meaning": "收拾；打包"
+              "meaning": "收拾；打包",
+              "wordBankAudioTrack": "74 Word bank-Unit 3.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "my",
-              "meaning": "我的"
+              "meaning": "我的",
+              "wordBankAudioTrack": "74 Word bank-Unit 3.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "schoolbag",
-              "meaning": "书包"
+              "meaning": "书包",
+              "wordBankAudioTrack": "74 Word bank-Unit 3.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "book",
-              "meaning": "书"
+              "meaning": "书",
+              "wordBankAudioTrack": "74 Word bank-Unit 3.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "pencil",
-              "meaning": "铅笔"
+              "meaning": "铅笔",
+              "wordBankAudioTrack": "74 Word bank-Unit 3.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "ruler",
-              "meaning": "尺子"
+              "meaning": "尺子",
+              "wordBankAudioTrack": "74 Word bank-Unit 3.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "eraser",
-              "meaning": "橡皮"
+              "meaning": "橡皮",
+              "wordBankAudioTrack": "74 Word bank-Unit 3.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "pencil case",
-              "meaning": "铅笔盒"
+              "meaning": "铅笔盒",
+              "wordBankAudioTrack": "74 Word bank-Unit 3.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             }
           ],
           "practice": {
@@ -2374,6 +2524,21 @@
             "questionHint": "橡皮在哪里？",
             "answer": "In the pencil case. 在铅笔盒里。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "pack",
+            "my",
+            "schoolbag",
+            "book",
+            "pencil",
+            "ruler",
+            "eraser",
+            "pencil case"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "74 Word bank-Unit 3.mp3",
+            "sha256": "4fba2209f5fcd2e335c5a6ac89e8000a524cb3f77fe01ef609a472a4bd6c4f5e",
+            "section": "Unit 3"
           }
         },
         {
@@ -2384,35 +2549,51 @@
           "words": [
             {
               "text": "clean",
-              "meaning": "打扫；干净的"
+              "meaning": "打扫；干净的",
+              "wordBankAudioTrack": "75 Word bank-Unit 4.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "classroom",
-              "meaning": "教室"
+              "meaning": "教室",
+              "wordBankAudioTrack": "75 Word bank-Unit 4.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "desk",
-              "meaning": "书桌"
+              "meaning": "书桌",
+              "wordBankAudioTrack": "75 Word bank-Unit 4.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "door",
-              "meaning": "门"
+              "meaning": "门",
+              "wordBankAudioTrack": "75 Word bank-Unit 4.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "chair",
-              "meaning": "椅子"
+              "meaning": "椅子",
+              "wordBankAudioTrack": "75 Word bank-Unit 4.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "on duty",
-              "meaning": "值日"
+              "meaning": "值日",
+              "wordBankAudioTrack": "75 Word bank-Unit 4.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "blackboard",
-              "meaning": "黑板"
+              "meaning": "黑板",
+              "wordBankAudioTrack": "75 Word bank-Unit 4.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "floor",
-              "meaning": "地板"
+              "meaning": "地板",
+              "wordBankAudioTrack": "75 Word bank-Unit 4.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             }
           ],
           "practice": {
@@ -2427,6 +2608,21 @@
             "questionHint": "谁擦桌子？",
             "answer": "I do. 我擦桌子。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "clean",
+            "classroom",
+            "desk",
+            "door",
+            "chair",
+            "on duty",
+            "blackboard",
+            "floor"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "75 Word bank-Unit 4.mp3",
+            "sha256": "1b6fb2fee4911832b6cf5f39ae9a5c1c1a7d15879a1e184e2f46dbe940d5e77b",
+            "section": "Unit 4"
           }
         },
         {
@@ -2437,23 +2633,33 @@
           "words": [
             {
               "text": "face",
-              "meaning": "脸"
+              "meaning": "脸",
+              "wordBankAudioTrack": "76 Word bank-Unit 5.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "eye",
-              "meaning": "眼睛"
+              "meaning": "眼睛",
+              "wordBankAudioTrack": "76 Word bank-Unit 5.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "ear",
-              "meaning": "耳朵"
+              "meaning": "耳朵",
+              "wordBankAudioTrack": "76 Word bank-Unit 5.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "nose",
-              "meaning": "鼻子"
+              "meaning": "鼻子",
+              "wordBankAudioTrack": "76 Word bank-Unit 5.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "mouth",
-              "meaning": "嘴"
+              "meaning": "嘴",
+              "wordBankAudioTrack": "76 Word bank-Unit 5.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             }
           ],
           "practice": {
@@ -2468,6 +2674,18 @@
             "questionHint": "我画了几只眼睛？",
             "answer": "Two. 两只。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "face",
+            "eye",
+            "ear",
+            "nose",
+            "mouth"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "76 Word bank-Unit 5.mp3",
+            "sha256": "0b890d27f83b18b87d70420b111b8fca26e8da51245b8be0231ac08abf60022c",
+            "section": "Unit 5"
           }
         },
         {
@@ -2478,39 +2696,57 @@
           "words": [
             {
               "text": "family",
-              "meaning": "家庭"
+              "meaning": "家庭",
+              "wordBankAudioTrack": "77 Word bank-Unit 6.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "mum",
-              "meaning": "妈妈"
+              "meaning": "妈妈",
+              "wordBankAudioTrack": "77 Word bank-Unit 6.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。拼写或连字符沿用已核对目录，音频不用于推断印刷形式。"
             },
             {
               "text": "dad",
-              "meaning": "爸爸"
+              "meaning": "爸爸",
+              "wordBankAudioTrack": "77 Word bank-Unit 6.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "brother",
-              "meaning": "兄弟"
+              "meaning": "兄弟",
+              "wordBankAudioTrack": "77 Word bank-Unit 6.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "sister",
-              "meaning": "姐妹"
+              "meaning": "姐妹",
+              "wordBankAudioTrack": "77 Word bank-Unit 6.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "me",
-              "meaning": "我（宾格）"
+              "meaning": "我（宾格）",
+              "wordBankAudioTrack": "77 Word bank-Unit 6.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "love",
-              "meaning": "爱"
+              "meaning": "爱",
+              "wordBankAudioTrack": "77 Word bank-Unit 6.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "warm",
-              "meaning": "温暖的"
+              "meaning": "温暖的",
+              "wordBankAudioTrack": "77 Word bank-Unit 6.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "happy",
-              "meaning": "快乐的"
+              "meaning": "快乐的",
+              "wordBankAudioTrack": "77 Word bank-Unit 6.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             }
           ],
           "practice": {
@@ -2525,6 +2761,22 @@
             "questionHint": "谁跟我在一起？",
             "answer": "Mum, Dad and my sister. 妈妈、爸爸和妹妹。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "family",
+            "mum",
+            "dad",
+            "brother",
+            "sister",
+            "me",
+            "love",
+            "warm",
+            "happy"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "77 Word bank-Unit 6.mp3",
+            "sha256": "9bfd5013e3dbe2a3c46dabd2e2df946e7939d8013fd28d7299edf8a9226ec2f5",
+            "section": "Unit 6"
           }
         },
         {
@@ -2535,31 +2787,45 @@
           "words": [
             {
               "text": "helpful",
-              "meaning": "有帮助的"
+              "meaning": "有帮助的",
+              "wordBankAudioTrack": "78 Word bank-Unit 7.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "animal",
-              "meaning": "动物"
+              "meaning": "动物",
+              "wordBankAudioTrack": "78 Word bank-Unit 7.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "horse",
-              "meaning": "马"
+              "meaning": "马",
+              "wordBankAudioTrack": "78 Word bank-Unit 7.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "dog",
-              "meaning": "狗"
+              "meaning": "狗",
+              "wordBankAudioTrack": "78 Word bank-Unit 7.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "hen",
-              "meaning": "母鸡"
+              "meaning": "母鸡",
+              "wordBankAudioTrack": "78 Word bank-Unit 7.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "bee",
-              "meaning": "蜜蜂"
+              "meaning": "蜜蜂",
+              "wordBankAudioTrack": "78 Word bank-Unit 7.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "cat",
-              "meaning": "猫"
+              "meaning": "猫",
+              "wordBankAudioTrack": "78 Word bank-Unit 7.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             }
           ],
           "practice": {
@@ -2574,6 +2840,20 @@
             "questionHint": "哪种动物从树旁跑过？",
             "answer": "A dog. 一只狗。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "helpful",
+            "animal",
+            "horse",
+            "dog",
+            "hen",
+            "bee",
+            "cat"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "78 Word bank-Unit 7.mp3",
+            "sha256": "4cacc1967c16bcc7e7fa9cbc670f1661beb0de8ceda926201ca786f2ea144ff4",
+            "section": "Unit 7"
           }
         },
         {
@@ -2584,23 +2864,33 @@
           "words": [
             {
               "text": "bird",
-              "meaning": "鸟"
+              "meaning": "鸟",
+              "wordBankAudioTrack": "79 Word bank-Unit 8.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "hill",
-              "meaning": "小山"
+              "meaning": "小山",
+              "wordBankAudioTrack": "79 Word bank-Unit 8.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "fly away",
-              "meaning": "飞走"
+              "meaning": "飞走",
+              "wordBankAudioTrack": "79 Word bank-Unit 8.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "come back",
-              "meaning": "回来"
+              "meaning": "回来",
+              "wordBankAudioTrack": "79 Word bank-Unit 8.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "flap wings",
-              "meaning": "拍打翅膀"
+              "meaning": "拍打翅膀",
+              "wordBankAudioTrack": "79 Word bank-Unit 8.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             }
           ],
           "practice": {
@@ -2615,6 +2905,18 @@
             "questionHint": "小鸟什么时候回来？",
             "answer": "In the evening. 晚上。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "bird",
+            "hill",
+            "fly away",
+            "come back",
+            "flap wings"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "79 Word bank-Unit 8.mp3",
+            "sha256": "66ba717cd0655e791ea1ba587805868709941cea60013f19bcf5dc35e27ca3db",
+            "section": "Unit 8"
           }
         },
         {
@@ -2625,15 +2927,21 @@
           "words": [
             {
               "text": "wash",
-              "meaning": "洗"
+              "meaning": "洗",
+              "wordBankAudioTrack": "80 Word bank-Unit 9.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "tie shoelaces",
-              "meaning": "系鞋带"
+              "meaning": "系鞋带",
+              "wordBankAudioTrack": "80 Word bank-Unit 9.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "take a photo",
-              "meaning": "拍照"
+              "meaning": "拍照",
+              "wordBankAudioTrack": "80 Word bank-Unit 9.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             }
           ],
           "practice": {
@@ -2648,6 +2956,16 @@
             "questionHint": "爸爸会做什么？",
             "answer": "Take a photo. 拍照。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "wash",
+            "tie shoelaces",
+            "take a photo"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "80 Word bank-Unit 9.mp3",
+            "sha256": "96021d122319e7dc0b970d771d902183fa4804a3750cbf96d44470b0ce0a8551",
+            "section": "Unit 9"
           }
         },
         {
@@ -2658,27 +2976,39 @@
           "words": [
             {
               "text": "one",
-              "meaning": "一"
+              "meaning": "一",
+              "wordBankAudioTrack": "81 Word bank-Unit 10.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "two",
-              "meaning": "二"
+              "meaning": "二",
+              "wordBankAudioTrack": "81 Word bank-Unit 10.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "three",
-              "meaning": "三"
+              "meaning": "三",
+              "wordBankAudioTrack": "81 Word bank-Unit 10.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "four",
-              "meaning": "四"
+              "meaning": "四",
+              "wordBankAudioTrack": "81 Word bank-Unit 10.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "five",
-              "meaning": "五"
+              "meaning": "五",
+              "wordBankAudioTrack": "81 Word bank-Unit 10.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "six",
-              "meaning": "六"
+              "meaning": "六",
+              "wordBankAudioTrack": "81 Word bank-Unit 10.mp3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             }
           ],
           "practice": {
@@ -2693,9 +3023,34 @@
             "questionHint": "一共有几颗星星？",
             "answer": "Six. 六颗。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "one",
+            "two",
+            "three",
+            "four",
+            "five",
+            "six"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "81 Word bank-Unit 10.mp3",
+            "sha256": "bd5cbea3578d4efae9a313b193cb8d44cf74c4a5c9d976facd939db310d43040",
+            "section": "Unit 10"
           }
         }
-      ]
+      ],
+      "sourceEvidence": {
+        "officialResourceUrl": "https://mp3.bookmall.com.cn/",
+        "officialResourceCode": "57202880",
+        "officialResourceIsbn": "978-7-5720-2880-9",
+        "officialResourceCatalogue": "https://www.sh.smartedu.cn/teachingMaterial?type=11",
+        "officialAudioDownloadUrl": "https://mp3.bookmall.com.cn/book/download/57202880/22385.shtml",
+        "officialAudioMd5": "6a80a4d7a36d2792251d7a3ff3b4d697",
+        "audioArchiveSha256": "7cb717909dabe6eda6a501862a49f83214879848e5b63578d323b90b3d0bab7e",
+        "wordBankPrintedPagesVerified": false,
+        "wordBankVerification": "官方配套 Word bank 全部音轨经两组本地转写交叉核对，与已有目录主题词逐项匹配，共59项；英文拼写以目录为依据，不据语音区分同音拼写。",
+        "note": "音频复核补充词项依据，未取得卷末纸本原页；单复数、连字符、英美拼写按已有学习词头规范化，保留原内容ID。学校实际纸本与印次仍待确认。"
+      }
     },
     {
       "id": "english-1b-sample",
@@ -2708,7 +3063,7 @@
       "schoolSystem": "5-4",
       "sourceUrl": "https://www.sohu.com/a/989386156_120904083",
       "sourceKind": "public_sample",
-      "checkedAt": "2026-10-16",
+      "checkedAt": "2026-10-17",
       "schoolAdoption": "pending",
       "catalogueImages": [
         "https://q8.itc.cn/q_70/images01/20260224/8eaf38f139694748b748a11966c461ab.jpeg",
@@ -2716,10 +3071,12 @@
       ],
       "inventory": {
         "topicWordsComplete": true,
-        "wordBankComplete": false,
+        "wordBankComplete": true,
         "unitPracticeComplete": true,
         "fullTextAvailable": false,
-        "fullCoverage": false
+        "fullCoverage": false,
+        "wordBankCount": 64,
+        "wordBankBasis": "official_audio_crosschecked_catalogue"
       },
       "units": [
         {
@@ -2730,23 +3087,33 @@
           "words": [
             {
               "text": "fine",
-              "meaning": "身体好的"
+              "meaning": "身体好的",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 1",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "busy",
-              "meaning": "忙碌的"
+              "meaning": "忙碌的",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 1",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "tired",
-              "meaning": "累的"
+              "meaning": "累的",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 1",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "happy",
-              "meaning": "开心的"
+              "meaning": "开心的",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 1",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "great",
-              "meaning": "很好的"
+              "meaning": "很好的",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 1",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             }
           ],
           "practice": {
@@ -2761,6 +3128,18 @@
             "questionHint": "到了晚上，我感觉怎样？",
             "answer": "Tired. 累了。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "fine",
+            "busy",
+            "tired",
+            "happy",
+            "great"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "11 Word bank.mp3",
+            "sha256": "0a115160384477e5a86366b488e5c47226a479c165cdecdabd558219bd9221ad",
+            "section": "Unit 1"
           }
         },
         {
@@ -2771,31 +3150,45 @@
           "words": [
             {
               "text": "lunch",
-              "meaning": "午餐"
+              "meaning": "午餐",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 2",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "time",
-              "meaning": "时间"
+              "meaning": "时间",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 2",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "meatball",
-              "meaning": "肉丸"
+              "meaning": "肉丸",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 2",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "rice",
-              "meaning": "米饭"
+              "meaning": "米饭",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 2",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "vegetable",
-              "meaning": "蔬菜"
+              "meaning": "蔬菜",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 2",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "soup",
-              "meaning": "汤"
+              "meaning": "汤",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 2",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "apple",
-              "meaning": "苹果"
+              "meaning": "苹果",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 2",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             }
           ],
           "practice": {
@@ -2810,6 +3203,20 @@
             "questionHint": "我吃了什么水果？",
             "answer": "An apple. 一个苹果。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "lunch",
+            "time",
+            "meatball",
+            "rice",
+            "vegetable",
+            "soup",
+            "apple"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "11 Word bank.mp3",
+            "sha256": "0a115160384477e5a86366b488e5c47226a479c165cdecdabd558219bd9221ad",
+            "section": "Unit 2"
           }
         },
         {
@@ -2820,23 +3227,33 @@
           "words": [
             {
               "text": "colour",
-              "meaning": "颜色"
+              "meaning": "颜色",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。拼写或连字符沿用已核对目录，音频不用于推断印刷形式。"
             },
             {
               "text": "yellow",
-              "meaning": "黄色（的）"
+              "meaning": "黄色（的）",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "red",
-              "meaning": "红色（的）"
+              "meaning": "红色（的）",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "blue",
-              "meaning": "蓝色（的）"
+              "meaning": "蓝色（的）",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "green",
-              "meaning": "绿色（的）"
+              "meaning": "绿色（的）",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 3",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             }
           ],
           "practice": {
@@ -2851,6 +3268,18 @@
             "questionHint": "花是什么颜色？",
             "answer": "Yellow. 黄色。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "colour",
+            "yellow",
+            "red",
+            "blue",
+            "green"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "11 Word bank.mp3",
+            "sha256": "0a115160384477e5a86366b488e5c47226a479c165cdecdabd558219bd9221ad",
+            "section": "Unit 3"
           }
         },
         {
@@ -2861,27 +3290,39 @@
           "words": [
             {
               "text": "playground",
-              "meaning": "操场"
+              "meaning": "操场",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 4",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "slide",
-              "meaning": "滑梯"
+              "meaning": "滑梯",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 4",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "swing",
-              "meaning": "秋千"
+              "meaning": "秋千",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 4",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "seesaw",
-              "meaning": "跷跷板"
+              "meaning": "跷跷板",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 4",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "hold on tight",
-              "meaning": "抓紧"
+              "meaning": "抓紧",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 4",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "be careful",
-              "meaning": "当心"
+              "meaning": "当心",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 4",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             }
           ],
           "practice": {
@@ -2896,6 +3337,19 @@
             "questionHint": "谁在荡秋千？",
             "answer": "Lily. 莉莉。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "playground",
+            "slide",
+            "swing",
+            "seesaw",
+            "hold on tight",
+            "be careful"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "11 Word bank.mp3",
+            "sha256": "0a115160384477e5a86366b488e5c47226a479c165cdecdabd558219bd9221ad",
+            "section": "Unit 4"
           }
         },
         {
@@ -2906,27 +3360,39 @@
           "words": [
             {
               "text": "weather",
-              "meaning": "天气"
+              "meaning": "天气",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 5",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "sunny",
-              "meaning": "晴朗的"
+              "meaning": "晴朗的",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 5",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "rainy",
-              "meaning": "下雨的"
+              "meaning": "下雨的",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 5",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "windy",
-              "meaning": "刮风的"
+              "meaning": "刮风的",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 5",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "cloudy",
-              "meaning": "多云的"
+              "meaning": "多云的",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 5",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "snowy",
-              "meaning": "下雪的"
+              "meaning": "下雪的",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 5",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             }
           ],
           "practice": {
@@ -2941,6 +3407,19 @@
             "questionHint": "下午天气怎样？",
             "answer": "Rainy. 下雨。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "weather",
+            "sunny",
+            "rainy",
+            "windy",
+            "cloudy",
+            "snowy"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "11 Word bank.mp3",
+            "sha256": "0a115160384477e5a86366b488e5c47226a479c165cdecdabd558219bd9221ad",
+            "section": "Unit 5"
           }
         },
         {
@@ -2951,35 +3430,51 @@
           "words": [
             {
               "text": "clothes",
-              "meaning": "衣服"
+              "meaning": "衣服",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 6",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "shirt",
-              "meaning": "衬衫"
+              "meaning": "衬衫",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 6",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "trousers",
-              "meaning": "裤子"
+              "meaning": "裤子",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 6",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "sock",
-              "meaning": "袜子"
+              "meaning": "袜子",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 6",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。音频读复数socks，学习词头及旧记录保留单数。"
             },
             {
               "text": "shoe",
-              "meaning": "鞋"
+              "meaning": "鞋",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 6",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。音频读复数shoes，学习词头及旧记录保留单数。"
             },
             {
               "text": "hat",
-              "meaning": "帽子"
+              "meaning": "帽子",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 6",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "dress",
-              "meaning": "连衣裙"
+              "meaning": "连衣裙",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 6",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "skirt",
-              "meaning": "裙子"
+              "meaning": "裙子",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 6",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             }
           ],
           "practice": {
@@ -2994,6 +3489,21 @@
             "questionHint": "鞋在哪里？",
             "answer": "By the bed. 在床边。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "clothes",
+            "shirt",
+            "trousers",
+            "sock",
+            "shoe",
+            "hat",
+            "dress",
+            "skirt"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "11 Word bank.mp3",
+            "sha256": "0a115160384477e5a86366b488e5c47226a479c165cdecdabd558219bd9221ad",
+            "section": "Unit 6"
           }
         },
         {
@@ -3004,31 +3514,45 @@
           "words": [
             {
               "text": "game",
-              "meaning": "游戏"
+              "meaning": "游戏",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 7",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "hide-and-seek",
-              "meaning": "捉迷藏"
+              "meaning": "捉迷藏",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 7",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。拼写或连字符沿用已核对目录，音频不用于推断印刷形式。"
             },
             {
               "text": "ready",
-              "meaning": "准备好的"
+              "meaning": "准备好的",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 7",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "play",
-              "meaning": "玩"
+              "meaning": "玩",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 7",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "move-and-freeze",
-              "meaning": "动一动再定住的游戏"
+              "meaning": "动一动再定住的游戏",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 7",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。拼写或连字符沿用已核对目录，音频不用于推断印刷形式。"
             },
             {
               "text": "skip rope",
-              "meaning": "跳绳"
+              "meaning": "跳绳",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 7",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "throw sandbags",
-              "meaning": "扔沙包"
+              "meaning": "扔沙包",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 7",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             }
           ],
           "practice": {
@@ -3043,6 +3567,20 @@
             "questionHint": "谁跳绳？",
             "answer": "Tom. 汤姆。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "game",
+            "hide-and-seek",
+            "ready",
+            "play",
+            "move-and-freeze",
+            "skip rope",
+            "throw sandbags"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "11 Word bank.mp3",
+            "sha256": "0a115160384477e5a86366b488e5c47226a479c165cdecdabd558219bd9221ad",
+            "section": "Unit 7"
           }
         },
         {
@@ -3053,23 +3591,33 @@
           "words": [
             {
               "text": "traffic light",
-              "meaning": "交通信号灯"
+              "meaning": "交通信号灯",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 8",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "stop",
-              "meaning": "停止"
+              "meaning": "停止",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 8",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "go",
-              "meaning": "走"
+              "meaning": "走",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 8",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "wait",
-              "meaning": "等待"
+              "meaning": "等待",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 8",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "zebra crossing",
-              "meaning": "斑马线"
+              "meaning": "斑马线",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 8",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             }
           ],
           "practice": {
@@ -3084,6 +3632,18 @@
             "questionHint": "我们从哪里过街？",
             "answer": "At the zebra crossing. 从斑马线过街。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "traffic light",
+            "stop",
+            "go",
+            "wait",
+            "zebra crossing"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "11 Word bank.mp3",
+            "sha256": "0a115160384477e5a86366b488e5c47226a479c165cdecdabd558219bd9221ad",
+            "section": "Unit 8"
           }
         },
         {
@@ -3094,35 +3654,51 @@
           "words": [
             {
               "text": "panda",
-              "meaning": "大熊猫"
+              "meaning": "大熊猫",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 9",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "see",
-              "meaning": "看见"
+              "meaning": "看见",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 9",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "look at",
-              "meaning": "看"
+              "meaning": "看",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 9",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "tiger",
-              "meaning": "老虎"
+              "meaning": "老虎",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 9",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "elephant",
-              "meaning": "大象"
+              "meaning": "大象",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 9",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "monkey",
-              "meaning": "猴子"
+              "meaning": "猴子",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 9",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "climb a tree",
-              "meaning": "爬树"
+              "meaning": "爬树",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 9",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "swim",
-              "meaning": "游泳"
+              "meaning": "游泳",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 9",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             }
           ],
           "practice": {
@@ -3137,6 +3713,21 @@
             "questionHint": "哪种动物爬树？",
             "answer": "A monkey. 一只猴子。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "panda",
+            "see",
+            "look at",
+            "tiger",
+            "elephant",
+            "monkey",
+            "climb a tree",
+            "swim"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "11 Word bank.mp3",
+            "sha256": "0a115160384477e5a86366b488e5c47226a479c165cdecdabd558219bd9221ad",
+            "section": "Unit 9"
           }
         },
         {
@@ -3147,31 +3738,45 @@
           "words": [
             {
               "text": "kite",
-              "meaning": "风筝"
+              "meaning": "风筝",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 10",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "toy car",
-              "meaning": "玩具汽车"
+              "meaning": "玩具汽车",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 10",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "toy boat",
-              "meaning": "玩具船"
+              "meaning": "玩具船",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 10",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "ball",
-              "meaning": "球"
+              "meaning": "球",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 10",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "cute",
-              "meaning": "可爱的"
+              "meaning": "可爱的",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 10",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "gift",
-              "meaning": "礼物"
+              "meaning": "礼物",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 10",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             },
             {
               "text": "toy train",
-              "meaning": "玩具火车"
+              "meaning": "玩具火车",
+              "wordBankAudioTrack": "11 Word bank.mp3 / Unit 10",
+              "verificationNote": "Word bank音频与目录词项相互核对；纸本词表原页及学校印次待确认。"
             }
           ],
           "practice": {
@@ -3186,9 +3791,35 @@
             "questionHint": "我的朋友有什么？",
             "answer": "A toy boat. 一艘玩具船。",
             "origin": "original"
+          },
+          "wordBankEntries": [
+            "kite",
+            "toy car",
+            "toy boat",
+            "ball",
+            "cute",
+            "gift",
+            "toy train"
+          ],
+          "wordBankAudioEvidence": {
+            "track": "11 Word bank.mp3",
+            "sha256": "0a115160384477e5a86366b488e5c47226a479c165cdecdabd558219bd9221ad",
+            "section": "Unit 10"
           }
         }
-      ]
+      ],
+      "sourceEvidence": {
+        "officialResourceUrl": "https://mp3.bookmall.com.cn/",
+        "officialResourceCode": "57203212",
+        "officialResourceIsbn": "978-7-5720-3212-7",
+        "officialResourceCatalogue": "https://www.sh.smartedu.cn/teachingMaterial?type=8",
+        "officialAudioDownloadUrl": "https://mp3.bookmall.com.cn/book/download/57203212/22079.shtml",
+        "officialAudioMd5": "3836f4df839d27d6cf00d8326caa3025",
+        "audioArchiveSha256": "c7c2a4e517ab6ff295c57ca1ed5e4e92f66ce17a7f33146d3d2006fe7ac86887",
+        "wordBankPrintedPagesVerified": false,
+        "wordBankVerification": "官方配套 Word bank 全部音轨经两组本地转写交叉核对，与已有目录主题词逐项匹配，共64项；英文拼写以目录为依据，不据语音区分同音拼写。",
+        "note": "音频复核补充词项依据，未取得卷末纸本原页；单复数、连字符、英美拼写按已有学习词头规范化，保留原内容ID。学校实际纸本与印次仍待确认。"
+      }
     },
     {
       "id": "english-2a-sample",
@@ -4585,6 +5216,60 @@
       "detail": "杨万里\n毕竟西湖六月中，风光不与四时同。\n接天莲叶无穷碧，映日荷花别样红。",
       "titleReading": "xiǎo chū jìng cí sì sòng lín zi fāng",
       "detailReading": "yáng wàn lǐ bì jìng xī hú liù yuè zhōng fēng guāng bù yǔ sì shí tóng jiē tiān lián yè wú qióng bì yìng rì hé huā bié yàng hóng"
+    },
+    "moe-2022-zh-1-6-025": {
+      "title": "《绝句（两个黄鹂鸣翠柳）》",
+      "detail": "杜甫\n两个黄鹂鸣翠柳，一行白鹭上青天。\n窗含西岭千秋雪，门泊东吴万里船。",
+      "titleReading": "jué jù liǎng gè huáng lí míng cuì liǔ",
+      "detailReading": "dù fǔ liǎng gè huáng lí míng cuì liǔ yī háng bái lù shàng qīng tiān chuāng hán xī lǐng qiān qiū xuě mén bó dōng wú wàn lǐ chuán"
+    },
+    "moe-2022-zh-1-6-037": {
+      "title": "《赋得古原草送别》",
+      "detail": "白居易\n离离原上草，一岁一枯荣。\n野火烧不尽，春风吹又生。\n远芳侵古道，晴翠接荒城。\n又送王孙去，萋萋满别情。",
+      "titleReading": "fù dé gǔ yuán cǎo sòng bié",
+      "detailReading": "bái jū yì lí lí yuán shàng cǎo yī suì yī kū róng yě huǒ shāo bù jìn chūn fēng chuī yòu shēng yuǎn fāng qīn gǔ dào qíng cuì jiē huāng chéng yòu sòng wáng sūn qù qī qī mǎn bié qíng"
+    },
+    "moe-2022-zh-1-6-042": {
+      "title": "《悯农（春种一粒粟）》",
+      "detail": "李绅\n春种一粒粟，秋收万颗子。\n四海无闲田，农夫犹饿死。",
+      "titleReading": "mǐn nóng chūn zhòng yī lì sù",
+      "detailReading": "lǐ shēn chūn zhòng yī lì sù qiū shōu wàn kē zi sì hǎi wú xián tián nóng fū yóu è sǐ"
+    },
+    "moe-2022-zh-1-6-049": {
+      "title": "《江上渔者》",
+      "detail": "范仲淹\n江上往来人，但爱鲈鱼美。\n君看一叶舟，出没风波里。",
+      "titleReading": "jiāng shàng yú zhě",
+      "detailReading": "fàn zhòng yān jiāng shàng wǎng lái rén dàn ài lú yú měi jūn kàn yī yè zhōu chū mò fēng bō lǐ"
+    },
+    "sh54-dizigui-conduct-excerpt": {
+      "title": "《弟子规（节选）》",
+      "detail": "《弟子规》\n冠必正，纽必结，袜与履，俱紧切。\n置冠服，有定位，勿乱顿，致污秽。\n唯德学，唯才艺，不如人，当自砺。\n若衣服，若饮食，不如人，勿生戚。",
+      "titleReading": "dì zǐ guī jié xuǎn",
+      "detailReading": "dì zǐ guī guān bì zhèng niǔ bì jié wà yǔ lǚ jù jǐn qiè zhì guān fú yǒu dìng wèi wù luàn dùn zhì wū huì wéi dé xué wéi cái yì bù rú rén dāng zì lì ruò yī fú ruò yǐn shí bù rú rén wù shēng qī"
+    },
+    "sh54-solar-terms-song": {
+      "title": "《二十四节气歌》",
+      "detail": "传统歌诀\n春雨惊春清谷天，夏满芒夏暑相连。\n秋处露秋寒霜降，冬雪雪冬小大寒。",
+      "titleReading": "èr shí sì jié qì gē",
+      "detailReading": "chuán tǒng gē jué chūn yǔ jīng chūn qīng gǔ tiān xià mǎn máng xià shǔ xiāng lián qiū chǔ lù qiū hán shuāng jiàng dōng xuě xuě dōng xiǎo dà hán"
     }
-  }
+  },
+  "poems": [
+    {
+      "id": "sh54-dizigui-conduct-excerpt",
+      "title": "弟子规（节选）",
+      "author": "《弟子规》",
+      "original": "冠必正，纽必结，袜与履，俱紧切。\n置冠服，有定位，勿乱顿，致污秽。\n唯德学，唯才艺，不如人，当自砺。\n若衣服，若饮食，不如人，勿生戚。",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=6f1d8652-05df-432b-8ee4-6a5652ec677e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "国家平台五四制原书印刷页67、电子页72题名、出处与公版正文已核对；仅录原文，不含现代注释；学校印次待确认。"
+    },
+    {
+      "id": "sh54-solar-terms-song",
+      "title": "二十四节气歌",
+      "author": "传统歌诀",
+      "original": "春雨惊春清谷天，夏满芒夏暑相连。\n秋处露秋寒霜降，冬雪雪冬小大寒。",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=6f1d8652-05df-432b-8ee4-6a5652ec677e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "国家平台五四制原书印刷页80、电子页85题名、出处与公版正文已核对；仅录原文，不含现代注释；学校印次待确认。"
+    }
+  ]
 }
