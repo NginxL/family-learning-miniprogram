@@ -855,7 +855,14 @@
             "status": "metadata_only",
             "reason": "现代作品未获全文再分发授权；未将原文纳入开源学习库。"
           }
-        ]
+        ],
+        "editionReview": {
+          "checkedAt": "2026-10-17",
+          "status": "historical_reference_retained",
+          "nationalCatalogueUrl": "https://basic.smartedu.cn/tchMaterial",
+          "finding": "国家平台所查五四制语文目录仍列2019审定下册，未确认对应的2022课标修订新版下册；不据此推断新版不存在。",
+          "pending": "2026学年第二学期（2027年春季）版本和学校实际用书待确认。"
+        }
       },
       "inventory": {
         "recognitionCount": 250,
@@ -1751,7 +1758,8 @@
               "meaning": "乐于助人的；有帮助的",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "additionalSense": true
             },
             {
               "text": "English",
@@ -2688,7 +2696,8 @@
               "meaning": "傍晚；晚上",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "additionalSense": true
             },
             {
               "text": "the Earth",
@@ -2940,7 +2949,18 @@
         "wordBankPrintedPagesVerified": false,
         "scope": "12 单元 Look and learn 词项；不代表完整卷末词表",
         "audioArchiveMd5": "60b24f52a3f950366ee7e2e01f590c55",
-        "audioDownloadUrl": "https://mp3.bookmall.com.cn/book/download/54441653/22300.shtml"
+        "audioDownloadUrl": "https://mp3.bookmall.com.cn/book/download/54441653/22300.shtml",
+        "editionReview": {
+          "checkedAt": "2026-10-17",
+          "status": "historical_reference_retained",
+          "nationalCatalogueUrl": "https://basic.smartedu.cn/tchMaterial",
+          "finding": "上海2026春季用书目录及2025学年第二学期配套资源仍列牛津上海版试用本；学校也可按目录选用新世纪版，不能推定明强小学或七宝三中的选用。",
+          "pending": "2026学年第二学期（2027年春季）版本和学校实际用书待确认。",
+          "localCatalogueUrl": "https://edu.sh.gov.cn/cmsres/3a/3a555417ed2b47a38f730ca8c9f10881/9ba8430bf7e54d3e19fce9c17b45f5fb.pdf",
+          "localCataloguePdfPage": 1,
+          "resourcePeriod": "2025学年第二学期",
+          "calendarPeriod": "2026年春季"
+        }
       },
       "inventory": {
         "topicWordsComplete": false,

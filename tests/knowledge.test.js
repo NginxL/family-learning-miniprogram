@@ -51,7 +51,7 @@ test('national source inventories retain 75/60 works, 1600 headword groups, 505 
   assert.equal(tables.entries.length, 77);
   assert.deepEqual(tables.entries.reduce((counts, entry) => ({ ...counts, [entry.table]: (counts[entry.table] || 0) + 1 }), {}), { '基数词': 30, '序数词': 28, '月份': 12, '星期': 7 });
   assert.equal(learning.catalog.filter((item) => item.kind === 'poetry').length, 260);
-  assert.equal(learning.catalog.filter((item) => item.kind === 'word').length, 2747);
+  assert.equal(learning.catalog.filter((item) => item.kind === 'word').length, 2748);
 });
 
 test('content identity preserves case and distinct same-title works; default scopes are deliberately limited', () => {
@@ -90,7 +90,7 @@ test('grade mappings require a named five-four textbook and an observed title; n
   assert.ok(learning.catalogById.get('moe-2022-zh-1-6-025').gradeMappings.some(m => m.grade === 2 && /两个黄鹂/.test(m.evidence)));
   assert.equal(learning.searchCatalog({ kind: 'poetry', grade: 2 }).length, 16);
   assert.equal(learning.searchCatalog({ kind: 'poetry', grade: 1 }).length, 13);
-  assert.equal(learning.searchCatalog({ grade: 3 }).length, 377);
+  assert.equal(learning.searchCatalog({ grade: 3 }).length, 378);
   assert.equal(learning.searchCatalog({ grade: 6 }).length, 664);
   assert.equal(learning.searchCatalog({ grade: 7 }).length, 676);
   assert.equal(learning.catalogById.get('sh54-cicada').gradeMappings.length, 1, 'sixth-grade original page now verifies the formerly pending candidate');

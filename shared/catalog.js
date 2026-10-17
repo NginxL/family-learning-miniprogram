@@ -62,7 +62,9 @@ const starters = [...poems, ...words, ...sentences, ...readings, ...maths, ...re
         return { ...item, collections: ['starter'] };
     byId.delete(item.id);
     return { ...item, ...full,
-        ...(item.kind === 'word' ? { detail: item.detail, source: full.source.replace(/；.*$/, '；自编入门释义') } : {}),
+        // Keep the stable starter ID, but do not hide reviewed textbook senses.
+        // Existing day tasks retain their stored text; only new catalogue cards use this detail.
+        ...(item.kind === 'word' ? { detail: `${full.detail}\n\n和家人读一读，再遮住中文，说出意思。` } : {}),
         aliases: [...(full.aliases || []), item.title], collections: ['starter', ...full.collections] };
 });
 const catalog = [...starters, ...byId.values()];

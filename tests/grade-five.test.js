@@ -12,7 +12,7 @@ test('grade-five Chinese uses actual five-four pages, complete character invento
   assert.match(a.sourceEvidence.sidebarMismatch, /以PDF电子页4—5为准/);
   assert.deepEqual(a.units[0].lessons, ['桂花雨', '落花生', '珍珠鸟']);
   assert.deepEqual(a.units.map(u => u.sourcePrintPage), [1, 13, 33, 51, 65, 75, 91, 101]);
-  assert.equal(b.editionStatus, 'historical_reference'); assert.equal(b.sourceKind, 'public_sample');
+  assert.equal(b.editionStatus, 'historical_reference'); assert.equal(b.sourceKind, 'official_textbook');
   assert.deepEqual(b.units.map(u => u.sourcePrintPage), [1, 19, 43, 59, 73, 83, 97, 109, 123]);
   assert.equal(b.units[8].displayLabel, '古诗词诵读（附录）');
   for (const [book, reviews, writingCount, recognitionPages, writingPages] of [

@@ -273,7 +273,10 @@
       "notes": [
         "保存原作全篇；校内教材可能节选，实际背诵段落待按版次核对。"
       ],
-      "transcriptionRecordId": "5b9a1432367d5cab1866860b"
+      "transcriptionRecordId": "5b9a1432367d5cab1866860b",
+      "coveredContentIds": [
+        "sh54-moon-excerpt"
+      ]
     },
     {
       "id": "moe-2022-zh-1-6-019",

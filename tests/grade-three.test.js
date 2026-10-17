@@ -46,7 +46,7 @@ test('the observed author and opening line distinguish the 3B Jueju from the sep
   assert.equal(learning.searchCatalog({ kind: 'poetry', grade: 3, semester: '下册' }).length, 10);
 });
 
-test('English grade three keeps audio evidence, verified unit structure and the historical lower-semester edition explicit', () => {
+test('English grade three distinguishes verified upper-volume pages from historical lower-volume audio', () => {
   const [, , a, b] = data.books;
   assert.equal(a.sourceEvidence.officialResourceIsbn, '978-7-5720-4357-4');
   assert.equal(b.sourceEvidence.officialResourceIsbn, '978-7-5444-1650-4');
@@ -54,19 +54,26 @@ test('English grade three keeps audio evidence, verified unit structure and the 
   assert.equal(a.units[3].title, 'Water');
   assert.equal(b.units[3].displayLabel, 'Module 2 / Unit 1 · Animals');
   assert.equal(b.editionStatus, 'historical_reference');
-  for (const [book, count] of [[a, 158], [b, 61]]) {
+  for (const [book, count] of [[a, 159], [b, 61]]) {
     assert.equal(book.units.flatMap(unit => unit.words).length, count);
     assert.equal(book.inventory.vocabularyCount, count);
     assert.equal(book.inventory.wordBankComplete, false);
     for (const item of learning.searchCatalog({ bookId: book.id })) {
       const mapping = item.gradeMappings.find(mapping => mapping.bookId === book.id);
-      assert.equal(mapping.sourceKind, 'official_audio');
-      assert.equal(mapping.sourcePrintPage, undefined); assert.equal(mapping.sourcePdfPage, undefined);
-      assert.match(mapping.outlineDestination, /\.mp3$/);
-      if (book === b) assert.match(mapping.evidence, /旧版参考/);
+      if (book === b) {
+        assert.equal(mapping.sourceKind, 'official_audio');
+        assert.equal(mapping.sourcePrintPage, undefined); assert.equal(mapping.sourcePdfPage, undefined);
+        assert.match(mapping.outlineDestination, /\.mp3$/);
+        assert.match(mapping.evidence, /旧版参考/);
+      } else {
+        assert.equal(mapping.sourceKind, 'official_textbook');
+        assert.equal(mapping.sourcePdfPage, mapping.sourcePrintPage + 7);
+        assert.equal(mapping.outlineDestination, `#page=${mapping.sourcePdfPage}`);
+      }
     }
   }
-  assert.ok(!a.units[9].words.some(word => word.text === 'flour'), 'audio homophones without paper evidence stay pending');
+  assert.ok(a.units[9].words.some(word => word.text === 'flour' && word.vocabularyPrintPage === 89));
+  assert.equal(a.inventory.vocabularyListComplete, true);
 });
 
 test('every new unit has usable original reading, questions and answers without claiming a full textbook', () => {

@@ -106,7 +106,8 @@ test('28 eighth-grade groups provide original reading, aligned questions and gra
 test('all earlier IDs survive, while grouped Mengzi chapters do not change old snapshots or invent mastery', () => {
   const poems = new Set([...data.poems, ...require('../data/catalogs/shanghai-54-grade9.json').poems].map(p => p.id));
   const current = require('../shared/knowledge-data.json');
-  const oldIds = current.filter(i => !poems.has(i.id) && !/^sh54-(zh|en)-[89][ab]-/.test(i.id)
+  // flour was added after ninth grade when the third-grade paper list became readable.
+  const oldIds = current.filter(i => i.id !== 'sh54-word-flour' && !poems.has(i.id) && !/^sh54-(zh|en)-[89][ab]-/.test(i.id)
     && !(i.id.startsWith('sh54-word-') && i.gradeMappings.every(m => m.grade >= 8))).map(i => i.id).sort();
   assert.equal(oldIds.length, 3395);
   assert.equal(crypto.createHash('sha256').update(oldIds.join('\n')).digest('hex'), 'c48c20847812c3244671fd5c8eb66bd31cc9785e8a1ab958c22a39a8dc593809');

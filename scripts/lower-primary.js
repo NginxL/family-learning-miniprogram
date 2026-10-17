@@ -24,7 +24,7 @@ function mapping(book, unit, type, page = unit.sourcePrintPage, pdfPage = unit.s
     edition: book.edition, sourceUrl: book.sourceUrl, outlineDestination: pdfPage ? `#page=${pdfPage}` : `目录 Unit ${unit.number}，印刷页 ${page}`,
     sourceKind: book.sourceKind, sourcePrintPage: page, ...(pdfPage ? { sourcePdfPage: pdfPage } : {}),
     unit: unitLabel(unit), unitId: unit.id, mappingType: type,
-    evidence: type === 'aligned_practice' ? '按已核实单元主题自编；不是教材课文或课后原题。页码为所依据单元的起始位置，学校版次待确认。' : '教材公开样本字词与册次已核实；页码为目录标注的单元起始位置，学校版次待确认。',
+    evidence: type === 'aligned_practice' ? '按已核实单元主题自编；不是教材课文或课后原题。页码为所依据单元的起始位置，学校版次待确认。' : `${book.sourceKind === 'official_textbook' ? '官方教材原书' : '教材公开样本'}字词与册次已核实；页码为目录标注的单元起始位置，学校版次待确认。`,
     status: 'catalogue_verified' };
   if (book.sourceKind === 'official_audio') {
     result.sourceUrl = book.sourceEvidence.officialResourceUrl;
@@ -158,9 +158,10 @@ function augment(items) {
           item = { id, kind: 'word', title: word.text, detail: `${word.text}\n${word.meaning}`, minutes: 1,
             source: word.vocabularyPrintPage ? `沪教版原书 ${book.inventory.vocabularyListName}；常用义提示自编`
               : word.vocabularyAudioTrack ? `沪教版官方配套 ${book.inventory.vocabularyListName} 音频；常用义提示自编`
-              : word.wordBankAudioTrack ? '沪教版官方配套 Word bank 音频；常用义提示自编' : '沪教版教材目录 Topic words；常用义提示自编',
+              : word.wordBankAudioTrack ? '沪教版官方配套 Word bank 音频；常用义提示自编'
+              : book.sourceKind === 'official_audio' ? `沪教版官方配套 ${book.inventory.vocabularyListName} 音频；常用义提示自编` : '沪教版教材目录 Topic words；常用义提示自编',
             collections: [], aliases: [word.text], referenceUrl: word.vocabularyPrintPage ? book.sourceUrl
-              : word.wordBankAudioTrack || word.vocabularyAudioTrack ? book.sourceEvidence.officialResourceUrl : book.sourceUrl };
+              : word.wordBankAudioTrack || word.vocabularyAudioTrack || book.sourceKind === 'official_audio' ? book.sourceEvidence.officialResourceUrl : book.sourceUrl };
           if (byId.has(id)) throw Error(`Ambiguous vocabulary identity: ${word.text}`);
           byId.set(id, item); lexicon.set(word.text, item); items.push(item);
         }

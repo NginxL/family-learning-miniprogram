@@ -673,13 +673,13 @@
       "subject": "chinese",
       "grade": 5,
       "semester": "下册",
-      "title": "语文五年级下册（五四制·2019审定参考）",
+      "title": "语文五年级下册（五四制·2019审定原书）",
       "publisher": "人民教育出版社",
-      "edition": "五四制2019审定公开电子样本；新版下册、ISBN及学校印次待确认",
+      "edition": "国家平台五四制2019审定原书；新版下册、ISBN及学校印次待确认",
       "editionStatus": "historical_reference",
       "schoolSystem": "5-4",
-      "sourceUrl": "https://keben.app/book/0342",
-      "sourceKind": "public_sample",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=f182b376-35af-4e94-849a-91ea3f97023c&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourceKind": "official_textbook",
       "checkedAt": "2026-10-17",
       "schoolAdoption": "pending",
       "sourcePageOffset": 5,
@@ -702,9 +702,56 @@
           4,
           5
         ],
-        "checkedAgainst": "公开PDF封面、版权页、目录、字表与古诗原页交叉核对",
+        "checkedAgainst": "国家平台封面、版权、目录、完整字表与23处古诗文原页交叉核对；与原公开样本一致，印刷页与电子页偏移仍为5。",
         "transcriptionSha256": "41a5a598d8dfce97a500beaa77f7e5606ea33c972d9eb75f91624237e5894eaa",
-        "pdfSha256": "f9928990b34916a80f8213c76d38bfb18cb69d32c9a9fd0d7666353e145c3898"
+        "editionReview": {
+          "checkedAt": "2026-10-17",
+          "status": "historical_reference_retained",
+          "nationalCatalogueUrl": "https://basic.smartedu.cn/tchMaterial",
+          "finding": "国家平台所查五四制语文目录仍列2019审定下册，未确认对应的2022课标修订新版下册；不据此推断新版不存在。",
+          "pending": "2026学年第二学期（2027年春季）版本和学校实际用书待确认。"
+        },
+        "previousSampleUrl": "https://keben.app/book/0342",
+        "coverAuditYear": 2019,
+        "officialReview": {
+          "checkedAt": "2026-10-17",
+          "cataloguePdfPages": [
+            4,
+            5
+          ],
+          "recognitionPdfPages": [
+            138,
+            139
+          ],
+          "writingPdfPages": [
+            140,
+            141
+          ],
+          "poetryPdfPages": [
+            7,
+            8,
+            23,
+            45,
+            49,
+            50,
+            63,
+            79,
+            101,
+            103,
+            128,
+            129,
+            130,
+            131,
+            132,
+            133,
+            134,
+            135,
+            136,
+            137
+          ],
+          "pageEvidenceSha256": "d424b85fe0d9777c7bc4ae211b4128bab77b08bfd8216f21bb2f2bd07c69625b"
+        },
+        "previousSamplePdfSha256": "f9928990b34916a80f8213c76d38bfb18cb69d32c9a9fd0d7666353e145c3898"
       },
       "expectedUnitCount": 9,
       "inventory": {
@@ -2745,7 +2792,18 @@
         "audioArchiveMd5": "36329070d25c007194d15c95448858c6",
         "audioDownloadUrl": "https://mp3.bookmall.com.cn/book/download/54441656/22302.shtml",
         "wordBankPrintedPagesVerified": false,
-        "scope": "12 单元 Look and learn 词项；不代表完整卷末词表"
+        "scope": "12 单元 Look and learn 词项；不代表完整卷末词表",
+        "editionReview": {
+          "checkedAt": "2026-10-17",
+          "status": "historical_reference_retained",
+          "nationalCatalogueUrl": "https://basic.smartedu.cn/tchMaterial",
+          "finding": "上海2026春季用书目录及2025学年第二学期配套资源仍列牛津上海版试用本；学校也可按目录选用新世纪版，不能推定明强小学或七宝三中的选用。",
+          "pending": "2026学年第二学期（2027年春季）版本和学校实际用书待确认。",
+          "localCatalogueUrl": "https://edu.sh.gov.cn/cmsres/3a/3a555417ed2b47a38f730ca8c9f10881/9ba8430bf7e54d3e19fce9c17b45f5fb.pdf",
+          "localCataloguePdfPage": 1,
+          "resourcePeriod": "2025学年第二学期",
+          "calendarPeriod": "2026年春季"
+        }
       },
       "inventory": {
         "topicWordsComplete": false,
@@ -3767,88 +3825,88 @@
       "title": "稚子弄冰",
       "author": "杨万里",
       "original": "稚子金盆脱晓冰，彩丝穿取当银钲。\n敲成玉磬穿林响，忽作玻璃碎地声。",
-      "sourceUrl": "https://keben.app/book/0342",
-      "reviewStatus": "五四制2019审定公开样本电子页 7（印刷页 2）题名、作者或出处及公版正文已核对；未录现代注释；学校印次待确认。"
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=f182b376-35af-4e94-849a-91ea3f97023c&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "五四制2019审定国家平台原书电子页 7（印刷页 2）题名、作者或出处及公版正文已核对；未录现代注释；学校印次待确认。"
     },
     {
       "id": "sh54-cunwan",
       "title": "村晚",
       "author": "雷震",
       "original": "草满池塘水满陂，山衔落日浸寒漪。\n牧童归去横牛背，短笛无腔信口吹。",
-      "sourceUrl": "https://keben.app/book/0342",
-      "reviewStatus": "五四制2019审定公开样本电子页 8（印刷页 3）题名、作者或出处及公版正文已核对；未录现代注释；学校印次待确认。"
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=f182b376-35af-4e94-849a-91ea3f97023c&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "五四制2019审定国家平台原书电子页 8（印刷页 3）题名、作者或出处及公版正文已核对；未录现代注释；学校印次待确认。"
     },
     {
       "id": "sh54-niaomingjian",
       "title": "鸟鸣涧",
       "author": "王维",
       "original": "人闲桂花落，夜静春山空。\n月出惊山鸟，时鸣春涧中。",
-      "sourceUrl": "https://keben.app/book/0342",
-      "reviewStatus": "五四制2019审定公开样本电子页 45（印刷页 40）题名、作者或出处及公版正文已核对；未录现代注释；学校印次待确认。"
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=f182b376-35af-4e94-849a-91ea3f97023c&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "五四制2019审定国家平台原书电子页 45（印刷页 40）题名、作者或出处及公版正文已核对；未录现代注释；学校印次待确认。"
     },
     {
       "id": "sh54-congjunxing-wangchangling",
       "title": "从军行（青海长云暗雪山）",
       "author": "王昌龄",
       "original": "青海长云暗雪山，孤城遥望玉门关。\n黄沙百战穿金甲，不破楼兰终不还。",
-      "sourceUrl": "https://keben.app/book/0342",
-      "reviewStatus": "五四制2019审定公开样本电子页 49（印刷页 44）题名、作者或出处及公版正文已核对；未录现代注释；学校印次待确认。"
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=f182b376-35af-4e94-849a-91ea3f97023c&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "五四制2019审定国家平台原书电子页 49（印刷页 44）题名、作者或出处及公版正文已核对；未录现代注释；学校印次待确认。"
     },
     {
       "id": "sh54-wenguanjun",
       "title": "闻官军收河南河北",
       "author": "杜甫",
       "original": "剑外忽传收蓟北，初闻涕泪满衣裳。\n却看妻子愁何在，漫卷诗书喜欲狂。\n白日放歌须纵酒，青春作伴好还乡。\n即从巴峡穿巫峡，便下襄阳向洛阳。",
-      "sourceUrl": "https://keben.app/book/0342",
-      "reviewStatus": "五四制2019审定公开样本电子页 50（印刷页 45）题名、作者或出处及公版正文已核对；未录现代注释；学校印次待确认。"
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=f182b376-35af-4e94-849a-91ea3f97023c&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "五四制2019审定国家平台原书电子页 50（印刷页 45）题名、作者或出处及公版正文已核对；未录现代注释；学校印次待确认。"
     },
     {
       "id": "sh54-zixiangmaodun",
       "title": "自相矛盾",
       "author": "《韩非子·难一》",
       "original": "楚人有鬻盾与矛者，誉之曰：“吾盾之坚，物莫能陷也。”又誉其矛曰：“吾矛之利，于物无不陷也。”或曰：“以子之矛陷子之盾，何如？”其人弗能应也。夫不可陷之盾与无不陷之矛，不可同世而立。",
-      "sourceUrl": "https://keben.app/book/0342",
-      "reviewStatus": "五四制2019审定公开样本电子页 79（印刷页 74）题名、作者或出处及公版正文已核对；未录现代注释；学校印次待确认。按教材标出处《韩非子·难一》；先秦时代由国家图书馆出版社书目补证。"
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=f182b376-35af-4e94-849a-91ea3f97023c&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "五四制2019审定国家平台原书电子页 79（印刷页 74）题名、作者或出处及公版正文已核对；未录现代注释；学校印次待确认。按教材标出处《韩非子·难一》；先秦时代由国家图书馆出版社书目补证。"
     },
     {
       "id": "sh54-yangshi-zhizi",
       "title": "杨氏之子",
       "author": "刘义庆",
       "original": "梁国杨氏子九岁，甚聪惠。孔君平诣其父，父不在，乃呼儿出。为设果，果有杨梅。孔指以示儿曰：“此是君家果。”儿应声答曰：“未闻孔雀是夫子家禽。”",
-      "sourceUrl": "https://keben.app/book/0342",
-      "reviewStatus": "五四制2019审定公开样本电子页 103（印刷页 98）题名、作者或出处及公版正文已核对；未录现代注释；学校印次待确认。《世说新语·言语》节选；标编纂者刘义庆的南朝宋时代，不以故事人物时代替代。"
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=f182b376-35af-4e94-849a-91ea3f97023c&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "五四制2019审定国家平台原书电子页 103（印刷页 98）题名、作者或出处及公版正文已核对；未录现代注释；学校印次待确认。《世说新语·言语》节选；标编纂者刘义庆的南朝宋时代，不以故事人物时代替代。"
     },
     {
       "id": "sh54-caiwei-excerpt",
       "title": "采薇（节选）",
       "author": "佚名",
       "original": "昔我往矣，杨柳依依。\n今我来思，雨雪霏霏。\n行道迟迟，载渴载饥。\n我心伤悲，莫知我哀！",
-      "sourceUrl": "https://keben.app/book/0342",
-      "reviewStatus": "五四制2019审定公开样本电子页 128（印刷页 123）题名、作者或出处及公版正文已核对；未录现代注释；学校印次待确认。《诗经·小雅》末章节选；作者佚名，不把选篇当作全诗。"
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=f182b376-35af-4e94-849a-91ea3f97023c&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "五四制2019审定国家平台原书电子页 128（印刷页 123）题名、作者或出处及公版正文已核对；未录现代注释；学校印次待确认。《诗经·小雅》末章节选；作者佚名，不把选篇当作全诗。"
     },
     {
       "id": "sh54-busuanzi-songbao",
       "title": "卜算子·送鲍浩然之浙东",
       "author": "王观",
       "original": "水是眼波横，山是眉峰聚。欲问行人去那边？眉眼盈盈处。\n才始送春归，又送君归去。若到江南赶上春，千万和春住。",
-      "sourceUrl": "https://keben.app/book/0342",
-      "reviewStatus": "五四制2019审定公开样本电子页 135（印刷页 130）题名、作者或出处及公版正文已核对；未录现代注释；学校印次待确认。"
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=f182b376-35af-4e94-849a-91ea3f97023c&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "五四制2019审定国家平台原书电子页 135（印刷页 130）题名、作者或出处及公版正文已核对；未录现代注释；学校印次待确认。"
     },
     {
       "id": "sh54-huanxisha-sushi",
       "title": "浣溪沙（山下兰芽短浸溪）",
       "author": "苏轼",
       "original": "游蕲水清泉寺，寺临兰溪，溪水西流。\n山下兰芽短浸溪，松间沙路净无泥。萧萧暮雨子规啼。\n谁道人生无再少？门前流水尚能西！休将白发唱黄鸡。",
-      "sourceUrl": "https://keben.app/book/0342",
-      "reviewStatus": "五四制2019审定公开样本电子页 136（印刷页 131）题名、作者或出处及公版正文已核对；未录现代注释；学校印次待确认。保留小序；与晏殊《浣溪沙》区分。"
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=f182b376-35af-4e94-849a-91ea3f97023c&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "五四制2019审定国家平台原书电子页 136（印刷页 131）题名、作者或出处及公版正文已核对；未录现代注释；学校印次待确认。保留小序；与晏殊《浣溪沙》区分。"
     },
     {
       "id": "sh54-qingpingle-huang",
       "title": "清平乐（春归何处）",
       "author": "黄庭坚",
       "original": "春归何处？寂寞无行路。若有人知春去处，唤取归来同住。\n春无踪迹谁知？除非问取黄鹂。百啭无人能解，因风飞过蔷薇。",
-      "sourceUrl": "https://keben.app/book/0342",
-      "reviewStatus": "五四制2019审定公开样本电子页 137（印刷页 132）题名、作者或出处及公版正文已核对；未录现代注释；学校印次待确认。与辛弃疾《清平乐·村居》区分。"
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=f182b376-35af-4e94-849a-91ea3f97023c&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "五四制2019审定国家平台原书电子页 137（印刷页 132）题名、作者或出处及公版正文已核对；未录现代注释；学校印次待确认。与辛弃疾《清平乐·村居》区分。"
     }
   ]
 }
