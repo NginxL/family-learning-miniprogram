@@ -113,7 +113,7 @@ test('39 grade-five groups expose original readable content with questions and r
     assert.equal(learning.searchCatalog({ bookId: book.id, grade: 4 }).length, 0);
   }
   const p = learning.progress({ records: {} }).grades[4];
-  assert.equal(p.total, 263); assert.equal(p.practice.total, 127); assert.equal(p.fullGradeComplete, false);
+  assert.equal(p.total, 263); assert.equal(p.practice.total, 132); assert.equal(p.fullGradeComplete, false);
 });
 
 test('grade-five reading aids keep reviewed polyphonic character and sentence readings', () => {

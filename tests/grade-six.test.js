@@ -97,7 +97,7 @@ test('29 new groups contain original readable tasks, questions, answers and Engl
     }
   }
   const p = learning.progress({ records: {} }).grades[5];
-  assert.equal(p.stage, '初中'); assert.equal(p.total, 557); assert.equal(p.practice.total, 107); assert.equal(p.fullGradeComplete, false);
+  assert.equal(p.stage, '初中'); assert.equal(p.total, 557); assert.equal(p.practice.total, 131); assert.equal(p.fullGradeComplete, false);
 });
 
 test('old poem/word records survive corrected sources and prevent the same work becoming new in a later grade', () => {

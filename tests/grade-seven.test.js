@@ -97,7 +97,7 @@ test('all 29 seventh-grade groups offer readable original exercises with questio
     }
   }
   const p = learning.progress({ records: {} }).grades[6];
-  assert.equal(p.stage, '初中'); assert.equal(p.total, 569); assert.equal(p.practice.total, 107); assert.equal(p.fullGradeComplete, false);
+  assert.equal(p.stage, '初中'); assert.equal(p.total, 569); assert.equal(p.practice.total, 132); assert.equal(p.fullGradeComplete, false);
 });
 
 test('existing variant records and learned shared words remain compatible with seventh-grade planning', () => {

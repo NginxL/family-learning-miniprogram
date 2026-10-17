@@ -1,6 +1,6 @@
 # 内容数据、来源与使用范围
 
-数据版本：正文与教材证据2026-10-12；一至九年级教材证据与拼音辅助2026-10-17。入库范围和核验缺口见[知识库与年级核验](../../docs/知识库与年级核验.md)。
+数据版本：正文与教材证据2026-10-12；一至九年级教材证据与拼音辅助2026-10-17；基础知识体系2026-10-18。入库范围和核验缺口见[知识库与年级核验](../../docs/知识库与年级核验.md)。
 
 | 文件 | 用途 | 来源与许可 |
 |---|---|---|
@@ -20,9 +20,13 @@
 | `shanghai-zhongkao-framework.json` | 上海中考参考年份、能力方向、官方依据、内容缺项 | 事实性摘要；历史材料与现行政策分开，不作为完整中考清单 |
 | `english-moe-2022.json` | 1,600 组国家课标词头、505 个星标、通用词典参考 | 词头来自课标；部分释义来自 ECDICT，采用 MIT，见下方声明 |
 | `english-foundation-meanings.json` | 505 个基础词的常用义提示 | 自编简短释义，供家庭学习参考；不是教材单元词义 |
+| `english-reviewed-meanings.json` | 96项原通用词典卡的常用义、例句与中文提示 | 自编教学辅助，不冒充教材译文，原ID不变 |
+| `chinese-recitation-requirements.json` | 58处具名教材的背诵、默写与指定段落要求 | 原书课后要求的事实性范围和页码；未核范围保留待确认 |
+| `chinese-foundation-system.json`、`chinese-foundation-pinyin.json` | 9组背诵默写、51组文言理解，低年级2组附拼音 | 公版原句与原创讲解、问答，关联原作已核册次；不把练习当原书题目 |
+| `english-foundation-system.json` | 10组词汇运用、55组语法讲解与问答 | 国家课标及五四制原书目录定位；未映射知识点不指定年级 |
 | `english-moe-2022-tables.json` | 数词／月份／星期另列表 77 项 | 词表来自课标；中文提示自编 |
 
-英文原始参考保留转录页码、列号、PDF SHA-256、ECDICT 版本及 CSV SHA-256。运行时优先使用基础词及已核实教材词项的自编释义；60个亲子入门词保留原ID与阅读提示，详情同步使用教材已核实词义，不覆盖掉后续单元词义。源JSON保留原始词典参考，不能把里面的专业义或少用义直接当作教材释义。
+英文原始参考保留转录页码、列号、PDF SHA-256、ECDICT 版本及 CSV SHA-256。运行时使用基础词、已核实教材词项及96项已整理通用卡的自编释义；60个亲子入门词保留原ID与阅读提示，详情同步使用教材已核实词义，不覆盖掉后续单元词义。源JSON保留原始词典参考，不能把里面的专业义或少用义直接当作教材释义。
 
 原作转录参考 [aopao/chinese-gushiwen](https://github.com/aopao/chinese-gushiwen/tree/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8)，固定版本 `c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8`。该仓库未声明整体开源许可；本库使用的对象为已进入公版的古代原作，不继承或声称拥有该仓库现代编辑内容的许可。
 
@@ -34,7 +38,7 @@ ECDICT 来源：[skywind3000/ECDICT](https://github.com/skywind3000/ECDICT)，�
 
 ## 生成与校验
 
-自编语文短文维护在`src/shared/catalog.ts`，新增英语短文及读后问题维护在`src/shared/reading-catalog.ts`，均按稳定ID接入知识库和任务。`src/miniprogram/lib/pinyin-data.ts`保留原有21项注音；`scripts/lower-primary.js`按一至九年级源数据生成另外239项注音，客户端仅为完全匹配的文字显示拼音。内容范围、标调与剩余核验事项见[阅读与拼音](../../docs/阅读与拼音.md)。
+自编语文短文维护在`src/shared/catalog.ts`，新增英语短文及读后问题维护在`src/shared/reading-catalog.ts`，均按稳定ID接入知识库和任务。`src/miniprogram/lib/pinyin-data.ts`保留原有21项注音；`scripts/lower-primary.js`按一至九年级源数据生成另外239项注音，基础体系另有2项低年级背诵注音；客户端仅为完全匹配的文字显示拼音。内容范围、标调与剩余核验事项见[阅读与拼音](../../docs/阅读与拼音.md)。
 
 `npm run build` 从上述源数据生成 `shared/knowledge-data.json`、`shared/resources.json`，云函数使用同样的 JSON 文件，小程序使用对应的 `.js` 数据模块，以兼容微信原生模块加载；小模块合并重复字符串、公共前缀与对象键布局；大模块在构建时使用DEFLATE压缩，客户端用fflate纯JavaScript离线同步解码，导出值与云端JSON逐项一致。没有网络加载、动态代码执行或学习记录格式变化；第三方许可见[fflate MIT声明](../../miniprogram/THIRD_PARTY_NOTICES.txt)。生成文件不手工修改；修改源数据后必须重建并运行 `npm run verify`。
 
@@ -45,3 +49,5 @@ ECDICT 来源：[skywind3000/ECDICT](https://github.com/skywind3000/ECDICT)，�
 内容 ID 区分同名诗、不同作者、不同首句与英语大小写；不能为合并方便而把 `May` 和 `may`、`Miss` 和 `miss` 合并。新增或修正教材映射要同时附证据及适用版本。
 
 公开样本一上、一下、二上、三上封面标注审定 2024；样本版权页没有具体 ISBN 和印次，不能据网站的“2024版”称其为学校当前用书。古诗文的五四制目录与样本总计267个年级映射，包含二下9项、三下10项、四年级23项、五年级35项、六年级26项、七年级38项、八年级48项和九年级47项；同名《绝句》另核对原页作者与首句。另有一至九年级字词与原创练习映射。来源区分`official_outline`、`public_sample`、`official_textbook`和`official_audio`；音频依据不推断纸本页码，已知版本差异保存在词项证据中。
+
+`scripts/foundations.js`校对词卡、附加背诵要求并生成125组知识练习。`learningArea`用于学习方向筛选；`manualOnly`使新练习仅由家长安排，不改变已有自动阅读数量。新增练习ID不继承原作的已学状态；原任务类型、记录和云接口格式保留。基础数量由最终目录构建生成，见[基础知识体系核验](../../docs/基础知识体系核验.md)。

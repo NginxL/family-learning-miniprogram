@@ -42,12 +42,15 @@ const learning = __importStar(require("./learning/learning"));
 const child_profile_1 = require("./learning/child-profile");
 const modeLabels = { new: '全新', review: '复习', manual: '家长安排' };
 const decorate = (item) => {
-    var _a, _b;
-    const poetry = learning.kindOf(item) === 'poetry' ? learning.catalogById.get(learning.contentId(item)) : undefined;
+    var _a, _b, _c, _d;
+    const knowledge = learning.catalogById.get(learning.contentId(item));
+    const poetry = learning.kindOf(item) === 'poetry' ? knowledge : undefined;
+    const recitationNote = (_a = poetry === null || poetry === void 0 ? void 0 : poetry.recitationRequirements) === null || _a === void 0 ? void 0 : _a.map(entry => `${entry.label}${entry.start ? `（${entry.start}—${entry.end}）` : ''}；原书第${entry.sourcePrintPage}页 / 电子第${entry.sourcePdfPage}页。`).join('\n');
     return { ...item, ...(poetry ? { poetryByline: `${poetry.dynasty || '朝代待考'} · ${poetry.author || '作者待考'}`, dynastyNote: poetry.dynastyNote || '',
-            displayDetail: poetry.author && ((_a = item.detail) === null || _a === void 0 ? void 0 : _a.startsWith(`${poetry.author}\n`)) ? item.detail.slice(poetry.author.length + 1) : item.detail || '' } : {}),
-        kindLabel: learning.definition(learning.kindOf(item)).label,
-        subjectLabel: ((_b = learning.subjects.find((subject) => subject.id === item.subject)) === null || _b === void 0 ? void 0 : _b.label) || '其他',
+            recitationNote: recitationNote || '当前有原作与来源；该版本指定背诵、默写范围待核实，不将全文自动标为必背。',
+            displayDetail: poetry.author && ((_b = item.detail) === null || _b === void 0 ? void 0 : _b.startsWith(`${poetry.author}\n`)) ? item.detail.slice(poetry.author.length + 1) : item.detail || '' } : {}),
+        kindLabel: ((_c = learning.learningAreas.find(area => area.id === (knowledge === null || knowledge === void 0 ? void 0 : knowledge.learningArea))) === null || _c === void 0 ? void 0 : _c.label) || learning.definition(learning.kindOf(item)).label,
+        subjectLabel: ((_d = learning.subjects.find((subject) => subject.id === item.subject)) === null || _d === void 0 ? void 0 : _d.label) || '其他',
         modeLabel: modeLabels[item.mode || 'manual'] || '家长安排' };
 };
 exports.decorate = decorate;

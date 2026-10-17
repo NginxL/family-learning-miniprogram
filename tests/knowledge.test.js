@@ -90,9 +90,9 @@ test('grade mappings require a named five-four textbook and an observed title; n
   assert.ok(learning.catalogById.get('moe-2022-zh-1-6-025').gradeMappings.some(m => m.grade === 2 && /两个黄鹂/.test(m.evidence)));
   assert.equal(learning.searchCatalog({ kind: 'poetry', grade: 2 }).length, 16);
   assert.equal(learning.searchCatalog({ kind: 'poetry', grade: 1 }).length, 13);
-  assert.equal(learning.searchCatalog({ grade: 3 }).length, 378);
-  assert.equal(learning.searchCatalog({ grade: 6 }).length, 664);
-  assert.equal(learning.searchCatalog({ grade: 7 }).length, 676);
+  assert.equal(learning.searchCatalog({ grade: 3 }).filter(item => !item.learningArea).length, 378);
+  assert.equal(learning.searchCatalog({ grade: 6 }).filter(item => !item.learningArea).length, 664);
+  assert.equal(learning.searchCatalog({ grade: 7 }).filter(item => !item.learningArea).length, 676);
   assert.equal(learning.catalogById.get('sh54-cicada').gradeMappings.length, 1, 'sixth-grade original page now verifies the formerly pending candidate');
   for (const entry of index.entries) assert.deepEqual(entry.shanghai_textbook_mapping || [], learning.catalog.find((item) => item.curriculumId === entry.id).gradeMappings);
 });
@@ -127,10 +127,10 @@ test('all built-in content fits in a compact ledger and history resolves the ori
   const ledger = { records: {} };
   const tasks = learning.catalog.map((item, index) => ({ ...learning.taskFrom(item, 'child', `task${index}`, 'new'), done: true }));
   learning.recordTasks(ledger, tasks, '2026-10-12');
-  // Every built-in item completed once leaves at least 224 KiB below the shared
+  // Every built-in item completed once leaves at least 200 KiB below the shared
   // 1 MiB application guard for custom entries and additional completion dates.
   const { requireLedgerCapacity, LEDGER_MAX_BYTES } = require('../cloudfunctions/familyApi/validation');
-  assert.ok(Buffer.byteLength(JSON.stringify(ledger)) < LEDGER_MAX_BYTES - 224 * 1024);
+  assert.ok(Buffer.byteLength(JSON.stringify(ledger)) < LEDGER_MAX_BYTES - 200 * 1024);
   assert.doesNotThrow(() => requireLedgerCapacity(ledger));
   assert.ok(Object.values(ledger.records).every((entry) => entry.item.builtin));
   const result = learning.history(ledger, { query: '出师表' });

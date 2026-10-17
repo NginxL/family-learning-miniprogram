@@ -8,6 +8,7 @@ const examFramework = require('../data/catalogs/shanghai-zhongkao-framework.json
 const dynasties = require('../data/catalogs/poetry-dynasties.json');
 const curriculum = require('./curriculum');
 const lowerPrimary = require('./lower-primary');
+const foundations = require('./foundations');
 function period(entry) {
   const metadata = dynasties.entries.find((item) => item.id === entry.id);
   if (!metadata || metadata.title !== entry.title || metadata.author !== entry.author || !metadata.dynasty || !metadata.sources.length)
@@ -69,10 +70,11 @@ function knowledge() {
     minutes: 1, referenceUrl: tables.sourceUrl, collections: ['tables'],
     note: '另列表，不计入课标 1600 个主词条或 505 个带星词。'
   }));
-  return lowerPrimary.augment([...poems, ...additional, ...words, ...tableWords]);
+  return foundations.augment(lowerPrimary.augment([...poems, ...additional, ...words, ...tableWords]));
 }
-module.exports = { knowledge, resources: {
-  checkedAt: '2026-10-17',
+module.exports = { knowledge, resourcesFor: catalog => ({ ...module.exports.resources,
+  examFramework: foundations.frameworkWithCounts(examFramework, catalog) }), resources: {
+  checkedAt: '2026-10-18',
   curriculum: curriculum(knowledge()),
   examFramework,
   coverage: '上海五四制：小学1–5、初中6–9年级。36个学科册次均有可直接学习的配套内容。一至五年级语文十册字表及81组原创练习已整理；四、五、九下语文为2019审定原书。六至九年级语文两册分别有26、38、48、47处古诗文映射，各有16篇原创练习。三上英语完整纸本词表159项；六至八年级英语两册分别核实533、533、468个完整单元词项；九上199项完整单元词表。三至五及九下英语按2026年春季官方资源保留旧版音频选词，不能视为完整词表或2027年春季用书。各册配原创阅读和例句。七册旧版对应的新版下册、学校版次和逐课全量知识仍待核实；不是全教材或中考全量。',

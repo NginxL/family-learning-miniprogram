@@ -23,7 +23,8 @@ test('packaged client knowledge and source JSON are identical to the cloud data'
     assert.deepEqual(require(`../cloudfunctions/familyApi/learning/${name}.json`), source);
   }
   const lowerPrimary = require('../scripts/lower-primary');
-  assert.deepEqual(require('../miniprogram/lib/lower-primary-pinyin'), { ...lowerPrimary.pinyin(), ...lowerPrimary.data.extraPinyin });
+  assert.deepEqual(require('../miniprogram/lib/lower-primary-pinyin'), { ...lowerPrimary.pinyin(), ...lowerPrimary.data.extraPinyin,
+    ...require('../data/catalogs/chinese-foundation-pinyin.json') });
 });
 
 test('repeated layouts reduce native package bytes without sharing mutable records', () => {

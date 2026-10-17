@@ -53,7 +53,7 @@ test('all WXML event handlers exist; family profile, manual cross-grade work, li
   assert.equal(progress.data.progress.grades[2].parentLearned, 1); assert.equal(progress.data.children[0].schoolGrade, 1);
   progress.browseGrade({ currentTarget: { dataset: { grade: 6 } } });
   const library = page('library', engine); library.onShow(); library.cleanup();
-  assert.equal(library.data.total, 664);
+  assert.equal(library.data.total, 688);
   await library.assignItem({ currentTarget: { dataset: { id: library.data.items[0].id } } });
   await library.confirmAssign();
   assert.equal(library.data.items[0].assigned, true);

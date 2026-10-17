@@ -3,14 +3,16 @@
   <view class="eyebrow">慢慢读 · 一点点积累</view><view class="title">知识库</view>
   <view class="subtitle">{{poemCount}} 篇 / 组古诗文 · {{wordCount}} 项英语词汇</view>
   <view class="muted">{{readingCount}} 项语文阅读与练习 · {{englishReadingCount}} 篇英语短文</view>
+  <view class="muted">{{foundationCount}} 组背诵、文言与英语基础知识练习</view>
   <view class="tab-row"><view wx:for="{{children}}" wx:key="id" class="chip {{childId === item.id ? 'active' : ''}}" data-id="{{item.id}}" bindtap="selectChild">{{item.name}}</view></view>
   <view class="segmented"><view class="segment {{view === 'content' ? 'selected' : ''}}" data-id="content" bindtap="changeView">选内容</view><view class="segment {{view === 'exam' ? 'selected' : ''}}" data-id="exam" bindtap="changeView">上海中考</view><view class="segment {{view === 'books' ? 'selected' : ''}}" data-id="books" bindtap="changeView">教材与来源</view></view>
   <block wx:if="{{view === 'content'}}">
     <view class="tab-row subjects"><view wx:for="{{subjectOptions}}" wx:key="id" class="subject-chip {{subjectFilter === item.id ? 'selected' : ''}}" data-id="{{item.id}}" bindtap="selectSubject">{{item.label}}</view></view>
-    <input value="{{query}}" maxlength="80" placeholder="搜篇名、朝代、作者或单词" bindinput="typeQuery" />
-    <view class="filter-summary" bindtap="toggleFilters">{{kinds[kindIndex].label}} · {{gradeLabels[grade]}} · {{semesterLabels[semesterIndex]}} {{filtersOpen ? '↑' : '· 筛选 ↓'}}</view>
+    <input value="{{query}}" maxlength="80" placeholder="搜篇名、单词或知识点" bindinput="typeQuery" />
+    <view class="filter-summary" bindtap="toggleFilters">{{learningAreaIndex ? learningAreas[learningAreaIndex].label : kinds[kindIndex].label}} · {{gradeLabels[grade]}} · {{semesterLabels[semesterIndex]}} {{filtersOpen ? '↑' : '· 筛选 ↓'}}</view>
     <block wx:if="{{filtersOpen}}">
     <view class="row"><picker class="grow" range="{{kinds}}" range-key="label" value="{{kindIndex}}" bindchange="changeKind"><view class="picker">{{kinds[kindIndex].label}} ▾</view></picker></view>
+    <picker range="{{learningAreas}}" range-key="label" value="{{learningAreaIndex}}" bindchange="changeLearningArea"><view class="picker">{{learningAreas[learningAreaIndex].label}} ▾</view></picker>
     <picker range="{{scopes}}" range-key="label" value="{{scopeIndex}}" bindchange="changeScope"><view class="picker">{{scopes[scopeIndex].label}} ▾</view></picker>
     <picker range="{{gradeLabels}}" value="{{grade}}" bindchange="changeGrade"><view class="picker">{{gradeLabels[grade]}} ▾</view></picker>
     <picker range="{{semesterLabels}}" value="{{semesterIndex}}" bindchange="changeSemester"><view class="picker">{{semesterLabels[semesterIndex]}} ▾</view></picker>
@@ -35,6 +37,7 @@
         <view wx:if="{{item.learnedLabel}}" class="muted plan-help">最近学习 {{item.lastLearned}} · 已学 {{item.learnedCount}} 次</view>
         <button wx:if="{{item.pinyin}}" class="quiet pinyin-toggle" bindtap="togglePinyin">{{showPinyin ? '隐藏拼音' : '显示拼音'}}</button>
         <view class="body"><template is="pinyinText" data="{{enabled: showPinyin, lines: item.pinyin.body, text: item.displayDetail || item.detail}}" /></view><view wx:if="{{item.dynastyNote}}" class="muted">{{item.dynastyNote}}</view><view class="muted">{{item.source}}</view><view wx:if="{{item.note}}" class="muted plan-help">{{item.note}}</view>
+        <view wx:if="{{item.recitationNote}}" class="body muted">{{item.recitationNote}}</view>
         <view wx:for="{{item.gradeMappings}}" wx:for-item="mapping" wx:key="displayKey" class="muted plan-help"><view>{{gradeLabels[mapping.grade]}} {{mapping.semester}} · {{mapping.edition}}</view><view wx:if="{{mapping.sourcePrintPage}}">{{mapping.unit}} · 原书第 {{mapping.sourcePrintPage}} 页<text wx:if="{{mapping.sourcePdfPage}}"> / PDF 第 {{mapping.sourcePdfPage}} 页</text></view><view>{{mapping.evidence}}</view><button class="quiet" data-url="{{mapping.sourceUrl}}" bindtap="copySource">复制年级依据链接</button></view>
         <view class="tab-row"><button wx:if="{{item.referenceUrl}}" class="quiet" data-url="{{item.referenceUrl}}" bindtap="copySource">复制目录来源链接</button><button wx:if="{{item.textSourceUrl}}" class="quiet" data-url="{{item.textSourceUrl}}" bindtap="copySource">复制正文 / 词典来源</button></view>
       </block>
@@ -52,7 +55,7 @@
     <view wx:for="{{resources.examFramework.areas}}" wx:key="id" class="card">
       <view class="rule-title">{{item.title}}</view><view class="body">{{item.requirement}}</view>
       <view class="pill">{{item.statusLabel}}</view><view class="subtitle">{{item.available}}</view><view class="muted plan-help">待补齐：{{item.gap}}</view>
-      <button wx:if="{{item.kind}}" class="quiet" data-kind="{{item.kind}}" bindtap="showExamContent">查看现有学习内容 →</button>
+      <button wx:if="{{item.kind}}" class="quiet" data-kind="{{item.kind}}" data-area="{{item.learningArea}}" bindtap="showExamContent">查看现有学习内容 →</button>
     </view>
     <view class="notice">{{resources.examFramework.measurementNote}}</view>
     <button wx:if="{{family}}" class="secondary" bindtap="openPlans">安排日常积累与家长自选练习</button>

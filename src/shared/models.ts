@@ -3,6 +3,7 @@ export type ContentKind = 'poetry' | 'word' | 'sentence' | 'english-reading' | '
 export type Subject = 'poetry' | 'english' | 'reading' | 'math' | 'other';
 export type SubjectFilter = Subject | 'all';
 export type SchoolGrade = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
+export type LearningArea = 'recitation' | 'classical' | 'vocabulary' | 'grammar';
 export type ContentScope = 'starter' | 'foundation' | 'moe-all' | 'tables' | 'shanghai54' | 'shanghai-exam' | 'all';
 export type LearningMode = 'new' | 'review';
 export type TaskMode = LearningMode | 'manual';
@@ -41,6 +42,10 @@ export interface Content {
   builtin?: false;
 }
 export interface KnowledgeItem extends Content {
+  learningArea?: LearningArea;
+  manualOnly?: true;
+  recitationRequirements?: Array<{ contentId: string; bookId: string; label: string; requirement: string;
+    sourcePdfPage: number; sourcePrintPage: number; sourceUrl: string; evidence: string; start?: string; end?: string }>;
   // Explicit containment of complete chapters in a legacy group; never inferred from titles.
   coveredContentIds?: string[];
   studyArea?: 'literacy' | 'pinyin' | 'reading';
@@ -178,6 +183,7 @@ export interface HistoryQuery {
   offset?: number;
 }
 export interface CatalogQuery {
+  learningArea?: LearningArea;
   kind?: ContentKind;
   subject?: SubjectFilter;
   scope?: ContentScope;

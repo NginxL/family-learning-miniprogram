@@ -122,7 +122,7 @@ test('all 38 grade-four units expose readable content, aligned sentences, questi
     assert.equal(learning.searchCatalog({ bookId: book.id, grade: 3 }).length, 0);
   }
   assert.equal(learning.progress({ records: {} }).grades[3].total, 241);
-  assert.equal(learning.progress({ records: {} }).grades[3].practice.total, 126);
+  assert.equal(learning.progress({ records: {} }).grades[3].practice.total, 129);
 });
 
 test('grade-four reading aids preserve contextual polyphonic readings and new/review character pronunciations', () => {

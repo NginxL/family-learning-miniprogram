@@ -1,0 +1,679 @@
+{
+  "checkedAt": "2026-10-18",
+  "scope": "96项原通用词典卡片的自编常用义与例句；保留国家课标词头和已有学习ID，不声明教材单元用义或完整词典覆盖。",
+  "sourceUrl": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582349487953.pdf",
+  "entries": [
+    {
+      "id": "word-according",
+      "word": "according",
+      "meaning": "according to：根据；据……所说",
+      "example": "According to the timetable, the bus leaves at eight.",
+      "translation": "根据时刻表，公共汽车八点发车。"
+    },
+    {
+      "id": "word-ad",
+      "word": "ad",
+      "meaning": "名词：广告；advertisement 的缩写",
+      "example": "I saw an ad for a school concert.",
+      "translation": "我看见了一则学校音乐会广告。"
+    },
+    {
+      "id": "word-adult",
+      "word": "adult",
+      "meaning": "名词：成年人；形容词：成年的",
+      "example": "Children must come with an adult.",
+      "translation": "儿童必须由一名成年人陪同。"
+    },
+    {
+      "id": "word-aloud",
+      "word": "aloud",
+      "meaning": "副词：出声地；大声地",
+      "example": "Please read the poem aloud.",
+      "translation": "请把这首诗读出声来。"
+    },
+    {
+      "id": "word-argue",
+      "word": "argue",
+      "meaning": "动词：争论；提出理由",
+      "example": "They argued about which route to take.",
+      "translation": "他们争论该走哪条路线。"
+    },
+    {
+      "id": "word-asleep",
+      "word": "asleep",
+      "meaning": "形容词：睡着的；常用 fall asleep 入睡",
+      "example": "The baby is asleep.",
+      "translation": "婴儿睡着了。"
+    },
+    {
+      "id": "word-awful",
+      "word": "awful",
+      "meaning": "形容词：很糟的；令人不快的",
+      "example": "The weather was awful yesterday.",
+      "translation": "昨天天气很糟。"
+    },
+    {
+      "id": "word-bat",
+      "word": "bat",
+      "meaning": "名词：蝙蝠；球棒、球拍",
+      "example": "This bat lives in a dark cave.",
+      "translation": "这只蝙蝠住在黑暗的洞里。"
+    },
+    {
+      "id": "word-behave",
+      "word": "behave",
+      "meaning": "动词：表现；行为举止",
+      "example": "The children behaved well on the trip.",
+      "translation": "孩子们在旅途中表现很好。"
+    },
+    {
+      "id": "word-below",
+      "word": "below",
+      "meaning": "介词或副词：在……下面；低于",
+      "example": "The temperature is below zero.",
+      "translation": "气温低于零度。"
+    },
+    {
+      "id": "word-birth",
+      "word": "birth",
+      "meaning": "名词：出生；date of birth 出生日期",
+      "example": "Please write your date of birth.",
+      "translation": "请写下你的出生日期。"
+    },
+    {
+      "id": "word-bully",
+      "word": "bully",
+      "meaning": "名词：欺凌他人的人；动词：欺负、霸凌",
+      "example": "Tell an adult if someone bullies you.",
+      "translation": "如果有人欺凌你，要告诉成年人。"
+    },
+    {
+      "id": "word-cent",
+      "word": "cent",
+      "meaning": "名词：分（美元等货币的百分之一）",
+      "example": "One dollar is one hundred cents.",
+      "translation": "一美元等于一百分。"
+    },
+    {
+      "id": "word-certain",
+      "word": "certain",
+      "meaning": "形容词：确定的；某个、某些",
+      "example": "I am certain that this is my bag.",
+      "translation": "我确定这是我的包。"
+    },
+    {
+      "id": "word-characteristic",
+      "word": "characteristic",
+      "meaning": "名词：特征、特点；形容词：特有的",
+      "example": "Long ears are a characteristic of rabbits.",
+      "translation": "长耳朵是兔子的一个特征。"
+    },
+    {
+      "id": "word-citizen",
+      "word": "citizen",
+      "meaning": "名词：公民；市民",
+      "example": "Every citizen should obey the law.",
+      "translation": "每位公民都应遵守法律。"
+    },
+    {
+      "id": "word-coin",
+      "word": "coin",
+      "meaning": "名词：硬币",
+      "example": "I found a coin under the chair.",
+      "translation": "我在椅子下面找到一枚硬币。"
+    },
+    {
+      "id": "word-college",
+      "word": "college",
+      "meaning": "名词：学院；大学（用法随教育制度而异）",
+      "example": "My sister is studying at college.",
+      "translation": "我姐姐正在上大学。"
+    },
+    {
+      "id": "word-compete",
+      "word": "compete",
+      "meaning": "动词：竞争；参加比赛",
+      "example": "Our team will compete in the race.",
+      "translation": "我们队将参加这场比赛。"
+    },
+    {
+      "id": "word-congratulation",
+      "word": "congratulation",
+      "meaning": "名词：祝贺；表示祝贺时常用复数 congratulations",
+      "example": "Congratulations on winning the match!",
+      "translation": "祝贺你赢得比赛！"
+    },
+    {
+      "id": "word-consider",
+      "word": "consider",
+      "meaning": "动词：考虑；认为",
+      "example": "We are considering taking the train.",
+      "translation": "我们正在考虑乘火车。"
+    },
+    {
+      "id": "word-crowded",
+      "word": "crowded",
+      "meaning": "形容词：拥挤的",
+      "example": "The bus was crowded this morning.",
+      "translation": "今天早上公共汽车很拥挤。"
+    },
+    {
+      "id": "word-deaf",
+      "word": "deaf",
+      "meaning": "形容词：聋的；听力严重受损的",
+      "example": "The museum provides information in sign language for deaf visitors.",
+      "translation": "博物馆为聋人参观者提供手语信息。"
+    },
+    {
+      "id": "word-dialogue",
+      "word": "dialogue",
+      "meaning": "名词：对话；美式英语也写作 dialog",
+      "example": "Read the dialogue with a partner.",
+      "translation": "与同伴一起读这段对话。"
+    },
+    {
+      "id": "word-dining",
+      "word": "dining",
+      "meaning": "与进餐有关的形式；dining room 餐厅；dining table 餐桌",
+      "example": "We eat dinner in the dining room.",
+      "translation": "我们在餐厅吃晚饭。"
+    },
+    {
+      "id": "word-dollar",
+      "word": "dollar",
+      "meaning": "名词：元（美国、加拿大、澳大利亚等国的货币单位）",
+      "example": "The book costs five dollars.",
+      "translation": "这本书售价五元。"
+    },
+    {
+      "id": "word-dumpling",
+      "word": "dumpling",
+      "meaning": "名词：饺子；面团做的食物（具体所指随饮食文化而异）",
+      "example": "We make dumplings together.",
+      "translation": "我们一起包饺子。"
+    },
+    {
+      "id": "word-effort",
+      "word": "effort",
+      "meaning": "名词：努力",
+      "example": "Your effort will help you improve.",
+      "translation": "你的努力会帮助你进步。"
+    },
+    {
+      "id": "word-enemy",
+      "word": "enemy",
+      "meaning": "名词：敌人；对手",
+      "example": "The two countries were once enemies.",
+      "translation": "这两个国家曾经是敌对国。"
+    },
+    {
+      "id": "word-era",
+      "word": "era",
+      "meaning": "名词：时代；时期",
+      "example": "The internet began a new era of communication.",
+      "translation": "互联网开启了通信的新时代。"
+    },
+    {
+      "id": "word-everybody",
+      "word": "everybody",
+      "meaning": "代词：每个人；everyone 同义；作主语时通常接单数谓语",
+      "example": "Everybody is ready.",
+      "translation": "每个人都准备好了。"
+    },
+    {
+      "id": "word-express",
+      "word": "express",
+      "meaning": "动词：表达；形容词：快速的；express train 特快列车",
+      "example": "You can express your ideas through pictures.",
+      "translation": "你可以通过图画表达想法。"
+    },
+    {
+      "id": "word-false",
+      "word": "false",
+      "meaning": "形容词：错误的；假的",
+      "example": "Write true or false after each sentence.",
+      "translation": "在每个句子后写“正确”或“错误”。"
+    },
+    {
+      "id": "word-forever",
+      "word": "forever",
+      "meaning": "副词：永远",
+      "example": "I will remember this day forever.",
+      "translation": "我将永远记住这一天。"
+    },
+    {
+      "id": "word-found",
+      "word": "found",
+      "meaning": "动词原形：创办、建立（found—founded—founded）；另可作 find 的过去式和过去分词",
+      "example": "They founded a reading club last year.",
+      "translation": "他们去年创办了一个读书会。"
+    },
+    {
+      "id": "word-gas",
+      "word": "gas",
+      "meaning": "名词：气体；燃气；美式口语中也指汽油",
+      "example": "Oxygen is a gas.",
+      "translation": "氧是一种气体。"
+    },
+    {
+      "id": "word-gentleman",
+      "word": "gentleman",
+      "meaning": "名词：先生；有礼貌的人；复数 gentlemen",
+      "example": "Ladies and gentlemen, welcome!",
+      "translation": "女士们、先生们，欢迎！"
+    },
+    {
+      "id": "word-god",
+      "word": "god",
+      "meaning": "名词：神；God 在特定宗教语境中指上帝",
+      "example": "The story is about an ancient Greek god.",
+      "translation": "这个故事讲述一位古希腊神。"
+    },
+    {
+      "id": "word-gold",
+      "word": "gold",
+      "meaning": "名词：金、黄金；金色；形容词：金制的、金色的",
+      "example": "She won a gold medal.",
+      "translation": "她赢得一枚金牌。"
+    },
+    {
+      "id": "word-graduate",
+      "word": "graduate",
+      "meaning": "动词：毕业；名词：毕业生",
+      "example": "He will graduate from school next year.",
+      "translation": "他明年将从学校毕业。"
+    },
+    {
+      "id": "word-grammar",
+      "word": "grammar",
+      "meaning": "名词：语法",
+      "example": "We practise grammar by making sentences.",
+      "translation": "我们通过造句练习语法。"
+    },
+    {
+      "id": "word-gun",
+      "word": "gun",
+      "meaning": "名词：枪",
+      "example": "The museum has a display of old guns.",
+      "translation": "博物馆有一处旧枪械展览。"
+    },
+    {
+      "id": "word-harm",
+      "word": "harm",
+      "meaning": "名词或动词：伤害；损害",
+      "example": "Litter can harm wild animals.",
+      "translation": "垃圾会伤害野生动物。"
+    },
+    {
+      "id": "word-hunt",
+      "word": "hunt",
+      "meaning": "动词或名词：打猎；寻找",
+      "example": "The children went on a treasure hunt.",
+      "translation": "孩子们参加了寻宝活动。"
+    },
+    {
+      "id": "word-insect",
+      "word": "insect",
+      "meaning": "名词：昆虫",
+      "example": "A bee is an insect.",
+      "translation": "蜜蜂是一种昆虫。"
+    },
+    {
+      "id": "word-judge",
+      "word": "judge",
+      "meaning": "名词：法官；裁判；动词：判断、评价",
+      "example": "Do not judge a person only by their clothes.",
+      "translation": "不要只凭衣着评价一个人。"
+    },
+    {
+      "id": "word-junior",
+      "word": "junior",
+      "meaning": "形容词：年少的；级别较低的；junior high school 初级中学",
+      "example": "She is a junior high school student.",
+      "translation": "她是一名初中生。"
+    },
+    {
+      "id": "word-king",
+      "word": "king",
+      "meaning": "名词：国王",
+      "example": "The king lived in a castle.",
+      "translation": "国王住在城堡里。"
+    },
+    {
+      "id": "word-lantern",
+      "word": "lantern",
+      "meaning": "名词：灯笼；提灯",
+      "example": "We made a red lantern.",
+      "translation": "我们做了一盏红灯笼。"
+    },
+    {
+      "id": "word-law",
+      "word": "law",
+      "meaning": "名词：法律；规律、定律",
+      "example": "We must follow the law.",
+      "translation": "我们必须遵守法律。"
+    },
+    {
+      "id": "word-lay",
+      "word": "lay",
+      "meaning": "动词：放置；下蛋（lay—laid—laid）；另可作 lie（躺）的过去式",
+      "example": "Please lay the book on the desk.",
+      "translation": "请把书放在书桌上。"
+    },
+    {
+      "id": "word-least",
+      "word": "least",
+      "meaning": "little 的最高级：最少的（量）；最不；at least 至少",
+      "example": "We need at least two chairs.",
+      "translation": "我们至少需要两把椅子。"
+    },
+    {
+      "id": "word-less",
+      "word": "less",
+      "meaning": "little 的比较级：较少的（量）；较不；常修饰不可数名词",
+      "example": "This recipe needs less sugar.",
+      "translation": "这个食谱需要较少的糖。"
+    },
+    {
+      "id": "word-literature",
+      "word": "literature",
+      "meaning": "名词：文学；文学作品",
+      "example": "She enjoys reading English literature.",
+      "translation": "她喜欢读英语文学作品。"
+    },
+    {
+      "id": "word-mad",
+      "word": "mad",
+      "meaning": "形容词：生气的；疯狂的；be mad about 对……着迷",
+      "example": "He is mad about football.",
+      "translation": "他对足球很着迷。"
+    },
+    {
+      "id": "word-madam",
+      "word": "madam",
+      "meaning": "名词：女士、夫人（礼貌称呼）",
+      "example": "Can I help you, madam?",
+      "translation": "女士，需要帮忙吗？"
+    },
+    {
+      "id": "word-medal",
+      "word": "medal",
+      "meaning": "名词：奖牌；勋章",
+      "example": "The runner won a silver medal.",
+      "translation": "这位跑步运动员赢得了一枚银牌。"
+    },
+    {
+      "id": "word-message",
+      "word": "message",
+      "meaning": "名词：消息；口信；信息",
+      "example": "Please leave a message.",
+      "translation": "请留言。"
+    },
+    {
+      "id": "word-negative",
+      "word": "negative",
+      "meaning": "形容词：否定的；消极的；负的",
+      "example": "Change the sentence into a negative sentence.",
+      "translation": "把这个句子改成否定句。"
+    },
+    {
+      "id": "word-olympic",
+      "word": "olympic",
+      "meaning": "形容词：奥林匹克运动会的；首字母大写 Olympic",
+      "example": "She dreams of becoming an Olympic athlete.",
+      "translation": "她梦想成为一名奥运会运动员。"
+    },
+    {
+      "id": "word-opposite",
+      "word": "opposite",
+      "meaning": "介词：在……对面；形容词：相反的；名词：相反的人或事物",
+      "example": "The library is opposite the park.",
+      "translation": "图书馆在公园对面。"
+    },
+    {
+      "id": "word-ours",
+      "word": "ours",
+      "meaning": "名词性物主代词：我们的（人或物）；后面不再接名词",
+      "example": "Their classroom is next to ours.",
+      "translation": "他们的教室在我们的教室旁边。"
+    },
+    {
+      "id": "word-pancake",
+      "word": "pancake",
+      "meaning": "名词：薄煎饼",
+      "example": "We had pancakes for breakfast.",
+      "translation": "我们早餐吃了薄煎饼。"
+    },
+    {
+      "id": "word-paragraph",
+      "word": "paragraph",
+      "meaning": "名词：段落",
+      "example": "Write a short paragraph about your family.",
+      "translation": "写一个介绍家人的短段落。"
+    },
+    {
+      "id": "word-passage",
+      "word": "passage",
+      "meaning": "名词：一段文字；通道",
+      "example": "Read the passage and answer the question.",
+      "translation": "阅读这段文字并回答问题。"
+    },
+    {
+      "id": "word-physics",
+      "word": "physics",
+      "meaning": "名词：物理学；作学科名称时通常接单数谓语",
+      "example": "Physics is my favourite subject.",
+      "translation": "物理是我最喜欢的学科。"
+    },
+    {
+      "id": "word-pilot",
+      "word": "pilot",
+      "meaning": "名词：飞行员；领航员",
+      "example": "The pilot landed the plane safely.",
+      "translation": "飞行员使飞机安全着陆。"
+    },
+    {
+      "id": "word-poet",
+      "word": "poet",
+      "meaning": "名词：诗人",
+      "example": "Li Bai was a famous poet.",
+      "translation": "李白是一位著名诗人。"
+    },
+    {
+      "id": "word-policeman",
+      "word": "policeman",
+      "meaning": "名词：男警察；policewoman 女警察；复数 policemen、policewomen",
+      "example": "A policeman helped us find the station.",
+      "translation": "一名男警察帮助我们找到了车站。"
+    },
+    {
+      "id": "word-president",
+      "word": "president",
+      "meaning": "名词：总统；机构、社团的负责人（如校长、会长）",
+      "example": "She is the president of our school club.",
+      "translation": "她是我们学校社团的负责人。"
+    },
+    {
+      "id": "word-prove",
+      "word": "prove",
+      "meaning": "动词：证明；证实",
+      "example": "The experiment proved that the idea was wrong.",
+      "translation": "实验证明这个想法是错误的。"
+    },
+    {
+      "id": "word-quality",
+      "word": "quality",
+      "meaning": "名词：质量；品质、特性",
+      "example": "We should care about the quality of our work.",
+      "translation": "我们应该重视工作质量。"
+    },
+    {
+      "id": "word-quarter",
+      "word": "quarter",
+      "meaning": "名词：四分之一；一刻钟；季度",
+      "example": "A quarter of an hour is fifteen minutes.",
+      "translation": "一刻钟就是十五分钟。"
+    },
+    {
+      "id": "word-queen",
+      "word": "queen",
+      "meaning": "名词：女王；王后",
+      "example": "The story is about a brave queen.",
+      "translation": "这个故事讲述一位勇敢的女王。"
+    },
+    {
+      "id": "word-relationship",
+      "word": "relationship",
+      "meaning": "名词：关系；联系",
+      "example": "They have a good relationship with their neighbours.",
+      "translation": "他们和邻居关系很好。"
+    },
+    {
+      "id": "word-remain",
+      "word": "remain",
+      "meaning": "动词：保持；留下；剩余",
+      "example": "Please remain quiet in the library.",
+      "translation": "在图书馆里请保持安静。"
+    },
+    {
+      "id": "word-rose",
+      "word": "rose",
+      "meaning": "名词：玫瑰；另可作 rise 的过去式",
+      "example": "There is a red rose in the garden.",
+      "translation": "花园里有一朵红玫瑰。"
+    },
+    {
+      "id": "word-salad",
+      "word": "salad",
+      "meaning": "名词：沙拉",
+      "example": "I made a fruit salad.",
+      "translation": "我做了一份水果沙拉。"
+    },
+    {
+      "id": "word-sentence",
+      "word": "sentence",
+      "meaning": "名词：句子；在法律语境中也可指判决",
+      "example": "Make a sentence with this word.",
+      "translation": "用这个词造一个句子。"
+    },
+    {
+      "id": "word-silk",
+      "word": "silk",
+      "meaning": "名词：丝；丝绸",
+      "example": "This scarf is made of silk.",
+      "translation": "这条围巾是丝绸做的。"
+    },
+    {
+      "id": "word-single",
+      "word": "single",
+      "meaning": "形容词：单一的；单个的；单程的",
+      "example": "I need a single ticket to the city centre.",
+      "translation": "我需要一张去市中心的单程票。"
+    },
+    {
+      "id": "word-somebody",
+      "word": "somebody",
+      "meaning": "代词：某人；有人；someone 同义",
+      "example": "Somebody is knocking at the door.",
+      "translation": "有人在敲门。"
+    },
+    {
+      "id": "word-somewhere",
+      "word": "somewhere",
+      "meaning": "副词：在某处；到某处",
+      "example": "I left my notebook somewhere in the classroom.",
+      "translation": "我把笔记本落在教室的某个地方了。"
+    },
+    {
+      "id": "word-state",
+      "word": "state",
+      "meaning": "名词：状态；州；国家；动词：陈述、说明",
+      "example": "Please state your reason clearly.",
+      "translation": "请清楚地说明你的理由。"
+    },
+    {
+      "id": "word-steal",
+      "word": "steal",
+      "meaning": "动词：偷；窃取（steal—stole—stolen）",
+      "example": "Someone stole my bike.",
+      "translation": "有人偷走了我的自行车。"
+    },
+    {
+      "id": "word-strict",
+      "word": "strict",
+      "meaning": "形容词：严格的；严厉的",
+      "example": "Our teacher is strict about homework.",
+      "translation": "我们的老师对作业要求严格。"
+    },
+    {
+      "id": "word-term",
+      "word": "term",
+      "meaning": "名词：学期；期限；术语",
+      "example": "The new term starts in September.",
+      "translation": "新学期九月开始。"
+    },
+    {
+      "id": "word-theirs",
+      "word": "theirs",
+      "meaning": "名词性物主代词：他们的、她们的、它们的（人或物）",
+      "example": "This ball is theirs.",
+      "translation": "这个球是他们的。"
+    },
+    {
+      "id": "word-translate",
+      "word": "translate",
+      "meaning": "动词：翻译；translate ... into ... 把……翻译成……",
+      "example": "Please translate this sentence into Chinese.",
+      "translation": "请把这句话翻译成中文。"
+    },
+    {
+      "id": "word-universe",
+      "word": "universe",
+      "meaning": "名词：宇宙",
+      "example": "Scientists study the universe.",
+      "translation": "科学家研究宇宙。"
+    },
+    {
+      "id": "word-upon",
+      "word": "upon",
+      "meaning": "介词：在……上（较正式）；once upon a time 从前",
+      "example": "Once upon a time, there was a small village.",
+      "translation": "从前，有一个小村庄。"
+    },
+    {
+      "id": "word-vote",
+      "word": "vote",
+      "meaning": "名词或动词：投票；表决",
+      "example": "We will vote for a class monitor.",
+      "translation": "我们将投票选班长。"
+    },
+    {
+      "id": "word-whom",
+      "word": "whom",
+      "meaning": "代词：谁；who 的宾格，常见于正式表达",
+      "example": "To whom did you send the letter?",
+      "translation": "你把信寄给了谁？"
+    },
+    {
+      "id": "word-wound",
+      "word": "wound",
+      "meaning": "名词：伤口；动词：使受伤",
+      "example": "The nurse cleaned the wound.",
+      "translation": "护士清洗了伤口。"
+    },
+    {
+      "id": "word-youth",
+      "word": "youth",
+      "meaning": "名词：青春；青年时期；年轻人（具体用法看语境）",
+      "example": "He spent his youth in a small town.",
+      "translation": "他在一个小镇度过了青年时期。"
+    },
+    {
+      "id": "word-zero",
+      "word": "zero",
+      "meaning": "名词或数词：零；零度",
+      "example": "The temperature fell to zero.",
+      "translation": "气温降到了零度。"
+    }
+  ]
+}

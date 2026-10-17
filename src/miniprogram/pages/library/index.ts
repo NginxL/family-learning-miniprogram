@@ -5,7 +5,7 @@ import { shiftDate } from '../../lib/sync-engine';
 import { pinyinFor, defaultPinyin, type PinyinText } from '../../lib/pinyin';
 import { errorDetails } from '../../lib/errors';
 import type { ApiResults } from '../../../shared/api';
-import type { ContentKind, ContentScope, KnowledgeItem, SchoolGrade } from '../../../shared/models';
+import type { ContentKind, ContentScope, KnowledgeItem, LearningArea, SchoolGrade } from '../../../shared/models';
 import type { LearningApp } from '../../lib/client-models';
 import type { CommonData, CommonMethods, CommonRuntime, DatasetEvent, Decorated, PageDefinition, PickerEvent, ValueEvent } from '../../lib/page-types';
 export interface LibraryData extends CommonData {
@@ -18,6 +18,7 @@ export interface LibraryData extends CommonData {
   filtersOpen: boolean; assignTarget: { id: string; title: string; familyId: string; childId: string; childName: string } | null;
   assignDate: string; tomorrow: string; maxPlanDate: string;
   showPinyin: boolean; readingCount: number; englishReadingCount: number;
+  foundationCount: number; learningAreaIndex: number; learningAreas: Array<{ id: LearningArea | ''; label: string }>;
   curriculumGradeIndex: number; curriculumGradeLabels: string[]; curriculumSlots: typeof resources.curriculum.slots;
   semesterIndex: number; semesterLabels: string[]; bookUnits: Array<{ id: string; label: string }>; unitIndex: number;
   learningFilterIndex: number; learningFilterLabels: string[]; learningReady: boolean; learningBusy: boolean; learningCached: boolean; learningError: string;
@@ -27,7 +28,8 @@ export interface LibraryMethods extends CommonMethods {
   changeView(event: DatasetEvent<{ id: LibraryData['view'] }>): void;
   changeKind(event: PickerEvent): void; changeScope(event: PickerEvent): void; changeGrade(event: PickerEvent): void;
   typeQuery(event: ValueEvent): void; loadMore(): void; expandContent(event: DatasetEvent): void; toggleCoverage(): void;
-  showExamContent(event: DatasetEvent<{ kind: ContentKind }>): void;
+  showExamContent(event: DatasetEvent<{ kind: ContentKind; area?: LearningArea }>): void;
+  changeLearningArea(event: PickerEvent): void;
   showBook(event: DatasetEvent): void; clearBook(): void; copySource(event: DatasetEvent<{ url: string }>): void;
   assignItem(event: DatasetEvent): void; closeAssign(): void; keepSheet(): void; toggleFilters(): void;
   chooseAssignDate(event: DatasetEvent<{ date: string }>): void; changeAssignDate(event: ValueEvent): void; confirmAssign(): Promise<void>;
@@ -48,8 +50,10 @@ const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = 
     coverageOpen: false, poemCount: learning.catalog.filter((item) => item.kind === 'poetry').length,
     wordCount: learning.catalog.filter((item) => item.kind === 'word').length, filtersOpen: false,
     assignTarget: null, assignDate: '', tomorrow: '', maxPlanDate: '', showPinyin: false,
-    readingCount: learning.catalog.filter((item) => item.kind === 'reading').length,
-    englishReadingCount: learning.catalog.filter((item) => item.kind === 'english-reading').length,
+    readingCount: learning.catalog.filter((item) => item.kind === 'reading' && !item.learningArea).length,
+    englishReadingCount: learning.catalog.filter((item) => item.kind === 'english-reading' && !item.learningArea).length,
+    foundationCount: learning.catalog.filter(item => item.learningArea).length,
+    learningAreaIndex: 0, learningAreas: [{ id: '', label: '全部学习方向' }, ...learning.learningAreas],
     curriculumGradeIndex: 0, curriculumGradeLabels: learning.gradeLabels.slice(1),
     curriculumSlots: resources.curriculum.slots.filter(slot => slot.grade === 1),
     semesterIndex: 0, semesterLabels: ['全部学期', '上册', '下册'], bookUnits: [{ id: '', label: '全册内容' }], unitIndex: 0,
@@ -59,12 +63,14 @@ const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = 
     const navigation = getApp<LearningApp>().navigation || {};
     this.preferredDate = navigation.libraryDate; delete navigation.libraryDate;
     if (navigation.libraryKind !== undefined) {
+      this.setData({ learningAreaIndex: 0 });
       const kindIndex = this.data.kinds.findIndex((item) => item.id === navigation.libraryKind);
       this.setData({ kindIndex: Math.max(0, kindIndex), scope: navigation.libraryScope || 'all', grade: 0, bookId: '', bookTitle: '', view: 'content',
         semesterIndex: 0, unitIndex: 0, bookUnits: [{ id: '', label: '全册内容' }] });
       delete navigation.libraryKind; delete navigation.libraryScope;
     }
     if (navigation.libraryGrade !== undefined) {
+      this.setData({ learningAreaIndex: 0 });
       this.setData({ grade: navigation.libraryGrade, kindIndex: 0, scope: 'all', subjectFilter: 'all', bookId: '', bookTitle: '', query: '', view: 'content',
         semesterIndex: 0, unitIndex: 0, bookUnits: [{ id: '', label: '全册内容' }] });
       delete navigation.libraryGrade;
@@ -116,16 +122,17 @@ const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = 
     this.setData({ scopes, scope, scopeIndex: scopes.findIndex((item) => item.id === scope) });
   },
   selectionChanged() {
-    this.setData({ kindIndex: 0, scope: 'all', bookId: '', bookTitle: '', unitIndex: 0, bookUnits: [{ id: '', label: '全册内容' }] });
+    this.setData({ kindIndex: 0, scope: 'all', bookId: '', bookTitle: '', unitIndex: 0, bookUnits: [{ id: '', label: '全册内容' }], learningAreaIndex: 0 });
     this.updateScopes(); this.updateItems();
   },
   updateItems() {
     const kind = this.data.kinds[this.data.kindIndex].id;
     const semester = this.data.semesterIndex ? this.data.semesterLabels[this.data.semesterIndex] as '上册' | '下册' : undefined;
     const unitId = this.data.bookUnits[this.data.unitIndex]?.id || undefined;
-    const signature = JSON.stringify([kind, this.data.subjectFilter, this.data.scope, this.data.query, this.data.bookId, this.data.grade, semester, unitId, this.data.learningFilterIndex, this.data.childId]);
+    const learningArea = this.data.learningAreas[this.data.learningAreaIndex].id || undefined;
+    const signature = JSON.stringify([kind, this.data.subjectFilter, this.data.scope, this.data.query, this.data.bookId, this.data.grade, semester, unitId, learningArea, this.data.learningFilterIndex, this.data.childId]);
     if (signature !== this.matchSignature) { this.matchSignature = signature; this.visibleLimit = 30; }
-    const matches = learning.searchCatalog({ kind: kind || undefined, subject: this.data.subjectFilter, scope: this.data.scope, query: this.data.query, bookId: this.data.bookId, grade: this.data.grade || undefined, semester, unitId })
+    const matches = learning.searchCatalog({ kind: kind || undefined, subject: this.data.subjectFilter, scope: this.data.scope, query: this.data.query, bookId: this.data.bookId, grade: this.data.grade || undefined, semester, unitId, learningArea })
       .filter(item => !this.data.learningReady || !this.data.learningFilterIndex || (this.data.learningFilterIndex === 2) === Boolean(this.learningIndex?.has(item.id)));
     const today = this.engine ? this.engine.viewDay(this.data.today).tasks.filter((task) => task.childId === this.data.childId) : [];
     this.setData({ total: matches.length, hasMore: matches.length > this.visibleLimit,
@@ -136,8 +143,7 @@ const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = 
         assigned: today.some((task) => learning.contentId(task) === item.id),
         learnedLabel: this.learningIndex?.has(item.id) ? (this.learningIndex.get(item.id)!.mastered ? '已掌握' : '已学过') : '',
         lastLearned: this.learningIndex?.get(item.id)?.lastLearned || '', learnedCount: this.learningIndex?.get(item.id)?.learnedCount || 0,
-        gradeLabel: (item.gradeMappings || []).length ? [...new Set(item.gradeMappings!.map((mapping) => `${learning.gradeLabels[mapping.grade]}${mapping.semester}${mapping.editionStatus === 'historical_reference' ? '（旧版参考）' : ''}`))].join('、')
-          + (item.gradeMappings!.every(mapping => mapping.mappingType === 'aligned_practice') ? ' · 单元原创练习' : ' · 教材归属已核实') : ['reading', 'english-reading'].includes(item.kind) ? '自编入门练习 · 非教材课文' : '年级归属待核对',
+        gradeLabel: learning.knowledgeGradeLabel(item),
         preview: item.kind === 'poetry' ? decorate(item).poetryByline : item.detail.split('\n')[1] || '' })) });
   },
   changeView(event) { this.setData({ view: event.currentTarget.dataset.id }); },
@@ -148,8 +154,15 @@ const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = 
   },
   changeKind(event) {
     const kindIndex = Number(event.detail.value); const kind = this.data.kinds[kindIndex].id;
-    this.setData({ kindIndex, bookId: '', bookTitle: '', unitIndex: 0, bookUnits: [{ id: '', label: '全册内容' }], subjectFilter: kind ? learning.definition(kind).subject : 'all' });
+    this.setData({ kindIndex, learningAreaIndex: 0, bookId: '', bookTitle: '', unitIndex: 0, bookUnits: [{ id: '', label: '全册内容' }], subjectFilter: kind ? learning.definition(kind).subject : 'all' });
     this.rememberSelection(); this.updateScopes(); this.updateItems();
+  },
+  changeLearningArea(event) {
+    const index = Number(event.detail.value);
+    if (!Number.isInteger(index) || index < 0 || index >= this.data.learningAreas.length) return;
+    this.setData({ learningAreaIndex: index, kindIndex: 0, scope: 'all', subjectFilter: 'all', bookId: '', bookTitle: '',
+      unitIndex: 0, bookUnits: [{ id: '', label: '全册内容' }] });
+    this.updateScopes(); this.updateItems();
   },
   changeScope(event) { this.setData({ scopeIndex: Number(event.detail.value), scope: this.data.scopes[Number(event.detail.value)].id }); this.updateItems(); },
   changeGrade(event) { this.setData({ grade: Number(event.detail.value) as SchoolGrade | 0, bookId: '', bookTitle: '', unitIndex: 0, bookUnits: [{ id: '', label: '全册内容' }] }); this.updateItems(); },
@@ -172,13 +185,14 @@ const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = 
     const kindIndex = this.data.kinds.findIndex((item) => item.id === kind);
     if (kindIndex < 1) return;
     this.setData({ kindIndex, scope: 'all', grade: 0, bookId: '', bookTitle: '', query: '', semesterIndex: 0, unitIndex: 0, bookUnits: [{ id: '', label: '全册内容' }],
+      learningAreaIndex: Math.max(0, this.data.learningAreas.findIndex(area => area.id === event.currentTarget.dataset.area)),
       subjectFilter: learning.definition(kind).subject, view: 'content' });
     this.updateScopes(); this.updateItems();
   },
   showBook(event) {
     const book = resources.books.find((item) => item.id === event.currentTarget.dataset.id);
     if (!book) return;
-    this.setData({ bookId: book.id, bookTitle: book.title, kindIndex: 0, scope: 'all', grade: 0, subjectFilter: 'all', query: '', view: 'content',
+    this.setData({ bookId: book.id, bookTitle: book.title, kindIndex: 0, scope: 'all', grade: 0, subjectFilter: 'all', query: '', view: 'content', learningAreaIndex: 0,
       semesterIndex: 0, unitIndex: 0, bookUnits: [{ id: '', label: '全册内容' }, ...(book.units || [])] });
     this.updateScopes(); this.updateItems();
   },

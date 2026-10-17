@@ -7,10 +7,13 @@ import * as learning from './learning/learning';
 import { withCurrentAge } from './learning/child-profile';
 const modeLabels = { new: '全新', review: '复习', manual: '家长安排' };
 const decorate = <T extends Decoratable>(item: T): Decorated<T> => {
-  const poetry = learning.kindOf(item) === 'poetry' ? learning.catalogById.get(learning.contentId(item)) : undefined;
+  const knowledge = learning.catalogById.get(learning.contentId(item));
+  const poetry = learning.kindOf(item) === 'poetry' ? knowledge : undefined;
+  const recitationNote = poetry?.recitationRequirements?.map(entry => `${entry.label}${entry.start ? `（${entry.start}—${entry.end}）` : ''}；原书第${entry.sourcePrintPage}页 / 电子第${entry.sourcePdfPage}页。`).join('\n');
   return { ...item, ...(poetry ? { poetryByline: `${poetry.dynasty || '朝代待考'} · ${poetry.author || '作者待考'}`, dynastyNote: poetry.dynastyNote || '',
+    recitationNote: recitationNote || '当前有原作与来源；该版本指定背诵、默写范围待核实，不将全文自动标为必背。',
     displayDetail: poetry.author && item.detail?.startsWith(`${poetry.author}\n`) ? item.detail.slice(poetry.author.length + 1) : item.detail || '' } : {}),
-  kindLabel: learning.definition(learning.kindOf(item)).label,
+  kindLabel: learning.learningAreas.find(area => area.id === knowledge?.learningArea)?.label || learning.definition(learning.kindOf(item)).label,
   subjectLabel: learning.subjects.find((subject) => subject.id === item.subject)?.label || '其他',
   modeLabel: modeLabels[item.mode || 'manual'] || '家长安排' };
 };

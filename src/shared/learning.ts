@@ -1,6 +1,10 @@
 import catalog = require('./catalog');
-import type { AutoRule, CatalogQuery, ContentInput, ContentKind, ContentScope, Day, HistoryQuery, KindDefinition, LearningContent, LearningLedger, PlanningFamily, SchoolGrade, StoredContent, SubjectFilter, Task, TaskMode, TemplateSet } from './models';
+import type { AutoRule, CatalogQuery, ContentInput, ContentKind, ContentScope, Day, HistoryQuery, KindDefinition, KnowledgeItem, LearningArea, LearningContent, LearningLedger, PlanningFamily, SchoolGrade, StoredContent, SubjectFilter, Task, TaskMode, TemplateSet } from './models';
 const catalogById = new Map(catalog.map((item) => [item.id, item]));
+const learningAreas: Array<{ id: LearningArea; label: string }> = [
+  { id: 'recitation', label: '背诵与默写' }, { id: 'classical', label: '文言理解' },
+  { id: 'vocabulary', label: '词汇运用' }, { id: 'grammar', label: '英语语法' }
+];
 const kinds: KindDefinition[] = [
   { id: 'poetry', subject: 'poetry', label: '古诗文', unit: '首', max: 5 },
   { id: 'word', subject: 'english', label: '英语单词', unit: '个', max: 30 },
@@ -113,7 +117,7 @@ function taskFrom(item: ContentInput, childId: string, id: string, mode: TaskMod
 }
 function materialPool(family: PlanningFamily, childId: string, scope: ContentScope = 'all') {
   const custom = family.plans.filter((plan) => plan.childId === childId && plan.enabled && plan.schedule === 'library');
-  return [...new Map([...catalog.filter((item) => inScope(item, scope)), ...custom.map(content)].map((item) => [item.id, item])).values()];
+  return [...new Map([...catalog.filter((item) => !item.manualOnly && inScope(item, scope)), ...custom.map(content)].map((item) => [item.id, item])).values()];
 }
 // Catalogue excerpts share a work; custom exercises need matching text, not just matching titles.
 function planningKey(item: ContentInput): string {
@@ -273,6 +277,7 @@ function searchCatalog(input: CatalogQuery = {}) {
   const query = (input.query || '').trim().toLowerCase();
   // Retain legacy math IDs for saved tasks/history, but remove them from the selectable library.
   return catalog.filter((item) => item.kind !== 'math' && (!input.kind || item.kind === input.kind)
+    && (!input.learningArea || item.learningArea === input.learningArea)
     && (!input.subject || input.subject === 'all' || definition(item.kind).subject === input.subject)
     && (!input.scope || inScope(item, input.scope)) && (!input.bookId || (item.bookIds || []).includes(input.bookId))
     && (!(input.grade || input.semester || input.unitId) || (item.gradeMappings || []).some((mapping) =>
@@ -282,6 +287,14 @@ function searchCatalog(input: CatalogQuery = {}) {
     && (!query || `${item.title} ${item.author || ''} ${item.dynasty || ''} ${item.detail}`.toLowerCase().includes(query)));
 }
 const gradeLabels = ['未设置', '一年级', '二年级', '三年级', '四年级', '五年级', '六年级（预备）', '七年级', '八年级', '九年级'];
+function knowledgeGradeLabel(item: KnowledgeItem): string {
+  if (item.gradeMappings?.length) return [...new Set(item.gradeMappings.map(mapping => `${gradeLabels[mapping.grade]}${mapping.semester}${mapping.editionStatus === 'historical_reference' ? '（旧版参考）' : ''}`))].join('、')
+    + (item.gradeMappings.every(mapping => mapping.mappingType === 'aligned_practice') ? ' · 原创配套练习' : ' · 教材归属已核实');
+  if (item.learningArea) return '课标基础知识 · 教材年级、学期待核实';
+  if (item.kind === 'word' && item.collections.includes('moe-all')) return '国家课标词表 · 教材年级、学期待核实';
+  if (item.kind === 'word' && item.collections.includes('tables')) return '国家课标另列表 · 教材年级、学期待核实';
+  return ['reading', 'english-reading'].includes(item.kind) ? '自编入门练习 · 非教材课文' : '年级归属待核对';
+}
 function progress(ledger: LearningLedger) {
   const records = Object.values(ledger.records);
   const statuses = new Map(learningStatus(ledger).items.map(item => [item.contentId, item]));
@@ -317,4 +330,5 @@ function progress(ledger: LearningLedger) {
 }
 export { catalog, catalogById, kinds, subjects, kindOf, definition, contentId, content, defaultRules, emptyRules,
   scopeOptions, inScope, materialPool, recordTasks, taskFrom, generateDay, history, ruleRows, searchCatalog, gradeLabels, progress,
+  learningAreas, knowledgeGradeLabel,
   planningKey, wasLearned, omitTask, allowsRepeat, templateSet, activeTemplate, templateForDate, templateSummary, freezeTemplateDay, learningStatus };

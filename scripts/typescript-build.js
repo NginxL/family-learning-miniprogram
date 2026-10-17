@@ -4,7 +4,7 @@ const os = require('node:os');
 const path = require('node:path');
 const { execFileSync } = require('node:child_process');
 const root = path.resolve(__dirname, '..');
-const { knowledge, resources } = require('./knowledge');
+const { knowledge, resourcesFor } = require('./knowledge');
 const lowerPrimary = require('./lower-primary');
 const { dataModule } = require('./data-module');
 
@@ -16,9 +16,13 @@ function artifacts() {
     const { assertKnowledge } = require(path.join(output, 'shared/knowledge-validation.js'));
     const items = knowledge();
     assertKnowledge(items);
+    // Count the final catalogue, including legacy starter entries, using the same compiled code as clients.
+    fs.writeFileSync(path.join(output, 'shared/knowledge-data.json'), JSON.stringify(items));
+    const resources = resourcesFor(require(path.join(output, 'shared/catalog.js')));
     const files = new Map();
     files.set('miniprogram/lib/lower-primary-pinyin.js', '// Generated from the verified lower-primary catalogue. Run npm run build.\n'
-      + dataModule({ ...lowerPrimary.pinyin(), ...lowerPrimary.data.extraPinyin }));
+      + dataModule({ ...lowerPrimary.pinyin(), ...lowerPrimary.data.extraPinyin,
+        ...require('../data/catalogs/chinese-foundation-pinyin.json') }));
     for (const [name, value] of [['knowledge-data.json', items], ['resources.json', resources]]) {
       const serialized = JSON.stringify(value);
       for (const folder of ['shared', 'cloudfunctions/familyApi/learning']) files.set(`${folder}/${name}`, serialized + '\n');

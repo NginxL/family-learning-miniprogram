@@ -1,0 +1,1636 @@
+{
+  "checkedAt": "2026-10-18",
+  "sourceUrl": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582349487953.pdf",
+  "scope": "词汇与语法基础知识及原创练习；教材映射仅依据所列五四制原书目录。无教材映射的知识点不指定年级学期。",
+  "lessons": [
+    {
+      "id": "skill-en-be",
+      "area": "grammar",
+      "title": "be动词与主语",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "am与I搭配，is用于第三人称单数，are用于you和复数；否定在be后加not，提问把be移到主语前。",
+      "example": "I am ready. She is ready. We are ready.（我、她、我们准备好了。）",
+      "exercises": [
+        {
+          "question": "My friends ___ here. 填am/is/are。",
+          "answer": "are。friends为复数，be用are。"
+        },
+        {
+          "question": "把She is tired.改成一般疑问句。",
+          "answer": "Is she tired? 将is放在主语前。"
+        }
+      ],
+      "curriculumPdfPage": 145,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-6a-2024",
+          "unitId": "u0",
+          "cataloguePdfPage": 7
+        }
+      ]
+    },
+    {
+      "id": "skill-en-articles",
+      "area": "grammar",
+      "title": "a、an、the与零冠词",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "a/an用于单数可数名词，选择依据是紧随其后的发音；the常表示双方明确的人或物。泛指复数或不可数名词时常不加冠词。",
+      "example": "an apple；a useful tool；the book on my desk；I like music.（一个苹果；一件有用的工具；桌上的那本书；我喜欢音乐。）",
+      "exercises": [
+        {
+          "question": "填a/an：___ hour；___ university。",
+          "answer": "an hour；a university。hour以元音音素开头，university以/j/开头。"
+        },
+        {
+          "question": "I bought a pen. ___ pen is blue. 填冠词。",
+          "answer": "The。第二次提到同一支笔，用the。"
+        }
+      ],
+      "curriculumPdfPage": 146,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-6a-2024",
+          "unitId": "u0",
+          "cataloguePdfPage": 7
+        }
+      ]
+    },
+    {
+      "id": "skill-en-nouns",
+      "area": "grammar",
+      "title": "可数、不可数与名词复数",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "可数名词可用单复数；不可数名词常需单位表达。规则复数有-s、-es、辅音字母加y变-ies；不规则变化须单独记。",
+      "example": "three boxes；two children；a piece of advice；some water（三个盒子；两个孩子；一条建议；一些水）",
+      "exercises": [
+        {
+          "question": "改错：two informations。",
+          "answer": "two pieces of information。information通常不可数。"
+        },
+        {
+          "question": "写出city和child的复数。",
+          "answer": "cities；children。前者变y为ies，后者是不规则复数。"
+        }
+      ],
+      "curriculumPdfPage": 145,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-6a-2024",
+          "unitId": "u3",
+          "cataloguePdfPage": 8
+        }
+      ]
+    },
+    {
+      "id": "skill-en-proper-nouns",
+      "area": "grammar",
+      "title": "专有名词与大写",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "人名、地名、语言名称等专有名词通常大写首字母；星期、月份也大写。是否带the取决于名称习惯，不能一概添加。",
+      "example": "Mia lives in Shanghai. She speaks English.（米娅住在上海。她说英语。）",
+      "exercises": [
+        {
+          "question": "改写大小写：we visit shanghai in may. ",
+          "answer": "We visit Shanghai in May. 句首、地名和月份大写。"
+        },
+        {
+          "question": "English和book哪个通常是专有名词？",
+          "answer": "English。它是语言名称；book是普通名词。"
+        }
+      ],
+      "curriculumPdfPage": 145,
+      "level": "foundation"
+    },
+    {
+      "id": "skill-en-personal-pronouns",
+      "area": "grammar",
+      "title": "人称代词的主格与宾格",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "主语位置用I、he、she、we、they等主格；动词或介词后的宾语位置用me、him、her、us、them等宾格。you和it形式相同。",
+      "example": "She helps me. I play with her.（她帮助我。我和她一起玩。）",
+      "exercises": [
+        {
+          "question": "Please give ___ the book. 选择I/me。",
+          "answer": "me。give后面需要宾格。"
+        },
+        {
+          "question": "___ are my friends. 选择They/Them。",
+          "answer": "They。句首代词作主语。"
+        }
+      ],
+      "curriculumPdfPage": 146,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-6a-2024",
+          "unitId": "u2",
+          "cataloguePdfPage": 9
+        }
+      ]
+    },
+    {
+      "id": "skill-en-possession",
+      "area": "grammar",
+      "title": "物主代词与名词所有格",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "my、your、his等形容词性物主代词后接名词；mine、yours、hers等名词性物主代词单独使用。普通单数名词常加's表示所属。",
+      "example": "This is my book. That one is yours. This is Lily's bag.（这是我的书。那本是你的。这是莉莉的包。）",
+      "exercises": [
+        {
+          "question": "This pen is ___. 填mine/my。",
+          "answer": "mine。此处后面没有名词，需名词性物主代词。"
+        },
+        {
+          "question": "写出“这些女孩的书包”：the girls___ bags。",
+          "answer": "the girls' bags。规则复数已以s结尾，只加撇号。"
+        }
+      ],
+      "curriculumPdfPage": 145,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-7a-2024",
+          "unitId": "u3",
+          "cataloguePdfPage": 8
+        }
+      ]
+    },
+    {
+      "id": "skill-en-demonstratives",
+      "area": "grammar",
+      "title": "this、that、these、those",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "this/that表示单数，these/those表示复数；this/these常指较近的，that/those常指较远的，也可以回指谈到的事物。",
+      "example": "This is a map. Those are hills.（这是一张地图。那些是山丘。）",
+      "exercises": [
+        {
+          "question": "___ are my shoes over there. 填These/Those。",
+          "answer": "Those。shoes是复数，over there提示较远。"
+        },
+        {
+          "question": "把This is a flower.改成复数。",
+          "answer": "These are flowers. 指示代词、be和名词都需对应改变。"
+        }
+      ],
+      "curriculumPdfPage": 146,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-6b-2024",
+          "unitId": "u1",
+          "cataloguePdfPage": 7
+        }
+      ]
+    },
+    {
+      "id": "skill-en-reflexives",
+      "area": "grammar",
+      "title": "反身代词",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "反身代词表示动作回到主语自身，如myself、yourself、herself、ourselves；也可强调本人。不能用myself随意代替I或me。",
+      "example": "She taught herself to draw.（她自学画画。）",
+      "exercises": [
+        {
+          "question": "We made the kite by ___. 填反身代词。",
+          "answer": "ourselves。by ourselves表示靠我们自己。"
+        },
+        {
+          "question": "He hurt himself.中谁受了伤？",
+          "answer": "他自己。主语he和宾语himself指同一个人。"
+        }
+      ],
+      "curriculumPdfPage": 146,
+      "level": "foundation"
+    },
+    {
+      "id": "skill-en-indefinites",
+      "area": "grammar",
+      "title": "不定代词与数量",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "someone、anything、nobody等不定代词用于不明确的人或物；这类复合代词作主语时通常用单数谓语，形容词常放后面。some/any的选择还要结合肯定、疑问和期待语气。",
+      "example": "There is something useful in the box.（盒子里有某种有用的东西。）",
+      "exercises": [
+        {
+          "question": "Everyone ___ ready. 填is/are。",
+          "answer": "is。everyone作主语时通常按单数处理。"
+        },
+        {
+          "question": "调整顺序：interesting / something。",
+          "answer": "something interesting。形容词放在复合不定代词后。"
+        }
+      ],
+      "curriculumPdfPage": 146,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-7a-2024",
+          "unitId": "u6",
+          "cataloguePdfPage": 10
+        }
+      ]
+    },
+    {
+      "id": "skill-en-adjectives",
+      "area": "grammar",
+      "title": "形容词与系动词",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "形容词描述性质，可修饰名词或位于系动词后。look、feel、sound、taste、smell表示“看起来、感觉、听起来、尝起来、闻起来”时常接形容词。",
+      "example": "The soup smells good.（这汤闻起来很香。）",
+      "exercises": [
+        {
+          "question": "The music sounds ___. 选beautiful/beautifully。",
+          "answer": "beautiful。sounds在这里是系动词，后接形容词。"
+        },
+        {
+          "question": "指出a quiet room中的形容词。",
+          "answer": "quiet，描述房间的性质。"
+        }
+      ],
+      "curriculumPdfPage": 145,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-9a-2024",
+          "unitId": "u1",
+          "cataloguePdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "skill-en-adverbs",
+      "area": "grammar",
+      "title": "副词的形式与作用",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "副词常修饰动词、形容词或其他副词。许多副词由形容词加-ly构成，但fast、hard等不加-ly；hardly表示“几乎不”，不等于hard。",
+      "example": "She reads carefully. He works hard.（她读得仔细。他工作努力。）",
+      "exercises": [
+        {
+          "question": "Please speak ___. 选slow/slowly。",
+          "answer": "slowly，修饰speak。"
+        },
+        {
+          "question": "He can hardly hear me.中的hardly是什么意思？",
+          "answer": "几乎不。他几乎听不见我，并非“努力地听”。"
+        }
+      ],
+      "curriculumPdfPage": 146,
+      "level": "foundation"
+    },
+    {
+      "id": "skill-en-adjective-comparison",
+      "area": "grammar",
+      "title": "形容词比较级和最高级",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "短词常加-er/-est，较长词常加more/most；good—better—best等需另记。两者比较常用than，范围内最高级通常带the。",
+      "example": "This path is shorter than that one.（这条路比那条短。）",
+      "exercises": [
+        {
+          "question": "This is the ___ book of the three. 填interesting的适当形式。",
+          "answer": "most interesting。三者中最高级，用the most interesting。"
+        },
+        {
+          "question": "改错：more taller。",
+          "answer": "taller。tall已有-er，不再加more。"
+        }
+      ],
+      "curriculumPdfPage": 145,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-7a-2024",
+          "unitId": "u5",
+          "cataloguePdfPage": 10
+        }
+      ]
+    },
+    {
+      "id": "skill-en-adverb-comparison",
+      "area": "grammar",
+      "title": "副词比较级和最高级",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "比较动作方式时用副词比较级；-ly副词常用more/most。well—better—best、fast—faster—fastest等需区分。",
+      "example": "Mia writes more carefully than Leo.（米娅比利奥写得更仔细。）",
+      "exercises": [
+        {
+          "question": "He runs ___ than I do. 填fast。",
+          "answer": "faster。比较跑的速度，修饰runs。"
+        },
+        {
+          "question": "在比较“唱得更好”时，用better还是gooder？",
+          "answer": "better。well的比较级是不规则的better。"
+        }
+      ],
+      "curriculumPdfPage": 146,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-7b-2024",
+          "unitId": "u2",
+          "cataloguePdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "skill-en-as-as",
+      "area": "grammar",
+      "title": "as…as与程度比较",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "as + 形容词/副词原级 + as表示同等程度；not as ... as表示不及。比较级不能放进这一结构中。",
+      "example": "This bag is as heavy as mine.（这个包和我的一样重。）",
+      "exercises": [
+        {
+          "question": "This road is not as ___ as that one. 填wide/wider。",
+          "answer": "wide。as ... as之间用原级。"
+        },
+        {
+          "question": "A is not as tall as B.谁更高？",
+          "answer": "B更高；该句表示A没有B高。"
+        }
+      ],
+      "curriculumPdfPage": 145,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-7a-2024",
+          "unitId": "u6",
+          "cataloguePdfPage": 10
+        }
+      ]
+    },
+    {
+      "id": "skill-en-numerals",
+      "area": "grammar",
+      "title": "基数词、序数词与数词表达",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "基数词表示数量，序数词表示顺序。hundred、thousand前有具体数词时通常不加s；hundreds of表示不确定的数百。",
+      "example": "three hundred books；hundreds of books；the third lesson（三百本书；数百本书；第三课）",
+      "exercises": [
+        {
+          "question": "改错：two hundreds students。",
+          "answer": "two hundred students。有具体数词two时hundred不加s。"
+        },
+        {
+          "question": "把five改为序数词并写出“第五页”。",
+          "answer": "fifth；the fifth page。"
+        }
+      ],
+      "curriculumPdfPage": 146,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-7b-2024",
+          "unitId": "u6",
+          "cataloguePdfPage": 8
+        }
+      ]
+    },
+    {
+      "id": "skill-en-prepositions",
+      "area": "grammar",
+      "title": "时间和地点介词",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "at常接具体时刻，on接具体某天，in接月份、年份等；地点介词需按关系选用。next Monday等时间短语前通常不用in/on/at。",
+      "example": "at seven；on Friday；in May；under the table（七点；周五；五月；桌下）",
+      "exercises": [
+        {
+          "question": "We meet ___ Monday morning. 填in/on/at。",
+          "answer": "on。具体某天的早晨用on。"
+        },
+        {
+          "question": "The ball is ___ the chair. 表示球在椅子下面。",
+          "answer": "under。根据具体位置选择，不能只按中文“在”译为in。"
+        }
+      ],
+      "curriculumPdfPage": 146,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-6a-2024",
+          "unitId": "u0",
+          "cataloguePdfPage": 7
+        }
+      ]
+    },
+    {
+      "id": "skill-en-verb-forms",
+      "area": "grammar",
+      "title": "动词基本形式与助动词",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "关注原形、第三人称单数、过去式、过去分词和-ing形式。do/does/did作助动词构成疑问或否定时，后面的实义动词用原形。",
+      "example": "Does she read every day? She didn't go out.（她每天阅读吗？她没有外出。）",
+      "exercises": [
+        {
+          "question": "改错：Did he went home? ",
+          "answer": "Did he go home? did后用动词原形。"
+        },
+        {
+          "question": "write的过去式和过去分词分别是什么？",
+          "answer": "wrote；written。二者不同，不能混用。"
+        }
+      ],
+      "curriculumPdfPage": 145,
+      "level": "foundation"
+    },
+    {
+      "id": "skill-en-verb-objects",
+      "area": "grammar",
+      "title": "及物、不及物与搭配",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "及物动词可直接接宾语；不及物动词常需介词再接对象。同一个动词可能有不同用法，应在句子中辨别。",
+      "example": "We discussed the plan. We arrived at the station.（我们讨论了计划。我们到了车站。）",
+      "exercises": [
+        {
+          "question": "改错：discuss about the problem。",
+          "answer": "discuss the problem。此处discuss直接接宾语。"
+        },
+        {
+          "question": "arrive in Shanghai和arrive at the station的介词各是什么？",
+          "answer": "in；at。此处分别对应城市和车站。"
+        }
+      ],
+      "curriculumPdfPage": 145,
+      "level": "foundation"
+    },
+    {
+      "id": "skill-en-present-simple",
+      "area": "grammar",
+      "title": "一般现在时",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "表示习惯或通常事实。主语为第三人称单数时，实义动词一般加-s/-es；疑问和否定用do/does加原形。",
+      "example": "She walks to school every day.（她每天步行上学。）",
+      "exercises": [
+        {
+          "question": "Tom ___ football on Sundays. 填play。",
+          "answer": "plays。Tom是第三人称单数，句子描述习惯。"
+        },
+        {
+          "question": "把He likes milk.改为否定句。",
+          "answer": "He doesn't like milk. does后用like原形。"
+        }
+      ],
+      "curriculumPdfPage": 148,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-6a-2024",
+          "unitId": "u1",
+          "cataloguePdfPage": 8
+        }
+      ]
+    },
+    {
+      "id": "skill-en-present-continuous",
+      "area": "grammar",
+      "title": "现在进行时",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "am/is/are + 动词-ing，表示此刻或现阶段正在进行的动作。know、believe等状态动词通常不用进行时表达其状态义。",
+      "example": "They are making a poster now.（他们正在做海报。）",
+      "exercises": [
+        {
+          "question": "Look! The cat ___ under the tree. 用sleep。",
+          "answer": "is sleeping。look提示眼前正在进行的动作。"
+        },
+        {
+          "question": "改错：I am knowing the answer。",
+          "answer": "I know the answer. know在此表示知道的状态。"
+        }
+      ],
+      "curriculumPdfPage": 148,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-6a-2024",
+          "unitId": "u2",
+          "cataloguePdfPage": 8
+        }
+      ]
+    },
+    {
+      "id": "skill-en-frequency",
+      "area": "grammar",
+      "title": "频率副词",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "always、usually、often、sometimes、never表示频率；通常放在实义动词前、be后。位置可因强调而变化，不把规律当成所有语境的唯一位置。",
+      "example": "I often read after dinner. She is never late.（我常在晚饭后读书。她从不迟到。）",
+      "exercises": [
+        {
+          "question": "给He goes swimming.加入usually，写一个常见语序。",
+          "answer": "He usually goes swimming. usually常放在实义动词前。"
+        },
+        {
+          "question": "never表示“经常”还是“从不”？",
+          "answer": "从不；它自身已含否定意义。"
+        }
+      ],
+      "curriculumPdfPage": 146,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-6a-2024",
+          "unitId": "u4",
+          "cataloguePdfPage": 10
+        }
+      ]
+    },
+    {
+      "id": "skill-en-past-simple",
+      "area": "grammar",
+      "title": "一般过去时",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "表示过去发生的动作或状态。规则动词常加-ed，不规则形式另记；did后的动词还原。be的过去式为was/were。",
+      "example": "We visited a farm yesterday.（我们昨天参观了农场。）",
+      "exercises": [
+        {
+          "question": "She ___ a book last night. 填read的过去式。",
+          "answer": "read，拼写不变，过去式读/red/。"
+        },
+        {
+          "question": "把They played tennis.改成疑问句。",
+          "answer": "Did they play tennis? did后用play。"
+        }
+      ],
+      "curriculumPdfPage": 148,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-6b-2024",
+          "unitId": "u3",
+          "cataloguePdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "skill-en-future-will",
+      "area": "grammar",
+      "title": "一般将来时：will",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "will + 动词原形可表示预测、承诺或临时决定；否定为will not/won't，提问把will提前。",
+      "example": "I will help you carry the box.（我会帮你搬箱子。）",
+      "exercises": [
+        {
+          "question": "She will ___ tomorrow. 填comes/come。",
+          "answer": "come。will后用原形。"
+        },
+        {
+          "question": "把We will be late.改成否定句。",
+          "answer": "We will not be late. 或We won't be late."
+        }
+      ],
+      "curriculumPdfPage": 148,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-6b-2024",
+          "unitId": "u1",
+          "cataloguePdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "skill-en-future-going",
+      "area": "grammar",
+      "title": "一般将来时：be going to",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "am/is/are going to + 原形，常表示已安排的打算或根据眼前迹象作出的判断；be随主语变化。",
+      "example": "We are going to visit the library.（我们打算去图书馆。）",
+      "exercises": [
+        {
+          "question": "Look at those dark clouds. It ___ rain. 用be going to。",
+          "answer": "is going to。根据眼前乌云预测，主语it配is。"
+        },
+        {
+          "question": "把They are going to draw.改成一般疑问句。",
+          "answer": "Are they going to draw? 保留主语，将are移到主语前。"
+        }
+      ],
+      "curriculumPdfPage": 148,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-6a-2024",
+          "unitId": "u6",
+          "cataloguePdfPage": 10
+        }
+      ]
+    },
+    {
+      "id": "skill-en-past-continuous",
+      "area": "grammar",
+      "title": "过去进行时",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "was/were + 动词-ing，表示过去某时正在进行的动作，常用来交代另一个动作发生时的背景。",
+      "example": "I was reading when the phone rang.（电话响时我正在读书。）",
+      "exercises": [
+        {
+          "question": "At eight last night, they ___ dinner. 用have。",
+          "answer": "were having。主语复数，过去某时正在吃饭。"
+        },
+        {
+          "question": "I was walking when it started to rain.哪一个动作提供背景？",
+          "answer": "was walking。下雨开始时，行走正在进行。"
+        }
+      ],
+      "curriculumPdfPage": 148,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-7b-2024",
+          "unitId": "u5",
+          "cataloguePdfPage": 8
+        }
+      ]
+    },
+    {
+      "id": "skill-en-present-perfect",
+      "area": "grammar",
+      "title": "现在完成时",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "have/has + 过去分词，常表示经历、延续到现在的状态或对现在有影响的结果；一般不与yesterday等明确结束的过去时间连用。",
+      "example": "I have finished my homework, so I can play now.（我已完成作业，现在可以玩了。）",
+      "exercises": [
+        {
+          "question": "用finish填空：I ___ my work yesterday. ",
+          "answer": "finished。yesterday明确指过去，用一般过去时。"
+        },
+        {
+          "question": "She has lived here ___ 2020. 填for/since。",
+          "answer": "since，后接起点；for后接持续时长。"
+        }
+      ],
+      "curriculumPdfPage": 148,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-7a-2024",
+          "unitId": "u4",
+          "cataloguePdfPage": 8
+        }
+      ]
+    },
+    {
+      "id": "skill-en-modals",
+      "area": "grammar",
+      "title": "can、could、may、should",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "情态动词后用原形。can可表能力或许可，could可表过去能力或委婉请求，may可表许可或可能，should常表建议。",
+      "example": "Could you open the window? You should rest.（请你开窗好吗？你应该休息。）",
+      "exercises": [
+        {
+          "question": "She can ___ well. 填swim/swims。",
+          "answer": "swim。情态动词后用原形。"
+        },
+        {
+          "question": "You should drink some water.是建议还是已经发生的事实？",
+          "answer": "建议；should表达建议，不说明动作已完成。"
+        }
+      ],
+      "curriculumPdfPage": 145,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-6b-2024",
+          "unitId": "u5",
+          "cataloguePdfPage": 8
+        }
+      ]
+    },
+    {
+      "id": "skill-en-must",
+      "area": "grammar",
+      "title": "mustn't与needn't",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "mustn't表示禁止；needn't或don't have to表示不必，不能混为一谈。must表示必须；一般疑问句的否定回答常用needn't。",
+      "example": "You mustn't run here. You needn't hurry.（这里禁止奔跑。你不必着急。）",
+      "exercises": [
+        {
+          "question": "Must I finish now? 否定回答可用No, you ___.",
+          "answer": "needn't / don't have to。意思是不必，不是禁止。"
+        },
+        {
+          "question": "The sign says we mustn't swim.能否游泳？",
+          "answer": "不能。mustn't表示禁止。"
+        }
+      ],
+      "curriculumPdfPage": 145,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-6b-2024",
+          "unitId": "u2",
+          "cataloguePdfPage": 7
+        }
+      ]
+    },
+    {
+      "id": "skill-en-better-need",
+      "area": "grammar",
+      "title": "had better与need",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "had better + 原形表示最好做某事，否定在better后加not。need作实义动词可用need to do；needn't后直接用原形。",
+      "example": "You had better take a coat. I need to leave.（你最好带外套。我需要离开。）",
+      "exercises": [
+        {
+          "question": "改错：You had better to wait。",
+          "answer": "You had better wait. 后接原形，不加to。"
+        },
+        {
+          "question": "写出“你最好不要迟到”。",
+          "answer": "You had better not be late. not放在better后。"
+        }
+      ],
+      "curriculumPdfPage": 145,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-7a-2024",
+          "unitId": "u2",
+          "cataloguePdfPage": 8
+        }
+      ]
+    },
+    {
+      "id": "skill-en-questions",
+      "area": "grammar",
+      "title": "一般、特殊与选择疑问句",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "一般疑问句常以be、助动词或情态动词开头；特殊疑问句用what、where等询问信息；选择疑问句给出选项，通常回答选项。",
+      "example": "Is she ready? Where does she live? Tea or water?（她准备好了吗？她住在哪里？茶还是水？）",
+      "exercises": [
+        {
+          "question": "回答Would you like tea or water? 可只答Yes吗？",
+          "answer": "通常应选择，例如Water, please.，只答Yes未回应选项。"
+        },
+        {
+          "question": "对He lives in Shanghai.中的地点提问。",
+          "answer": "Where does he live? does后用live。"
+        }
+      ],
+      "curriculumPdfPage": 147,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-7b-2024",
+          "unitId": "u4",
+          "cataloguePdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "skill-en-question-tags",
+      "area": "grammar",
+      "title": "附加疑问句",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "陈述句后加简短问句用于确认；常见形式为前肯定后否定、前否定后肯定，并对应主语和助动词。此处按已核教材目录学习，非另设中考题型承诺。",
+      "example": "She is a teacher, isn't she?（她是老师，对吗？）",
+      "exercises": [
+        {
+          "question": "They don't live here, ___? ",
+          "answer": "do they。前面否定，后面用肯定的do they。"
+        },
+        {
+          "question": "You can swim, can't you?中为什么用can？",
+          "answer": "与陈述部分的情态动词can保持对应。"
+        }
+      ],
+      "curriculumPdfPage": 147,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-6a-2024",
+          "unitId": "u5",
+          "cataloguePdfPage": 10
+        }
+      ]
+    },
+    {
+      "id": "skill-en-imperatives",
+      "area": "grammar",
+      "title": "祈使句",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "常以动词原形开头表示请求、指令或建议；否定常用Don't + 原形。please可使请求更礼貌。",
+      "example": "Please close the door. Don't shout.（请关门。不要喊叫。）",
+      "exercises": [
+        {
+          "question": "把Open the window.改成否定指令。",
+          "answer": "Don't open the window. 用Don't加原形。"
+        },
+        {
+          "question": "改错：Please to sit down。",
+          "answer": "Please sit down. 祈使句用动词原形。"
+        }
+      ],
+      "curriculumPdfPage": 147,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-6b-2024",
+          "unitId": "u2",
+          "cataloguePdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "skill-en-exclamations",
+      "area": "grammar",
+      "title": "感叹句",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "What + (a/an) + 形容词 + 名词 + 主语谓语；How + 形容词/副词 + 主语谓语。注意可数名词单复数和冠词。",
+      "example": "What a clear sky it is! How fast she runs!（多晴朗的天空！她跑得多快！）",
+      "exercises": [
+        {
+          "question": "___ useful advice it is! 填What/How。",
+          "answer": "What。中心是不可数名词advice，不加a。"
+        },
+        {
+          "question": "How ___ he speaks! 选clear/clearly。",
+          "answer": "clearly，修饰speaks。"
+        }
+      ],
+      "curriculumPdfPage": 147,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-8b-2024",
+          "unitId": "u2",
+          "cataloguePdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "skill-en-there-be",
+      "area": "grammar",
+      "title": "there be存在句",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "there be表示某处有某物，be与后面的名词及时间对应；have常表示某人拥有。避免把两种结构直接拼在一起。",
+      "example": "There are two trees outside.（外面有两棵树。）",
+      "exercises": [
+        {
+          "question": "There ___ some milk in the cup. 填is/are。",
+          "answer": "is。milk不可数，按单数处理。"
+        },
+        {
+          "question": "改错：There has a book on the desk。",
+          "answer": "There is a book on the desk. 存在句使用there be。"
+        }
+      ],
+      "curriculumPdfPage": 148,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-6b-2024",
+          "unitId": "u6",
+          "cataloguePdfPage": 8
+        }
+      ]
+    },
+    {
+      "id": "skill-en-preparatory-it",
+      "area": "grammar",
+      "title": "it表示天气、时间和距离",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "it可作不指具体人或物的主语，用于谈论天气、时间、距离等；这里不是用it指代某个具体物品。",
+      "example": "It is sunny. It is seven o'clock.（天气晴朗。七点了。）",
+      "exercises": [
+        {
+          "question": "___ is cold today. 填It/There。",
+          "answer": "It。这里用it作天气表达的主语。"
+        },
+        {
+          "question": "It is two kilometres to the station.中的it指哪件物品？",
+          "answer": "不指具体物品；这是表达距离的固定结构。"
+        }
+      ],
+      "curriculumPdfPage": 146,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-6b-2024",
+          "unitId": "u4",
+          "cataloguePdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "skill-en-basic-patterns",
+      "area": "grammar",
+      "title": "主谓、主系表与主谓宾",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "先找主语和谓语，再判断后面成分。SV为主谓；SVC（课标亦记SP）为主系表；SVO为主谓宾。",
+      "example": "Birds fly. The room is quiet. Mia reads a book.（鸟飞。房间安静。米娅读书。）",
+      "exercises": [
+        {
+          "question": "The soup tastes good.属于SVO还是SVC？",
+          "answer": "SVC，tastes是系动词，good说明主语状态。"
+        },
+        {
+          "question": "Mia opened the box.的宾语是什么？",
+          "answer": "the box，动作opened的对象。"
+        }
+      ],
+      "curriculumPdfPage": 147,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-6a-2024",
+          "unitId": "u0",
+          "cataloguePdfPage": 9
+        }
+      ]
+    },
+    {
+      "id": "skill-en-double-object",
+      "area": "grammar",
+      "title": "双宾语与宾语补足语",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "SVOO中两个宾语通常分别指接受者和事物；SVOC中补足语说明宾语的状态或身份。不是所有动词都能套用双宾语。",
+      "example": "Dad gave me a map. We made the room clean.（爸爸给我一张地图。我们把房间弄干净了。）",
+      "exercises": [
+        {
+          "question": "We call him Leo.中的Leo说明谁？",
+          "answer": "him的称呼，属于宾语补足语，不是第二个物品宾语。"
+        },
+        {
+          "question": "指出Dad gave me a map.的两个宾语。",
+          "answer": "me和a map，分别为接受者和给予的事物。"
+        }
+      ],
+      "curriculumPdfPage": 148,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-7a-2024",
+          "unitId": "u1",
+          "cataloguePdfPage": 8
+        }
+      ]
+    },
+    {
+      "id": "skill-en-coordinators",
+      "area": "grammar",
+      "title": "并列连词与并列句",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "and表并列，but表转折，or可表选择，so表结果；连接分句时注意逻辑关系。both ... and、not only ... but also可连接并列成分。",
+      "example": "It was late, so we went home.（天晚了，所以我们回家。）",
+      "exercises": [
+        {
+          "question": "I like tea, ___ my sister prefers milk. 填and/but/so中最能表示转折的词。",
+          "answer": "but，表示双方喜好不同的转折关系。"
+        },
+        {
+          "question": "用both ... and连接Mia likes music.和Leo likes music.。",
+          "answer": "Both Mia and Leo like music. 两个人作主语，谓语用like。"
+        }
+      ],
+      "curriculumPdfPage": 148,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-7b-2024",
+          "unitId": "u3",
+          "cataloguePdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "skill-en-time-clauses",
+      "area": "grammar",
+      "title": "时间状语从句",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "when、while、before、after、until等引出时间关系；表达将来时，时间从句常用一般现在时，主句可用will。",
+      "example": "I will call you when I arrive.（我到达时会给你打电话。）",
+      "exercises": [
+        {
+          "question": "I will wait here until she ___. 填comes/will come。",
+          "answer": "comes。表示将来的时间从句常用一般现在时。"
+        },
+        {
+          "question": "After I finished lunch, I washed my cup.先做什么？",
+          "answer": "先吃完午饭，再洗杯子；after标明先后。"
+        }
+      ],
+      "curriculumPdfPage": 148,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-8a-2024",
+          "unitId": "u1",
+          "cataloguePdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "skill-en-reason-clauses",
+      "area": "grammar",
+      "title": "原因状语从句",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "because引出原因；同一个句子中通常不用because和so成对连接同一因果关系。",
+      "example": "We stayed inside because it rained.（因为下雨，我们待在室内。）",
+      "exercises": [
+        {
+          "question": "改错：Because it rained, so we stayed inside。",
+          "answer": "Because it rained, we stayed inside. 或It rained, so we stayed inside. 保留一种连接方式。"
+        },
+        {
+          "question": "I took a coat because it was cold.原因是什么？",
+          "answer": "天气冷；because后面的分句说明原因。"
+        }
+      ],
+      "curriculumPdfPage": 148,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-8a-2024",
+          "unitId": "u5",
+          "cataloguePdfPage": 8
+        }
+      ]
+    },
+    {
+      "id": "skill-en-concession",
+      "area": "grammar",
+      "title": "让步状语从句",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "although/though表示虽然；主句体现与预期不同的结果。同一句的这一关系通常不用although和but同时连接。",
+      "example": "Although it was cold, we went out.（虽然很冷，我们还是出去了。）",
+      "exercises": [
+        {
+          "question": "改错：Although he was tired, but he kept reading。",
+          "answer": "Although he was tired, he kept reading. 去掉but。"
+        },
+        {
+          "question": "上述句子中与“疲倦”相对的结果是什么？",
+          "answer": "他仍继续阅读，体现让步关系。"
+        }
+      ],
+      "curriculumPdfPage": 148,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-8a-2024",
+          "unitId": "u4",
+          "cataloguePdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "skill-en-condition",
+      "area": "grammar",
+      "title": "条件状语从句",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "if表示如果，unless表示除非；表达真实的将来条件时，从句通常用一般现在时，主句用will或情态动词。",
+      "example": "If it rains, we will stay home.（如果下雨，我们会待在家。）",
+      "exercises": [
+        {
+          "question": "If she ___ early, she will catch the bus. 填leaves/will leave。",
+          "answer": "leaves。这里是将来条件从句。"
+        },
+        {
+          "question": "You will miss the bus unless you hurry.怎样才不会错过？",
+          "answer": "需要赶快；unless you hurry意为除非你赶快。"
+        }
+      ],
+      "curriculumPdfPage": 148,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-8a-2024",
+          "unitId": "u6",
+          "cataloguePdfPage": 8
+        }
+      ]
+    },
+    {
+      "id": "skill-en-result",
+      "area": "grammar",
+      "title": "结果状语从句",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "so + 形容词/副词 + that；such + 名词短语 + that，用来说明导致的结果。注意such后的单数可数名词常带a/an。",
+      "example": "The box was so heavy that I couldn't lift it.（箱子太重，我搬不动。）",
+      "exercises": [
+        {
+          "question": "It was ___ a good book that I read it twice. 填so/such。",
+          "answer": "such。后面是a good book名词短语。"
+        },
+        {
+          "question": "用so ... that表达“他跑得很快，我追不上”。",
+          "answer": "He ran so fast that I couldn't catch up with him. so修饰副词fast。"
+        }
+      ],
+      "curriculumPdfPage": 148,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-8b-2024",
+          "unitId": "u1",
+          "cataloguePdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "skill-en-purpose",
+      "area": "grammar",
+      "title": "目的状语从句",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "so that常引出目的，常配can/could等；与so ... that的结果结构区分。说明目的时也可在合适语境使用to do。",
+      "example": "I spoke slowly so that everyone could understand.（我说得慢，以便大家理解。）",
+      "exercises": [
+        {
+          "question": "I saved money so that I could buy a bike.存钱的目的是什么？",
+          "answer": "买一辆自行车；so that后面说明目的。"
+        },
+        {
+          "question": "The room was so dark that I couldn't read.是目的还是结果？",
+          "answer": "结果。“so + 形容词 + that”说明太暗而无法阅读。"
+        }
+      ],
+      "curriculumPdfPage": 148,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-8b-2024",
+          "unitId": "u3",
+          "cataloguePdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "skill-en-infinitives",
+      "area": "grammar",
+      "title": "动词不定式",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "to + 原形可作宾语、宾语补足语或目的状语；如want to do、ask someone to do、go ... to do。具体搭配仍需按动词核实。",
+      "example": "I want to read. Mum asked me to help. I went out to buy milk.（我想读书。妈妈请我帮忙。我出门买牛奶。）",
+      "exercises": [
+        {
+          "question": "She asked me ___ the door. 用close。",
+          "answer": "to close。ask someone to do。"
+        },
+        {
+          "question": "He went to the library to study.中to study表示什么？",
+          "answer": "目的，说明去图书馆是为了学习。"
+        }
+      ],
+      "curriculumPdfPage": 148,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-8a-2024",
+          "unitId": "u3",
+          "cataloguePdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "skill-en-wh-infinitives",
+      "area": "grammar",
+      "title": "疑问词＋不定式",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "what/how/where/when等可与to do构成短语，表示做什么、怎么做等。不是所有疑问词都能随意套入。",
+      "example": "I know how to use the map.（我知道怎样使用地图。）",
+      "exercises": [
+        {
+          "question": "We haven't decided where ___ next. 用go。",
+          "answer": "to go。where to go作decided的宾语。"
+        },
+        {
+          "question": "解释I don't know what to write.。",
+          "answer": "我不知道写什么；what to write说明不知道的内容。"
+        }
+      ],
+      "curriculumPdfPage": 148,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-9a-2024",
+          "unitId": "u3",
+          "cataloguePdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "skill-en-object-clauses",
+      "area": "grammar",
+      "title": "宾语从句：连接词与语序",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "宾语从句用陈述语序。that可引陈述内容，if/whether引是否，疑问词保留所问信息；不要保留一般疑问句的倒装。",
+      "example": "I wonder where she lives.（我想知道她住在哪里。）",
+      "exercises": [
+        {
+          "question": "改错：Do you know where is the station? ",
+          "answer": "Do you know where the station is? 从句用主语在前的陈述语序。"
+        },
+        {
+          "question": "用if连接I don't know.与Is he ready?。",
+          "answer": "I don't know if he is ready. if表示是否。"
+        }
+      ],
+      "curriculumPdfPage": 148,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-8b-2024",
+          "unitId": "u4",
+          "cataloguePdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "skill-en-object-tense",
+      "area": "grammar",
+      "title": "宾语从句：时态与指代",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "主句过去时常影响从句时态，但客观真理可保留一般现在时；人称与时间词需随转述情境调整，不能机械变化。",
+      "example": "She said that she was tired.（她说她累了。）",
+      "exercises": [
+        {
+          "question": "The teacher said that water ___ at 100°C at standard pressure. 填boils/boiled。",
+          "answer": "boils。描述标准气压下的客观事实，可用一般现在时。"
+        },
+        {
+          "question": "Mia said, “I am tired.” 转述时I指谁？",
+          "answer": "Mia；可转为Mia said that she was tired. 人称随说话者改变。"
+        }
+      ],
+      "curriculumPdfPage": 148,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-8b-2024",
+          "unitId": "u6",
+          "cataloguePdfPage": 8
+        }
+      ]
+    },
+    {
+      "id": "skill-en-relative-clauses",
+      "area": "grammar",
+      "title": "理解who、which、that引导的关系从句",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "关系从句修饰前面的名词。who通常指人，which通常指物，that可指人或物。国家课标此项强调辨认限定性从句并理解句意。",
+      "example": "The girl who won the race is my friend.（赢得比赛的女孩是我的朋友。）",
+      "exercises": [
+        {
+          "question": "who won the race修饰哪个词？",
+          "answer": "girl。它限定是哪一个女孩。"
+        },
+        {
+          "question": "理解The book that is on the desk is mine.。",
+          "answer": "桌上的那本书是我的；that从句修饰book。"
+        }
+      ],
+      "curriculumPdfPage": 149,
+      "level": "understanding",
+      "textbookEvidence": [
+        {
+          "bookId": "english-9a-2024",
+          "unitId": "u2",
+          "cataloguePdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "skill-en-passive-present",
+      "area": "grammar",
+      "title": "一般现在时的被动语态",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "am/is/are + 过去分词，强调通常发生的动作的承受者；需要说明执行者时可用by。只有适合被动表达的动词才使用该结构。",
+      "example": "The room is cleaned every day.（房间每天有人打扫。）",
+      "exercises": [
+        {
+          "question": "English ___ in many countries. 用speak。",
+          "answer": "is spoken。English是被说的语言，speak的过去分词是spoken。"
+        },
+        {
+          "question": "把People use this room for meetings.改成被动句。",
+          "answer": "This room is used for meetings. 原宾语成为主语。"
+        }
+      ],
+      "curriculumPdfPage": 148,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-9a-2024",
+          "unitId": "u4",
+          "cataloguePdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "skill-en-passive-past",
+      "area": "grammar",
+      "title": "一般过去时的被动语态",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "was/were + 过去分词，表示过去的被动动作；be随主语单复数变化。",
+      "example": "The bridge was built in 2010.（这座桥建于2010年。）",
+      "exercises": [
+        {
+          "question": "These photos ___ yesterday. 用take。",
+          "answer": "were taken。主语复数，过去时间；take的过去分词是taken。"
+        },
+        {
+          "question": "The window was broken.能否仅凭这句知道谁打破了窗户？",
+          "answer": "不能。句子强调承受者，未说明动作执行者。"
+        }
+      ],
+      "curriculumPdfPage": 148,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-9a-2024",
+          "unitId": "u5",
+          "cataloguePdfPage": 8
+        }
+      ]
+    },
+    {
+      "id": "skill-en-passive-future",
+      "area": "grammar",
+      "title": "一般将来时的被动语态",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "will be + 过去分词，表示将要受到的动作；will后的be不随单复数改变。",
+      "example": "The results will be announced tomorrow.（结果明天将公布。）",
+      "exercises": [
+        {
+          "question": "The trees ___ next week. 用plant的将来被动形式。",
+          "answer": "will be planted。结构是will be加过去分词。"
+        },
+        {
+          "question": "改错：The work will finished soon。",
+          "answer": "The work will be finished soon. 被动结构不能省略be。"
+        }
+      ],
+      "curriculumPdfPage": 148,
+      "level": "foundation",
+      "textbookEvidence": [
+        {
+          "bookId": "english-9a-2024",
+          "unitId": "u6",
+          "cataloguePdfPage": 8
+        }
+      ]
+    },
+    {
+      "id": "skill-en-nonfinite",
+      "area": "grammar",
+      "title": "理解-ing与-ed非谓语形式",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "国家课标把本项列为仅作理解要求。除了进行时、被动语态的组成部分，-ing/-ed形式还可在句中发挥其他作用，应看结构与语境。",
+      "example": "Swimming is fun. The broken cup is on the table.（游泳很有趣。破杯子在桌上。）",
+      "exercises": [
+        {
+          "question": "Swimming is fun.中的Swimming表示什么活动？",
+          "answer": "游泳，整个活动作主语；这里不是现在进行时。"
+        },
+        {
+          "question": "the broken cup中broken修饰什么？",
+          "answer": "cup，说明杯子已破，属于过去分词作修饰语。"
+        }
+      ],
+      "curriculumPdfPage": 148,
+      "level": "understanding"
+    },
+    {
+      "id": "skill-en-subject-agreement",
+      "area": "grammar",
+      "title": "理解主谓一致",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "国家课标把本项列为仅作理解要求；基础学习先观察主语单复数与谓语的对应。不要只看紧挨动词的名词。",
+      "example": "The box of books is heavy.（那箱书很重。）",
+      "exercises": [
+        {
+          "question": "The list of names ___ here. 填is/are。",
+          "answer": "is。主语中心词为单数list，不是names。"
+        },
+        {
+          "question": "My friends like music.若改为My friend，谓语如何变？",
+          "answer": "likes。主语变为第三人称单数。"
+        }
+      ],
+      "curriculumPdfPage": 149,
+      "level": "understanding"
+    },
+    {
+      "id": "skill-en-interjections",
+      "area": "grammar",
+      "title": "理解感叹词的语气",
+      "goal": "理解规则，在具体句子中辨别并运用。",
+      "explanation": "国家课标把感叹词列为仅作理解要求；oh、wow等可以表达惊讶或情绪，具体意义由语气和情境决定。",
+      "example": "Wow! What a beautiful rainbow!（哇！多美的彩虹！）",
+      "exercises": [
+        {
+          "question": "Wow!在这个例句中表达什么感受？",
+          "answer": "惊喜或赞叹，需结合后面赞美彩虹的句子。"
+        },
+        {
+          "question": "Oh, I forgot my bag.中的Oh能只按“赞美”理解吗？",
+          "answer": "不能；这里更接近突然意识到忘带包的反应。"
+        }
+      ],
+      "curriculumPdfPage": 146,
+      "level": "understanding"
+    },
+    {
+      "id": "skill-en-word-context",
+      "area": "vocabulary",
+      "title": "语境中的词义与词性",
+      "goal": "把词义、词形和搭配放回语境学习。",
+      "explanation": "同一拼写可有不同词义或词性，先看它在句中的位置和搭配，再查对应义项。",
+      "example": "I water the flowers. I drink water.（我浇花。我喝水。）",
+      "exercises": [
+        {
+          "question": "两句中的water分别是什么词性？",
+          "answer": "第一句为动词“浇水”，第二句为名词“水”。"
+        },
+        {
+          "question": "用water表达“给树浇水”。",
+          "answer": "water the tree。water作动词，后接动作对象。"
+        }
+      ],
+      "curriculumPdfPage": 27,
+      "level": "foundation"
+    },
+    {
+      "id": "skill-en-collocations",
+      "area": "vocabulary",
+      "title": "固定搭配与短语",
+      "goal": "把词义、词形和搭配放回语境学习。",
+      "explanation": "把词放在常用搭配中记忆；介词与动词搭配不能逐字套用中文。",
+      "example": "listen to music；look after a pet；be good at drawing（听音乐；照顾宠物；擅长画画）",
+      "exercises": [
+        {
+          "question": "补全：listen ___ a story；be good ___ maths。",
+          "answer": "to；at。它们分别属于listen to和be good at。"
+        },
+        {
+          "question": "look after a dog中的after能直接译为“之后”吗？",
+          "answer": "不能；look after整体表示照顾。"
+        }
+      ],
+      "curriculumPdfPage": 27,
+      "level": "foundation"
+    },
+    {
+      "id": "skill-en-word-family",
+      "area": "vocabulary",
+      "title": "词族与派生",
+      "goal": "把词义、词形和搭配放回语境学习。",
+      "explanation": "常见词缀能提示词义或词性，但词形和拼写需核对，不能机械给任意单词加词缀。",
+      "example": "help—helpful；care—careful—carefully（帮助—有帮助的；小心—小心的—小心地）",
+      "exercises": [
+        {
+          "question": "She answered ___. 用careful的副词形式。",
+          "answer": "carefully。这里修饰answered。"
+        },
+        {
+          "question": "unhappy中的un-改变了什么？",
+          "answer": "表达否定，使happy“快乐的”变为unhappy“不快乐的”。"
+        }
+      ],
+      "curriculumPdfPage": 27,
+      "level": "foundation"
+    },
+    {
+      "id": "skill-en-compound",
+      "area": "vocabulary",
+      "title": "合成词与转化",
+      "goal": "把词义、词形和搭配放回语境学习。",
+      "explanation": "合成词由两个或更多词构成，如classroom；转化是不改拼写而改变词性，如名词water用作动词。含义需放回语境核对。",
+      "example": "class + room → classroom；Please water the plant.（教室；请给植物浇水。）",
+      "exercises": [
+        {
+          "question": "指出sunlight中的两个组成词。",
+          "answer": "sun和light，合起来表示阳光。"
+        },
+        {
+          "question": "I email my teacher.中的email是名词还是动词？",
+          "answer": "动词，表示发电子邮件，属于转化用法。"
+        }
+      ],
+      "curriculumPdfPage": 27,
+      "level": "foundation"
+    },
+    {
+      "id": "skill-en-verb-family",
+      "area": "vocabulary",
+      "title": "不规则动词与词形辨别",
+      "goal": "把词义、词形和搭配放回语境学习。",
+      "explanation": "原形、过去式和过去分词分列记忆，并放进句子。特别注意found既能作find的过去式，也能作“创办”的原形。",
+      "example": "find—found—found；found—founded—founded；go—went—gone（找到；创办；去）",
+      "exercises": [
+        {
+          "question": "They ___ a club in 2020. 表示“创办”，填found的过去式。",
+          "answer": "founded。“创办”的过去式是founded。"
+        },
+        {
+          "question": "I have ___ my keys. 表示“找到”，填find的过去分词。",
+          "answer": "found。现在完成时为have found。"
+        }
+      ],
+      "curriculumPdfPage": 27,
+      "level": "foundation"
+    },
+    {
+      "id": "skill-en-lay-lie",
+      "area": "vocabulary",
+      "title": "lay、lie与词形",
+      "goal": "把词义、词形和搭配放回语境学习。",
+      "explanation": "lay“放置”是lay—laid—laid；lie“躺”是lie—lay—lain；lie“说谎”是lie—lied—lied。注意是否带放置的对象。",
+      "example": "I laid the book down. He lay on the grass.（我放下了书。他躺在草地上。）",
+      "exercises": [
+        {
+          "question": "Yesterday she ___ the cup on the table. 用“放置”。",
+          "answer": "laid。后面有放置的对象the cup。"
+        },
+        {
+          "question": "Yesterday he ___ on the bed. 用“躺”。",
+          "answer": "lay，是lie“躺”的过去式。"
+        }
+      ],
+      "curriculumPdfPage": 27,
+      "level": "foundation"
+    },
+    {
+      "id": "skill-en-quantity-words",
+      "area": "vocabulary",
+      "title": "few、little与数量词",
+      "goal": "把词义、词形和搭配放回语境学习。",
+      "explanation": "few/a few常修饰可数名词复数；little/a little常修饰不可数名词。无a时常强调很少、有a时常强调还有一些。",
+      "example": "a few books；a little water；fewer mistakes；less sugar（几本书；一点水；较少错误；较少糖）",
+      "exercises": [
+        {
+          "question": "We need ___ chairs. 表示“更少的”，填fewer/less。",
+          "answer": "fewer。chairs是可数名词复数。"
+        },
+        {
+          "question": "There is little water left.是在强调水够用吗？",
+          "answer": "通常在强调剩得很少；应结合情境判断是否够用。"
+        }
+      ],
+      "curriculumPdfPage": 27,
+      "level": "foundation"
+    },
+    {
+      "id": "skill-en-lookup",
+      "area": "vocabulary",
+      "title": "查词与学习卡片",
+      "goal": "把词义、词形和搭配放回语境学习。",
+      "explanation": "先判断句中词性，再选择词典义项；同时记录常用搭配、词形和自己写的例句。看到生词先保留语境，不机械照抄所有专业义。",
+      "example": "The room is light. Here, light means bright.（房间明亮；这里light表示明亮。）",
+      "exercises": [
+        {
+          "question": "I carry a light bag.中的light更可能指什么？",
+          "answer": "轻的；修饰bag，语境是搬运而非灯光。"
+        },
+        {
+          "question": "给ad做一张含义和例句的卡片。",
+          "answer": "可写：ad，广告，advertisement的缩写；I saw an ad for a concert. 例句要能说明常用义。"
+        }
+      ],
+      "curriculumPdfPage": 27,
+      "level": "foundation"
+    },
+    {
+      "id": "skill-en-word-groups",
+      "area": "vocabulary",
+      "title": "主题词群与近义区分",
+      "goal": "把词义、词形和搭配放回语境学习。",
+      "explanation": "按场景整理词群，再记录差别；近义词并非所有语境中都能互换。",
+      "example": "say a word；tell a story；speak English；talk with a friend（说一个词；讲故事；说英语；与朋友交谈）",
+      "exercises": [
+        {
+          "question": "补全：___ English；___ me a story。",
+          "answer": "speak；tell。关注宾语与固定搭配。"
+        },
+        {
+          "question": "用talk描述与家人交谈。",
+          "answer": "I talk with my family after dinner. talk with接交谈对象。"
+        }
+      ],
+      "curriculumPdfPage": 27,
+      "level": "foundation"
+    },
+    {
+      "id": "skill-en-abbreviations",
+      "area": "vocabulary",
+      "title": "理解缩写与变体",
+      "goal": "把词义、词形和搭配放回语境学习。",
+      "explanation": "国家课标把缩写和简写列为仅作理解要求；区分缩写、英美拼写和国家词表的合列词头，避免把同一知识重复计数。",
+      "example": "ad = advertisement；colour = color；I'm = I am（广告；颜色的英美拼写；我是）",
+      "exercises": [
+        {
+          "question": "colour和color是否是两个不同意思？",
+          "answer": "不是；分别是常见英式和美式拼写。"
+        },
+        {
+          "question": "解释I'm ready.中的I'm。",
+          "answer": "I am的缩写；句意是“我准备好了”。"
+        }
+      ],
+      "curriculumPdfPage": 147,
+      "level": "understanding"
+    }
+  ]
+}

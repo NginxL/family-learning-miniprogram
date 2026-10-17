@@ -21,4 +21,8 @@ test('build rejects malformed external catalogue data before publishing typed ru
   assert.throws(() => module.exports.artifacts(), /Invalid knowledge data: .*grade/);
   corrupt = (items) => { items[1].id = items[0].id; };
   assert.throws(() => module.exports.artifacts(), /id must be unique/);
+  corrupt = (items) => { delete items.find(item => item.learningArea).manualOnly; };
+  assert.throws(() => module.exports.artifacts(), /manualOnly must protect existing templates/);
+  corrupt = (items) => { items.find(item => item.recitationRequirements).recitationRequirements[0].sourceUrl = 'https://example.com/unverified'; };
+  assert.throws(() => module.exports.artifacts(), /recitationRequirements source/);
 });

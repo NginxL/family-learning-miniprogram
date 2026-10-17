@@ -105,12 +105,12 @@ test('27 ninth-grade groups provide original reading and usable questions, answe
     }
   }
   const progress = learning.progress({ records: {} }).grades[8];
-  assert.equal(progress.total, 386); assert.equal(progress.practice.total, 93); assert.equal(progress.fullGradeComplete, false);
+  assert.equal(progress.total, 386); assert.equal(progress.practice.total, 110); assert.equal(progress.fullGradeComplete, false);
 });
 
 test('all 3733 earlier IDs and national excerpts survive; full-text credit is never inferred from an excerpt', () => {
   const poems = new Set(data.poems.map(p => p.id));
-  const oldIds = require('../shared/knowledge-data.json').filter(i => i.id !== 'sh54-word-flour' && !poems.has(i.id) && !/^sh54-(zh|en)-9[ab]-/.test(i.id)
+  const oldIds = require('../shared/knowledge-data.json').filter(i => !i.learningArea && i.id !== 'sh54-word-flour' && !poems.has(i.id) && !/^sh54-(zh|en)-9[ab]-/.test(i.id)
     && !(i.id.startsWith('sh54-word-') && i.gradeMappings.every(m => m.grade === 9))).map(i => i.id).sort();
   assert.equal(oldIds.length, 3733); assert.equal(hash(oldIds.join('\n')), '66c7d944946323fca1ba3cb71c54aef9f04a7527fe9fef85b8a5a9b2f03ef605');
   const excerptId = 'moe-2022-zh-7-9-059', fullId = 'sh54-songdongyang-textbook', groupId = 'moe-2022-zh-7-9-043';
