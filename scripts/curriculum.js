@@ -38,7 +38,7 @@ function curriculum(items) {
     return { ...slot, contentBookId: book?.id || '', verifiedCount,
       practiceCount, textbookCount: verifiedCount - practiceCount, availableUnits,
       contentStatus: verifiedCount ? 'partial' : 'pending',
-      contentNote: lower ? `${availableUnits} 个单元已有配套学习内容：${verifiedCount - practiceCount} 项教材字词／古诗与 ${practiceCount} 项原创练习。${inventoryNote(lower)}不代表教材全部知识。`
+      contentNote: lower ? `${lower.unitGroupingNote || `${availableUnits} 个单元`}已有配套学习内容：${verifiedCount - practiceCount} 项教材字词／古诗与 ${practiceCount} 项原创练习。${inventoryNote(lower)}不代表教材全部知识。`
         : verifiedCount ? `已核实 ${verifiedCount} 项古诗文年级映射；全册阅读、识字与表达等仍有缺项。` : '尚无已核实的逐课知识清单；不计作整册覆盖。',
       mappingNote: book ? book.verification : '' };
   }) };

@@ -22,4 +22,20 @@ test('packaged client knowledge and source JSON are identical to the cloud data'
     assert.deepEqual(require(`../miniprogram/lib/learning/${name}.js`), source);
     assert.deepEqual(require(`../cloudfunctions/familyApi/learning/${name}.json`), source);
   }
+  const lowerPrimary = require('../scripts/lower-primary');
+  assert.deepEqual(require('../miniprogram/lib/lower-primary-pinyin'), { ...lowerPrimary.pinyin(), ...lowerPrimary.data.extraPinyin });
+});
+
+test('repeated layouts reduce native package bytes without sharing mutable records', () => {
+  const source = require('../shared/knowledge-data.json');
+  const code = dataModule(source);
+  assert.ok(Buffer.byteLength(code) < Buffer.byteLength(JSON.stringify(source)) * 0.55);
+  const samples = [null, [], {}, 0, false, 'plain', { a: 1, b: 2 }, { b: 3, a: 4 }];
+  const context = { module: { exports: null } };
+  vm.runInNewContext(dataModule(samples), context);
+  assert.deepEqual(JSON.parse(JSON.stringify(context.module.exports)), samples);
+  assert.deepEqual(Object.keys(context.module.exports[6]), ['a', 'b']);
+  assert.deepEqual(Object.keys(context.module.exports[7]), ['b', 'a']);
+  context.module.exports[6].a = 99;
+  assert.equal(context.module.exports[7].a, 4);
 });

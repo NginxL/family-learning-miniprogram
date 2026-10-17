@@ -47,7 +47,7 @@ function knowledge() {
     id: entry.id, kind: 'poetry', title: `《${entry.title}》`, author: entry.author, ...period(entry),
     ...(entry.workId ? { workId: entry.workId } : {}),
     detail: `${entry.author}\n${entry.original}`, minutes: entry.original.length > 300 ? 15 : 5,
-    source: entry.examEvidence ? '上海 2026 中考评析关联篇目' : entry.sourceUrl.startsWith('https://book.pep.com.cn/') ? '五四制官方教材原页核对 · 公版原作 / 节选' : entry.sourceUrl.startsWith('https://keben.app/') ? '五四制公开教材样本核对 · 公版原作 / 节选' : '五四制教材目录关联原作 · 正文待逐字核对',
+    source: entry.examEvidence ? '上海 2026 中考评析关联篇目' : /https:\/\/(book\.pep\.com\.cn|basic\.smartedu\.cn)\//.test(entry.sourceUrl) ? '五四制官方教材原页核对 · 公版原作 / 节选' : entry.sourceUrl.startsWith('https://keben.app/') ? '五四制公开教材样本核对 · 公版原作 / 节选' : '五四制教材目录关联原作 · 正文待逐字核对',
     referenceUrl: entry.examEvidence || regional.books.find((book) => (mappings.get(entry.id) || []).includes(book.id))?.url || entry.sourceUrl,
     textSourceUrl: entry.sourceUrl, note: entry.reviewStatus,
     collections: [entry.examEvidence ? 'shanghai-exam' : 'shanghai54'], bookIds: mappings.get(entry.id) || [], gradeMappings: gradeMappings.get(entry.id) || []
@@ -71,7 +71,7 @@ module.exports = { knowledge, resources: {
   checkedAt: '2026-10-17',
   curriculum: curriculum(knowledge()),
   examFramework,
-  coverage: '上海五四制：小学1–5、初中6–9年级。一至四年级语文八册字表及64份单元原创练习已整理；四下为2019审定样本。英语一、二年级四册各10单元，三四年级上册新版各10单元、下册旧版参考各12单元已有词汇、原创例句和阅读。三四年级新版下册、英语纸本全词表及五年级以上逐课内容待核验；现有内容不代表教材或中考全量。',
+  coverage: '上海五四制：小学1–5、初中6–9年级。一至五年级语文十册字表及81份单元／栏目原创练习已整理；四、五下为2019审定样本。英语一、二年级四册各10单元，三至五年级上册新版各10单元、下册旧版参考各12单元已有词汇、原创例句和阅读。三至五年级新版下册、英语纸本全词表及初中逐课内容待核验；现有内容不代表教材或中考全量。',
   books: [...new Map([...regional.books, ...lowerPrimary.bookSummaries()].map(book => [book.id, book])).values()],
   links: [
     { title: '上海 2026 秋季教学用书通知', url: regional.noticeUrl, note: '市级用书目录；学校实际选用版本待确认' },

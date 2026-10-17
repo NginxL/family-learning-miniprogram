@@ -1838,6 +1838,175 @@
         "https://book.pep.com.cn/1211001402192/"
       ],
       "note": "官方样本电子页 82 署名或出处已核对。"
+    },
+    {
+      "id": "sh54-qiqiao",
+      "title": "乞巧",
+      "author": "林杰",
+      "dynasty": "唐代",
+      "status": "reviewed",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=e2055f40-fa27-4c9d-adf4-3586e26f418e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "教材电子页 53 朝代和署名已核对。"
+    },
+    {
+      "id": "sh54-shanju-qiuming",
+      "title": "山居秋暝",
+      "author": "王维",
+      "dynasty": "唐代",
+      "status": "reviewed",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=e2055f40-fa27-4c9d-adf4-3586e26f418e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "教材电子页 97 朝代和署名已核对。"
+    },
+    {
+      "id": "sh54-guren-dushu-lunyu",
+      "title": "古人谈读书（一）",
+      "author": "《论语》",
+      "dynasty": "先秦",
+      "status": "reviewed",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=e2055f40-fa27-4c9d-adf4-3586e26f418e&catalogType=tchMaterial&subCatalog=tchMaterial",
+        "https://www.nlc.cn/web/zdxm/bbjd/zjdw/jdzj/index.shtml"
+      ],
+      "note": "《论语》五则选句，与初中《论语》十二章不是同一选篇；不重复标为十二章。"
+    },
+    {
+      "id": "sh54-guren-dushu-zhuxi",
+      "title": "古人谈读书（二）",
+      "author": "朱熹",
+      "dynasty": "宋代",
+      "status": "reviewed",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=e2055f40-fa27-4c9d-adf4-3586e26f418e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "教材电子页 108 朝代和署名已核对。"
+    },
+    {
+      "id": "sh54-zhizi-nongbing",
+      "title": "稚子弄冰",
+      "author": "杨万里",
+      "dynasty": "宋代",
+      "status": "reviewed",
+      "sources": [
+        "https://keben.app/book/0342"
+      ],
+      "note": "教材电子页 7 朝代和署名已核对。"
+    },
+    {
+      "id": "sh54-cunwan",
+      "title": "村晚",
+      "author": "雷震",
+      "dynasty": "宋代",
+      "status": "reviewed",
+      "sources": [
+        "https://keben.app/book/0342"
+      ],
+      "note": "教材电子页 8 朝代和署名已核对。"
+    },
+    {
+      "id": "sh54-niaomingjian",
+      "title": "鸟鸣涧",
+      "author": "王维",
+      "dynasty": "唐代",
+      "status": "reviewed",
+      "sources": [
+        "https://keben.app/book/0342"
+      ],
+      "note": "教材电子页 45 朝代和署名已核对。"
+    },
+    {
+      "id": "sh54-congjunxing-wangchangling",
+      "title": "从军行（青海长云暗雪山）",
+      "author": "王昌龄",
+      "dynasty": "唐代",
+      "status": "reviewed",
+      "sources": [
+        "https://keben.app/book/0342"
+      ],
+      "note": "教材电子页 49 朝代和署名已核对。"
+    },
+    {
+      "id": "sh54-wenguanjun",
+      "title": "闻官军收河南河北",
+      "author": "杜甫",
+      "dynasty": "唐代",
+      "status": "reviewed",
+      "sources": [
+        "https://keben.app/book/0342"
+      ],
+      "note": "教材电子页 50 朝代和署名已核对。"
+    },
+    {
+      "id": "sh54-zixiangmaodun",
+      "title": "自相矛盾",
+      "author": "《韩非子·难一》",
+      "dynasty": "先秦",
+      "status": "reviewed",
+      "sources": [
+        "https://keben.app/book/0342",
+        "https://www.nlcpress.com/ProductView.aspx?Id=10796"
+      ],
+      "note": "按教材标出处《韩非子·难一》；先秦时代由国家图书馆出版社书目补证。"
+    },
+    {
+      "id": "sh54-yangshi-zhizi",
+      "title": "杨氏之子",
+      "author": "刘义庆",
+      "dynasty": "南朝宋",
+      "status": "reviewed",
+      "sources": [
+        "https://keben.app/book/0342",
+        "https://www.nlc.cn/migrated/pcab.nlc.cn/gjml/gjzggj/201412/P020141217510201045887.pdf"
+      ],
+      "note": "《世说新语·言语》节选；标编纂者刘义庆的南朝宋时代，不以故事人物时代替代。"
+    },
+    {
+      "id": "sh54-caiwei-excerpt",
+      "title": "采薇（节选）",
+      "author": "佚名",
+      "dynasty": "先秦",
+      "status": "reviewed",
+      "sources": [
+        "https://keben.app/book/0342",
+        "https://www.nlc.cn/web/ziyuanfuwu/ziyuantuijian/gkktj/20221227_2567612.shtml"
+      ],
+      "note": "《诗经·小雅》末章节选；作者佚名，不把选篇当作全诗。"
+    },
+    {
+      "id": "sh54-busuanzi-songbao",
+      "title": "卜算子·送鲍浩然之浙东",
+      "author": "王观",
+      "dynasty": "宋代",
+      "status": "reviewed",
+      "sources": [
+        "https://keben.app/book/0342"
+      ],
+      "note": "教材电子页 135 朝代和署名已核对。"
+    },
+    {
+      "id": "sh54-huanxisha-sushi",
+      "title": "浣溪沙（山下兰芽短浸溪）",
+      "author": "苏轼",
+      "dynasty": "宋代",
+      "status": "reviewed",
+      "sources": [
+        "https://keben.app/book/0342"
+      ],
+      "note": "保留小序；与晏殊《浣溪沙》区分。"
+    },
+    {
+      "id": "sh54-qingpingle-huang",
+      "title": "清平乐（春归何处）",
+      "author": "黄庭坚",
+      "dynasty": "宋代",
+      "status": "reviewed",
+      "sources": [
+        "https://keben.app/book/0342"
+      ],
+      "note": "与辛弃疾《清平乐·村居》区分。"
     }
   ]
 }

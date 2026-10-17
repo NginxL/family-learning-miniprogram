@@ -17,8 +17,8 @@ function artifacts() {
     const items = knowledge();
     assertKnowledge(items);
     const files = new Map();
-    files.set('miniprogram/lib/lower-primary-pinyin.js', '// Generated from the verified lower-primary catalogue. Run npm run build.\nmodule.exports = '
-      + JSON.stringify({ ...lowerPrimary.pinyin(), ...lowerPrimary.data.extraPinyin }) + ';\n');
+    files.set('miniprogram/lib/lower-primary-pinyin.js', '// Generated from the verified lower-primary catalogue. Run npm run build.\n'
+      + dataModule({ ...lowerPrimary.pinyin(), ...lowerPrimary.data.extraPinyin }));
     for (const [name, value] of [['knowledge-data.json', items], ['resources.json', resources]]) {
       const serialized = JSON.stringify(value);
       for (const folder of ['shared', 'cloudfunctions/familyApi/learning']) files.set(`${folder}/${name}`, serialized + '\n');

@@ -55,7 +55,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 58,
       "source_pdf_page": 65,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-002"
     },
@@ -196,7 +196,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 58,
       "source_pdf_page": 65,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-007"
     },
@@ -210,7 +210,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 58,
       "source_pdf_page": 65,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 5,
+          "bookId": "chinese-5b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "editionStatus": "historical_reference",
+          "edition": "五四制2019审定公开电子样本；新版下册、ISBN及学校印次待确认",
+          "sourceUrl": "https://keben.app/book/0342",
+          "outlineDestination": "#page=63",
+          "sourceKind": "public_sample",
+          "sourcePrintPage": 58,
+          "sourcePdfPage": 63,
+          "unit": "第3单元 · 人物内心",
+          "unitId": "u3",
+          "mappingType": "textbook_item",
+          "evidence": "五四制公开教材样本篇名、年级、学期与印刷页已核对；电子页63核对作者或出处王之涣及首句“黄河远上白云间，一片孤城万仞山。”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-008"
     },
@@ -303,7 +322,7 @@
           "unit": "第8单元 · 理想与担当",
           "unitId": "u8",
           "mappingType": "textbook_item",
-          "evidence": "人教社五四制官方目录篇名、年级、学期与印刷页已核对；电子页123核对作者王翰及首句“葡萄美酒夜光杯”；正文沿用已核验公版作品。学校印次待确认。",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页123核对作者或出处王翰及首句“葡萄美酒夜光杯”；正文沿用已核验公版作品。学校印次待确认。",
           "status": "catalogue_verified"
         }
       ],
@@ -335,7 +354,7 @@
           "unit": "第8单元 · 理想与担当",
           "unitId": "u8",
           "mappingType": "textbook_item",
-          "evidence": "人教社五四制官方目录篇名、年级、学期与印刷页已核对；电子页123核对作者王昌龄及首句“秦时明月汉时关”；正文沿用已核验公版作品。学校印次待确认。",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页123核对作者或出处王昌龄及首句“秦时明月汉时关”；正文沿用已核验公版作品。学校印次待确认。",
           "status": "catalogue_verified"
         }
       ],
@@ -368,7 +387,7 @@
           "unit": "第7单元 · 人物品质",
           "unitId": "u7",
           "mappingType": "textbook_item",
-          "evidence": "人教社五四制官方目录篇名、年级、学期与印刷页已核对；电子页108核对作者王昌龄及首句“寒雨连江夜入吴”；正文沿用已核验公版作品。学校印次待确认。",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页108核对作者或出处王昌龄及首句“寒雨连江夜入吴”；正文沿用已核验公版作品。学校印次待确认。",
           "status": "catalogue_verified"
         }
       ],
@@ -429,6 +448,24 @@
           "sourceKind": "official_outline",
           "evidence": "官方教材目录篇名与册次已核对；正文异文校对另计",
           "status": "catalogue_verified"
+        },
+        {
+          "grade": 5,
+          "bookId": "chinese-5b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "editionStatus": "historical_reference",
+          "edition": "五四制2019审定公开电子样本；新版下册、ISBN及学校印次待确认",
+          "sourceUrl": "https://keben.app/book/0342",
+          "outlineDestination": "#page=129",
+          "sourceKind": "public_sample",
+          "sourcePrintPage": 124,
+          "sourcePdfPage": 129,
+          "unit": "古诗词诵读（附录）",
+          "unitId": "u9",
+          "mappingType": "textbook_item",
+          "evidence": "五四制公开教材样本篇名、年级、学期与印刷页已核对；电子页129核对作者或出处王维及首句“渭城朝雨浥轻尘，客舍青青柳色新。”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
         }
       ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
@@ -459,7 +496,7 @@
           "unit": "第4单元 · 传统文化",
           "unitId": "u4",
           "mappingType": "textbook_item",
-          "evidence": "人教社五四制官方目录篇名、年级、学期与印刷页已核对；正文沿用已核验公版作品。学校印次待确认。",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；正文沿用已核验公版作品。学校印次待确认。",
           "status": "catalogue_verified"
         }
       ],
@@ -508,7 +545,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 59,
       "source_pdf_page": 66,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-018"
     },
@@ -586,7 +623,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 59,
       "source_pdf_page": 66,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 5,
+          "bookId": "chinese-5b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "editionStatus": "historical_reference",
+          "edition": "五四制2019审定公开电子样本；新版下册、ISBN及学校印次待确认",
+          "sourceUrl": "https://keben.app/book/0342",
+          "outlineDestination": "#page=63",
+          "sourceKind": "public_sample",
+          "sourcePrintPage": 58,
+          "sourcePdfPage": 63,
+          "unit": "第3单元 · 人物内心",
+          "unitId": "u3",
+          "mappingType": "textbook_item",
+          "evidence": "五四制公开教材样本篇名、年级、学期与印刷页已核对；电子页63核对作者或出处李白及首句“故人西辞黄鹤楼，烟花三月下扬州。”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-021"
     },
@@ -664,7 +720,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 59,
       "source_pdf_page": 66,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-024"
     },
@@ -678,7 +734,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 59,
       "source_pdf_page": 66,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-025"
     },
@@ -692,7 +748,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 59,
       "source_pdf_page": 66,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 5,
+          "bookId": "chinese-5b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "editionStatus": "historical_reference",
+          "edition": "五四制2019审定公开电子样本；新版下册、ISBN及学校印次待确认",
+          "sourceUrl": "https://keben.app/book/0342",
+          "outlineDestination": "#page=130",
+          "sourceKind": "public_sample",
+          "sourcePrintPage": 125,
+          "sourcePdfPage": 130,
+          "unit": "古诗词诵读（附录）",
+          "unitId": "u9",
+          "mappingType": "textbook_item",
+          "evidence": "五四制公开教材样本篇名、年级、学期与印刷页已核对；电子页130核对作者或出处杜甫及首句“好雨知时节，当春乃发生。”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-026"
     },
@@ -721,7 +796,7 @@
           "unit": "第1单元 · 观察生物",
           "unitId": "u1",
           "mappingType": "textbook_item",
-          "evidence": "人教社五四制官方目录篇名、年级、学期与印刷页已核对；电子页8核对作者杜甫及首句“迟日江山丽”；正文沿用已核验公版作品。学校印次待确认。",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页8核对作者或出处杜甫及首句“迟日江山丽”；正文沿用已核验公版作品。学校印次待确认。",
           "status": "catalogue_verified"
         }
       ],
@@ -765,7 +840,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 59,
       "source_pdf_page": 66,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 5,
+          "bookId": "chinese-5a-sample",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制原书；封面审核通过2024；ISBN及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=e2055f40-fa27-4c9d-adf4-3586e26f418e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=97",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 92,
+          "sourcePdfPage": 97,
+          "unit": "第7单元 · 四季景物",
+          "unitId": "u7",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页97核对作者或出处张继及首句“月落乌啼霜满天，江枫渔火对愁眠。”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-029"
     },
@@ -779,7 +873,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 59,
       "source_pdf_page": 66,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-030"
     },
@@ -793,7 +887,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 59,
       "source_pdf_page": 66,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 5,
+          "bookId": "chinese-5a-sample",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制原书；封面审核通过2024；ISBN及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=e2055f40-fa27-4c9d-adf4-3586e26f418e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=105",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 100,
+          "sourcePdfPage": 105,
+          "unit": "第7单元 · 四季景物",
+          "unitId": "u7",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页105核对作者或出处张志和及首句“西塞山前白鹭飞，桃花流水鳜鱼肥。”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-031"
     },
@@ -823,7 +936,7 @@
           "unit": "第7单元 · 人物品质",
           "unitId": "u7",
           "mappingType": "textbook_item",
-          "evidence": "人教社五四制官方目录篇名、年级、学期与印刷页已核对；电子页108核对作者卢纶及首句“月黑雁飞高”；正文沿用已核验公版作品。学校印次待确认。",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页108核对作者或出处卢纶及首句“月黑雁飞高”；正文沿用已核验公版作品。学校印次待确认。",
           "status": "catalogue_verified"
         }
       ],
@@ -840,7 +953,44 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 59,
       "source_pdf_page": 66,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 5,
+          "bookId": "chinese-5a-sample",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制原书；封面审核通过2024；ISBN及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=e2055f40-fa27-4c9d-adf4-3586e26f418e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=95",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 90,
+          "sourcePdfPage": 95,
+          "unit": "第6单元 · 父母之爱",
+          "unitId": "u6",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页95核对作者或出处孟郊及首句“慈母手中线，游子身上衣。”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        },
+        {
+          "grade": 5,
+          "bookId": "chinese-5b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "editionStatus": "historical_reference",
+          "edition": "五四制2019审定公开电子样本；新版下册、ISBN及学校印次待确认",
+          "sourceUrl": "https://keben.app/book/0342",
+          "outlineDestination": "#page=23",
+          "sourceKind": "public_sample",
+          "sourcePrintPage": 18,
+          "sourcePdfPage": 23,
+          "unit": "第1单元 · 童年与故乡",
+          "unitId": "u1",
+          "mappingType": "textbook_item",
+          "evidence": "五四制公开教材样本篇名、年级、学期与印刷页已核对；电子页23核对作者或出处孟郊及首句“慈母手中线，游子身上衣。”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-033"
     },
@@ -854,7 +1004,44 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 59,
       "source_pdf_page": 66,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 5,
+          "bookId": "chinese-5a-sample",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制原书；封面审核通过2024；ISBN及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=e2055f40-fa27-4c9d-adf4-3586e26f418e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=98",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 93,
+          "sourcePdfPage": 98,
+          "unit": "第7单元 · 四季景物",
+          "unitId": "u7",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页98核对作者或出处韩愈及首句“天街小雨润如酥，草色遥看近却无。”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        },
+        {
+          "grade": 5,
+          "bookId": "chinese-5b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "editionStatus": "historical_reference",
+          "edition": "五四制2019审定公开电子样本；新版下册、ISBN及学校印次待确认",
+          "sourceUrl": "https://keben.app/book/0342",
+          "outlineDestination": "#page=131",
+          "sourceKind": "public_sample",
+          "sourcePrintPage": 126,
+          "sourcePdfPage": 131,
+          "unit": "古诗词诵读（附录）",
+          "unitId": "u9",
+          "mappingType": "textbook_item",
+          "evidence": "五四制公开教材样本篇名、年级、学期与印刷页已核对；电子页131核对作者或出处韩愈及首句“天街小雨润如酥，草色遥看近却无。”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-034"
     },
@@ -900,7 +1087,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 59,
       "source_pdf_page": 66,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-036"
     },
@@ -914,7 +1101,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 59,
       "source_pdf_page": 66,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-037"
     },
@@ -960,7 +1147,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 60,
       "source_pdf_page": 67,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-039"
     },
@@ -1038,7 +1225,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 60,
       "source_pdf_page": 67,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-042"
     },
@@ -1163,7 +1350,7 @@
           "unit": "第4单元 · 传统文化",
           "unitId": "u4",
           "mappingType": "textbook_item",
-          "evidence": "人教社五四制官方目录篇名、年级、学期与印刷页已核对；正文沿用已核验公版作品。学校印次待确认。",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；正文沿用已核验公版作品。学校印次待确认。",
           "status": "catalogue_verified"
         }
       ],
@@ -1207,7 +1394,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 60,
       "source_pdf_page": 67,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-048"
     },
@@ -1221,7 +1408,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 60,
       "source_pdf_page": 67,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 5,
+          "bookId": "chinese-5b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "editionStatus": "historical_reference",
+          "edition": "五四制2019审定公开电子样本；新版下册、ISBN及学校印次待确认",
+          "sourceUrl": "https://keben.app/book/0342",
+          "outlineDestination": "#page=132",
+          "sourceKind": "public_sample",
+          "sourcePrintPage": 127,
+          "sourcePdfPage": 132,
+          "unit": "古诗词诵读（附录）",
+          "unitId": "u9",
+          "mappingType": "textbook_item",
+          "evidence": "五四制公开教材样本篇名、年级、学期与印刷页已核对；电子页132核对作者或出处范仲淹及首句“江上往来人，但爱鲈鱼美。”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-049"
     },
@@ -1250,7 +1456,7 @@
           "unit": "第4单元 · 传统文化",
           "unitId": "u4",
           "mappingType": "textbook_item",
-          "evidence": "人教社五四制官方目录篇名、年级、学期与印刷页已核对；正文沿用已核验公版作品。学校印次待确认。",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；正文沿用已核验公版作品。学校印次待确认。",
           "status": "catalogue_verified"
         }
       ],
@@ -1267,7 +1473,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 60,
       "source_pdf_page": 67,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 5,
+          "bookId": "chinese-5b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "editionStatus": "historical_reference",
+          "edition": "五四制2019审定公开电子样本；新版下册、ISBN及学校印次待确认",
+          "sourceUrl": "https://keben.app/book/0342",
+          "outlineDestination": "#page=133",
+          "sourceKind": "public_sample",
+          "sourcePrintPage": 128,
+          "sourcePdfPage": 133,
+          "unit": "古诗词诵读（附录）",
+          "unitId": "u9",
+          "mappingType": "textbook_item",
+          "evidence": "五四制公开教材样本篇名、年级、学期与印刷页已核对；电子页133核对作者或出处王安石及首句“京口瓜洲一水间，钟山只隔数重山。”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-051"
     },
@@ -1382,7 +1607,7 @@
           "unit": "第1单元 · 观察生物",
           "unitId": "u1",
           "mappingType": "textbook_item",
-          "evidence": "人教社五四制官方目录篇名、年级、学期与印刷页已核对；正文沿用已核验公版作品。学校印次待确认。",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；正文沿用已核验公版作品。学校印次待确认。",
           "status": "catalogue_verified"
         }
       ],
@@ -1414,7 +1639,7 @@
           "unit": "第3单元 · 连续观察",
           "unitId": "u3",
           "mappingType": "textbook_item",
-          "evidence": "人教社五四制官方目录篇名、年级、学期与印刷页已核对；电子页40核对作者苏轼及首句“横看成岭侧成峰”；正文沿用已核验公版作品。学校印次待确认。",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页40核对作者或出处苏轼及首句“横看成岭侧成峰”；正文沿用已核验公版作品。学校印次待确认。",
           "status": "catalogue_verified"
         }
       ],
@@ -1446,7 +1671,7 @@
           "unit": "第8单元 · 理想与担当",
           "unitId": "u8",
           "mappingType": "textbook_item",
-          "evidence": "人教社五四制官方目录篇名、年级、学期与印刷页已核对；电子页124核对作者李清照及首句“生当作人杰”；正文沿用已核验公版作品。学校印次待确认。",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页124核对作者或出处李清照及首句“生当作人杰”；正文沿用已核验公版作品。学校印次待确认。",
           "status": "catalogue_verified"
         }
       ],
@@ -1478,7 +1703,7 @@
           "unit": "第1单元 · 观察生物",
           "unitId": "u1",
           "mappingType": "textbook_item",
-          "evidence": "人教社五四制官方目录篇名、年级、学期与印刷页已核对；正文沿用已核验公版作品。学校印次待确认。",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；正文沿用已核验公版作品。学校印次待确认。",
           "status": "catalogue_verified"
         }
       ],
@@ -1495,7 +1720,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 60,
       "source_pdf_page": 67,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 5,
+          "bookId": "chinese-5a-sample",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制原书；封面审核通过2024；ISBN及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=e2055f40-fa27-4c9d-adf4-3586e26f418e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=57",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 52,
+          "sourcePdfPage": 57,
+          "unit": "第4单元 · 家国情怀",
+          "unitId": "u4",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页57核对作者或出处陆游及首句“死去元知万事空，但悲不见九州同。”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-059"
     },
@@ -1509,7 +1753,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 60,
       "source_pdf_page": 67,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 5,
+          "bookId": "chinese-5b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "editionStatus": "historical_reference",
+          "edition": "五四制2019审定公开电子样本；新版下册、ISBN及学校印次待确认",
+          "sourceUrl": "https://keben.app/book/0342",
+          "outlineDestination": "#page=49",
+          "sourceKind": "public_sample",
+          "sourcePrintPage": 44,
+          "sourcePdfPage": 49,
+          "unit": "第3单元 · 人物内心",
+          "unitId": "u3",
+          "mappingType": "textbook_item",
+          "evidence": "五四制公开教材样本篇名、年级、学期与印刷页已核对；电子页49核对作者或出处陆游及首句“三万里河东入海，五千仞岳上摩天。”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-060"
     },
@@ -1523,7 +1786,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 60,
       "source_pdf_page": 67,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 5,
+          "bookId": "chinese-5b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "editionStatus": "historical_reference",
+          "edition": "五四制2019审定公开电子样本；新版下册、ISBN及学校印次待确认",
+          "sourceUrl": "https://keben.app/book/0342",
+          "outlineDestination": "#page=7",
+          "sourceKind": "public_sample",
+          "sourcePrintPage": 2,
+          "sourcePdfPage": 7,
+          "unit": "第1单元 · 童年与故乡",
+          "unitId": "u1",
+          "mappingType": "textbook_item",
+          "evidence": "五四制公开教材样本篇名、年级、学期与印刷页已核对；电子页7核对作者或出处范成大及首句“昼出耘田夜绩麻，村庄儿女各当家。”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-061"
     },
@@ -1553,7 +1835,7 @@
           "unit": "第1单元 · 乡村风景",
           "unitId": "u1",
           "mappingType": "textbook_item",
-          "evidence": "人教社五四制官方目录篇名、年级、学期与印刷页已核对；电子页8核对作者范成大及首句“梅子金黄杏子肥”；正文沿用已核验公版作品。学校印次待确认。",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页8核对作者或出处范成大及首句“梅子金黄杏子肥”；正文沿用已核验公版作品。学校印次待确认。",
           "status": "catalogue_verified"
         }
       ],
@@ -1660,7 +1942,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 5,
+          "bookId": "chinese-5a-sample",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制原书；封面审核通过2024；ISBN及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=e2055f40-fa27-4c9d-adf4-3586e26f418e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=119",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 114,
+          "sourcePdfPage": 119,
+          "unit": "第8单元 · 读书方法",
+          "unitId": "u8",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页119核对作者或出处朱熹及首句“半亩方塘一鉴开，天光云影共徘徊。”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-066"
     },
@@ -1674,7 +1975,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 5,
+          "bookId": "chinese-5a-sample",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制原书；封面审核通过2024；ISBN及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=e2055f40-fa27-4c9d-adf4-3586e26f418e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=57",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 52,
+          "sourcePdfPage": 57,
+          "unit": "第4单元 · 家国情怀",
+          "unitId": "u4",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页57核对作者或出处林升及首句“山外青山楼外楼，西湖歌舞几时休？”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-067"
     },
@@ -1688,7 +2008,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 5,
+          "bookId": "chinese-5b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "editionStatus": "historical_reference",
+          "edition": "五四制2019审定公开电子样本；新版下册、ISBN及学校印次待确认",
+          "sourceUrl": "https://keben.app/book/0342",
+          "outlineDestination": "#page=134",
+          "sourceKind": "public_sample",
+          "sourcePrintPage": 129,
+          "sourcePdfPage": 134,
+          "unit": "古诗词诵读（附录）",
+          "unitId": "u9",
+          "mappingType": "textbook_item",
+          "evidence": "五四制公开教材样本篇名、年级、学期与印刷页已核对；电子页134核对作者或出处叶绍翁及首句“应怜屐齿印苍苔，小扣柴扉久不开。”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-068"
     },
@@ -1702,7 +2041,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 5,
+          "bookId": "chinese-5b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "editionStatus": "historical_reference",
+          "edition": "五四制2019审定公开电子样本；新版下册、ISBN及学校印次待确认",
+          "sourceUrl": "https://keben.app/book/0342",
+          "outlineDestination": "#page=101",
+          "sourceKind": "public_sample",
+          "sourcePrintPage": 96,
+          "sourcePdfPage": 101,
+          "unit": "第6单元 · 景物与风情",
+          "unitId": "u6",
+          "mappingType": "textbook_item",
+          "evidence": "五四制公开教材样本篇名、年级、学期与印刷页已核对；电子页101核对作者或出处翁卷及首句“绿遍山原白满川，子规声里雨如烟。”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-069"
     },
@@ -1732,7 +2090,7 @@
           "unit": "第7单元 · 人物品质",
           "unitId": "u7",
           "mappingType": "textbook_item",
-          "evidence": "人教社五四制官方目录篇名、年级、学期与印刷页已核对；电子页109核对作者王冕及首句“我家洗砚池头树”；正文沿用已核验公版作品。学校印次待确认。",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页109核对作者或出处王冕及首句“我家洗砚池头树”；正文沿用已核验公版作品。学校印次待确认。",
           "status": "catalogue_verified"
         }
       ],
@@ -1749,7 +2107,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-071"
     },
@@ -1763,7 +2121,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-072"
     },
@@ -1809,7 +2167,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 5,
+          "bookId": "chinese-5a-sample",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制原书；封面审核通过2024；ISBN及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=e2055f40-fa27-4c9d-adf4-3586e26f418e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=58",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 53,
+          "sourcePdfPage": 58,
+          "unit": "第4单元 · 家国情怀",
+          "unitId": "u4",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页58核对作者或出处龚自珍及首句“九州生气恃风雷，万马齐喑究可哀。”；正文沿用已核验公版作品。原书末句为“不拘一格降人材”，课标底库沿用“降人才”；同一作品保留原内容 ID，异文在此说明。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-074"
     },
@@ -1854,7 +2231,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-001"
     },
@@ -1868,7 +2245,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-002"
     },
@@ -1882,7 +2259,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-003"
     },
@@ -1896,7 +2273,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-004"
     },
@@ -1910,7 +2287,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-005"
     },
@@ -1924,7 +2301,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-006"
     },
@@ -1938,7 +2315,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-007"
     },
@@ -1952,7 +2329,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-008"
     },
@@ -1966,7 +2343,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-009"
     },
@@ -1980,7 +2357,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-010"
     },
@@ -1994,7 +2371,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-011"
     },
@@ -2008,7 +2385,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-012"
     },
@@ -2022,7 +2399,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-013"
     },
@@ -2036,7 +2413,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-014"
     },
@@ -2050,7 +2427,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-015"
     },
@@ -2064,7 +2441,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-016"
     },
@@ -2078,7 +2455,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-017"
     },
@@ -2092,7 +2469,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-018"
     },
@@ -2106,7 +2483,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-019"
     },
@@ -2120,7 +2497,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-020"
     },
@@ -2134,7 +2511,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-021"
     },
@@ -2148,7 +2525,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-022"
     },
@@ -2162,7 +2539,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-023"
     },
@@ -2176,7 +2553,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-024"
     },
@@ -2190,7 +2567,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-025"
     },
@@ -2204,7 +2581,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-026"
     },
@@ -2218,7 +2595,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-027"
     },
@@ -2232,7 +2609,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-028"
     },
@@ -2246,7 +2623,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-029"
     },
@@ -2260,7 +2637,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-030"
     },
@@ -2274,7 +2651,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-031"
     },
@@ -2288,7 +2665,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-032"
     },
@@ -2302,7 +2679,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-033"
     },
@@ -2316,7 +2693,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-034"
     },
@@ -2330,7 +2707,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-035"
     },
@@ -2344,7 +2721,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-036"
     },
@@ -2358,7 +2735,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-037"
     },
@@ -2372,7 +2749,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-038"
     },
@@ -2386,7 +2763,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-039"
     },
@@ -2400,7 +2777,7 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-040"
     },
@@ -2441,7 +2818,7 @@
       "content_type": "文言文及选段",
       "source_print_page": 63,
       "source_pdf_page": 70,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-042"
     },
@@ -2455,7 +2832,7 @@
       "content_type": "文言文及选段",
       "source_print_page": 63,
       "source_pdf_page": 70,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-043"
     },
@@ -2469,7 +2846,7 @@
       "content_type": "文言文及选段",
       "source_print_page": 63,
       "source_pdf_page": 70,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-044"
     },
@@ -2483,7 +2860,7 @@
       "content_type": "文言文及选段",
       "source_print_page": 63,
       "source_pdf_page": 70,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-045"
     },
@@ -2497,7 +2874,7 @@
       "content_type": "文言文及选段",
       "source_print_page": 63,
       "source_pdf_page": 70,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-046"
     },
@@ -2511,7 +2888,7 @@
       "content_type": "文言文及选段",
       "source_print_page": 63,
       "source_pdf_page": 70,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-047"
     },
@@ -2525,7 +2902,7 @@
       "content_type": "文言文及选段",
       "source_print_page": 63,
       "source_pdf_page": 70,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-048"
     },
@@ -2539,7 +2916,7 @@
       "content_type": "文言文及选段",
       "source_print_page": 63,
       "source_pdf_page": 70,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-049"
     },
@@ -2553,7 +2930,7 @@
       "content_type": "文言文及选段",
       "source_print_page": 63,
       "source_pdf_page": 70,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-050"
     },
@@ -2567,7 +2944,7 @@
       "content_type": "文言文及选段",
       "source_print_page": 63,
       "source_pdf_page": 70,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-051"
     },
@@ -2581,7 +2958,7 @@
       "content_type": "文言文及选段",
       "source_print_page": 63,
       "source_pdf_page": 70,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-052"
     },
@@ -2595,7 +2972,7 @@
       "content_type": "文言文及选段",
       "source_print_page": 63,
       "source_pdf_page": 70,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-053"
     },
@@ -2609,7 +2986,7 @@
       "content_type": "文言文及选段",
       "source_print_page": 63,
       "source_pdf_page": 70,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-054"
     },
@@ -2623,7 +3000,7 @@
       "content_type": "文言文及选段",
       "source_print_page": 63,
       "source_pdf_page": 70,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-055"
     },
@@ -2637,7 +3014,7 @@
       "content_type": "文言文及选段",
       "source_print_page": 63,
       "source_pdf_page": 70,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-056"
     },
@@ -2651,7 +3028,7 @@
       "content_type": "文言文及选段",
       "source_print_page": 63,
       "source_pdf_page": 70,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-057"
     },
@@ -2665,7 +3042,7 @@
       "content_type": "文言文及选段",
       "source_print_page": 63,
       "source_pdf_page": 70,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-058"
     },
@@ -2679,7 +3056,7 @@
       "content_type": "文言文及选段",
       "source_print_page": 63,
       "source_pdf_page": 70,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-059"
     },
@@ -2693,7 +3070,7 @@
       "content_type": "文言文及选段",
       "source_print_page": 63,
       "source_pdf_page": 70,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-060"
     }

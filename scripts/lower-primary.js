@@ -2,7 +2,13 @@
 const lowerPrimary = require('../data/catalogs/shanghai-54-lower-primary.json');
 const gradeThree = require('../data/catalogs/shanghai-54-grade3.json');
 const gradeFour = require('../data/catalogs/shanghai-54-grade4.json');
-const data = { ...lowerPrimary, books: [...lowerPrimary.books, ...gradeThree.books, ...gradeFour.books], poems: gradeFour.poems };
+const gradeFive = require('../data/catalogs/shanghai-54-grade5.json');
+const data = { ...lowerPrimary, books: [...lowerPrimary.books, ...gradeThree.books, ...gradeFour.books, ...gradeFive.books], poems: [...gradeFour.poems, ...gradeFive.poems] };
+
+function hasLiteracy(book, unit) {
+  return book.inventory.recognitionComplete && book.inventory.writingComplete
+    && (unit.recognition.length > 0 || unit.writing.length > 0);
+}
 
 function unitLabel(unit) {
   return unit.displayLabel || `第${unit.number}单元 · ${unit.title}${unit.optional ? '（拓展）' : ''}`;
@@ -62,7 +68,7 @@ function literacyDetail(unit) {
 function validate() {
   const ids = new Set();
   for (const book of data.books) {
-    if (ids.has(book.id) || ![1, 2, 3, 4].includes(book.grade) || !['上册', '下册'].includes(book.semester)
+    if (ids.has(book.id) || ![1, 2, 3, 4, 5].includes(book.grade) || !['上册', '下册'].includes(book.semester)
       || book.schoolSystem !== '5-4' || !book.sourceUrl.startsWith('https://') || book.inventory.fullCoverage)
       throw Error(`Invalid lower-primary book: ${book.id}`);
     ids.add(book.id);
@@ -113,10 +119,10 @@ function augment(items) {
       item.collections = [...new Set([...item.collections, 'shanghai54'])];
       item.bookIds = [...new Set([...(item.bookIds || []), book.id])];
       item.gradeMappings = [...(item.gradeMappings || []), { ...mapping(book, unit, 'textbook_item', poem.sourcePrintPage, poem.sourcePdfPage),
-        evidence: `人教社五四制官方目录篇名、年级、学期与印刷页已核对；${poem.identityEvidence ? `电子页${poem.identityEvidence.sourcePdfPage}核对作者${poem.identityEvidence.author}及首句“${poem.identityEvidence.firstLine}”；` : ''}正文沿用已核验公版作品。学校印次待确认。` }];
+        evidence: `${book.sourceKind === 'public_sample' ? '五四制公开教材样本' : '人教社五四制官方教材'}篇名、年级、学期与印刷页已核对；${poem.identityEvidence ? `电子页${poem.identityEvidence.sourcePdfPage}核对作者或出处${poem.identityEvidence.author}及首句“${poem.identityEvidence.firstLine}”；` : ''}正文沿用已核验公版作品。${poem.textVariantNote || ''}学校印次待确认。` }];
     }
     if (book.subject === 'chinese') {
-      if (book.inventory.recognitionComplete && book.inventory.writingComplete) add({ id: `${prefix}-literacy`, kind: 'reading', title: `识字写字 · 第${unit.number}组`, detail: literacyDetail(unit),
+      if (hasLiteracy(book, unit)) add({ id: `${prefix}-literacy`, kind: 'reading', title: `识字写字 · 第${unit.number}组`, detail: literacyDetail(unit),
         source: '教材字表核实；按单元整理；练习提示自编', minutes: 10, collections: [], studyArea: 'literacy',
         referenceUrl: book.sourceUrl, note: `识字表电子书第 ${unit.recognitionPdfPages.join('、')} 页；写字表电子书第 ${unit.writingPdfPages.join('、')} 页。含多音字复习项，可分行学习。写字拼音为学习辅助。` }, 'textbook_item');
       add({ id: `${prefix}-reading`, kind: 'reading', title: unit.practice.title, detail: practiceDetail(unit.practice, 'chinese'),
@@ -165,7 +171,7 @@ function pinyin() {
   const entries = {};
   for (const book of data.books.filter(book => book.subject === 'chinese')) for (const unit of book.units) {
     const prefix = `sh54-zh-${book.grade}${book.semester === '上册' ? 'a' : 'b'}-${unit.id}`;
-    if (book.inventory.recognitionComplete && book.inventory.writingComplete) entries[`${prefix}-literacy`] = { title: `识字写字 · 第${unit.number}组`, detail: literacyDetail(unit), titleReading: 'shí zì xiě zì dì zǔ',
+    if (hasLiteracy(book, unit)) entries[`${prefix}-literacy`] = { title: `识字写字 · 第${unit.number}组`, detail: literacyDetail(unit), titleReading: 'shí zì xiě zì dì zǔ',
       detailReading: `rèn yī rèn ${unit.recognitionReading.join(' ')} xiě yī xiě ${unit.writingReading.join(' ')} liàn xí měi cì xuǎn yī háng xiān dú zhǔn zài zhē zhù pīn yīn rèn dú xiě zì shí guān chá bǐ huà wèi zhì xuǎn liǎng gè zì zǔ cí` };
     const p = unit.practice;
     entries[`${prefix}-reading`] = { title: p.title, detail: practiceDetail(p, 'chinese'), titleReading: p.titleReading, detailReading: p.detailReading };
