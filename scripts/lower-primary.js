@@ -4,7 +4,8 @@ const gradeThree = require('../data/catalogs/shanghai-54-grade3.json');
 const gradeFour = require('../data/catalogs/shanghai-54-grade4.json');
 const gradeFive = require('../data/catalogs/shanghai-54-grade5.json');
 const gradeSix = require('../data/catalogs/shanghai-54-grade6.json');
-const data = { ...lowerPrimary, books: [...lowerPrimary.books, ...gradeThree.books, ...gradeFour.books, ...gradeFive.books, ...gradeSix.books], poems: [...(lowerPrimary.poems || []), ...(gradeThree.poems || []), ...gradeFour.poems, ...gradeFive.poems, ...gradeSix.poems] };
+const gradeSeven = require('../data/catalogs/shanghai-54-grade7.json');
+const data = { ...lowerPrimary, books: [...lowerPrimary.books, ...gradeThree.books, ...gradeFour.books, ...gradeFive.books, ...gradeSix.books, ...gradeSeven.books], poems: [...(lowerPrimary.poems || []), ...(gradeThree.poems || []), ...gradeFour.poems, ...gradeFive.poems, ...gradeSix.poems, ...gradeSeven.poems] };
 
 function hasLiteracy(book, unit) {
   return book.inventory.recognitionComplete && book.inventory.writingComplete
@@ -78,7 +79,7 @@ function literacyDetail(unit) {
 function validate() {
   const ids = new Set();
   for (const book of data.books) {
-    if (ids.has(book.id) || ![1, 2, 3, 4, 5, 6].includes(book.grade) || !['上册', '下册'].includes(book.semester)
+    if (ids.has(book.id) || ![1, 2, 3, 4, 5, 6, 7].includes(book.grade) || !['上册', '下册'].includes(book.semester)
       || book.schoolSystem !== '5-4' || !book.sourceUrl.startsWith('https://') || book.inventory.fullCoverage)
       throw Error(`Invalid lower-primary book: ${book.id}`);
     ids.add(book.id);

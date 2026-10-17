@@ -2145,6 +2145,237 @@
         "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=a953eeec-db0c-4c8b-860f-aa94f4727b6b&catalogType=tchMaterial&subCatalog=tchMaterial"
       ],
       "note": "原书作者／出处注释核实；作品年代与书中人物所处时代分别判断。"
+    },
+    {
+      "id": "sh54-yongxue",
+      "title": "咏雪",
+      "author": "刘义庆",
+      "dynasty": "南朝·宋",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "《世说新语》由南朝宋刘义庆组织编写；此为编纂时代，不是故事人物所处朝代。"
+    },
+    {
+      "id": "sh54-chentaiqiu",
+      "title": "陈太丘与友期行",
+      "author": "刘义庆",
+      "dynasty": "南朝·宋",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "《世说新语》由南朝宋刘义庆组织编写；此为编纂时代，不是故事人物所处朝代。"
+    },
+    {
+      "id": "sh54-emei-moon",
+      "title": "峨眉山月歌",
+      "author": "李白",
+      "dynasty": "唐代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处与时代注释核对。"
+    },
+    {
+      "id": "sh54-jiangnan-liguinian",
+      "title": "江南逢李龟年",
+      "author": "杜甫",
+      "dynasty": "唐代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处与时代注释核对。"
+    },
+    {
+      "id": "sh54-xingjun-jiuri",
+      "title": "行军九日思长安故园",
+      "author": "岑参",
+      "dynasty": "唐代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处与时代注释核对。"
+    },
+    {
+      "id": "sh54-yeshang-shoujiang",
+      "title": "夜上受降城闻笛",
+      "author": "李益",
+      "dynasty": "唐代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处与时代注释核对。"
+    },
+    {
+      "id": "sh54-chuanjing",
+      "title": "穿井得一人",
+      "author": "《吕氏春秋》",
+      "dynasty": "先秦",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "《吕氏春秋》由战国末吕不韦集合门客编写；沿用原书出处署名。"
+    },
+    {
+      "id": "sh54-qiren-youtian",
+      "title": "杞人忧天",
+      "author": "《列子》",
+      "dynasty": "成书时代有争议",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书《列子》注：旧题列御寇著，据后人考证可能为晋代人作品；成书时代有争议，不按故事发生时代标为战国。"
+    },
+    {
+      "id": "sh54-qiuci-one",
+      "title": "秋词（其一）",
+      "author": "刘禹锡",
+      "dynasty": "唐代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处与时代注释核对。"
+    },
+    {
+      "id": "sh54-november-storm",
+      "title": "十一月四日风雨大作（其二）",
+      "author": "陆游",
+      "dynasty": "南宋",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处与时代注释核对。"
+    },
+    {
+      "id": "sh54-tongguan",
+      "title": "潼关",
+      "author": "谭嗣同",
+      "dynasty": "清代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处与时代注释核对。"
+    },
+    {
+      "id": "sh54-sunquan-quanxue",
+      "title": "孙权劝学",
+      "author": "《资治通鉴》",
+      "dynasty": "北宋",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "《资治通鉴》由北宋司马光主持编纂；朝代表示编纂时代，不是孙权、吕蒙的生活时代。"
+    },
+    {
+      "id": "sh54-maiyouweng",
+      "title": "卖油翁",
+      "author": "欧阳修",
+      "dynasty": "北宋",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处与时代注释核对。"
+    },
+    {
+      "id": "sh54-zhuliguan",
+      "title": "竹里馆",
+      "author": "王维",
+      "dynasty": "唐代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处与时代注释核对。"
+    },
+    {
+      "id": "sh54-chunye-luocheng",
+      "title": "春夜洛城闻笛",
+      "author": "李白",
+      "dynasty": "唐代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处与时代注释核对。"
+    },
+    {
+      "id": "sh54-fengrujingshi",
+      "title": "逢入京使",
+      "author": "岑参",
+      "dynasty": "唐代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处与时代注释核对。"
+    },
+    {
+      "id": "sh54-wanchun",
+      "title": "晚春",
+      "author": "韩愈",
+      "dynasty": "唐代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处与时代注释核对。"
+    },
+    {
+      "id": "sh54-huoban",
+      "title": "活板",
+      "author": "沈括",
+      "dynasty": "北宋",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处与时代注释核对。"
+    },
+    {
+      "id": "sh54-jiasheng",
+      "title": "贾生",
+      "author": "李商隐",
+      "dynasty": "唐代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处与时代注释核对。"
+    },
+    {
+      "id": "sh54-guosongyuan",
+      "title": "过松源晨炊漆公店（其五）",
+      "author": "杨万里",
+      "dynasty": "南宋",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处与时代注释核对。"
+    },
+    {
+      "id": "sh54-yueke",
+      "title": "约客",
+      "author": "赵师秀",
+      "dynasty": "南宋",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处与时代注释核对。"
     }
   ]
 }
