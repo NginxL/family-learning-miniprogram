@@ -4,6 +4,7 @@ interface CurriculumSlot {
   semester: string; stage: 'primary' | 'junior'; fullCoverage: boolean;
   contentBookId: string; verifiedCount: number; contentNote: string; mappingNote: string;
   practiceCount: number; textbookCount: number; availableUnits: number;
+  editionReview?: { checkedAt: string; summary: string; pending: string; url: string };
   references: Array<{ title: string; publisher: string; url: string; period: string; verification: string }>;
 }
 declare const resources: {

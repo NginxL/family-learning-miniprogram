@@ -39,7 +39,9 @@ test('grade-four Chinese keeps the 2024/2019 editions distinct and verifies exac
   assert.equal(a.units[0].recognition[0], '盐薄隆鼎沸浩崩霎余漫吼');
   assert.match(b.units[7].writing.at(-1), /搂颊拆$/);
   assert.ok(b.units[1].writing.some(row => row.includes('捷避敌')), '避 and 辟 are distinct source characters');
-  assert.match(resources.curriculum.slots.find(slot => slot.contentBookId === b.id).contentNote, /历史审定样本/);
+  const slot = resources.curriculum.slots.find(slot => slot.contentBookId === b.id);
+  assert.match(slot.contentNote, /2019审定原书/);
+  assert.match(slot.editionReview.summary, /新版原书待核实/);
 });
 
 test('twenty-three grade-four ancient works have observed author/opening-line identities and avoid duplicate national works', () => {

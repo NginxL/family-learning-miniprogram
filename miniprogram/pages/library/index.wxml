@@ -68,6 +68,13 @@
     <picker range="{{curriculumGradeLabels}}" value="{{curriculumGradeIndex}}" bindchange="changeCurriculumGrade"><view class="picker">{{curriculumGradeLabels[curriculumGradeIndex]}} ▾</view></picker>
     <view wx:for="{{curriculumSlots}}" wx:key="id" class="card">
       <view class="row"><view class="rule-title">{{item.subjectLabel}} · {{item.semester}}</view><view class="pill">{{item.verifiedCount ? '部分入库' : '知识待核验'}}</view></view>
+      <view wx:if="{{item.editionReview}}" class="notice">
+        <view>旧版参考 · 新版待核实</view>
+        <view class="muted">核验于 {{item.editionReview.checkedAt}}</view>
+        <view class="plan-help">{{item.editionReview.summary}}</view>
+        <view class="muted plan-help">{{item.editionReview.pending}}</view>
+        <button class="quiet" data-url="{{item.editionReview.url}}" bindtap="copySource">复制版本核验依据</button>
+      </view>
       <view class="body">{{item.contentNote}}</view>
       <view wx:for="{{item.references}}" wx:for-item="reference" wx:key="title" class="plan-help">
         <view>{{reference.title}}</view><view class="muted">{{reference.publisher}} · {{reference.period}}</view>

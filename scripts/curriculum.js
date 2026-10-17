@@ -5,10 +5,10 @@ const lowerPrimary = require('./lower-primary');
 
 function inventoryNote(book) {
   if (book.subject === 'chinese') return book.inventory.recognitionComplete && book.inventory.writingComplete
-    ? `${book.editionStatus === 'historical_reference' ? '历史审定样本，新版下册待核实；' : ''}识字表 ${book.inventory.recognitionCount} 字、写字表 ${book.inventory.writingCount} 字已整理（含另列多音字复习）；`
+    ? `${book.editionStatus === 'historical_reference' ? '2019审定原书；' : ''}识字表 ${book.inventory.recognitionCount} 字、写字表 ${book.inventory.writingCount} 字已整理（含另列多音字复习）；`
     : book.grade >= 6 ? '课内字词与文言知识尚未逐课列全；' : '完整识字表、写字表待原页核实；';
   if (book.inventory.vocabularyListComplete) return `原书 ${book.inventory.vocabularyListName} ${book.inventory.vocabularyCount} 个单元词项已逐项核对（含跨单元复现）；`;
-  if (book.inventory.vocabularyListName) return `${book.editionStatus === 'historical_reference' ? '旧版参考，当前新版下册待核实；' : ''}官方配套音频 ${book.inventory.vocabularyListName} 已整理 ${book.inventory.vocabularyCount} 个单元词项（含跨单元复现）；纸本词表完整性待核验；`;
+  if (book.inventory.vocabularyListName) return `${book.editionStatus === 'historical_reference' ? '旧版试用本；' : ''}官方配套音频 ${book.inventory.vocabularyListName} 已整理 ${book.inventory.vocabularyCount} 个单元词项（含跨单元复现）；纸本词表完整性待核验；`;
   if (!book.inventory.wordBankComplete) return '目录主题词汇已整理，完整 Word bank 待核验；';
   return book.inventory.wordBankBasis === 'public_sample_pages'
     ? `公开样本 Word bank ${book.inventory.wordBankCount} 项已整理；与官方音频的差异已标注，学校纸本待确认；`
@@ -36,7 +36,10 @@ function curriculum(items) {
     const verifiedCount = selected.length;
     const practiceCount = selected.filter(item => item.gradeMappings?.some(mapping => mapping.bookId === book.id && mapping.mappingType === 'aligned_practice')).length;
     const availableUnits = lower ? lower.units.length : 0;
+    const review = lower?.editionStatus === 'historical_reference' ? lower.sourceEvidence.editionReview : undefined;
     return { ...slot, contentBookId: book?.id || '', verifiedCount,
+      ...(review ? { editionReview: { checkedAt: review.checkedAt, summary: review.summary, pending: review.pending,
+        url: review.checks.find(check => check.source === 'publisher_catalogue').url } } : {}),
       practiceCount, textbookCount: verifiedCount - practiceCount, availableUnits,
       contentStatus: verifiedCount ? 'partial' : 'pending',
       contentNote: lower ? `${lower.unitGroupingNote || `${availableUnits} 个单元`}已有配套学习内容：${verifiedCount - practiceCount} 项教材字词／古诗与 ${practiceCount} 项原创练习。${inventoryNote(lower)}不代表教材全部知识。`

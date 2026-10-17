@@ -759,9 +759,9 @@
       "subject": "chinese",
       "grade": 4,
       "semester": "下册",
-      "title": "语文四年级下册（五四制·2019审定样本）",
+      "title": "语文四年级下册（五四制·2019审定原书·旧版参考）",
       "publisher": "人民教育出版社",
-      "edition": "五四制官方电子样本；封面审定2019；ISBN及学校印次待确认；新版下册待核实",
+      "edition": "人教社五四制官方原书；封面审定2019；ISBN及学校印次待确认；新版下册待核实",
       "schoolSystem": "5-4",
       "sourceUrl": "https://book.pep.com.cn/1211001402192/",
       "sourceKind": "official_textbook",
@@ -857,12 +857,42 @@
           }
         ],
         "editionReview": {
-          "checkedAt": "2026-10-17",
+          "checkedAt": "2026-10-18",
           "status": "historical_reference_retained",
           "nationalCatalogueUrl": "https://basic.smartedu.cn/tchMaterial",
-          "finding": "国家平台所查五四制语文目录仍列2019审定下册，未确认对应的2022课标修订新版下册；不据此推断新版不存在。",
-          "pending": "2026学年第二学期（2027年春季）版本和学校实际用书待确认。"
-        }
+          "finding": "国家平台与人教社五四制语文目录仍列已核实的2019审定下册；未确认对应的2022课标修订新版原书，不据此推断新版不存在。",
+          "pending": "2026学年第二学期（2027年春季）新版原书和学校实际用书待确认。",
+          "replacementStatus": "new_edition_not_verified",
+          "summary": "国家平台与人教社目录仍列已核实的2019审定版；新版原书待核实。",
+          "checks": [
+            {
+              "source": "publisher_catalogue",
+              "url": "https://jc.pep.com.cn/",
+              "schoolSystem": "5-4",
+              "stage": "primary",
+              "subject": "chinese",
+              "grade": 4,
+              "semester": "下册",
+              "selection": "义务教育（五四学制） / 语文 / 4年级",
+              "finding": "所查年级各列上、下册两本；下册入口对应已核实的2019审定版。目录复查不等同于重新逐字核对全书。",
+              "listedBookUrl": "https://book.pep.com.cn/1211001402192/"
+            },
+            {
+              "source": "national_catalogue",
+              "url": "https://basic.smartedu.cn/tchMaterial",
+              "schoolSystem": "5-4",
+              "stage": "primary",
+              "subject": "chinese",
+              "grade": 4,
+              "semester": "下册",
+              "selection": "小学（五·四学制） / 语文 / 统编版 / 4年级",
+              "finding": "上册名称冠“根据2022年版课程标准修订”，下册未冠此说明，仍为现有旧版书目。",
+              "listedBookUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=750e0014-1488-4774-9f73-8781de6faf51&catalogType=tchMaterial&subCatalog=tchMaterial"
+            }
+          ],
+          "scope": "仅说明本轮所查官方目录和封面的观察结果，不能据此断言新版未出版，也不能推定学校采用。教材内容核对日期单独保留。"
+        },
+        "coverAuditYear": 2019
       },
       "inventory": {
         "recognitionCount": 250,
@@ -2951,15 +2981,43 @@
         "audioArchiveMd5": "60b24f52a3f950366ee7e2e01f590c55",
         "audioDownloadUrl": "https://mp3.bookmall.com.cn/book/download/54441653/22300.shtml",
         "editionReview": {
-          "checkedAt": "2026-10-17",
+          "checkedAt": "2026-10-18",
           "status": "historical_reference_retained",
           "nationalCatalogueUrl": "https://basic.smartedu.cn/tchMaterial",
-          "finding": "上海2026春季用书目录及2025学年第二学期配套资源仍列牛津上海版试用本；学校也可按目录选用新世纪版，不能推定明强小学或七宝三中的选用。",
-          "pending": "2026学年第二学期（2027年春季）版本和学校实际用书待确认。",
+          "finding": "上海教育出版社五四制英语目录的下册封面仍标牛津上海版（试用本），与2026春季市级目录相符；国家平台所查沪教版年级仅见新版上册。学校选用和2027春季版本不作推定。",
+          "pending": "2026学年第二学期（2027年春季）新版原书和学校实际用书待确认；完整纸本词表待核验。",
           "localCatalogueUrl": "https://edu.sh.gov.cn/cmsres/3a/3a555417ed2b47a38f730ca8c9f10881/9ba8430bf7e54d3e19fce9c17b45f5fb.pdf",
           "localCataloguePdfPage": 1,
           "resourcePeriod": "2025学年第二学期",
-          "calendarPeriod": "2026年春季"
+          "calendarPeriod": "2026年春季",
+          "replacementStatus": "new_edition_not_verified",
+          "summary": "上海教育出版社目录封面仍标牛津上海版（试用本）；新版原书待核实。",
+          "checks": [
+            {
+              "source": "publisher_catalogue",
+              "url": "https://www.seph.com.cn/textbook?textbookCategoryID=9",
+              "schoolSystem": "5-4",
+              "stage": "primary",
+              "subject": "english",
+              "grade": 4,
+              "semester": "下册",
+              "selection": "五·四学制 / 小学教材 / 英语 / 第1页",
+              "finding": "下册封面可见“牛津上海版”“试用本”；书卡未提供可核对的新版正文。封面资源路径中的上传日期不是教材出版或审核年份。",
+              "listedCoverUrl": "https://3wm.seph.com.cn/Uploads/2026-04-15/9f59b66e6b6547cbaf90207f22aef39e.png"
+            },
+            {
+              "source": "national_catalogue",
+              "url": "https://basic.smartedu.cn/tchMaterial",
+              "schoolSystem": "5-4",
+              "stage": "primary",
+              "subject": "english",
+              "grade": 4,
+              "semester": "下册",
+              "selection": "小学（五·四学制） / 英语 / 沪教版 / 4年级",
+              "finding": "所查沪教版筛选结果仅见新版上册；未确认新版下册。没有将鲁科版、六三制或深圳版资料当作上海五四制证据。"
+            }
+          ],
+          "scope": "仅说明本轮所查官方目录和封面的观察结果，不能据此断言新版未出版，也不能推定学校采用。教材内容核对日期单独保留。"
         }
       },
       "inventory": {
