@@ -104,17 +104,17 @@ test('28 eighth-grade groups provide original reading, aligned questions and gra
 });
 
 test('all earlier IDs survive, while grouped Mengzi chapters do not change old snapshots or invent mastery', () => {
-  const poems = new Set(data.poems.map(p => p.id));
+  const poems = new Set([...data.poems, ...require('../data/catalogs/shanghai-54-grade9.json').poems].map(p => p.id));
   const current = require('../shared/knowledge-data.json');
-  const oldIds = current.filter(i => !poems.has(i.id) && !/^sh54-(zh|en)-8[ab]-/.test(i.id)
-    && !(i.id.startsWith('sh54-word-') && i.gradeMappings.every(m => m.grade === 8))).map(i => i.id).sort();
+  const oldIds = current.filter(i => !poems.has(i.id) && !/^sh54-(zh|en)-[89][ab]-/.test(i.id)
+    && !(i.id.startsWith('sh54-word-') && i.gradeMappings.every(m => m.grade >= 8))).map(i => i.id).sort();
   assert.equal(oldIds.length, 3395);
   assert.equal(crypto.createHash('sha256').update(oldIds.join('\n')).digest('hex'), 'c48c20847812c3244671fd5c8eb66bd31cc9785e8a1ab958c22a39a8dc593809');
   const parent = learning.catalogById.get(groupId), ledger = { records: {} };
   const old = { ...learning.taskFrom(parent, 'child', 'legacy', 'new'), detail: parent.detail.replace('故曰：', '故曰，'), done: true };
   const before = structuredClone(old); learning.recordTasks(ledger, [old], '2026-10-12');
   const status = learning.learningStatus(ledger).items;
-  assert.deepEqual(new Set(status.map(i => i.contentId)), new Set([groupId, ...chapterIds]));
+  assert.deepEqual(new Set(status.map(i => i.contentId)), new Set([groupId, ...parent.coveredContentIds]));
   assert.equal(learning.progress(ledger).grades[7].learned, 2);
   assert.equal(learning.progress(ledger).grades[7].mastered, 0);
   assert.ok(!status.some(i => i.contentId === 'sh54-mengzi-fugui'));

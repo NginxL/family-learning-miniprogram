@@ -2662,6 +2662,215 @@
         "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial"
       ],
       "note": "原书作者／出处及时代核对。"
+    },
+    {
+      "id": "sh54-yueye-yishedi",
+      "title": "月夜忆舍弟",
+      "author": "杜甫",
+      "dynasty": "唐代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者或出处与时代核对。"
+    },
+    {
+      "id": "sh54-changsha-jiayi",
+      "title": "长沙过贾谊宅",
+      "author": "刘长卿",
+      "dynasty": "唐代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者或出处与时代核对。"
+    },
+    {
+      "id": "sh54-zuoqian-languan",
+      "title": "左迁至蓝关示侄孙湘",
+      "author": "韩愈",
+      "dynasty": "唐代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者或出处与时代核对。"
+    },
+    {
+      "id": "sh54-shangshan-zaoxing",
+      "title": "商山早行",
+      "author": "温庭筠",
+      "dynasty": "唐代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者或出处与时代核对。"
+    },
+    {
+      "id": "sh54-xianyang-chengdonglou",
+      "title": "咸阳城东楼",
+      "author": "许浑",
+      "dynasty": "唐代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者或出处与时代核对。"
+    },
+    {
+      "id": "sh54-huanxisha-qinguan",
+      "title": "浣溪沙（漠漠轻寒上小楼）",
+      "author": "秦观",
+      "dynasty": "宋代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者或出处与时代核对。"
+    },
+    {
+      "id": "sh54-chounuer-boshan",
+      "title": "丑奴儿·书博山道中壁",
+      "author": "辛弃疾",
+      "dynasty": "宋代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者或出处与时代核对。"
+    },
+    {
+      "id": "sh54-chenshe-shijia",
+      "title": "陈涉世家（节选）",
+      "author": "司马迁",
+      "dynasty": "西汉",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者或出处与时代核对。"
+    },
+    {
+      "id": "sh54-mengzi-yuwosuoyu",
+      "title": "鱼我所欲也",
+      "author": "《孟子》",
+      "dynasty": "战国",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者或出处与时代核对。"
+    },
+    {
+      "id": "sh54-tangju-buru",
+      "title": "唐雎不辱使命",
+      "author": "《战国策》",
+      "dynasty": "西汉（编订）",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "《战国策》由西汉刘向据战国史料编订；朝代表示编订时代，不是故事发生年代。"
+    },
+    {
+      "id": "sh54-dingfengbo-sushi",
+      "title": "定风波（莫听穿林打叶声）",
+      "author": "苏轼",
+      "dynasty": "宋代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者或出处与时代核对。"
+    },
+    {
+      "id": "sh54-linjiangxian-chenyuyi",
+      "title": "临江仙·夜登小阁，忆洛中旧游",
+      "author": "陈与义",
+      "dynasty": "宋代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者或出处与时代核对。"
+    },
+    {
+      "id": "sh54-taichangyin-jiankang",
+      "title": "太常引·建康中秋夜为吕叔潜赋",
+      "author": "辛弃疾",
+      "dynasty": "宋代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者或出处与时代核对。"
+    },
+    {
+      "id": "sh54-huanxisha-nalan",
+      "title": "浣溪沙（身向云山那畔行）",
+      "author": "纳兰性德",
+      "dynasty": "清代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者或出处与时代核对。"
+    },
+    {
+      "id": "sh54-nananjun",
+      "title": "南安军",
+      "author": "文天祥",
+      "dynasty": "宋代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者或出处与时代核对。"
+    },
+    {
+      "id": "sh54-bieyunjian",
+      "title": "别云间",
+      "author": "夏完淳",
+      "dynasty": "明代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者或出处与时代核对。"
+    },
+    {
+      "id": "sh54-shanpoyang-lishan",
+      "title": "山坡羊·骊山怀古",
+      "author": "张养浩",
+      "dynasty": "元代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者或出处与时代核对。"
+    },
+    {
+      "id": "sh54-chaotianzi-yonglaba",
+      "title": "朝天子·咏喇叭",
+      "author": "王磐",
+      "dynasty": "明代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者或出处与时代核对。"
+    },
+    {
+      "id": "sh54-songdongyang-textbook",
+      "title": "送东阳马生序（教材全文）",
+      "author": "宋濂",
+      "dynasty": "明代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者或出处与时代核对。"
     }
   ]
 }

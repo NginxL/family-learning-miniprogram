@@ -1,0 +1,4138 @@
+{
+  "version": "2026-10-17",
+  "scope": "上海五四制九年级四册配套学习内容。语文原书47处古诗文映射、16篇原创练习；新版英语九上完整单元词表199项及原创练习；英语九下为上海2025第二学期官方配套试用本音频参考。学校实际印次、新版下册及逐课全量知识待确认。",
+  "books": [
+    {
+      "id": "chinese-9a",
+      "subject": "chinese",
+      "grade": 9,
+      "semester": "上册",
+      "title": "语文九年级上册（五四制·2022课标修订）",
+      "publisher": "人民教育出版社",
+      "edition": "国家平台五四制2022课标修订原书，封面2024审核通过；纸本ISBN、版次及学校印次待确认",
+      "editionStatus": "official_resource_verified",
+      "schoolSystem": "5-4",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourceKind": "official_textbook",
+      "checkedAt": "2026-10-17",
+      "schoolAdoption": "pending",
+      "sourcePageOffset": 7,
+      "cataloguePages": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "expectedUnitCount": 8,
+      "unitGroupingNote": "6个教材单元与2组课外古诗词诵读附录",
+      "sourceEvidence": {
+        "totalPdfPages": 170,
+        "copyrightPdfPage": 3,
+        "coverAuditYear": 2024,
+        "transcriptionSha256": "822d72d576f546184f730c12399f2c7b12b38645b9b418567bf3f466750ec880",
+        "checkedAgainst": "国家平台原书目录、相关正文页面图像与文字层交叉核对；印刷页与电子页分列。",
+        "pending": "学校用书印次、完整逐课字词和文言知识、全部阅读写作栏目待确认。",
+        "copyrightExcluded": [
+          "仅录公版古诗文、目录事实及原创学习辅助，不复制现代课文、现代注释和课后题。"
+        ]
+      },
+      "inventory": {
+        "unitPracticeComplete": true,
+        "fullTextAvailable": false,
+        "fullCoverage": false,
+        "recognitionComplete": false,
+        "writingComplete": false,
+        "characterInventoryStructure": "lesson_based"
+      },
+      "units": [
+        {
+          "id": "u1",
+          "number": 1,
+          "title": "诗歌的意象与朗诵",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "沁园春·雪",
+            "周总理，你在哪里",
+            "我爱这土地",
+            "乡愁",
+            "你是人间的四月天",
+            "我看"
+          ],
+          "sourcePrintPage": 1,
+          "sourcePdfPage": 8,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "灯下的一粒种子",
+            "body": "晚自习后，小宁看见值班室窗台上的豆苗。叶子朝着灯光，细茎却弯向窗外。她写道：“一粒种子，把黑夜顶开一道缝。”同桌认为这句话不够准确：种子怎么能顶开黑夜？小宁拿出观察笔记，说诗里并不是报告豆苗的生长速度，而是借那一点绿表达坚持。朗诵时，她没有每个字都加重，只在“顶开”处稍用力，然后停了一拍。听众仿佛看见微弱而不肯退缩的生命。她又删去结尾的“所以我们一定要坚强”，让画面留在最后。",
+            "question": "“顶开黑夜”为什么不宜当作科学描述？删去最后一句有什么效果？",
+            "answer": "它把抽象的困境化为可感的黑夜，用豆苗的生长表达坚持；删掉直白的结论，让意象自己传达情感，留下想象空间。",
+            "skill": "为身边物品写两行诗，圈出意象，并标一处停顿和重音。",
+            "titleReading": "dēng xià de yī lì zhǒng zi",
+            "detailReading": "wǎn zì xí hòu xiǎo níng kàn jiàn zhí bān shì chuāng tái shàng de dòu miáo yè zi cháo zhe dēng guāng xì jīng què wān xiàng chuāng wài tā xiě dào yī lì zhǒng zi bǎ hēi yè dǐng kāi yī dào fèng tóng zhuō rèn wéi zhè jù huà bù gòu zhǔn què zhǒng zi zěn me néng dǐng kāi hēi yè xiǎo níng ná chū guān chá bǐ jì shuō shī lǐ bìng bù shì bào gào dòu miáo de shēng zhǎng sù dù ér shì jiè nà yī diǎn lǜ biǎo dá jiān chí lǎng sòng shí tā méi yǒu měi gè zì dōu jiā zhòng zhǐ zài dǐng kāi chù shāo yòng lì rán hòu tíng le yī pāi tīng zhòng fǎng fú kàn jiàn wēi ruò ér bù kěn tuì suō de shēng mìng tā yòu shān qù jié wěi de suǒ yǐ wǒ men yī dìng yào jiān qiáng ràng huà miàn liú zài zuì hòu xiǎng yī xiǎng dǐng kāi hēi yè wèi shén me bù yí dàng zuò kē xué miáo shù shān qù zuì hòu yī jù yǒu shén me xiào guǒ cān kǎo tā bǎ chōu xiàng de kùn jìng huà wèi kě gǎn de hēi yè yòng dòu miáo de shēng zhǎng biǎo dá jiān chí shān diào zhí bái de jié lùn ràng yì xiàng zì jǐ chuán dá qíng gǎn liú xià xiǎng xiàng kōng jiān liàn yī liàn wèi shēn biān wù pǐn xiě liǎng xíng shī quān chū yì xiàng bìng biāo yī chù tíng dùn hé zhòng yīn"
+          },
+          "poems": []
+        },
+        {
+          "id": "u2",
+          "number": 2,
+          "title": "议论中的立场与依据",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "培养德智体美劳全面发展的社会主义建设者和接班人",
+            "中国人失掉自信力了吗",
+            "谈骨气",
+            "创造宣言"
+          ],
+          "sourcePrintPage": 21,
+          "sourcePdfPage": 28,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "劳动周的争论",
+            "body": "班级讨论劳动周安排，有人说：“只要学习成绩好，其他事情都可以让别人做。”小川没有立即指责发言者，而是先问：“这里的学习，是只指答题，还是也包括照顾自己和与人合作？”他记录了班里整理资料、分配工具、修补书角的过程，发现许多工作需要计划、沟通与动手尝试。于是他提出，劳动与书本学习可以相互促进。为了避免把一次活动说成普遍规律，他在稿子里补了一句：活动是否有效，还要看分工是否合理、是否有反思和改进。",
+            "question": "小川如何把争论变成可以讨论的问题？最后一句有什么作用？",
+            "answer": "他先明确“学习”的含义，再用具体活动说明观点。最后一句限定结论的条件，避免仅凭一个例子作绝对判断。",
+            "skill": "写一个明确观点，配两条相关依据，再补一个适用条件。",
+            "titleReading": "láo dòng zhōu de zhēng lùn",
+            "detailReading": "bān jí tǎo lùn láo dòng zhōu ān pái yǒu rén shuō zhǐ yào xué xí chéng jì hǎo qí tā shì qíng dōu kě yǐ ràng bié rén zuò xiǎo chuān méi yǒu lì jí zhǐ zé fā yán zhě ér shì xiān wèn zhè lǐ de xué xí shì zhǐ zhǐ dá tí hái shì yě bāo kuò zhào gù zì jǐ hé yǔ rén hé zuò tā jì lù le bān lǐ zhěng lǐ zī liào fēn pèi gōng jù xiū bǔ shū jiǎo de guò chéng fā xiàn xǔ duō gōng zuò xū yào jì huà gōu tōng yǔ dòng shǒu cháng shì yú shì tā tí chū láo dòng yǔ shū běn xué xí kě yǐ xiāng hù cù jìn wèi le bì miǎn bǎ yī cì huó dòng shuō chéng pǔ biàn guī lǜ tā zài gǎo zi lǐ bǔ le yī jù huó dòng shì fǒu yǒu xiào hái yào kàn fēn gōng shì fǒu hé lǐ shì fǒu yǒu fǎn sī hé gǎi jìn xiǎng yī xiǎng xiǎo chuān rú hé bǎ zhēng lùn biàn chéng kě yǐ tǎo lùn de wèn tí zuì hòu yī jù yǒu shén me zuò yòng cān kǎo tā xiān míng què xué xí de hán yì zài yòng jù tǐ huó dòng shuō míng guān diǎn zuì hòu yī jù xiàn dìng jié lùn de tiáo jiàn bì miǎn jǐn píng yī gè lì zi zuò jué duì pàn duàn liàn yī liàn xiě yī gè míng què guān diǎn pèi liǎng tiáo xiāng guān yī jù zài bǔ yī gè shì yòng tiáo jiàn"
+          },
+          "poems": []
+        },
+        {
+          "id": "u3",
+          "number": 3,
+          "title": "山水文章与忧乐情怀",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "岳阳楼记",
+            "醉翁亭记",
+            "湖心亭看雪",
+            "诗词三首"
+          ],
+          "sourcePrintPage": 49,
+          "sourcePdfPage": 56,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "堤上的两次停步",
+            "body": "春雨刚停，林禾第一次登上河堤，只顾拍下被夕阳照亮的水面。他在日记里写，今天的河很美。一个月后，他参加社区护河活动，再到同一处，看到志愿者沿岸拾捡塑料袋，也看到老人扶着栏杆慢慢行走。河面依旧明亮，他却留意起台阶是否湿滑、垃圾桶是否够用。回家后，他没有删掉原来那句赞美，而是在后面添了几行具体建议。风景没有忽然变成另一条河，变化的是看风景的人开始把别人的生活也放进视野。",
+            "question": "两次观察的重点有何变化？末句如何把写景与思考连接起来？",
+            "answer": "第一次偏重个人审美，第二次兼顾公共环境与他人需要；末句用观察者的变化说明责任意识，使议论来自叙事而非突然说教。",
+            "skill": "从一篇课内古文找出写景与议论衔接处，分别说明其作用。",
+            "titleReading": "dī shàng de liǎng cì tíng bù",
+            "detailReading": "chūn yǔ gāng tíng lín hé dì yī cì dēng shàng hé dī zhǐ gù pāi xià bèi xī yáng zhào liàng de shuǐ miàn tā zài rì jì lǐ xiě jīn tiān de hé hěn měi yī gè yuè hòu tā cān jiā shè qū hù hé huó dòng zài dào tóng yī chù kàn dào zhì yuàn zhě yán àn shí jiǎn sù liào dài yě kàn dào lǎo rén fú zhe lán gān màn màn xíng zǒu hé miàn yī jiù míng liàng tā què liú yì qǐ tái jiē shì fǒu shī huá lā jī tǒng shì fǒu gòu yòng huí jiā hòu tā méi yǒu shān diào yuán lái nà jù zàn měi ér shì zài hòu miàn tiān le jǐ xíng jù tǐ jiàn yì fēng jǐng méi yǒu hū rán biàn chéng lìng yī tiáo hé biàn huà de shì kàn fēng jǐng de rén kāi shǐ bǎ bié rén de shēng huó yě fàng jìn shì yě xiǎng yī xiǎng liǎng cì guān chá de zhòng diǎn yǒu hé biàn huà mò jù rú hé bǎ xiě jǐng yǔ sī kǎo lián jiē qǐ lái cān kǎo dì yī cì piān zhòng gè rén shěn měi dì èr cì jiān gù gōng gòng huán jìng yǔ tā rén xū yào mò jù yòng guān chá zhě de biàn huà shuō míng zé rèn yì shí shǐ yì lùn lái zì xù shì ér fēi tū rán shuō jiào liàn yī liàn cóng yī piān kè nèi gǔ wén zhǎo chū xiě jǐng yǔ yì lùn xián jiē chù fēn bié shuō míng qí zuò yòng"
+          },
+          "poems": [
+            {
+              "contentId": "moe-2022-zh-7-9-055",
+              "sourcePrintPage": 50,
+              "sourcePdfPage": 57,
+              "identityEvidence": {
+                "author": "范仲淹",
+                "firstLine": "庆历四年春",
+                "sourcePdfPage": 57
+              },
+              "textVariantNote": "原书采用“霪雨”；旧录异文保留在作品说明中。"
+            },
+            {
+              "contentId": "moe-2022-zh-7-9-056",
+              "sourcePrintPage": 53,
+              "sourcePdfPage": 60,
+              "identityEvidence": {
+                "author": "欧阳修",
+                "firstLine": "环滁皆山也",
+                "sourcePdfPage": 60
+              }
+            },
+            {
+              "contentId": "moe-2022-zh-7-9-060",
+              "sourcePrintPage": 56,
+              "sourcePdfPage": 63,
+              "identityEvidence": {
+                "author": "张岱",
+                "firstLine": "崇祯五年十二月",
+                "sourcePdfPage": 63
+              }
+            },
+            {
+              "contentId": "moe-2022-zh-7-9-012",
+              "sourcePrintPage": 58,
+              "sourcePdfPage": 65,
+              "identityEvidence": {
+                "author": "李白",
+                "firstLine": "金樽清酒斗十千",
+                "sourcePdfPage": 65
+              }
+            },
+            {
+              "contentId": "moe-2022-zh-7-9-018",
+              "sourcePrintPage": 59,
+              "sourcePdfPage": 66,
+              "identityEvidence": {
+                "author": "刘禹锡",
+                "firstLine": "巴山楚水凄凉地",
+                "sourcePdfPage": 66
+              }
+            },
+            {
+              "contentId": "moe-2022-zh-7-9-031",
+              "sourcePrintPage": 60,
+              "sourcePdfPage": 67,
+              "identityEvidence": {
+                "author": "苏轼",
+                "firstLine": "丙辰中秋",
+                "sourcePdfPage": 67
+              }
+            }
+          ]
+        },
+        {
+          "id": "u4",
+          "number": 4,
+          "title": "小说中的人物与社会环境",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "故乡",
+            "我的叔叔于勒",
+            "孤独之旅",
+            "蒲柳人家（节选）"
+          ],
+          "sourcePrintPage": 67,
+          "sourcePdfPage": 74,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "修伞的招牌",
+            "body": "旧街口挂着“修伞”两字，字迹已被雨水洗淡。小满嫌招牌难看，劝外公换一块发亮的新牌。外公只说，再等等。周日，她看见一个老人摸着墙走来，在牌子下停住，准确地敲了三下门。外公接过旧伞，没有提价钱。老人离开后，小满才知道，他视力很弱，已经凭这块牌子的位置找了十几年。傍晚，她把招牌擦干净，又在下面加了一盏小灯。街道照旧热闹，那两个不整齐的字却第一次让她觉得稳当。",
+            "question": "“再等等”和加灯两个细节分别表现什么？故事的转折发生在哪里？",
+            "answer": "“再等等”表现外公对老顾客习惯的体谅；加灯表现小满由只看外观转向理解他人。转折是她看见老人凭位置找到店铺并得知原因。",
+            "skill": "画出“误解—发现—变化”的情节线，再为结尾添加一个动作细节。",
+            "titleReading": "xiū sǎn de zhāo pái",
+            "detailReading": "jiù jiē kǒu guà zhe xiū sǎn liǎng zì zì jì yǐ bèi yǔ shuǐ xǐ dàn xiǎo mǎn xián zhāo pái nán kàn quàn wài gōng huàn yī kuài fā liàng de xīn pái wài gōng zhǐ shuō zài děng děng zhōu rì tā kàn jiàn yī gè lǎo rén mō zhe qiáng zǒu lái zài pái zi xià tíng zhù zhǔn què dì qiāo le sān xià mén wài gōng jiē guò jiù sǎn méi yǒu tí jià qián lǎo rén lí kāi hòu xiǎo mǎn cái zhī dào tā shì lì hěn ruò yǐ jīng píng zhè kuài pái zi de wèi zhì zhǎo le shí jǐ nián bàng wǎn tā bǎ zhāo pái cā gān jìng yòu zài xià miàn jiā le yī zhǎn xiǎo dēng jiē dào zhào jiù rè nào nà liǎng gè bù zhěng qí de zì què dì yī cì ràng tā jué de wěn dāng xiǎng yī xiǎng zài děng děng hé jiā dēng liǎng gè xì jié fēn bié biǎo xiàn shén me gù shì de zhuǎn zhé fā shēng zài nǎ lǐ cān kǎo zài děng děng biǎo xiàn wài gōng duì lǎo gù kè xí guàn de tǐ liàng jiā dēng biǎo xiàn xiǎo mǎn yóu zhǐ kàn wài guān zhuǎn xiàng lǐ jiě tā rén zhuǎn zhé shì tā kàn jiàn lǎo rén píng wèi zhì zhǎo dào diàn pù bìng dé zhī yuán yīn liàn yī liàn huà chū wù jiě fā xiàn biàn huà de qíng jié xiàn zài wèi jié wěi tiān jiā yī gè dòng zuò xì jié"
+          },
+          "poems": []
+        },
+        {
+          "id": "u5",
+          "number": 5,
+          "title": "独立思考与论证方法",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "想和做",
+            "怀疑与学问",
+            "就英法联军远征中国致巴特勒上尉的信",
+            "精神的三间小屋"
+          ],
+          "sourcePrintPage": 111,
+          "sourcePdfPage": 118,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "一次没有通过的实验",
+            "body": "小组想证明黑色纸杯一定比白色纸杯里的水升温快。他们把黑杯放在窗边，把白杯留在教室深处，十分钟后得到预想的结果。可小雨没有急着写结论：两个杯子受到的光照不同，水量也没有量过。伙伴认为重复实验会浪费时间，她便把“怀疑结果”改说为“检查造成结果的条件”。第二次，他们统一水量和位置，交换摆放次序，多测了几轮。记录并没有每次都一样，但大家终于明白，有用的怀疑需要能检验的问题，而不是一句“我不相信”。",
+            "question": "第一次实验为什么不能充分支持结论？“有用的怀疑”具备哪些条件？",
+            "answer": "光照和水量等条件没有控制，无法确定温度差只由颜色造成。有效质疑应指出具体问题，设计可重复的检验，并根据证据修正认识。",
+            "skill": "把一个“肯定如此”的生活说法改成可检验的问题，列出需保持一致的条件。",
+            "titleReading": "yī cì méi yǒu tōng guò de shí yàn",
+            "detailReading": "xiǎo zǔ xiǎng zhèng míng hēi sè zhǐ bēi yī dìng bǐ bái sè zhǐ bēi lǐ de shuǐ shēng wēn kuài tā men bǎ hēi bēi fàng zài chuāng biān bǎ bái bēi liú zài jiào shì shēn chù shí fēn zhōng hòu dé dào yù xiǎng de jié guǒ kě xiǎo yǔ méi yǒu jí zhe xiě jié lùn liǎng gè bēi zi shòu dào de guāng zhào bù tóng shuǐ liàng yě méi yǒu liàng guò huǒ bàn rèn wéi chóng fù shí yàn huì làng fèi shí jiān tā biàn bǎ huái yí jié guǒ gǎi shuō wèi jiǎn chá zào chéng jié guǒ de tiáo jiàn dì èr cì tā men tǒng yī shuǐ liàng hé wèi zhì jiāo huàn bǎi fàng cì xù duō cè le jǐ lún jì lù bìng méi yǒu měi cì dōu yī yàng dàn dà jiā zhōng yú míng bái yǒu yòng de huái yí xū yào néng jiǎn yàn de wèn tí ér bù shì yī jù wǒ bù xiāng xìn xiǎng yī xiǎng dì yī cì shí yàn wèi shén me bù néng chōng fèn zhī chí jié lùn yǒu yòng de huái yí jù bèi nǎ xiē tiáo jiàn cān kǎo guāng zhào hé shuǐ liàng děng tiáo jiàn méi yǒu kòng zhì wú fǎ què dìng wēn dù chà zhǐ yóu yán sè zào chéng yǒu xiào zhì yí yīng zhǐ chū jù tǐ wèn tí shè jì kě chóng fù de jiǎn yàn bìng gēn jù zhèng jù xiū zhèng rèn shí liàn yī liàn bǎ yī gè kěn dìng rú cǐ de shēng huó shuō fǎ gǎi chéng kě jiǎn yàn de wèn tí liè chū xū bǎo chí yī zhì de tiáo jiàn"
+          },
+          "poems": []
+        },
+        {
+          "id": "u6",
+          "number": 6,
+          "title": "历史叙事与劝谏表达",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "曹刿论战",
+            "邹忌讽齐王纳谏",
+            "陈涉世家",
+            "出师表",
+            "诗词曲五首"
+          ],
+          "sourcePrintPage": 135,
+          "sourcePdfPage": 142,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "先问一句为什么",
+            "body": "校刊准备增加彩页，编辑组长已经选好昂贵的纸张。阿远没有直接说这个决定不好，而是带来两份同样内容的试印页，请大家比较字迹与费用。有人喜欢更亮的颜色，有人发现普通纸也能清楚阅读。阿远接着问：“我们希望读者记住纸张，还是记住文章？”讨论因此回到办刊目的。组长决定保留少量展示页，把省下的钱用于多印一些赠给图书角。阿远在总结中写道，提出建议要有事实和分寸，接受建议也需要把共同目标放在个人面子前面。",
+            "question": "阿远使用了什么劝说策略？与直接否定相比有什么作用？",
+            "answer": "他先展示可比较的事实，再用问题引导大家回到共同目标；既提供判断依据，也减少对抗，使对方有重新考虑的空间。",
+            "skill": "比较《邹忌讽齐王纳谏》与《出师表》的劝说对象、依据和语气。",
+            "titleReading": "xiān wèn yī jù wèi shén me",
+            "detailReading": "xiào kān zhǔn bèi zēng jiā cǎi yè biān jí zǔ zhǎng yǐ jīng xuǎn hǎo áng guì de zhǐ zhāng ā yuǎn méi yǒu zhí jiē shuō zhè ge jué dìng bù hǎo ér shì dài lái liǎng fèn tóng yàng nèi róng de shì yìn yè qǐng dà jiā bǐ jiào zì jì yǔ fèi yòng yǒu rén xǐ huān gèng liàng de yán sè yǒu rén fā xiàn pǔ tōng zhǐ yě néng qīng chǔ yuè dú ā yuǎn jiē zhe wèn wǒ men xī wàng dú zhě jì zhù zhǐ zhāng hái shì jì zhù wén zhāng tǎo lùn yīn cǐ huí dào bàn kān mù dì zǔ zhǎng jué dìng bǎo liú shǎo liàng zhǎn shì yè bǎ shěng xià de qián yòng yú duō yìn yī xiē zèng gěi tú shū jiǎo ā yuǎn zài zǒng jié zhōng xiě dào tí chū jiàn yì yào yǒu shì shí hé fēn cùn jiē shòu jiàn yì yě xū yào bǎ gòng tóng mù biāo fàng zài gè rén miàn zi qián miàn xiǎng yī xiǎng ā yuǎn shǐ yòng le shén me quàn shuō cè lüè yǔ zhí jiē fǒu dìng xiāng bǐ yǒu shén me zuò yòng cān kǎo tā xiān zhǎn shì kě bǐ jiào de shì shí zài yòng wèn tí yǐn dǎo dà jiā huí dào gòng tóng mù biāo jì tí gōng pàn duàn yī jù yě jiǎn shǎo duì kàng shǐ duì fāng yǒu chóng xīn kǎo lǜ de kōng jiān liàn yī liàn bǐ jiào zōu jì fěng qí wáng nà jiàn yǔ chū shī biǎo de quàn shuō duì xiàng yī jù hé yǔ qì"
+          },
+          "poems": [
+            {
+              "contentId": "moe-2022-zh-7-9-042",
+              "sourcePrintPage": 136,
+              "sourcePdfPage": 143,
+              "identityEvidence": {
+                "author": "《左传》",
+                "firstLine": "十年春",
+                "sourcePdfPage": 143
+              },
+              "textVariantNote": "原书采用“未遍”；旧录异文保留在作品说明中。"
+            },
+            {
+              "contentId": "moe-2022-zh-7-9-047",
+              "sourcePrintPage": 139,
+              "sourcePdfPage": 146,
+              "identityEvidence": {
+                "author": "《战国策》",
+                "firstLine": "邹忌修八尺有余",
+                "sourcePdfPage": 146
+              }
+            },
+            {
+              "contentId": "sh54-chenshe-shijia",
+              "sourcePrintPage": 142,
+              "sourcePdfPage": 149,
+              "identityEvidence": {
+                "author": "司马迁",
+                "firstLine": "陈胜者",
+                "sourcePdfPage": 149
+              }
+            },
+            {
+              "contentId": "moe-2022-zh-7-9-048",
+              "sourcePrintPage": 146,
+              "sourcePdfPage": 153,
+              "identityEvidence": {
+                "author": "诸葛亮",
+                "firstLine": "先帝创业未半而中道崩殂",
+                "sourcePdfPage": 153
+              }
+            },
+            {
+              "contentId": "moe-2022-zh-7-9-003",
+              "sourcePrintPage": 150,
+              "sourcePdfPage": 157,
+              "identityEvidence": {
+                "author": "《乐府诗集》",
+                "firstLine": "十五从军征",
+                "sourcePdfPage": 157
+              },
+              "textVariantNote": "原页未署个人作者，出处为《乐府诗集》；沿用汉乐府作品身份。“饴”同“贻”；上下册标点有差异。"
+            },
+            {
+              "contentId": "moe-2022-zh-7-9-017",
+              "sourcePrintPage": 151,
+              "sourcePdfPage": 158,
+              "identityEvidence": {
+                "author": "岑参",
+                "firstLine": "北风卷地白草折",
+                "sourcePdfPage": 158
+              }
+            },
+            {
+              "contentId": "moe-2022-zh-7-9-034",
+              "sourcePrintPage": 151,
+              "sourcePdfPage": 158,
+              "identityEvidence": {
+                "author": "辛弃疾",
+                "firstLine": "何处望神州",
+                "sourcePdfPage": 158
+              }
+            },
+            {
+              "contentId": "moe-2022-zh-7-9-036",
+              "sourcePrintPage": 152,
+              "sourcePdfPage": 159,
+              "identityEvidence": {
+                "author": "文天祥",
+                "firstLine": "辛苦遭逢起一经",
+                "sourcePdfPage": 159
+              }
+            },
+            {
+              "contentId": "moe-2022-zh-7-9-038",
+              "sourcePrintPage": 153,
+              "sourcePdfPage": 160,
+              "identityEvidence": {
+                "author": "张养浩",
+                "firstLine": "峰峦如聚",
+                "sourcePdfPage": 160
+              }
+            }
+          ]
+        },
+        {
+          "id": "u7",
+          "number": 7,
+          "title": "课外古诗词诵读（一）",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "月夜忆舍弟",
+            "长沙过贾谊宅",
+            "左迁至蓝关示侄孙湘",
+            "商山早行"
+          ],
+          "sourcePrintPage": 65,
+          "sourcePdfPage": 72,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "两种“回家”",
+            "body": "读到旅途中的月、霜和关山，阿青在页边写了“想家”。老师请他再读一遍：有的诗担忧战乱中亲人的生死，有的诗借前人的遭遇表达自己的不平，还有的写人在远行时骤然触景。阿青发现，同样的“想家”并不能包办所有诗句。他重新做表格，一列记眼前景物，一列记诗人的处境，最后再写情感。表格不长，却迫使他给每个判断找依据。课后他写信给远方的姐姐，先说家门口的桂树开了，再问她最近是否顺利，没有只写一句笼统的“我很想你”。",
+            "question": "为什么不能把这些作品都只概括为“想家”？怎样使鉴赏判断更可靠？",
+            "answer": "相似景物背后的处境与情绪不同；应结合题目、背景和具体词句辨别亲情、身世之感与旅途愁绪，并为结论提供文本依据。",
+            "skill": "任选两首，列“景物—处境—情感”三栏，引用一处原诗作证。",
+            "titleReading": "liǎng zhǒng huí jiā",
+            "detailReading": "dú dào lǚ tú zhōng de yuè shuāng hé guān shān ā qīng zài yè biān xiě le xiǎng jiā lǎo shī qǐng tā zài dú yī biàn yǒu de shī dān yōu zhàn luàn zhōng qīn rén de shēng sǐ yǒu de shī jiè qián rén de zāo yù biǎo dá zì jǐ de bù píng hái yǒu de xiě rén zài yuǎn xíng shí zhòu rán chù jǐng ā qīng fā xiàn tóng yàng de xiǎng jiā bìng bù néng bāo bàn suǒ yǒu shī jù tā chóng xīn zuò biǎo gé yī liè jì yǎn qián jǐng wù yī liè jì shī rén de chǔ jìng zuì hòu zài xiě qíng gǎn biǎo gé bù zhǎng què pò shǐ tā gěi měi gè pàn duàn zhǎo yī jù kè hòu tā xiě xìn gěi yuǎn fāng de jiě jiě xiān shuō jiā mén kǒu de guì shù kāi le zài wèn tā zuì jìn shì fǒu shùn lì méi yǒu zhǐ xiě yī jù lǒng tǒng de wǒ hěn xiǎng nǐ xiǎng yī xiǎng wèi shén me bù néng bǎ zhè xiē zuò pǐn dōu zhǐ gài kuò wèi xiǎng jiā zěn yàng shǐ jiàn shǎng pàn duàn gèng kě kào cān kǎo xiāng sì jǐng wù bèi hòu de chǔ jìng yǔ qíng xù bù tóng yīng jié hé tí mù bèi jǐng hé jù tǐ cí jù biàn bié qīn qíng shēn shì zhī gǎn yǔ lǚ tú chóu xù bìng wèi jié lùn tí gōng wén běn yī jù liàn yī liàn rèn xuǎn liǎng shǒu liè jǐng wù chǔ jìng qíng gǎn sān lán yǐn yòng yī chù yuán shī zuò zhèng"
+          },
+          "poems": [
+            {
+              "contentId": "sh54-yueye-yishedi",
+              "sourcePrintPage": 65,
+              "sourcePdfPage": 72,
+              "identityEvidence": {
+                "author": "杜甫",
+                "firstLine": "戍鼓断人行",
+                "sourcePdfPage": 72
+              }
+            },
+            {
+              "contentId": "sh54-changsha-jiayi",
+              "sourcePrintPage": 65,
+              "sourcePdfPage": 72,
+              "identityEvidence": {
+                "author": "刘长卿",
+                "firstLine": "三年谪宦此栖迟",
+                "sourcePdfPage": 72
+              }
+            },
+            {
+              "contentId": "sh54-zuoqian-languan",
+              "sourcePrintPage": 66,
+              "sourcePdfPage": 73,
+              "identityEvidence": {
+                "author": "韩愈",
+                "firstLine": "一封朝奏九重天",
+                "sourcePdfPage": 73
+              }
+            },
+            {
+              "contentId": "sh54-shangshan-zaoxing",
+              "sourcePrintPage": 66,
+              "sourcePdfPage": 73,
+              "identityEvidence": {
+                "author": "温庭筠",
+                "firstLine": "晨起动征铎",
+                "sourcePdfPage": 73
+              }
+            }
+          ],
+          "displayLabel": "附录 · 课外古诗词诵读（一）"
+        },
+        {
+          "id": "u8",
+          "number": 8,
+          "title": "课外古诗词诵读（二）",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "咸阳城东楼",
+            "无题",
+            "浣溪沙（漠漠轻寒上小楼）",
+            "丑奴儿·书博山道中壁"
+          ],
+          "sourcePrintPage": 159,
+          "sourcePdfPage": 166,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "一页批注的变化",
+            "body": "小岑第一次读词，把所有写雨的句子都标成“悲伤”。同桌请她比较：有时雨只是背景，有时细雨的形态与人的情绪相连，还有时人物嘴上谈天气，心里却有难以言明的经历。她再次圈画动词、比喻和反复的句式，发现不能只凭一个意象就决定整首作品的意思。她把批注改成“我从这里推测……因为……”，又保留了一个问号。问号不是没有读懂的羞愧，而是提醒她继续寻找证据。读书笔记从整齐的标签，变成了与作品缓慢交谈的记录。",
+            "question": "把判断改成“因为……”有什么意义？问号在阅读中起什么作用？",
+            "answer": "它要求解释文本依据，避免把常见标签套在所有作品上；问号保留尚未解决的疑点，促使复读、比较和核实。",
+            "skill": "比较两首同名《浣溪沙》的作者与首句，说明不能只按词牌判断内容。",
+            "titleReading": "yī yè pī zhù de biàn huà",
+            "detailReading": "xiǎo cén dì yī cì dú cí bǎ suǒ yǒu xiě yǔ de jù zi dōu biāo chéng bēi shāng tóng zhuō qǐng tā bǐ jiào yǒu shí yǔ zhǐ shì bèi jǐng yǒu shí xì yǔ de xíng tài yǔ rén de qíng xù xiāng lián hái yǒu shí rén wù zuǐ shàng tán tiān qì xīn lǐ què yǒu nán yǐ yán míng de jīng lì tā zài cì quān huà dòng cí bǐ yù hé fǎn fù de jù shì fā xiàn bù néng zhǐ píng yī gè yì xiàng jiù jué dìng zhěng shǒu zuò pǐn de yì si tā bǎ pī zhù gǎi chéng wǒ cóng zhè lǐ tuī cè yīn wèi yòu bǎo liú le yī gè wèn hào wèn hào bù shì méi yǒu dú dǒng de xiū kuì ér shì tí xǐng tā jì xù xún zhǎo zhèng jù dú shū bǐ jì cóng zhěng qí de biāo qiān biàn chéng le yǔ zuò pǐn huǎn màn jiāo tán de jì lù xiǎng yī xiǎng bǎ pàn duàn gǎi chéng yīn wèi yǒu shén me yì yì wèn hào zài yuè dú zhōng qǐ shén me zuò yòng cān kǎo tā yāo qiú jiě shì wén běn yī jù bì miǎn bǎ cháng jiàn biāo qiān tào zài suǒ yǒu zuò pǐn shàng wèn hào bǎo liú shàng wèi jiě jué de yí diǎn cù shǐ fù dú bǐ jiào hé hé shí liàn yī liàn bǐ jiào liǎng shǒu tóng míng huàn xī shā de zuò zhě yǔ shǒu jù shuō míng bù néng zhǐ àn cí pái pàn duàn nèi róng"
+          },
+          "poems": [
+            {
+              "contentId": "sh54-xianyang-chengdonglou",
+              "sourcePrintPage": 159,
+              "sourcePdfPage": 166,
+              "identityEvidence": {
+                "author": "许浑",
+                "firstLine": "一上高城万里愁",
+                "sourcePdfPage": 166
+              }
+            },
+            {
+              "contentId": "moe-2022-zh-7-9-025",
+              "sourcePrintPage": 159,
+              "sourcePdfPage": 166,
+              "identityEvidence": {
+                "author": "李商隐",
+                "firstLine": "相见时难别亦难",
+                "sourcePdfPage": 166
+              }
+            },
+            {
+              "contentId": "sh54-huanxisha-qinguan",
+              "sourcePrintPage": 160,
+              "sourcePdfPage": 167,
+              "identityEvidence": {
+                "author": "秦观",
+                "firstLine": "漠漠轻寒上小楼",
+                "sourcePdfPage": 167
+              }
+            },
+            {
+              "contentId": "sh54-chounuer-boshan",
+              "sourcePrintPage": 160,
+              "sourcePdfPage": 167,
+              "identityEvidence": {
+                "author": "辛弃疾",
+                "firstLine": "少年不识愁滋味",
+                "sourcePdfPage": 167
+              }
+            }
+          ],
+          "displayLabel": "附录 · 课外古诗词诵读（二）"
+        }
+      ],
+      "replacesOutlineMappings": true
+    },
+    {
+      "id": "chinese-9b",
+      "subject": "chinese",
+      "grade": 9,
+      "semester": "下册",
+      "title": "语文九年级下册（五四制·2019审定样本）",
+      "publisher": "人民教育出版社",
+      "edition": "国家平台五四制2019审定原书；与2024审核上册分列，当前新版下册待核实；纸本ISBN、版次及学校印次待确认",
+      "editionStatus": "historical_reference",
+      "schoolSystem": "5-4",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourceKind": "official_textbook",
+      "checkedAt": "2026-10-17",
+      "schoolAdoption": "pending",
+      "sourcePageOffset": 7,
+      "cataloguePages": [
+        4,
+        5,
+        6
+      ],
+      "expectedUnitCount": 8,
+      "unitGroupingNote": "6个教材单元与2组课外古诗词诵读附录",
+      "sourceEvidence": {
+        "totalPdfPages": 158,
+        "copyrightPdfPage": 3,
+        "coverAuditYear": 2019,
+        "transcriptionSha256": "455df57bfb61e19e6fcefc842b4d49fa20b204857ee5ee5bcc75f6e607a99e8b",
+        "checkedAgainst": "国家平台原书目录、相关正文页面图像与文字层交叉核对；印刷页与电子页分列。",
+        "pending": "学校用书印次、完整逐课字词和文言知识、全部阅读写作栏目待确认。",
+        "copyrightExcluded": [
+          "仅录公版古诗文、目录事实及原创学习辅助，不复制现代课文、现代注释和课后题。"
+        ]
+      },
+      "inventory": {
+        "unitPracticeComplete": true,
+        "fullTextAvailable": false,
+        "fullCoverage": false,
+        "recognitionComplete": false,
+        "writingComplete": false,
+        "characterInventoryStructure": "lesson_based"
+      },
+      "units": [
+        {
+          "id": "u1",
+          "number": 1,
+          "title": "诗歌中的情感与表达",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "祖国啊，我亲爱的祖国",
+            "梅岭三章",
+            "短诗五首",
+            "海燕"
+          ],
+          "sourcePrintPage": 1,
+          "sourcePdfPage": 8,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "把“我们”读出来",
+            "body": "班级朗诵一首自写的小诗，诗里有“我们把散落的书重新排好”。第一次排练，大家齐声提高音量，听起来很响，却分不清哪一句最重要。小夏建议先讲讲诗里的“我们”是谁。有人想起管理员，有人想起捐书的邻居，也有人想起搬箱子的同学。第二次朗诵，大家在“散落”后稍停，在“重新”处加强语气，结尾反而放轻。声音仍来自几个人，听者却能想象一群陌生人怎样共同做成一件小事。诗歌的感情因此有了具体的来处。",
+            "question": "两次朗诵有什么不同？为什么理解“我们”比一味大声更重要？",
+            "answer": "第二次根据内容安排停连和重音；弄清抒情对象与情境，才能让声音准确传达共同参与的情感，大音量本身不能代替理解。",
+            "skill": "给一段诗歌标出抒情主体、情感变化和两处朗诵处理。",
+            "titleReading": "bǎ wǒ men dú chū lái",
+            "detailReading": "bān jí lǎng sòng yī shǒu zì xiě de xiǎo shī shī lǐ yǒu wǒ men bǎ sàn luò de shū chóng xīn pái hǎo dì yī cì pái liàn dà jiā qí shēng tí gāo yīn liàng tīng qǐ lái hěn xiǎng què fēn bù qīng nǎ yī jù zuì zhòng yào xiǎo xià jiàn yì xiān jiǎng jiǎng shī lǐ de wǒ men shì shuí yǒu rén xiǎng qǐ guǎn lǐ yuán yǒu rén xiǎng qǐ juān shū de lín jū yě yǒu rén xiǎng qǐ bān xiāng zi de tóng xué dì èr cì lǎng sòng dà jiā zài sàn luò hòu shāo tíng zài chóng xīn chù jiā qiáng yǔ qì jié wěi fǎn ér fàng qīng shēng yīn réng lái zì jǐ gè rén tīng zhě què néng xiǎng xiàng yī qún mò shēng rén zěn yàng gòng tóng zuò chéng yī jiàn xiǎo shì shī gē de gǎn qíng yīn cǐ yǒu le jù tǐ de lái chù xiǎng yī xiǎng liǎng cì lǎng sòng yǒu shén me bù tóng wèi shén me lǐ jiě wǒ men bǐ yī wèi dà shēng gèng zhòng yào cān kǎo dì èr cì gēn jù nèi róng ān pái tíng lián hé zhòng yīn nòng qīng shū qíng duì xiàng yǔ qíng jìng cái néng ràng shēng yīn zhǔn què chuán dá gòng tóng cān yù de qíng gǎn dà yīn liàng běn shēn bù néng dài tì lǐ jiě liàn yī liàn gěi yī duàn shī gē biāo chū shū qíng zhǔ tǐ qíng gǎn biàn huà hé liǎng chù lǎng sòng chǔ lǐ"
+          },
+          "poems": []
+        },
+        {
+          "id": "u2",
+          "number": 2,
+          "title": "小说的讽刺与人物命运",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "孔乙己",
+            "变色龙",
+            "溜索",
+            "蒲柳人家（节选）"
+          ],
+          "sourcePrintPage": 17,
+          "sourcePdfPage": 24,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "谁坐在前排",
+            "body": "活动开始前，工作人员看到一位穿旧外套的人，随手指向最后一排。后来得知那人是来分享经验的修复师，他立刻搬出椅子，把座位放到讲台边。修复师没有坐下，先请刚才一直站着的清洁工休息。小舟把这一幕写进故事，只描摹两次搬椅子的速度和工作人员脸上的笑，没有加一句“他很势利”。读给同学听时，大家却都明白了。小舟这才体会到，小说可以通过前后反差和动作细节呈现人物，判断未必需要由作者直接说出口。",
+            "question": "故事怎样产生讽刺效果？最后不直接评价有什么好处？",
+            "answer": "对同一人的前后态度因身份认识而变化，搬椅子的动作构成对比；让读者从情节自行判断，表达更含蓄，也更有说服力。",
+            "skill": "选择一个人物前后不同的言行，说明变化原因与作者态度。",
+            "titleReading": "shuí zuò zài qián pái",
+            "detailReading": "huó dòng kāi shǐ qián gōng zuò rén yuán kàn dào yī wèi chuān jiù wài tào de rén suí shǒu zhǐ xiàng zuì hòu yī pái hòu lái de zhī nà rén shì lái fēn xiǎng jīng yàn de xiū fù shī tā lì kè bān chū yǐ zi bǎ zuò wèi fàng dào jiǎng tái biān xiū fù shī méi yǒu zuò xià xiān qǐng gāng cái yī zhí zhàn zhe de qīng jié gōng xiū xī xiǎo zhōu bǎ zhè yī mù xiě jìn gù shì zhǐ miáo mó liǎng cì bān yǐ zi de sù dù hé gōng zuò rén yuán liǎn shàng de xiào méi yǒu jiā yī jù tā hěn shì lì dú gěi tóng xué tīng shí dà jiā què dōu míng bái le xiǎo zhōu zhè cái tǐ huì dào xiǎo shuō kě yǐ tōng guò qián hòu fǎn chà hé dòng zuò xì jié chéng xiàn rén wù pàn duàn wèi bì xū yào yóu zuò zhě zhí jiē shuō chū kǒu xiǎng yī xiǎng gù shì zěn yàng chǎn shēng fěng cì xiào guǒ zuì hòu bù zhí jiē píng jià yǒu shén me hǎo chù cān kǎo duì tóng yī rén de qián hòu tài dù yīn shēn fèn rèn shí ér biàn huà bān yǐ zi de dòng zuò gòu chéng duì bǐ ràng dú zhě cóng qíng jié zì xíng pàn duàn biǎo dá gèng hán xù yě gèng yǒu shuō fú lì liàn yī liàn xuǎn zé yī gè rén wù qián hòu bù tóng de yán xíng shuō míng biàn huà yuán yīn yǔ zuò zhě tài dù"
+          },
+          "poems": []
+        },
+        {
+          "id": "u3",
+          "number": 3,
+          "title": "人生抉择与古诗文志趣",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "鱼我所欲也",
+            "唐雎不辱使命",
+            "送东阳马生序",
+            "词四首"
+          ],
+          "sourcePrintPage": 47,
+          "sourcePdfPage": 54,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "保留没有满分的记录",
+            "body": "模拟展示前，小组发现实验记录里有一组失败数据。删掉它，图表就会整齐许多，也更容易得到掌声。组员把鼠标停在删除键上，小澄却问，这次展示的目的到底是证明自己从不出错，还是让别人理解实验？他们最终保留数据，并注明可能的误差来源。讲解时，小澄没有把选择说成轻而易举：他也担心成绩下降。但正因为承认这种担心，大家才更清楚，选择不是只喊一个正确口号，而是在利益冲突时仍愿意承担后果。",
+            "question": "小澄面对哪两种需要的冲突？为何写出担心能增强表达力量？",
+            "answer": "他在获得好评价与如实呈现结果之间作选择。承认顾虑让抉择更真实，说明坚持原则需要行动与承担，而不是没有代价的表态。",
+            "skill": "分别从《鱼我所欲也》和《送东阳马生序》找一句表达价值选择的话，解释依据。",
+            "titleReading": "bǎo liú méi yǒu mǎn fēn de jì lù",
+            "detailReading": "mó nǐ zhǎn shì qián xiǎo zǔ fā xiàn shí yàn jì lù lǐ yǒu yī zǔ shī bài shù jù shān diào tā tú biǎo jiù huì zhěng qí xǔ duō yě gèng róng yì dé dào zhǎng shēng zǔ yuán bǎ shǔ biāo tíng zài shān chú jiàn shàng xiǎo chéng què wèn zhè cì zhǎn shì de mù dì dào dǐ shì zhèng míng zì jǐ cóng bù chū cuò hái shì ràng bié rén lǐ jiě shí yàn tā men zuì zhōng bǎo liú shù jù bìng zhù míng kě néng de wù chā lái yuán jiǎng jiě shí xiǎo chéng méi yǒu bǎ xuǎn zé shuō chéng qīng ér yì jǔ tā yě dān xīn chéng jì xià jiàng dàn zhèng yīn wèi chéng rèn zhè zhǒng dān xīn dà jiā cái gèng qīng chǔ xuǎn zé bù shì zhǐ hǎn yī gè zhèng què kǒu hào ér shì zài lì yì chōng tū shí réng yuàn yì chéng dān hòu guǒ xiǎng yī xiǎng xiǎo chéng miàn duì nǎ liǎng zhǒng xū yào de chōng tū wèi hé xiě chū dān xīn néng zēng qiáng biǎo dá lì liàng cān kǎo tā zài huò dé hǎo píng jià yǔ rú shí chéng xiàn jié guǒ zhī jiàn zuò xuǎn zé chéng rèn gù lǜ ràng jué zé gèng zhēn shí shuō míng jiān chí yuán zé xū yào xíng dòng yǔ chéng dān ér bù shì méi yǒu dài jià de biǎo tài liàn yī liàn fēn bié cóng yú wǒ suǒ yù yě hé sòng dōng yáng mǎ shēng xù zhǎo yī jù biǎo dá jià zhí xuǎn zé de huà jiě shì yī jù"
+          },
+          "poems": [
+            {
+              "contentId": "sh54-mengzi-yuwosuoyu",
+              "sourcePrintPage": 48,
+              "sourcePdfPage": 55,
+              "identityEvidence": {
+                "author": "《孟子》",
+                "firstLine": "鱼",
+                "sourcePdfPage": 55
+              }
+            },
+            {
+              "contentId": "sh54-tangju-buru",
+              "sourcePrintPage": 51,
+              "sourcePdfPage": 58,
+              "identityEvidence": {
+                "author": "《战国策》",
+                "firstLine": "秦王使人谓安陵君曰：“寡人欲以五百里之地易安陵",
+                "sourcePdfPage": 58
+              }
+            },
+            {
+              "contentId": "sh54-songdongyang-textbook",
+              "sourcePrintPage": 54,
+              "sourcePdfPage": 61,
+              "identityEvidence": {
+                "author": "宋濂",
+                "firstLine": "余幼时即嗜学",
+                "sourcePdfPage": 61
+              },
+              "textVariantNote": "教材全文止于“岂知予者哉”；课标原节选止于“况才之过于余者乎”，两者范围不同。"
+            },
+            {
+              "contentId": "moe-2022-zh-7-9-027",
+              "sourcePrintPage": 57,
+              "sourcePdfPage": 64,
+              "identityEvidence": {
+                "author": "范仲淹",
+                "firstLine": "塞下秋来风景异",
+                "sourcePdfPage": 64
+              }
+            },
+            {
+              "contentId": "moe-2022-zh-7-9-030",
+              "sourcePrintPage": 58,
+              "sourcePdfPage": 65,
+              "identityEvidence": {
+                "author": "苏轼",
+                "firstLine": "老夫聊发少年狂",
+                "sourcePdfPage": 65
+              }
+            },
+            {
+              "contentId": "moe-2022-zh-7-9-035",
+              "sourcePrintPage": 59,
+              "sourcePdfPage": 66,
+              "identityEvidence": {
+                "author": "辛弃疾",
+                "firstLine": "醉里挑灯看剑",
+                "sourcePdfPage": 66
+              }
+            },
+            {
+              "contentId": "moe-2022-zh-7-9-040",
+              "sourcePrintPage": 60,
+              "sourcePdfPage": 67,
+              "identityEvidence": {
+                "author": "秋瑾",
+                "firstLine": "小住京华",
+                "sourcePdfPage": 67
+              }
+            }
+          ]
+        },
+        {
+          "id": "u4",
+          "number": 4,
+          "title": "读书方法与审美判断",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "谈读书",
+            "不求甚解",
+            "山水画的意境",
+            "无言之美",
+            "驱遣我们的想象"
+          ],
+          "sourcePrintPage": 71,
+          "sourcePdfPage": 78,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "同一幅画的三次观看",
+            "body": "展厅里有一幅淡墨山水，小言第一次经过，只觉得颜色不够鲜明。第二次，她按讲解员的提示，留意近处小舟与远山的比例。第三次，她站远一些，看见大片空白把江面和天空连在一起，人物反而显得更安静。回家后，她没有把“留白就一定高明”写进笔记，而是记录这幅画如何安排空间、引导视线。她明白，方法可以帮助观看，却不能变成给所有作品打分的公式。自己的感受也要靠具体画面支持，不能只借几个漂亮术语来证明懂艺术。",
+            "question": "三次观看如何改变理解？为什么不把“留白”当成通用评分公式？",
+            "answer": "观察从颜色转向构图和空间关系；艺术效果依赖整体安排，技巧名称不能代替具体分析，同一种手法在不同作品中可能作用不同。",
+            "skill": "选择一幅画或一段文字，用两处具体细节支持自己的审美判断。",
+            "titleReading": "tóng yī fú huà de sān cì guān kàn",
+            "detailReading": "zhǎn tīng lǐ yǒu yī fú dàn mò shān shuǐ xiǎo yán dì yī cì jīng guò zhǐ jué de yán sè bù gòu xiān míng dì èr cì tā àn jiǎng jiě yuán de tí shì liú yì jìn chù xiǎo zhōu yǔ yuǎn shān de bǐ lì dì sān cì tā zhàn yuǎn yī xiē kàn jiàn dà piàn kòng bái bǎ jiāng miàn hé tiān kōng lián zài yī qǐ rén wù fǎn ér xiǎn de gèng ān jìng huí jiā hòu tā méi yǒu bǎ liú bái jiù yī dìng gāo míng xiě jìn bǐ jì ér shì jì lù zhè fú huà rú hé ān pái kōng jiān yǐn dǎo shì xiàn tā míng bái fāng fǎ kě yǐ bāng zhù guān kàn què bù néng biàn chéng gěi suǒ yǒu zuò pǐn dǎ fēn de gōng shì zì jǐ de gǎn shòu yě yào kào jù tǐ huà miàn zhī chí bù néng zhǐ jiè jǐ gè piào liàng shù yǔ lái zhèng míng dǒng yì shù xiǎng yī xiǎng sān cì guān kàn rú hé gǎi biàn lǐ jiě wèi shén me bù bǎ liú bái dàng chéng tōng yòng píng fēn gōng shì cān kǎo guān chá cóng yán sè zhuǎn xiàng gòu tú hé kōng jiān guān xì yì shù xiào guǒ yī lài zhěng tǐ ān pái jì qiǎo míng chēng bù néng dài tì jù tǐ fēn xī tóng yī zhǒng shǒu fǎ zài bù tóng zuò pǐn zhōng kě néng zuò yòng bù tóng liàn yī liàn xuǎn zé yī fú huà huò yī duàn wén zì yòng liǎng chù jù tǐ xì jié zhī chí zì jǐ de shěn měi pàn duàn"
+          },
+          "poems": []
+        },
+        {
+          "id": "u5",
+          "number": 5,
+          "title": "戏剧冲突与舞台语言",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "屈原（节选）",
+            "天下第一楼（节选）",
+            "枣儿"
+          ],
+          "sourcePrintPage": 97,
+          "sourcePdfPage": 104,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "那把没有递出的钥匙",
+            "body": "排演时，小北扮演即将搬家的少年。剧本只有一句“钥匙还给你”，他却一直不知道怎样读。伙伴让他先想：人物是真的想告别，还是希望对方挽留？第二次，他走到门口又停下，手握钥匙，话说到“还”字时放慢。扮演邻居的同学伸出手，却没有立即接。两个人短暂的沉默让场面比争吵更紧张。老师提醒，停顿不是随意拖长时间，而要来自人物之间的关系与内心冲突。小北于是把这个动作写进舞台提示，并解释自己为何这样处理。",
+            "question": "这场戏的冲突体现在哪里？沉默为什么有表现力？",
+            "answer": "表面的归还钥匙与内心不愿离开的愿望冲突；动作和停顿让观众看到人物未说出的犹豫，但须有情节与关系依据。",
+            "skill": "把一个叙述片段改成三句对话和两条舞台提示，并说明冲突。",
+            "titleReading": "nà bǎ méi yǒu dì chū de yào shi",
+            "detailReading": "pái yǎn shí xiǎo běi bàn yǎn jí jiāng bān jiā de shào nián jù běn zhǐ yǒu yī jù yào shi huán gěi nǐ tā què yī zhí bù zhī dào zěn yàng dú huǒ bàn ràng tā xiān xiǎng rén wù shì zhēn de xiǎng gào bié hái shì xī wàng duì fāng wǎn liú dì èr cì tā zǒu dào mén kǒu yòu tíng xià shǒu wò yào shi huà shuō dào hái zì shí fàng màn bàn yǎn lín jū de tóng xué shēn chū shǒu què méi yǒu lì jí jiē liǎng gè rén duǎn zàn de chén mò ràng chǎng miàn bǐ zhēng chǎo gèng jǐn zhāng lǎo shī tí xǐng tíng dùn bù shì suí yì tuō cháng shí jiān ér yào lái zì rén wù zhī jiān de guān xì yǔ nèi xīn chōng tū xiǎo běi yú shì bǎ zhè ge dòng zuò xiě jìn wǔ tái tí shì bìng jiě shì zì jǐ wèi hé zhè yàng chǔ lǐ xiǎng yī xiǎng zhè chǎng xì de chōng tū tǐ xiàn zài nǎ lǐ chén mò wèi shén me yǒu biǎo xiàn lì cān kǎo biǎo miàn de guī huán yào shi yǔ nèi xīn bù yuàn lí kāi de yuàn wàng chōng tū dòng zuò hé tíng dùn ràng guān zhòng kàn dào rén wù wèi shuō chū de yóu yù dàn xū yǒu qíng jié yǔ guān xì yī jù liàn yī liàn bǎ yī gè xù shù piàn duàn gǎi chéng sān jù duì huà hé liǎng tiáo wǔ tái tí shì bìng shuō míng chōng tū"
+          },
+          "poems": []
+        },
+        {
+          "id": "u6",
+          "number": 6,
+          "title": "历史事件中的判断与担当",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "曹刿论战",
+            "邹忌讽齐王纳谏",
+            "陈涉世家",
+            "出师表",
+            "诗词曲五首"
+          ],
+          "sourcePrintPage": 123,
+          "sourcePdfPage": 130,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "决定之前",
+            "body": "校队落后一分，队长想立即换人。替补小方提醒，刚才连续失误并不全是一个人的问题：传球路线被对手看穿，场边还有风。他建议暂停，先调整配合，再根据下一轮的情况作决定。队长采纳了建议，比赛最终仍没有获胜。总结时，大家没有把建议说成失败的唯一原因，也没有因为敢发言就认定小方永远正确。他们逐项回看当时掌握的信息、可选方案和实际效果。结果固然重要，判断是否有依据、行动是否尽责，同样值得认真讨论。",
+            "question": "为什么不能只按输赢评价建议？怎样复盘才比较公允？",
+            "answer": "结果还受对手与环境等因素影响；应根据当时可得信息、方案依据和执行情况分析，区分合理决策与事后结果，避免简单归因。",
+            "skill": "从一篇历史叙事梳理“形势—判断—行动—结果”，指出人物判断的依据。",
+            "titleReading": "jué dìng zhī qián",
+            "detailReading": "xiào duì luò hòu yī fēn duì zhǎng xiǎng lì jí huàn rén tì bǔ xiǎo fāng tí xǐng gāng cái lián xù shī wù bìng bù quán shì yī gè rén de wèn tí chuán qiú lù xiàn bèi duì shǒu kàn chuān chǎng biān hái yǒu fēng tā jiàn yì zàn tíng xiān tiáo zhěng pèi hé zài gēn jù xià yī lún de qíng kuàng zuò jué dìng duì zhǎng cǎi nà le jiàn yì bǐ sài zuì zhōng réng méi yǒu huò shèng zǒng jié shí dà jiā méi yǒu bǎ jiàn yì shuō chéng shī bài de wéi yī yuán yīn yě méi yǒu yīn wèi gǎn fā yán jiù rèn dìng xiǎo fāng yǒng yuǎn zhèng què tā men zhú xiàng huí kàn dāng shí zhǎng wò de xìn xī kě xuǎn fāng àn hé shí jì xiào guǒ jié guǒ gù rán zhòng yào pàn duàn shì fǒu yǒu yī jù xíng dòng shì fǒu jìn zé tóng yàng zhí de rèn zhēn tǎo lùn xiǎng yī xiǎng wèi shén me bù néng zhǐ àn shū yíng píng jià jiàn yì zěn yàng fù pán cái bǐ jiào gōng yǔn cān kǎo jié guǒ hái shòu duì shǒu yǔ huán jìng děng yīn sù yǐng xiǎng yīng gēn jù dāng shí kě dé xìn xī fāng àn yī jù hé zhí xíng qíng kuàng fēn xī qū fēn hé lǐ jué cè yǔ shì hòu jié guǒ bì miǎn jiǎn dān guī yīn liàn yī liàn cóng yī piān lì shǐ xù shì shū lǐ xíng shì pàn duàn xíng dòng jié guǒ zhǐ chū rén wù pàn duàn de yī jù"
+          },
+          "poems": [
+            {
+              "contentId": "moe-2022-zh-7-9-042",
+              "sourcePrintPage": 124,
+              "sourcePdfPage": 131,
+              "identityEvidence": {
+                "author": "《左传》",
+                "firstLine": "十年春",
+                "sourcePdfPage": 131
+              },
+              "textVariantNote": "原书采用“未遍”；旧录异文保留在作品说明中。"
+            },
+            {
+              "contentId": "moe-2022-zh-7-9-047",
+              "sourcePrintPage": 127,
+              "sourcePdfPage": 134,
+              "identityEvidence": {
+                "author": "《战国策》",
+                "firstLine": "邹忌修八尺有余",
+                "sourcePdfPage": 134
+              }
+            },
+            {
+              "contentId": "sh54-chenshe-shijia",
+              "sourcePrintPage": 129,
+              "sourcePdfPage": 136,
+              "identityEvidence": {
+                "author": "司马迁",
+                "firstLine": "陈胜者",
+                "sourcePdfPage": 136
+              }
+            },
+            {
+              "contentId": "moe-2022-zh-7-9-048",
+              "sourcePrintPage": 133,
+              "sourcePdfPage": 140,
+              "identityEvidence": {
+                "author": "诸葛亮",
+                "firstLine": "先帝创业未半而中道崩殂",
+                "sourcePdfPage": 140
+              }
+            },
+            {
+              "contentId": "moe-2022-zh-7-9-003",
+              "sourcePrintPage": 137,
+              "sourcePdfPage": 144,
+              "identityEvidence": {
+                "author": "《乐府诗集》",
+                "firstLine": "十五从军征",
+                "sourcePdfPage": 144
+              },
+              "textVariantNote": "原页未署个人作者，出处为《乐府诗集》；沿用汉乐府作品身份。“饴”同“贻”；上下册标点有差异。"
+            },
+            {
+              "contentId": "moe-2022-zh-7-9-017",
+              "sourcePrintPage": 138,
+              "sourcePdfPage": 145,
+              "identityEvidence": {
+                "author": "岑参",
+                "firstLine": "北风卷地白草折",
+                "sourcePdfPage": 145
+              }
+            },
+            {
+              "contentId": "moe-2022-zh-7-9-034",
+              "sourcePrintPage": 138,
+              "sourcePdfPage": 145,
+              "identityEvidence": {
+                "author": "辛弃疾",
+                "firstLine": "何处望神州",
+                "sourcePdfPage": 145
+              }
+            },
+            {
+              "contentId": "moe-2022-zh-7-9-036",
+              "sourcePrintPage": 139,
+              "sourcePdfPage": 146,
+              "identityEvidence": {
+                "author": "文天祥",
+                "firstLine": "辛苦遭逢起一经",
+                "sourcePdfPage": 146
+              }
+            },
+            {
+              "contentId": "moe-2022-zh-7-9-038",
+              "sourcePrintPage": 140,
+              "sourcePdfPage": 147,
+              "identityEvidence": {
+                "author": "张养浩",
+                "firstLine": "峰峦如聚",
+                "sourcePdfPage": 147
+              }
+            }
+          ]
+        },
+        {
+          "id": "u7",
+          "number": 7,
+          "title": "课外古诗词诵读（一）",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "定风波（莫听穿林打叶声）",
+            "临江仙·夜登小阁，忆洛中旧游",
+            "太常引·建康中秋夜为吕叔潜赋",
+            "浣溪沙（身向云山那畔行）"
+          ],
+          "sourcePrintPage": 69,
+          "sourcePdfPage": 76,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "雨后的两个词",
+            "body": "读完一组词，小远在笔记上写了“旷达”和“感伤”。他原以为这两个词互相排斥，后来发现，一个人可以记得风雨，也可以选择从容向前；可以回忆热闹的往事，同时感到此刻的孤寂。老师让他找出作品中时间变化的词和景物转换的句子。他沿着这些线索重读，情绪不再是一张静止的标签，而像一条有起伏的路。写鉴赏时，他先描述变化，再作概括，并提醒自己：不能把作者的整个人生压缩成一次情绪，更不能把所有豪放词都读成同一种声音。",
+            "question": "怎样从文本发现情感变化？为什么先描述再概括更可靠？",
+            "answer": "留意时间词、场景转移、语气和动作；先分析具体句子，再归纳情感，可以避免标签先行，也能保留作品中复杂、转折的感受。",
+            "skill": "任选一首词，画出上片到下片的情感变化线，并用原句作证。",
+            "titleReading": "yǔ hòu de liǎng gè cí",
+            "detailReading": "dú wán yī zǔ cí xiǎo yuǎn zài bǐ jì shàng xiě le kuàng dá hé gǎn shāng tā yuán yǐ wéi zhè liǎng gè cí hù xiāng pái chì hòu lái fā xiàn yī gè rén kě yǐ jì de fēng yǔ yě kě yǐ xuǎn zé cóng róng xiàng qián kě yǐ huí yì rè nào de wǎng shì tóng shí gǎn dào cǐ kè de gū jì lǎo shī ràng tā zhǎo chū zuò pǐn zhōng shí jiān biàn huà de cí hé jǐng wù zhuǎn huàn de jù zi tā yán zhe zhè xiē xiàn suǒ chóng dú qíng xù bù zài shì yī zhāng jìng zhǐ de biāo qiān ér xiàng yī tiáo yǒu qǐ fú de lù xiě jiàn shǎng shí tā xiān miáo shù biàn huà zài zuò gài kuò bìng tí xǐng zì jǐ bù néng bǎ zuò zhě de zhěng gè rén shēng yā suō chéng yī cì qíng xù gèng bù néng bǎ suǒ yǒu háo fàng cí dōu dú chéng tóng yī zhǒng shēng yīn xiǎng yī xiǎng zěn yàng cóng wén běn fā xiàn qíng gǎn biàn huà wèi shén me xiān miáo shù zài gài kuò gèng kě kào cān kǎo liú yì shí jiān cí chǎng jǐng zhuǎn yí yǔ qì hé dòng zuò xiān fēn xī jù tǐ jù zi zài guī nà qíng gǎn kě yǐ bì miǎn biāo qiān xiān xíng yě néng bǎo liú zuò pǐn zhōng fù zá zhuǎn zhé de gǎn shòu liàn yī liàn rèn xuǎn yī shǒu cí huà chū shàng piàn dào xià piàn de qíng gǎn biàn huà xiàn bìng yòng yuán jù zuò zhèng"
+          },
+          "poems": [
+            {
+              "contentId": "sh54-dingfengbo-sushi",
+              "sourcePrintPage": 69,
+              "sourcePdfPage": 76,
+              "identityEvidence": {
+                "author": "苏轼",
+                "firstLine": "三月七日",
+                "sourcePdfPage": 76
+              }
+            },
+            {
+              "contentId": "sh54-linjiangxian-chenyuyi",
+              "sourcePrintPage": 69,
+              "sourcePdfPage": 76,
+              "identityEvidence": {
+                "author": "陈与义",
+                "firstLine": "忆昔午桥桥上饮",
+                "sourcePdfPage": 76
+              }
+            },
+            {
+              "contentId": "sh54-taichangyin-jiankang",
+              "sourcePrintPage": 70,
+              "sourcePdfPage": 77,
+              "identityEvidence": {
+                "author": "辛弃疾",
+                "firstLine": "一轮秋影转金波",
+                "sourcePdfPage": 77
+              }
+            },
+            {
+              "contentId": "sh54-huanxisha-nalan",
+              "sourcePrintPage": 70,
+              "sourcePdfPage": 77,
+              "identityEvidence": {
+                "author": "纳兰性德",
+                "firstLine": "身向云山那畔行",
+                "sourcePdfPage": 77
+              }
+            }
+          ],
+          "displayLabel": "附录 · 课外古诗词诵读（一）"
+        },
+        {
+          "id": "u8",
+          "number": 8,
+          "title": "课外古诗词诵读（二）",
+          "titleOrigin": "editorial_summary",
+          "lessons": [
+            "南安军",
+            "别云间",
+            "山坡羊·骊山怀古",
+            "朝天子·咏喇叭"
+          ],
+          "sourcePrintPage": 147,
+          "sourcePdfPage": 154,
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "笑声之后",
+            "body": "读到一段夸张的讽刺文字，小平先笑了：一个没有真本事的人，把自己的声音放得比所有人都大。老师请大家继续追问，谁被他的声音压住了，谁要为他的排场付出代价。教室安静下来，小平在笔记旁补了一句，讽刺的力量不只在可笑，还在可笑背后暴露的不合理。他随后读咏史诗，发现凝望废墟也不一定只是惋惜繁华消失，还可能追问权势、战争与普通人的处境。阅读由看热闹变成了辨认作者究竟在同情谁、批评谁。",
+            "question": "如何从“可笑”读到“可悲”？咏史或讽刺作品应关注哪些对象？",
+            "answer": "追问夸张行为造成的真实后果与受损者；辨别作者赞许、同情和批评的对象，并把具体形象与历史、社会处境联系起来。",
+            "skill": "分别用一句话说明一首咏史作品与一首讽刺作品的批评对象，附文本依据。",
+            "titleReading": "xiào shēng zhī hòu",
+            "detailReading": "dú dào yī duàn kuā zhāng de fěng cì wén zì xiǎo píng xiān xiào le yī gè méi yǒu zhēn běn shì de rén bǎ zì jǐ de shēng yīn fàng dé bǐ suǒ yǒu rén dōu dà lǎo shī qǐng dà jiā jì xù zhuī wèn shuí bèi tā de shēng yīn yā zhù le shuí yào wèi tā de pái chǎng fù chū dài jià jiào shì ān jìng xià lái xiǎo píng zài bǐ jì páng bǔ le yī jù fěng cì de lì liàng bù zhǐ zài kě xiào hái zài kě xiào bèi hòu bào lù de bù hé lǐ tā suí hòu dú yǒng shǐ shī fā xiàn níng wàng fèi xū yě bù yī dìng zhǐ shì wǎn xī fán huá xiāo shī hái kě néng zhuī wèn quán shì zhàn zhēng yǔ pǔ tōng rén de chǔ jìng yuè dú yóu kàn rè nào biàn chéng le biàn rèn zuò zhě jiū jìng zài tóng qíng shuí pī píng shuí xiǎng yī xiǎng rú hé cóng kě xiào dú dào kě bēi yǒng shǐ huò fěng cì zuò pǐn yīng guān zhù nǎ xiē duì xiàng cān kǎo zhuī wèn kuā zhāng xíng wéi zào chéng de zhēn shí hòu guǒ yǔ shòu sǔn zhě biàn bié zuò zhě zàn xǔ tóng qíng hé pī píng de duì xiàng bìng bǎ jù tǐ xíng xiàng yǔ lì shǐ shè huì chǔ jìng lián xì qǐ lái liàn yī liàn fēn bié yòng yī jù huà shuō míng yī shǒu yǒng shǐ zuò pǐn yǔ yī shǒu fěng cì zuò pǐn de pī píng duì xiàng fù wén běn yī jù"
+          },
+          "poems": [
+            {
+              "contentId": "sh54-nananjun",
+              "sourcePrintPage": 147,
+              "sourcePdfPage": 154,
+              "identityEvidence": {
+                "author": "文天祥",
+                "firstLine": "梅花南北路",
+                "sourcePdfPage": 154
+              }
+            },
+            {
+              "contentId": "sh54-bieyunjian",
+              "sourcePrintPage": 147,
+              "sourcePdfPage": 154,
+              "identityEvidence": {
+                "author": "夏完淳",
+                "firstLine": "三年羁旅客",
+                "sourcePdfPage": 154
+              }
+            },
+            {
+              "contentId": "sh54-shanpoyang-lishan",
+              "sourcePrintPage": 148,
+              "sourcePdfPage": 155,
+              "identityEvidence": {
+                "author": "张养浩",
+                "firstLine": "骊山四顾",
+                "sourcePdfPage": 155
+              }
+            },
+            {
+              "contentId": "sh54-chaotianzi-yonglaba",
+              "sourcePrintPage": 148,
+              "sourcePdfPage": 155,
+              "identityEvidence": {
+                "author": "王磐",
+                "firstLine": "喇叭",
+                "sourcePdfPage": 155
+              }
+            }
+          ],
+          "displayLabel": "附录 · 课外古诗词诵读（二）"
+        }
+      ],
+      "replacesOutlineMappings": true
+    },
+    {
+      "id": "english-9a-2024",
+      "subject": "english",
+      "grade": 9,
+      "semester": "上册",
+      "title": "英语九年级上册（五四制·2022课标修订）",
+      "publisher": "上海教育出版社",
+      "edition": "国家平台五四制2022课标修订原书，封面2024审核通过；纸本ISBN、版次及学校印次待确认",
+      "editionStatus": "official_resource_verified",
+      "schoolSystem": "5-4",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=1dcc5207-c993-09a4-09a8-079686747f38&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourceKind": "official_textbook",
+      "checkedAt": "2026-10-17",
+      "schoolAdoption": "pending",
+      "sourcePageOffset": 7,
+      "cataloguePages": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "expectedUnitCount": 6,
+      "unitGroupingNote": "6个教材单元",
+      "sourceEvidence": {
+        "totalPdfPages": 158,
+        "copyrightPdfPage": 3,
+        "coverAuditYear": 2024,
+        "transcriptionSha256": "ea539e4148bbac72009b94a959f53dd6feb90c1fb4ddc34a9c870ab096e89cb5",
+        "checkedAgainst": "国家平台原书目录、相关正文页面图像与文字层交叉核对；印刷页与电子页分列。",
+        "wordBankPrintedPagesVerified": true,
+        "vocabularyPrintPages": [
+          132,
+          133,
+          134,
+          135,
+          136
+        ],
+        "vocabularyPdfPages": [
+          139,
+          140,
+          141,
+          142,
+          143
+        ],
+        "scope": "完整 Words and expressions in each unit；仅计单元表，不重复计字母排序表。",
+        "pending": "专名、数词、不规则动词表及全部课文、听说语法栏目待整理；学校印次待确认。"
+      },
+      "inventory": {
+        "unitPracticeComplete": true,
+        "fullTextAvailable": false,
+        "fullCoverage": false,
+        "topicWordsComplete": false,
+        "wordBankComplete": false,
+        "vocabularyListName": "Words and expressions in each unit",
+        "vocabularyListComplete": true,
+        "vocabularyScope": "official_textbook_unit_vocabulary",
+        "vocabularyCount": 199
+      },
+      "units": [
+        {
+          "id": "u1",
+          "number": 1,
+          "title": "Teenage life",
+          "sourcePrintPage": 2,
+          "sourcePdfPage": 9,
+          "words": [
+            {
+              "text": "teenage",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "青少年的",
+              "additionalSense": true
+            },
+            {
+              "text": "counsellor",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "辅导员",
+              "additionalSense": true
+            },
+            {
+              "text": "pimple",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "粉刺",
+              "additionalSense": true
+            },
+            {
+              "text": "none",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "一个也没有",
+              "additionalSense": true
+            },
+            {
+              "text": "stress",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "压力",
+              "additionalSense": true
+            },
+            {
+              "text": "boss",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "老板",
+              "additionalSense": true
+            },
+            {
+              "text": "emotional",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "情绪上的",
+              "additionalSense": true
+            },
+            {
+              "text": "behavioural",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "行为方面的",
+              "additionalSense": true,
+              "textbookForm": "behavioural (AmE behavioral)"
+            },
+            {
+              "text": "emotion",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "情感",
+              "additionalSense": true
+            },
+            {
+              "text": "peer",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "同龄人",
+              "additionalSense": true
+            },
+            {
+              "text": "pressure",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "心理压力",
+              "additionalSense": true
+            },
+            {
+              "text": "fool",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "傻瓜；愚弄",
+              "additionalSense": true
+            },
+            {
+              "text": "Christmas",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "圣诞节",
+              "additionalSense": true
+            },
+            {
+              "text": "counsel",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "提供咨询",
+              "additionalSense": true
+            },
+            {
+              "text": "ugly",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "难看的",
+              "additionalSense": true
+            },
+            {
+              "text": "duckling",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "小鸭",
+              "additionalSense": true
+            },
+            {
+              "text": "tiny",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "极小的",
+              "additionalSense": true
+            },
+            {
+              "text": "speak highly of",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "高度赞扬",
+              "additionalSense": true
+            },
+            {
+              "text": "struggle",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "努力抗争",
+              "additionalSense": true
+            },
+            {
+              "text": "blow",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "打击；吹",
+              "additionalSense": true
+            },
+            {
+              "text": "pass away",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "去世",
+              "additionalSense": true
+            },
+            {
+              "text": "poverty",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "贫困",
+              "additionalSense": true
+            },
+            {
+              "text": "ballet",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "芭蕾舞",
+              "additionalSense": true
+            },
+            {
+              "text": "pay off",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "取得回报",
+              "additionalSense": true
+            },
+            {
+              "text": "continue",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "继续",
+              "additionalSense": true
+            },
+            {
+              "text": "appearance",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "外貌",
+              "additionalSense": true
+            },
+            {
+              "text": "lonely",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "孤独的",
+              "additionalSense": true
+            },
+            {
+              "text": "fairy tale",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "童话",
+              "additionalSense": true
+            },
+            {
+              "text": "bitter",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "痛苦的；苦的",
+              "additionalSense": true
+            },
+            {
+              "text": "admit",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "承认",
+              "additionalSense": true
+            },
+            {
+              "text": "reflection",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "反映；倒影",
+              "additionalSense": true
+            },
+            {
+              "text": "treasure",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "珍宝；珍视",
+              "additionalSense": true
+            },
+            {
+              "text": "national treasure",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "国宝",
+              "additionalSense": true
+            },
+            {
+              "text": "rehearse",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "排练",
+              "additionalSense": true
+            },
+            {
+              "text": "nervous",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "紧张的",
+              "additionalSense": true
+            }
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "A quieter kind of courage",
+            "body": "Maya felt nervous before the school play, although she knew every line.\nHer friends seemed confident, and she thought that she alone was afraid.\nDuring a rehearsal, she admitted how she felt and asked for a short break.\nTwo classmates said that they were worried too, so the group practised slowly together.\nMaya still felt anxious on the day, but the feeling no longer seemed like a secret failure.\nShe learned that asking for support could be a sign of courage.",
+            "translation": [
+              "玛雅虽然熟悉每句台词，上台前仍很紧张。",
+              "朋友们看上去很自信，她以为只有自己害怕。",
+              "排练时，她说出了自己的感受，并请求稍作休息。",
+              "两位同学说他们也担心，于是大家一起放慢速度练习。",
+              "演出当天玛雅仍感到焦虑，但不再把它当作见不得人的失败。",
+              "她懂得了寻求支持也可以是一种勇气。"
+            ],
+            "question": "1. Why did Maya think she was alone?\n2. What changed after she spoke?\n3. Find a linking verb followed by an adjective.",
+            "questionHint": "从人物的想法、行动和结果找依据。",
+            "answer": "1. Her friends seemed confident.\n2. Others shared their worries and practised with her.\n3. “felt nervous” / “seemed confident”.",
+            "grammar": "系动词后可接形容词：Maya felt nervous. 将主语换成复数，并把时间改为现在：They feel nervous."
+          }
+        },
+        {
+          "id": "u2",
+          "number": 2,
+          "title": "People and their jobs",
+          "sourcePrintPage": 18,
+          "sourcePdfPage": 25,
+          "words": [
+            {
+              "text": "requirement",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "必要条件",
+              "additionalSense": true
+            },
+            {
+              "text": "interior",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "内部的",
+              "additionalSense": true
+            },
+            {
+              "text": "architecture",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "建筑学",
+              "additionalSense": true
+            },
+            {
+              "text": "patient",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "患者；有耐心的",
+              "additionalSense": true
+            },
+            {
+              "text": "equipment",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "设备",
+              "additionalSense": true
+            },
+            {
+              "text": "delivery",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "递送",
+              "additionalSense": true
+            },
+            {
+              "text": "journalist",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "记者",
+              "additionalSense": true
+            },
+            {
+              "text": "chemistry",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "化学",
+              "additionalSense": true
+            },
+            {
+              "text": "interviewee",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "受访者",
+              "additionalSense": true
+            },
+            {
+              "text": "parcel",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "包裹",
+              "additionalSense": true
+            },
+            {
+              "text": "certification",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "认证证明",
+              "additionalSense": true
+            },
+            {
+              "text": "organise",
+              "vocabularyPrintPage": 132,
+              "vocabularyPdfPage": 139,
+              "meaning": "组织",
+              "additionalSense": true,
+              "textbookForm": "organise (AmE organize)"
+            },
+            {
+              "text": "standard",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "标准",
+              "additionalSense": true
+            },
+            {
+              "text": "restorer",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "修复师",
+              "additionalSense": true
+            },
+            {
+              "text": "restoration",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "修复",
+              "additionalSense": true
+            },
+            {
+              "text": "period",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "时期",
+              "additionalSense": true
+            },
+            {
+              "text": "due to",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "由于",
+              "additionalSense": true
+            },
+            {
+              "text": "worm",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "蠕虫",
+              "additionalSense": true
+            },
+            {
+              "text": "damp",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "潮湿的",
+              "additionalSense": true
+            },
+            {
+              "text": "professional",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "专业的",
+              "additionalSense": true
+            },
+            {
+              "text": "fix",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "修理",
+              "additionalSense": true
+            },
+            {
+              "text": "army",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "军队",
+              "additionalSense": true
+            },
+            {
+              "text": "race",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "竞赛",
+              "additionalSense": true
+            },
+            {
+              "text": "extra",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "额外的",
+              "additionalSense": true
+            },
+            {
+              "text": "background",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "背景",
+              "additionalSense": true
+            },
+            {
+              "text": "scientific",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "科学的",
+              "additionalSense": true
+            },
+            {
+              "text": "digitalisation",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "数字化",
+              "additionalSense": true,
+              "textbookForm": "digitalisation (AmE digitalization)"
+            },
+            {
+              "text": "unwilling",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "不情愿的",
+              "additionalSense": true
+            },
+            {
+              "text": "lawyer",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "律师",
+              "additionalSense": true
+            },
+            {
+              "text": "postman",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "邮递员",
+              "additionalSense": true
+            },
+            {
+              "text": "policewoman",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "女警察",
+              "additionalSense": true
+            },
+            {
+              "text": "dentist",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "牙医",
+              "additionalSense": true
+            }
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "The person behind the repair",
+            "body": "Our class met a restorer who repairs old wooden objects.\nShe showed us a chair that had belonged to a village school.\nBefore touching it, she studied photographs and wrote down every damaged part.\nA quick repair might look attractive, but the wrong material could harm the original wood.\nHer careful notes allowed the next worker to understand what she had changed.\nWe realised that patient research was as important as skilled hands.",
+            "translation": [
+              "我们班见到一位修复旧木器的修复师。",
+              "她给我们看了一把曾属于乡村学校的椅子。",
+              "动手前，她研究照片，记下每一处损坏。",
+              "快速修补也许好看，但错误材料会伤害原木。",
+              "细致记录让下一位工作人员知道她改动了什么。",
+              "我们意识到耐心研究与熟练手艺同样重要。"
+            ],
+            "question": "1. Why did the restorer study photographs?\n2. Who could benefit from her notes?\n3. What does “who” refer to in the first sentence?",
+            "questionHint": "注意修复前的准备和记录的用途。",
+            "answer": "1. To understand the object before repairing it.\n2. The next worker.\n3. A restorer.",
+            "grammar": "关系代词who指人，which可指物，that可指人或物。把“a worker / the worker keeps clear notes”合成一句：a worker who keeps clear notes。"
+          }
+        },
+        {
+          "id": "u3",
+          "number": 3,
+          "title": "Travellers’ tales",
+          "sourcePrintPage": 34,
+          "sourcePdfPage": 41,
+          "words": [
+            {
+              "text": "essential",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "必需品；必要的",
+              "additionalSense": true
+            },
+            {
+              "text": "wherever",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "无论哪里",
+              "additionalSense": true
+            },
+            {
+              "text": "passport",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "护照",
+              "additionalSense": true
+            },
+            {
+              "text": "toothbrush",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "牙刷",
+              "additionalSense": true
+            },
+            {
+              "text": "first-aid",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "急救的",
+              "additionalSense": true
+            },
+            {
+              "text": "kit",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "成套用品",
+              "additionalSense": true
+            },
+            {
+              "text": "adapter",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "转接器",
+              "additionalSense": true
+            },
+            {
+              "text": "mobile",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "移动的",
+              "additionalSense": true
+            },
+            {
+              "text": "mobile phone",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "手机",
+              "additionalSense": true
+            },
+            {
+              "text": "charger",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "充电器",
+              "additionalSense": true
+            },
+            {
+              "text": "abroad",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "在国外",
+              "additionalSense": true
+            },
+            {
+              "text": "pack",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "打包",
+              "additionalSense": true
+            },
+            {
+              "text": "worth",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "值得的",
+              "additionalSense": true
+            },
+            {
+              "text": "stall",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "货摊",
+              "additionalSense": true
+            },
+            {
+              "text": "empty",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "空的",
+              "additionalSense": true
+            },
+            {
+              "text": "stomach",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "胃",
+              "additionalSense": true
+            },
+            {
+              "text": "persuade",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "说服",
+              "additionalSense": true
+            },
+            {
+              "text": "expedition",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "探险旅行",
+              "additionalSense": true
+            },
+            {
+              "text": "souvenir",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "纪念品",
+              "additionalSense": true
+            },
+            {
+              "text": "inspiring",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "鼓舞人心的",
+              "additionalSense": true
+            },
+            {
+              "text": "define",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "界定",
+              "additionalSense": true
+            },
+            {
+              "text": "hesitate",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "犹豫",
+              "additionalSense": true
+            },
+            {
+              "text": "similarly",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "同样地",
+              "additionalSense": true
+            },
+            {
+              "text": "thought",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "想法",
+              "additionalSense": true
+            },
+            {
+              "text": "introduction",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "介绍",
+              "additionalSense": true
+            },
+            {
+              "text": "invitation",
+              "vocabularyPrintPage": 133,
+              "vocabularyPdfPage": 140,
+              "meaning": "邀请",
+              "additionalSense": true
+            },
+            {
+              "text": "regular",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "定期的",
+              "additionalSense": true
+            },
+            {
+              "text": "coffee",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "咖啡",
+              "additionalSense": true
+            },
+            {
+              "text": "shocked",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "震惊的",
+              "additionalSense": true
+            },
+            {
+              "text": "ease",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "自在；缓解",
+              "additionalSense": true
+            },
+            {
+              "text": "educate",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "教育",
+              "additionalSense": true
+            },
+            {
+              "text": "visible",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "可见的",
+              "additionalSense": true
+            },
+            {
+              "text": "manner",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "方式",
+              "additionalSense": true
+            },
+            {
+              "text": "unplanned",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "未计划的",
+              "additionalSense": true
+            },
+            {
+              "text": "plate",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "盘子",
+              "additionalSense": true
+            },
+            {
+              "text": "harmonious",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "和谐的",
+              "additionalSense": true
+            },
+            {
+              "text": "honour",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "尊敬；荣誉",
+              "additionalSense": true,
+              "textbookForm": "honour (AmE honor)"
+            },
+            {
+              "text": "memorable",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "难忘的",
+              "additionalSense": true
+            },
+            {
+              "text": "version",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "版本",
+              "additionalSense": true
+            },
+            {
+              "text": "sand",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "沙子",
+              "additionalSense": true
+            }
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "A change of route",
+            "body": "On a family trip, Ben learned that the bridge to the old market was closed.\nHe asked a local guide how to reach the market by another route.\nThe guide suggested a riverside path and explained where to cross safely.\nAlong the way, Ben noticed small workshops that were missing from his original plan.\nHe wrote down the route instead of relying on a photograph of an unfamiliar sign.\nThe delay became a chance to learn, because he asked questions before rushing ahead.",
+            "translation": [
+              "家庭旅行中，本得知通往旧市场的桥关闭了。",
+              "他问当地向导怎样换条路线到达市场。",
+              "向导建议沿河走，并说明在哪里可以安全过河。",
+              "途中，本发现了原计划里没有的小作坊。",
+              "他记下路线，没有只依靠一张看不懂的路牌照片。",
+              "因为他先问清楚再前进，这次延误成了学习机会。"
+            ],
+            "question": "1. Why did Ben need a new route?\n2. What made the delay useful?\n3. Find a question word followed by “to” and a verb.",
+            "questionHint": "寻找改变计划的原因和主动询问的结果。",
+            "answer": "1. The bridge was closed.\n2. He asked for help and discovered workshops.\n3. “how to reach” / “where to cross”.",
+            "grammar": "疑问词＋to do可作宾语等成分：He learned how to get there. 对比where to go与what to bring，分别表达地点与物品。"
+          }
+        },
+        {
+          "id": "u4",
+          "number": 4,
+          "title": "Folk customs",
+          "sourcePrintPage": 50,
+          "sourcePdfPage": 57,
+          "words": [
+            {
+              "text": "suit",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "西装",
+              "additionalSense": true
+            },
+            {
+              "text": "exhibition",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "展览",
+              "additionalSense": true
+            },
+            {
+              "text": "sandwich",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "三明治",
+              "additionalSense": true
+            },
+            {
+              "text": "biscuit",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "饼干",
+              "additionalSense": true
+            },
+            {
+              "text": "leather",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "皮革",
+              "additionalSense": true
+            },
+            {
+              "text": "blouse",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "女式衬衫",
+              "additionalSense": true
+            },
+            {
+              "text": "be all ears",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "专心倾听",
+              "additionalSense": true
+            },
+            {
+              "text": "lunar",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "月亮的",
+              "additionalSense": true
+            },
+            {
+              "text": "suppose",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "认为；假设",
+              "additionalSense": true
+            },
+            {
+              "text": "beer",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "啤酒",
+              "additionalSense": true
+            },
+            {
+              "text": "sausage",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "香肠",
+              "additionalSense": true
+            },
+            {
+              "text": "mirror",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "镜子；映照",
+              "additionalSense": true
+            },
+            {
+              "text": "exist",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "存在",
+              "additionalSense": true
+            },
+            {
+              "text": "identity",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "身份特征",
+              "additionalSense": true
+            },
+            {
+              "text": "unite",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "团结",
+              "additionalSense": true
+            },
+            {
+              "text": "identify",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "确认身份",
+              "additionalSense": true
+            },
+            {
+              "text": "identify with",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "认同",
+              "additionalSense": true
+            },
+            {
+              "text": "relate",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "联系",
+              "additionalSense": true
+            },
+            {
+              "text": "relate to",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "涉及；理解并共鸣",
+              "additionalSense": true
+            },
+            {
+              "text": "ancestor",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "祖先",
+              "additionalSense": true
+            },
+            {
+              "text": "value",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "重视；价值",
+              "additionalSense": true
+            },
+            {
+              "text": "achieve",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "实现",
+              "additionalSense": true
+            },
+            {
+              "text": "conclude",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "得出结论",
+              "additionalSense": true
+            },
+            {
+              "text": "die out",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "逐渐消失",
+              "additionalSense": true
+            },
+            {
+              "text": "spoon",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "勺子",
+              "additionalSense": true
+            }
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "A festival table",
+            "body": "At a neighbourhood festival, traditional dishes are prepared by several families.\nEach dish is introduced with a short story about its name or meaning.\nJia records different explanations instead of claiming that every family follows one rule.\nHer grandmother says that some customs change when people move to new places.\nThe display invites visitors to compare memories and ask respectful questions.\nA shared celebration can connect people without making their experiences identical.",
+            "translation": [
+              "社区节日里，几户家庭一起准备传统食物。",
+              "每道食物都配有一段关于名称或寓意的小故事。",
+              "佳佳记下不同解释，没有声称所有家庭都遵循同一规则。",
+              "奶奶说，人们迁居后，有些习俗会发生变化。",
+              "展览邀请来宾比较各自的记忆，并礼貌提问。",
+              "共同庆祝可以联系大家，而不必让每个人的经历完全相同。"
+            ],
+            "question": "1. What information accompanies each dish?\n2. Why does Jia record different explanations?\n3. Change “Families prepare the dishes” into the passive voice.",
+            "questionHint": "留意习俗中的共同点与差异。",
+            "answer": "1. A story about its name or meaning.\n2. Customs and family experiences can differ.\n3. The dishes are prepared by families.",
+            "grammar": "一般现在时被动语态：am/is/are＋过去分词。a dish is prepared与dishes are prepared须保持主谓一致。"
+          }
+        },
+        {
+          "id": "u5",
+          "number": 5,
+          "title": "Buildings",
+          "sourcePrintPage": 66,
+          "sourcePdfPage": 73,
+          "words": [
+            {
+              "text": "construct",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "建造",
+              "additionalSense": true
+            },
+            {
+              "text": "sphere",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "球体",
+              "additionalSense": true
+            },
+            {
+              "text": "CBD",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "中央商务区",
+              "additionalSense": true
+            },
+            {
+              "text": "locate",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "位于",
+              "additionalSense": true
+            },
+            {
+              "text": "steel",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "钢",
+              "additionalSense": true
+            },
+            {
+              "text": "limit",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "限制",
+              "additionalSense": true
+            },
+            {
+              "text": "combine",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "结合",
+              "additionalSense": true
+            },
+            {
+              "text": "modernist",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "现代主义者；现代主义的",
+              "additionalSense": true
+            },
+            {
+              "text": "feature",
+              "vocabularyPrintPage": 134,
+              "vocabularyPdfPage": 141,
+              "meaning": "特征",
+              "additionalSense": true
+            },
+            {
+              "text": "skylight",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "天窗",
+              "additionalSense": true
+            },
+            {
+              "text": "concrete",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "混凝土",
+              "additionalSense": true
+            },
+            {
+              "text": "pavilion",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "亭子",
+              "additionalSense": true
+            },
+            {
+              "text": "northern",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "北方的",
+              "additionalSense": true
+            },
+            {
+              "text": "inner",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "内部的",
+              "additionalSense": true
+            },
+            {
+              "text": "court",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "庭院",
+              "additionalSense": true
+            },
+            {
+              "text": "southern",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "南方的",
+              "additionalSense": true
+            },
+            {
+              "text": "outer",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "外部的",
+              "additionalSense": true
+            },
+            {
+              "text": "supreme",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "最高的",
+              "additionalSense": true
+            },
+            {
+              "text": "symbol",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "象征",
+              "additionalSense": true
+            },
+            {
+              "text": "emperor",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "皇帝",
+              "additionalSense": true
+            },
+            {
+              "text": "slippery",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "滑的",
+              "additionalSense": true
+            },
+            {
+              "text": "structure",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "结构",
+              "additionalSense": true
+            },
+            {
+              "text": "nail",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "钉子",
+              "additionalSense": true
+            },
+            {
+              "text": "yet",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "然而；还",
+              "additionalSense": true
+            },
+            {
+              "text": "upturned",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "向上翘的",
+              "additionalSense": true
+            },
+            {
+              "text": "dragon",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "龙",
+              "additionalSense": true
+            },
+            {
+              "text": "stone",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "石头",
+              "additionalSense": true
+            },
+            {
+              "text": "jade",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "玉",
+              "additionalSense": true
+            },
+            {
+              "text": "carve",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "雕刻",
+              "additionalSense": true
+            },
+            {
+              "text": "reflect",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "反映",
+              "additionalSense": true
+            },
+            {
+              "text": "golden",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "金色的",
+              "additionalSense": true
+            },
+            {
+              "text": "brick",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "砖",
+              "additionalSense": true
+            },
+            {
+              "text": "construction",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "建造",
+              "additionalSense": true
+            },
+            {
+              "text": "collection",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "收藏品",
+              "additionalSense": true
+            },
+            {
+              "text": "guy",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "家伙",
+              "additionalSense": true
+            },
+            {
+              "text": "suburb",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "郊区",
+              "additionalSense": true
+            },
+            {
+              "text": "environmentally friendly",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "环境友好的",
+              "additionalSense": true
+            }
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "An old hall with a new purpose",
+            "body": "The old village hall was built beside a narrow stream many years ago.\nWhen it became a library, its wooden roof was checked by an engineer.\nLarge windows were added, but the original stone entrance was kept.\nA ramp now helps visitors who find the steps difficult.\nStudents compared old photographs with the building and listed the reasons for each change.\nThey saw that protecting history could include making a place useful today.",
+            "translation": [
+              "多年前，村里的旧礼堂建在一条小溪旁。",
+              "它改作图书馆时，工程师检查了木屋顶。",
+              "人们增设了大窗户，同时保留原来的石门入口。",
+              "新坡道帮助上下台阶有困难的来访者。",
+              "学生把旧照片与建筑对照，列出每项改变的原因。",
+              "他们看到，保护历史也可以包括让建筑在今天发挥作用。"
+            ],
+            "question": "1. What part of the entrance was kept?\n2. What is the purpose of the ramp?\n3. Find two examples of the past passive.",
+            "questionHint": "区分保留的结构和新增的便利设施。",
+            "answer": "1. The original stone entrance.\n2. To help people who find steps difficult.\n3. “was built” and “were added”.",
+            "grammar": "一般过去时被动语态：was/were＋过去分词。把“They checked the roof”改为“The roof was checked”。"
+          }
+        },
+        {
+          "id": "u6",
+          "number": 6,
+          "title": "Pollution",
+          "sourcePrintPage": 82,
+          "sourcePdfPage": 89,
+          "words": [
+            {
+              "text": "pollution",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "污染",
+              "additionalSense": true
+            },
+            {
+              "text": "loss",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "损失",
+              "additionalSense": true
+            },
+            {
+              "text": "soil",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "土壤",
+              "additionalSense": true
+            },
+            {
+              "text": "cough",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "咳嗽",
+              "additionalSense": true
+            },
+            {
+              "text": "shark",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "鲨鱼",
+              "additionalSense": true
+            },
+            {
+              "text": "compare",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "比较",
+              "additionalSense": true
+            },
+            {
+              "text": "air conditioner",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "空调",
+              "additionalSense": true
+            },
+            {
+              "text": "road",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "道路",
+              "additionalSense": true
+            },
+            {
+              "text": "spill",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "洒出；泄漏",
+              "additionalSense": true
+            },
+            {
+              "text": "mine",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "矿井；采矿",
+              "additionalSense": true
+            },
+            {
+              "text": "solution",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "解决办法",
+              "additionalSense": true
+            },
+            {
+              "text": "break down",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "分解",
+              "additionalSense": true
+            },
+            {
+              "text": "harmful",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "有害的",
+              "additionalSense": true
+            },
+            {
+              "text": "solve",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "解决",
+              "additionalSense": true
+            },
+            {
+              "text": "remotely",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "远程地",
+              "additionalSense": true
+            },
+            {
+              "text": "operate",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "操控",
+              "additionalSense": true
+            },
+            {
+              "text": "vehicle",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "车辆",
+              "additionalSense": true
+            },
+            {
+              "text": "ROV",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "遥控潜水器",
+              "additionalSense": true
+            },
+            {
+              "text": "bottom",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "底部",
+              "additionalSense": true
+            },
+            {
+              "text": "stand out",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "突出",
+              "additionalSense": true
+            },
+            {
+              "text": "unnatural",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "不自然的",
+              "additionalSense": true
+            },
+            {
+              "text": "go after",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "追求",
+              "additionalSense": true
+            },
+            {
+              "text": "expert",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "专家",
+              "additionalSense": true
+            },
+            {
+              "text": "workshop",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "研讨会",
+              "additionalSense": true
+            },
+            {
+              "text": "university",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "大学",
+              "additionalSense": true
+            },
+            {
+              "text": "pick up",
+              "vocabularyPrintPage": 135,
+              "vocabularyPdfPage": 142,
+              "meaning": "拾起",
+              "additionalSense": true
+            },
+            {
+              "text": "blossom",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 143,
+              "meaning": "开花",
+              "additionalSense": true
+            },
+            {
+              "text": "peace",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 143,
+              "meaning": "和平",
+              "additionalSense": true
+            },
+            {
+              "text": "proposal",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 143,
+              "meaning": "提议",
+              "additionalSense": true
+            },
+            {
+              "text": "sincerely",
+              "vocabularyPrintPage": 136,
+              "vocabularyPdfPage": 143,
+              "meaning": "真诚地",
+              "additionalSense": true
+            }
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "Before calling it a solution",
+            "body": "A school team plans to reduce litter near the river.\nBins will be placed where visitors can reach them easily.\nThe amount of litter will be recorded before and after the change.\nThe students will also note the weather and the number of visitors.\nIf litter falls on one quiet day, they will not immediately call the project a success.\nThey want evidence from several weeks to show whether the solution works.",
+            "translation": [
+              "学校小组计划减少河边垃圾。",
+              "垃圾桶将放在游客容易够到的地方。",
+              "改动前后的垃圾量都将被记录。",
+              "学生还会记录天气和游客人数。",
+              "即使某个游客少的日子垃圾减少，他们也不会立刻宣布项目成功。",
+              "他们希望用数周的证据判断方案是否有效。"
+            ],
+            "question": "1. Where will the bins be placed?\n2. Why record the number of visitors?\n3. Turn “Students will record the results” into the passive voice.",
+            "questionHint": "考虑垃圾量变化还可能受哪些因素影响。",
+            "answer": "1. In places visitors can reach easily.\n2. Visitor numbers may affect litter levels.\n3. The results will be recorded by students.",
+            "grammar": "一般将来时被动语态：will be＋过去分词。否定形式为will not be recorded，不能省略be。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "english-9b-legacy",
+      "subject": "english",
+      "grade": 9,
+      "semester": "下册",
+      "title": "英语九年级下册（牛津上海版试用本·旧版参考）",
+      "publisher": "上海教育出版社",
+      "edition": "上海2025学年第二学期官方资源列示的牛津上海版试用本；ISBN 978-7-5444-1665-8；2026学年新版下册、纸本版次及学校印次待确认",
+      "editionStatus": "historical_reference",
+      "schoolSystem": "5-4",
+      "sourceUrl": "https://www.sh.smartedu.cn/teachingMaterial?type=8",
+      "sourceKind": "official_audio",
+      "checkedAt": "2026-10-17",
+      "schoolAdoption": "pending",
+      "expectedUnitCount": 5,
+      "unitGroupingNote": "5个单元；旧版音频参考",
+      "sourceEvidence": {
+        "officialResourceUrl": "https://mp3.bookmall.com.cn/",
+        "officialResourceCode": "54441665",
+        "officialResourceIsbn": "978-7-5444-1665-8",
+        "wordBankPrintedPagesVerified": false,
+        "scope": "官方4段配套音频核实单元名称、阅读页码播报和Word box词项；常用义与练习自编。",
+        "pending": "纸本目录、精确词形与词表完整性、2026学年新版下册及学校印次待确认；未以六三制教材替代。",
+        "audioFiles": [
+          {
+            "track": "1A",
+            "url": "https://mp3.bookmall.com.cn/book/download/54441665/21636.shtml",
+            "md5": "bf1cc53db0862659ffcafd59db0563c9",
+            "sha256": "a9de761a014400b1a6706dc3f860e509eaad3cce01ecd73121ad10e8ef46bff5"
+          },
+          {
+            "track": "1B",
+            "url": "https://mp3.bookmall.com.cn/book/download/54441665/21637.shtml",
+            "md5": "2fc1ee44868fbeacc7b194d44afd1d6a",
+            "sha256": "4208cf0fa472b1b401b7604d29f32d9f753a0468c4337a75f7f34975a85d253a"
+          },
+          {
+            "track": "2A",
+            "url": "https://mp3.bookmall.com.cn/book/download/54441665/21638.shtml",
+            "md5": "36d5b9803d2ea873eadb64dfb1e25c85",
+            "sha256": "1c1a2981f8d5ec1b37ac63a131ee2de1887cdecbcf98a7d6eed0075d26b0ec21"
+          },
+          {
+            "track": "2B",
+            "url": "https://mp3.bookmall.com.cn/book/download/54441665/21639.shtml",
+            "md5": "9cdb7082602e6db79ecf403aff13b742",
+            "sha256": "3af57752220d8356e6f9724721d1af3ec8518842f8db3f0d148ca612e74e5a96"
+          }
+        ],
+        "excludedUncertainForms": [
+          "Unit 1 compare to / compared to：录音词尾尚有疑义，不计入本次词项。",
+          "Unit 4 make-up / make up：仅凭音频不能确认词性与连字符，不计入本次词项。"
+        ]
+      },
+      "inventory": {
+        "topicWordsComplete": false,
+        "wordBankComplete": false,
+        "vocabularyListName": "Word box",
+        "vocabularyListComplete": false,
+        "vocabularyScope": "official_audio_unit_selection",
+        "unitPracticeComplete": true,
+        "fullTextAvailable": false,
+        "fullCoverage": false,
+        "vocabularyCount": 159
+      },
+      "units": [
+        {
+          "id": "u1",
+          "number": 1,
+          "title": "Saving the Earth",
+          "sourcePrintPage": 3,
+          "words": [
+            {
+              "text": "atmosphere",
+              "meaning": "大气",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "global",
+              "meaning": "全球的",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "global warming",
+              "meaning": "全球变暖",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "flood",
+              "meaning": "洪水",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "consumer",
+              "meaning": "消费者",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "various",
+              "meaning": "各种各样的",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "threat",
+              "meaning": "威胁",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "greenhouse",
+              "meaning": "温室",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "the greenhouse effect",
+              "meaning": "温室效应",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "writer",
+              "meaning": "作者",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "sunlight",
+              "meaning": "阳光",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "warmth",
+              "meaning": "温暖",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "lifeless",
+              "meaning": "没有生命的",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "carbon dioxide",
+              "meaning": "二氧化碳",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "fuel",
+              "meaning": "燃料",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "ozone",
+              "meaning": "臭氧",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "layer",
+              "meaning": "层",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "ozone layer",
+              "meaning": "臭氧层",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "occur",
+              "meaning": "发生",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "protective",
+              "meaning": "保护性的",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "burn up",
+              "meaning": "烧尽",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "CFC",
+              "meaning": "氯氟烃",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "spray can",
+              "meaning": "喷雾罐",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "destruction",
+              "meaning": "毁坏",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "soil",
+              "meaning": "土壤",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "erosion",
+              "meaning": "侵蚀",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "flooding",
+              "meaning": "洪水泛滥",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "massive",
+              "meaning": "巨大的",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "do with",
+              "meaning": "处理",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "billion",
+              "meaning": "十亿",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "environmentally friendly",
+              "meaning": "环境友好的",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "coal",
+              "meaning": "煤",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "compare",
+              "meaning": "比较",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "classical",
+              "meaning": "古典的",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "anywhere",
+              "meaning": "任何地方",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "grateful",
+              "meaning": "感激的",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1A面，Unit 1 Word box，播报page 17，597–785秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            }
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "Checking a green claim",
+            "body": "Lena saw a cup advertised as environmentally friendly.\nShe wanted to know what material it used and how long it could last.\nA label alone did not explain the energy needed to make or transport it.\nShe compared the new cup with the reusable one already in her bag.\nInstead of buying another cup immediately, she decided to keep using the old one.\nHer choice showed that reducing waste could begin with using what she already owned.",
+            "translation": [
+              "莉娜看到一款杯子宣传自己环保。",
+              "她想知道杯子的材料和使用寿命。",
+              "单凭标签无法说明生产和运输需要多少能源。",
+              "她把新品与包里已有的可重复使用杯子比较。",
+              "她没有立刻再买一个，而是决定继续使用旧杯子。",
+              "她的选择说明减少浪费可以从利用已有物品开始。"
+            ],
+            "question": "1. What information did Lena want?\n2. Why was the label not enough?\n3. What did she decide?",
+            "questionHint": "用文中事实解释选择，不能只重复“环保”标签。",
+            "answer": "1. The material and useful life.\n2. It did not explain production or transport energy.\n3. To keep using her old cup.",
+            "grammar": "自编复习提示：用instead of＋动名词表达选择，如instead of buying；此提示不是已核实教材语法栏。"
+          },
+          "sourcePageBasis": "official_audio_announcement",
+          "sourceAudioTrack": "磁带1-A面，Unit 1 Reading，page 3",
+          "vocabularyAudioEvidence": {
+            "track": "1A",
+            "startSeconds": 597,
+            "endSeconds": 785,
+            "announcedPrintPage": 17,
+            "sha256": "a9de761a014400b1a6706dc3f860e509eaad3cce01ecd73121ad10e8ef46bff5"
+          }
+        },
+        {
+          "id": "u2",
+          "number": 2,
+          "title": "Life in the future",
+          "sourcePrintPage": 21,
+          "words": [
+            {
+              "text": "fold up",
+              "meaning": "折叠",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 2 Word box，播报page 34，211–289秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "underwater",
+              "meaning": "水下的",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 2 Word box，播报page 34，211–289秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "website",
+              "meaning": "网站",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 2 Word box，播报page 34，211–289秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "recommend",
+              "meaning": "推荐",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 2 Word box，播报page 34，211–289秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "tip",
+              "meaning": "建议",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 2 Word box，播报page 34，211–289秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "hot tip",
+              "meaning": "热门推荐",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 2 Word box，播报page 34，211–289秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "attractive",
+              "meaning": "有吸引力的",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 2 Word box，播报page 34，211–289秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "VR",
+              "meaning": "虚拟现实",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 2 Word box，播报page 34，211–289秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "designer",
+              "meaning": "设计师",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 2 Word box，播报page 34，211–289秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "AI",
+              "meaning": "人工智能",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 2 Word box，播报page 34，211–289秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "satisfied",
+              "meaning": "满意的",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 2 Word box，播报page 34，211–289秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "feel good",
+              "meaning": "感觉良好",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 2 Word box，播报page 34，211–289秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "cabinet",
+              "meaning": "储物柜",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 2 Word box，播报page 34，211–289秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "anyone",
+              "meaning": "任何人",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 2 Word box，播报page 34，211–289秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "solar",
+              "meaning": "太阳能的",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 2 Word box，播报page 34，211–289秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "windscreen",
+              "meaning": "挡风玻璃",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 2 Word box，播报page 34，211–289秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "parking space",
+              "meaning": "停车位",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 2 Word box，播报page 34，211–289秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "get a view of",
+              "meaning": "看到……的景色",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 2 Word box，播报page 34，211–289秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "horrible",
+              "meaning": "可怕的",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 2 Word box，播报page 34，211–289秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "for sale",
+              "meaning": "待售",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 2 Word box，播报page 34，211–289秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "serve",
+              "meaning": "服务",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 2 Word box，播报page 34，211–289秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "disagree with",
+              "meaning": "不同意",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 2 Word box，播报page 34，211–289秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "manner",
+              "meaning": "方式；礼貌",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 2 Word box，播报page 34，211–289秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "native",
+              "meaning": "本地的",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 2 Word box，播报page 34，211–289秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "native speaker",
+              "meaning": "母语使用者",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 2 Word box，播报page 34，211–289秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "function",
+              "meaning": "功能",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 2 Word box，播报page 34，211–289秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "melt",
+              "meaning": "融化",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 2 Word box，播报page 34，211–289秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            }
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "A useful future room",
+            "body": "Our group designed a future room for a small flat.\nA desk could fold up, leaving space for exercise or a visitor.\nWe first added many automatic devices, but then asked who would repair them.\nOne classmate suggested simple controls that would work without an internet connection.\nWe changed the design so that different people could use it easily.\nThe best idea was not the most surprising one, but the one that answered a real need.",
+            "translation": [
+              "我们小组为小公寓设计了一个未来房间。",
+              "桌子可以折叠，为锻炼或来访者腾出空间。",
+              "我们起初加入许多自动装置，随后追问由谁维修。",
+              "一位同学建议使用无需联网也能工作的简单控制装置。",
+              "我们修改设计，让不同的人都能轻松使用。",
+              "最好的想法不是最惊人的，而是回应实际需要的。"
+            ],
+            "question": "1. Why could the desk fold up?\n2. What problem did the group notice?\n3. How did their idea of a good design change?",
+            "questionHint": "关注空间、维修和使用者。",
+            "answer": "1. To leave more space.\n2. Automatic devices need repair and may depend on a connection.\n3. They valued real needs and ease of use.",
+            "grammar": "自编复习提示：could描述设想中的可能能力；比较would与will的语境，不把想象写成已发生的事实。"
+          },
+          "sourcePageBasis": "official_audio_announcement",
+          "sourceAudioTrack": "磁带1-A面，Unit 2 Reading，page 21",
+          "vocabularyAudioEvidence": {
+            "track": "1B",
+            "startSeconds": 211,
+            "endSeconds": 289,
+            "announcedPrintPage": 34,
+            "sha256": "4208cf0fa472b1b401b7604d29f32d9f753a0468c4337a75f7f34975a85d253a"
+          }
+        },
+        {
+          "id": "u3",
+          "number": 3,
+          "title": "Going places",
+          "sourcePrintPage": 39,
+          "words": [
+            {
+              "text": "population",
+              "meaning": "人口",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "architecture",
+              "meaning": "建筑风格",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "such",
+              "meaning": "这样的",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "exhausting",
+              "meaning": "使人疲惫的",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "set out",
+              "meaning": "出发",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "marvellous",
+              "meaning": "极好的",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "recreation",
+              "meaning": "休闲活动",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "ballroom dancing",
+              "meaning": "交谊舞",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "teenager",
+              "meaning": "青少年",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "roller skate",
+              "meaning": "滑旱冰",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "sword",
+              "meaning": "剑",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "while",
+              "meaning": "一段时间",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "for a while",
+              "meaning": "一会儿",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "couple",
+              "meaning": "两个；一对",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "a couple of",
+              "meaning": "几个",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "European",
+              "meaning": "欧洲的",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "style",
+              "meaning": "风格",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "nickname",
+              "meaning": "别称",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "commercial",
+              "meaning": "商业的",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "waterfront",
+              "meaning": "滨水区",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "jade",
+              "meaning": "玉",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "trade",
+              "meaning": "贸易",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "amazed",
+              "meaning": "惊讶的",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "be amazed at",
+              "meaning": "对……惊讶",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "artist",
+              "meaning": "艺术家",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "pavilion",
+              "meaning": "亭子",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "zigzag",
+              "meaning": "曲折的",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "pay a visit",
+              "meaning": "拜访",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "introduce",
+              "meaning": "介绍",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "request",
+              "meaning": "请求",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "career",
+              "meaning": "职业",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "aim",
+              "meaning": "目标",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "industry",
+              "meaning": "工业",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "available",
+              "meaning": "可获得的",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "appreciate",
+              "meaning": "欣赏；感谢",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带1B面，Unit 3 Word box，播报page 51，955–1114秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            }
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "A route for everyone",
+            "body": "Nora planned a walking tour for two visitors to Shanghai.\nAfter checking the distance, she asked whether either visitor needed frequent rests.\nShe chose a shorter route with seats and a place to shelter from rain.\nA long list of famous buildings would have looked impressive, but it might have been exhausting.\nDuring the walk, she allowed time for questions instead of hurrying to every stop.\nThe visitors remembered a thoughtful conversation more clearly than the number of places they had seen.",
+            "translation": [
+              "诺拉为两位上海来访者安排步行路线。",
+              "核对距离后，她询问来访者是否需要经常休息。",
+              "她选择了较短、沿途有座位和避雨处的路线。",
+              "长长的著名建筑清单也许好看，却可能令人疲惫。",
+              "步行中，她留出提问时间，没有急着赶遍每一站。",
+              "比起看过多少地方，来访者更清楚地记住了贴心的交流。"
+            ],
+            "question": "1. What did Nora ask before choosing the route?\n2. Why did she avoid too many stops?\n3. What did the visitors value?",
+            "questionHint": "从旅客需要而非景点数量判断安排。",
+            "answer": "1. Whether they needed frequent rests.\n2. Too many stops could be exhausting.\n3. The thoughtful conversation.",
+            "grammar": "自编复习提示：after checking中checking是动名词；将它改写为After she checked，比较两种表达。"
+          },
+          "sourcePageBasis": "official_audio_announcement",
+          "sourceAudioTrack": "磁带1-B面，Unit 3 Reading，page 39",
+          "vocabularyAudioEvidence": {
+            "track": "1B",
+            "startSeconds": 955,
+            "endSeconds": 1114,
+            "announcedPrintPage": 51,
+            "sha256": "4208cf0fa472b1b401b7604d29f32d9f753a0468c4337a75f7f34975a85d253a"
+          }
+        },
+        {
+          "id": "u4",
+          "number": 4,
+          "title": "All about films and TV",
+          "sourcePrintPage": 55,
+          "words": [
+            {
+              "text": "set",
+              "meaning": "拍摄场景",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "movie",
+              "meaning": "电影",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "see stars",
+              "meaning": "眼冒金星；见到明星",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "have the time of one's life",
+              "meaning": "玩得非常尽兴",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "studio",
+              "meaning": "摄影棚",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "shoot",
+              "meaning": "拍摄",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "jungle",
+              "meaning": "丛林",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "humid",
+              "meaning": "湿热的",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "jump out of one's skin",
+              "meaning": "吓一大跳",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "impress",
+              "meaning": "留下印象",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "awesome",
+              "meaning": "令人惊叹的",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "terrific",
+              "meaning": "极好的",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "violently",
+              "meaning": "猛烈地",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "not at all",
+              "meaning": "一点也不",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "special effects",
+              "meaning": "特效",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "extra",
+              "meaning": "群众演员",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "director",
+              "meaning": "导演",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "cut a long story short",
+              "meaning": "长话短说",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "select",
+              "meaning": "挑选",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "actress",
+              "meaning": "女演员",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "envy",
+              "meaning": "羡慕",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "green with envy",
+              "meaning": "十分嫉妒",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "work as",
+              "meaning": "担任",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "a piece of cake",
+              "meaning": "轻而易举的事",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "dictionary",
+              "meaning": "词典",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "speak up",
+              "meaning": "大声说",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "nervous",
+              "meaning": "紧张的",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "apartment",
+              "meaning": "公寓",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "influence",
+              "meaning": "影响",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "brilliant",
+              "meaning": "出色的",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2A面，Unit 4 Word box，播报page 69，759–911秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            }
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "Behind a short film",
+            "body": "Our class made a short film about a lost notebook.\nThe director wanted a busy station scene, but our only set was an empty classroom.\nWe used a few signs and recorded quiet footsteps to suggest a different place.\nBefore filming classmates, we explained the project and asked for their permission.\nThe first version had too many effects, so we removed those that hid the actors’ expressions.\nThe final story became clearer when we focused on what the audience needed to understand.",
+            "translation": [
+              "我们班拍了一部关于遗失笔记本的短片。",
+              "导演想拍繁忙车站，但唯一场地是空教室。",
+              "我们用几块标牌并录下轻微脚步声，营造不同地点。",
+              "拍摄同学前，我们说明项目并征得同意。",
+              "初版特效太多，我们删去了遮挡演员表情的效果。",
+              "当我们关注观众需要理解的内容时，故事更清楚了。"
+            ],
+            "question": "1. How did the class suggest a station?\n2. Why were some effects removed?\n3. What did they do before filming people?",
+            "questionHint": "区分技术手段与讲清故事的目的。",
+            "answer": "1. With signs and recorded footsteps.\n2. They hid the actors’ expressions.\n3. They explained the project and asked permission.",
+            "grammar": "自编复习提示：those that…中those代替effects；找出指代对象，避免误解。"
+          },
+          "sourcePageBasis": "official_audio_announcement",
+          "sourceAudioTrack": "磁带2-A面，Unit 4 Reading，page 55",
+          "vocabularyAudioEvidence": {
+            "track": "2A",
+            "startSeconds": 759,
+            "endSeconds": 911,
+            "announcedPrintPage": 69,
+            "sha256": "1c1a2981f8d5ec1b37ac63a131ee2de1887cdecbcf98a7d6eed0075d26b0ec21"
+          }
+        },
+        {
+          "id": "u5",
+          "number": 5,
+          "title": "A story by Mark Twain",
+          "sourcePrintPage": 73,
+          "words": [
+            {
+              "text": "fence",
+              "meaning": "栅栏",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "sidewalk",
+              "meaning": "人行道",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "bucket",
+              "meaning": "桶",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "handle",
+              "meaning": "柄",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "depressed",
+              "meaning": "沮丧的",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "yard",
+              "meaning": "码；院子",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "dip",
+              "meaning": "蘸",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "stand back",
+              "meaning": "退后",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "unpainted",
+              "meaning": "未涂漆的",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "come along",
+              "meaning": "走过来",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "make fun of",
+              "meaning": "取笑",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "just then",
+              "meaning": "就在那时",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "go on doing something",
+              "meaning": "继续做某事",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "ignore",
+              "meaning": "忽视",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "chance",
+              "meaning": "机会",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "properly",
+              "meaning": "正确地",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "only",
+              "meaning": "仅仅",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "beg",
+              "meaning": "恳求",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "joy",
+              "meaning": "欢乐",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "marble",
+              "meaning": "弹珠",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "and so on",
+              "meaning": "等等",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "gain",
+              "meaning": "获得",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "sort",
+              "meaning": "种类",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "trick into doing something",
+              "meaning": "哄骗……做某事",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "fool",
+              "meaning": "愚弄",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "tell the truth",
+              "meaning": "说实话",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "lecture",
+              "meaning": "讲座",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "port",
+              "meaning": "港口",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "silver",
+              "meaning": "银",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "no problem",
+              "meaning": "没问题",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            },
+            {
+              "text": "come up",
+              "meaning": "出现；走近",
+              "additionalSense": true,
+              "vocabularyAudioTrack": "磁带2B面，Unit 5 Word box，播报page 86，11–164秒",
+              "verificationNote": "音频词项；常用词形用于学习，纸本大小写、连字符与短语格式待确认。"
+            }
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "The borrowed brush",
+            "body": "Eli offered to help paint a sign for the reading club.\nHe told Sam that using the large brush was a special honour, hoping Sam would do most of the work.\nSam enjoyed painting at first, but soon noticed that Eli was simply watching.\nInstead of arguing, Sam asked them to agree on a fair division of the task.\nEli admitted his trick and completed the smaller letters himself.\nTheir finished sign looked good, but the honest conversation mattered more.",
+            "translation": [
+              "伊莱主动帮阅读社涂绘标牌。",
+              "他告诉山姆用大刷子是特别荣誉，希望山姆承担大部分工作。",
+              "山姆起初喜欢画画，但很快发现伊莱只在旁边看。",
+              "山姆没有争吵，而是请两人商定公平分工。",
+              "伊莱承认了小把戏，自己完成较小的字。",
+              "完成的标牌很好看，但诚实的交流更重要。"
+            ],
+            "question": "1. What did Eli hope Sam would do?\n2. How did Sam respond?\n3. What changed by the end?",
+            "questionHint": "本短文为自编，不是马克·吐温小说改写。",
+            "answer": "1. Most of the work.\n2. He asked for a fair division of the task.\n3. Eli admitted the trick and did his share.",
+            "grammar": "自编复习提示：hope后可接宾语从句；注意叙事中主句与从句时态的配合，如He hoped Sam would help。"
+          },
+          "sourcePageBasis": "official_audio_announcement",
+          "sourceAudioTrack": "磁带2-A面，Unit 5 Reading，page 73",
+          "vocabularyAudioEvidence": {
+            "track": "2B",
+            "startSeconds": 11,
+            "endSeconds": 164,
+            "announcedPrintPage": 86,
+            "sha256": "3af57752220d8356e6f9724721d1af3ec8518842f8db3f0d148ca612e74e5a96"
+          }
+        }
+      ]
+    }
+  ],
+  "poems": [
+    {
+      "id": "sh54-yueye-yishedi",
+      "title": "月夜忆舍弟",
+      "author": "杜甫",
+      "original": "戍鼓断人行，边秋一雁声。\n露从今夜白，月是故乡明。\n有弟皆分散，无家问死生。\n寄书长不达，况乃未休兵。",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "国家平台五四制2024审核／审定原书印刷65页起、电子72页起核对；公版原作或教材选段，不含现代注释。学校印次待确认。"
+    },
+    {
+      "id": "sh54-changsha-jiayi",
+      "title": "长沙过贾谊宅",
+      "author": "刘长卿",
+      "original": "三年谪宦此栖迟，万古惟留楚客悲。\n秋草独寻人去后，寒林空见日斜时。\n汉文有道恩犹薄，湘水无情吊岂知。\n寂寂江山摇落处，怜君何事到天涯。",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "国家平台五四制2024审核／审定原书印刷65页起、电子72页起核对；公版原作或教材选段，不含现代注释。学校印次待确认。"
+    },
+    {
+      "id": "sh54-zuoqian-languan",
+      "title": "左迁至蓝关示侄孙湘",
+      "author": "韩愈",
+      "original": "一封朝奏九重天，夕贬潮州路八千。\n欲为圣明除弊事，肯将衰朽惜残年！\n云横秦岭家何在？雪拥蓝关马不前。\n知汝远来应有意，好收吾骨瘴江边。",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "国家平台五四制2024审核／审定原书印刷66页起、电子73页起核对；公版原作或教材选段，不含现代注释。学校印次待确认。"
+    },
+    {
+      "id": "sh54-shangshan-zaoxing",
+      "title": "商山早行",
+      "author": "温庭筠",
+      "original": "晨起动征铎，客行悲故乡。\n鸡声茅店月，人迹板桥霜。\n槲叶落山路，枳花明驿墙。\n因思杜陵梦，凫雁满回塘。",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "国家平台五四制2024审核／审定原书印刷66页起、电子73页起核对；公版原作或教材选段，不含现代注释。学校印次待确认。"
+    },
+    {
+      "id": "sh54-xianyang-chengdonglou",
+      "title": "咸阳城东楼",
+      "author": "许浑",
+      "original": "一上高城万里愁，蒹葭杨柳似汀洲。\n溪云初起日沉阁，山雨欲来风满楼。\n鸟下绿芜秦苑夕，蝉鸣黄叶汉宫秋。\n行人莫问当年事，故国东来渭水流。",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "国家平台五四制2024审核／审定原书印刷159页起、电子166页起核对；公版原作或教材选段，不含现代注释。学校印次待确认。"
+    },
+    {
+      "id": "sh54-huanxisha-qinguan",
+      "title": "浣溪沙（漠漠轻寒上小楼）",
+      "author": "秦观",
+      "original": "漠漠轻寒上小楼，晓阴无赖似穷秋，澹烟流水画屏幽。\n自在飞花轻似梦，无边丝雨细如愁，宝帘闲挂小银钩。",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "国家平台五四制2024审核／审定原书印刷160页起、电子167页起核对；公版原作或教材选段，不含现代注释。学校印次待确认。"
+    },
+    {
+      "id": "sh54-chounuer-boshan",
+      "title": "丑奴儿·书博山道中壁",
+      "author": "辛弃疾",
+      "original": "少年不识愁滋味，爱上层楼。爱上层楼，为赋新词强说愁。\n而今识尽愁滋味，欲说还休。欲说还休，却道“天凉好个秋”！",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "国家平台五四制2024审核／审定原书印刷160页起、电子167页起核对；公版原作或教材选段，不含现代注释。学校印次待确认。"
+    },
+    {
+      "id": "sh54-chenshe-shijia",
+      "title": "陈涉世家（节选）",
+      "author": "司马迁",
+      "original": "陈胜者，阳城人也，字涉。吴广者，阳夏人也，字叔。陈涉少时，尝与人佣耕，辍耕之垄上，怅恨久之，曰：“苟富贵，无相忘。”佣者笑而应曰：“若为佣耕，何富贵也？”陈涉太息曰：“嗟乎！燕雀安知鸿鹄之志哉！”\n二世元年七月，发闾左適戍渔阳，九百人屯大泽乡。陈胜、吴广皆次当行，为屯长。会天大雨，道不通，度已失期。失期，法皆斩。陈胜、吴广乃谋曰：“今亡亦死，举大计亦死；等死，死国可乎？”陈胜曰：“天下苦秦久矣。吾闻二世少子也，不当立，当立者乃公子扶苏。扶苏以数谏故，上使外将兵。今或闻无罪，二世杀之。百姓多闻其贤，未知其死也。项燕为楚将，数有功，爱士卒，楚人怜之。或以为死，或以为亡。今诚以吾众诈自称公子扶苏、项燕，为天下唱，宜多应者。”吴广以为然。乃行卜。卜者知其指意，曰：“足下事皆成，有功。然足下卜之鬼乎？”陈胜、吴广喜，念鬼，曰：“此教我先威众耳。”乃丹书帛曰“陈胜王”，置人所罾鱼腹中。卒买鱼烹食，得鱼腹中书，固以怪之矣。又间令吴广之次所旁丛祠中，夜篝火，狐鸣呼曰：“大楚兴，陈胜王！”卒皆夜惊恐。旦日，卒中往往语，皆指目陈胜。\n吴广素爱人，士卒多为用者。将尉醉，广故数言欲亡，忿恚尉，令辱之，以激怒其众。尉果笞广。尉剑挺，广起，夺而杀尉。陈胜佐之，并杀两尉。召令徒属曰：“公等遇雨，皆已失期，失期当斩。藉第令毋斩，而戍死者固十六七。且壮士不死即已，死即举大名耳，王侯将相宁有种乎！”徒属皆曰：“敬受命。”乃诈称公子扶苏、项燕，从民欲也。袒右，称大楚。为坛而盟，祭以尉首。陈胜自立为将军，吴广为都尉。攻大泽乡，收而攻蕲。蕲下，乃令符离人葛婴将兵徇蕲以东。攻铚、酂、苦、柘、谯皆下之。行收兵。比至陈，车六七百乘，骑千余，卒数万人。攻陈，陈守令皆不在，独守丞与战谯门中。弗胜，守丞死，乃入据陈。数日，号令召三老、豪杰与皆来会计事。三老、豪杰皆曰：“将军身被坚执锐，伐无道，诛暴秦，复立楚国之社稷，功宜为王。”陈涉乃立为王，号为张楚。当此时，诸郡县苦秦吏者，皆刑其长吏，杀之以应陈涉。",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "国家平台五四制2024审核／审定原书印刷142页起、电子149页起核对；公版原作或教材选段，不含现代注释。学校印次待确认。"
+    },
+    {
+      "id": "sh54-mengzi-yuwosuoyu",
+      "title": "鱼我所欲也",
+      "author": "《孟子》",
+      "original": "鱼，我所欲也；熊掌，亦我所欲也。二者不可得兼，舍鱼而取熊掌者也。生，亦我所欲也；义，亦我所欲也。二者不可得兼，舍生而取义者也。生亦我所欲，所欲有甚于生者，故不为苟得也；死亦我所恶，所恶有甚于死者，故患有所不辟也。如使人之所欲莫甚于生，则凡可以得生者何不用也？使人之所恶莫甚于死者，则凡可以辟患者何不为也？由是则生而有不用也，由是则可以辟患而有不为也。是故所欲有甚于生者，所恶有甚于死者。非独贤者有是心也，人皆有之，贤者能勿丧耳。\n一箪食，一豆羹，得之则生，弗得则死。呼尔而与之，行道之人弗受；蹴尔而与之，乞人不屑也。万钟则不辩礼义而受之，万钟于我何加焉！为宫室之美、妻妾之奉、所识穷乏者得我与？乡为身死而不受，今为宫室之美为之；乡为身死而不受，今为妻妾之奉为之；乡为身死而不受，今为所识穷乏者得我而为之：是亦不可以已乎？此之谓失其本心。",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "国家平台五四制2019审核／审定原书印刷48页起、电子55页起核对；公版原作或教材选段，不含现代注释。学校印次待确认。教材独立章目；与国家课标《孟子》三则的包含关系单列。"
+    },
+    {
+      "id": "sh54-tangju-buru",
+      "title": "唐雎不辱使命",
+      "author": "《战国策》",
+      "original": "秦王使人谓安陵君曰：“寡人欲以五百里之地易安陵，安陵君其许寡人！”安陵君曰：“大王加惠，以大易小，甚善；虽然，受地于先王，愿终守之，弗敢易！”秦王不说。安陵君因使唐雎使于秦。\n秦王谓唐雎曰：“寡人以五百里之地易安陵，安陵君不听寡人，何也？且秦灭韩亡魏，而君以五十里之地存者，以君为长者，故不错意也。今吾以十倍之地，请广于君，而君逆寡人者，轻寡人与？”唐雎对曰：“否，非若是也。安陵君受地于先王而守之，虽千里不敢易也，岂直五百里哉？”\n秦王怫然怒，谓唐雎曰：“公亦尝闻天子之怒乎？”唐雎对曰：“臣未尝闻也。”秦王曰：“天子之怒，伏尸百万，流血千里。”唐雎曰：“大王尝闻布衣之怒乎？”秦王曰：“布衣之怒，亦免冠徒跣，以头抢地尔。”唐雎曰：“此庸夫之怒也，非士之怒也。夫专诸之刺王僚也，彗星袭月；聂政之刺韩傀也，白虹贯日；要离之刺庆忌也，仓鹰击于殿上。此三子者，皆布衣之士也，怀怒未发，休祲降于天，与臣而将四矣。若士必怒，伏尸二人，流血五步，天下缟素，今日是也。”挺剑而起。\n秦王色挠，长跪而谢之曰：“先生坐！何至于此！寡人谕矣：夫韩、魏灭亡，而安陵以五十里之地存者，徒以有先生也。”",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "国家平台五四制2019审核／审定原书印刷51页起、电子58页起核对；公版原作或教材选段，不含现代注释。学校印次待确认。"
+    },
+    {
+      "id": "sh54-dingfengbo-sushi",
+      "title": "定风波（莫听穿林打叶声）",
+      "author": "苏轼",
+      "original": "三月七日，沙湖道中遇雨，雨具先去，同行皆狼狈，余独不觉。已而遂晴，故作此词。\n莫听穿林打叶声，何妨吟啸且徐行。竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。\n料峭春风吹酒醒，微冷，山头斜照却相迎。回首向来萧瑟处，归去，也无风雨也无晴。",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "国家平台五四制2019审核／审定原书印刷69页起、电子76页起核对；公版原作或教材选段，不含现代注释。学校印次待确认。"
+    },
+    {
+      "id": "sh54-linjiangxian-chenyuyi",
+      "title": "临江仙·夜登小阁，忆洛中旧游",
+      "author": "陈与义",
+      "original": "忆昔午桥桥上饮，坐中多是豪英。长沟流月去无声。杏花疏影里，吹笛到天明。\n二十余年如一梦，此身虽在堪惊。闲登小阁看新晴。古今多少事，渔唱起三更。",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "国家平台五四制2019审核／审定原书印刷69页起、电子76页起核对；公版原作或教材选段，不含现代注释。学校印次待确认。"
+    },
+    {
+      "id": "sh54-taichangyin-jiankang",
+      "title": "太常引·建康中秋夜为吕叔潜赋",
+      "author": "辛弃疾",
+      "original": "一轮秋影转金波，飞镜又重磨。把酒问姮娥：被白发，欺人奈何？\n乘风好去，长空万里，直下看山河。斫去桂婆娑，人道是，清光更多。",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "国家平台五四制2019审核／审定原书印刷70页起、电子77页起核对；公版原作或教材选段，不含现代注释。学校印次待确认。"
+    },
+    {
+      "id": "sh54-huanxisha-nalan",
+      "title": "浣溪沙（身向云山那畔行）",
+      "author": "纳兰性德",
+      "original": "身向云山那畔行，北风吹断马嘶声，深秋远塞若为情！\n一抹晚烟荒戍垒，半竿斜日旧关城。古今幽恨几时平！",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "国家平台五四制2019审核／审定原书印刷70页起、电子77页起核对；公版原作或教材选段，不含现代注释。学校印次待确认。"
+    },
+    {
+      "id": "sh54-nananjun",
+      "title": "南安军",
+      "author": "文天祥",
+      "original": "梅花南北路，风雨湿征衣。\n出岭同谁出？归乡如此归！\n山河千古在，城郭一时非。\n饿死真吾志，梦中行采薇。",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "国家平台五四制2019审核／审定原书印刷147页起、电子154页起核对；公版原作或教材选段，不含现代注释。学校印次待确认。"
+    },
+    {
+      "id": "sh54-bieyunjian",
+      "title": "别云间",
+      "author": "夏完淳",
+      "original": "三年羁旅客，今日又南冠。\n无限山河泪，谁言天地宽。\n已知泉路近，欲别故乡难。\n毅魄归来日，灵旗空际看。",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "国家平台五四制2019审核／审定原书印刷147页起、电子154页起核对；公版原作或教材选段，不含现代注释。学校印次待确认。"
+    },
+    {
+      "id": "sh54-shanpoyang-lishan",
+      "title": "山坡羊·骊山怀古",
+      "author": "张养浩",
+      "original": "骊山四顾，阿房一炬，当时奢侈今何处？只见草萧疏，水萦纡。至今遗恨迷烟树。列国周齐秦汉楚。赢，都变做了土；输，都变做了土。",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "国家平台五四制2019审核／审定原书印刷148页起、电子155页起核对；公版原作或教材选段，不含现代注释。学校印次待确认。"
+    },
+    {
+      "id": "sh54-chaotianzi-yonglaba",
+      "title": "朝天子·咏喇叭",
+      "author": "王磐",
+      "original": "喇叭，唢呐，曲儿小腔儿大。官船来往乱如麻，全仗你抬声价。军听了军愁，民听了民怕。哪里去辨甚么真共假？眼见的吹翻了这家，吹伤了那家，只吹的水尽鹅飞罢！",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "国家平台五四制2019审核／审定原书印刷148页起、电子155页起核对；公版原作或教材选段，不含现代注释。学校印次待确认。"
+    },
+    {
+      "id": "sh54-songdongyang-textbook",
+      "title": "送东阳马生序（教材全文）",
+      "author": "宋濂",
+      "original": "余幼时即嗜学。家贫，无从致书以观，每假借于藏书之家，手自笔录，计日以还。天大寒，砚冰坚，手指不可屈伸，弗之怠。录毕，走送之，不敢稍逾约。以是人多以书假余，余因得遍观群书。既加冠，益慕圣贤之道，又患无硕师、名人与游，尝趋百里外，从乡之先达执经叩问。先达德隆望尊，门人弟子填其室，未尝稍降辞色。余立侍左右，援疑质理，俯身倾耳以请；或遇其叱咄，色愈恭，礼愈至，不敢出一言以复；俟其欣悦，则又请焉。故余虽愚，卒获有所闻。\n\n当余之从师也，负箧曳屣，行深山巨谷中，穷冬烈风，大雪深数尺，足肤皲裂而不知。至舍，四支僵劲不能动，媵人持汤沃灌，以衾拥覆，久而乃和。寓逆旅，主人日再食，无鲜肥滋味之享。同舍生皆被绮绣，戴朱缨宝饰之帽，腰白玉之环，左佩刀，右备容臭，烨然若神人；余则缊袍敝衣处其间，略无慕艳意。以中有足乐者，不知口体之奉不若人也。盖余之勤且艰若此。\n\n今虽耄老，未有所成，犹幸预君子之列，而承天子之宠光，缀公卿之后，日侍坐备顾问，四海亦谬称其氏名，况才之过于余者乎？\n\n今诸生学于太学，县官日有廪稍之供，父母岁有裘葛之遗，无冻馁之患矣；坐大厦之下而诵诗书，无奔走之劳矣；有司业、博士为之师，未有问而不告、求而不得者也；凡所宜有之书，皆集于此，不必若余之手录，假诸人而后见也。其业有不精、德有不成者，非天质之卑，则心不若余之专耳，岂他人之过哉？\n东阳马生君则，在太学已二年，流辈甚称其贤。余朝京师，生以乡人子谒余，撰长书以为贽，辞甚畅达。与之论辨，言和而色夷。自谓少时用心于学甚劳，是可谓善学者矣。其将归见其亲也，余故道为学之难以告之。谓余勉乡人以学者，余之志也；诋我夸际遇之盛而骄乡人者，岂知予者哉？",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reviewStatus": "国家平台五四制2019审核／审定原书印刷54页起、电子61页起核对；公版原作或教材选段，不含现代注释。学校印次待确认。教材全文包含国家课标原节选；旧节选ID与正文保留，不能由节选完成推定全文完成。",
+      "coveredContentIds": [
+        "moe-2022-zh-7-9-059"
+      ]
+    }
+  ]
+}

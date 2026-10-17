@@ -49,6 +49,7 @@ function knowledge() {
   const additional = [...regional.entries, ...lowerPrimary.data.poems].map((entry) => ({
     id: entry.id, kind: 'poetry', title: `《${entry.title}》`, author: entry.author, ...period(entry),
     ...(entry.workId ? { workId: entry.workId } : {}),
+    ...(entry.coveredContentIds ? { coveredContentIds: entry.coveredContentIds } : {}),
     detail: `${entry.author}\n${entry.original}`, minutes: entry.original.length > 300 ? 15 : 5,
     source: entry.examEvidence ? '上海 2026 中考评析关联篇目' : /https:\/\/(book\.pep\.com\.cn|basic\.smartedu\.cn)\//.test(entry.sourceUrl) ? '五四制官方教材原页核对 · 公版原作 / 节选' : entry.sourceUrl.startsWith('https://keben.app/') ? '五四制公开教材样本核对 · 公版原作 / 节选' : '五四制教材目录关联原作 · 正文待逐字核对',
     referenceUrl: entry.examEvidence || regional.books.find((book) => (mappings.get(entry.id) || []).includes(book.id))?.url || entry.sourceUrl,
@@ -74,7 +75,7 @@ module.exports = { knowledge, resources: {
   checkedAt: '2026-10-17',
   curriculum: curriculum(knowledge()),
   examFramework,
-  coverage: '上海五四制：小学1–5、初中6–9年级。一至五年级语文十册字表及81组原创练习已整理，四、五下为2019审定样本。六、七、八年级语文两册的单元及课外诵读附录分别有26、38、48处古诗文映射，各有16篇原创练习。四、五上英语卷末词表与目录主题词已核对；六、七、八年级英语两册分别核实533、533、468个单元词项，各单元均有原创阅读、例句及语法提示。三上英语纸本、三至五年级新版下册及九年级内容仍有缺口，六至八年级逐课知识未全量覆盖；不是全教材或中考全量。',
+  coverage: '上海五四制：小学1–5、初中6–9年级。36个学科册次均有可直接学习的配套内容。一至五年级语文十册字表及81组原创练习已整理，四、五下为2019审定样本。六至九年级语文两册分别有26、38、48、47处古诗文映射，各有16篇原创练习；九下为2019审定原书。六至八年级英语两册分别核实533、533、468个完整单元词项；九上199项完整单元词表，九下159项为旧版官方音频参考选词。各册配原创阅读和例句。三上英语纸本、三至五及九年级新版下册、逐课全量知识仍待核实和补齐；不是全教材或中考全量。',
   books: [...new Map([...regional.books, ...lowerPrimary.bookSummaries()].map(book => [book.id, book])).values()],
   links: [
     { title: '上海 2026 秋季教学用书通知', url: regional.noticeUrl, note: '市级用书目录；学校实际选用版本待确认' },

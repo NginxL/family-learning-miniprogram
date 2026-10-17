@@ -53,3 +53,23 @@ test('unique source prefixes compress deterministically and preserve Unicode, es
   assert.equal(dataModule(values), code);
   assert.doesNotMatch(dataModule({ short: 'hello' }), /s\.forEach/);
 });
+
+test('large offline bundles decode without host APIs or dynamic code and keep record independence', () => {
+  const sample = JSON.parse('{"__proto__":{"text":"ordinary key"}}');
+  const values = Array.from({ length: 4000 }, (_, i) => ({ id: i, text: '离线中文 😀 𠮷 \\u2028 \\u2029 \\n \\ "' + i,
+    metadata: sample, readings: ['xué xí', null, true, -0.5] }));
+  const code = dataModule(values);
+  assert.match(code, /fflate \(MIT\)/);
+  assert.equal(dataModule(values), code);
+  const context = { module: { exports: null }, Buffer: undefined, TextDecoder: undefined,
+    atob: undefined, Worker: undefined, fetch: undefined };
+  vm.runInNewContext(code, context, { timeout: 2000, contextCodeGeneration: { strings: false, wasm: false } });
+  assert.deepEqual(JSON.parse(JSON.stringify(context.module.exports)), values);
+  context.module.exports[0].metadata.__proto__.text = 'changed';
+  assert.equal(context.module.exports[1].metadata.__proto__.text, 'ordinary key');
+  assert.ok(Object.hasOwn(context.module.exports[1].metadata, '__proto__'));
+  const real = { module: { exports: null }, TextDecoder: undefined, Buffer: undefined, atob: undefined };
+  vm.runInNewContext(dataModule(require('../shared/knowledge-data.json')), real,
+    { timeout: 2000, contextCodeGeneration: { strings: false, wasm: false } });
+  assert.deepEqual(JSON.parse(JSON.stringify(real.module.exports)), require('../shared/knowledge-data.json'));
+});

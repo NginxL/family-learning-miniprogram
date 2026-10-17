@@ -1,4 +1,20 @@
 'use strict';
+const { deflateRawSync } = require('node:zlib');
+const { buildSync } = require('esbuild');
+const path = require('node:path');
+let decoder;
+
+function compressedModule(data) {
+  if (!decoder) decoder = buildSync({
+    entryPoints: [path.join(__dirname, 'native-data-decoder.js')], bundle: true, write: false,
+    platform: 'browser', format: 'iife', globalName: 'nativeData', target: 'es2018',
+    minify: true, legalComments: 'inline'
+  }).outputFiles[0].text;
+  const payload = deflateRawSync(Buffer.from(JSON.stringify(data)), { level: 9 }).toString('base64');
+  return '// fflate (MIT); see miniprogram/THIRD_PARTY_NOTICES.txt.\n' + decoder
+    + `module.exports=nativeData.decodeData(${JSON.stringify(payload)});\n`;
+}
+
 
 // Source strings and repeated record keys dominate the native package. Share only
 // immutable strings/key layouts; decoded records remain independent plain objects.
@@ -49,7 +65,10 @@ function dataModule(value) {
   const prefixed = encode(data, counts, true);
   // Short or unrelated strings (for example pinyin) can be smaller without a
   // prefix table. Decide at build time; clients only execute the selected form.
-  return Buffer.byteLength(prefixed) < Buffer.byteLength(repeated) ? prefixed : repeated;
+  const compact = Buffer.byteLength(prefixed) < Buffer.byteLength(repeated) ? prefixed : repeated;
+  if (Buffer.byteLength(compact) < 64 * 1024) return compact;
+  const compressed = compressedModule(data);
+  return Buffer.byteLength(compressed) < Buffer.byteLength(compact) ? compressed : compact;
 }
 
 module.exports = { dataModule };
