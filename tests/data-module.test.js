@@ -69,7 +69,9 @@ test('large offline bundles decode without host APIs or dynamic code and keep re
   assert.equal(context.module.exports[1].metadata.__proto__.text, 'ordinary key');
   assert.ok(Object.hasOwn(context.module.exports[1].metadata, '__proto__'));
   const real = { module: { exports: null }, TextDecoder: undefined, Buffer: undefined, atob: undefined };
+  // This checks API compatibility and data integrity, not elapsed-time performance.
+  // Parallel catalogue tests compete for the same small CI runner's CPU.
   vm.runInNewContext(dataModule(require('../shared/knowledge-data.json')), real,
-    { timeout: 2000, contextCodeGeneration: { strings: false, wasm: false } });
+    { timeout: 15000, contextCodeGeneration: { strings: false, wasm: false } });
   assert.deepEqual(JSON.parse(JSON.stringify(real.module.exports)), require('../shared/knowledge-data.json'));
 });
