@@ -9,6 +9,7 @@ const gradeFour = require('../data/catalogs/shanghai-54-grade4.json');
 const gradeFive = require('../data/catalogs/shanghai-54-grade5.json');
 const gradeSix = require('../data/catalogs/shanghai-54-grade6.json');
 const gradeSeven = require('../data/catalogs/shanghai-54-grade7.json');
+const gradeEight = require('../data/catalogs/shanghai-54-grade8.json');
 const learning = require('../shared/learning');
 
 test('Shanghai curriculum inventories all 36 subject-semesters without turning book listings into knowledge coverage', () => {
@@ -24,19 +25,19 @@ test('Shanghai curriculum inventories all 36 subject-semesters without turning b
       assert.equal(slot.fullCoverage, false); assert.equal(slot.schoolAdoption, 'pending');
       assert.ok(slot.references.every(ref => coverage.sources.some(source => source.id === ref.sourceId)));
       if (slot.subject === 'english') {
-        if (grade > 7) { assert.equal(slot.verifiedCount, 0); assert.equal(slot.contentBookId, ''); }
+        if (grade > 8) { assert.equal(slot.verifiedCount, 0); assert.equal(slot.contentBookId, ''); }
         if (slot.semester === '下册') assert.ok(slot.references.every(ref => ref.verification === 'historical_resource_listing' && ref.period === '2025学年第二学期'));
       }
       if (slot.contentBookId) {
-        const book = [...regional.books, ...lowerPrimary.books, ...gradeThree.books, ...gradeFour.books, ...gradeFive.books, ...gradeSix.books, ...gradeSeven.books].find(book => book.id === slot.contentBookId);
+        const book = [...regional.books, ...lowerPrimary.books, ...gradeThree.books, ...gradeFour.books, ...gradeFive.books, ...gradeSix.books, ...gradeSeven.books, ...gradeEight.books].find(book => book.id === slot.contentBookId);
         assert.equal(book.grade, grade); assert.equal(book.semester, slot.semester);
         const actual = learning.searchCatalog({ grade }).filter(item => item.gradeMappings.some(mapping => mapping.bookId === book.id)).length;
         assert.equal(slot.verifiedCount, actual);
       }
     }
   }
-  assert.equal(resources.curriculum.slots.filter(slot => slot.availableUnits).length, 28);
-  assert.equal(resources.curriculum.slots.reduce((sum, slot) => sum + slot.availableUnits, 0), 245);
+  assert.equal(resources.curriculum.slots.filter(slot => slot.availableUnits).length, 32);
+  assert.equal(resources.curriculum.slots.reduce((sum, slot) => sum + slot.availableUnits, 0), 273);
   assert.ok(learning.progress({ records: {} }).grades.every(grade => !grade.fullGradeComplete));
 });
 

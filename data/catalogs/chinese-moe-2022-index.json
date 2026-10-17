@@ -2503,7 +2503,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": [],
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 8,
+          "bookId": "chinese-8b",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制2022课标修订原书，封面2024审核通过；纸本ISBN、版次及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=78",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 71,
+          "sourcePdfPage": 78,
+          "unit": "第3单元 · 文言阅读与经典",
+          "unitId": "u3",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页78核对作者或出处《诗经》及首句“关关雎鸠”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-001"
     },
@@ -2517,7 +2536,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": [],
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 8,
+          "bookId": "chinese-8b",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制2022课标修订原书，封面2024审核通过；纸本ISBN、版次及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=79",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 72,
+          "sourcePdfPage": 79,
+          "unit": "第3单元 · 文言阅读与经典",
+          "unitId": "u3",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页79核对作者或出处《诗经》及首句“蒹葭苍苍”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-002"
     },
@@ -2578,7 +2616,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": [],
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 8,
+          "bookId": "chinese-8a",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制2022课标修订原书，封面2024审核通过；纸本ISBN、版次及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=161",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 154,
+          "sourcePdfPage": 161,
+          "unit": "第6单元 · 志向与担当",
+          "unitId": "u6",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页161核对作者或出处陶渊明及首句“结庐在人境”；正文沿用已核验公版作品。原书《饮酒（其五）》署陶渊明；旧课标ID署陶潜，为同一作者和篇目，保留原ID。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-005"
     },
@@ -2625,7 +2682,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": [],
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 8,
+          "bookId": "chinese-8b",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制2022课标修订原书，封面2024审核通过；纸本ISBN、版次及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=89",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 82,
+          "sourcePdfPage": 89,
+          "unit": "附录 · 课外古诗词诵读（一）",
+          "unitId": "u7",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页89核对作者或出处王勃及首句“城阙辅三秦”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-007"
     },
@@ -2705,7 +2781,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": [],
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 8,
+          "bookId": "chinese-8a",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制2022课标修订原书，封面2024审核通过；纸本ISBN、版次及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=77",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 70,
+          "sourcePdfPage": 77,
+          "unit": "第3单元 · 山水与诗意",
+          "unitId": "u3",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页77核对作者或出处王维及首句“单车欲问边”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-010"
     },
@@ -2766,7 +2861,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": [],
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 8,
+          "bookId": "chinese-8a",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制2022课标修订原书，封面2024审核通过；纸本ISBN、版次及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=77",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 70,
+          "sourcePdfPage": 77,
+          "unit": "第3单元 · 山水与诗意",
+          "unitId": "u3",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页77核对作者或出处崔颢及首句“昔人已乘黄鹤去”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-013"
     },
@@ -2813,7 +2927,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": [],
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 8,
+          "bookId": "chinese-8a",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制2022课标修订原书，封面2024审核通过；纸本ISBN、版次及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=161",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 154,
+          "sourcePdfPage": 161,
+          "unit": "第6单元 · 志向与担当",
+          "unitId": "u6",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页161核对作者或出处杜甫及首句“国破山河在”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-015"
     },
@@ -2827,7 +2960,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": [],
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 8,
+          "bookId": "chinese-8b",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制2022课标修订原书，封面2024审核通过；纸本ISBN、版次及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=150",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 143,
+          "sourcePdfPage": 150,
+          "unit": "第6单元 · 责任表达与相处",
+          "unitId": "u6",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页150核对作者或出处杜甫及首句“八月秋高风怒号”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-016"
     },
@@ -2869,7 +3021,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": [],
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 8,
+          "bookId": "chinese-8b",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制2022课标修订原书，封面2024审核通过；纸本ISBN、版次及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=151",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 144,
+          "sourcePdfPage": 151,
+          "unit": "第6单元 · 责任表达与相处",
+          "unitId": "u6",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页151核对作者或出处白居易及首句“卖炭翁”；正文沿用已核验公版作品。本册采用“半匹红纱一丈绫”；旧录“红绡”为异文。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-019"
     },
@@ -2883,7 +3054,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": [],
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 8,
+          "bookId": "chinese-8a",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制2022课标修订原书，封面2024审核通过；纸本ISBN、版次及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=78",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 71,
+          "sourcePdfPage": 78,
+          "unit": "第3单元 · 山水与诗意",
+          "unitId": "u3",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页78核对作者或出处白居易及首句“孤山寺北贾亭西”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-020"
     },
@@ -2897,7 +3087,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": [],
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 8,
+          "bookId": "chinese-8a",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制2022课标修订原书，封面2024审核通过；纸本ISBN、版次及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=162",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 155,
+          "sourcePdfPage": 162,
+          "unit": "第6单元 · 志向与担当",
+          "unitId": "u6",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页162核对作者或出处李贺及首句“黑云压城城欲摧”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-021"
     },
@@ -2911,7 +3120,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": [],
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 8,
+          "bookId": "chinese-8a",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制2022课标修订原书，封面2024审核通过；纸本ISBN、版次及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=162",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 155,
+          "sourcePdfPage": 162,
+          "unit": "第6单元 · 志向与担当",
+          "unitId": "u6",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页162核对作者或出处杜牧及首句“折戟沉沙铁未销”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-022"
     },
@@ -3033,7 +3261,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": [],
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 8,
+          "bookId": "chinese-8a",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制2022课标修订原书，封面2024审核通过；纸本ISBN、版次及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=170",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 163,
+          "sourcePdfPage": 170,
+          "unit": "附录 · 课外古诗词诵读（二）",
+          "unitId": "u8",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页170核对作者或出处晏殊及首句“一曲新词酒一杯”；正文沿用已核验公版作品。本册“几时回！”；旧录“几时回？”为标点异文。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-028"
     },
@@ -3108,7 +3355,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 62,
       "source_pdf_page": 69,
-      "shanghai_textbook_mapping": [],
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 8,
+          "bookId": "chinese-8a",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制2022课标修订原书，封面2024审核通过；纸本ISBN、版次及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=163",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 156,
+          "sourcePdfPage": 163,
+          "unit": "第6单元 · 志向与担当",
+          "unitId": "u6",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页163核对作者或出处李清照及首句“天接云涛连晓雾”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-032"
     },
@@ -3352,7 +3618,26 @@
       "content_type": "文言文及选段",
       "source_print_page": 63,
       "source_pdf_page": 70,
-      "shanghai_textbook_mapping": [],
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 8,
+          "bookId": "chinese-8b",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制2022课标修订原书，封面2024审核通过；纸本ISBN、版次及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=141",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 134,
+          "sourcePdfPage": 141,
+          "unit": "第6单元 · 责任表达与相处",
+          "unitId": "u6",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页141核对作者或出处《庄子》及首句“北冥有鱼”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-044"
     },
@@ -3366,7 +3651,26 @@
       "content_type": "文言文及选段",
       "source_print_page": 63,
       "source_pdf_page": 70,
-      "shanghai_textbook_mapping": [],
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 8,
+          "bookId": "chinese-8b",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制2022课标修订原书，封面2024审核通过；纸本ISBN、版次及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=144",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 137,
+          "sourcePdfPage": 144,
+          "unit": "第6单元 · 责任表达与相处",
+          "unitId": "u6",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页144核对作者或出处《礼记》及首句“虽有嘉肴”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-045"
     },
@@ -3422,7 +3726,26 @@
       "content_type": "文言文及选段",
       "source_print_page": 63,
       "source_pdf_page": 70,
-      "shanghai_textbook_mapping": [],
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 8,
+          "bookId": "chinese-8b",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制2022课标修订原书，封面2024审核通过；纸本ISBN、版次及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=69",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 62,
+          "sourcePdfPage": 69,
+          "unit": "第3单元 · 文言阅读与经典",
+          "unitId": "u3",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页69核对作者或出处陶潜及首句“晋太元中”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-049"
     },
@@ -3436,7 +3759,26 @@
       "content_type": "文言文及选段",
       "source_print_page": 63,
       "source_pdf_page": 70,
-      "shanghai_textbook_mapping": [],
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 8,
+          "bookId": "chinese-8a",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制2022课标修订原书，封面2024审核通过；纸本ISBN、版次及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=71",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 64,
+          "sourcePdfPage": 71,
+          "unit": "第3单元 · 山水与诗意",
+          "unitId": "u3",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页71核对作者或出处陶弘景及首句“山川之美”；正文沿用已核验公版作品。本册“五色交晖”；旧录“交辉”为异文。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-050"
     },
@@ -3450,7 +3792,26 @@
       "content_type": "文言文及选段",
       "source_print_page": 63,
       "source_pdf_page": 70,
-      "shanghai_textbook_mapping": [],
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 8,
+          "bookId": "chinese-8a",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制2022课标修订原书，封面2024审核通过；纸本ISBN、版次及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=69",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 62,
+          "sourcePdfPage": 69,
+          "unit": "第3单元 · 山水与诗意",
+          "unitId": "u3",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页69核对作者或出处郦道元及首句“自三峡七百里中”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-051"
     },
@@ -3464,7 +3825,26 @@
       "content_type": "文言文及选段",
       "source_print_page": 63,
       "source_pdf_page": 70,
-      "shanghai_textbook_mapping": [],
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 8,
+          "bookId": "chinese-8b",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制2022课标修订原书，封面2024审核通过；纸本ISBN、版次及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=147",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 140,
+          "sourcePdfPage": 147,
+          "unit": "第6单元 · 责任表达与相处",
+          "unitId": "u6",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页147核对作者或出处韩愈及首句“世有伯乐”；正文沿用已核验公版作品。本册采用“只辱于奴隶人之手”；旧录“祇”为异文。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-052"
     },
@@ -3511,7 +3891,26 @@
       "content_type": "文言文及选段",
       "source_print_page": 63,
       "source_pdf_page": 70,
-      "shanghai_textbook_mapping": [],
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 8,
+          "bookId": "chinese-8b",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制2022课标修订原书，封面2024审核通过；纸本ISBN、版次及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=73",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 66,
+          "sourcePdfPage": 73,
+          "unit": "第3单元 · 文言阅读与经典",
+          "unitId": "u3",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页73核对作者或出处柳宗元及首句“从小丘西行百二十步”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-054"
     },
@@ -3586,7 +3985,26 @@
       "content_type": "文言文及选段",
       "source_print_page": 63,
       "source_pdf_page": 70,
-      "shanghai_textbook_mapping": [],
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 8,
+          "bookId": "chinese-8a",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制2022课标修订原书，封面2024审核通过；纸本ISBN、版次及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=72",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 65,
+          "sourcePdfPage": 72,
+          "unit": "第3单元 · 山水与诗意",
+          "unitId": "u3",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页72核对作者或出处苏轼及首句“元丰六年十月十二日夜”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-7-9-058"
     },

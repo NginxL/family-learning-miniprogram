@@ -41,6 +41,8 @@ export interface Content {
   builtin?: false;
 }
 export interface KnowledgeItem extends Content {
+  // Explicit containment of complete chapters in a legacy group; never inferred from titles.
+  coveredContentIds?: string[];
   studyArea?: 'literacy' | 'pinyin' | 'reading';
   collections: ContentScope[];
   author?: string;

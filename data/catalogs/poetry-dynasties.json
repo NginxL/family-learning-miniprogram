@@ -2376,6 +2376,292 @@
         "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial"
       ],
       "note": "原书作者／出处与时代注释核对。"
+    },
+    {
+      "id": "sh54-yu-zhu-yuansi",
+      "title": "与朱元思书",
+      "author": "吴均",
+      "dynasty": "南朝梁",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处及时代核对。"
+    },
+    {
+      "id": "sh54-yewang-wangji",
+      "title": "野望",
+      "author": "王绩",
+      "dynasty": "唐代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处及时代核对。"
+    },
+    {
+      "id": "sh54-du-jingmen",
+      "title": "渡荆门送别",
+      "author": "李白",
+      "dynasty": "唐代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处及时代核对。"
+    },
+    {
+      "id": "sh54-tingzhong-qishu",
+      "title": "庭中有奇树",
+      "author": "《古诗十九首》",
+      "dynasty": "东汉",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "《古诗十九首》作者不详，一般认为产生于东汉末年；不是《文选》编者萧统的生活时代。"
+    },
+    {
+      "id": "sh54-gui-sui-shou",
+      "title": "龟虽寿",
+      "author": "曹操",
+      "dynasty": "东汉",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处及时代核对。"
+    },
+    {
+      "id": "sh54-zeng-congdi-2",
+      "title": "赠从弟（其二）",
+      "author": "刘桢",
+      "dynasty": "东汉",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处及时代核对。"
+    },
+    {
+      "id": "sh54-liangfu-xing",
+      "title": "梁甫行",
+      "author": "曹植",
+      "dynasty": "三国魏",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处及时代核对。"
+    },
+    {
+      "id": "sh54-mengzi-dedao",
+      "title": "得道多助，失道寡助",
+      "author": "《孟子》",
+      "dynasty": "战国",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处及时代核对。"
+    },
+    {
+      "id": "sh54-mengzi-fugui",
+      "title": "富贵不能淫",
+      "author": "《孟子》",
+      "dynasty": "战国",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处及时代核对。"
+    },
+    {
+      "id": "sh54-mengzi-youhuan",
+      "title": "生于忧患，死于安乐",
+      "author": "《孟子》",
+      "dynasty": "战国",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处及时代核对。"
+    },
+    {
+      "id": "sh54-yugong-yishan",
+      "title": "愚公移山",
+      "author": "《列子》",
+      "dynasty": "成书时代有争议",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "《列子》旧题列御寇著，成书有争议；与七年级《杞人忧天》保持同一出处口径，不把故事发生时代当作成书年代。"
+    },
+    {
+      "id": "sh54-zhou-yafu",
+      "title": "周亚夫军细柳",
+      "author": "司马迁",
+      "dynasty": "西汉",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处及时代核对。"
+    },
+    {
+      "id": "sh54-caisangzi-qingzhou",
+      "title": "采桑子（轻舟短棹西湖好）",
+      "author": "欧阳修",
+      "dynasty": "北宋",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处及时代核对。"
+    },
+    {
+      "id": "sh54-xiangjianhuan-jinling",
+      "title": "相见欢（金陵城上西楼）",
+      "author": "朱敦儒",
+      "dynasty": "宋代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处及时代核对。"
+    },
+    {
+      "id": "sh54-rumengling-changji",
+      "title": "如梦令（常记溪亭日暮）",
+      "author": "李清照",
+      "dynasty": "宋代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处及时代核对。"
+    },
+    {
+      "id": "sh54-hezhouji",
+      "title": "核舟记",
+      "author": "魏学洢",
+      "dynasty": "明代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处及时代核对。"
+    },
+    {
+      "id": "sh54-shiwei",
+      "title": "式微",
+      "author": "《诗经》",
+      "dynasty": "先秦",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处及时代核对。"
+    },
+    {
+      "id": "sh54-zijin",
+      "title": "子衿",
+      "author": "《诗经》",
+      "dynasty": "先秦",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处及时代核对。"
+    },
+    {
+      "id": "sh54-wang-dongting",
+      "title": "望洞庭湖上张丞相",
+      "author": "孟浩然",
+      "dynasty": "唐代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处及时代核对。"
+    },
+    {
+      "id": "sh54-zhuangzi-haoliang",
+      "title": "庄子与惠子游于濠梁之上",
+      "author": "《庄子》",
+      "dynasty": "战国",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处及时代核对。"
+    },
+    {
+      "id": "sh54-dadao-zhixing",
+      "title": "大道之行也",
+      "author": "《礼记》",
+      "dynasty": "西汉（编纂）",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "《礼记》汇编战国至秦汉礼仪论著，相传西汉戴圣编纂；朝代表示编纂时代。"
+    },
+    {
+      "id": "sh54-shihaoli",
+      "title": "石壕吏",
+      "author": "杜甫",
+      "dynasty": "唐代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处及时代核对。"
+    },
+    {
+      "id": "sh54-ti-poshansi",
+      "title": "题破山寺后禅院",
+      "author": "常建",
+      "dynasty": "唐代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处及时代核对。"
+    },
+    {
+      "id": "sh54-songyouren-libai",
+      "title": "送友人",
+      "author": "李白",
+      "dynasty": "唐代",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处及时代核对。"
+    },
+    {
+      "id": "sh54-busuanzi-huangzhou",
+      "title": "卜算子·黄州定慧院寓居作",
+      "author": "苏轼",
+      "dynasty": "北宋",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处及时代核对。"
+    },
+    {
+      "id": "sh54-busuanzi-yongmei",
+      "title": "卜算子·咏梅",
+      "author": "陆游",
+      "dynasty": "南宋",
+      "status": "textbook_page",
+      "sources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial"
+      ],
+      "note": "原书作者／出处及时代核对。"
     }
   ]
 }

@@ -1,5 +1,5 @@
 import crypto = require('node:crypto');
-import { DomainError, requireValue, text, identifier, validDate, planningDate, hash, chinaDate } from './validation';
+import { DomainError, requireValue, requireLedgerCapacity, text, identifier, validDate, planningDate, hash, chinaDate } from './validation';
 import { createHomeworkService, type MediaStore, homeworkKey } from './homework';
 import * as learning from './learning/learning';
 import { ageFromBirthDate, withCurrentAge } from './learning/child-profile';
@@ -158,8 +158,7 @@ function createService({ store, media, now = Date.now, randomId = () => crypto.r
       const ledgerKey = (childId: string) => hash(`${family.id}:${childId}`);
       const readLedger = async (childId: string): Promise<PersistedLedger> => (await tx.get('learning', ledgerKey(childId))) || { familyId: family.id, childId, records: {} };
       const saveLedger = async (ledger: PersistedLedger) => {
-        // Leave headroom below the CloudBase document limit; fail atomically instead of dropping history.
-        requireValue(Buffer.byteLength(JSON.stringify(ledger), 'utf8') < 700 * 1024, 'LIMIT', '学习档案容量已满，请联系管理员扩容后重试');
+        requireLedgerCapacity(ledger);
         await tx.put('learning', ledgerKey(ledger.childId), ledger);
       };
       const saveDay = async (id: string, day: Day) => {

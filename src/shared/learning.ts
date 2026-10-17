@@ -122,9 +122,28 @@ function planningKey(item: ContentInput): string {
   const compact = (value: string) => value.trim().replace(/\s+/g, ' ');
   return JSON.stringify([kindOf(item), normalizedTitle(item.title), compact(item.detail || '')]);
 }
+function coveredIds(item: ContentInput): string[] {
+  const builtin = catalogById.get(contentId(item));
+  const ids = builtin?.coveredContentIds || [];
+  if (!ids.length) return [];
+  if (item.builtin || item.detail === undefined || item.detail === builtin?.detail) return ids;
+  // An old full-text snapshot can differ in punctuation. A shortened/custom
+  // snapshot must actually contain a chapter before it grants chapter credit.
+  const compact = (text: string) => text.replace(/[\s\p{P}\p{S}]/gu, '');
+  const detail = compact(item.detail);
+  return ids.filter(id => {
+    const child = catalogById.get(id)!;
+    const body = child.author ? child.detail.slice(child.author.length) : child.detail;
+    return detail.includes(compact(body));
+  });
+}
+function planningKeys(item: ContentInput): string[] {
+  return [planningKey(item), ...coveredIds(item).map(id => planningKey({ id }))];
+}
+const overlapsKeys = (keys: Set<string>, item: ContentInput) => planningKeys(item).some(key => keys.has(key));
 function wasLearned(ledger: LearningLedger, item: ContentInput): boolean {
-  const key = planningKey(item);
-  return Object.values(ledger.records).some((entry) => entry.completedDates.length > 0 && planningKey(entry.item) === key);
+  const keys = new Set(planningKeys(item));
+  return Object.values(ledger.records).some((entry) => entry.completedDates.length > 0 && overlapsKeys(keys, entry.item));
 }
 function allowsRepeat(family: PlanningFamily, task: Task): boolean {
   return task.mode === 'review' || task.repeatAllowed === true || family.plans.some((plan) => plan.id === task.id
@@ -142,16 +161,16 @@ function omitTask(day: Day, task: Task): void {
 function generateDay(family: PlanningFamily, day: Day, ledgers: Record<string, LearningLedger>, preview = false): Day {
   const filterPlanned = preview || !day.generated;
   const learnedKeys = new Map(family.children.map((child) => [child.id, new Set(Object.values(ledgers[child.id].records)
-    .filter((entry) => entry.completedDates.length).map((entry) => planningKey(entry.item)))]));
-  const doneKeys = new Set(day.tasks.filter((task) => task.done).map((task) => JSON.stringify([task.childId, planningKey(task)])));
+    .filter((entry) => entry.completedDates.length).flatMap((entry) => planningKeys(entry.item)))]));
+  const doneKeys = new Set(day.tasks.filter((task) => task.done).flatMap((task) => planningKeys(task).map(key => JSON.stringify([task.childId, key]))));
   const pendingKeys = new Set<string>();
   // Completed snapshots are immutable here, even if old versions stored duplicates.
   day.tasks = day.tasks.filter((task) => {
     if (task.done) return true;
-    const key = JSON.stringify([task.childId, planningKey(task)]);
-    if (doneKeys.has(key) || pendingKeys.has(key)) return false;
-    if (filterPlanned && !allowsRepeat(family, task) && learnedKeys.get(task.childId)?.has(planningKey(task))) return false;
-    pendingKeys.add(key); return true;
+    const keys = planningKeys(task).map(key => JSON.stringify([task.childId, key]));
+    if (keys.some(key => doneKeys.has(key) || pendingKeys.has(key))) return false;
+    if (filterPlanned && !allowsRepeat(family, task) && overlapsKeys(learnedKeys.get(task.childId) || new Set(), task)) return false;
+    keys.forEach(key => pendingKeys.add(key)); return true;
   });
   day.generated = day.generated || {};
   day.warnings = day.warnings || [];
@@ -159,16 +178,16 @@ function generateDay(family: PlanningFamily, day: Day, ledgers: Record<string, L
     const ledger = ledgers[child.id];
     const omitted = (day.omitted || []).filter((item) => item.childId === child.id);
     const omittedKeys = new Set(omitted.map((item) => item.key));
-    const assignedKeys = new Set(day.tasks.filter((task) => task.childId === child.id).map(planningKey));
+    const assignedKeys = new Set(day.tasks.filter((task) => task.childId === child.id).flatMap(planningKeys));
     recordTasks(ledger, day.tasks.filter((task) => task.childId === child.id), day.date);
     // Existing plans without a schedule preserve the v0.1 daily-repeat semantics.
     family.plans.filter((plan) => plan.childId === child.id && plan.enabled && plan.schedule !== 'library'
       && (!plan.startDate || plan.startDate <= day.date)
       && (plan.schedule !== 'once' || plan.date === day.date)).forEach((plan) => {
       const key = planningKey(plan);
-      if (!assignedKeys.has(key) && !omittedKeys.has(key) && (plan.schedule !== 'once' || !learnedKeys.get(child.id)?.has(key))) {
+      if (!overlapsKeys(assignedKeys, plan) && !omittedKeys.has(key) && (plan.schedule !== 'once' || !overlapsKeys(learnedKeys.get(child.id) || new Set(), plan))) {
         day.tasks.push(taskFrom(plan, child.id, plan.id, 'manual'));
-        assignedKeys.add(key);
+        planningKeys(plan).forEach(key => assignedKeys.add(key));
       }
     });
     recordTasks(ledger, day.tasks.filter((task) => task.childId === child.id), day.date);
@@ -177,18 +196,18 @@ function generateDay(family: PlanningFamily, day: Day, ledgers: Record<string, L
     const reserved = new Set([
       ...(family.scheduledContents || []).filter((item) => item.childId === child.id && item.date > day.date).map((item) => item.contentId),
       ...family.plans.filter((plan) => plan.childId === child.id && plan.enabled && plan.schedule === 'once' && plan.date && plan.date > day.date).map(contentId)
-    ].map((id) => catalogById.get(id)?.workId || id));
+    ].flatMap(id => planningKeys({ id })));
     const rules = templateForDate(family, child.id, day.date).rules;
     rules.filter((rule) => rule.quantity > 0 || family.templateSets?.[child.id]).forEach((rule) => {
       if (generated[rule.kind]) return;
       let pool;
       if (rule.mode === 'new') {
         const seenWorks = new Set(Object.values(ledger.records).map((entry) => { const item = content(entry.item); return item.workId || item.id; }));
-        const seenKeys = new Set(Object.values(ledger.records).map((entry) => planningKey(entry.item)));
-        pool = materialPool(family, child.id, rule.scope || 'starter').filter((item) => item.kind === rule.kind && !seenWorks.has(item.workId || item.id) && !seenKeys.has(planningKey(item)));
+        const seenKeys = new Set(Object.values(ledger.records).flatMap((entry) => planningKeys(entry.item)));
+        pool = materialPool(family, child.id, rule.scope || 'starter').filter((item) => item.kind === rule.kind && !seenWorks.has(item.workId || item.id) && !overlapsKeys(seenKeys, item));
         // A work and its textbook excerpt are separate study units, but are not new twice.
         const selectedWorks = new Set<string>();
-        pool = pool.filter((item) => { const id = item.workId || item.id; if (selectedWorks.has(id)) return false; selectedWorks.add(id); return true; });
+        pool = pool.filter((item) => { if (overlapsKeys(selectedWorks, item)) return false; planningKeys(item).forEach(key => selectedWorks.add(key)); return true; });
       } else {
         pool = Object.values(ledger.records).filter((entry) => entry.item.kind === rule.kind && entry.completedDates.length)
           .sort((a, b) => a.completedDates[a.completedDates.length - 1].localeCompare(b.completedDates[b.completedDates.length - 1]) || a.item.id.localeCompare(b.item.id))
@@ -199,8 +218,8 @@ function generateDay(family: PlanningFamily, day: Day, ledgers: Record<string, L
       for (const item of pool) {
         const key = planningKey(item);
         if (chosen.length >= quantity) break;
-        if (assignedKeys.has(key) || omittedKeys.has(key) || reserved.has(item.workId || item.id)) continue;
-        chosen.push(item); assignedKeys.add(key);
+        if (overlapsKeys(assignedKeys, item) || omittedKeys.has(key) || overlapsKeys(reserved, item)) continue;
+        chosen.push(item); planningKeys(item).forEach(key => assignedKeys.add(key));
       }
       chosen.forEach((item) => day.tasks.push(taskFrom(item, child.id, `a_${child.id}_${item.id}`, rule.mode)));
       generated[rule.kind] = { ...rule, actual: chosen.length };
@@ -214,10 +233,18 @@ function generateDay(family: PlanningFamily, day: Day, ledgers: Record<string, L
 }
 // A compact, complete index for the library; no pagination or learning text is sent.
 function learningStatus(ledger: LearningLedger) {
-  return { items: Object.values(ledger.records).filter(entry => entry.completedDates.length > 0).map(entry => ({
-    contentId: entry.item.id, learnedCount: entry.completedDates.length,
-    lastLearned: [...entry.completedDates].sort().slice(-1)[0], mastered: entry.mastered
-  })) };
+  const completed = new Map<string, { dates: Set<string>; mastered: boolean }>();
+  for (const entry of Object.values(ledger.records).filter(entry => entry.completedDates.length > 0)) {
+    for (const id of [entry.item.id, ...coveredIds(entry.item)]) {
+      const state = completed.get(id) || { dates: new Set<string>(), mastered: false };
+      entry.completedDates.forEach(date => state.dates.add(date));
+      // Derived chapter completion never invents a mastery choice or a stored record.
+      if (id === entry.item.id) state.mastered = entry.mastered;
+      completed.set(id, state);
+    }
+  }
+  return { items: [...completed].map(([contentId, state]) => ({ contentId, learnedCount: state.dates.size,
+    lastLearned: [...state.dates].sort().slice(-1)[0], mastered: state.mastered })) };
 }
 function history(ledger: LearningLedger, input: HistoryQuery = {}) {
   const subject = input.subject || 'all'; const filter = input.filter || 'learned';
@@ -257,8 +284,9 @@ function searchCatalog(input: CatalogQuery = {}) {
 const gradeLabels = ['未设置', '一年级', '二年级', '三年级', '四年级', '五年级', '六年级（预备）', '七年级', '八年级', '九年级'];
 function progress(ledger: LearningLedger) {
   const records = Object.values(ledger.records);
-  const learned = (id: string) => Boolean(ledger.records[id] && ledger.records[id].completedDates.length);
-  const mastered = (id: string) => learned(id) && ledger.records[id].mastered;
+  const statuses = new Map(learningStatus(ledger).items.map(item => [item.contentId, item]));
+  const learned = (id: string) => statuses.has(id);
+  const mastered = (id: string) => Boolean(statuses.get(id)?.mastered);
   const count = (items: Array<{ id: string }>) => ({ total: items.length, learned: items.filter((item) => learned(item.id)).length, mastered: items.filter((item) => mastered(item.id)).length });
   const grades = Array.from({ length: 9 }, (_, index) => {
     const grade = (index + 1) as SchoolGrade;

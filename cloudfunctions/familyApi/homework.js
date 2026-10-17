@@ -192,7 +192,7 @@ function createHomeworkService(store, media) {
                     const ledgerId = (0, validation_1.hash)(`${scope.familyId}:${scope.childId}`);
                     const ledger = await tx.get('learning', ledgerId) || { familyId: scope.familyId, childId: scope.childId, records: {} };
                     learning.recordTasks(ledger, day.tasks.filter((task) => task.childId === scope.childId), scope.date);
-                    (0, validation_1.requireValue)(Buffer.byteLength(JSON.stringify(ledger)) < 700 * 1024, 'LIMIT', '学习档案容量已满，请联系管理员');
+                    (0, validation_1.requireLedgerCapacity)(ledger);
                     await tx.put('learning', ledgerId, ledger);
                     await tx.put('days', (0, validation_1.hash)(`${scope.familyId}:${scope.date}`), day);
                 }

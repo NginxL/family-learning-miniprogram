@@ -26,7 +26,7 @@ export function assertKnowledge(value: unknown): asserts value is KnowledgeItem[
     requireField(strings(item.collections) && item.collections.every((scope) => scopes.includes(scope)), `${path}.collections`);
     for (const key of ['author', 'dynasty', 'dynastyNote', 'workId', 'note', 'curriculumId', 'referenceUrl', 'textSourceUrl'])
       requireField(item[key] === undefined || typeof item[key] === 'string', `${path}.${key}`);
-    for (const key of ['aliases', 'bookIds']) requireField(item[key] === undefined || strings(item[key]), `${path}.${key}`);
+    for (const key of ['aliases', 'bookIds', 'coveredContentIds']) requireField(item[key] === undefined || strings(item[key]), `${path}.${key}`);
     requireField(item.subject === undefined || (typeof item.subject === 'string' && ['poetry', 'english', 'reading', 'math', 'other'].includes(item.subject)), `${path}.subject`);
     requireField(item.builtin === undefined || item.builtin === false, `${path}.builtin`);
     requireField(item.studyArea === undefined || ['literacy', 'pinyin', 'reading'].includes(item.studyArea as string), `${path}.studyArea`);
@@ -49,4 +49,10 @@ export function assertKnowledge(value: unknown): asserts value is KnowledgeItem[
       });
     }
   });
+  const items = value as KnowledgeItem[];
+  for (const item of items) for (const id of item.coveredContentIds || []) {
+    const child = items.find(entry => entry.id === id);
+    requireField(child && child.id !== item.id && child.kind === item.kind && !child.coveredContentIds?.length,
+      `${item.id}.coveredContentIds must reference distinct leaf items of the same kind`);
+  }
 }

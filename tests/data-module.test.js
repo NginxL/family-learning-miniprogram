@@ -39,3 +39,17 @@ test('repeated layouts reduce native package bytes without sharing mutable recor
   context.module.exports[6].a = 99;
   assert.equal(context.module.exports[7].a, 4);
 });
+
+test('unique source prefixes compress deterministically and preserve Unicode, escapes and values', () => {
+  const prefix = 'https://example.test/教材/very-long-common-source-path?edition=2024&unit=';
+  const values = Array.from({ length: 80 }, (_, i) => ({ source: prefix + i + '\n"\\',
+    unicode: '共同前缀'.repeat(10) + (i % 2 ? '😀' : '😁') + i }));
+  const code = dataModule(values);
+  assert.match(code, /s\.forEach/);
+  assert.ok(Buffer.byteLength(code) < Buffer.byteLength(JSON.stringify(values)) * 0.5);
+  const context = { module: { exports: null } };
+  vm.runInNewContext(code, context);
+  assert.deepEqual(JSON.parse(JSON.stringify(context.module.exports)), values);
+  assert.equal(dataModule(values), code);
+  assert.doesNotMatch(dataModule({ short: 'hello' }), /s\.forEach/);
+});

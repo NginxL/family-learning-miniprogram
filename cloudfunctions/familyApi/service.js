@@ -192,8 +192,7 @@ function createService({ store, media, now = Date.now, randomId = () => crypto.r
             const ledgerKey = (childId) => (0, validation_1.hash)(`${family.id}:${childId}`);
             const readLedger = async (childId) => (await tx.get('learning', ledgerKey(childId))) || { familyId: family.id, childId, records: {} };
             const saveLedger = async (ledger) => {
-                // Leave headroom below the CloudBase document limit; fail atomically instead of dropping history.
-                (0, validation_1.requireValue)(Buffer.byteLength(JSON.stringify(ledger), 'utf8') < 700 * 1024, 'LIMIT', '学习档案容量已满，请联系管理员扩容后重试');
+                (0, validation_1.requireLedgerCapacity)(ledger);
                 await tx.put('learning', ledgerKey(ledger.childId), ledger);
             };
             const saveDay = async (id, day) => {

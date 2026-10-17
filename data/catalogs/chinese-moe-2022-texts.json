@@ -1416,14 +1416,17 @@
       "curriculumId": "moe-2022-zh-7-9-019",
       "title": "卖炭翁",
       "author": "白居易",
-      "original": "卖炭翁，伐薪烧炭南山中。\n满面尘灰烟火色，两鬓苍苍十指黑。\n卖炭得钱何所营？身上衣裳口中食。\n可怜身上衣正单，心忧炭贱愿天寒。\n夜来城外一尺雪，晓驾炭车辗冰辙。\n牛困人饥日已高，市南门外泥中歇。\n翩翩两骑来是谁？黄衣使者白衫儿。\n手把文书口称敕，回车叱牛牵向北。\n一车炭，千余斤，宫使驱将惜不得。\n半匹红绡一丈绫，系向牛头充炭直。",
+      "original": "卖炭翁，伐薪烧炭南山中。\n满面尘灰烟火色，两鬓苍苍十指黑。\n卖炭得钱何所营？身上衣裳口中食。\n可怜身上衣正单，心忧炭贱愿天寒。\n夜来城外一尺雪，晓驾炭车辗冰辙。\n牛困人饥日已高，市南门外泥中歇。\n翩翩两骑来是谁？黄衣使者白衫儿。\n手把文书口称敕，回车叱牛牵向北。\n一车炭，千余斤，宫使驱将惜不得。\n半匹红纱一丈绫，系向牛头充炭直。",
       "gradeBand": "7-9",
       "sourcePdfPage": 69,
       "textSources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
         "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
       ],
-      "reviewStatus": "篇目、作者及选段已核对；上海教材逐字校对待确认",
-      "notes": [],
+      "reviewStatus": "五四制2024审核原书印刷144页正文核对；学校印次待确认",
+      "notes": [
+        "采用本册“半匹红纱一丈绫”；旧录“半匹红绡一丈绫”作为异文记录，内容ID不变。"
+      ],
       "transcriptionRecordId": "5b9a120a367d5c5b84062a88"
     },
     {
@@ -1551,14 +1554,17 @@
       "curriculumId": "moe-2022-zh-7-9-028",
       "title": "浣溪沙",
       "author": "晏殊",
-      "original": "一曲新词酒一杯，去年天气旧亭台。夕阳西下几时回？\n无可奈何花落去，似曾相识燕归来。小园香径独徘徊。",
+      "original": "一曲新词酒一杯，去年天气旧亭台。夕阳西下几时回！\n无可奈何花落去，似曾相识燕归来。小园香径独徘徊。",
       "gradeBand": "7-9",
       "sourcePdfPage": 69,
       "textSources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
         "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
       ],
-      "reviewStatus": "篇目、作者及选段已核对；上海教材逐字校对待确认",
-      "notes": [],
+      "reviewStatus": "五四制2024审核原书印刷163页正文核对；学校印次待确认",
+      "notes": [
+        "采用本册“夕阳西下几时回！”；旧录“夕阳西下几时回？”作为异文记录，内容ID不变。"
+      ],
       "transcriptionRecordId": "5b9a04b1367d5cae5c9bff5e"
     },
     {
@@ -1786,7 +1792,11 @@
       "notes": [
         "三则按课标合并为一条；“于是人也”依课标选择语，非“于斯人也”。"
       ],
-      "transcriptionRecordId": "5b9a0f31367d5c3b48e948fc"
+      "transcriptionRecordId": "5b9a0f31367d5c3b48e948fc",
+      "coveredContentIds": [
+        "sh54-mengzi-dedao",
+        "sh54-mengzi-youhuan"
+      ]
     },
     {
       "id": "moe-2022-zh-7-9-044",
@@ -1883,14 +1893,17 @@
       "curriculumId": "moe-2022-zh-7-9-050",
       "title": "答谢中书书",
       "author": "陶弘景",
-      "original": "山川之美，古来共谈。高峰入云，清流见底。两岸石壁，五色交辉。青林翠竹，四时俱备。晓雾将歇，猿鸟乱鸣；夕日欲颓，沉鳞竞跃。实是欲界之仙都。自康乐以来，未复有能与其奇者。",
+      "original": "山川之美，古来共谈。高峰入云，清流见底。两岸石壁，五色交晖。青林翠竹，四时俱备。晓雾将歇，猿鸟乱鸣；夕日欲颓，沉鳞竞跃。实是欲界之仙都。自康乐以来，未复有能与其奇者。",
       "gradeBand": "7-9",
       "sourcePdfPage": 70,
       "textSources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
         "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
       ],
-      "reviewStatus": "篇目、作者及选段已核对；上海教材逐字校对待确认",
-      "notes": [],
+      "reviewStatus": "五四制2024审核原书印刷64页正文核对；学校印次待确认",
+      "notes": [
+        "采用本册“五色交晖”；旧录“五色交辉”作为异文记录，内容ID不变。"
+      ],
       "transcriptionRecordId": "5b9a11fe367d5c5b84062a6c"
     },
     {
@@ -1913,14 +1926,17 @@
       "curriculumId": "moe-2022-zh-7-9-052",
       "title": "马说（杂说四）",
       "author": "韩愈",
-      "original": "世有伯乐，然后有千里马。千里马常有，而伯乐不常有。故虽有名马，祇辱于奴隶人之手，骈死于槽枥之间，不以千里称也。\n\n马之千里者，一食或尽粟一石。食马者不知其能千里而食也。是马也，虽有千里之能，食不饱，力不足，才美不外见，且欲与常马等不可得，安求其能千里也？\n\n策之不以其道，食之不能尽其材，鸣之而不能通其意，执策而临之，曰：“天下无马！”呜呼！其真无马邪？其真不知马也！",
+      "original": "世有伯乐，然后有千里马。千里马常有，而伯乐不常有。故虽有名马，只辱于奴隶人之手，骈死于槽枥之间，不以千里称也。\n\n马之千里者，一食或尽粟一石。食马者不知其能千里而食也。是马也，虽有千里之能，食不饱，力不足，才美不外见，且欲与常马等不可得，安求其能千里也？\n\n策之不以其道，食之不能尽其材，鸣之而不能通其意，执策而临之，曰：“天下无马！”呜呼！其真无马邪？其真不知马也！",
       "gradeBand": "7-9",
       "sourcePdfPage": 70,
       "textSources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
         "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
       ],
-      "reviewStatus": "篇目、作者及选段已核对；上海教材逐字校对待确认",
-      "notes": [],
+      "reviewStatus": "五四制2024审核原书印刷140页正文核对；学校印次待确认",
+      "notes": [
+        "采用本册“只辱于奴隶人之手”；旧录“祇辱于奴隶人之手”作为异文记录，内容ID不变。"
+      ],
       "transcriptionRecordId": "5b9a1436367d5cab18668626"
     },
     {

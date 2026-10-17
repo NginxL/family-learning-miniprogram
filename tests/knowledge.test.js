@@ -50,8 +50,8 @@ test('national source inventories retain 75/60 works, 1600 headword groups, 505 
   assert.deepEqual(new Set(Object.keys(meanings.entries)), new Set(english.entries.filter((entry) => entry.level2).map((entry) => entry.word)));
   assert.equal(tables.entries.length, 77);
   assert.deepEqual(tables.entries.reduce((counts, entry) => ({ ...counts, [entry.table]: (counts[entry.table] || 0) + 1 }), {}), { '基数词': 30, '序数词': 28, '月份': 12, '星期': 7 });
-  assert.equal(learning.catalog.filter((item) => item.kind === 'poetry').length, 215);
-  assert.equal(learning.catalog.filter((item) => item.kind === 'word').length, 2316);
+  assert.equal(learning.catalog.filter((item) => item.kind === 'poetry').length, 241);
+  assert.equal(learning.catalog.filter((item) => item.kind === 'word').length, 2528);
 });
 
 test('content identity preserves case and distinct same-title works; default scopes are deliberately limited', () => {
@@ -72,7 +72,7 @@ test('content identity preserves case and distinct same-title works; default sco
 
 test('grade mappings require a named five-four textbook and an observed title; national bands never become individual grades', () => {
   const mappings = learning.catalog.filter(item => item.kind === 'poetry').flatMap((item) => (item.gradeMappings || []).map((mapping) => ({ item, mapping })));
-  assert.equal(mappings.length, 172);
+  assert.equal(mappings.length, 220);
   for (const { item, mapping } of mappings) {
     const book = regional.books.find(entry => entry.id === mapping.bookId);
     const detailed = inventories.find(entry => entry.id === mapping.bookId);
@@ -127,9 +127,11 @@ test('all built-in content fits in a compact ledger and history resolves the ori
   const ledger = { records: {} };
   const tasks = learning.catalog.map((item, index) => ({ ...learning.taskFrom(item, 'child', `task${index}`, 'new'), done: true }));
   learning.recordTasks(ledger, tasks, '2026-10-12');
-  // The complete built-in ledger fits below 660 KiB; the unchanged 700 KiB
-  // persisted guard retains at least 40 KiB for custom entries and more dates.
-  assert.ok(Buffer.byteLength(JSON.stringify(ledger)) < 660 * 1024);
+  // Every built-in item completed once leaves at least 256 KiB below the shared
+  // 1 MiB application guard for custom entries and additional completion dates.
+  const { requireLedgerCapacity, LEDGER_MAX_BYTES } = require('../cloudfunctions/familyApi/validation');
+  assert.ok(Buffer.byteLength(JSON.stringify(ledger)) < LEDGER_MAX_BYTES - 256 * 1024);
+  assert.doesNotThrow(() => requireLedgerCapacity(ledger));
   assert.ok(Object.values(ledger.records).every((entry) => entry.item.builtin));
   const result = learning.history(ledger, { query: '出师表' });
   assert.ok(result.items.some((item) => item.detail.includes('先帝创业未半')));

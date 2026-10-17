@@ -1,7 +1,7 @@
 import type { ApiAction, ApiData } from '../shared/api';
 import type { Homework, HomeworkAttachment, HomeworkScope, HomeworkView, Store, Transaction } from '../shared/models';
 import * as learning from './learning/learning';
-import { hash, identifier, requireValue, validDate } from './validation';
+import { hash, identifier, requireValue, requireLedgerCapacity, validDate } from './validation';
 
 export interface MediaStore {
   upload(path: string, data: Buffer): Promise<string>;
@@ -153,7 +153,7 @@ export function createHomeworkService(store: Store, media?: MediaStore) {
           const ledgerId = hash(`${scope.familyId}:${scope.childId}`);
           const ledger = await tx.get('learning', ledgerId) || { familyId: scope.familyId, childId: scope.childId, records: {} };
           learning.recordTasks(ledger, day.tasks.filter((task) => task.childId === scope.childId), scope.date);
-          requireValue(Buffer.byteLength(JSON.stringify(ledger)) < 700 * 1024, 'LIMIT', '学习档案容量已满，请联系管理员');
+          requireLedgerCapacity(ledger);
           await tx.put('learning', ledgerId, ledger); await tx.put('days', hash(`${scope.familyId}:${scope.date}`), day);
         }
         Object.assign(previous, { status: input.decision === 'approve' ? 'approved' : 'returned', feedback: input.feedback || '',

@@ -38,6 +38,7 @@ function knowledge() {
   }));
   const poems = chinese.entries.map((entry) => ({
     id: entry.id, kind: 'poetry', title: `《${entry.title}》`, author: entry.author, ...period(entry),
+    ...(entry.coveredContentIds ? { coveredContentIds: entry.coveredContentIds } : {}),
     detail: `${entry.author}\n${entry.original}`, minutes: entry.original.length > 300 ? 15 : 5,
     source: `国家语文课标 2022 · ${entry.gradeBand} 年级推荐 · PDF 第 ${entry.sourcePdfPage} 页`,
     referenceUrl: chinese.curriculumSource, textSourceUrl: entry.textSources[0],
@@ -73,7 +74,7 @@ module.exports = { knowledge, resources: {
   checkedAt: '2026-10-17',
   curriculum: curriculum(knowledge()),
   examFramework,
-  coverage: '上海五四制：小学1–5、初中6–9年级。一至五年级语文十册字表及81组原创练习已整理，四、五下为2019审定样本。六、七年级语文两册的单元及课外诵读附录分别有26、38处古诗文映射，各有16篇原创练习。四、五上英语卷末词表与目录主题词已核对；六、七年级英语两册各533个单元词项已逐项核实，每个年级的12单元与Starter均有原创阅读、例句及语法提示。三上英语纸本、三至五年级新版下册及八至九年级内容仍有缺口，六、七年级逐课知识未全量覆盖；不是全教材或中考全量。',
+  coverage: '上海五四制：小学1–5、初中6–9年级。一至五年级语文十册字表及81组原创练习已整理，四、五下为2019审定样本。六、七、八年级语文两册的单元及课外诵读附录分别有26、38、48处古诗文映射，各有16篇原创练习。四、五上英语卷末词表与目录主题词已核对；六、七、八年级英语两册分别核实533、533、468个单元词项，各单元均有原创阅读、例句及语法提示。三上英语纸本、三至五年级新版下册及九年级内容仍有缺口，六至八年级逐课知识未全量覆盖；不是全教材或中考全量。',
   books: [...new Map([...regional.books, ...lowerPrimary.bookSummaries()].map(book => [book.id, book])).values()],
   links: [
     { title: '上海 2026 秋季教学用书通知', url: regional.noticeUrl, note: '市级用书目录；学校实际选用版本待确认' },

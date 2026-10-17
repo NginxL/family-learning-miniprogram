@@ -1,4 +1,12 @@
 import crypto = require('node:crypto');
+import type { LearningLedger } from '../shared/models';
+// Application guard, not the provider's limit. Keep writes bounded without
+// changing the v1 ledger shape or discarding earlier completion dates.
+const LEDGER_MAX_BYTES = 1024 * 1024;
+function requireLedgerCapacity(ledger: LearningLedger): void {
+  requireValue(Buffer.byteLength(JSON.stringify(ledger), 'utf8') < LEDGER_MAX_BYTES,
+    'LIMIT', '学习档案容量已满，请联系管理员扩容后重试');
+}
 const hash = (value: string) => crypto.createHash('sha256').update(value).digest('hex');
 const chinaDate = (time: number) => new Date(time + 8 * 3600000).toISOString().slice(0, 10);
 class DomainError extends Error {
@@ -35,4 +43,4 @@ function planningDate(value: unknown, now: number): string {
   'INVALID', '请选择今日起一年内的日期');
   return value;
 }
-export { DomainError, requireValue, text, identifier, validDate, planningDate, hash, chinaDate };
+export { DomainError, requireValue, requireLedgerCapacity, LEDGER_MAX_BYTES, text, identifier, validDate, planningDate, hash, chinaDate };
