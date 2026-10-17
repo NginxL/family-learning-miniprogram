@@ -288,7 +288,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 59,
       "source_pdf_page": 66,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 4,
+          "bookId": "chinese-4a-sample",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "edition": "五四制官方电子样本；封面审定2024；ISBN及学校印次待确认",
+          "sourceUrl": "https://book.pep.com.cn/1211001401262/",
+          "outlineDestination": "#page=123",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 117,
+          "sourcePdfPage": 123,
+          "unit": "第8单元 · 理想与担当",
+          "unitId": "u8",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方目录篇名、年级、学期与印刷页已核对；电子页123核对作者王翰及首句“葡萄美酒夜光杯”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-011"
     },
@@ -302,7 +320,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 59,
       "source_pdf_page": 66,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 4,
+          "bookId": "chinese-4a-sample",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "edition": "五四制官方电子样本；封面审定2024；ISBN及学校印次待确认",
+          "sourceUrl": "https://book.pep.com.cn/1211001401262/",
+          "outlineDestination": "#page=123",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 117,
+          "sourcePdfPage": 123,
+          "unit": "第8单元 · 理想与担当",
+          "unitId": "u8",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方目录篇名、年级、学期与印刷页已核对；电子页123核对作者王昌龄及首句“秦时明月汉时关”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-012"
     },
@@ -316,7 +352,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 59,
       "source_pdf_page": 66,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 4,
+          "bookId": "chinese-4b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "editionStatus": "historical_reference",
+          "edition": "五四制官方电子样本；封面审定2019；ISBN及学校印次待确认；新版下册待核实",
+          "sourceUrl": "https://book.pep.com.cn/1211001402192/",
+          "outlineDestination": "#page=108",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 102,
+          "sourcePdfPage": 108,
+          "unit": "第7单元 · 人物品质",
+          "unitId": "u7",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方目录篇名、年级、学期与印刷页已核对；电子页108核对作者王昌龄及首句“寒雨连江夜入吴”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-013"
     },
@@ -752,7 +807,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 59,
       "source_pdf_page": 66,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 4,
+          "bookId": "chinese-4b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "editionStatus": "historical_reference",
+          "edition": "五四制官方电子样本；封面审定2019；ISBN及学校印次待确认；新版下册待核实",
+          "sourceUrl": "https://book.pep.com.cn/1211001402192/",
+          "outlineDestination": "#page=108",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 102,
+          "sourcePdfPage": 108,
+          "unit": "第7单元 · 人物品质",
+          "unitId": "u7",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方目录篇名、年级、学期与印刷页已核对；电子页108核对作者卢纶及首句“月黑雁飞高”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-032"
     },
@@ -1325,7 +1399,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 60,
       "source_pdf_page": 67,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 4,
+          "bookId": "chinese-4a-sample",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "edition": "五四制官方电子样本；封面审定2024；ISBN及学校印次待确认",
+          "sourceUrl": "https://book.pep.com.cn/1211001401262/",
+          "outlineDestination": "#page=40",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 34,
+          "sourcePdfPage": 40,
+          "unit": "第3单元 · 连续观察",
+          "unitId": "u3",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方目录篇名、年级、学期与印刷页已核对；电子页40核对作者苏轼及首句“横看成岭侧成峰”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-056"
     },
@@ -1339,7 +1431,25 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 60,
       "source_pdf_page": 67,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 4,
+          "bookId": "chinese-4a-sample",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "edition": "五四制官方电子样本；封面审定2024；ISBN及学校印次待确认",
+          "sourceUrl": "https://book.pep.com.cn/1211001401262/",
+          "outlineDestination": "#page=124",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 118,
+          "sourcePdfPage": 124,
+          "unit": "第8单元 · 理想与担当",
+          "unitId": "u8",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方目录篇名、年级、学期与印刷页已核对；电子页124核对作者李清照及首句“生当作人杰”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-057"
     },
@@ -1427,7 +1537,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 60,
       "source_pdf_page": 67,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 4,
+          "bookId": "chinese-4b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "editionStatus": "historical_reference",
+          "edition": "五四制官方电子样本；封面审定2019；ISBN及学校印次待确认；新版下册待核实",
+          "sourceUrl": "https://book.pep.com.cn/1211001402192/",
+          "outlineDestination": "#page=8",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 2,
+          "sourcePdfPage": 8,
+          "unit": "第1单元 · 乡村风景",
+          "unitId": "u1",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方目录篇名、年级、学期与印刷页已核对；电子页8核对作者范成大及首句“梅子金黄杏子肥”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-062"
     },
@@ -1587,7 +1716,26 @@
       "content_type": "诗词曲及乐府",
       "source_print_page": 61,
       "source_pdf_page": 68,
-      "shanghai_textbook_mapping": null,
+      "shanghai_textbook_mapping": [
+        {
+          "grade": 4,
+          "bookId": "chinese-4b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "editionStatus": "historical_reference",
+          "edition": "五四制官方电子样本；封面审定2019；ISBN及学校印次待确认；新版下册待核实",
+          "sourceUrl": "https://book.pep.com.cn/1211001402192/",
+          "outlineDestination": "#page=109",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 103,
+          "sourcePdfPage": 109,
+          "unit": "第7单元 · 人物品质",
+          "unitId": "u7",
+          "mappingType": "textbook_item",
+          "evidence": "人教社五四制官方目录篇名、年级、学期与印刷页已核对；电子页109核对作者王冕及首句“我家洗砚池头树”；正文沿用已核验公版作品。学校印次待确认。",
+          "status": "catalogue_verified"
+        }
+      ],
       "full_text_status": "公版原作已录入；教材逐字校对待确认",
       "content_id": "moe-2022-zh-1-6-070"
     },

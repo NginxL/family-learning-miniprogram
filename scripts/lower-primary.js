@@ -1,7 +1,8 @@
 'use strict';
 const lowerPrimary = require('../data/catalogs/shanghai-54-lower-primary.json');
 const gradeThree = require('../data/catalogs/shanghai-54-grade3.json');
-const data = { ...lowerPrimary, books: [...lowerPrimary.books, ...gradeThree.books] };
+const gradeFour = require('../data/catalogs/shanghai-54-grade4.json');
+const data = { ...lowerPrimary, books: [...lowerPrimary.books, ...gradeThree.books, ...gradeFour.books], poems: gradeFour.poems };
 
 function unitLabel(unit) {
   return unit.displayLabel || `第${unit.number}单元 · ${unit.title}${unit.optional ? '（拓展）' : ''}`;
@@ -45,7 +46,10 @@ function attach(item, book, unit, type, word) {
     location.evidence = `${book.editionStatus === 'historical_reference' ? '旧版参考；当前新版下册待核实。' : ''}官方配套音频 ${book.inventory.vocabularyListName}：${word.vocabularyAudioTrack}；提取码 ${book.sourceEvidence.officialResourceCode}；书号 ${book.sourceEvidence.officialResourceIsbn}。`;
   }
   if (word?.verificationNote) location.evidence += ` ${word.verificationNote}`;
-  item.gradeMappings = [...(item.gradeMappings || []), location];
+  if (word?.additionalSense) location.evidence += ` 本单元用义：${word.meaning}。`;
+  const locations = item.gradeMappings || [];
+  const locationKey = JSON.stringify(location);
+  if (!locations.some(existing => JSON.stringify(existing) === locationKey)) item.gradeMappings = [...locations, location];
 }
 function practiceDetail(practice, language) {
   return language === 'chinese'
@@ -58,7 +62,7 @@ function literacyDetail(unit) {
 function validate() {
   const ids = new Set();
   for (const book of data.books) {
-    if (ids.has(book.id) || ![1, 2, 3].includes(book.grade) || !['上册', '下册'].includes(book.semester)
+    if (ids.has(book.id) || ![1, 2, 3, 4].includes(book.grade) || !['上册', '下册'].includes(book.semester)
       || book.schoolSystem !== '5-4' || !book.sourceUrl.startsWith('https://') || book.inventory.fullCoverage)
       throw Error(`Invalid lower-primary book: ${book.id}`);
     ids.add(book.id);
@@ -93,7 +97,7 @@ function augment(items) {
   const byId = new Map(items.map(item => [item.id, item]));
   const lexicon = new Map(items.filter(item => item.kind === 'word').flatMap(item => [item.title, ...(item.aliases || [])].map(word => [word, item])));
   // These variants are explicitly grouped under one national headword, not new knowledge IDs.
-  for (const [alias, id] of [['mum', 'word-mother'], ['mom', 'word-mother'], ['dad', 'word-father']]) {
+  for (const [alias, id] of [['mum', 'word-mother'], ['mom', 'word-mother'], ['dad', 'word-father'], ['television', 'word-tv']]) {
     if (byId.has(id)) lexicon.set(alias, byId.get(id));
   }
   const curatedMeanings = new Set();
@@ -137,6 +141,11 @@ function augment(items) {
           item.source = `${item.source.split('；')[0]}；教材主题常用义自编`;
           item.note = '中文为该主题下的常用义提示，不是完整词典释义或教材译文。';
           curatedMeanings.add(item.id);
+        } else if (word.additionalSense) {
+          // A shared word ID can recur with a distinct, reviewed textbook sense.
+          const meanings = item.detail.split('\n').slice(1).join('；').split('；');
+          item.detail = `${item.title}\n${[...new Set([...meanings, ...word.meaning.split('；')])].join('；')}`;
+          item.note = '合并已核实教材主题中的不同常用义；各单元用义见来源说明，不是完整词典释义或教材译文。';
         }
         attach(item, book, unit, 'textbook_item', word);
       }

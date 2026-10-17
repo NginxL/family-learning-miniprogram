@@ -1748,6 +1748,96 @@
         "https://keben.app/book/0352"
       ],
       "note": "公开教材样本 PDF 第 98 页署名与朝代。"
+    },
+    {
+      "id": "sh54-mujiangyin",
+      "title": "暮江吟",
+      "author": "白居易",
+      "dynasty": "唐代",
+      "status": "reviewed",
+      "sources": [
+        "https://book.pep.com.cn/1211001401262/"
+      ],
+      "note": "官方样本电子页 40 署名或出处已核对。"
+    },
+    {
+      "id": "sh54-xuemei",
+      "title": "雪梅",
+      "author": "卢钺",
+      "dynasty": "宋代",
+      "status": "reviewed",
+      "sources": [
+        "https://book.pep.com.cn/1211001401262/"
+      ],
+      "note": "官方样本电子页 41 署名或出处已核对。"
+    },
+    {
+      "id": "sh54-jingwei",
+      "title": "精卫填海",
+      "author": "《山海经·北山经》",
+      "dynasty": "成书年代待考",
+      "status": "unresolved",
+      "sources": [
+        "https://book.pep.com.cn/1211001401262/"
+      ],
+      "note": "《山海经·北山经》节选，题目为后人所加；作者和准确成书年代未在教材中确认，不用神话发生时期代替编纂年代。"
+    },
+    {
+      "id": "sh54-wangrong",
+      "title": "王戎不取道旁李",
+      "author": "刘义庆",
+      "dynasty": "南朝宋",
+      "status": "reviewed",
+      "sources": [
+        "https://book.pep.com.cn/1211001401262/",
+        "https://www.nlc.cn/migrated/pcab.nlc.cn/gjml/gjzggj/201412/P020141217510201045887.pdf"
+      ],
+      "note": "《世说新语·雅量》节选；标注作者刘义庆的南朝宋时期，不以故事人物王戎的时代代替作品编纂时代。"
+    },
+    {
+      "id": "sh54-xinshi",
+      "title": "宿新市徐公店",
+      "author": "杨万里",
+      "dynasty": "宋代",
+      "status": "reviewed",
+      "sources": [
+        "https://book.pep.com.cn/1211001402192/"
+      ],
+      "note": "官方样本电子页 8 署名或出处已核对。"
+    },
+    {
+      "id": "sh54-qingpingle-cunju",
+      "title": "清平乐·村居",
+      "author": "辛弃疾",
+      "dynasty": "宋代",
+      "status": "reviewed",
+      "sources": [
+        "https://book.pep.com.cn/1211001402192/"
+      ],
+      "note": "官方样本电子页 9 署名或出处已核对。"
+    },
+    {
+      "id": "sh54-nangying",
+      "title": "囊萤夜读",
+      "author": "房玄龄等",
+      "dynasty": "唐代",
+      "status": "reviewed",
+      "sources": [
+        "https://book.pep.com.cn/1211001402192/",
+        "https://www.nlcpress.com/ProductView.aspx?Id=7128"
+      ],
+      "note": "《晋书·车胤传》节选；标注唐代编纂时期，不把书名或晋代故事人物当作作者朝代。"
+    },
+    {
+      "id": "sh54-tiechu",
+      "title": "铁杵成针",
+      "author": "祝穆",
+      "dynasty": "宋代",
+      "status": "reviewed",
+      "sources": [
+        "https://book.pep.com.cn/1211001402192/"
+      ],
+      "note": "官方样本电子页 82 署名或出处已核对。"
     }
   ]
 }

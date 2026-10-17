@@ -8,6 +8,7 @@ const tables = require('../data/catalogs/english-moe-2022-tables.json');
 const meanings = require('../data/catalogs/english-foundation-meanings.json');
 const regional = require('../data/catalogs/shanghai-54-evidence.json');
 const gradeThree = require('../data/catalogs/shanghai-54-grade3.json');
+const gradeFour = require('../data/catalogs/shanghai-54-grade4.json');
 const framework = require('../data/catalogs/shanghai-zhongkao-framework.json');
 const dynasties = require('../data/catalogs/poetry-dynasties.json');
 
@@ -47,8 +48,8 @@ test('national source inventories retain 75/60 works, 1600 headword groups, 505 
   assert.deepEqual(new Set(Object.keys(meanings.entries)), new Set(english.entries.filter((entry) => entry.level2).map((entry) => entry.word)));
   assert.equal(tables.entries.length, 77);
   assert.deepEqual(tables.entries.reduce((counts, entry) => ({ ...counts, [entry.table]: (counts[entry.table] || 0) + 1 }), {}), { '基数词': 30, '序数词': 28, '月份': 12, '星期': 7 });
-  assert.equal(learning.catalog.filter((item) => item.kind === 'poetry').length, 159);
-  assert.equal(learning.catalog.filter((item) => item.kind === 'word').length, 1810);
+  assert.equal(learning.catalog.filter((item) => item.kind === 'poetry').length, 167);
+  assert.equal(learning.catalog.filter((item) => item.kind === 'word').length, 1886);
 });
 
 test('content identity preserves case and distinct same-title works; default scopes are deliberately limited', () => {
@@ -69,10 +70,10 @@ test('content identity preserves case and distinct same-title works; default sco
 
 test('grade mappings require a named five-four textbook and an observed title; national bands never become individual grades', () => {
   const mappings = learning.catalog.filter(item => item.kind === 'poetry').flatMap((item) => (item.gradeMappings || []).map((mapping) => ({ item, mapping })));
-  assert.equal(mappings.length, 52);
+  assert.equal(mappings.length, 68);
   for (const { item, mapping } of mappings) {
     const book = regional.books.find((entry) => entry.id === mapping.bookId);
-    const official = gradeThree.books.find(entry => entry.id === mapping.bookId);
+    const official = [...gradeThree.books, ...gradeFour.books].find(entry => entry.id === mapping.bookId);
     assert.ok(mapping.outlineDestination);
     if (book) {
       assert.equal(book.url, mapping.sourceUrl);

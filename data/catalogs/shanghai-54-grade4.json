@@ -1,0 +1,3418 @@
+{
+  "version": "2026-10-17",
+  "scope": "上海五四制四年级语文和英语上下册；公开来源已核实，学校印次待确认；下册保留历史样本版本边界。",
+  "books": [
+    {
+      "id": "chinese-4a-sample",
+      "subject": "chinese",
+      "grade": 4,
+      "semester": "上册",
+      "title": "语文四年级上册（五四制）",
+      "publisher": "人民教育出版社",
+      "edition": "五四制官方电子样本；封面审定2024；ISBN及学校印次待确认",
+      "schoolSystem": "5-4",
+      "sourceUrl": "https://book.pep.com.cn/1211001401262/",
+      "sourceKind": "official_textbook",
+      "checkedAt": "2026-10-17",
+      "schoolAdoption": "pending",
+      "sourcePageOffset": 6,
+      "cataloguePages": [
+        5,
+        6
+      ],
+      "sourceEvidence": {
+        "recognitionPrintPages": [
+          122,
+          123,
+          124
+        ],
+        "writingPrintPages": [
+          125,
+          126
+        ],
+        "images": {
+          "zh4a-1.jpg": {
+            "url": "https://book.pep.com.cn/1211001401262/files/mobile/1.jpg?260811142742",
+            "sha256": "dc46bdd590fe4b58b99819f93a74949d07769d93959a8804194be472845b800e"
+          },
+          "zh4a-5.jpg": {
+            "url": "https://book.pep.com.cn/1211001401262/files/mobile/5.jpg?260811142742",
+            "sha256": "bb074cdd20756333ecce6805dd48eabc23d01ea66449e02c62e5c9d785572ccf"
+          },
+          "zh4a-6.jpg": {
+            "url": "https://book.pep.com.cn/1211001401262/files/mobile/6.jpg?260811142742",
+            "sha256": "a17570cd772ef2333adeeb85908aa0864c1348c9ef69376c886aff2420e04357"
+          },
+          "zh4a-128.jpg": {
+            "url": "https://book.pep.com.cn/1211001401262/files/mobile/128.jpg?260811142742",
+            "sha256": "e1762a6e11fff860c4d24f0ff265c484ad98623c4e7cdc24c89be8c380a3ac8b"
+          },
+          "zh4a-129.jpg": {
+            "url": "https://book.pep.com.cn/1211001401262/files/mobile/129.jpg?260811142742",
+            "sha256": "472acb7d7b0321df980e56c48fc7db4eebc0d9e0d247282ce4455d7d743a3660"
+          },
+          "zh4a-130.jpg": {
+            "url": "https://book.pep.com.cn/1211001401262/files/mobile/130.jpg?260811142742",
+            "sha256": "a4c3db3050667ad034ea0d2358a43461f2787cf6f35552a4739d1cf145bec686"
+          },
+          "zh4a-131.jpg": {
+            "url": "https://book.pep.com.cn/1211001401262/files/mobile/131.jpg?260811142742",
+            "sha256": "e66179a79685e5bf65ad68bdcac92592f3a46bacce82fd97fa9046a7453c927f"
+          },
+          "zh4a-132.jpg": {
+            "url": "https://book.pep.com.cn/1211001401262/files/mobile/132.jpg?260811142742",
+            "sha256": "66c751c231eda0cb97eec47d0f0b32b88b452488047a1ed773bd6cfb5917e3bd"
+          },
+          "zh4a-4.jpg": {
+            "url": "https://book.pep.com.cn/1211001401262/files/mobile/4.jpg?260811142742",
+            "sha256": "a14f4013bbb491738eef46b23dea0ef4ac33df6b93878e205210e75089a14cc4"
+          },
+          "zh4a-124.jpg": {
+            "url": "https://book.pep.com.cn/1211001401262/files/mobile/124.jpg?260811142742",
+            "sha256": "59ddf7702e36cd4d48f965fa0c68cff23c6aa71ea21ffbf06117bb09eedbd22f"
+          },
+          "zh4a-123.jpg": {
+            "url": "https://book.pep.com.cn/1211001401262/files/mobile/123.jpg?260811142742",
+            "sha256": "e72cb5dc27be83bb5aa38a9fb7ef3d439956c87a2dfd59d023da2c92efe4bc83"
+          },
+          "zh4a-40.jpg": {
+            "url": "https://book.pep.com.cn/1211001401262/files/mobile/40.jpg?260811142742",
+            "sha256": "ca8c67b5619376eb6088ae4af8404ce46af1d3340d9c99fc770f6a271cd0995d"
+          },
+          "zh4a-41.jpg": {
+            "url": "https://book.pep.com.cn/1211001401262/files/mobile/41.jpg?260811142742",
+            "sha256": "33b2b7a35755b6b3a8dbde0b533fae5424ecf1ab976f29c7ed23f737999e43fd"
+          },
+          "zh4a-56.jpg": {
+            "url": "https://book.pep.com.cn/1211001401262/files/mobile/56.jpg?260811142742",
+            "sha256": "6fb2f282d04794116cbfd6b010c2a4229ab17c427a45bf1cf1d7921944a7c4b7"
+          },
+          "zh4a-108.jpg": {
+            "url": "https://book.pep.com.cn/1211001401262/files/mobile/108.jpg?260811142742",
+            "sha256": "65fd359d83ea59050ba4a323e8cd777fff9e1f2899111da33d0a3c0773f2d93a"
+          }
+        }
+      },
+      "inventory": {
+        "recognitionCount": 250,
+        "recognitionComplete": true,
+        "writingCount": 250,
+        "writingComplete": true,
+        "unitPracticeComplete": true,
+        "fullTextAvailable": false,
+        "fullCoverage": false
+      },
+      "units": [
+        {
+          "id": "u1",
+          "number": 1,
+          "recognition": [
+            "盐薄隆鼎沸浩崩霎余漫吼",
+            "昧坠萤",
+            "巢苇瞬穗罗霸"
+          ],
+          "recognitionReading": [
+            "yán bó lóng dǐng fèi hào bēng shà yú màn hǒu",
+            "mèi zhuì yíng",
+            "cháo wěi shùn suì luó bà"
+          ],
+          "recognitionReviewCharacters": [
+            "薄",
+            "隆"
+          ],
+          "recognitionPdfPages": [
+            128
+          ],
+          "writing": [
+            "据随堤顿逐渐堵墙浩崩霎余",
+            "繁怀寂谈熟躺模糊围舞"
+          ],
+          "writingReading": [
+            "jù suí dī dùn zhú jiàn dǔ qiáng hào bēng shà yú",
+            "fán huái jì tán shú tǎng mó hú wéi wǔ"
+          ],
+          "writingPdfPages": [
+            131
+          ],
+          "recognitionPrintPages": [
+            122
+          ],
+          "writingPrintPages": [
+            125
+          ],
+          "title": "自然景象",
+          "titleOrigin": "editorial_summary",
+          "sourcePrintPage": 1,
+          "sourcePdfPage": 7,
+          "lessons": [
+            "观潮",
+            "繁星",
+            "现代诗二首：秋晚的江上、花牛歌"
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "河湾的晚风",
+            "body": "傍晚，小遥和妈妈沿着河堤散步。起初，水面像一张平整的纸，映着淡金色的天空。风从桥洞里钻出来，细小的波纹一圈圈散开，把倒影揉成了碎片。远处传来船笛声，小遥先看见桥边的芦苇摇动，过了一会儿才感觉风拂过脸颊。她在记录本上写道：“风看不见，却能从水纹和芦苇的动作里找到。”",
+            "question": "短文先后写了水面的哪些变化？小遥怎样发现风的到来？",
+            "answer": "水面先平静，后来出现波纹，倒影变得零碎；她通过芦苇摇动和脸上的感觉发现风。",
+            "skill": "选择一种自然现象，按变化顺序记录看到和听到的细节。",
+            "titleReading": "hé wān de wǎn fēng",
+            "detailReading": "bàng wǎn xiǎo yáo hé mā mā yán zhe hé dī sàn bù qǐ chū shuǐ miàn xiàng yī zhāng píng zhěng de zhǐ yìng zhe dàn jīn sè de tiān kōng fēng cóng qiáo dòng lǐ zuān chū lái xì xiǎo de bō wén yī quān quān sàn kāi bǎ dào yǐng róu chéng le suì piàn yuǎn chù chuán lái chuán dí shēng xiǎo yáo xiān kàn jiàn qiáo biān de lú wěi yáo dòng guò le yī huì er cái gǎn jué fēng fú guò liǎn jiá tā zài jì lù běn shàng xiě dào fēng kàn bù jiàn què néng cóng shuǐ wén hé lú wěi de dòng zuò lǐ zhǎo dào xiǎng yī xiǎng duǎn wén xiān hòu xiě le shuǐ miàn de nǎ xiē biàn huà xiǎo yáo zěn yàng fā xiàn fēng de dào lái cān kǎo shuǐ miàn xiān píng jìng hòu lái chū xiàn bō wén dào yǐng biàn de líng suì tā tōng guò lú wěi yáo dòng hé liǎn shàng de gǎn jué fā xiàn fēng liàn yī liàn xuǎn zé yī zhǒng zì rán xiàn xiàng àn biàn huà shùn xù jì lù kàn dào hé tīng dào de xì jié"
+          }
+        },
+        {
+          "id": "u2",
+          "number": 2,
+          "recognition": [
+            "豌僵预揭囚劈框吻脏溢健康",
+            "蝙蝠蛾避锐蝇障碍荧屏驾",
+            "橱蕉扣嚷溜筒董",
+            "忌将获赢拳跃测输谋划策荐",
+            "钢揍锈沫综氧账矿俱"
+          ],
+          "recognitionReading": [
+            "wān jiāng yù jiē qiú pī kuàng wěn zāng yì jiàn kāng",
+            "biān fú é bì ruì yíng zhàng ài yíng píng jià",
+            "chú jiāo kòu rǎng liū tǒng dǒng",
+            "jì jiàng huò yíng quán yuè cè shū móu huà cè jiàn",
+            "gāng zòu xiù mò zōng yǎng zhàng kuàng jù"
+          ],
+          "recognitionReviewCharacters": [
+            "屏",
+            "溜",
+            "将",
+            "划"
+          ],
+          "recognitionPdfPages": [
+            128
+          ],
+          "writing": [
+            "舒适揭晓滚滑擦探曾沟涨",
+            "蚊即题绳嘴蝇研究驾驶",
+            "帽脑袋假扣懂溜筒摆玻璃",
+            "钢揍锈沫综氧账矿俱"
+          ],
+          "writingReading": [
+            "shū shì jiē xiǎo gǔn huá cā tàn céng gōu zhǎng",
+            "wén jí tí shéng zuǐ yíng yán jiū jià shǐ",
+            "mào nǎo dài jiǎ kòu dǒng liū tǒng bǎi bō lí",
+            "gāng zòu xiù mò zōng yǎng zhàng kuàng jù"
+          ],
+          "writingPdfPages": [
+            131
+          ],
+          "recognitionPrintPages": [
+            122
+          ],
+          "writingPrintPages": [
+            125
+          ],
+          "title": "提问与思考",
+          "titleOrigin": "editorial_summary",
+          "sourcePrintPage": 13,
+          "sourcePdfPage": 19,
+          "lessons": [
+            "一个豆荚里的五粒豆",
+            "夜间飞行的秘密",
+            "方帽子店",
+            "田忌赛马"
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "会转弯的纸桥",
+            "body": "小齐把一张纸平放在两本书之间，纸桥很快被橡皮压弯。他把纸折成连续的折痕，再架上去，纸桥竟托住了同一块橡皮。“是不是折得越多就越牢？”小齐提出了新问题。老师提醒他，比较时应使用同样大小的纸，两本书之间的距离也要相同。他决定先改变折痕的数量，把每次观察到的结果记下来。",
+            "question": "小齐提出了什么问题？为什么比较时要保持纸张大小和书本间距相同？",
+            "answer": "他想知道折痕越多是否越牢；保持其他条件相同，才能较合理地比较折痕数量带来的差异。",
+            "skill": "从现象提出一个可观察的问题，写清准备改变和保持不变的条件。",
+            "titleReading": "huì zhuǎn wān de zhǐ qiáo",
+            "detailReading": "xiǎo qí bǎ yī zhāng zhǐ píng fàng zài liǎng běn shū zhī jiān zhǐ qiáo hěn kuài bèi xiàng pí yā wān tā bǎ zhǐ zhé chéng lián xù de zhé hén zài jià shàng qù zhǐ qiáo jìng tuō zhù le tóng yī kuài xiàng pí shì bù shì zhé de yuè duō jiù yuè láo xiǎo qí tí chū le xīn wèn tí lǎo shī tí xǐng tā bǐ jiào shí yīng shǐ yòng tóng yàng dà xiǎo de zhǐ liǎng běn shū zhī jiān de jù lí yě yào xiāng tóng tā jué dìng xiān gǎi biàn zhé hén de shù liàng bǎ měi cì guān chá dào de jié guǒ jì xià lái xiǎng yī xiǎng xiǎo qí tí chū le shén me wèn tí wèi shén me bǐ jiào shí yào bǎo chí zhǐ zhāng dà xiǎo hé shū běn jiān jù xiāng tóng cān kǎo tā xiǎng zhī dào zhé hén yuè duō shì fǒu yuè láo bǎo chí qí tā tiáo jiàn xiāng tóng cái néng jiào hé lǐ de bǐ jiào zhé hén shù liàng dài lái de chā yì liàn yī liàn cóng xiàn xiàng tí chū yī gè kě guān chá de wèn tí xiě qīng zhǔn bèi gǎi biàn hé bǎo chí bù biàn de tiáo jiàn"
+          }
+        },
+        {
+          "id": "u3",
+          "number": 3,
+          "recognition": [
+            "暮残瑟缘降骚评逊",
+            "茎柄蜗曲萎",
+            "蟋蟀宅慎址畅倾骤置糙朴燥"
+          ],
+          "recognitionReading": [
+            "mù cán sè yuán xiáng sāo píng xùn",
+            "jīng bǐng wō qū wěi",
+            "xī shuài zhái shèn zhǐ chàng qīng zhòu zhì cāo pǔ zào"
+          ],
+          "recognitionReviewCharacters": [
+            "降",
+            "曲"
+          ],
+          "recognitionPdfPages": [
+            128
+          ],
+          "writing": [
+            "残铺壁横侧峰庐缘降评章输",
+            "虎脚操嫩隙柄触痕迹瞧",
+            "宅毫重选择址厅专修较腿增"
+          ],
+          "writingReading": [
+            "cán pū bì héng cè fēng lú yuán xiáng píng zhāng shū",
+            "hǔ jiǎo cāo nèn xì bǐng chù hén jì qiáo",
+            "zhái háo zhòng xuǎn zé zhǐ tīng zhuān xiū jiào tuǐ zēng"
+          ],
+          "writingPdfPages": [
+            131
+          ],
+          "recognitionPrintPages": [
+            122
+          ],
+          "writingPrintPages": [
+            125
+          ],
+          "title": "连续观察",
+          "titleOrigin": "editorial_summary",
+          "sourcePrintPage": 33,
+          "sourcePdfPage": 39,
+          "lessons": [
+            "古诗三首：暮江吟、题西林壁、雪梅",
+            "爬山虎的脚",
+            "蟋蟀的住宅"
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "花盆旁的记录牌",
+            "body": "星期一，小宁发现豆苗刚长出两片叶子。她想每天拔高一点，让它快些长大，爷爷却请她先做观察员。小宁在花盆旁插上记录牌，每天同一时间拍照，写下叶片数量和颜色。一周后，她把照片按日期排开，发现变化虽慢，却能看得清清楚楚。她还发现，自己写的“今天长得很好”太笼统，换成“多了一片浅绿色的新叶”就具体多了。",
+            "question": "哪一种记录更具体？同一时间观察和按日期排列有什么帮助？",
+            "answer": "“多了一片浅绿色的新叶”更具体；连续记录便于比较不同时期的变化。",
+            "skill": "选一种植物连续观察三天，写可看见的变化，不用“很好”等笼统评价代替细节。",
+            "titleReading": "huā pén páng de jì lù pái",
+            "detailReading": "xīng qī yī xiǎo níng fā xiàn dòu miáo gāng zhǎng chū liǎng piàn yè zi tā xiǎng měi tiān bá gāo yī diǎn ràng tā kuài xiē zhǎng dà yé yé què qǐng tā xiān zuò guān chá yuán xiǎo níng zài huā pén páng chā shàng jì lù pái měi tiān tóng yī shí jiān pāi zhào xiě xià yè piàn shù liàng hé yán sè yī zhōu hòu tā bǎ zhào piān àn rì qī pái kāi fā xiàn biàn huà suī màn què néng kàn de qīng qīng chǔ chǔ tā hái fā xiàn zì jǐ xiě de jīn tiān zhǎng de hěn hǎo tài lǒng tǒng huàn chéng duō le yī piàn qiǎn lǜ sè de xīn yè jiù jù tǐ duō le xiǎng yī xiǎng nǎ yī zhǒng jì lù gèng jù tǐ tóng yī shí jiān guān chá hé àn rì qī pái liè yǒu shén me bāng zhù cān kǎo duō le yī piàn qiǎn lǜ sè de xīn yè gèng jù tǐ lián xù jì lù biàn yú bǐ jiào bù tóng shí qī de biàn huà liàn yī liàn xuǎn yī zhǒng zhí wù lián xù guān chá sān tiān xiě kě kàn jiàn de biàn huà bù yòng hěn hǎo děng lǒng tǒng píng jià dài tì xì jié"
+          },
+          "poems": [
+            {
+              "contentId": "moe-2022-zh-1-6-056",
+              "sourcePrintPage": 34,
+              "sourcePdfPage": 40,
+              "identityEvidence": {
+                "author": "苏轼",
+                "firstLine": "横看成岭侧成峰",
+                "sourcePdfPage": 40
+              }
+            },
+            {
+              "contentId": "sh54-mujiangyin",
+              "sourcePrintPage": 34,
+              "sourcePdfPage": 40,
+              "identityEvidence": {
+                "author": "白居易",
+                "firstLine": "一道残阳铺水中",
+                "sourcePdfPage": 40
+              }
+            },
+            {
+              "contentId": "sh54-xuemei",
+              "sourcePrintPage": 35,
+              "sourcePdfPage": 41,
+              "identityEvidence": {
+                "author": "卢钺",
+                "firstLine": "梅雪争春未肯降",
+                "sourcePdfPage": 41
+              }
+            }
+          ]
+        },
+        {
+          "id": "u4",
+          "number": 4,
+          "recognition": [
+            "斧缓浊丈肢躯液",
+            "曰溺",
+            "斯悲惨盗驰佩违锁遭肝脏愤砸",
+            "兽措陷混拣燃炼熄浆杀颂",
+            "卉玫瑰牡丹蕾茉莉棠"
+          ],
+          "recognitionReading": [
+            "fǔ huǎn zhuó zhàng zhī qū yè",
+            "yuē nì",
+            "sī bēi cǎn dào chí pèi wéi suǒ zāo gān zàng fèn zá",
+            "shòu cuò xiàn hùn jiǎn rán liàn xī jiāng shā sòng",
+            "huì méi guī mǔ dān lěi mò lì táng"
+          ],
+          "recognitionReviewCharacters": [
+            "脏"
+          ],
+          "recognitionPdfPages": [
+            128,
+            129
+          ],
+          "writing": [
+            "醒翻缓踏丈撑疲竭耀肢整",
+            "填帝曰娃衔",
+            "喷颗败敬佩忍既遭屈肝脏获",
+            "卉玫瑰牡丹蕾茉莉棠"
+          ],
+          "writingReading": [
+            "xǐng fān huǎn tà zhàng chēng pí jié yào zhī zhěng",
+            "tián dì yuē wá xián",
+            "pēn kē bài jìng pèi rěn jì zāo qū gān zàng huò",
+            "huì méi guī mǔ dān lěi mò lì táng"
+          ],
+          "writingPdfPages": [
+            131
+          ],
+          "recognitionPrintPages": [
+            122,
+            123
+          ],
+          "writingPrintPages": [
+            125
+          ],
+          "title": "神话想象",
+          "titleOrigin": "editorial_summary",
+          "sourcePrintPage": 47,
+          "sourcePdfPage": 53,
+          "lessons": [
+            "盘古开天地",
+            "精卫填海",
+            "普罗米修斯",
+            "女娲补天"
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "补云的小匠人",
+            "body": "在一则想象的故事里，山顶住着一个修补云朵的小匠人。每到旱季，他就把散落的云絮收进竹篮，缝成一张大云毯。可是云毯太沉，他一个人推不动。山下的人们便唱起歌，歌声化成风，把云毯送到田野上空。第一滴雨落下时，小匠人才明白：本领再大，也需要伙伴的帮助。从此，他在每条云缝旁都绣上一片小叶子，记住大家的心愿。",
+            "question": "哪些情节表现了神奇的想象？小匠人的认识发生了什么变化？",
+            "answer": "修补云朵、歌声化风等情节具有想象色彩；他认识到合作和帮助的重要。",
+            "skill": "选择一个自然事物编故事，设置困难，并说明人物怎样解决。",
+            "titleReading": "bǔ yún de xiǎo jiàng rén",
+            "detailReading": "zài yī zé xiǎng xiàng de gù shì lǐ shān dǐng zhù zhe yī gè xiū bǔ yún duǒ de xiǎo jiàng rén měi dào hàn jì tā jiù bǎ sàn luò de yún xù shōu jìn zhú lán fèng chéng yī zhāng dà yún tǎn kě shì yún tǎn tài chén tā yī gè rén tuī bù dòng shān xià de rén men biàn chàng qǐ gē gē shēng huà chéng fēng bǎ yún tǎn sòng dào tián yě shàng kōng dì yī dī yǔ là xià shí xiǎo jiàng rén cái míng bái běn lǐng zài dà yě xū yào huǒ bàn de bāng zhù cóng cǐ tā zài měi tiáo yún fèng páng dōu xiù shàng yī piàn xiǎo yè zi jì zhù dà jiā de xīn yuàn xiǎng yī xiǎng nǎ xiē qíng jié biǎo xiàn le shén qí de xiǎng xiàng xiǎo jiàng rén de rèn shí fā shēng le shén me biàn huà cān kǎo xiū bǔ yún duǒ gē shēng huà fēng děng qíng jié jù yǒu xiǎng xiàng sè cǎi tā rèn shí dào hé zuò hé bāng zhù de zhòng yào liàn yī liàn xuǎn zé yī gè zì rán shì wù biān gù shì shè zhì kùn nán bìng shuō míng rén wù zěn yàng jiě jué"
+          },
+          "poems": [
+            {
+              "contentId": "sh54-jingwei",
+              "sourcePrintPage": 50,
+              "sourcePdfPage": 56,
+              "identityEvidence": {
+                "author": "《山海经·北山经》",
+                "firstLine": "炎帝之少女",
+                "sourcePdfPage": 56
+              }
+            }
+          ]
+        },
+        {
+          "id": "u5",
+          "number": 5,
+          "recognition": [
+            "嗅奈拯嘶哑牺牲庞",
+            "链颤攀辫呵"
+          ],
+          "recognitionReading": [
+            "xiù nài zhěng sī yǎ xī shēng páng",
+            "liàn chàn pān biàn hē"
+          ],
+          "recognitionReviewCharacters": [],
+          "recognitionPdfPages": [
+            129
+          ],
+          "writing": [
+            "嗅猛烈奈躯掩浑牺牲庞强量",
+            "哩陡级链颤纪攀猴呵啦鼓"
+          ],
+          "writingReading": [
+            "xiù měng liè nài qū yǎn hún xī shēng páng qiáng liàng",
+            "li dǒu jí liàn chàn jì pān hóu hē la gǔ"
+          ],
+          "writingPdfPages": [
+            131,
+            132
+          ],
+          "recognitionPrintPages": [
+            123
+          ],
+          "writingPrintPages": [
+            125,
+            126
+          ],
+          "title": "把事情写清楚",
+          "titleOrigin": "editorial_summary",
+          "sourcePrintPage": 61,
+          "sourcePdfPage": 67,
+          "lessons": [
+            "麻雀",
+            "爬天都峰"
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "一次没有放弃的尝试",
+            "body": "手工课上，小禾要把两根纸条粘成一个圆环。第一次胶水涂得太多，接口滑开了；第二次接口没有压紧，刚提起来就散了。她有些着急，想换同桌做。观察同桌的动作后，小禾擦去多余的胶水，用手指按住接口，耐心等了一会儿。圆环终于站稳了。她把失败的两次尝试也记进制作卡，提醒自己：写清过程，才能知道下一次该改哪里。",
+            "question": "小禾先后遇到什么问题？最后改变了哪些做法？",
+            "answer": "先是胶水过多，后来接口未压紧；最后擦去多余胶水、压紧接口并等待粘牢。",
+            "skill": "用“起初、接着、最后”写一次亲身经历，让读者看懂事情经过。",
+            "titleReading": "yī cì méi yǒu fàng qì de cháng shì",
+            "detailReading": "shǒu gōng kè shàng xiǎo hé yào bǎ liǎng gēn zhǐ tiáo zhān chéng yī gè yuán huán dì yī cì jiāo shuǐ tú de tài duō jiē kǒu huá kāi le dì èr cì jiē kǒu méi yǒu yā jǐn gāng tí qǐ lái jiù sàn le tā yǒu xiē zháo jí xiǎng huàn tóng zhuō zuò guān chá tóng zhuō de dòng zuò hòu xiǎo hé cā qù duō yú de jiāo shuǐ yòng shǒu zhǐ àn zhù jiē kǒu nài xīn děng le yī huì er yuán huán zhōng yú zhàn wěn le tā bǎ shī bài de liǎng cì cháng shì yě jì jìn zhì zuò kǎ tí xǐng zì jǐ xiě qīng guò chéng cái néng zhī dào xià yī cì gāi gǎi nǎ lǐ xiǎng yī xiǎng xiǎo hé xiān hòu yù dào shén me wèn tí zuì hòu gǎi biàn le nǎ xiē zuò fǎ cān kǎo xiān shì jiāo shuǐ guò duō hòu lái jiē kǒu wèi yā jǐn zuì hòu cā qù duō yú jiāo shuǐ yā jǐn jiē kǒu bìng děng dài zhān láo liàn yī liàn yòng qǐ chū jiē zhe zuì hòu xiě yī cì qīn shēn jīng lì ràng dú zhě kàn dǒng shì qíng jīng guò"
+          }
+        },
+        {
+          "id": "u6",
+          "number": 6,
+          "recognition": [
+            "峻基础扩砖屯兵堡垒仗畜耗",
+            "殿漆琉佛煌",
+            "享誉宏皇率着靴誓塑惟肖拟逼",
+            "萨昭陵寝堰尼绸廊"
+          ],
+          "recognitionReading": [
+            "jùn jī chǔ kuò zhuān tún bīng bǎo lěi zhàng chù hào",
+            "diàn qī liú fó huáng",
+            "xiǎng yù hóng huáng shuài zhuó xuē shì sù wéi xiào nǐ bī",
+            "sà zhāo líng qǐn yàn ní chóu láng"
+          ],
+          "recognitionReviewCharacters": [
+            "佛",
+            "着"
+          ],
+          "recognitionPdfPages": [
+            129
+          ],
+          "writing": [
+            "峻旋扩砖筑隔仗扶耗智慧",
+            "绕幅栽耸腰煌镜隐狮",
+            "萨昭陵寝堰尼绸廊"
+          ],
+          "writingReading": [
+            "jùn xuán kuò zhuān zhù gé zhàng fú hào zhì huì",
+            "rào fú zāi sǒng yāo huáng jìng yǐn shī",
+            "sà zhāo líng qǐn yàn ní chóu láng"
+          ],
+          "writingPdfPages": [
+            132
+          ],
+          "recognitionPrintPages": [
+            123
+          ],
+          "writingPrintPages": [
+            126
+          ],
+          "title": "文化遗产",
+          "titleOrigin": "editorial_summary",
+          "sourcePrintPage": 73,
+          "sourcePdfPage": 79,
+          "lessons": [
+            "长城",
+            "颐和园",
+            "秦兵马俑"
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "老桥旁的说明牌",
+            "body": "周末，四年级同学来到一座老石桥。小航先被桥面磨出的浅槽吸引，想伸手摸一摸。讲解员请大家站在指定位置观察，又指着说明牌讲解修桥年代和修缮记录。小航发现，桥并不是从来没有修过，人们一直在维护它。他在参观笔记中分开写下“亲眼看到”和“从说明牌得知”的内容，还画了绕行路线，让后来的人既能看清老桥，也不影响居民通行。",
+            "question": "小航把笔记分成哪两类？这样记录有什么好处？",
+            "answer": "分为亲眼观察和从资料得知两类；可以区分观察与资料来源，使介绍更可靠。",
+            "skill": "为身边一处老建筑写简短介绍，标明资料来源并遵守参观规则。",
+            "titleReading": "lǎo qiáo páng de shuō míng pái",
+            "detailReading": "zhōu mò sì nián jí tóng xué lái dào yī zuò lǎo shí qiáo xiǎo háng xiān bèi qiáo miàn mó chū de qiǎn cáo xī yǐn xiǎng shēn shǒu mō yī mō jiǎng jiě yuán qǐng dà jiā zhàn zài zhǐ dìng wèi zhì guān chá yòu zhǐ zhe shuō míng pái jiǎng jiě xiū qiáo nián dài hé xiū shàn jì lù xiǎo háng fā xiàn qiáo bìng bù shì cóng lái méi yǒu xiū guò rén men yī zhí zài wéi hù tā tā zài cān guān bǐ jì zhōng fēn kāi xiě xià qīn yǎn kàn dào hé cóng shuō míng pái dé zhī de nèi róng hái huà le rào xíng lù xiàn ràng hòu lái de rén jì néng kàn qīng lǎo qiáo yě bù yǐng xiǎng jū mín tōng xíng xiǎng yī xiǎng xiǎo háng bǎ bǐ jì fēn chéng nǎ liǎng lèi zhè yàng jì lù yǒu shén me hǎo chù cān kǎo fēn wéi qīn yǎn guān chá hé cóng zī liào dé zhī liǎng lèi kě yǐ qū fēn guān chá yǔ zī liào lái yuán shǐ jiè shào gèng kě kào liàn yī liàn wèi shēn biān yī chù lǎo jiàn zhù xiě jiǎn duǎn jiè shào biāo míng zī liào lái yuán bìng zūn shǒu cān guān guī zé"
+          }
+        },
+        {
+          "id": "u7",
+          "number": 7,
+          "recognition": [
+            "鹅屁股谓捶顽吁膊瓶怖欺掐",
+            "露羡殷逗撇啊霉亏撤哄拙唉",
+            "钉质岳削废骂帅衅扭彻溃豪",
+            "戎诸竞唯",
+            "韭芹椒蒜薯藕芋姜"
+          ],
+          "recognitionReading": [
+            "é pì gǔ wèi chuí wán yū bó píng bù qī qiā",
+            "lòu xiàn yīn dòu piě ā méi kuī chè hōng zhuō āi",
+            "dīng zhì yuè xiāo fèi mà shuài xìn niǔ chè kuì háo",
+            "róng zhū jìng wéi",
+            "jiǔ qín jiāo suàn shǔ ǒu yù jiāng"
+          ],
+          "recognitionReviewCharacters": [
+            "露",
+            "啊",
+            "唉",
+            "钉"
+          ],
+          "recognitionPdfPages": [
+            129
+          ],
+          "writing": [
+            "鹅骑拳竖竟胸鞋拖胳膊握摔",
+            "表演俩练捧示技撤推哄堂摘",
+            "戎诸竞唯",
+            "韭芹椒蒜薯藕芋姜"
+          ],
+          "writingReading": [
+            "é qí quán shù jìng xiōng xié tuō gē bó wò shuāi",
+            "biǎo yǎn liǎ liàn pěng shì jì chè tuī hōng táng zhāi",
+            "róng zhū jìng wéi",
+            "jiǔ qín jiāo suàn shǔ ǒu yù jiāng"
+          ],
+          "writingPdfPages": [
+            132
+          ],
+          "recognitionPrintPages": [
+            123
+          ],
+          "writingPrintPages": [
+            126
+          ],
+          "title": "成长中的体验",
+          "titleOrigin": "editorial_summary",
+          "sourcePrintPage": 87,
+          "sourcePdfPage": 93,
+          "lessons": [
+            "牛和鹅",
+            "一只窝囊的大老虎",
+            "陀螺",
+            "王戎不取道旁李"
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "第一次站到台前",
+            "body": "班级读书会上，小宁负责介绍一本书。轮到她时，手心全是汗，第一句话也说得很轻。她看见前排同学正认真望着自己，便想起事先画好的三张提示卡：人物、困难、最喜欢的片段。她照着卡片慢慢讲，声音渐渐响亮起来。结束时，小宁发现自己仍有一点紧张，却已经能完整表达。回家后，她没有把记录写成“我再也不怕了”，而是写下“紧张时，我找到了一种继续说下去的办法”。",
+            "question": "哪些细节表现了紧张？提示卡怎样帮助小宁？",
+            "answer": "手心出汗、声音很轻表现紧张；提示卡让她有顺序地组织内容。",
+            "skill": "写一次真实的成长经历，用动作或语言表现心情变化。",
+            "titleReading": "dì yī cì zhàn dào tái qián",
+            "detailReading": "bān jí dú shū huì shàng xiǎo níng fù zé jiè shào yī běn shū lún dào tā shí shǒu xīn quán shì hàn dì yī jù huà yě shuō de hěn qīng tā kàn jiàn qián pái tóng xué zhèng rèn zhēn wàng zhe zì jǐ biàn xiǎng qǐ shì xiān huà hǎo de sān zhāng tí shì kǎ rén wù kùn nán zuì xǐ huān de piàn duàn tā zhào zhe kǎ piàn màn màn jiǎng shēng yīn jiàn jiàn xiǎng liàng qǐ lái jié shù shí xiǎo níng fā xiàn zì jǐ réng yǒu yī diǎn jǐn zhāng què yǐ jīng néng wán zhěng biǎo dá huí jiā hòu tā méi yǒu bǎ jì lù xiě chéng wǒ zài yě bù pà le ér shì xiě xià jǐn zhāng shí wǒ zhǎo dào le yī zhǒng jì xù shuō xià qù de bàn fǎ xiǎng yī xiǎng nǎ xiē xì jié biǎo xiàn le jǐn zhāng tí shì kǎ zěn yàng bāng zhù xiǎo níng cān kǎo shǒu xīn chū hàn shēng yīn hěn qīng biǎo xiàn jǐn zhāng tí shì kǎ ràng tā yǒu shùn xù de zǔ zhī nèi róng liàn yī liàn xiě yī cì zhēn shí de chéng zhǎng jīng lì yòng dòng zuò huò yǔ yán biǎo xiàn xīn qíng biàn huà"
+          },
+          "poems": [
+            {
+              "contentId": "sh54-wangrong",
+              "sourcePrintPage": 102,
+              "sourcePdfPage": 108,
+              "identityEvidence": {
+                "author": "刘义庆",
+                "firstLine": "王戎七岁",
+                "sourcePdfPage": 108
+              }
+            }
+          ]
+        },
+        {
+          "id": "u8",
+          "number": 8,
+          "recognition": [
+            "菲抛奉亿邀",
+            "崛范魏默晰惑轧惩肇斥辱",
+            "昔茅炕索媚",
+            "催君征塞秦杰鬼"
+          ],
+          "recognitionReading": [
+            "fēi pāo fèng yì yāo",
+            "jué fàn wèi mò xī huò yà chéng zhào chì rǔ",
+            "xī máo kàng suǒ mèi",
+            "cuī jūn zhēng sài qín jié guǐ"
+          ],
+          "recognitionReviewCharacters": [],
+          "recognitionPdfPages": [
+            130
+          ],
+          "writing": [
+            "席抛激奉训亿勤邀",
+            "崛肃脆默晰离凡惩斥燃",
+            "词葡萄杯塞秦将杰鬼雄项"
+          ],
+          "writingReading": [
+            "xí pāo jī fèng xùn yì qín yāo",
+            "jué sù cuì mò xī lí fán chéng chì rán",
+            "cí pú táo bēi sài qín jiàng jié guǐ xióng xiàng"
+          ],
+          "writingPdfPages": [
+            132
+          ],
+          "recognitionPrintPages": [
+            124
+          ],
+          "writingPrintPages": [
+            126
+          ],
+          "title": "理想与担当",
+          "titleOrigin": "editorial_summary",
+          "sourcePrintPage": 107,
+          "sourcePdfPage": 113,
+          "lessons": [
+            "我将无我，不负人民",
+            "为中华之崛起而读书",
+            "延安，我把你追寻",
+            "古诗三首：凉州词、出塞、夏日绝句"
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "从一件小事开始",
+            "body": "班级讨论“我能为大家做什么”时，小川说自己想设计更方便的图书馆。老师请他先观察班里的图书角。他发现低年级同学常常找不到还书的位置，于是和伙伴一起制作分类标签，又留出一个待整理的小书篮。一个星期后，错放的书少了，大家借还也快了。小川在计划末尾添上一句：“长远的愿望，可以从今天能做的一件小事开始。”",
+            "question": "小川怎样把愿望变成行动？他用什么现象判断改进是否有用？",
+            "answer": "他先观察问题，再制作标签和书篮；通过错放书减少、借还更快判断效果。",
+            "skill": "提出一个能帮助他人的小目标，写出具体行动和检查方法。",
+            "titleReading": "cóng yī jiàn xiǎo shì kāi shǐ",
+            "detailReading": "bān jí tǎo lùn wǒ néng wèi dà jiā zuò shén me shí xiǎo chuān shuō zì jǐ xiǎng shè jì gèng fāng biàn de tú shū guǎn lǎo shī qǐng tā xiān guān chá bān lǐ de tú shū jiǎo tā fā xiàn dī nián jí tóng xué cháng cháng zhǎo bù dào huán shū de wèi zhì yú shì hé huǒ bàn yī qǐ zhì zuò fēn lèi biāo qiān yòu liú chū yī gè dài zhěng lǐ de xiǎo shū lán yī gè xīng qī hòu cuò fàng de shū shǎo le dà jiā jiè huán yě kuài le xiǎo chuān zài jì huà mò wěi tiān shàng yī jù cháng yuǎn de yuàn wàng kě yǐ cóng jīn tiān néng zuò de yī jiàn xiǎo shì kāi shǐ xiǎng yī xiǎng xiǎo chuān zěn yàng bǎ yuàn wàng biàn chéng xíng dòng tā yòng shén me xiàn xiàng pàn duàn gǎi jìn shì fǒu yǒu yòng cān kǎo tā xiān guān chá wèn tí zài zhì zuò biāo qiān hé shū lán tōng guò cuò fàng shū jiǎn shǎo jiè huán gèng kuài pàn duàn xiào guǒ liàn yī liàn tí chū yī gè néng bāng zhù tā rén de xiǎo mù biāo xiě chū jù tǐ xíng dòng hé jiǎn chá fāng fǎ"
+          },
+          "poems": [
+            {
+              "contentId": "moe-2022-zh-1-6-011",
+              "sourcePrintPage": 117,
+              "sourcePdfPage": 123,
+              "identityEvidence": {
+                "author": "王翰",
+                "firstLine": "葡萄美酒夜光杯",
+                "sourcePdfPage": 123
+              }
+            },
+            {
+              "contentId": "moe-2022-zh-1-6-012",
+              "sourcePrintPage": 117,
+              "sourcePdfPage": 123,
+              "identityEvidence": {
+                "author": "王昌龄",
+                "firstLine": "秦时明月汉时关",
+                "sourcePdfPage": 123
+              }
+            },
+            {
+              "contentId": "moe-2022-zh-1-6-057",
+              "sourcePrintPage": 118,
+              "sourcePdfPage": 124,
+              "identityEvidence": {
+                "author": "李清照",
+                "firstLine": "生当作人杰",
+                "sourcePdfPage": 124
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chinese-4b-sample",
+      "subject": "chinese",
+      "grade": 4,
+      "semester": "下册",
+      "title": "语文四年级下册（五四制·2019审定样本）",
+      "publisher": "人民教育出版社",
+      "edition": "五四制官方电子样本；封面审定2019；ISBN及学校印次待确认；新版下册待核实",
+      "schoolSystem": "5-4",
+      "sourceUrl": "https://book.pep.com.cn/1211001402192/",
+      "sourceKind": "official_textbook",
+      "checkedAt": "2026-10-17",
+      "schoolAdoption": "pending",
+      "sourcePageOffset": 6,
+      "cataloguePages": [
+        5,
+        6
+      ],
+      "sourceEvidence": {
+        "recognitionPrintPages": [
+          137,
+          138,
+          139
+        ],
+        "writingPrintPages": [
+          140,
+          141
+        ],
+        "images": {
+          "zh4b-1.jpg": {
+            "url": "https://book.pep.com.cn/1211001402192/files/mobile/1.jpg?260122104100",
+            "sha256": "7191661dc7072e94a2e41c577fef871e78ee0f7f08d630a4caa559766e21994f"
+          },
+          "zh4b-5.jpg": {
+            "url": "https://book.pep.com.cn/1211001402192/files/mobile/5.jpg?260122104100",
+            "sha256": "17604a01082a73e39e2d658844eb9618f733e574e4e233f2eab661c8beea01d6"
+          },
+          "zh4b-6.jpg": {
+            "url": "https://book.pep.com.cn/1211001402192/files/mobile/6.jpg?260122104100",
+            "sha256": "a2fb1b0b03bba3beacd73be2e5d4d8145cad4906c14814a2af297991b4d6b507"
+          },
+          "zh4b-8.jpg": {
+            "url": "https://book.pep.com.cn/1211001402192/files/mobile/8.jpg?260122104100",
+            "sha256": "bc4f94e253be50f605b91d408fdcaa0c088e0172abecfb6aa62ada86fa55b496"
+          },
+          "zh4b-144.jpg": {
+            "url": "https://book.pep.com.cn/1211001402192/files/mobile/144.jpg?260122104100",
+            "sha256": "df6853e88feeb569569b38f23e4ed7da00164c4ef6d5d21e593abb60e9fbb4b1"
+          },
+          "zh4b-143.jpg": {
+            "url": "https://book.pep.com.cn/1211001402192/files/mobile/143.jpg?260122104100",
+            "sha256": "824369cfb59bc3765e17d72403108cf31ba484ad8afacf91e3b9f7a6849089e2"
+          },
+          "zh4b-145.jpg": {
+            "url": "https://book.pep.com.cn/1211001402192/files/mobile/145.jpg?260122104100",
+            "sha256": "ebda591f1e28946098ffe1375ac10864806f7338c4026c5dca8c7ecb42edc31a"
+          },
+          "zh4b-146.jpg": {
+            "url": "https://book.pep.com.cn/1211001402192/files/mobile/146.jpg?260122104100",
+            "sha256": "9d2dadfba38dfa49396809da7b5e7ed6a548d6dab9a0a369b4d0dbf4e76f1d29"
+          },
+          "zh4b-147.jpg": {
+            "url": "https://book.pep.com.cn/1211001402192/files/mobile/147.jpg?260122104100",
+            "sha256": "123fbbd4e5a830c1063af25081e94d3e37e8465ada80ae4c6db0f133332e6154"
+          },
+          "zh4b-4.jpg": {
+            "url": "https://book.pep.com.cn/1211001402192/files/mobile/4.jpg?260122104100",
+            "sha256": "e7b2afe52d2ae02e0f2db04c4585893a921af6fcfc90b838874102474b68f819"
+          },
+          "zh4b-108.jpg": {
+            "url": "https://book.pep.com.cn/1211001402192/files/mobile/108.jpg?260122104100",
+            "sha256": "d452e7c4ff0ed183d58ef4dc8287292dc2a7c47d7ab306cb27b9cfab27b17e91"
+          },
+          "zh4b-109.jpg": {
+            "url": "https://book.pep.com.cn/1211001402192/files/mobile/109.jpg?260122104100",
+            "sha256": "37790ab006a0ffd91d54793b40c8f45a057e8dcdb1eed139827cfa3326cef427"
+          },
+          "zh4b-9.jpg": {
+            "url": "https://book.pep.com.cn/1211001402192/files/mobile/9.jpg?260122104100",
+            "sha256": "7150c6433005df7c90728972772eb2bc5037698ec55af915a913efef80acf1ce"
+          },
+          "zh4b-82.jpg": {
+            "url": "https://book.pep.com.cn/1211001402192/files/mobile/82.jpg?260122104100",
+            "sha256": "8ae89004d9c8ee03548bf7365e0efd54aab1b0b335a4c7d90e3b1fea9760ac48"
+          }
+        }
+      },
+      "inventory": {
+        "recognitionCount": 250,
+        "recognitionComplete": true,
+        "writingCount": 280,
+        "writingComplete": true,
+        "unitPracticeComplete": true,
+        "fullTextAvailable": false,
+        "fullCoverage": false
+      },
+      "units": [
+        {
+          "id": "u1",
+          "number": 1,
+          "recognition": [
+            "杂篱徐疏锄剥",
+            "构冠序朴素率倘附捣绘谐",
+            "慰藉卜",
+            "绮和谈"
+          ],
+          "recognitionReading": [
+            "zá lí xú shū chú bō",
+            "gòu guān xù pǔ sù shuài tǎng fù dǎo huì xié",
+            "wèi jiè bǔ",
+            "qǐ hè tán"
+          ],
+          "recognitionReviewCharacters": [
+            "卜",
+            "和"
+          ],
+          "recognitionPdfPages": [
+            143
+          ],
+          "writing": [
+            "杂蜻蜓蝶徐疏茅檐媚翁锄剥",
+            "构饰蹲冠序朴素笋例率觅耸附捣绘谐寄眠",
+            "慰藉卜滩帐莺霸鹰"
+          ],
+          "writingReading": [
+            "zá qīng tíng dié xú shū máo yán mèi wēng chú bō",
+            "gòu shì dūn guān xù pǔ sù sǔn lì shuài mì sǒng fù dǎo huì xié jì mián",
+            "wèi jiè bǔ tān zhàng yīng bà yīng"
+          ],
+          "writingPdfPages": [
+            146
+          ],
+          "recognitionPrintPages": [
+            137
+          ],
+          "writingPrintPages": [
+            140
+          ],
+          "title": "乡村风景",
+          "titleOrigin": "editorial_summary",
+          "sourcePrintPage": 1,
+          "sourcePdfPage": 7,
+          "lessons": [
+            "古诗词三首：四时田园杂兴（其二十五）、宿新市徐公店、清平乐·村居",
+            "乡下人家",
+            "天窗",
+            "三月桃花水"
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "田埂边的早晨",
+            "body": "清晨，田埂边的露珠还没有散去。小溪绕过菜地，发出细细的水声。爷爷蹲在地头查看新苗，小溪对岸有人慢慢推开木门。小安原以为乡村的早晨很安静，走近才发现，鸟叫、扫地声和远处的车铃声一层层传来。她把这些声音记进日记，又画了一条弯弯的田埂。那条路不宽，却把菜地、小桥和人家连在一起。",
+            "question": "小安对乡村早晨的认识有什么变化？短文从哪些方面写景？",
+            "answer": "她从以为安静变为听见多种声音；短文结合景物、人物活动和声音写景。",
+            "skill": "选一个熟悉的地方，写两种看到的景物和两种听到的声音。",
+            "titleReading": "tián gěng biān de zǎo chén",
+            "detailReading": "qīng chén tián gěng biān de lù zhū hái méi yǒu sàn qù xiǎo xī rào guò cài dì fā chū xì xì de shuǐ shēng yé yé dūn zài dì tóu chá kàn xīn miáo xiǎo xī duì àn yǒu rén màn màn tuī kāi mù mén xiǎo ān yuán yǐ wéi xiāng cūn de zǎo chén hěn ān jìng zǒu jìn cái fā xiàn niǎo jiào sǎo dì shēng hé yuǎn chù de chē líng shēng yī céng céng chuán lái tā bǎ zhè xiē shēng yīn jì jìn rì jì yòu huà le yī tiáo wān wān de tián gěng nà tiáo lù bù kuān què bǎ cài dì xiǎo qiáo hé rén jiā lián zài yī qǐ xiǎng yī xiǎng xiǎo ān duì xiāng cūn zǎo chén de rèn shí yǒu shén me biàn huà duǎn wén cóng nǎ xiē fāng miàn xiě jǐng cān kǎo tā cóng yǐ wéi ān jìng biàn wéi tīng jiàn duō zhǒng shēng yīn duǎn wén jié hé jǐng wù rén wù huó dòng hé shēng yīn xiě jǐng liàn yī liàn xuǎn yī gè shú xī de dì fāng xiě liǎng zhǒng kàn dào de jǐng wù hé liǎng zhǒng tīng dào de shēng yīn"
+          },
+          "poems": [
+            {
+              "contentId": "moe-2022-zh-1-6-062",
+              "sourcePrintPage": 2,
+              "sourcePdfPage": 8,
+              "identityEvidence": {
+                "author": "范成大",
+                "firstLine": "梅子金黄杏子肥",
+                "sourcePdfPage": 8
+              }
+            },
+            {
+              "contentId": "sh54-xinshi",
+              "sourcePrintPage": 2,
+              "sourcePdfPage": 8,
+              "identityEvidence": {
+                "author": "杨万里",
+                "firstLine": "篱落疏疏一径深",
+                "sourcePdfPage": 8
+              }
+            },
+            {
+              "contentId": "sh54-qingpingle-cunju",
+              "sourcePrintPage": 3,
+              "sourcePdfPage": 9,
+              "identityEvidence": {
+                "author": "辛弃疾",
+                "firstLine": "茅檐低小",
+                "sourcePdfPage": 9
+              }
+            }
+          ]
+        },
+        {
+          "id": "u2",
+          "number": 2,
+          "recognition": [
+            "琥珀嗡脂拭渗俯扎番埋澎湃",
+            "钝描隧衍吨颅膨捷辟崭",
+            "乒乓拥菌臭蔬碳癌症率疾灶",
+            "鹏揽驱践着党施懈宛碑",
+            "宾吉咸兆廷予肿阶趾逻政浏"
+          ],
+          "recognitionReading": [
+            "hǔ pò wēng zhī shì shèn fǔ zhá fān mái péng pài",
+            "dùn miáo suì yǎn dūn lú péng jié pì zhǎn",
+            "pīng pāng yōng jūn chòu shū tàn ái zhèng lǜ jí zào",
+            "péng lǎn qū jiàn zhuó dǎng shī xiè wǎn bēi",
+            "bīn jí xián zhào tíng yǔ zhǒng jiē zhǐ luó zhèng liú"
+          ],
+          "recognitionReviewCharacters": [
+            "扎",
+            "率",
+            "着"
+          ],
+          "recognitionPdfPages": [
+            143
+          ],
+          "writing": [
+            "吼嗡脂拭餐划晌辣渗俯番埋刷剌澎湃详",
+            "钝谈斑末辽描隧访态吨颅膨捷避敌栖崭揭",
+            "纳乒乓拥杀菌臭蔬碳钢隐测健康癌症防灶"
+          ],
+          "writingReading": [
+            "hǒu wēng zhī shì cān huá shǎng là shèn fǔ fān mái shuā là pēng pài xiáng",
+            "dùn tán bān mò liáo miáo suì fǎng tài dūn lú péng jié bì dí qī zhǎn jiē",
+            "nà pīng pāng yōng shā jūn chòu shū tàn gāng yǐn cè jiàn kāng ái zhèng fáng zào"
+          ],
+          "writingPdfPages": [
+            146
+          ],
+          "recognitionPrintPages": [
+            137
+          ],
+          "writingPrintPages": [
+            140
+          ],
+          "title": "科学探索",
+          "titleOrigin": "editorial_summary",
+          "sourcePrintPage": 15,
+          "sourcePdfPage": 21,
+          "lessons": [
+            "琥珀",
+            "飞向蓝天的恐龙",
+            "纳米技术就在我们身边",
+            "千年梦圆在今朝"
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "一张会提问的记录单",
+            "body": "科技活动中，同学们比较两种纸巾吸水的情况。小雨发现其中一张很快湿透，便写下“它一定更好”。伙伴问：“如果比较的是结实程度，结果会一样吗？”小雨停住笔，把结论改成“在这次相同水量的试验中，这张纸巾湿透得较快”。她又在记录单上画出两个空格：还想知道什么、需要补充什么证据。原来，准确的记录不只留下答案，也会带来新的问题。",
+            "question": "小雨为什么修改结论？修改后的句子多交代了什么？",
+            "answer": "单凭吸水现象不能判断所有用途；新句子交代了试验条件和具体观察结果。",
+            "skill": "阅读一条科学介绍，区分观察事实、推测和仍需验证的问题。",
+            "titleReading": "yī zhāng huì tí wèn de jì lù dān",
+            "detailReading": "kē jì huó dòng zhōng tóng xué men bǐ jiào liǎng zhǒng zhǐ jīn xī shuǐ de qíng kuàng xiǎo yǔ fā xiàn qí zhōng yī zhāng hěn kuài shī tòu biàn xiě xià tā yī dìng gèng hǎo huǒ bàn wèn rú guǒ bǐ jiào de shì jiē shí chéng dù jié guǒ huì yī yàng ma xiǎo yǔ tíng zhù bǐ bǎ jié lùn gǎi chéng zài zhè cì xiāng tóng shuǐ liàng de shì yàn zhōng zhè zhāng zhǐ jīn shī tòu de jiào kuài tā yòu zài jì lù dān shàng huà chū liǎng gè kòng gé hái xiǎng zhī dào shén me xū yào bǔ chōng shén me zhèng jù yuán lái zhǔn què de jì lù bù zhǐ liú xià dá àn yě huì dài lái xīn de wèn tí xiǎng yī xiǎng xiǎo yǔ wèi shén me xiū gǎi jié lùn xiū gǎi hòu de jù zi duō jiāo dài le shén me cān kǎo dān píng xī shuǐ xiàn xiàng bù néng pàn duàn suǒ yǒu yòng tú xīn jù zi jiāo dài le shì yàn tiáo jiàn hé jù tǐ guān chá jié guǒ liàn yī liàn yuè dú yī tiáo kē xué jiè shào qū fēn guān chá shì shí tuī cè hé réng xū yàn zhèng de wèn tí"
+          }
+        },
+        {
+          "id": "u3",
+          "number": 3,
+          "recognition": [
+            "漫涛",
+            "挤叉",
+            "绣潇绽朦胧晖徜徉",
+            "炫垢怯曝赤携涉晕",
+            "屈渊孟甫韩愈禹锡仲龚"
+          ],
+          "recognitionReading": [
+            "màn tāo",
+            "jǐ chā",
+            "xiù xiāo zhàn méng lóng huī cháng yáng",
+            "xuàn gòu qiè pù chì xié shè yùn",
+            "qū yuān mèng fǔ hán yù yǔ xī zhòng gōng"
+          ],
+          "recognitionReviewCharacters": [],
+          "recognitionPdfPages": [
+            143,
+            144
+          ],
+          "writing": [
+            "繁漫藤萝膝涛",
+            "挤叉挥",
+            "涂茸绣潇绽朦胧寂晖徜徉"
+          ],
+          "writingReading": [
+            "fán màn téng luó xī tāo",
+            "jǐ chā huī",
+            "tú rōng xiù xiāo zhàn méng lóng jì huī cháng yáng"
+          ],
+          "writingPdfPages": [
+            146
+          ],
+          "recognitionPrintPages": [
+            137,
+            138
+          ],
+          "writingPrintPages": [
+            140
+          ],
+          "title": "现代诗的节奏",
+          "titleOrigin": "editorial_summary",
+          "sourcePrintPage": 35,
+          "sourcePdfPage": 41,
+          "lessons": [
+            "短诗三首：繁星（七一）、繁星（一三一）、繁星（一五九）",
+            "绿",
+            "白桦",
+            "在天晴了的时候"
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "雨点的来信",
+            "body": "雨点落在窗台，像轻轻敲门的小客人。\n雨点落在叶片，像给绿伞缀上一颗亮珠。\n雨点落进水洼，画出一圈又一圈圆圆的信封。\n风把信封拆开，地面便留下一封没有字的来信。\n我蹲下来读它：泥土变湿了，小草抬起头了，屋檐下也挂起细细的水线。",
+            "question": "诗中把雨点想象成了什么？哪些词句让你读出了声音或动作？",
+            "answer": "把雨点想象成客人、亮珠和来信；“敲门”“画出”“拆开”等词带出声音或动作。",
+            "skill": "观察雨、风或阳光，用重复的句式写三行自己的小诗。",
+            "titleReading": "yǔ diǎn de lái xìn",
+            "detailReading": "yǔ diǎn luò zài chuāng tái xiàng qīng qīng qiāo mén de xiǎo kè rén yǔ diǎn luò zài yè piàn xiàng gěi lǜ sǎn zhuì shàng yī kē liàng zhū yǔ diǎn luò jìn shuǐ wā huà chū yī quān yòu yī quān yuán yuán de xìn fēng fēng bǎ xìn fēng chāi kāi dì miàn biàn liú xià yī fēng méi yǒu zì de lái xìn wǒ dūn xià lái dú tā ní tǔ biàn shī le xiǎo cǎo tái qǐ tóu le wū yán xià yě guà qǐ xì xì de shuǐ xiàn xiǎng yī xiǎng shī zhōng bǎ yǔ diǎn xiǎng xiàng chéng le shén me nǎ xiē cí jù ràng nǐ dú chū le shēng yīn huò dòng zuò cān kǎo bǎ yǔ diǎn xiǎng xiàng chéng kè rén liàng zhū hé lái xìn qiāo mén huà chū chāi kāi děng cí dài chū shēng yīn huò dòng zuò liàn yī liàn guān chá yǔ fēng huò yáng guāng yòng chóng fù de jù shì xiě sān háng zì jǐ de xiǎo shī"
+          }
+        },
+        {
+          "id": "u4",
+          "number": 4,
+          "recognition": [
+            "忧虑职屏蹭稿腔殃折",
+            "疙瘩侮恶毒聋啄伏哼啼凄",
+            "调看嚣吭吠促颇奢侈苟譬侍窥伺",
+            "肝秆俏峭哺浦沦抡涣焕俊峻"
+          ],
+          "recognitionReading": [
+            "yōu lǜ zhí bǐng cèng gǎo qiāng yāng shé",
+            "gē da wǔ wù dú lóng zhuó fú hēng tí qī",
+            "diào kān xiāo háng fèi cù pō shē chǐ gǒu pì shì kuī sì",
+            "gān gǎn qiào qiào bǔ pǔ lún lūn huàn huàn jùn jùn"
+          ],
+          "recognitionReviewCharacters": [
+            "屏",
+            "折",
+            "恶",
+            "调",
+            "看"
+          ],
+          "recognitionPdfPages": [
+            144
+          ],
+          "writing": [
+            "忧虑贪职屏蹭痒稿腔端藏蛇稳辟殃盆跤勃",
+            "讨厌坝疙瘩忠毒绩孵警戒歪汤伏哼啼凄慈",
+            "调嚣吭促颇剧奢侈苟譬倘迫侍馆脾窥伺供"
+          ],
+          "writingReading": [
+            "yōu lǜ tān zhí bǐng cèng yǎng gǎo qiāng duān cáng shé wěn pì yāng pén jiāo bó",
+            "tǎo yàn bà gē da zhōng dú jì fū jǐng jiè wāi tāng fú hēng tí qī cí",
+            "diào xiāo háng cù pǒ jù shē chǐ gǒu pì tǎng pò shì guǎn pí kuī sì gōng"
+          ],
+          "writingPdfPages": [
+            146,
+            147
+          ],
+          "recognitionPrintPages": [
+            138
+          ],
+          "writingPrintPages": [
+            140,
+            141
+          ],
+          "title": "观察动物",
+          "titleOrigin": "editorial_summary",
+          "sourcePrintPage": 47,
+          "sourcePdfPage": 53,
+          "lessons": [
+            "猫",
+            "母鸡",
+            "白鹅"
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "窗台上的小猫",
+            "body": "小禾家的猫喜欢蹲在窗台上。它看起来懒洋洋的，可楼道一响起脚步声，两只耳朵就转过去。有一次，小禾把纸团轻轻滚到地上，猫先盯住纸团，随后压低身子，突然伸爪按住，又若无其事地走开。小禾笑着说它像一位认真的巡查员。她没有只写“我家的猫很可爱”，而是把这些动作逐个记下，让没见过它的人也能想象它的样子。",
+            "question": "短文用哪些动作表现小猫的特点？为什么比只写“可爱”具体？",
+            "answer": "写了转耳朵、盯住、压低身子、伸爪按住等动作；具体行为让读者能够想象。",
+            "skill": "观察动物的一次活动，按顺序记三个动作，避免打扰它。",
+            "titleReading": "chuāng tái shàng de xiǎo māo",
+            "detailReading": "xiǎo hé jiā de māo xǐ huān dūn zài chuāng tái shàng tā kàn qǐ lái lǎn yáng yáng de kě lóu dào yī xiǎng qǐ jiǎo bù shēng liǎng zhī ěr duǒ jiù zhuǎn guò qù yǒu yī cì xiǎo hé bǎ zhǐ tuán qīng qīng gǔn dào dì shàng māo xiān dīng zhù zhǐ tuán suí hòu yā dī shēn zi tū rán shēn zhǎo àn zhù yòu ruò wú qí shì de zǒu kāi xiǎo hé xiào zhe shuō tā xiàng yī wèi rèn zhēn de xún chá yuán tā méi yǒu zhǐ xiě wǒ jiā de māo hěn kě ài ér shì bǎ zhè xiē dòng zuò zhú gè jì xià ràng méi jiàn guò tā de rén yě néng xiǎng xiàng tā de yàng zi xiǎng yī xiǎng duǎn wén yòng nǎ xiē dòng zuò biǎo xiàn xiǎo māo de tè diǎn wèi shén me bǐ zhǐ xiě kě ài jù tǐ cān kǎo xiě le zhuǎn ěr duǒ dīng zhù yā dī shēn zi shēn zhǎo àn zhù děng dòng zuò jù tǐ xíng wéi ràng dú zhě néng gòu xiǎng xiàng liàn yī liàn guān chá dòng wù de yī cì huó dòng àn shùn xù jì sān gè dòng zuò bì miǎn dǎ rǎo tā"
+          }
+        },
+        {
+          "id": "u5",
+          "number": 5,
+          "recognition": [
+            "扩荷刹镶",
+            "浙簇臀漆蜿蜒"
+          ],
+          "recognitionReading": [
+            "kuò hè chà xiāng",
+            "zhè cù tún qī wān yán"
+          ],
+          "recognitionReviewCharacters": [
+            "荷"
+          ],
+          "recognitionPdfPages": [
+            144
+          ],
+          "writing": [
+            "霞扩范努刹烂替镶",
+            "浙罗杜鹃簇窄郁肩臀移稍额漆蜿蜒乳源"
+          ],
+          "writingReading": [
+            "xiá kuò fàn nǔ chà làn tì xiāng",
+            "zhè luó dù juān cù zhǎi yù jiān tún yí shāo é qī wān yán rǔ yuán"
+          ],
+          "writingPdfPages": [
+            147
+          ],
+          "recognitionPrintPages": [
+            138
+          ],
+          "writingPrintPages": [
+            141
+          ],
+          "title": "按顺序写景",
+          "titleOrigin": "editorial_summary",
+          "sourcePrintPage": 63,
+          "sourcePdfPage": 69,
+          "lessons": [
+            "海上日出",
+            "记金华的双龙洞"
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "沿着小路看花园",
+            "body": "从花园北门进去，首先看见一排低矮的冬青。沿着石子路向前走，右手边是一片开着小花的草地，左边的池塘里浮着几片荷叶。走过木桥，景色忽然开阔起来，树荫下摆着供人休息的长椅。小林停在桥头回望，发现来时被树挡住的亭子露出了屋顶。他在游记中标出行走路线，也写下两个停下来仔细看的地方。",
+            "question": "短文按什么顺序介绍花园？小林在哪些位置观察？",
+            "answer": "按游览路线介绍；从北门沿石子路，经木桥到桥头回望，观察位置随行走变化。",
+            "skill": "画出一次游览路线，选两个停留点各写一个印象深的细节。",
+            "titleReading": "yán zhe xiǎo lù kàn huā yuán",
+            "detailReading": "cóng huā yuán běi mén jìn qù shǒu xiān kàn jiàn yī pái dī ǎi de dōng qīng yán zhe shí zǐ lù xiàng qián zǒu yòu shǒu biān shì yī piàn kāi zhe xiǎo huā de cǎo dì zuǒ biān de chí táng lǐ fú zhe jǐ piàn hé yè zǒu guò mù qiáo jǐng sè hū rán kāi kuò qǐ lái shù yīn xià bǎi zhe gōng rén xiū xī de cháng yǐ xiǎo lín tíng zài qiáo tóu huí wàng fā xiàn lái shí bèi shù dǎng zhù de tíng zi lù chū le wū dǐng tā zài yóu jì zhòng biāo chū xíng zǒu lù xiàn yě xiě xià liǎng gè tíng xià lái zǐ xì kàn de dì fāng xiǎng yī xiǎng duǎn wén àn shén me shùn xù jiè shào huā yuán xiǎo lín zài nǎ xiē wèi zhì guān chá cān kǎo àn yóu lǎn lù xiàn jiè shào cóng běi mén yán shí zǐ lù jīng mù qiáo dào qiáo tóu huí wàng guān chá wèi zhì suí xíng zǒu biàn huà liàn yī liàn huà chū yī cì yóu lǎn lù xiàn xuǎn liǎng gè tíng liú diǎn gè xiě yī gè yìn xiàng shēn de xì jié"
+          }
+        },
+        {
+          "id": "u6",
+          "number": 6,
+          "recognition": [
+            "恭勤焉卒",
+            "晋絮扭姥吧塞呜哇糠栓捆绑劫毙扒尸",
+            "徽谜唇尚拌倔强嘱咐忍沮吭仪蹬妨",
+            "搓葵祈遗憾污屑"
+          ],
+          "recognitionReading": [
+            "gōng qín yān zú",
+            "jìn xù niǔ lǎo bā sāi wū wā kāng shuān kǔn bǎng jié bì bā shī",
+            "huī mí chún shàng bàn jué jiàng zhǔ fù rěn jǔ kēng yí dēng fáng",
+            "cuō kuí qí yí hàn wū xiè"
+          ],
+          "recognitionReviewCharacters": [
+            "吧",
+            "塞",
+            "哇",
+            "强",
+            "吭"
+          ],
+          "recognitionPdfPages": [
+            144,
+            145
+          ],
+          "writing": [
+            "囊萤恭勤博贫",
+            "晋区扭炕瞎铅兵脊趟迈缸挪劫糖喘试尸慌"
+          ],
+          "writingReading": [
+            "náng yíng gōng qín bó pín",
+            "jìn qū niǔ kàng xiā qiān bīng jí tàng mài gāng nuó jié táng chuǎn shì shī huāng"
+          ],
+          "writingPdfPages": [
+            147
+          ],
+          "recognitionPrintPages": [
+            138,
+            139
+          ],
+          "writingPrintPages": [
+            141
+          ],
+          "title": "人物与成长",
+          "titleOrigin": "editorial_summary",
+          "sourcePrintPage": 75,
+          "sourcePdfPage": 81,
+          "lessons": [
+            "文言文二则：囊萤夜读、铁杵成针",
+            "小英雄雨来（节选）",
+            "我们家的男子汉",
+            "芦花鞋"
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "把任务接过来",
+            "body": "运动会前，班级要整理号码牌。小齐主动报名，却发现有几张号码被弄混了。他原想把牌子放回盒子，等老师处理。看见同学已经排队等候，他又坐下来，按照名单逐一核对，把有疑问的号码单独放好，再请老师确认。忙完时比赛还没开始，小齐的额头却已经冒汗。同桌问他累不累，他笑着说：“有一点，不过大家都拿对了。”",
+            "question": "小齐开始想怎样做？哪些行为表现了他的变化？",
+            "answer": "开始想把问题留给老师；后来主动核对、分开疑问号码并请老师确认，表现了负责。",
+            "skill": "用人物的动作和语言写一件承担责任的小事。",
+            "titleReading": "bǎ rèn wù jiē guò lái",
+            "detailReading": "yùn dòng huì qián bān jí yào zhěng lǐ hào mǎ pái xiǎo qí zhǔ dòng bào míng què fā xiàn yǒu jǐ zhāng hào mǎ bèi nòng hùn le tā yuán xiǎng bǎ pái zi fàng huí hé zi děng lǎo shī chǔ lǐ kàn jiàn tóng xué yǐ jīng pái duì děng hòu tā yòu zuò xià lái àn zhào míng dān zhú yī hé duì bǎ yǒu yí wèn de hào mǎ dān dú fàng hǎo zài qǐng lǎo shī què rèn máng wán shí bǐ sài hái méi kāi shǐ xiǎo qí de é tóu què yǐ jīng mào hàn tóng zhuō wèn tā lèi bù lèi tā xiào zhe shuō yǒu yī diǎn bù guò dà jiā dōu ná duì le xiǎng yī xiǎng xiǎo qí kāi shǐ xiǎng zěn yàng zuò nǎ xiē xíng wéi biǎo xiàn le tā de biàn huà cān kǎo kāi shǐ xiǎng bǎ wèn tí liú gěi lǎo shī hòu lái zhǔ dòng hé duì fēn kāi yí wèn hào mǎ bìng qǐng lǎo shī què rèn biǎo xiàn le fù zé liàn yī liàn yòng rén wù de dòng zuò hé yǔ yán xiě yī jiàn chéng dān zé rèn de xiǎo shì"
+          },
+          "poems": [
+            {
+              "contentId": "sh54-nangying",
+              "sourcePrintPage": 76,
+              "sourcePdfPage": 82,
+              "identityEvidence": {
+                "author": "房玄龄等",
+                "firstLine": "胤恭勤不倦",
+                "sourcePdfPage": 82
+              }
+            },
+            {
+              "contentId": "sh54-tiechu",
+              "sourcePrintPage": 76,
+              "sourcePdfPage": 82,
+              "identityEvidence": {
+                "author": "祝穆",
+                "firstLine": "磨针溪",
+                "sourcePdfPage": 82
+              }
+            }
+          ]
+        },
+        {
+          "id": "u7",
+          "number": 7,
+          "recognition": [
+            "芙蓉洛单砚乾坤",
+            "役屡摧雹晕膛",
+            "弥脉葬剖裸泣汹维秩酣械岗宰遣",
+            "泰杖敞拘蕴",
+            "蔼慷慨贤戚惧彬躁焚"
+          ],
+          "recognitionReading": [
+            "fú róng luò chán yàn qián kūn",
+            "yì lǚ cuī báo yūn táng",
+            "mí mài zàng pōu luǒ qì xiōng wéi zhì hān xiè gǎng zǎi qiǎn",
+            "tài zhàng chǎng jū yùn",
+            "ǎi kāng kǎi xián qī jù bīn zào fén"
+          ],
+          "recognitionReviewCharacters": [
+            "单",
+            "晕"
+          ],
+          "recognitionPdfPages": [
+            145
+          ],
+          "writing": [
+            "芙蓉洛壶雁",
+            "役营摧毁荣塌晕",
+            "弥距脉葬腹剖泣混隔弄维秩岗宰考措灾践"
+          ],
+          "writingReading": [
+            "fú róng luò hú yàn",
+            "yì yíng cuī huǐ róng tā yūn",
+            "mí jù mài zàng fù pōu qì hùn gé nòng wéi zhì gǎng zǎi kǎo cuò zāi jiàn"
+          ],
+          "writingPdfPages": [
+            147
+          ],
+          "recognitionPrintPages": [
+            139
+          ],
+          "writingPrintPages": [
+            141
+          ],
+          "title": "人物品质",
+          "titleOrigin": "editorial_summary",
+          "sourcePrintPage": 101,
+          "sourcePdfPage": 107,
+          "lessons": [
+            "古诗三首：芙蓉楼送辛渐、塞下曲、墨梅",
+            "黄继光",
+            "“诺曼底号”遇难记",
+            "挑山工"
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "风雨中的值日牌",
+            "body": "放学时突然下雨，小宁发现走廊窗边的值日牌被风吹落。她已走到楼梯口，又返回去捡起牌子，把半开的窗关好。伙伴催她快走，她说：“先把值日牌放回去，明天大家才看得清。”老师后来表扬她，她却只讲了事情经过，没有把自己说得很了不起。小宁的举动很小，却让同学们看见：负责可以藏在没人提醒的一次回头里。",
+            "question": "哪些行为表现了小宁的品质？末句与前面的事例有什么联系？",
+            "answer": "主动返回、关窗和放回值日牌表现负责；末句概括了这些具体行动的意义。",
+            "skill": "选一个具体事例表现人物品质，先写事实，再说明自己的感受。",
+            "titleReading": "fēng yǔ zhōng de zhí rì pái",
+            "detailReading": "fàng xué shí tū rán xià yǔ xiǎo níng fā xiàn zǒu láng chuāng biān de zhí rì pái bèi fēng chuī luò tā yǐ zǒu dào lóu tī kǒu yòu fǎn huí qù jiǎn qǐ pái zi bǎ bàn kāi de chuāng guān hǎo huǒ bàn cuī tā kuài zǒu tā shuō xiān bǎ zhí rì pái fàng huí qù míng tiān dà jiā cái kàn de qīng lǎo shī hòu lái biǎo yáng tā tā què zhǐ jiǎng le shì qíng jīng guò méi yǒu bǎ zì jǐ shuō de hěn liǎo bù qǐ xiǎo níng de jǔ dòng hěn xiǎo què ràng tóng xué men kàn jiàn fù zé kě yǐ cáng zài méi rén tí xǐng de yī cì huí tóu lǐ xiǎng yī xiǎng nǎ xiē xíng wéi biǎo xiàn le xiǎo níng de pǐn zhì mò jù yǔ qián miàn de shì lì yǒu shén me lián xì cān kǎo zhǔ dòng fǎn huí guān chuāng hé fàng huí zhí rì pái biǎo xiàn fù zé mò jù gài kuò le zhè xiē jù tǐ xíng dòng de yì yì liàn yī liàn xuǎn yī gè jù tǐ shì lì biǎo xiàn rén wù pǐn zhì xiān xiě shì shí zài shuō míng zì jǐ de gǎn shòu"
+          },
+          "poems": [
+            {
+              "contentId": "moe-2022-zh-1-6-013",
+              "sourcePrintPage": 102,
+              "sourcePdfPage": 108,
+              "identityEvidence": {
+                "author": "王昌龄",
+                "firstLine": "寒雨连江夜入吴",
+                "sourcePdfPage": 108
+              }
+            },
+            {
+              "contentId": "moe-2022-zh-1-6-032",
+              "sourcePrintPage": 102,
+              "sourcePdfPage": 108,
+              "identityEvidence": {
+                "author": "卢纶",
+                "firstLine": "月黑雁飞高",
+                "sourcePdfPage": 108
+              }
+            },
+            {
+              "contentId": "moe-2022-zh-1-6-070",
+              "sourcePrintPage": 103,
+              "sourcePdfPage": 109,
+              "identityEvidence": {
+                "author": "王冕",
+                "firstLine": "我家洗砚池头树",
+                "sourcePdfPage": 109
+              }
+            }
+          ]
+        },
+        {
+          "id": "u8",
+          "number": 8,
+          "recognition": [
+            "妖矩乖撵丫拽冲瘦",
+            "硕允砌覆啸缕搂颊",
+            "矢殿抚鲸恰"
+          ],
+          "recognitionReading": [
+            "yāo jǔ guāi niǎn yā zhuài chòng shòu",
+            "shuò yǔn qì fù xiào lǚ lǒu jiá",
+            "shǐ diàn fǔ jīng qià"
+          ],
+          "recognitionReviewCharacters": [
+            "冲"
+          ],
+          "recognitionPdfPages": [
+            145
+          ],
+          "writing": [
+            "介绍妖矩乖撵烫溜丫胳膊拽宫掘舔葵瘦罢",
+            "硕懂允砌牌踪蹋覆裹啸雹疯缕挨悔搂颊拆"
+          ],
+          "writingReading": [
+            "jiè shào yāo jǔ guāi niǎn tàng liū yā gē bó zhuāi gōng jué tiǎn kuí shòu bà",
+            "shuò dǒng yǔn qì pái zōng tà fù guǒ xiào báo fēng lǚ ái huǐ lǒu jiá chāi"
+          ],
+          "writingPdfPages": [
+            147
+          ],
+          "recognitionPrintPages": [
+            139
+          ],
+          "writingPrintPages": [
+            141
+          ],
+          "title": "童话想象",
+          "titleOrigin": "editorial_summary",
+          "sourcePrintPage": 121,
+          "sourcePdfPage": 127,
+          "lessons": [
+            "宝葫芦的秘密（节选）",
+            "巨人的花园",
+            "海的女儿"
+          ],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "会借光的路灯",
+            "body": "有一盏小路灯，总觉得自己的光不够亮，怕不能照见晚归的人。一天停电，它难过得低下头。萤火虫飞来，在灯罩边排成一圈；月亮也从云后探出脸，把银色的光铺在小路上。小路灯发现，每一束光都很微小，聚在一起却能让人看清脚下。后来电恢复了，它照常站在路旁，也学会欣赏树叶间忽明忽暗的萤火。",
+            "question": "故事的困难是什么？哪些情节体现了童话的想象？",
+            "answer": "困难是停电后无法照路；路灯会担心、萤火虫合作和月亮主动帮忙体现想象。",
+            "skill": "围绕一种物品的愿望编童话，安排困难、帮助和变化。",
+            "titleReading": "huì jiè guāng de lù dēng",
+            "detailReading": "yǒu yī zhǎn xiǎo lù dēng zǒng jué de zì jǐ de guāng bù gòu liàng pà bù néng zhào jiàn wǎn guī de rén yī tiān tíng diàn tā nán guò de dī xià tou yíng huǒ chóng fēi lái zài dēng zhào biān pái chéng yī quān yuè liàng yě cóng yún hòu tàn chū liǎn bǎ yín sè de guāng pù zài xiǎo lù shàng xiǎo lù dēng fā xiàn měi yī shù guāng dōu hěn wēi xiǎo jù zài yī qǐ què néng ràng rén kàn qīng jiǎo xià hòu lái diàn huī fù le tā zhào cháng zhàn zài lù páng yě xué huì xīn shǎng shù yè jiān hū míng hū àn de yíng huǒ xiǎng yī xiǎng gù shì de kùn nán shì shén me nǎ xiē qíng jié tǐ xiàn le tóng huà de xiǎng xiàng cān kǎo kùn nán shì tíng diàn hòu wú fǎ zhào lù lù dēng huì dān xīn yíng huǒ chóng hé zuò hé yuè liàng zhǔ dòng bāng máng tǐ xiàn xiǎng xiàng liàn yī liàn wéi rào yī zhǒng wù pǐn de yuàn wàng biān tóng huà ān pái kùn nán bāng zhù hé biàn huà"
+          }
+        }
+      ],
+      "editionStatus": "historical_reference"
+    },
+    {
+      "id": "english-4a-2026",
+      "subject": "english",
+      "grade": 4,
+      "semester": "上册",
+      "title": "英语四年级上册（五四制·2026秋资源）",
+      "publisher": "上海教育出版社",
+      "edition": "2026学年第一学期官方五四制配套资源；ISBN 978-7-5720-4356-7；学校纸本印次待确认",
+      "editionStatus": "official_resource_verified",
+      "schoolSystem": "5-4",
+      "sourceUrl": "https://www.sh.smartedu.cn/teachingMaterial?type=11",
+      "sourceKind": "official_audio",
+      "checkedAt": "2026-10-17",
+      "schoolAdoption": "pending",
+      "expectedUnitCount": 10,
+      "sourceEvidence": {
+        "officialResourceUrl": "https://mp3.bookmall.com.cn/",
+        "officialResourceCode": "57204356",
+        "officialResourceIsbn": "978-7-5720-4356-7",
+        "audioArchiveSha256": "d5b66b5cbcb984f57e7827859a756a356b838953a5a13c85b29258bfaa812a45",
+        "wordBankPrintedPagesVerified": false,
+        "scope": "Words to use 音频词项；纸本拼写、标点、完整性与学校印次待核实",
+        "audioArchiveMd5": "c4353e8e91c3ab6bcd0120995c515bd0",
+        "audioDownloadUrl": "https://mp3.bookmall.com.cn/book/download/57204356/22320.shtml"
+      },
+      "inventory": {
+        "topicWordsComplete": false,
+        "wordBankComplete": false,
+        "vocabularyListName": "Words to use",
+        "vocabularyScope": "official_audio_words_to_use_selection",
+        "unitPracticeComplete": true,
+        "fullTextAvailable": false,
+        "fullCoverage": false,
+        "vocabularyCount": 141
+      },
+      "units": [
+        {
+          "id": "u1",
+          "number": 1,
+          "title": "My school",
+          "sourcePrintPage": 7,
+          "sourcePageBasis": "official_audio_announcement",
+          "sourceAudioTrack": "05 Unit 1 Big task.mp3",
+          "words": [
+            {
+              "text": "classroom",
+              "meaning": "教室",
+              "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "keep tidy",
+              "meaning": "保持整洁",
+              "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "sports field",
+              "meaning": "运动场",
+              "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "hall",
+              "meaning": "大厅；礼堂",
+              "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "begin",
+              "meaning": "开始",
+              "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "project",
+              "meaning": "项目；课题",
+              "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "computer room",
+              "meaning": "电脑教室",
+              "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "let",
+              "meaning": "让",
+              "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "bamboo",
+              "meaning": "竹子",
+              "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "school building",
+              "meaning": "教学楼",
+              "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "tall",
+              "meaning": "高的",
+              "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "student",
+              "meaning": "学生",
+              "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "art room",
+              "meaning": "美术教室",
+              "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "sure",
+              "meaning": "当然；确信的",
+              "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "See you soon",
+              "meaning": "一会儿见",
+              "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            }
+          ],
+          "vocabularyAudioEvidence": {
+            "track": "65 Words to use-Unit 1.mp3",
+            "sha256": "81301d80ac5f64fc63b8a463c914875d6d72e80995322368fc811233e0df4e0d"
+          },
+          "lessons": [],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "Our Quiet Corner",
+            "body": "Our school has a small reading corner beside the art room.\nWe keep it tidy and put books back after reading.\nMy classmates are making a project about their favourite school places.\nI choose this corner because I can read and think quietly.",
+            "translation": [
+              "我们学校在美术教室旁有一个小小的阅读角。",
+              "我们保持那里整洁，读完后把书放回去。",
+              "同学们正在做一个关于最喜欢的校园地点的项目。",
+              "我选择这个角落，因为我可以在那里安静地阅读和思考。"
+            ],
+            "question": "Why does the writer choose the reading corner?",
+            "questionHint": "作者为什么选择阅读角？",
+            "answer": "Because the writer can read and think quietly there."
+          }
+        },
+        {
+          "id": "u2",
+          "number": 2,
+          "title": "My classmates",
+          "sourcePrintPage": 15,
+          "sourcePageBasis": "official_audio_announcement",
+          "sourceAudioTrack": "11 Unit 2 Big task.mp3",
+          "words": [
+            {
+              "text": "lovely",
+              "meaning": "可爱的",
+              "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "great",
+              "meaning": "很好的；很棒的",
+              "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "often",
+              "meaning": "经常",
+              "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "always",
+              "meaning": "总是",
+              "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "interesting",
+              "meaning": "有趣的",
+              "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "helpful",
+              "meaning": "乐于助人的；有帮助的",
+              "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "English",
+              "meaning": "英语",
+              "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "duck",
+              "meaning": "鸭子",
+              "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "Let me try",
+              "meaning": "让我试一试",
+              "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "Take it easy",
+              "meaning": "别紧张",
+              "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "Keep going",
+              "meaning": "继续努力",
+              "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            }
+          ],
+          "vocabularyAudioEvidence": {
+            "track": "66 Words to use-Unit 2.mp3",
+            "sha256": "4bf671faf9bb1a784321a6841d091a6b3474337986b702cf50b921d5d57b0ab3"
+          },
+          "lessons": [],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "A Helpful Classmate",
+            "body": "Lily often brings an interesting book to share with our class.\nWhen I cannot understand a word, she helps me find its meaning.\nShe does not give me every answer, but asks useful questions.\nI think a helpful classmate makes learning easier and more enjoyable.",
+            "translation": [
+              "莉莉经常带一本有趣的书来和全班分享。",
+              "当我不理解一个词时，她帮我查找词义。",
+              "她不会把所有答案都告诉我，而是提出有用的问题。",
+              "我觉得乐于助人的同学能让学习更轻松、更有趣。"
+            ],
+            "question": "How does Lily help the writer learn?",
+            "questionHint": "莉莉怎样帮助作者学习？",
+            "answer": "She helps find word meanings and asks useful questions."
+          }
+        },
+        {
+          "id": "u3",
+          "number": 3,
+          "title": "Animals and their homes",
+          "sourcePrintPage": 23,
+          "sourcePageBasis": "official_audio_announcement",
+          "sourceAudioTrack": "17 Unit 3 Big task.mp3",
+          "words": [
+            {
+              "text": "panda",
+              "meaning": "熊猫",
+              "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "black",
+              "meaning": "黑色的",
+              "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "white",
+              "meaning": "白色的",
+              "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "hometown",
+              "meaning": "家乡",
+              "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "monkey",
+              "meaning": "猴子",
+              "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "yellow",
+              "meaning": "黄色的",
+              "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "elephant",
+              "meaning": "大象",
+              "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "grey",
+              "meaning": "灰色的",
+              "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "trunk",
+              "meaning": "象鼻",
+              "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "family",
+              "meaning": "家庭",
+              "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "India",
+              "meaning": "印度",
+              "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "Africa",
+              "meaning": "非洲",
+              "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "baby elephant",
+              "meaning": "小象",
+              "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "tail",
+              "meaning": "尾巴",
+              "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "kind",
+              "meaning": "友好的；种类",
+              "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "polar bear",
+              "meaning": "北极熊",
+              "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "the North Pole",
+              "meaning": "北极",
+              "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "warm",
+              "meaning": "温暖的",
+              "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "bed",
+              "meaning": "床",
+              "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            }
+          ],
+          "vocabularyAudioEvidence": {
+            "track": "67 Words to use-Unit 3.mp3",
+            "sha256": "4b905529cc1c0dbb86b77531cc44db54481158c5ff41d95d915fb05f623cbd62"
+          },
+          "lessons": [],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "An Animal Card",
+            "body": "Ben is making a card about elephants and their homes.\nHe draws a large elephant with a long trunk and a small baby beside it.\nHis card says that elephants need space, water and food.\nHe checks a book before adding facts to his drawing.",
+            "translation": [
+              "本正在制作一张关于大象和它们栖息地的卡片。",
+              "他画了一头长鼻子的大象，旁边还有一头小象。",
+              "卡片上写着大象需要活动空间、水和食物。",
+              "他在给画添加知识之前先查阅一本书。"
+            ],
+            "question": "What does Ben do before adding facts?",
+            "questionHint": "本在添加知识之前做什么？",
+            "answer": "He checks a book."
+          }
+        },
+        {
+          "id": "u4",
+          "number": 4,
+          "title": "Our birthday",
+          "sourcePrintPage": 31,
+          "sourcePageBasis": "official_audio_announcement",
+          "sourceAudioTrack": "23 Unit 4 Big task.mp3",
+          "words": [
+            {
+              "text": "invitation",
+              "meaning": "邀请；邀请函",
+              "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "party",
+              "meaning": "聚会",
+              "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "activity",
+              "meaning": "活动",
+              "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "share a cake",
+              "meaning": "分享一个蛋糕",
+              "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "bring",
+              "meaning": "带来",
+              "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "letter",
+              "meaning": "信",
+              "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "child",
+              "meaning": "孩子",
+              "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "tradition",
+              "meaning": "传统",
+              "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "love",
+              "meaning": "爱",
+              "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "bowl",
+              "meaning": "碗",
+              "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "egg",
+              "meaning": "鸡蛋",
+              "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "wish",
+              "meaning": "愿望；祝愿",
+              "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "soup",
+              "meaning": "汤",
+              "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            }
+          ],
+          "vocabularyAudioEvidence": {
+            "track": "68 Words to use-Unit 4.mp3",
+            "sha256": "aff79840cd563a628869be5e96efa07198b76deeb4cb4e9830476083cc1fbb0e"
+          },
+          "lessons": [],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "A Small Birthday Party",
+            "body": "We write an invitation for our group birthday party on Saturday.\nEach child can bring a drawing instead of a new toy.\nWe plan to share a cake and play a simple guessing game.\nBefore the party ends, everyone writes a kind wish for a friend.",
+            "translation": [
+              "我们为星期六的小组生日会写了一封邀请函。",
+              "每个孩子可以带一幅画，而不是带一个新玩具。",
+              "我们计划分享蛋糕，玩一个简单的猜谜游戏。",
+              "聚会结束前，每个人都为一位朋友写下美好的祝愿。"
+            ],
+            "question": "What can each child bring to the party?",
+            "questionHint": "每个孩子可以带什么参加聚会？",
+            "answer": "A drawing instead of a new toy."
+          }
+        },
+        {
+          "id": "u5",
+          "number": 5,
+          "title": "Visiting places",
+          "sourcePrintPage": 39,
+          "sourcePageBasis": "official_audio_announcement",
+          "sourceAudioTrack": "29 Unit 5 Big task.mp3",
+          "words": [
+            {
+              "text": "neighbourhood",
+              "meaning": "街区；社区",
+              "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "park",
+              "meaning": "公园",
+              "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "shop",
+              "meaning": "商店",
+              "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "cinema",
+              "meaning": "电影院",
+              "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "supermarket",
+              "meaning": "超市",
+              "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "go around",
+              "meaning": "四处走走",
+              "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "boat",
+              "meaning": "小船",
+              "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "bridge",
+              "meaning": "桥",
+              "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "photo",
+              "meaning": "照片",
+              "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "amazing",
+              "meaning": "令人惊叹的",
+              "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "out of battery",
+              "meaning": "电池没电",
+              "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "people",
+              "meaning": "人们",
+              "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "restaurant",
+              "meaning": "餐馆",
+              "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "That's amazing",
+              "meaning": "真令人惊叹",
+              "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            }
+          ],
+          "vocabularyAudioEvidence": {
+            "track": "69 Words to use-Unit 5.mp3",
+            "sha256": "bd64e85e4ba36bab0a343d4c9921de78a19787eb46f105d90d3914ce4cc274b6"
+          },
+          "lessons": [],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "A Walk with Grandpa",
+            "body": "Grandpa and I walk around our neighbourhood after breakfast.\nWe cross a small bridge and see boats moving slowly on the river.\nI want to take a photo, but my camera is out of battery.\nGrandpa smiles and says that we can draw what we remember at home.",
+            "translation": [
+              "早餐后，我和爷爷在社区里散步。",
+              "我们走过一座小桥，看见小船在河上慢慢行驶。",
+              "我想拍照，但相机没电了。",
+              "爷爷笑着说，我们可以回家把记得的景象画下来。"
+            ],
+            "question": "How can they record the walk without a camera?",
+            "questionHint": "没有相机，他们可以怎样记录这次散步？",
+            "answer": "They can draw what they remember at home."
+          }
+        },
+        {
+          "id": "u6",
+          "number": 6,
+          "title": "It's autumn",
+          "sourcePrintPage": 47,
+          "sourcePageBasis": "official_audio_announcement",
+          "sourceAudioTrack": "35 Unit 6 Big task.mp3",
+          "words": [
+            {
+              "text": "autumn",
+              "meaning": "秋天",
+              "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "farm",
+              "meaning": "农场",
+              "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "boy",
+              "meaning": "男孩",
+              "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "fruit",
+              "meaning": "水果",
+              "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "fly south",
+              "meaning": "向南飞",
+              "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "girl",
+              "meaning": "女孩",
+              "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "golden",
+              "meaning": "金色的",
+              "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "apple",
+              "meaning": "苹果",
+              "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "worker",
+              "meaning": "工人；工作者",
+              "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "quick",
+              "meaning": "快的",
+              "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            }
+          ],
+          "vocabularyAudioEvidence": {
+            "track": "70 Words to use-Unit 6.mp3",
+            "sha256": "963f97b7097bf243c3a729137c8a42cd8d9798c3c3f324a7fbd8553d74ff8760"
+          },
+          "lessons": [],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "Autumn on the Farm",
+            "body": "In autumn, we visit a farm with our teacher.\nA worker shows us how to pick apples without hurting the branches.\nGolden leaves fall near our feet as birds fly across the sky.\nWe write down the colours and sounds for a short poem.",
+            "translation": [
+              "秋天，我们和老师一起参观农场。",
+              "一位工作人员教我们怎样摘苹果而不伤到树枝。",
+              "金色的叶子落在脚边，鸟儿飞过天空。",
+              "我们记录颜色和声音，为写一首短诗做准备。"
+            ],
+            "question": "What do the children record for their poem?",
+            "questionHint": "孩子们为小诗记录什么？",
+            "answer": "The colours and sounds on the farm."
+          }
+        },
+        {
+          "id": "u7",
+          "number": 7,
+          "title": "My healthy breakfast",
+          "sourcePrintPage": 55,
+          "sourcePageBasis": "official_audio_announcement",
+          "sourceAudioTrack": "41 Unit 7 Big task.mp3",
+          "words": [
+            {
+              "text": "breakfast",
+              "meaning": "早餐",
+              "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "menu",
+              "meaning": "菜单",
+              "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "juice",
+              "meaning": "果汁",
+              "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "milk",
+              "meaning": "牛奶",
+              "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "soya milk",
+              "meaning": "豆浆",
+              "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "banana",
+              "meaning": "香蕉",
+              "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "week",
+              "meaning": "星期；周",
+              "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。 week/weak 同音，结合 44 Unit 7 Talking time.mp3 中每周吃早餐的频率语境，按 week 收录。"
+            },
+            {
+              "text": "eat",
+              "meaning": "吃",
+              "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "tomorrow",
+              "meaning": "明天",
+              "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "energy",
+              "meaning": "能量",
+              "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "protein",
+              "meaning": "蛋白质",
+              "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "vitamin",
+              "meaning": "维生素",
+              "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "cry",
+              "meaning": "喊叫；哭",
+              "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            }
+          ],
+          "vocabularyAudioEvidence": {
+            "track": "71 Words to use-Unit 7.mp3",
+            "sha256": "b7572bb896ea9f62d20bd7226f288867a98bbc6c946930b6ea0c79e017908ae2",
+            "contextTrack": {
+              "track": "44 Unit 7 Talking time.mp3",
+              "sha256": "0992a8606d0f87880ea0baf2b8fc9a284734555459d2523780719a8f503c5377",
+              "note": "对话涉及每周吃三明治的频率，支持词项 week。"
+            }
+          },
+          "lessons": [],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "A Breakfast Plan",
+            "body": "On Sunday evening, I make a breakfast plan with Dad.\nWe choose different foods for the week and write a shopping list.\nTomorrow I would like an egg, some bread and a banana.\nDad reminds me to leave enough time to eat before school.",
+            "translation": [
+              "星期日晚上，我和爸爸一起制定早餐计划。",
+              "我们为这一周选择不同的食物，并写一张购物清单。",
+              "明天我想吃一个鸡蛋、一些面包和一根香蕉。",
+              "爸爸提醒我上学前要留出足够的时间吃早餐。"
+            ],
+            "question": "Why does the family write a shopping list?",
+            "questionHint": "家人为什么写购物清单？",
+            "answer": "To prepare the foods in their breakfast plan."
+          }
+        },
+        {
+          "id": "u8",
+          "number": 8,
+          "title": "Be honest",
+          "sourcePrintPage": 63,
+          "sourcePageBasis": "official_audio_announcement",
+          "sourceAudioTrack": "47 Unit 8 Big task.mp3",
+          "words": [
+            {
+              "text": "keep one's word",
+              "meaning": "遵守诺言",
+              "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "give back",
+              "meaning": "归还",
+              "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "on time",
+              "meaning": "准时",
+              "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "honest",
+              "meaning": "诚实的",
+              "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "tell the truth",
+              "meaning": "说实话",
+              "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "never tell a lie",
+              "meaning": "从不说谎",
+              "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "stop",
+              "meaning": "停止",
+              "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "doll",
+              "meaning": "玩偶",
+              "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "break",
+              "meaning": "弄坏；打破",
+              "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "arm",
+              "meaning": "手臂",
+              "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "empty",
+              "meaning": "空的",
+              "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "pot",
+              "meaning": "罐；花盆",
+              "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "seed",
+              "meaning": "种子",
+              "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "month",
+              "meaning": "月",
+              "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "Are you all right",
+              "meaning": "你还好吗",
+              "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "What happened",
+              "meaning": "发生了什么",
+              "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            }
+          ],
+          "vocabularyAudioEvidence": {
+            "track": "72 Words to use-Unit 8.mp3",
+            "sha256": "32c0dc038930f75e0250f46171a64756d3635a5fbce44ef0850cde1852df1cd2"
+          },
+          "lessons": [],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "The Broken Pot",
+            "body": "While playing near the window, Sam breaks a small flower pot.\nHe feels worried, but tells his mother the truth at once.\nThey move the plant to another pot and clean the floor together.\nSam learns that being honest is the first step towards solving a problem.",
+            "translation": [
+              "在窗边玩耍时，萨姆弄坏了一个小花盆。",
+              "他很担心，但立即把实情告诉妈妈。",
+              "他们把植物移到另一个花盆里，一起清扫地面。",
+              "萨姆懂得了，诚实是解决问题的第一步。"
+            ],
+            "question": "What does Sam do after breaking the pot?",
+            "questionHint": "萨姆弄坏花盆后做了什么？",
+            "answer": "He tells his mother the truth and helps solve the problem."
+          }
+        },
+        {
+          "id": "u9",
+          "number": 9,
+          "title": "What time is it?",
+          "sourcePrintPage": 71,
+          "sourcePageBasis": "official_audio_announcement",
+          "sourceAudioTrack": "53 Unit 9 Big task.mp3",
+          "words": [
+            {
+              "text": "time",
+              "meaning": "时间",
+              "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "hour hand",
+              "meaning": "时针",
+              "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "minute hand",
+              "meaning": "分针",
+              "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "seven o'clock",
+              "meaning": "七点整",
+              "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "half past eleven",
+              "meaning": "十一点半",
+              "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "ten to four",
+              "meaning": "三点五十分",
+              "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "evening",
+              "meaning": "傍晚；晚上",
+              "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "the Earth",
+              "meaning": "地球",
+              "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "the Moon",
+              "meaning": "月球",
+              "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "night",
+              "meaning": "夜晚",
+              "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "What time is it",
+              "meaning": "现在几点了",
+              "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "Happy New Year",
+              "meaning": "新年快乐",
+              "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            }
+          ],
+          "vocabularyAudioEvidence": {
+            "track": "73 Words to use-Unit 9.mp3",
+            "sha256": "723324643ec3671acf72ef5174dd3ed1732624a5d61c14493baa325a2d183355"
+          },
+          "lessons": [],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "Before the Library Closes",
+            "body": "The library closes at four o'clock in the afternoon.\nAt ten to four, the minute hand points to ten.\nWe have ten minutes to return our books and leave.\nI put the books in my bag and check that nothing is missing.",
+            "translation": [
+              "图书馆下午四点关门。",
+              "三点五十分时，分针指向十。",
+              "我们有十分钟归还图书并离开。",
+              "我把书放进包里，检查有没有遗漏。"
+            ],
+            "question": "How much time do they have before the library closes?",
+            "questionHint": "距离图书馆关门还有多长时间？",
+            "answer": "Ten minutes."
+          }
+        },
+        {
+          "id": "u10",
+          "number": 10,
+          "title": "Weather",
+          "sourcePrintPage": 79,
+          "sourcePageBasis": "official_audio_announcement",
+          "sourceAudioTrack": "59 Unit 10 Big task.mp3",
+          "words": [
+            {
+              "text": "father",
+              "meaning": "父亲",
+              "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "sunny",
+              "meaning": "晴朗的",
+              "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "rainy",
+              "meaning": "下雨的",
+              "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "cloudy",
+              "meaning": "多云的",
+              "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "brother",
+              "meaning": "兄弟",
+              "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "windy",
+              "meaning": "有风的",
+              "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "snowy",
+              "meaning": "下雪的",
+              "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "weather",
+              "meaning": "天气",
+              "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "weather report",
+              "meaning": "天气预报",
+              "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "degree",
+              "meaning": "度",
+              "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "weather reporter",
+              "meaning": "天气播报员",
+              "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "lamb",
+              "meaning": "小羊",
+              "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "tortoise",
+              "meaning": "陆龟",
+              "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "sign",
+              "meaning": "迹象；标志",
+              "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "hurry",
+              "meaning": "赶快",
+              "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "heavy rain",
+              "meaning": "大雨",
+              "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "Let me see",
+              "meaning": "让我看看",
+              "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "I see",
+              "meaning": "我明白了",
+              "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            }
+          ],
+          "vocabularyAudioEvidence": {
+            "track": "74 Words to use-Unit 10.mp3",
+            "sha256": "e8569c25ccc9a1d757204b53ab25ffcb09ef4fb157e2648d73a342864ba43622"
+          },
+          "lessons": [],
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "A Rainy Morning",
+            "body": "The weather report says there will be heavy rain this morning.\nBefore leaving home, Mum and I check the sky and take our raincoats.\nWe walk carefully because the path is wet.\nAt school, I write the date and weather in our class weather diary.",
+            "translation": [
+              "天气预报说今天上午会有大雨。",
+              "出门前，我和妈妈看看天空，带上雨衣。",
+              "因为路面湿滑，我们小心地行走。",
+              "到校后，我把日期和天气写进班级天气日记。"
+            ],
+            "question": "Why do they walk carefully?",
+            "questionHint": "他们为什么小心地行走？",
+            "answer": "Because the path is wet."
+          }
+        }
+      ]
+    },
+    {
+      "id": "english-4b-legacy",
+      "subject": "english",
+      "grade": 4,
+      "semester": "下册",
+      "title": "英语四年级下册（牛津上海版试用本·旧版参考）",
+      "publisher": "上海教育出版社",
+      "edition": "2025学年第二学期官方资源列示的牛津上海版试用本；ISBN 978-7-5444-1653-5；2026学年新版下册待核实",
+      "editionStatus": "historical_reference",
+      "schoolSystem": "5-4",
+      "sourceUrl": "https://www.sh.smartedu.cn/teachingMaterial?type=8",
+      "sourceKind": "official_audio",
+      "checkedAt": "2026-10-17",
+      "schoolAdoption": "pending",
+      "expectedUnitCount": 12,
+      "sourceEvidence": {
+        "officialResourceUrl": "https://mp3.bookmall.com.cn/",
+        "officialResourceCode": "54441653",
+        "officialResourceIsbn": "978-7-5444-1653-5",
+        "audioArchiveSha256": "a7967b369bf7d5e95d21be1e5ffd242c2dbaa0816b2701c7603c481ab60b4bc4",
+        "wordBankPrintedPagesVerified": false,
+        "scope": "12 单元 Look and learn 词项；不代表完整卷末词表",
+        "audioArchiveMd5": "60b24f52a3f950366ee7e2e01f590c55",
+        "audioDownloadUrl": "https://mp3.bookmall.com.cn/book/download/54441653/22300.shtml"
+      },
+      "inventory": {
+        "topicWordsComplete": false,
+        "wordBankComplete": false,
+        "vocabularyListName": "Look and learn",
+        "vocabularyScope": "official_audio_unit_selection",
+        "unitPracticeComplete": true,
+        "fullTextAvailable": false,
+        "fullCoverage": false,
+        "vocabularyCount": 61
+      },
+      "units": [
+        {
+          "id": "u1",
+          "number": 1,
+          "title": "What can you smell and taste?",
+          "sourcePrintPage": 2,
+          "sourcePageBasis": "official_audio_announcement",
+          "sourceAudioTrack": "01. Module 1 Unit 1.mp3",
+          "words": [
+            {
+              "text": "watermelon",
+              "meaning": "西瓜",
+              "vocabularyAudioTrack": "03. P3 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "grape",
+              "meaning": "葡萄",
+              "vocabularyAudioTrack": "03. P3 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "plum",
+              "meaning": "李子",
+              "vocabularyAudioTrack": "03. P3 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "cherry",
+              "meaning": "樱桃",
+              "vocabularyAudioTrack": "03. P3 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "strawberry",
+              "meaning": "草莓",
+              "vocabularyAudioTrack": "03. P3 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            }
+          ],
+          "vocabularyAudioEvidence": {
+            "track": "03. P3 Look and learn.mp3",
+            "sha256": "2c228d0c1c83936d7747c80cd3ec06a337128fc43bf79f463b83f688fa202bc9"
+          },
+          "lessons": [],
+          "displayLabel": "Module 1 / Unit 1 · What can you smell and taste?",
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "Fruit for Our Picnic",
+            "body": "We wash grapes, cherries and strawberries for our picnic.\nI cut a watermelon with help from an adult.\nThe fruits smell fresh, and the strawberries taste sweet and a little sour.\nWe put each kind of fruit in a clean box before leaving.",
+            "translation": [
+              "我们为野餐清洗葡萄、樱桃和草莓。",
+              "我在大人的帮助下切西瓜。",
+              "水果闻起来很新鲜，草莓尝起来甜中带一点酸。",
+              "出发前，我们把每种水果放进干净的盒子。"
+            ],
+            "question": "How do the strawberries taste?",
+            "questionHint": "草莓尝起来怎么样？",
+            "answer": "Sweet and a little sour."
+          }
+        },
+        {
+          "id": "u2",
+          "number": 2,
+          "title": "How does it feel?",
+          "sourcePrintPage": 7,
+          "sourcePageBasis": "official_audio_announcement",
+          "sourceAudioTrack": "09. Module 1 Unit 2.mp3",
+          "words": [
+            {
+              "text": "hard",
+              "meaning": "硬的",
+              "vocabularyAudioTrack": "11. P8 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。",
+              "additionalSense": true
+            },
+            {
+              "text": "soft",
+              "meaning": "软的",
+              "vocabularyAudioTrack": "11. P8 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "rough",
+              "meaning": "粗糙的",
+              "vocabularyAudioTrack": "11. P8 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "smooth",
+              "meaning": "光滑的",
+              "vocabularyAudioTrack": "11. P8 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "sharp",
+              "meaning": "锋利的",
+              "vocabularyAudioTrack": "11. P8 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "blunt",
+              "meaning": "钝的",
+              "vocabularyAudioTrack": "11. P8 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "thick",
+              "meaning": "厚的",
+              "vocabularyAudioTrack": "11. P8 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "thin",
+              "meaning": "薄的",
+              "vocabularyAudioTrack": "11. P8 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            }
+          ],
+          "vocabularyAudioEvidence": {
+            "track": "11. P8 Look and learn.mp3",
+            "sha256": "71408b17b489878fa8a216841dc2c5047facca83a8f4edb19da6b3d0eba5aea2"
+          },
+          "lessons": [],
+          "displayLabel": "Module 1 / Unit 2 · How does it feel?",
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "The Touching Bag",
+            "body": "Our teacher puts safe objects into a cloth bag.\nI feel something smooth and hard, but I cannot see it.\nMy friend feels a soft piece of cloth beside it.\nWe describe how each object feels before taking it out.",
+            "translation": [
+              "老师把安全的物品放进一个布袋里。",
+              "我摸到一个光滑而坚硬的东西，但看不见它。",
+              "朋友摸到旁边有一块柔软的布。",
+              "我们先描述每件物品摸起来的感觉，再把它拿出来。"
+            ],
+            "question": "What do the children do before taking the objects out?",
+            "questionHint": "孩子们拿出物品前做什么？",
+            "answer": "They describe how each object feels."
+          }
+        },
+        {
+          "id": "u3",
+          "number": 3,
+          "title": "Look at the shadow",
+          "sourcePrintPage": 12,
+          "sourcePageBasis": "official_audio_announcement",
+          "sourceAudioTrack": "17. Module 1 Unit 3.mp3",
+          "words": [
+            {
+              "text": "hill",
+              "meaning": "小山",
+              "vocabularyAudioTrack": "19. P13 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "lawn",
+              "meaning": "草坪",
+              "vocabularyAudioTrack": "19. P13 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "path",
+              "meaning": "小路",
+              "vocabularyAudioTrack": "19. P13 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "bench",
+              "meaning": "长椅",
+              "vocabularyAudioTrack": "19. P13 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            }
+          ],
+          "vocabularyAudioEvidence": {
+            "track": "19. P13 Look and learn.mp3",
+            "sha256": "8551093bbd8b7849c07e241d72a0af79caad6ca55ddcd2d5f620ad85f24eb380"
+          },
+          "lessons": [],
+          "displayLabel": "Module 1 / Unit 3 · Look at the shadow",
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "Our Shadow Notes",
+            "body": "We stand on the same path at different times on a sunny day.\nIn the morning, my shadow stretches across the grass.\nLater, its length and direction change as the Sun moves across the sky.\nWe draw the shadows and write the time beside each picture.",
+            "translation": [
+              "晴天里，我们在不同时刻站在同一条小路上。",
+              "早晨，我的影子伸向草地。",
+              "后来，太阳在天空中的位置变化，影子的长短和方向也变了。",
+              "我们画下影子，在每幅图旁写上时间。"
+            ],
+            "question": "Why do the children write the time beside each picture?",
+            "questionHint": "孩子们为什么在图旁标注时间？",
+            "answer": "To compare the shadows at different times."
+          }
+        },
+        {
+          "id": "u4",
+          "number": 4,
+          "title": "Sports",
+          "sourcePrintPage": 17,
+          "sourcePageBasis": "official_audio_announcement",
+          "sourceAudioTrack": "25. Module 2 Unit 1.mp3",
+          "words": [
+            {
+              "text": "play football",
+              "meaning": "踢足球",
+              "vocabularyAudioTrack": "27. P18 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "play table tennis",
+              "meaning": "打乒乓球",
+              "vocabularyAudioTrack": "27. P18 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "play volleyball",
+              "meaning": "打排球",
+              "vocabularyAudioTrack": "27. P18 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "play badminton",
+              "meaning": "打羽毛球",
+              "vocabularyAudioTrack": "27. P18 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "play basketball",
+              "meaning": "打篮球",
+              "vocabularyAudioTrack": "27. P18 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            }
+          ],
+          "vocabularyAudioEvidence": {
+            "track": "27. P18 Look and learn.mp3",
+            "sha256": "785492e2749eec815ef5d436f828b541fe4dc0830a5b676db6d5417cb048a345"
+          },
+          "lessons": [],
+          "displayLabel": "Module 2 / Unit 1 · Sports",
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "A Fair Game",
+            "body": "Our class plays basketball after a short warm-up.\nSome children are new to the game, so we explain the rules first.\nWe take turns passing the ball and encourage each other.\nWinning is exciting, but playing safely and fairly matters too.",
+            "translation": [
+              "做了简短热身后，我们班开始打篮球。",
+              "有些孩子刚接触这项运动，所以我们先解释规则。",
+              "我们轮流传球，相互鼓励。",
+              "获胜令人兴奋，但安全、公平地比赛也很重要。"
+            ],
+            "question": "Why do the children explain the rules first?",
+            "questionHint": "孩子们为什么先解释规则？",
+            "answer": "Because some children are new to the game."
+          }
+        },
+        {
+          "id": "u5",
+          "number": 5,
+          "title": "Cute animals",
+          "sourcePrintPage": 22,
+          "sourcePageBasis": "official_audio_announcement",
+          "sourceAudioTrack": "33. Module 2 Unit 2.mp3",
+          "words": [
+            {
+              "text": "bone",
+              "meaning": "骨头",
+              "vocabularyAudioTrack": "35. P23 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "cat food",
+              "meaning": "猫粮",
+              "vocabularyAudioTrack": "35. P23 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "fish",
+              "meaning": "鱼",
+              "vocabularyAudioTrack": "35. P23 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "dog food",
+              "meaning": "狗粮",
+              "vocabularyAudioTrack": "35. P23 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "parrot",
+              "meaning": "鹦鹉",
+              "vocabularyAudioTrack": "35. P23 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "tortoise",
+              "meaning": "陆龟",
+              "vocabularyAudioTrack": "35. P23 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            }
+          ],
+          "vocabularyAudioEvidence": {
+            "track": "35. P23 Look and learn.mp3",
+            "sha256": "2d37ce9772a5a8e8d12b087808b13548dc79cf31f198f159936425e56380db89"
+          },
+          "lessons": [],
+          "displayLabel": "Module 2 / Unit 2 · Cute animals",
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "Caring for a Pet",
+            "body": "My neighbour has a parrot and asks us to speak softly near it.\nWe watch it from a short distance and do not put fingers into its cage.\nIts owner gives it suitable food and fresh water.\nI learn that liking an animal also means respecting its needs.",
+            "translation": [
+              "邻居养了一只鹦鹉，请我们在它附近轻声说话。",
+              "我们隔着一小段距离观察它，不把手指伸进笼子。",
+              "主人给它合适的食物和新鲜的水。",
+              "我懂得了，喜欢动物也意味着尊重它的需要。"
+            ],
+            "question": "What do the children learn about caring for animals?",
+            "questionHint": "孩子们学到怎样关爱动物？",
+            "answer": "They should respect the animals' needs."
+          }
+        },
+        {
+          "id": "u6",
+          "number": 6,
+          "title": "Home life",
+          "sourcePrintPage": 27,
+          "sourcePageBasis": "official_audio_announcement",
+          "sourceAudioTrack": "40. Module 2 Unit 3.mp3",
+          "words": [
+            {
+              "text": "bedroom",
+              "meaning": "卧室",
+              "vocabularyAudioTrack": "42. P28 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "living room",
+              "meaning": "客厅",
+              "vocabularyAudioTrack": "42. P28 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "bathroom",
+              "meaning": "浴室；卫生间",
+              "vocabularyAudioTrack": "42. P28 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "kitchen",
+              "meaning": "厨房",
+              "vocabularyAudioTrack": "42. P28 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            }
+          ],
+          "vocabularyAudioEvidence": {
+            "track": "42. P28 Look and learn.mp3",
+            "sha256": "2c8dcbd0bb42b97b5c5178620df79055b0dc5e0396249e98c432e030a7d781d0"
+          },
+          "lessons": [],
+          "displayLabel": "Module 2 / Unit 3 · Home life",
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "Helping at Home",
+            "body": "On Saturday morning, my family shares the housework.\nDad cleans the kitchen while Mum puts books away in the living room.\nI fold my clothes and carry them to my bedroom.\nWhen we finish, we sit together and enjoy our tidy home.",
+            "translation": [
+              "星期六早上，一家人分担家务。",
+              "爸爸打扫厨房，妈妈整理客厅里的书。",
+              "我叠好自己的衣服，把它们拿到卧室。",
+              "完成后，我们坐在一起，享受整洁的家。"
+            ],
+            "question": "Which job does the child do?",
+            "questionHint": "孩子做了哪项家务？",
+            "answer": "The child folds clothes and carries them to the bedroom."
+          }
+        },
+        {
+          "id": "u7",
+          "number": 7,
+          "title": "Sounds",
+          "sourcePrintPage": 32,
+          "sourcePageBasis": "official_audio_announcement",
+          "sourceAudioTrack": "47. Module 3 Unit 1.mp3",
+          "words": [
+            {
+              "text": "quiet",
+              "meaning": "安静的",
+              "vocabularyAudioTrack": "49. P33 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "loud",
+              "meaning": "响亮的",
+              "vocabularyAudioTrack": "49. P33 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "bell",
+              "meaning": "铃",
+              "vocabularyAudioTrack": "49. P33 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "television",
+              "meaning": "电视",
+              "vocabularyAudioTrack": "49. P33 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "TV",
+              "meaning": "电视",
+              "vocabularyAudioTrack": "49. P33 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            }
+          ],
+          "vocabularyAudioEvidence": {
+            "track": "49. P33 Look and learn.mp3",
+            "sha256": "004d5ac2f0720d7c9e7d21470f2b3d1e89429c47fc57f44cf7d631753dc9c5b0"
+          },
+          "lessons": [],
+          "displayLabel": "Module 3 / Unit 1 · Sounds",
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "A Quiet Afternoon",
+            "body": "My little brother is sleeping in the bedroom.\nThe television in the living room is too loud, so I turn it down.\nWhen the doorbell rings, I open the door and speak quietly.\nI want to enjoy my afternoon without waking him.",
+            "translation": [
+              "弟弟正在卧室睡觉。",
+              "客厅的电视声音太大，我把音量调低了。",
+              "门铃响起时，我开门并轻声说话。",
+              "我希望度过愉快的下午，又不把他吵醒。"
+            ],
+            "question": "Why does the writer turn down the television?",
+            "questionHint": "作者为什么调低电视音量？",
+            "answer": "Because the little brother is sleeping."
+          }
+        },
+        {
+          "id": "u8",
+          "number": 8,
+          "title": "Time",
+          "sourcePrintPage": 37,
+          "sourcePageBasis": "official_audio_announcement",
+          "sourceAudioTrack": "55. Module 3 Unit 2.mp3",
+          "words": [
+            {
+              "text": "seven o'clock",
+              "meaning": "七点整",
+              "vocabularyAudioTrack": "57. P38 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "a quarter past seven",
+              "meaning": "七点一刻",
+              "vocabularyAudioTrack": "57. P38 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "half past seven",
+              "meaning": "七点半",
+              "vocabularyAudioTrack": "57. P38 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "a quarter to eight",
+              "meaning": "七点四十五分",
+              "vocabularyAudioTrack": "57. P38 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "get up",
+              "meaning": "起床",
+              "vocabularyAudioTrack": "57. P38 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "brush my teeth",
+              "meaning": "刷牙",
+              "vocabularyAudioTrack": "57. P38 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "wash my face",
+              "meaning": "洗脸",
+              "vocabularyAudioTrack": "57. P38 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "have breakfast",
+              "meaning": "吃早餐",
+              "vocabularyAudioTrack": "57. P38 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            }
+          ],
+          "vocabularyAudioEvidence": {
+            "track": "57. P38 Look and learn.mp3",
+            "sha256": "098637c19190f32e7bd4664ec0422a72fb79fc0e1e7c5dfcf2b7a50495fd4da4"
+          },
+          "lessons": [],
+          "displayLabel": "Module 3 / Unit 2 · Time",
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "Ready on Time",
+            "body": "I get up at seven o'clock and brush my teeth.\nAt a quarter past seven, I sit down to have breakfast.\nI check my schoolbag at half past seven.\nBy a quarter to eight, I am ready to leave with Dad.",
+            "translation": [
+              "我七点起床并刷牙。",
+              "七点一刻，我坐下来吃早餐。",
+              "七点半，我检查书包。",
+              "到七点四十五分，我准备好和爸爸一起出门。"
+            ],
+            "question": "What does the child do at half past seven?",
+            "questionHint": "孩子七点半做什么？",
+            "answer": "The child checks the schoolbag."
+          }
+        },
+        {
+          "id": "u9",
+          "number": 9,
+          "title": "Days of the week",
+          "sourcePrintPage": 42,
+          "sourcePageBasis": "official_audio_announcement",
+          "sourceAudioTrack": "63. Module 3 Unit 3.mp3",
+          "words": [
+            {
+              "text": "always",
+              "meaning": "总是",
+              "vocabularyAudioTrack": "65. P42 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "usually",
+              "meaning": "通常",
+              "vocabularyAudioTrack": "65. P42 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "often",
+              "meaning": "经常",
+              "vocabularyAudioTrack": "65. P42 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "sometimes",
+              "meaning": "有时",
+              "vocabularyAudioTrack": "65. P42 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "never",
+              "meaning": "从不",
+              "vocabularyAudioTrack": "65. P42 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            }
+          ],
+          "vocabularyAudioEvidence": {
+            "track": "65. P42 Look and learn.mp3",
+            "sha256": "9374940613d560f10897d3fe66445a623519cc450d3d8fe96d2661ef298ba1c8"
+          },
+          "lessons": [],
+          "displayLabel": "Module 3 / Unit 3 · Days of the week",
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "A Week of Reading",
+            "body": "I usually read for a few minutes after dinner on weekdays.\nOn Wednesday, I sometimes share a funny story with Grandma.\nAt weekends, we often visit the library and choose a new book.\nI never leave a borrowed book outside in the rain.",
+            "translation": [
+              "工作日里，我通常在晚饭后读几分钟书。",
+              "星期三，我有时会和奶奶分享一个有趣的故事。",
+              "周末，我们经常去图书馆选一本新书。",
+              "我从不把借来的书放在外面淋雨。"
+            ],
+            "question": "What does the family often do at weekends?",
+            "questionHint": "一家人周末经常做什么？",
+            "answer": "They visit the library and choose a new book."
+          }
+        },
+        {
+          "id": "u10",
+          "number": 10,
+          "title": "A music class",
+          "sourcePrintPage": 47,
+          "sourcePageBasis": "official_audio_announcement",
+          "sourceAudioTrack": "71.Module 4 Unit 1.mp3",
+          "words": [
+            {
+              "text": "piano",
+              "meaning": "钢琴",
+              "vocabularyAudioTrack": "73. P48 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "violin",
+              "meaning": "小提琴",
+              "vocabularyAudioTrack": "73. P48 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "triangle",
+              "meaning": "三角铁",
+              "vocabularyAudioTrack": "73. P48 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。",
+              "additionalSense": true
+            },
+            {
+              "text": "drum",
+              "meaning": "鼓",
+              "vocabularyAudioTrack": "73. P48 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            }
+          ],
+          "vocabularyAudioEvidence": {
+            "track": "73. P48 Look and learn.mp3",
+            "sha256": "d36a054e6d56a718abf8621af63341e25d23d00d485a18cd385de1147cc13e2d"
+          },
+          "lessons": [],
+          "displayLabel": "Module 4 / Unit 1 · A music class",
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "Listening to the Rhythm",
+            "body": "In music class, our teacher plays a short tune on the piano.\nOne group keeps the beat with a drum while another uses a triangle.\nWe listen carefully so that we can start and stop together.\nAfter practising, the sounds fit together much better.",
+            "translation": [
+              "音乐课上，老师用钢琴弹奏一小段旋律。",
+              "一组用鼓打节拍，另一组使用三角铁。",
+              "我们仔细倾听，以便一起开始和停止。",
+              "练习后，各种声音配合得好多了。"
+            ],
+            "question": "Why do the children listen carefully?",
+            "questionHint": "孩子们为什么仔细倾听？",
+            "answer": "So that they can start and stop together."
+          }
+        },
+        {
+          "id": "u11",
+          "number": 11,
+          "title": "Festivals in China",
+          "sourcePrintPage": 52,
+          "sourcePageBasis": "official_audio_announcement",
+          "sourceAudioTrack": "78. Module 4 Unit 2.mp3",
+          "words": [
+            {
+              "text": "the Spring Festival",
+              "meaning": "春节",
+              "vocabularyAudioTrack": "80. P52 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "the Dragon Boat Festival",
+              "meaning": "端午节",
+              "vocabularyAudioTrack": "80. P52 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "the Mid-Autumn Festival",
+              "meaning": "中秋节",
+              "vocabularyAudioTrack": "80. P52 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "the Double Ninth Festival",
+              "meaning": "重阳节",
+              "vocabularyAudioTrack": "80. P52 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            }
+          ],
+          "vocabularyAudioEvidence": {
+            "track": "80. P52 Look and learn.mp3",
+            "sha256": "bc09d5f8e7b8b24e00cf7b0d5c9ba4e924d935dea0c622f26456a287898597b9"
+          },
+          "lessons": [],
+          "displayLabel": "Module 4 / Unit 2 · Festivals in China",
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "A Festival Calendar",
+            "body": "Our family makes a calendar of traditional Chinese festivals.\nWe draw a dragon boat for the Dragon Boat Festival.\nBeside the Mid-Autumn Festival, I draw a round moon and write a family memory.\nGrandma explains that different places may celebrate in different ways.",
+            "translation": [
+              "一家人制作了一张中国传统节日日历。",
+              "我们为端午节画了一条龙舟。",
+              "在中秋节旁，我画了圆月并写下一段家庭回忆。",
+              "奶奶解释说，不同地方的庆祝方式可能不同。"
+            ],
+            "question": "What does the child add beside the Mid-Autumn Festival?",
+            "questionHint": "孩子在中秋节旁添加了什么？",
+            "answer": "A round moon and a family memory."
+          }
+        },
+        {
+          "id": "u12",
+          "number": 12,
+          "title": "Story time",
+          "sourcePrintPage": 57,
+          "sourcePageBasis": "official_audio_announcement",
+          "sourceAudioTrack": "84. Module 4 Unit 3.mp3",
+          "words": [
+            {
+              "text": "duckling",
+              "meaning": "小鸭",
+              "vocabularyAudioTrack": "85. P57 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "swan",
+              "meaning": "天鹅",
+              "vocabularyAudioTrack": "85. P57 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            },
+            {
+              "text": "nest",
+              "meaning": "鸟巢",
+              "vocabularyAudioTrack": "85. P57 Look and learn.mp3",
+              "verificationNote": "依据官方音频识别词项，拼写与词形作学习用规范化；纸本词表及学校印次待确认。"
+            }
+          ],
+          "vocabularyAudioEvidence": {
+            "track": "85. P57 Look and learn.mp3",
+            "sha256": "8aed5f208af68a819f50ade523852192eb19a505acfa73f87deda0d03a753261"
+          },
+          "lessons": [],
+          "displayLabel": "Module 4 / Unit 3 · Story time",
+          "practice": {
+            "origin": "original",
+            "area": "reading",
+            "title": "The Small Duckling",
+            "body": "In a story, a small duckling finds an empty nest near a pond.\nIt wants to make the nest comfortable before the rain comes.\nA swan brings a few dry leaves and helps the duckling choose a safer place.\nThe duckling thanks its new friend and promises to help others too.",
+            "translation": [
+              "在一个故事里，一只小鸭在池塘边发现了一个空巢。",
+              "它想赶在下雨前把巢布置得舒服些。",
+              "一只天鹅带来几片干叶子，帮助小鸭选择更安全的位置。",
+              "小鸭感谢新朋友，答应也去帮助别人。"
+            ],
+            "question": "How does the swan help the duckling?",
+            "questionHint": "天鹅怎样帮助小鸭？",
+            "answer": "It brings dry leaves and helps choose a safer place."
+          }
+        }
+      ]
+    }
+  ],
+  "poems": [
+    {
+      "id": "sh54-mujiangyin",
+      "title": "暮江吟",
+      "author": "白居易",
+      "original": "一道残阳铺水中，半江瑟瑟半江红。\n可怜九月初三夜，露似真珠月似弓。",
+      "sourceUrl": "https://book.pep.com.cn/1211001401262/",
+      "reviewStatus": "五四制官方样本电子页 40（印刷页 34）古代原作及题名已核对；仅录公版原文，未录现代注释；学校印次待确认。"
+    },
+    {
+      "id": "sh54-xuemei",
+      "title": "雪梅",
+      "author": "卢钺",
+      "original": "梅雪争春未肯降，骚人阁笔费评章。\n梅须逊雪三分白，雪却输梅一段香。",
+      "sourceUrl": "https://book.pep.com.cn/1211001401262/",
+      "reviewStatus": "五四制官方样本电子页 41（印刷页 35）古代原作及题名已核对；仅录公版原文，未录现代注释；学校印次待确认。"
+    },
+    {
+      "id": "sh54-jingwei",
+      "title": "精卫填海",
+      "author": "《山海经·北山经》",
+      "original": "炎帝之少女，名曰女娃。女娃游于东海，溺而不返，故为精卫，常衔西山之木石，以堙于东海。",
+      "sourceUrl": "https://book.pep.com.cn/1211001401262/",
+      "reviewStatus": "五四制官方样本电子页 56（印刷页 50）古代原作及题名已核对；仅录公版原文，未录现代注释；学校印次待确认。"
+    },
+    {
+      "id": "sh54-wangrong",
+      "title": "王戎不取道旁李",
+      "author": "刘义庆",
+      "original": "王戎七岁，尝与诸小儿游。看道边李树多子折枝，诸儿竞走取之，唯戎不动。人问之，答曰：“树在道边而多子，此必苦李。”取之，信然。",
+      "sourceUrl": "https://book.pep.com.cn/1211001401262/",
+      "reviewStatus": "五四制官方样本电子页 108（印刷页 102）古代原作及题名已核对；仅录公版原文，未录现代注释；学校印次待确认。"
+    },
+    {
+      "id": "sh54-xinshi",
+      "title": "宿新市徐公店",
+      "author": "杨万里",
+      "original": "篱落疏疏一径深，树头新绿未成阴。\n儿童急走追黄蝶，飞入菜花无处寻。",
+      "sourceUrl": "https://book.pep.com.cn/1211001402192/",
+      "reviewStatus": "五四制官方样本电子页 8（印刷页 2）古代原作及题名已核对；仅录公版原文，未录现代注释；学校印次待确认。"
+    },
+    {
+      "id": "sh54-qingpingle-cunju",
+      "title": "清平乐·村居",
+      "author": "辛弃疾",
+      "original": "茅檐低小，溪上青青草。醉里吴音相媚好，白发谁家翁媪？\n大儿锄豆溪东，中儿正织鸡笼。最喜小儿亡赖，溪头卧剥莲蓬。",
+      "sourceUrl": "https://book.pep.com.cn/1211001402192/",
+      "reviewStatus": "五四制官方样本电子页 9（印刷页 3）古代原作及题名已核对；仅录公版原文，未录现代注释；学校印次待确认。"
+    },
+    {
+      "id": "sh54-nangying",
+      "title": "囊萤夜读",
+      "author": "房玄龄等",
+      "original": "胤恭勤不倦，博学多通。家贫不常得油，夏月则练囊盛数十萤火以照书，以夜继日焉。",
+      "sourceUrl": "https://book.pep.com.cn/1211001402192/",
+      "reviewStatus": "五四制官方样本电子页 82（印刷页 76）古代原作及题名已核对；仅录公版原文，未录现代注释；学校印次待确认。"
+    },
+    {
+      "id": "sh54-tiechu",
+      "title": "铁杵成针",
+      "author": "祝穆",
+      "original": "磨针溪，在象耳山下。世传李太白读书山中，未成，弃去。过是溪，逢老媪方磨铁杵。问之，曰：“欲作针。”太白感其意，还卒业。",
+      "sourceUrl": "https://book.pep.com.cn/1211001402192/",
+      "reviewStatus": "五四制官方样本电子页 82（印刷页 76）古代原作及题名已核对；仅录公版原文，未录现代注释；学校印次待确认。"
+    }
+  ]
+}
