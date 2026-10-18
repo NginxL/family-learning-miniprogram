@@ -44,13 +44,14 @@ function augment(items) {
     if (entry.pitfalls.length) sections.push({ title: '容易混淆', body: entry.pitfalls.join('\n') });
     const form = entry.forms.find(form => form.label === '动词过去式') || entry.forms[0];
     const pattern = entry.patterns[0];
-    const exercises = [form ? { question: `回忆 ${entry.lemma} 的${form.label}。`, answer: `${form.value}${entry.pitfalls.length ? `。提示：${entry.pitfalls[0]}` : ''}` }
+    const formWord = entry.formMeaning && form?.label.startsWith('动词') ? `${entry.lemma}（${entry.formMeaning}）` : entry.lemma;
+    const exercises = [form ? { question: `回忆 ${formWord} 的${form.label}。`, answer: `${form.value}${entry.pitfalls.length ? `。提示：${entry.pitfalls[0]}` : ''}` }
       : { question: `用自己的话解释 ${pattern?.pattern || entry.lemma} 的用法，并造一个句子。`,
         answer: pattern ? `参考：${pattern.meaning}。${pattern.note}\n自编例句：${pattern.example}\n${pattern.translation}` : entry.families.map(f => `${f.words}\n${f.note}`).join('\n') }];
     if (pattern && form) exercises.push({ question: `说明 ${pattern.pattern} 的含义，并用它造句。`,
       answer: `参考：${pattern.meaning}。${pattern.note}\n自编例句：${pattern.example}\n${pattern.translation}` });
     attach(entry.contentId, 'word', { title: '词形、短语与词族',
-      notice: '常用用法与自编例句。下方教材归属只针对原词条，不代表这些拓展用法都出自该册；不是完整中考词汇清单。',
+      notice: '常用用法与自编例句。词卡的教材归属只针对原词条，不代表这些拓展用法都出自该册；不是完整中考词汇清单。',
       sections, exercises,
       sources: entry.sourceIds.map(id => { if (!english.sources[id]) throw Error(`Unknown reference: ${id}`); return { ...english.sources[id] }; }),
       searchTerms: [entry.lemma, ...entry.forms.map(form => form.value), ...entry.patterns.map(pattern => pattern.pattern), ...entry.families.map(family => family.words)]

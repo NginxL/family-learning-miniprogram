@@ -3214,7 +3214,8 @@
       "sourceIds": [
         "ecdict",
         "verbs"
-      ]
+      ],
+      "formMeaning": "建立"
     },
     {
       "contentId": "word-freeze",
@@ -4364,7 +4365,8 @@
       "sourceIds": [
         "ecdict",
         "verbs"
-      ]
+      ],
+      "formMeaning": "放置、产卵"
     },
     {
       "contentId": "word-lead",
@@ -4560,7 +4562,8 @@
       "sourceIds": [
         "ecdict",
         "verbs"
-      ]
+      ],
+      "formMeaning": "躺、位于"
     },
     {
       "contentId": "word-lift",
@@ -4629,7 +4632,8 @@
         "ecdict",
         "verbs",
         "compare"
-      ]
+      ],
+      "formMeaning": "点燃"
     },
     {
       "contentId": "word-like",
@@ -15370,7 +15374,8 @@
       "sourceIds": [
         "ecdict",
         "hang"
-      ]
+      ],
+      "formMeaning": "悬挂"
     },
     {
       "contentId": "sh54-word-lean",
@@ -15430,7 +15435,8 @@
       ],
       "sourceIds": [
         "ecdict"
-      ]
+      ],
+      "formMeaning": "弄错、误认"
     },
     {
       "contentId": "sh54-word-sink",
@@ -15574,7 +15580,8 @@
       ],
       "sourceIds": [
         "ecdict"
-      ]
+      ],
+      "formMeaning": "撕破"
     },
     {
       "contentId": "word-people",

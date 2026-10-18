@@ -82,6 +82,8 @@ test('English guides are unique, sourced, usable and distinguish irregular forms
   assert.equal(form('deal', '动词过去分词'), 'dealt');
   assert.match(word('read').pitfalls.join(' '), /riːd.*red/);
   assert.match(word('lie').pitfalls.join(' '), /lied/);
+  assert.match(learning.catalogById.get('word-lie').studyNotes.exercises[0].question, /lie（躺、位于）/);
+  assert.match(learning.catalogById.get('word-found').studyNotes.exercises[0].question, /found（建立）/);
   assert.match(word('practice').patterns[0].note, /英式.*practise/);
 });
 
