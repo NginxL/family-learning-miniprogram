@@ -1,0 +1,13 @@
+<template name="contentSchedule">
+<view wx:if="{{assignTarget}}" class="schedule-mask" catchtap="closeAssign" catchtouchmove="keepSheet">
+  <view class="schedule-sheet" catchtap="keepSheet">
+    <view class="rule-title">安排学习日期</view>
+    <view class="subtitle">{{assignTarget.childName}} · {{assignTarget.title}}</view>
+    <view class="schedule-shortcuts"><button class="{{assignDate === today ? 'selected' : ''}}" data-date="{{today}}" bindtap="chooseAssignDate" disabled="{{busy}}">今日</button><button class="{{assignDate === tomorrow ? 'selected' : ''}}" data-date="{{tomorrow}}" bindtap="chooseAssignDate" disabled="{{busy}}">明日</button></view>
+    <label class="label">也可以选择未来日期</label><picker mode="date" value="{{assignDate}}" start="{{today}}" end="{{maxPlanDate}}" bindchange="changeAssignDate" disabled="{{busy}}"><view class="picker">{{assignDate}} ▾</view></picker>
+    <button class="primary" bindtap="confirmAssign" loading="{{busy}}" disabled="{{busy}}">加入 {{assignDate === today ? '今日' : assignDate === tomorrow ? '明日' : assignDate}}</button>
+    <button class="quiet schedule-cancel" bindtap="closeAssign" disabled="{{busy}}">取消</button>
+  </view>
+</view>
+
+</template>

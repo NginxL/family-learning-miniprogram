@@ -6,6 +6,8 @@ import { pinyinFor, defaultPinyin, type PinyinText } from '../../lib/pinyin';
 import { studyNotesView } from '../../lib/study-notes-view';
 import { plannedTaskEdit, type PlannedTaskEditData, type PlannedTaskEditMethods } from '../../lib/planned-task-edit';
 import { shiftDate } from '../../lib/sync-engine';
+import { withContentSources } from '../../lib/content-presentation';
+import { gradeLabels } from '../../lib/learning/learning';
 import type { HomeworkScope, Task } from '../../../shared/models';
 import type { AppMode, LearningApp } from '../../lib/client-models';
 import type { Decorated, PageDefinition, StudyNotesData, StudyNotesMethods } from '../../lib/page-types';
@@ -18,7 +20,8 @@ const PAGE_SIZE = 20;
 
 export interface StudyData extends StudyNotesData, PlannedTaskEditData {
   group: Omit<Group, 'items'> | null;
-  items: Array<Decorated<Task> & { pinyin: PinyinText | null }>;
+  items: Array<ReturnType<typeof withContentSources<Decorated<Task>>> & { pinyin: PinyinText | null }>;
+  gradeLabels: string[];
   showPinyin: boolean;
   hasPinyin: boolean;
   visibleCount: number;
@@ -68,7 +71,7 @@ const notes = studyNotesView();
 const definition: PageDefinition<StudyData, StudyMethods, StudyRuntime> = {
   ...notes,
   ...plannedTaskEdit(),
-  data: { ...notes.data, group: null, items: [], visibleCount: PAGE_SIZE, childName: '', date: '', mode: 'demo', busy: false, isChild: false,
+  data: { ...notes.data, group: null, items: [], gradeLabels, visibleCount: PAGE_SIZE, childName: '', date: '', mode: 'demo', busy: false, isChild: false,
     loading: true, pageError: '', emptyMessage: '', syncLabel: '', syncError: '', notice: '', showPinyin: false, hasPinyin: false,
     childId: '', today: '', maxPlanDate: '', editTarget: null, editDate: '', planning: false },
   onLoad(query) {
@@ -123,7 +126,7 @@ const definition: PageDefinition<StudyData, StudyMethods, StudyRuntime> = {
     if (group?.pendingCount) syncLabel += ` · ${group.pendingCount} 项待同步`;
     let summary: StudyData['group'] = null;
     if (group) { const { items, ...info } = group; summary = info; }
-    const items = (group?.items || []).slice(0, this.data.visibleCount).map((item) => ({ ...item, pinyin: pinyinFor(item) }));
+    const items = (group?.items || []).slice(0, this.data.visibleCount).map((item) => ({ ...withContentSources(item), pinyin: pinyinFor(item) }));
     this.setData({ group: summary, items, hasPinyin: items.some((item) => item.pinyin), showPinyin: this.pinyinChoice ?? defaultPinyin(child?.schoolGrade),
       childId: child?.id || '', today: snapshot.today,
       maxPlanDate: shiftDate(snapshot.today, 365), planning,

@@ -80,3 +80,29 @@ button[disabled] { opacity:.5; }
 .notes-toggle { min-height:88rpx; text-align:left; }
 .notes-body { overflow-wrap:anywhere; }
 button.notes-source { padding:16rpx 12rpx; text-align:left; }
+
+/* Learning detail content and source disclosure */
+.study-item .task-title { font-size:36rpx; font-weight:600; overflow-wrap:anywhere; }
+.study-item .body { font-size:32rpx; line-height:2; overflow-wrap:anywhere; }
+.study-note { background:#f5f6f2; border-radius:16rpx; padding:18rpx 22rpx; margin:18rpx 0; font-size:26rpx; white-space:pre-wrap; }
+.study-source { border-top:1rpx solid #edf0e9; padding-top:18rpx; white-space:pre-wrap; overflow-wrap:anywhere; }
+.content-sources { border-top:1rpx solid #edf0e9; margin-top:28rpx; padding-top:8rpx; }
+.sources-toggle { width:100%; min-height:44px; text-align:left; }
+.sources-body { white-space:pre-wrap; overflow-wrap:anywhere; padding-bottom:12rpx; }
+.source-book { border-top:1rpx solid #edf0e9; padding-top:20rpx; margin-top:20rpx; }
+.recitation-summary { color:#45644b; }
+
+/* Planned task editing sheet */
+.edit-mask { position:fixed; inset:0; z-index:100; display:flex; align-items:center; justify-content:center; background:rgba(24,39,30,.38); padding:24rpx; }
+.edit-sheet { width:100%; max-width:680rpx; max-height:85vh; overflow-y:auto; border-radius:28rpx; padding:32rpx; background:#fff; }
+.edit-delete { color:#a53d32; margin-top:20rpx; }
+.edit-cancel { margin:24rpx auto 0; padding:12rpx 36rpx; }
+
+/* Shared content date scheduling */
+.schedule-mask { position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 100; display: flex; align-items: center; justify-content: center; background: rgba(24, 39, 30, .38); padding: 24rpx; }
+.schedule-sheet { width: 100%; max-width: 680rpx; max-height: 85vh; overflow-y: auto; border-radius: 28rpx; padding: 32rpx; background: #fff; }
+.schedule-shortcuts { display: flex; gap: 16rpx; margin-top: 28rpx; }
+.schedule-shortcuts button { flex: 1; background: #edf2eb; color: #315e43; }
+.schedule-shortcuts button.selected { background: #27654c; color: #fff; }
+.schedule-cancel { margin: 24rpx auto 0; padding: 12rpx 36rpx; }
+.schedule-sheet button, .schedule-sheet .picker { min-height:44px; }

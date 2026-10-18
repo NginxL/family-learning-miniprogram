@@ -1,3 +1,4 @@
+<import src="../../templates/content-schedule.wxml" />
 <view class="page">
   <view class="eyebrow">慢慢读 · 一点点积累</view><view class="title">知识库</view>
   <view class="subtitle">{{poemCount}} 篇 / 组古诗文 · {{wordCount}} 项英语词汇</view>
@@ -82,13 +83,4 @@
     <view class="muted plan-help">内置文字可离线查看；完整课本仍由官方平台提供阅读，当前没有缓存整册课本。课本正文、录音、现代注释的使用范围与源代码开源许可分别管理。</view>
   </block>
 </view>
-<view wx:if="{{assignTarget}}" class="schedule-mask" catchtap="closeAssign" catchtouchmove="keepSheet">
-  <view class="schedule-sheet" catchtap="keepSheet">
-    <view class="rule-title">安排学习日期</view>
-    <view class="subtitle">{{assignTarget.childName}} · {{assignTarget.title}}</view>
-    <view class="schedule-shortcuts"><button class="{{assignDate === today ? 'selected' : ''}}" data-date="{{today}}" bindtap="chooseAssignDate" disabled="{{busy}}">今日</button><button class="{{assignDate === tomorrow ? 'selected' : ''}}" data-date="{{tomorrow}}" bindtap="chooseAssignDate" disabled="{{busy}}">明日</button></view>
-    <label class="label">也可以选择未来日期</label><picker mode="date" value="{{assignDate}}" start="{{today}}" end="{{maxPlanDate}}" bindchange="changeAssignDate" disabled="{{busy}}"><view class="picker">{{assignDate}} ▾</view></picker>
-    <button class="primary" bindtap="confirmAssign" loading="{{busy}}" disabled="{{busy}}">加入 {{assignDate === today ? '今日' : assignDate === tomorrow ? '明日' : assignDate}}</button>
-    <button class="quiet schedule-cancel" bindtap="closeAssign" disabled="{{busy}}">取消</button>
-  </view>
-</view>
+<template is="contentSchedule" data="{{assignTarget, assignDate, today, tomorrow, maxPlanDate, busy}}" />

@@ -1,5 +1,3 @@
-@import "../../styles/study-content.wxss";
-@import "../../styles/edit-sheet.wxss";
 .study-page { padding-bottom:240rpx; padding-bottom:calc(240rpx + env(safe-area-inset-bottom)); }
 .study-page.planning-page { padding-bottom:64rpx; }
 .study-summary { margin-top:20rpx; }

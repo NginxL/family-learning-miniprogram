@@ -5,7 +5,11 @@ exports.studyNotesView = studyNotesView;
 // Local disclosure state only. Opening a guide or its answers never records completion.
 function studyNotesView() {
     return {
-        data: { notesOpenId: '', notesAnswersId: '' },
+        data: { notesOpenId: '', notesAnswersId: '', sourcesOpenId: '' },
+        toggleContentSources(event) {
+            const id = event.currentTarget.dataset.id;
+            this.setData({ sourcesOpenId: this.data.sourcesOpenId === id ? '' : id });
+        },
         toggleStudyNotes(event) {
             const id = event.currentTarget.dataset.id;
             this.setData({ notesOpenId: this.data.notesOpenId === id ? '' : id, notesAnswersId: '' });

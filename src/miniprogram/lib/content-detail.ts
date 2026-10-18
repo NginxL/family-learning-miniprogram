@@ -1,5 +1,6 @@
 import { decorate } from './page';
 import { defaultPinyin } from './pinyin';
+import { openLearningPage } from './learning-navigation';
 import type { ContentInput, GradeMapping } from '../../shared/models';
 import type { Decorated } from './page-types';
 import type { LearningApp } from './client-models';
@@ -10,10 +11,11 @@ export type DetailItem = Decorated<ContentWithEvidence> & { title: string; detai
 export interface ContentPreview {
   source: ContentSource; item: DetailItem; childId: string; gradeLabel: string; status: string; contextLabel: string;
   showPinyin: boolean; userId: string | null; familyId: string; role: string; boundChild: string;
+  preferredDate?: string;
 }
 let opening = false;
 export function openContentDetail(source: ContentSource, item: ContentWithEvidence, childId: string,
-  labels: { gradeLabel?: string; status?: string; contextLabel?: string; showPinyin?: boolean } = {}): void {
+  labels: { gradeLabel?: string; status?: string; contextLabel?: string; showPinyin?: boolean; preferredDate?: string } = {}): void {
   if (opening) return;
   const { engine } = getApp<LearningApp>();
   const snapshot = engine.snapshot();
@@ -24,11 +26,10 @@ export function openContentDetail(source: ContentSource, item: ContentWithEviden
   const preview: ContentPreview = JSON.parse(JSON.stringify({ source,
     item: decorate({ ...item, title: item.title || '学习内容', detail: item.detail || '' }), childId,
     gradeLabel: labels.gradeLabel || '', status: labels.status || '', contextLabel: labels.contextLabel || '',
-    showPinyin: labels.showPinyin ?? defaultPinyin(child?.schoolGrade), userId: snapshot.userId,
+    showPinyin: labels.showPinyin ?? defaultPinyin(child?.schoolGrade), preferredDate: labels.preferredDate, userId: snapshot.userId,
     familyId: family?.id || '', role: family?.myRole || '', boundChild: family?.myChildId || '' }));
   opening = true;
-  wx.navigateTo({ url: `/pages/content/index?source=${source}&id=${encodeURIComponent(item.id)}`,
+  openLearningPage(`/pages/content/index?source=${source}&id=${encodeURIComponent(item.id)}`, {
     success(result) { result.eventChannel.emit('showContent', preview); },
-    fail() { wx.showToast({ title: '暂时无法打开，请重试', icon: 'none' }); },
     complete() { opening = false; } });
 }

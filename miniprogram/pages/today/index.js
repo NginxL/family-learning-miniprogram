@@ -4,6 +4,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const page_1 = require("../../lib/page");
 const task_groups_1 = require("../../lib/task-groups");
 const errors_1 = require("../../lib/errors");
+const learning_navigation_1 = require("../../lib/learning-navigation");
 const base = (0, page_1.common)();
 const definition = {
     ...base,
@@ -34,9 +35,9 @@ const definition = {
         const query = Object.entries({ familyId: family.id, childId: this.data.childId, date: this.data.date, kind: group.id })
             .map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
         this.openingGroup = true;
-        wx.navigateTo({ url: `/pages/study/index?${query}`,
-            fail: () => { wx.showToast({ title: '暂时无法打开，请重试', icon: 'none' }); },
-            complete: () => { this.openingGroup = false; } });
+        (0, learning_navigation_1.openLearningPage)(`/pages/study/index?${query}`, {
+            complete: () => { this.openingGroup = false; }
+        });
     },
     async toggleGroup(event) {
         const date = this.data.date;

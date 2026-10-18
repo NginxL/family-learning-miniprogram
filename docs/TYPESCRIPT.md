@@ -35,7 +35,11 @@ TypeScript 固定为 `6.0.2`，Node 类型固定到 Node 20，微信官方 API �
 
 学习列表通过页面 `usingComponents` 引用同一个 `learning-card`，统一标题、类型、状态、摘要与详情入口。卡片只发出 `open` 事件；具名 `actions` 插槽阻断点击冒泡，业务操作由原页面处理。新增组件需要登记构建产物；`scripts/check.js` 与原生加载测试核验组件文件和注册。
 
+共用学习正文、来源折叠和日期弹层的样式统一位于 `miniprogram/app.wxss`，页面样式只维护各自布局。工程配置关闭 `ignoreDevUnusedFiles`、`ignoreUploadUnusedFiles`；`scripts/configure.js` 同时更新已有私有配置的这两个开关。微信开发者工具过滤无依赖文件时曾遗漏 `pages/content/index.js` 并返回 `800059 file not found`，因此预览和上传使用完整主包，由包体检查控制 2 MiB 上限。
+
 今日与明日分组共用 `pages/study`；`view=plan` 允许预览一年内的未来任务，但完成和作业入口仍只允许当天或过去日期。改期、删除由 `lib/planned-task-edit.ts` 调用原 `editPlannedTask` 接口，保留版本检查与重试 ID。知识库、历史和手动内容共用 `pages/content`；`lib/content-detail.ts` 通过 EventChannel 传递临时展示快照，正文不放入 URL 或持久化队列。历史正文保持所选记录值，家庭、孩子或身份不匹配时清空私有详情。相关验证见 `tests/card-details.test.js`、`tests/planning-edits.test.js`。
+
+学习详情跳转由 `lib/learning-navigation.ts` 统一处理：等待渲染完成、阻止连续点击，对微信明确返回的路由繁忙错误重试一次；其余失败展示可复制的原始错误，附加路由仅保留页面路径。知识库列表与详情通过 `lib/content-schedule.ts` 和 `templates/content-schedule.wxml` 共用日期安排，提交前复核账号、家庭、孩子与家长权限，调用原 `assignContent` 接口去重。隐藏页面会关闭日期框，未完成的请求仍阻止重复提交。`lib/content-presentation.ts` 仅整理展示标签，核对说明和来源集中在 `templates/content-sources.wxml` 折叠区；旧版标识、原始正文和学习数据保持不变。
 
 `tsconfig.json` 的 `rootDirs` 只用于把云端和小程序的 `learning/*` 导入解析到共用 TS 源码；实际部署包中仍由构建脚本放置相应 JS 文件。构建读取 `miniprogram/app.json` 的页面清单，每个页面都须有对应 TS 源码。小程序知识数据继续生成 `.js` 模块，不依赖 Node 的 JSON 加载器。 `scripts/data-module.js`在构建时合并重复字符串与对象键布局，知识数据、教材来源及静态拼音使用同一编码。运行时同步构造独立的普通对象与数组，不使用`eval`或网络解码；源数据和云端JSON格式不变。`tests/data-module.test.js`核对客户端与源数据深度相等、对象独立性及特殊键，包体检查保留2 MiB上限。优化前四年级内容主包约1,998 KiB，采用新编码并加入五年级后约1,333 KiB（按`npm run check`统计）。
 

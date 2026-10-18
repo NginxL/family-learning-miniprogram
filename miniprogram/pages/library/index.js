@@ -37,13 +37,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const page_1 = require("../../lib/page");
 const learning = __importStar(require("../../lib/learning/learning"));
 const resources = require("../../lib/learning/resources");
-const sync_engine_1 = require("../../lib/sync-engine");
+const content_schedule_1 = require("../../lib/content-schedule");
+const content_presentation_1 = require("../../lib/content-presentation");
 const pinyin_1 = require("../../lib/pinyin");
 const errors_1 = require("../../lib/errors");
 const content_detail_1 = require("../../lib/content-detail");
 const base = (0, page_1.common)();
+const scheduling = (0, content_schedule_1.contentSchedule)();
 const definition = {
     ...base,
+    ...scheduling,
     data: { ...base.data, view: 'content', kinds: [{ id: '', label: '全部类型' }, ...learning.kinds.filter((kind) => kind.id !== 'math' && kind.id !== 'other')], kindIndex: 0,
         scopes: [{ id: 'all', label: '全部可用内容' }, { id: 'starter', label: '亲子入门' }], scope: 'all', scopeIndex: 0,
         query: '', items: [], total: 0, hasMore: false, bookId: '', bookTitle: '', resources,
@@ -87,7 +90,7 @@ const definition = {
     },
     onHide() { this.setData({ assignTarget: null }); base.onHide.call(this); },
     afterRender() {
-        var _a, _b, _c, _d;
+        var _a, _b, _c;
         const scope = JSON.stringify([(_a = this.data.family) === null || _a === void 0 ? void 0 : _a.id, this.data.childId]);
         if (this.learningScope !== scope) {
             this.learningScope = scope;
@@ -97,12 +100,10 @@ const definition = {
             if (this.active)
                 void this.loadLearningStatus();
         }
-        const target = this.data.assignTarget;
+        this.refreshAssignment();
         this.setData({ subjectOptions: this.data.subjectOptions.filter((subject) => subject.id !== 'math' && subject.id !== 'other'),
             showPinyin: ((_b = this.pinyinChoice) === null || _b === void 0 ? void 0 : _b.childId) === this.data.childId ? this.pinyinChoice.enabled : (0, pinyin_1.defaultPinyin)((_c = this.data.children.find((child) => child.id === this.data.childId)) === null || _c === void 0 ? void 0 : _c.schoolGrade),
-            ...(this.data.subjectFilter === 'math' || this.data.subjectFilter === 'other' ? { subjectFilter: 'all' } : {}),
-            tomorrow: (0, sync_engine_1.shiftDate)(this.data.today, 1), maxPlanDate: (0, sync_engine_1.shiftDate)(this.data.today, 365),
-            ...(target && (target.familyId !== ((_d = this.data.family) === null || _d === void 0 ? void 0 : _d.id) || target.childId !== this.data.childId || this.data.isChild) ? { assignTarget: null } : {}) });
+            ...(this.data.subjectFilter === 'math' || this.data.subjectFilter === 'other' ? { subjectFilter: 'all' } : {}) });
         this.updateItems();
     },
     afterSync() { return this.loadLearningStatus(); },
@@ -173,7 +174,7 @@ const definition = {
                     assigned: today.some((task) => learning.contentId(task) === item.id),
                     learnedLabel: ((_a = this.learningIndex) === null || _a === void 0 ? void 0 : _a.has(item.id)) ? (this.learningIndex.get(item.id).mastered ? '已掌握' : '已学过') : '',
                     lastLearned: ((_c = (_b = this.learningIndex) === null || _b === void 0 ? void 0 : _b.get(item.id)) === null || _c === void 0 ? void 0 : _c.lastLearned) || '', learnedCount: ((_e = (_d = this.learningIndex) === null || _d === void 0 ? void 0 : _d.get(item.id)) === null || _e === void 0 ? void 0 : _e.learnedCount) || 0,
-                    gradeLabel: learning.knowledgeGradeLabel(item),
+                    gradeLabel: (0, content_presentation_1.learningGradeLabel)(item),
                     preview: item.kind === 'poetry' ? (0, page_1.decorate)(item).poetryByline : item.detail.split('\n')[1] || '' });
             }) });
     },
@@ -226,7 +227,7 @@ const definition = {
             return;
         const sameFamily = ((_a = this.engine.snapshot().family) === null || _a === void 0 ? void 0 : _a.id) === ((_b = this.data.family) === null || _b === void 0 ? void 0 : _b.id);
         (0, content_detail_1.openContentDetail)('library', item, this.data.childId, { gradeLabel: item.gradeLabel, status: sameFamily ? item.learnedLabel : '',
-            contextLabel: sameFamily && item.lastLearned ? `最近学习 ${item.lastLearned} · 已学 ${item.learnedCount} 天` : '', showPinyin: this.data.showPinyin });
+            contextLabel: sameFamily && item.lastLearned ? `最近学习 ${item.lastLearned} · 已学 ${item.learnedCount} 天` : '', showPinyin: this.data.showPinyin, preferredDate: this.preferredDate });
     },
     toggleCoverage() { this.setData({ coverageOpen: !this.data.coverageOpen }); },
     toggleFilters() { this.setData({ filtersOpen: !this.data.filtersOpen }); },
@@ -258,34 +259,11 @@ const definition = {
             wx.setClipboardData({ data: url });
     },
     assignItem(event) {
-        if (!this.data.family || this.data.isChild || this.data.busy)
+        var _a, _b;
+        if (((_a = this.engine.snapshot().family) === null || _a === void 0 ? void 0 : _a.id) !== ((_b = this.data.family) === null || _b === void 0 ? void 0 : _b.id))
             return;
-        const item = this.data.items.find((item) => item.id === event.currentTarget.dataset.id);
-        const child = this.data.children.find((child) => child.id === this.data.childId);
-        if (!item || !child)
-            return;
-        this.setData({ assignTarget: { id: item.id, title: item.title, familyId: this.data.family.id, childId: child.id, childName: child.name },
-            assignDate: this.preferredDate && this.preferredDate >= this.data.today && this.preferredDate <= this.data.maxPlanDate ? this.preferredDate : this.data.today });
-    },
-    closeAssign() { if (!this.data.busy)
-        this.setData({ assignTarget: null }); },
-    keepSheet() { },
-    chooseAssignDate(event) { if (!this.data.busy)
-        this.setData({ assignDate: event.currentTarget.dataset.date }); },
-    changeAssignDate(event) { if (!this.data.busy)
-        this.setData({ assignDate: event.detail.value }); },
-    async confirmAssign() {
-        var _a;
-        const target = this.data.assignTarget;
-        const date = this.data.assignDate;
-        if (!target || target.familyId !== ((_a = this.data.family) === null || _a === void 0 ? void 0 : _a.id) || target.childId !== this.data.childId || this.data.isChild)
-            return;
-        const result = await this.perform('assignContent', { childId: target.childId, contentId: target.id, date });
-        if (result && this.data.assignTarget === target) {
-            this.setData({ assignTarget: null });
-            const label = date === this.data.today ? '今日' : date === this.data.tomorrow ? '明日' : date;
-            wx.showToast({ title: `已加入${label}`, icon: 'none' });
-        }
+        if (this.data.items.some(item => item.id === event.currentTarget.dataset.id))
+            this.openAssignment(event.currentTarget.dataset.id, this.preferredDate);
     }
 };
 Page(definition);

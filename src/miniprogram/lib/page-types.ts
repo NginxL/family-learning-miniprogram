@@ -15,11 +15,12 @@ export type PickerEvent = ValueEvent<string | number>;
 export type Decorated<T> = T & { kindLabel: string; subjectLabel: string; modeLabel: string; poetryByline?: string; dynastyNote?: string; displayDetail?: string; recitationNote?: string; studyNotes?: StudyNotes };
 export type Decoratable = ContentInput & { mode?: TaskMode };
 export type DisplayChild = ChildProfile & { gradeLabel: string };
-export interface StudyNotesData { notesOpenId: string; notesAnswersId: string }
+export interface StudyNotesData { notesOpenId: string; notesAnswersId: string; sourcesOpenId: string }
 export interface StudyNotesMethods {
   toggleStudyNotes(event: DatasetEvent): void;
   toggleStudyAnswers(event: DatasetEvent): void;
   copyStudySource(event: DatasetEvent<{ url: string }>): void;
+  toggleContentSources(event: DatasetEvent): void;
 }
 export interface CommonData extends StudyNotesData {
   family: ClientFamily | null;

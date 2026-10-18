@@ -1,4 +1,0 @@
-.study-item .task-title { font-size:36rpx; font-weight:600; overflow-wrap:anywhere; }
-.study-item .body { font-size:32rpx; line-height:2; overflow-wrap:anywhere; }
-.study-note { background:#f5f6f2; border-radius:16rpx; padding:18rpx 22rpx; margin:18rpx 0; font-size:26rpx; white-space:pre-wrap; }
-.study-source { border-top:1rpx solid #edf0e9; padding-top:18rpx; white-space:pre-wrap; overflow-wrap:anywhere; }

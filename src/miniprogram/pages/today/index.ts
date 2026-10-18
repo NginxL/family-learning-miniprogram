@@ -1,6 +1,7 @@
 import { common } from '../../lib/page';
 import { groupTasks } from '../../lib/task-groups';
 import { errorDetails } from '../../lib/errors';
+import { openLearningPage } from '../../lib/learning-navigation';
 import type { Task } from '../../../shared/models';
 import type { CommonData, CommonMethods, CommonRuntime, DatasetEvent, Decorated, PageDefinition, ValueEvent } from '../../lib/page-types';
 type Group = ReturnType<typeof groupTasks<Decorated<Task>>>[number];
@@ -44,8 +45,7 @@ const definition: PageDefinition<TodayData, TodayMethods, TodayRuntime> = {
     const query = Object.entries({ familyId: family.id, childId: this.data.childId, date: this.data.date, kind: group.id })
       .map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
     this.openingGroup = true;
-    wx.navigateTo({ url: `/pages/study/index?${query}`,
-      fail: () => { wx.showToast({ title: '暂时无法打开，请重试', icon: 'none' }); },
+    openLearningPage(`/pages/study/index?${query}`, {
       complete: () => { this.openingGroup = false; } });
   },
   async toggleGroup(event) {

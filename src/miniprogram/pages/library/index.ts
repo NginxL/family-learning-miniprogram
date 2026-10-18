@@ -1,7 +1,8 @@
 import { common, decorate } from '../../lib/page';
 import * as learning from '../../lib/learning/learning';
 import resources = require('../../lib/learning/resources');
-import { shiftDate } from '../../lib/sync-engine';
+import { contentSchedule, type ContentScheduleData, type ContentScheduleMethods } from '../../lib/content-schedule';
+import { learningGradeLabel } from '../../lib/content-presentation';
 import { pinyinFor, defaultPinyin, type PinyinText } from '../../lib/pinyin';
 import { errorDetails } from '../../lib/errors';
 import { openContentDetail } from '../../lib/content-detail';
@@ -9,22 +10,21 @@ import type { ApiResults } from '../../../shared/api';
 import type { ContentKind, ContentScope, KnowledgeItem, LearningArea, SchoolGrade } from '../../../shared/models';
 import type { LearningApp } from '../../lib/client-models';
 import type { CommonData, CommonMethods, CommonRuntime, DatasetEvent, Decorated, PageDefinition, PickerEvent, ValueEvent } from '../../lib/page-types';
-export interface LibraryData extends CommonData {
+export interface LibraryData extends CommonData, ContentScheduleData {
   view: 'content' | 'exam' | 'books'; kinds: Array<{ id: ContentKind | ''; label: string }>; kindIndex: number;
   scopes: Array<{ id: ContentScope; label: string }>; scope: ContentScope; scopeIndex: number;
   query: string; items: Array<Decorated<KnowledgeItem> & { assigned: boolean; gradeLabel: string; preview?: string; pinyin: PinyinText | null;
     learnedLabel: string; lastLearned: string; learnedCount: number }>;
   total: number; hasMore: boolean; bookId: string; bookTitle: string; resources: typeof resources;
   grade: SchoolGrade | 0; gradeLabels: string[]; coverageOpen: boolean; poemCount: number; wordCount: number;
-  filtersOpen: boolean; assignTarget: { id: string; title: string; familyId: string; childId: string; childName: string } | null;
-  assignDate: string; tomorrow: string; maxPlanDate: string;
+  filtersOpen: boolean;
   showPinyin: boolean; readingCount: number; englishReadingCount: number;
   foundationCount: number; learningAreaIndex: number; learningAreas: Array<{ id: LearningArea | ''; label: string }>;
   curriculumGradeIndex: number; curriculumGradeLabels: string[]; curriculumSlots: typeof resources.curriculum.slots;
   semesterIndex: number; semesterLabels: string[]; bookUnits: Array<{ id: string; label: string }>; unitIndex: number;
   learningFilterIndex: number; learningFilterLabels: string[]; learningReady: boolean; learningBusy: boolean; learningCached: boolean; learningError: string;
 }
-export interface LibraryMethods extends CommonMethods {
+export interface LibraryMethods extends CommonMethods, ContentScheduleMethods {
   afterRender(): void; updateScopes(): void; selectionChanged(): void; updateItems(): void;
   changeView(event: DatasetEvent<{ id: LibraryData['view'] }>): void;
   changeKind(event: PickerEvent): void; changeScope(event: PickerEvent): void; changeGrade(event: PickerEvent): void;
@@ -42,8 +42,10 @@ export interface LibraryMethods extends CommonMethods {
 interface LibraryRuntime extends CommonRuntime { matchSignature?: string; visibleLimit: number; preferredDate?: string; pinyinChoice?: { childId: string; enabled: boolean };
   learningScope?: string; learningRequest?: number; learningIndex?: Map<string, ApiResults['getLearningStatus']['items'][number]> }
 const base = common();
+const scheduling = contentSchedule();
 const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = {
   ...base,
+  ...scheduling,
   data: { ...base.data, view: 'content', kinds: [{ id: '', label: '全部类型' }, ...learning.kinds.filter((kind) => kind.id !== 'math' && kind.id !== 'other')], kindIndex: 0,
     scopes: [{ id: 'all', label: '全部可用内容' }, { id: 'starter', label: '亲子入门' }], scope: 'all', scopeIndex: 0,
     query: '', items: [], total: 0, hasMore: false, bookId: '', bookTitle: '', resources,
@@ -87,12 +89,10 @@ const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = 
       this.setData({ learningReady: false, learningBusy: false, learningCached: false, learningError: '' });
       if (this.active) void this.loadLearningStatus();
     }
-    const target = this.data.assignTarget;
+    this.refreshAssignment();
     this.setData({ subjectOptions: this.data.subjectOptions.filter((subject) => subject.id !== 'math' && subject.id !== 'other'),
       showPinyin: this.pinyinChoice?.childId === this.data.childId ? this.pinyinChoice.enabled : defaultPinyin(this.data.children.find((child) => child.id === this.data.childId)?.schoolGrade),
-      ...(this.data.subjectFilter === 'math' || this.data.subjectFilter === 'other' ? { subjectFilter: 'all' as const } : {}),
-      tomorrow: shiftDate(this.data.today, 1), maxPlanDate: shiftDate(this.data.today, 365),
-      ...(target && (target.familyId !== this.data.family?.id || target.childId !== this.data.childId || this.data.isChild) ? { assignTarget: null } : {}) });
+      ...(this.data.subjectFilter === 'math' || this.data.subjectFilter === 'other' ? { subjectFilter: 'all' as const } : {}) });
     this.updateItems();
   },
   afterSync() { return this.loadLearningStatus(); },
@@ -144,7 +144,7 @@ const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = 
         assigned: today.some((task) => learning.contentId(task) === item.id),
         learnedLabel: this.learningIndex?.has(item.id) ? (this.learningIndex.get(item.id)!.mastered ? '已掌握' : '已学过') : '',
         lastLearned: this.learningIndex?.get(item.id)?.lastLearned || '', learnedCount: this.learningIndex?.get(item.id)?.learnedCount || 0,
-        gradeLabel: learning.knowledgeGradeLabel(item),
+        gradeLabel: learningGradeLabel(item),
         preview: item.kind === 'poetry' ? decorate(item).poetryByline : item.detail.split('\n')[1] || '' })) });
   },
   changeView(event) { this.setData({ view: event.currentTarget.dataset.id }); },
@@ -182,7 +182,7 @@ const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = 
     if (!item) return;
     const sameFamily = this.engine.snapshot().family?.id === this.data.family?.id;
     openContentDetail('library', item, this.data.childId, { gradeLabel: item.gradeLabel, status: sameFamily ? item.learnedLabel : '',
-      contextLabel: sameFamily && item.lastLearned ? `最近学习 ${item.lastLearned} · 已学 ${item.learnedCount} 天` : '', showPinyin: this.data.showPinyin });
+      contextLabel: sameFamily && item.lastLearned ? `最近学习 ${item.lastLearned} · 已学 ${item.learnedCount} 天` : '', showPinyin: this.data.showPinyin, preferredDate: this.preferredDate });
   },
   toggleCoverage() { this.setData({ coverageOpen: !this.data.coverageOpen }); },
   toggleFilters() { this.setData({ filtersOpen: !this.data.filtersOpen }); },
@@ -209,26 +209,8 @@ const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = 
     if (typeof url === 'string' && url.startsWith('https://')) wx.setClipboardData({ data: url });
   },
   assignItem(event) {
-    if (!this.data.family || this.data.isChild || this.data.busy) return;
-    const item = this.data.items.find((item) => item.id === event.currentTarget.dataset.id);
-    const child = this.data.children.find((child) => child.id === this.data.childId);
-    if (!item || !child) return;
-    this.setData({ assignTarget: { id: item.id, title: item.title, familyId: this.data.family.id, childId: child.id, childName: child.name },
-      assignDate: this.preferredDate && this.preferredDate >= this.data.today && this.preferredDate <= this.data.maxPlanDate ? this.preferredDate : this.data.today });
-  },
-  closeAssign() { if (!this.data.busy) this.setData({ assignTarget: null }); },
-  keepSheet() {},
-  chooseAssignDate(event) { if (!this.data.busy) this.setData({ assignDate: event.currentTarget.dataset.date }); },
-  changeAssignDate(event) { if (!this.data.busy) this.setData({ assignDate: event.detail.value }); },
-  async confirmAssign() {
-    const target = this.data.assignTarget; const date = this.data.assignDate;
-    if (!target || target.familyId !== this.data.family?.id || target.childId !== this.data.childId || this.data.isChild) return;
-    const result = await this.perform('assignContent', { childId: target.childId, contentId: target.id, date });
-    if (result && this.data.assignTarget === target) {
-      this.setData({ assignTarget: null });
-      const label = date === this.data.today ? '今日' : date === this.data.tomorrow ? '明日' : date;
-      wx.showToast({ title: `已加入${label}`, icon: 'none' });
-    }
+    if (this.engine.snapshot().family?.id !== this.data.family?.id) return;
+    if (this.data.items.some(item => item.id === event.currentTarget.dataset.id)) this.openAssignment(event.currentTarget.dataset.id, this.preferredDate);
   }
 };
 Page(definition);

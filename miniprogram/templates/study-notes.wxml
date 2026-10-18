@@ -2,7 +2,6 @@
   <view wx:if="{{item.studyNotes}}" class="study-notes">
     <button class="secondary notes-toggle" data-id="{{item.id}}" bindtap="toggleStudyNotes">{{item.studyNotes.title}} {{notesOpenId === item.id ? '↑' : '↓'}}</button>
     <block wx:if="{{notesOpenId === item.id}}">
-      <view class="muted plan-help">{{item.studyNotes.notice}}</view>
       <view wx:for="{{item.studyNotes.sections}}" wx:for-item="section" wx:key="title">
         <view class="section">{{section.title}}</view>
         <view class="body notes-body">{{section.body}}</view>
@@ -13,7 +12,6 @@
       <block wx:if="{{notesAnswersId === item.id}}">
         <view wx:for="{{item.studyNotes.exercises}}" wx:for-item="exercise" wx:for-index="exerciseIndex" wx:key="question" class="body notes-body">{{exerciseIndex + 1}}. {{exercise.answer}}</view>
       </block>
-      <view class="tab-row"><button wx:for="{{item.studyNotes.sources}}" wx:for-item="source" wx:key="url" class="quiet notes-source" data-url="{{source.url}}" bindtap="copyStudySource">复制{{source.title}}链接</button></view>
     </block>
   </view>
 </template>

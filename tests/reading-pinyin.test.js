@@ -91,10 +91,11 @@ test('library and study show switchable pinyin for first/second grade with no le
   library.changeKind({ detail: { value: library.data.kinds.findIndex(kind => kind.id === 'reading') } });
   library.changeScope({ detail: { value: library.data.scopes.findIndex(scope => scope.id === 'starter') } });
   assert.equal(library.data.items.length, 6); assert.equal(library.data.showPinyin, true);
-  assert.ok(library.data.items.every(item => item.pinyin && item.gradeLabel === '自编入门练习 · 非教材课文'));
+  assert.ok(library.data.items.every(item => item.pinyin && item.gradeLabel === '自编入门练习'));
   library.openContent({ currentTarget: { dataset: { id: 'reading-seed' } } });
   const content = page('content', engine); content.onLoad({ source: 'library', id: 'reading-seed' }); content.preview = preview; content.render();
   assert.equal(content.data.showPinyin, true); assert.ok(content.data.pinyin);
+  assert.equal(content.data.item.sourceGradeLabel, '自编入门练习 · 非教材课文', 'the full provenance is retained in source details');
   const study = page('study', engine); study.onLoad({ familyId: family.id, childId, date: '2026-10-12', kind: 'reading' }); study.render();
   assert.equal(study.data.hasPinyin, true); assert.equal(study.data.showPinyin, true);
   const before = engine.snapshot();

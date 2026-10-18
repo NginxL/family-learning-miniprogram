@@ -1,27 +1,22 @@
 <import src="../../templates/pinyin.wxml" />
 <import src="../../templates/study-notes.wxml" />
-<view class="page content-page">
+<import src="../../templates/content-sources.wxml" />
+<import src="../../templates/content-schedule.wxml" />
+<view class="page content-page {{canSchedule ? 'has-schedule' : ''}}">
   <view wx:if="{{item}}" class="card study-item">
-    <view class="row"><view class="pill {{item.subject}}">{{item.kindLabel}}</view><view class="muted">{{status}}</view></view>
+    <view class="row"><view class="pill {{item.subject}}">{{item.kindLabel}}</view><view class="muted">{{status}}{{status && assignedToday ? ' · ' : ''}}{{assignedToday ? '已在今日' : ''}}</view></view>
     <view class="task-title"><template is="pinyinText" data="{{enabled: showPinyin, lines: pinyin.title, text: item.title}}" /></view>
     <view wx:if="{{item.poetryByline}}" class="muted poetry-byline">{{item.poetryByline}}</view>
     <view wx:if="{{gradeLabel}}" class="muted plan-help">{{gradeLabel}}</view>
     <view wx:if="{{contextLabel}}" class="muted plan-help">{{contextLabel}}</view>
     <button wx:if="{{pinyin}}" class="quiet pinyin-toggle" bindtap="togglePinyin">{{showPinyin ? '隐藏拼音' : '显示拼音'}}</button>
     <view class="body"><template is="pinyinText" data="{{enabled: showPinyin, lines: pinyin.body, text: item.displayDetail || item.detail || '和家人一起回顾这项内容。'}}" /></view>
-    <view wx:if="{{item.dynastyNote}}" class="muted">{{item.dynastyNote}}</view>
-    <view wx:if="{{item.note}}" class="study-note">{{item.note}}</view>
-    <view wx:if="{{item.recitationNote}}" class="body muted">{{item.recitationNote}}</view>
+    <view wx:if="{{item.recitationSummary}}" class="body recitation-summary">{{item.recitationSummary}}</view>
     <template is="studyNotes" data="{{item, notesOpenId, notesAnswersId}}" />
-    <view wx:if="{{item.source}}" class="muted study-source">来源：{{item.source}}</view>
-    <view wx:for="{{mappings}}" wx:for-item="mapping" wx:key="displayKey" class="muted plan-help">
-      <view>{{gradeLabels[mapping.grade]}} {{mapping.semester}} · {{mapping.edition}}</view>
-      <view wx:if="{{mapping.editionStatus === 'historical_reference'}}">旧版参考 · 新版待核实</view>
-      <view wx:if="{{mapping.sourcePrintPage}}">{{mapping.unit}} · 原书第 {{mapping.sourcePrintPage}} 页<text wx:if="{{mapping.sourcePdfPage}}"> / PDF 第 {{mapping.sourcePdfPage}} 页</text></view>
-      <view>{{mapping.evidence}}</view><button class="quiet notes-source" data-url="{{mapping.sourceUrl}}" bindtap="copyStudySource">复制年级依据链接</button>
-    </view>
-    <view class="tab-row"><button wx:if="{{item.referenceUrl}}" class="quiet notes-source" data-url="{{item.referenceUrl}}" bindtap="copyStudySource">复制目录来源链接</button><button wx:if="{{item.textSourceUrl}}" class="quiet notes-source" data-url="{{item.textSourceUrl}}" bindtap="copyStudySource">复制正文 / 词典来源</button></view>
+    <template is="contentSources" data="{{item, sourcesOpenId, gradeLabels}}" />
   </view>
   <view wx:else class="card empty">{{pageError}}</view>
   <button class="secondary" bindtap="goBack">{{backLabel}}</button>
 </view>
+<view wx:if="{{canSchedule}}" class="content-footer"><button class="primary" bindtap="arrangeContent" disabled="{{busy}}" loading="{{busy}}">安排日期</button></view>
+<template is="contentSchedule" data="{{assignTarget, assignDate, today, tomorrow, maxPlanDate, busy}}" />

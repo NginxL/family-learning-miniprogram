@@ -3,6 +3,7 @@ import { groupTasks } from '../../lib/task-groups';
 import { shiftDate } from '../../lib/sync-engine';
 import { errorDetails } from '../../lib/errors';
 import { openContentDetail } from '../../lib/content-detail';
+import { openLearningPage } from '../../lib/learning-navigation';
 import * as learning from '../../lib/learning/learning';
 import type { AutoRule, ContentKind, SchoolGrade, SubjectFilter, Task, DailyTemplate } from '../../../shared/models';
 import type { ApiPayloads } from '../../../shared/api';
@@ -195,8 +196,7 @@ const definition: PageDefinition<PlansData, PlansMethods, PlansRuntime> = {
     const query = Object.entries({ familyId: family.id, childId: this.data.childId, date: this.data.date, kind: group.id, view: 'plan' })
       .map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
     this.openingGroup = true;
-    wx.navigateTo({ url: `/pages/study/index?${query}`,
-      fail: () => { wx.showToast({ title: '暂时无法打开，请重试', icon: 'none' }); },
+    openLearningPage(`/pages/study/index?${query}`, {
       complete: () => { this.openingGroup = false; } });
   },
   openPlan(event) {

@@ -79,7 +79,8 @@ function libraryPage(t, engine) {
 
 test('library marks and filters learned content; a late response cannot restore the previous child status', async t => {
   const pending = [];
-  const page = libraryPage(t, { viewDay: () => ({ tasks: [] }), getLearningStatus: ({ childId }) => new Promise(resolve => pending.push({ childId, resolve })) });
+  const page = libraryPage(t, { snapshot: () => ({ today: date, family: { id: 'family', myRole: 'owner', children: [] } }),
+    viewDay: () => ({ tasks: [] }), getLearningStatus: ({ childId }) => new Promise(resolve => pending.push({ childId, resolve })) });
   page.afterRender(); const first = pending[0];
   page.setData({ childId: 'b' }); page.afterRender();
   const id = learning.catalog[0].id;

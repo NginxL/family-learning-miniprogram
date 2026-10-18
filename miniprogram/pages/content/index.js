@@ -38,11 +38,15 @@ const page_1 = require("../../lib/page");
 const learning = __importStar(require("../../lib/learning/learning"));
 const pinyin_1 = require("../../lib/pinyin");
 const study_notes_view_1 = require("../../lib/study-notes-view");
+const content_schedule_1 = require("../../lib/content-schedule");
+const content_presentation_1 = require("../../lib/content-presentation");
 const notes = (0, study_notes_view_1.studyNotesView)();
+const scheduling = (0, content_schedule_1.contentSchedule)();
 const definition = {
     ...notes,
-    data: { ...notes.data, item: null, pinyin: null, showPinyin: false, gradeLabels: learning.gradeLabels,
-        gradeLabel: '', status: '', contextLabel: '', backLabel: '返回知识库', pageError: '', mappings: [] },
+    ...scheduling,
+    data: { ...notes.data, ...scheduling.data, item: null, pinyin: null, showPinyin: false, gradeLabels: learning.gradeLabels,
+        gradeLabel: '', status: '', contextLabel: '', backLabel: '返回知识库', pageError: '', canSchedule: false, assignedToday: false },
     onLoad(query) {
         var _a, _b, _c;
         this.engine = getApp().engine;
@@ -62,12 +66,13 @@ const definition = {
     onShow() {
         var _a;
         this.active = true;
+        this.setData({ busy: Boolean(this.assigning) });
         (_a = this.unsubscribe) === null || _a === void 0 ? void 0 : _a.call(this);
         this.unsubscribe = this.engine.subscribe(() => { if (this.active)
             this.render(); });
         this.render();
     },
-    onHide() { var _a; this.active = false; (_a = this.unsubscribe) === null || _a === void 0 ? void 0 : _a.call(this); },
+    onHide() { var _a; this.active = false; (_a = this.unsubscribe) === null || _a === void 0 ? void 0 : _a.call(this); this.setData({ assignTarget: null }); },
     onUnload() { var _a, _b; this.onHide(); if (this.receiveContent)
         (_b = (_a = this.channel) === null || _a === void 0 ? void 0 : _a.off) === null || _b === void 0 ? void 0 : _b.call(_a, 'showContent', this.receiveContent); },
     render() {
@@ -83,12 +88,16 @@ const definition = {
         const item = this.source === 'library' ? knowledge && { ...(0, page_1.decorate)({ ...knowledge, subject: learning.definition(knowledge.kind).subject }), ...(knowledge.studyArea ? {
                 kindLabel: knowledge.studyArea === 'literacy' ? '识字写字' : knowledge.studyArea === 'pinyin' ? '拼音练习' : '语文阅读'
             } : {}) } : sameScope ? preview === null || preview === void 0 ? void 0 : preview.item : null;
-        this.setData({ item: item || null, pinyin: item ? (0, pinyin_1.pinyinFor)(item) : null, showPinyin: (_b = (_a = this.pinyinChoice) !== null && _a !== void 0 ? _a : preview === null || preview === void 0 ? void 0 : preview.showPinyin) !== null && _b !== void 0 ? _b : false,
-            mappings: ((item === null || item === void 0 ? void 0 : item.gradeMappings) || []).map((mapping, index) => ({ ...mapping, displayKey: `${mapping.bookId}:${index}` })),
-            gradeLabel: knowledge ? learning.knowledgeGradeLabel(knowledge) : sameScope ? (preview === null || preview === void 0 ? void 0 : preview.gradeLabel) || '' : '',
+        this.setData({ item: item ? (0, content_presentation_1.withContentSources)(item) : null, pinyin: item ? (0, pinyin_1.pinyinFor)(item) : null, showPinyin: (_b = (_a = this.pinyinChoice) !== null && _a !== void 0 ? _a : preview === null || preview === void 0 ? void 0 : preview.showPinyin) !== null && _b !== void 0 ? _b : false,
+            gradeLabel: knowledge ? (0, content_presentation_1.learningGradeLabel)(knowledge) : sameScope ? (preview === null || preview === void 0 ? void 0 : preview.gradeLabel) || '' : '',
             status: sameScope ? (preview === null || preview === void 0 ? void 0 : preview.status) || '' : '', contextLabel: sameScope ? (preview === null || preview === void 0 ? void 0 : preview.contextLabel) || '' : '',
+            childId: sameScope ? preview.childId : '', canSchedule: Boolean(knowledge && sameScope && (family === null || family === void 0 ? void 0 : family.myRole) !== 'child'),
+            assignedToday: Boolean(knowledge && sameScope && this.engine.viewDay(snapshot.today).tasks.some(task => task.childId === preview.childId && learning.contentId(task) === knowledge.id)),
             pageError: item ? '' : '当前内容暂不可查看，请返回列表重新选择。' });
+        this.refreshAssignment();
     },
+    arrangeContent() { var _a; if (this.data.canSchedule && this.source === 'library' && this.contentId)
+        this.openAssignment(this.contentId, (_a = this.preview) === null || _a === void 0 ? void 0 : _a.preferredDate); },
     togglePinyin() { this.pinyinChoice = !this.data.showPinyin; this.setData({ showPinyin: this.pinyinChoice }); },
     goBack() {
         const tab = this.source === 'history' ? 'history' : this.source === 'plan' ? 'plans' : 'library';

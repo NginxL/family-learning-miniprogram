@@ -4,6 +4,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.openContentDetail = openContentDetail;
 const page_1 = require("./page");
 const pinyin_1 = require("./pinyin");
+const learning_navigation_1 = require("./learning-navigation");
 let opening = false;
 function openContentDetail(source, item, childId, labels = {}) {
     var _a;
@@ -19,11 +20,11 @@ function openContentDetail(source, item, childId, labels = {}) {
     const preview = JSON.parse(JSON.stringify({ source,
         item: (0, page_1.decorate)({ ...item, title: item.title || '学习内容', detail: item.detail || '' }), childId,
         gradeLabel: labels.gradeLabel || '', status: labels.status || '', contextLabel: labels.contextLabel || '',
-        showPinyin: (_a = labels.showPinyin) !== null && _a !== void 0 ? _a : (0, pinyin_1.defaultPinyin)(child === null || child === void 0 ? void 0 : child.schoolGrade), userId: snapshot.userId,
+        showPinyin: (_a = labels.showPinyin) !== null && _a !== void 0 ? _a : (0, pinyin_1.defaultPinyin)(child === null || child === void 0 ? void 0 : child.schoolGrade), preferredDate: labels.preferredDate, userId: snapshot.userId,
         familyId: (family === null || family === void 0 ? void 0 : family.id) || '', role: (family === null || family === void 0 ? void 0 : family.myRole) || '', boundChild: (family === null || family === void 0 ? void 0 : family.myChildId) || '' }));
     opening = true;
-    wx.navigateTo({ url: `/pages/content/index?source=${source}&id=${encodeURIComponent(item.id)}`,
+    (0, learning_navigation_1.openLearningPage)(`/pages/content/index?source=${source}&id=${encodeURIComponent(item.id)}`, {
         success(result) { result.eventChannel.emit('showContent', preview); },
-        fail() { wx.showToast({ title: '暂时无法打开，请重试', icon: 'none' }); },
-        complete() { opening = false; } });
+        complete() { opening = false; }
+    });
 }

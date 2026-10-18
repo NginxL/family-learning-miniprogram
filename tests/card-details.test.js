@@ -164,3 +164,81 @@ test('returning to a detail page during a pending plan edit cannot submit the sa
   assert.equal(requests, 1);
   finish({ merged: false }); await pending; assert.equal(study.data.busy, false);
 });
+
+test('library detail schedules today, tomorrow and a selected date through the same scoped command without completing work', async t => {
+  const { a, childId, detail, f, family, toasts } = await setup(t);
+  const library = page('library', a.engine); library.render(); library.preferredDate = '2026-10-13';
+  library.openContent(event('poem-goose')); const content = detail();
+  assert.equal(content.data.canSchedule, true);
+  const beforeQueue = structuredClone(a.engine.state.queue);
+  for (const target of [date, '2026-10-13', '2026-10-25']) {
+    content.arrangeContent();
+    assert.equal(content.data.assignDate, '2026-10-13', 'the plan entry keeps its preferred date');
+    assert.equal(content.data.assignTarget.childId, childId);
+    content.changeAssignDate({ detail: { value: target } }); await content.confirmAssign();
+    assert.equal(content.data.assignTarget, null);
+    const result = await f.call('parent-a', 'getDay', { familyId: family.id, date: target });
+    const tasks = result.day.tasks.filter(task => task.childId === childId && task.contentId === 'poem-goose');
+    assert.equal(tasks.length, 1); assert.equal(tasks[0].done, false);
+  }
+  assert.equal(content.data.assignedToday, true); assert.deepEqual(a.engine.state.queue, beforeQueue);
+  assert.equal(toasts.at(-1), '已加入2026-10-25');
+  content.arrangeContent(); content.changeAssignDate({ detail: { value: '2026-10-25' } }); await content.confirmAssign();
+  const remote = await f.call('parent-a', 'getDay', { familyId: family.id, date: '2026-10-25' });
+  assert.equal(remote.day.tasks.filter(task => task.childId === childId && task.contentId === 'poem-goose').length, 1);
+  assert.equal((await a.engine.getHistory({ childId })).total, 0, 'arranging and reading do not mark anything learned');
+});
+
+test('detail scheduling refuses invalid dates, child role, stale identity and a changed family', async t => {
+  const { a, detail } = await setup(t); const library = page('library', a.engine); library.render();
+  library.openContent(event('poem-goose')); const content = detail(); let commands = 0;
+  a.engine.command = async () => { commands++; };
+  for (const invalid of ['', '2026-02-30', '2026-10-11', '2027-10-13']) {
+    content.arrangeContent(); content.changeAssignDate({ detail: { value: invalid } }); await content.confirmAssign();
+  }
+  assert.equal(commands, 0);
+  content.arrangeContent(); a.engine.state.userId = 'another-parent'; await content.confirmAssign();
+  assert.equal(content.data.assignTarget, null); assert.equal(commands, 0);
+  content.render(); assert.equal(content.data.canSchedule, false); content.arrangeContent(); assert.equal(content.data.assignTarget, null);
+  a.engine.state.family.myRole = 'child'; content.render(); assert.equal(content.data.canSchedule, false);
+  a.engine.state.family.id = 'different-family'; content.render(); assert.equal(content.data.canSchedule, false);
+  assert.ok(content.data.item, 'public content remains readable when its original child scope is lost');
+});
+
+test('pending scheduling cannot be submitted twice after returning and late results cannot reopen an old sheet', async t => {
+  const { a, detail } = await setup(t); const library = page('library', a.engine); library.render();
+  library.openContent(event('poem-goose')); const content = detail(); content.arrangeContent();
+  let finish, commands = 0;
+  a.engine.command = async () => { commands++; await new Promise(resolve => { finish = resolve; }); };
+  const pending = content.confirmAssign(); content.onHide(); content.onShow();
+  content.arrangeContent(); await content.confirmAssign();
+  assert.equal(commands, 1); assert.equal(content.data.busy, true); assert.equal(content.data.assignTarget, null);
+  finish(); await pending; assert.equal(content.data.busy, false); assert.equal(content.data.assignTarget, null);
+});
+
+test('provenance is disclosed separately while the body, dynasty, original edition labels and recitation scope remain available', async t => {
+  const { a, detail } = await setup(t); const library = page('library', a.engine); library.render();
+  library.openContent(event('poem-goose')); const content = detail();
+  assert.equal(content.data.sourcesOpenId, ''); assert.doesNotMatch(content.data.gradeLabel, /核实|核对/);
+  assert.match(content.data.item.note, /篇目、作者及选段已核对/);
+  assert.equal(content.data.item.sourceMappings.length, content.data.item.gradeMappings.length);
+  const before = a.engine.snapshot();
+  content.toggleContentSources(event('poem-goose')); assert.equal(content.data.sourcesOpenId, 'poem-goose');
+  content.toggleContentSources(event('poem-goose')); assert.equal(content.data.sourcesOpenId, '');
+  assert.deepEqual(a.engine.snapshot(), before);
+  const { withContentSources, learningGradeLabel } = require('../miniprogram/lib/content-presentation');
+  const old = learning.catalog.find(item => item.gradeMappings?.some(mapping => mapping.editionStatus === 'historical_reference'));
+  assert.match(learningGradeLabel(old), /旧版参考/);
+  const recited = learning.catalog.find(item => item.recitationRequirements?.length);
+  const display = withContentSources(decorate(recited));
+  assert.match(display.recitationSummary, new RegExp(recited.recitationRequirements[0].label));
+  assert.doesNotMatch(display.recitationSummary, /原书第|电子第|核实|核对/);
+  for (const name of ['study', 'content']) {
+    const markup = fs.readFileSync(path.join(root, `pages/${name}/index.wxml`), 'utf8');
+    assert.match(markup, /template is="contentSources"/);
+    assert.doesNotMatch(markup, /\{\{item\.(?:note|recitationNote|dynastyNote|source)\}\}/);
+  }
+  const disclosure = fs.readFileSync(path.join(root, 'templates/content-sources.wxml'), 'utf8');
+  assert.match(disclosure, /wx:if="\{\{sourcesOpenId === item.id\}\}"/);
+  assert.match(disclosure, /\{\{item.note\}\}/); assert.match(disclosure, /\{\{mapping.evidence\}\}/);
+});

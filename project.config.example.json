@@ -5,5 +5,5 @@
   "compileType": "miniprogram",
   "appid": "touristappid",
   "projectname": "family-learning-miniprogram",
-  "setting": { "es6": true, "enhance": true, "postcss": true, "minified": true, "urlCheck": true }
+  "setting": { "es6": true, "enhance": true, "postcss": true, "minified": true, "urlCheck": true, "ignoreDevUnusedFiles": false, "ignoreUploadUnusedFiles": false }
 }

@@ -1,0 +1,23 @@
+<template name="contentSources">
+  <view wx:if="{{item.source || item.note || item.sourceMappings.length || item.studyNotes || item.recitationNote}}" class="content-sources">
+    <button class="quiet sources-toggle" data-id="{{item.id}}" bindtap="toggleContentSources">来源详情与说明 {{sourcesOpenId === item.id ? '↑' : '↓'}}</button>
+    <view wx:if="{{sourcesOpenId === item.id}}" class="sources-body">
+      <view wx:if="{{item.sourceGradeLabel}}" class="muted plan-help">{{item.sourceGradeLabel}}</view>
+      <view wx:if="{{item.source}}" class="muted plan-help">来源：{{item.source}}</view>
+      <view wx:if="{{item.note}}" class="muted plan-help">{{item.note}}</view>
+      <view wx:if="{{item.dynastyNote}}" class="muted plan-help">{{item.dynastyNote}}</view>
+      <view wx:if="{{item.recitationNote}}" class="muted plan-help">{{item.recitationNote}}</view>
+      <view wx:for="{{item.sourceMappings}}" wx:for-item="mapping" wx:key="displayKey" class="source-book muted">
+        <view>{{gradeLabels[mapping.grade]}} {{mapping.semester}} · {{mapping.edition}}</view>
+        <view wx:if="{{mapping.editionStatus === 'historical_reference'}}">旧版参考 · 新版待核实</view>
+        <view wx:if="{{mapping.sourcePrintPage}}">{{mapping.unit}} · 原书第 {{mapping.sourcePrintPage}} 页<text wx:if="{{mapping.sourcePdfPage}}"> / PDF 第 {{mapping.sourcePdfPage}} 页</text></view>
+        <view>{{mapping.evidence}}</view><button class="quiet notes-source" data-url="{{mapping.sourceUrl}}" bindtap="copyStudySource">复制年级依据链接</button>
+      </view>
+      <view class="tab-row"><button wx:if="{{item.sourceReferenceUrl}}" class="quiet notes-source" data-url="{{item.sourceReferenceUrl}}" bindtap="copyStudySource">复制目录来源链接</button><button wx:if="{{item.sourceTextUrl}}" class="quiet notes-source" data-url="{{item.sourceTextUrl}}" bindtap="copyStudySource">复制正文 / 词典来源</button></view>
+      <view wx:if="{{item.studyNotes}}">
+        <view class="muted plan-help">学习笔记说明：{{item.studyNotes.notice}}</view>
+        <view class="tab-row"><button wx:for="{{item.studyNotes.sources}}" wx:for-item="source" wx:key="url" class="quiet notes-source" data-url="{{source.url}}" bindtap="copyStudySource">复制{{source.title}}链接</button></view>
+      </view>
+    </view>
+  </view>
+</template>

@@ -9,12 +9,14 @@ const pinyin_1 = require("../../lib/pinyin");
 const study_notes_view_1 = require("../../lib/study-notes-view");
 const planned_task_edit_1 = require("../../lib/planned-task-edit");
 const sync_engine_1 = require("../../lib/sync-engine");
+const content_presentation_1 = require("../../lib/content-presentation");
+const learning_1 = require("../../lib/learning/learning");
 const PAGE_SIZE = 20;
 const notes = (0, study_notes_view_1.studyNotesView)();
 const definition = {
     ...notes,
     ...(0, planned_task_edit_1.plannedTaskEdit)(),
-    data: { ...notes.data, group: null, items: [], visibleCount: PAGE_SIZE, childName: '', date: '', mode: 'demo', busy: false, isChild: false,
+    data: { ...notes.data, group: null, items: [], gradeLabels: learning_1.gradeLabels, visibleCount: PAGE_SIZE, childName: '', date: '', mode: 'demo', busy: false, isChild: false,
         loading: true, pageError: '', emptyMessage: '', syncLabel: '', syncError: '', notice: '', showPinyin: false, hasPinyin: false,
         childId: '', today: '', maxPlanDate: '', editTarget: null, editDate: '', planning: false },
     onLoad(query) {
@@ -86,7 +88,7 @@ const definition = {
             const { items, ...info } = group;
             summary = info;
         }
-        const items = ((group === null || group === void 0 ? void 0 : group.items) || []).slice(0, this.data.visibleCount).map((item) => ({ ...item, pinyin: (0, pinyin_1.pinyinFor)(item) }));
+        const items = ((group === null || group === void 0 ? void 0 : group.items) || []).slice(0, this.data.visibleCount).map((item) => ({ ...(0, content_presentation_1.withContentSources)(item), pinyin: (0, pinyin_1.pinyinFor)(item) }));
         this.setData({ group: summary, items, hasPinyin: items.some((item) => item.pinyin), showPinyin: (_a = this.pinyinChoice) !== null && _a !== void 0 ? _a : (0, pinyin_1.defaultPinyin)(child === null || child === void 0 ? void 0 : child.schoolGrade),
             childId: (child === null || child === void 0 ? void 0 : child.id) || '', today: snapshot.today,
             maxPlanDate: (0, sync_engine_1.shiftDate)(snapshot.today, 365), planning,
