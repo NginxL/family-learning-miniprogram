@@ -50,6 +50,8 @@ export interface StudyNotes {
   searchTerms: string[];
 }
 export interface KnowledgeItem extends Content {
+  vocabularyRevision?: string;
+  dictionaryReference?: string;
   textRevision?: { checkedAt: string; summary: string; sourceUrl: string; sourcePrintPages: number[]; sourcePdfPages: number[] };
   studyNotes?: StudyNotes;
   learningArea?: LearningArea;

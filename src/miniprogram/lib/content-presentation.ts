@@ -13,10 +13,15 @@ export function learningGradeLabel(item: KnowledgeItem): string {
 export function withContentSources<T extends ContentInput>(item: T) {
   const knowledge = learning.catalogById.get(learning.contentId(item));
   const revision = knowledge?.textRevision;
-  const hasOlderText = !!revision && typeof item.detail === 'string' && item.detail !== knowledge?.detail;
+  const vocabularyRevision = knowledge?.vocabularyRevision;
+  const hasOlderText = (!!revision || !!vocabularyRevision) && typeof item.detail === 'string' && item.detail !== knowledge?.detail;
   return { ...item,
     textRevision: revision,
-    textCorrectionNotice: hasOlderText ? '正文已校订。本任务保留安排时的正文，请在“来源详情与说明”中查看校订正文；学习记录不变。' : '',
+    vocabularyRevision,
+    dictionaryReference: knowledge?.dictionaryReference || '',
+    textCorrectionNotice: hasOlderText ? (vocabularyRevision
+      ? '词义和词形说明已校订。本任务保留安排时的内容，学习笔记使用新版；请在“来源详情与说明”中核对新版词卡，学习记录不变。'
+      : '正文已校订。本任务保留安排时的正文，请在“来源详情与说明”中查看校订正文；学习记录不变。') : '',
     correctedDetail: hasOlderText && knowledge ? (knowledge.author && knowledge.detail.startsWith(`${knowledge.author}\n`)
       ? knowledge.detail.slice(knowledge.author.length + 1) : knowledge.detail) : '',
     sourceGradeLabel: knowledge ? learning.knowledgeGradeLabel(knowledge) : '',

@@ -1,0 +1,73 @@
+{
+  "commit": "b59064e37aa6930a69644ad9a616f45adca14282",
+  "knowledgeCount": 4190,
+  "catalogCount": 4234,
+  "stableSha256": "1c4c148fa65de37a1e72c91e521700652825544a1e36af58c2afbbba9c49776b",
+  "nonWordSha256": "441ea5ca754dbab7184f9c58a963b3a697b6a5065c10c5047f4f3749ada9ab51",
+  "oldWords": [
+    {
+      "id": "word-cold",
+      "kind": "word",
+      "title": "cold",
+      "detail": "cold\n冷的",
+      "source": "国家英语课标 2022 · 二级带星词 · 印刷页 104；教材主题常用义自编",
+      "minutes": 1
+    },
+    {
+      "id": "word-company",
+      "kind": "word",
+      "title": "company",
+      "detail": "company\n陪伴",
+      "source": "国家英语课标 2022 · 三级词 · 印刷页 104；教材主题常用义自编",
+      "minutes": 1
+    },
+    {
+      "id": "word-duck",
+      "kind": "word",
+      "title": "duck",
+      "detail": "duck\n鸭子",
+      "source": "国家英语课标 2022 · 二级带星词 · 印刷页 106；教材主题常用义自编",
+      "minutes": 1
+    },
+    {
+      "id": "word-fine",
+      "kind": "word",
+      "title": "fine",
+      "detail": "fine\n身体好的",
+      "source": "国家英语课标 2022 · 二级带星词 · 印刷页 108；教材主题常用义自编",
+      "minutes": 1
+    },
+    {
+      "id": "word-light",
+      "kind": "word",
+      "title": "light",
+      "detail": "light\n灯",
+      "source": "国家英语课标 2022 · 二级带星词 · 印刷页 113；教材主题常用义自编",
+      "minutes": 1
+    },
+    {
+      "id": "word-practice",
+      "kind": "word",
+      "title": "practice",
+      "detail": "practice\n练习",
+      "source": "国家英语课标 2022 · 三级词 · 印刷页 118；教材主题常用义自编",
+      "minutes": 1
+    },
+    {
+      "id": "word-right",
+      "kind": "word",
+      "title": "right",
+      "detail": "right\n右边",
+      "source": "国家英语课标 2022 · 二级带星词 · 印刷页 120；教材主题常用义自编",
+      "minutes": 1
+    },
+    {
+      "id": "sh54-word-even-though",
+      "kind": "word",
+      "title": "even though",
+      "detail": "even though\n即使",
+      "source": "沪教版原书 Words and expressions in each unit；教材主题常用义自编",
+      "minutes": 1
+    }
+  ]
+}

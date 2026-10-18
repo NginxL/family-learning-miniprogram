@@ -7,6 +7,7 @@ const gradeSix = require('../data/catalogs/shanghai-54-grade6.json');
 const gradeSeven = require('../data/catalogs/shanghai-54-grade7.json');
 const gradeEight = require('../data/catalogs/shanghai-54-grade8.json');
 const gradeNine = require('../data/catalogs/shanghai-54-grade9.json');
+const vocabulary = require('./english-vocabulary');
 const data = { ...lowerPrimary, books: [...lowerPrimary.books, ...gradeThree.books, ...gradeFour.books, ...gradeFive.books, ...gradeSix.books, ...gradeSeven.books, ...gradeEight.books, ...gradeNine.books], poems: [...(lowerPrimary.poems || []), ...(gradeThree.poems || []), ...gradeFour.poems, ...gradeFive.poems, ...gradeSix.poems, ...gradeSeven.poems, ...gradeEight.poems, ...gradeNine.poems] };
 
 function hasLiteracy(book, unit) {
@@ -56,7 +57,8 @@ function attach(item, book, unit, type, word) {
     location.outlineDestination = word.vocabularyAudioTrack;
     location.evidence = `${book.editionStatus === 'historical_reference' ? '旧版参考；当前新版下册待核实。' : ''}官方配套音频 ${book.inventory.vocabularyListName}：${word.vocabularyAudioTrack}；提取码 ${book.sourceEvidence.officialResourceCode}；书号 ${book.sourceEvidence.officialResourceIsbn}。`;
   }
-  if (word?.vocabularyPrintPage) location.evidence = `国家平台五四制原书 ${book.inventory.vocabularyListName} 词形、单元和原页已核对；中文常用义自编，学校印次待确认。`;
+  if (word?.vocabularyPrintPage) location.evidence = `国家平台五四制原书 ${book.inventory.vocabularyListName} 词形、单元、词性及义项已核对；学校印次待确认。`;
+  if (word?.textbookSenses) location.evidence += ` 本单元原书用法：${word.textbookSenses.map(sense => `${sense.partOfSpeech || '原书未标词性'} ${sense.meaning}`).join(' / ')}。`;
   if (word?.topicCataloguePdfPage) {
     location.sourcePdfPage = word.topicCataloguePdfPage;
     delete location.sourcePrintPage;
@@ -65,7 +67,7 @@ function attach(item, book, unit, type, word) {
   }
   if (word?.textbookForm) location.evidence += ` 原书词形：${word.textbookForm}；学习词头沿用既有ID。`;
   if (word?.verificationNote) location.evidence += ` ${word.verificationNote}`;
-  if (word?.additionalSense) location.evidence += ` 本单元用义：${word.meaning}。`;
+  if (word?.additionalSense && !word.textbookSenses) location.evidence += ` 自编常用义提示：${word.meaning}。`;
   const locations = item.gradeMappings || [];
   const locationKey = JSON.stringify(location);
   if (!locations.some(existing => JSON.stringify(existing) === locationKey)) item.gradeMappings = [...locations, location];
@@ -97,6 +99,7 @@ function validate() {
       const words = book.units.flatMap(unit => unit.words.filter(word => word.vocabularyPrintPage));
       if (words.length !== book.inventory.vocabularyCount || !book.sourceEvidence.wordBankPrintedPagesVerified
         || words.some(word => word.vocabularyPdfPage !== word.vocabularyPrintPage + book.sourcePageOffset)
+        || words.some(word => !word.textbookSenses?.length || word.textbookSenses.some(sense => !sense.meaning || !Object.hasOwn(sense, 'partOfSpeech')))
         || book.units.some(unit => new Set(unit.words.map(word => word.text)).size !== unit.words.length))
         throw Error(`Incomplete printed vocabulary evidence: ${book.id}`);
     }
@@ -127,7 +130,7 @@ function augment(items) {
   for (const [alias, id] of [['mum', 'word-mother'], ['mom', 'word-mother'], ['dad', 'word-father'], ['television', 'word-tv']]) {
     if (byId.has(id)) lexicon.set(alias, byId.get(id));
   }
-  const curatedMeanings = new Set();
+  const vocabularyState = new Map();
   for (const book of data.books) for (const unit of book.units) {
     const add = (item, type) => {
       if (byId.has(item.id)) throw Error(`Duplicate lower-primary content: ${item.id}`);
@@ -167,17 +170,7 @@ function augment(items) {
         }
         // Keep canonical IDs so earlier learning prevents a duplicate new-word task.
         item.aliases = [...new Set([...(item.aliases || []), word.text])];
-        if (!curatedMeanings.has(item.id)) {
-          item.detail = `${item.title}\n${word.meaning}`;
-          item.source = `${item.source.split('；')[0]}；教材主题常用义自编`;
-          item.note = '中文为该主题下的常用义提示，不是完整词典释义或教材译文。';
-          curatedMeanings.add(item.id);
-        } else if (word.additionalSense) {
-          // A shared word ID can recur with a distinct, reviewed textbook sense.
-          const meanings = item.detail.split('\n').slice(1).join('；').split('；');
-          item.detail = `${item.title}\n${[...new Set([...meanings, ...word.meaning.split('；')])].join('；')}`;
-          item.note = '合并已核实教材主题中的不同常用义；各单元用义见来源说明，不是完整词典释义或教材译文。';
-        }
+        vocabulary.collect(item, word, vocabularyState);
         attach(item, book, unit, 'textbook_item', word);
       }
       for (const [i, sentence] of unit.practice.body.split('\n').entries()) add({
@@ -190,7 +183,7 @@ function augment(items) {
         minutes: 5, collections: [], referenceUrl: book.sourceUrl }, 'aligned_practice');
     }
   }
-  return items;
+  return vocabulary.finish(items, vocabularyState);
 }
 function pinyin() {
   const entries = {};

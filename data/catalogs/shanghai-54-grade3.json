@@ -1362,98 +1362,182 @@
               "meaning": "新的",
               "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "新的"
+                }
+              ]
             },
             {
               "text": "school",
               "meaning": "学校",
               "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "（中、小）学校"
+                }
+              ]
             },
             {
               "text": "classmate",
               "meaning": "同班同学",
               "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "同班同学"
+                }
+              ]
             },
             {
               "text": "teacher",
               "meaning": "老师",
               "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "教师；老师"
+                }
+              ]
             },
             {
               "text": "play sports",
               "meaning": "做体育运动",
               "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "运动"
+                }
+              ]
             },
             {
               "text": "read",
               "meaning": "阅读",
               "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "阅读"
+                }
+              ]
             },
             {
               "text": "book",
               "meaning": "书",
               "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "书"
+                }
+              ]
             },
             {
               "text": "study",
               "meaning": "学习",
               "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "学习"
+                }
+              ]
             },
             {
               "text": "hard",
               "meaning": "努力地",
               "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adv.",
+                  "meaning": "努力地"
+                }
+              ]
             },
             {
               "text": "goal",
               "meaning": "目标",
               "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "目标；目的"
+                }
+              ]
             },
             {
               "text": "want",
               "meaning": "想要",
               "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "要；想要"
+                }
+              ]
             },
             {
               "text": "friend",
               "meaning": "朋友",
               "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "朋友"
+                }
+              ]
             },
             {
               "text": "plan",
               "meaning": "计划",
               "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "计划；打算"
+                }
+              ]
             },
             {
               "text": "follow",
               "meaning": "遵循",
               "vocabularyAudioTrack": "65 Words to use-Unit 1.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "跟随；跟着"
+                }
+              ]
             }
           ],
           "vocabularyAudioEvidence": {
@@ -1491,119 +1575,221 @@
               "meaning": "擅长",
               "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "擅长于⋯"
+                }
+              ]
             },
             {
               "text": "draw",
               "meaning": "画画",
               "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "画画"
+                }
+              ]
             },
             {
               "text": "tell a story",
               "meaning": "讲故事",
               "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "讲故事"
+                }
+              ]
             },
             {
               "text": "dance",
               "meaning": "跳舞",
               "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "跳舞"
+                }
+              ]
             },
             {
               "text": "sing",
               "meaning": "唱歌",
               "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "唱歌"
+                }
+              ]
             },
             {
               "text": "use the computer",
               "meaning": "使用电脑",
               "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "使用电脑"
+                }
+              ]
             },
             {
               "text": "player",
               "meaning": "运动员；选手",
               "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "运动员；参赛选手"
+                }
+              ]
             },
             {
               "text": "run",
               "meaning": "跑",
               "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "跑；奔跑"
+                }
+              ]
             },
             {
               "text": "cool",
               "meaning": "很棒的；酷的",
               "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "妙极的；酷的"
+                }
+              ]
             },
             {
               "text": "be proud of",
               "meaning": "为……自豪",
               "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "为……自豪"
+                }
+              ]
             },
             {
               "text": "fly",
               "meaning": "飞",
               "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "飞"
+                }
+              ]
             },
             {
               "text": "jump",
               "meaning": "跳",
               "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "跳；跳跃"
+                }
+              ]
             },
             {
               "text": "rabbit",
               "meaning": "兔子",
               "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "兔"
+                }
+              ]
             },
             {
               "text": "walk",
               "meaning": "走路",
               "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "走；行走"
+                }
+              ]
             },
             {
               "text": "umbrella",
               "meaning": "雨伞",
               "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "伞"
+                }
+              ]
             },
             {
               "text": "What's wrong?",
               "meaning": "怎么了？",
               "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "出什么事了？"
+                }
+              ]
             },
             {
               "text": "It doesn't matter.",
               "meaning": "没关系。",
               "vocabularyAudioTrack": "66 Words to use-Unit 2.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "没关系。"
+                }
+              ]
             }
           ],
           "vocabularyAudioEvidence": {
@@ -1641,91 +1827,169 @@
               "meaning": "花园",
               "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "花园；果园；菜园"
+                }
+              ]
             },
             {
               "text": "welcome",
               "meaning": "欢迎",
               "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "（打招呼）欢迎（某人的到来）"
+                }
+              ]
             },
             {
               "text": "open",
               "meaning": "打开",
               "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "开；打开"
+                }
+              ]
             },
             {
               "text": "close",
               "meaning": "关闭",
               "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "关；关闭"
+                }
+              ]
             },
             {
               "text": "flower",
               "meaning": "花",
               "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "花"
+                }
+              ]
             },
             {
               "text": "vegetable",
               "meaning": "蔬菜",
               "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "蔬菜"
+                }
+              ]
             },
             {
               "text": "plant",
               "meaning": "植物；种植",
               "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "植物"
+                }
+              ]
             },
             {
               "text": "beautiful",
               "meaning": "美丽的",
               "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "美丽的"
+                }
+              ]
             },
             {
               "text": "see",
               "meaning": "看见",
               "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "看见；见到"
+                }
+              ]
             },
             {
               "text": "orange tree",
               "meaning": "橘子树",
               "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "橘子树"
+                }
+              ]
             },
             {
               "text": "tomato",
               "meaning": "番茄",
               "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "番茄；西红柿"
+                }
+              ]
             },
             {
               "text": "place",
               "meaning": "地方",
               "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "位置；地点"
+                }
+              ]
             },
             {
               "text": "carrot",
               "meaning": "胡萝卜",
               "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "胡萝卜"
+                }
+              ]
             },
             {
               "text": "leaf",
@@ -1733,42 +1997,78 @@
               "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
               "vocabularyPrintPage": 87,
               "vocabularyPdfPage": 94,
-              "textbookForm": "leaf (pl. leaves)"
+              "textbookForm": "leaf (pl. leaves)",
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "叶子"
+                }
+              ]
             },
             {
               "text": "water",
               "meaning": "水；给……浇水",
               "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "给……浇水"
+                }
+              ]
             },
             {
               "text": "grandpa",
               "meaning": "爷爷；外公",
               "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "（外）祖父；爷爷；外公；姥爷"
+                }
+              ]
             },
             {
               "text": "grow",
               "meaning": "生长",
               "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "（使）生长"
+                }
+              ]
             },
             {
               "text": "grandma",
               "meaning": "奶奶；外婆",
               "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "（外）祖母；奶奶；外婆；姥姥"
+                }
+              ]
             },
             {
               "text": "tea",
               "meaning": "茶",
               "vocabularyAudioTrack": "67 Words to use-Unit 3.mp3",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "茶"
+                }
+              ]
             }
           ],
           "vocabularyAudioEvidence": {
@@ -1806,126 +2106,234 @@
               "meaning": "水",
               "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "水"
+                }
+              ]
             },
             {
               "text": "find",
               "meaning": "找到",
               "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "发现"
+                }
+              ]
             },
             {
               "text": "river",
               "meaning": "河流",
               "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "河；江"
+                }
+              ]
             },
             {
               "text": "lake",
               "meaning": "湖",
               "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "湖；湖泊"
+                }
+              ]
             },
             {
               "text": "sea",
               "meaning": "海",
               "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "海；海洋"
+                }
+              ]
             },
             {
               "text": "water vapour",
               "meaning": "水蒸气",
               "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "水蒸气"
+                }
+              ]
             },
             {
               "text": "from",
               "meaning": "来自",
               "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "prep.",
+                  "meaning": "（表示起始点）从…… 起；（表示来源）来自"
+                }
+              ]
             },
             {
               "text": "little by little",
               "meaning": "一点一点地",
               "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "缓慢地；一点一点地"
+                }
+              ]
             },
             {
               "text": "become",
               "meaning": "变成",
               "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "变成"
+                }
+              ]
             },
             {
               "text": "cloud",
               "meaning": "云",
               "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "云；云朵"
+                }
+              ]
             },
             {
               "text": "rain",
               "meaning": "雨",
               "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "雨；雨水"
+                }
+              ]
             },
             {
               "text": "snow",
               "meaning": "雪",
               "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "雪"
+                }
+              ]
             },
             {
               "text": "ice",
               "meaning": "冰",
               "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "冰"
+                }
+              ]
             },
             {
               "text": "water drop",
               "meaning": "水滴",
               "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "水滴"
+                }
+              ]
             },
             {
               "text": "where",
               "meaning": "在哪里",
               "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adv.",
+                  "meaning": "在哪里；到哪里"
+                }
+              ]
             },
             {
               "text": "cold",
               "meaning": "冷的",
               "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "寒冷的；冷的"
+                }
+              ]
             },
             {
               "text": "when",
               "meaning": "什么时候",
               "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adv.",
+                  "meaning": "什么时候；何时"
+                }
+              ]
             },
             {
               "text": "hot",
               "meaning": "热的",
               "vocabularyAudioTrack": "68 Words to use-Unit 4.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "温度高的；热的"
+                }
+              ]
             }
           ],
           "vocabularyAudioEvidence": {
@@ -1963,119 +2371,221 @@
               "meaning": "帮助",
               "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "帮助"
+                }
+              ]
             },
             {
               "text": "chore",
               "meaning": "家务活",
               "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "日常事务；家务活"
+                }
+              ]
             },
             {
               "text": "busy",
               "meaning": "忙碌的",
               "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "忙碌的"
+                }
+              ]
             },
             {
               "text": "cook",
               "meaning": "做饭",
               "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "烹饪；烹调"
+                }
+              ]
             },
             {
               "text": "do the dishes",
               "meaning": "洗餐具",
               "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "洗碗碟"
+                }
+              ]
             },
             {
               "text": "clean the table",
               "meaning": "擦桌子",
               "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "擦桌子"
+                }
+              ]
             },
             {
               "text": "walk the dog",
               "meaning": "遛狗",
               "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "遛狗"
+                }
+              ]
             },
             {
               "text": "young",
               "meaning": "年轻的",
               "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "幼小的"
+                }
+              ]
             },
             {
               "text": "small",
               "meaning": "小的",
               "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "小的"
+                }
+              ]
             },
             {
               "text": "give your seat",
               "meaning": "让出你的座位",
               "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "让座"
+                }
+              ]
             },
             {
               "text": "excuse me",
               "meaning": "劳驾；打扰了",
               "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "劳驾"
+                }
+              ]
             },
             {
               "text": "old",
               "meaning": "年老的；旧的",
               "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "旧的"
+                }
+              ]
             },
             {
               "text": "clothes",
               "meaning": "衣服",
               "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "衣服；服装"
+                }
+              ]
             },
             {
               "text": "toy",
               "meaning": "玩具",
               "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "玩具"
+                }
+              ]
             },
             {
               "text": "drink water",
               "meaning": "喝水",
               "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "喝水"
+                }
+              ]
             },
             {
               "text": "fall",
               "meaning": "落下",
               "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "掉落；跌落"
+                }
+              ]
             },
             {
               "text": "drop",
               "meaning": "掉落",
               "vocabularyAudioTrack": "69 Words to use-Unit 5.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "使降落；使落下"
+                }
+              ]
             }
           ],
           "vocabularyAudioEvidence": {
@@ -2113,84 +2623,156 @@
               "meaning": "感觉",
               "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "觉得；感到"
+                }
+              ]
             },
             {
               "text": "sometimes",
               "meaning": "有时",
               "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adv.",
+                  "meaning": "有时"
+                }
+              ]
             },
             {
               "text": "happy",
               "meaning": "高兴的",
               "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "感到（或显得）快乐的；高兴的"
+                }
+              ]
             },
             {
               "text": "sad",
               "meaning": "难过的",
               "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "悲哀的；难过的"
+                }
+              ]
             },
             {
               "text": "good",
               "meaning": "好的",
               "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "令人愉快的；好的"
+                }
+              ]
             },
             {
               "text": "bad",
               "meaning": "坏的；不好的",
               "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "令人不快的；坏的"
+                }
+              ]
             },
             {
               "text": "excited",
               "meaning": "兴奋的",
               "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "激动的；兴奋的"
+                }
+              ]
             },
             {
               "text": "but",
               "meaning": "但是",
               "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "conj.",
+                  "meaning": "而；相反"
+                }
+              ]
             },
             {
               "text": "scared",
               "meaning": "害怕的",
               "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "害怕的；恐惧的"
+                }
+              ]
             },
             {
               "text": "tired",
               "meaning": "疲倦的",
               "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "疲倦的；疲劳的"
+                }
+              ]
             },
             {
               "text": "unhappy",
               "meaning": "不开心的",
               "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "不快乐的；悲伤的"
+                }
+              ]
             },
             {
               "text": "What a pity!",
               "meaning": "真遗憾！",
               "vocabularyAudioTrack": "70 Words to use-Unit 6.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "太可惜了！"
+                }
+              ]
             }
           ],
           "vocabularyAudioEvidence": {
@@ -2228,98 +2810,182 @@
               "meaning": "工作",
               "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "工作；职业"
+                }
+              ]
             },
             {
               "text": "brave",
               "meaning": "勇敢的",
               "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "勇敢的"
+                }
+              ]
             },
             {
               "text": "driver",
               "meaning": "司机",
               "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "驾驶员；司机"
+                }
+              ]
             },
             {
               "text": "careful",
               "meaning": "小心的；仔细的",
               "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "小心的；谨慎的"
+                }
+              ]
             },
             {
               "text": "police officer",
               "meaning": "警察",
               "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "警察；警员"
+                }
+              ]
             },
             {
               "text": "dream",
               "meaning": "梦想",
               "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "梦想；理想"
+                }
+              ]
             },
             {
               "text": "engineer",
               "meaning": "工程师",
               "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "工程师；设计师"
+                }
+              ]
             },
             {
               "text": "writer",
               "meaning": "作家",
               "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "作家；作者"
+                }
+              ]
             },
             {
               "text": "doctor",
               "meaning": "医生",
               "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "医生；大夫"
+                }
+              ]
             },
             {
               "text": "chef",
               "meaning": "厨师",
               "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "厨师；（尤指餐馆、旅馆等的）主厨"
+                }
+              ]
             },
             {
               "text": "astronaut",
               "meaning": "航天员",
               "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "宇航员；航天员"
+                }
+              ]
             },
             {
               "text": "spaceship",
               "meaning": "宇宙飞船",
               "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "（航天）飞船"
+                }
+              ]
             },
             {
               "text": "difficult",
               "meaning": "困难的",
               "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "困难的；难做的"
+                }
+              ]
             },
             {
               "text": "What about you?",
               "meaning": "你呢？",
               "vocabularyAudioTrack": "71 Words to use-Unit 7.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "你（们）呢？"
+                }
+              ]
             }
           ],
           "vocabularyAudioEvidence": {
@@ -2357,63 +3023,125 @@
               "meaning": "图书馆",
               "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "图书馆"
+                }
+              ]
             },
             {
               "text": "there",
               "meaning": "在那里",
               "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adv.",
+                  "meaning": "在那里；到那里"
+                }
+              ]
             },
             {
               "text": "find the way",
               "meaning": "找到路",
               "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "找到路"
+                }
+              ]
             },
             {
               "text": "parent",
               "meaning": "父亲或母亲",
               "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "父亲或母亲"
+                }
+              ]
             },
             {
               "text": "get to",
               "meaning": "到达",
               "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "到达"
+                }
+              ]
             },
             {
               "text": "walk along",
               "meaning": "沿着……走",
               "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "沿着……走"
+                }
+              ]
             },
             {
               "text": "road",
               "meaning": "道路",
               "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "路；道路；公路"
+                }
+              ]
             },
             {
               "text": "left",
               "meaning": "左边",
               "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adv.",
+                  "meaning": "在左边；向左"
+                },
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "左边"
+                }
+              ]
             },
             {
               "text": "right",
               "meaning": "右边",
               "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adv.",
+                  "meaning": "在右边；向右"
+                },
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "右边"
+                }
+              ]
             },
             {
               "text": "ask for help",
@@ -2422,63 +3150,117 @@
               "vocabularyPrintPage": 89,
               "vocabularyPdfPage": 96,
               "textbookForm": "ask … for help",
-              "verificationNote": "原书带宾语空位，表示向某人寻求帮助；沿用原有学习词头。"
+              "verificationNote": "原书带宾语空位，表示向某人寻求帮助；沿用原有学习词头。",
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "请……帮忙"
+                }
+              ]
             },
             {
               "text": "mum",
               "meaning": "妈妈",
               "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "妈妈"
+                }
+              ]
             },
             {
               "text": "museum",
               "meaning": "博物馆",
               "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "博物馆"
+                }
+              ]
             },
             {
               "text": "stay",
               "meaning": "停留",
               "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "停留；待"
+                }
+              ]
             },
             {
               "text": "wait for",
               "meaning": "等待",
               "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "等待"
+                }
+              ]
             },
             {
               "text": "phone",
               "meaning": "电话",
               "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "电话"
+                }
+              ]
             },
             {
               "text": "lost",
               "meaning": "迷路的",
               "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "迷路的"
+                }
+              ]
             },
             {
               "text": "call",
               "meaning": "打电话",
               "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "打电话叫"
+                }
+              ]
             },
             {
               "text": "Here we are.",
               "meaning": "我们到了。",
               "vocabularyAudioTrack": "72 Words to use-Unit 8.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "我们到了。"
+                }
+              ]
             }
           ],
           "vocabularyAudioEvidence": {
@@ -2516,98 +3298,182 @@
               "meaning": "特殊的日子",
               "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "特别的日子"
+                }
+              ]
             },
             {
               "text": "miss",
               "meaning": "想念",
               "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "怀念；思念"
+                }
+              ]
             },
             {
               "text": "get together",
               "meaning": "团聚",
               "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "团聚；聚会"
+                }
+              ]
             },
             {
               "text": "the Double Ninth Festival",
               "meaning": "重阳节",
               "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "重阳节"
+                }
+              ]
             },
             {
               "text": "celebrate",
               "meaning": "庆祝",
               "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "庆祝；庆贺"
+                }
+              ]
             },
             {
               "text": "climb the mountain",
               "meaning": "登山",
               "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "爬山"
+                }
+              ]
             },
             {
               "text": "Chinese New Year",
               "meaning": "中国新年",
               "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "春节；中国农历新年"
+                }
+              ]
             },
             {
               "text": "the Spring Festival",
               "meaning": "春节",
               "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "春节"
+                }
+              ]
             },
             {
               "text": "visit",
               "meaning": "拜访；参观",
               "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "拜访；看望；参观"
+                }
+              ]
             },
             {
               "text": "the Lantern Festival",
               "meaning": "元宵节",
               "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "元宵节"
+                }
+              ]
             },
             {
               "text": "holiday",
               "meaning": "假日",
               "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "假期"
+                }
+              ]
             },
             {
               "text": "dragon dance",
               "meaning": "舞龙",
               "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "舞龙表演"
+                }
+              ]
             },
             {
               "text": "Long time no see.",
               "meaning": "好久不见。",
               "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "好久不见。"
+                }
+              ]
             },
             {
               "text": "It's great to see you again.",
               "meaning": "再次见到你真高兴。",
               "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "很高兴再次见到你（们）。"
+                }
+              ]
             },
             {
               "text": "very well",
@@ -2615,7 +3481,13 @@
               "vocabularyAudioTrack": "73 Words to use-Unit 9.mp3",
               "vocabularyPrintPage": 89,
               "vocabularyPdfPage": 96,
-              "textbookForm": "Very well."
+              "textbookForm": "Very well.",
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "很好。"
+                }
+              ]
             }
           ],
           "vocabularyAudioEvidence": {
@@ -2653,21 +3525,39 @@
               "meaning": "食物",
               "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "食物"
+                }
+              ]
             },
             {
               "text": "world",
               "meaning": "世界",
               "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "世界"
+                }
+              ]
             },
             {
               "text": "famous",
               "meaning": "著名的",
               "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "著名的；出名的"
+                }
+              ]
             },
             {
               "text": "noodle",
@@ -2675,84 +3565,156 @@
               "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
               "vocabularyPrintPage": 89,
               "vocabularyPdfPage": 96,
-              "textbookForm": "noodle (pl. noodles)"
+              "textbookForm": "noodle (pl. noodles)",
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "面条"
+                }
+              ]
             },
             {
               "text": "pizza",
               "meaning": "比萨饼",
               "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "比萨饼"
+                }
+              ]
             },
             {
               "text": "sandwich",
               "meaning": "三明治",
               "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "三明治"
+                }
+              ]
             },
             {
               "text": "hot dog",
               "meaning": "热狗",
               "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "热狗（香肠面包）"
+                }
+              ]
             },
             {
               "text": "taste",
               "meaning": "品尝；味道",
               "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "尝起来；尝出……的味道"
+                }
+              ]
             },
             {
               "text": "different",
               "meaning": "不同的",
               "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "不同的；有区别的"
+                }
+              ]
             },
             {
               "text": "long",
               "meaning": "长的",
               "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "（长度或距离）长的"
+                }
+              ]
             },
             {
               "text": "fish and chips",
               "meaning": "炸鱼薯条",
               "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "炸鱼薯条"
+                }
+              ]
             },
             {
               "text": "beef",
               "meaning": "牛肉",
               "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "牛肉"
+                }
+              ]
             },
             {
               "text": "bread",
               "meaning": "面包",
               "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "面包"
+                }
+              ]
             },
             {
               "text": "flour",
               "meaning": "面粉",
               "additionalSense": true,
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "（尤指小麦的）面粉"
+                }
+              ]
             },
             {
               "text": "cake",
               "meaning": "蛋糕",
               "vocabularyAudioTrack": "74 Words to use-Unit 10.mp3",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "糕饼；蛋糕"
+                }
+              ]
             }
           ],
           "vocabularyAudioEvidence": {

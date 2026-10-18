@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-10-18",
+  "scope": "在教材单元义以外保留的常用义；不推定教材年级学期。释义提示为自编，不作为完整词典或中考清单。",
+  "sources": [
+    {
+      "title": "既有基础常用义与 ECDICT 固定版本",
+      "url": "https://github.com/skywind3000/ECDICT/tree/bc015ed2e24a7abef49fc6dbbb7fe32c1dadaf8b"
+    },
+    {
+      "title": "Cambridge · light",
+      "url": "https://dictionary.cambridge.org/dictionary/english/light"
+    }
+  ],
+  "entries": {
+    "present": "n. 礼物；现在\nadj. 出席的；现在的",
+    "match": "n. 火柴；比赛\nv. 相配",
+    "change": "n. 零钱；变化\nv. 改变",
+    "mean": "v. 意思是\nadj. 吝啬的",
+    "taste": "n. 味道",
+    "fish": "n. 鱼；鱼肉\nv. 钓鱼",
+    "rain": "v. 下雨",
+    "snow": "v. 下雪",
+    "art": "n. 艺术",
+    "rice": "n. 大米；稻米",
+    "figure": "n. 数字；人物；身形",
+    "rate": "n. 速度；比率",
+    "circle": "n. 圆\nv. 圈出",
+    "grade": "n. 年级；等级",
+    "introduction": "n. 介绍",
+    "light": "n. 光；灯",
+    "cold": "n. 感冒",
+    "book": "v. 预订",
+    "right": "adj. 正确的",
+    "letter": "n. 字母",
+    "play": "v. 参加（运动）；演奏",
+    "fly": "n. 苍蝇",
+    "shop": "v. 购物",
+    "park": "v. 停车",
+    "go off": "短语 （警报等）响起；离开",
+    "belong": "v. 属于（常用 belong to）"
+  }
+}

@@ -11,6 +11,11 @@
         <button class="quiet notes-source" data-url="{{item.textRevision.sourceUrl}}" bindtap="copyStudySource">复制正文校订依据链接</button>
         <view wx:if="{{item.correctedDetail}}"><view class="muted plan-help">校订正文</view><view class="body">{{item.correctedDetail}}</view></view>
       </view>
+      <view wx:if="{{item.vocabularyRevision}}" class="source-book">
+        <view class="muted plan-help">词义与词形校订 · {{item.vocabularyRevision}}；教材单元用法与页码见下方册次依据。</view>
+        <view wx:if="{{item.correctedDetail}}"><view class="muted plan-help">新版词卡</view><view class="body">{{item.correctedDetail}}</view></view>
+      </view>
+      <view wx:if="{{item.dictionaryReference}}" class="source-book"><view class="muted plan-help">原通用词典参考（含少用义，不作为教材单元义或中考要求）</view><view class="body">{{item.dictionaryReference}}</view></view>
       <view wx:if="{{item.dynastyNote}}" class="muted plan-help">{{item.dynastyNote}}</view>
       <view wx:if="{{item.recitationNote}}" class="muted plan-help">{{item.recitationNote}}</view>
       <view wx:for="{{item.sourceMappings}}" wx:for-item="mapping" wx:key="displayKey" class="source-book muted">

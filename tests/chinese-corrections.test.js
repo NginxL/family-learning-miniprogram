@@ -156,7 +156,7 @@ test('old completed and planned texts show correction without rewriting stored t
     assert.equal(withContentSources(decorate(fresh)).textCorrectionNotice,'');assert.equal(withContentSources(decorate(fresh)).correctedDetail,'');
   }
   const custom=withContentSources(decorate({id:'custom',title:current.title,kind:'poetry',detail:oldBody}));assert.equal(custom.textRevision,undefined);
-  assert.equal(withContentSources(decorate({...learning.taskFrom(item('word-read'),'child','old-word','manual'),detail:'旧词义'})).textCorrectionNotice,'');
+  assert.match(withContentSources(decorate({...learning.taskFrom(item('word-read'),'child','old-word','manual'),detail:'旧词义'})).textCorrectionNotice,/词义和词形说明已校订/);
   for (const id of ['skill-zh-sh54-caochong','skill-zh-sh54-dadao-zhixing','skill-zh-'+prefix+'042']) {
     const currentLesson=item(id), legacyLesson=beforeChineseCorrections(currentLesson);
     const oldTask={...learning.taskFrom(legacyLesson,'child',`old-${id}`,'manual'),done:true};

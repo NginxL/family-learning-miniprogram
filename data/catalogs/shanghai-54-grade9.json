@@ -1109,49 +1109,91 @@
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "青少年的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "十几岁的（指 13 至 19 岁）；青少年的"
+                }
+              ]
             },
             {
               "text": "counsellor",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "辅导员",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "顾问"
+                }
+              ]
             },
             {
               "text": "pimple",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "粉刺",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "粉刺"
+                }
+              ]
             },
             {
               "text": "none",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "一个也没有",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "pron.",
+                  "meaning": "没有一个；毫无"
+                }
+              ]
             },
             {
               "text": "stress",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "压力",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "压力"
+                }
+              ]
             },
             {
               "text": "boss",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "老板",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "老板"
+                }
+              ]
             },
             {
               "text": "emotional",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "情绪上的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "情感的；情绪的"
+                }
+              ]
             },
             {
               "text": "behavioural",
@@ -1159,196 +1201,376 @@
               "vocabularyPdfPage": 139,
               "meaning": "行为方面的",
               "additionalSense": true,
-              "textbookForm": "behavioural (AmE behavioral)"
+              "textbookForm": "behavioural (AmE behavioral)",
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "行为的；行为上的"
+                }
+              ]
             },
             {
               "text": "emotion",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "情感",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "情感；情绪"
+                }
+              ]
             },
             {
               "text": "peer",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "同龄人",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "同龄人"
+                }
+              ]
             },
             {
               "text": "pressure",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "心理压力",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "心理压力；紧张"
+                }
+              ]
             },
             {
               "text": "fool",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "傻瓜；愚弄",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "蠢人；傻瓜"
+                },
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "欺骗；愚弄"
+                }
+              ]
             },
             {
               "text": "Christmas",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "圣诞节",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "圣诞节"
+                }
+              ]
             },
             {
               "text": "counsel",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "提供咨询",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "提供专业咨询"
+                }
+              ]
             },
             {
               "text": "ugly",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "难看的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "丑陋的"
+                }
+              ]
             },
             {
               "text": "duckling",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "小鸭",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "小鸭子"
+                }
+              ]
             },
             {
               "text": "tiny",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "极小的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "极小的；微小的"
+                }
+              ]
             },
             {
               "text": "speak highly of",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "高度赞扬",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "赞扬"
+                }
+              ]
             },
             {
               "text": "struggle",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "努力抗争",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "挣扎"
+                }
+              ]
             },
             {
               "text": "blow",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "打击；吹",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "打击；挫折"
+                },
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "吹"
+                }
+              ]
             },
             {
               "text": "pass away",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "去世",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "去世"
+                }
+              ]
             },
             {
               "text": "poverty",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "贫困",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "贫穷；贫困"
+                }
+              ]
             },
             {
               "text": "ballet",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "芭蕾舞",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "芭蕾舞"
+                }
+              ]
             },
             {
               "text": "pay off",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "取得回报",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "取得成功；得到好结果"
+                }
+              ]
             },
             {
               "text": "continue",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "继续",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "继续"
+                }
+              ]
             },
             {
               "text": "appearance",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "外貌",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "外表；外貌"
+                }
+              ]
             },
             {
               "text": "lonely",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "孤独的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "孤独的；寂寞的"
+                }
+              ]
             },
             {
               "text": "fairy tale",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "童话",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "童话"
+                }
+              ]
             },
             {
               "text": "bitter",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "痛苦的；苦的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "使人痛苦的；味苦的"
+                }
+              ]
             },
             {
               "text": "admit",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "承认",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "承认"
+                }
+              ]
             },
             {
               "text": "reflection",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "反映；倒影",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "反映"
+                }
+              ]
             },
             {
               "text": "treasure",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "珍宝；珍视",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "极贵重的物品；珍宝"
+                },
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "珍视；珍爱"
+                }
+              ]
             },
             {
               "text": "national treasure",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "国宝",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "国宝"
+                }
+              ]
             },
             {
               "text": "rehearse",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "排练",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "排练；排演"
+                }
+              ]
             },
             {
               "text": "nervous",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "紧张的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "紧张的"
+                }
+              ]
             }
           ],
           "practice": {
@@ -1382,77 +1604,147 @@
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "必要条件",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "要求；必要条件"
+                }
+              ]
             },
             {
               "text": "interior",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "内部的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "内部的"
+                }
+              ]
             },
             {
               "text": "architecture",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "建筑学",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "建筑学"
+                }
+              ]
             },
             {
               "text": "patient",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "患者；有耐心的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "患者；病人"
+                },
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "忍耐的；有耐心的"
+                }
+              ]
             },
             {
               "text": "equipment",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "设备",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "设备；装备"
+                }
+              ]
             },
             {
               "text": "delivery",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "递送",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "传送；递送"
+                }
+              ]
             },
             {
               "text": "journalist",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "记者",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "新闻工作者"
+                }
+              ]
             },
             {
               "text": "chemistry",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "化学",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "化学"
+                }
+              ]
             },
             {
               "text": "interviewee",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "受访者",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "接受采访者"
+                }
+              ]
             },
             {
               "text": "parcel",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "包裹",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "包裹"
+                }
+              ]
             },
             {
               "text": "certification",
               "vocabularyPrintPage": 132,
               "vocabularyPdfPage": 139,
               "meaning": "认证证明",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "证明；出具课程结业证书"
+                }
+              ]
             },
             {
               "text": "organise",
@@ -1460,105 +1752,203 @@
               "vocabularyPdfPage": 139,
               "meaning": "组织",
               "additionalSense": true,
-              "textbookForm": "organise (AmE organize)"
+              "textbookForm": "organise (AmE organize)",
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "组织；筹备"
+                }
+              ]
             },
             {
               "text": "standard",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "标准",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "标准的；通常的"
+                },
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "标准；水平；水准"
+                }
+              ]
             },
             {
               "text": "restorer",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "修复师",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "修补者；修复者"
+                }
+              ]
             },
             {
               "text": "restoration",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "修复",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "（损坏的建筑物、艺术品等的）修复"
+                }
+              ]
             },
             {
               "text": "period",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "时期",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "一段时间；时期"
+                }
+              ]
             },
             {
               "text": "due to",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "由于",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "由于；因为"
+                }
+              ]
             },
             {
               "text": "worm",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "蠕虫",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "（昆虫的）幼虫；蠕虫"
+                }
+              ]
             },
             {
               "text": "damp",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "潮湿的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "湿气；潮湿"
+                }
+              ]
             },
             {
               "text": "professional",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "专业的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "职业的；专业的"
+                }
+              ]
             },
             {
               "text": "fix",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "修理",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "修理；校准；校正"
+                }
+              ]
             },
             {
               "text": "army",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "军队",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "军队"
+                }
+              ]
             },
             {
               "text": "race",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "竞赛",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "（和……）比赛"
+                },
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "赛跑"
+                }
+              ]
             },
             {
               "text": "extra",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "额外的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "额外的"
+                }
+              ]
             },
             {
               "text": "background",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "背景",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "出身背景；学历；经历"
+                }
+              ]
             },
             {
               "text": "scientific",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "科学的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "科学的"
+                }
+              ]
             },
             {
               "text": "digitalisation",
@@ -1566,42 +1956,78 @@
               "vocabularyPdfPage": 140,
               "meaning": "数字化",
               "additionalSense": true,
-              "textbookForm": "digitalisation (AmE digitalization)"
+              "textbookForm": "digitalisation (AmE digitalization)",
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "数字化"
+                }
+              ]
             },
             {
               "text": "unwilling",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "不情愿的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "不愿意的；不情愿的"
+                }
+              ]
             },
             {
               "text": "lawyer",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "律师",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "律师"
+                }
+              ]
             },
             {
               "text": "postman",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "邮递员",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "（pl. postmen） 邮递员"
+                }
+              ]
             },
             {
               "text": "policewoman",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "女警察",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "（pl. policewomen） 女警察"
+                }
+              ]
             },
             {
               "text": "dentist",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "牙医",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "牙科医生"
+                }
+              ]
             }
           ],
           "practice": {
@@ -1635,252 +2061,472 @@
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "必需品；必要的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "必不可少的东西；必需品"
+                },
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "完全必要的；必不可少的；极其重要的"
+                }
+              ]
             },
             {
               "text": "wherever",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "无论哪里",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "conj.",
+                  "meaning": "在任何地方；无论哪里"
+                }
+              ]
             },
             {
               "text": "passport",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "护照",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "护照"
+                }
+              ]
             },
             {
               "text": "toothbrush",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "牙刷",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "牙刷"
+                }
+              ]
             },
             {
               "text": "first-aid",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "急救的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "急救用的"
+                }
+              ]
             },
             {
               "text": "kit",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "成套用品",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "成套装备"
+                }
+              ]
             },
             {
               "text": "adapter",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "转接器",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "（电器设备的）转换插头，适配器"
+                }
+              ]
             },
             {
               "text": "mobile",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "移动的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "手机的；可移动设备的；可移动的"
+                }
+              ]
             },
             {
               "text": "mobile phone",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "手机",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "手机"
+                }
+              ]
             },
             {
               "text": "charger",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "充电器",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "充电器"
+                }
+              ]
             },
             {
               "text": "abroad",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "在国外",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adv.",
+                  "meaning": "在国外；到国外"
+                }
+              ]
             },
             {
               "text": "pack",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "打包",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "收拾（行李）"
+                }
+              ]
             },
             {
               "text": "worth",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "值得的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "（指行动）值得，有价值的；有……价值的"
+                }
+              ]
             },
             {
               "text": "stall",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "货摊",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "货摊，摊位，售货亭（尤指集市上的）"
+                }
+              ]
             },
             {
               "text": "empty",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "空的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "空的"
+                }
+              ]
             },
             {
               "text": "stomach",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "胃",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "胃"
+                }
+              ]
             },
             {
               "text": "persuade",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "说服",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "劝说；说服"
+                }
+              ]
             },
             {
               "text": "expedition",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "探险旅行",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "（短途的）旅行，出行"
+                }
+              ]
             },
             {
               "text": "souvenir",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "纪念品",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "纪念物；纪念品"
+                }
+              ]
             },
             {
               "text": "inspiring",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "鼓舞人心的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "鼓舞人心的；激励的"
+                }
+              ]
             },
             {
               "text": "define",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "界定",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "给……下定义"
+                }
+              ]
             },
             {
               "text": "hesitate",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "犹豫",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "犹豫；踌躇"
+                }
+              ]
             },
             {
               "text": "similarly",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "同样地",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adv.",
+                  "meaning": "相似地；类似地；差不多地"
+                }
+              ]
             },
             {
               "text": "thought",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "想法",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "考虑；深思；想法；看法；主意；记忆"
+                }
+              ]
             },
             {
               "text": "introduction",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
-              "meaning": "介绍",
-              "additionalSense": true
+              "meaning": "初次经历；首次体验",
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "初次经历；首次体验"
+                }
+              ]
             },
             {
               "text": "invitation",
               "vocabularyPrintPage": 133,
               "vocabularyPdfPage": 140,
               "meaning": "邀请",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "（口头或书面的）邀请"
+                }
+              ]
             },
             {
               "text": "regular",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "定期的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "频繁的；有规律的；定时的"
+                }
+              ]
             },
             {
               "text": "coffee",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "咖啡",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "咖啡"
+                }
+              ]
             },
             {
               "text": "shocked",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "震惊的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "震惊的"
+                }
+              ]
             },
             {
               "text": "ease",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "自在；缓解",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "舒适；自在；安逸"
+                }
+              ]
             },
             {
               "text": "educate",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "教育",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "（在学校）教育，教导"
+                }
+              ]
             },
             {
               "text": "visible",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "可见的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "明显的"
+                }
+              ]
             },
             {
               "text": "manner",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "方式",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "方式；方法；举止；态度"
+                }
+              ]
             },
             {
               "text": "unplanned",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "未计划的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "未计划（或筹划）的；意外的"
+                }
+              ]
             },
             {
               "text": "plate",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "盘子",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "盘子；碟子"
+                }
+              ]
             },
             {
               "text": "harmonious",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "和谐的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "友好和睦的；和谐的"
+                }
+              ]
             },
             {
               "text": "honour",
@@ -1888,28 +2534,52 @@
               "vocabularyPdfPage": 141,
               "meaning": "尊敬；荣誉",
               "additionalSense": true,
-              "textbookForm": "honour (AmE honor)"
+              "textbookForm": "honour (AmE honor)",
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "尊敬，尊重（某人）"
+                }
+              ]
             },
             {
               "text": "memorable",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "难忘的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "值得纪念的；难忘的"
+                }
+              ]
             },
             {
               "text": "version",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "版本",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "（电影、剧本、乐曲等的）版本，改写本"
+                }
+              ]
             },
             {
               "text": "sand",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "沙子",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "沙；沙子"
+                }
+              ]
             }
           ],
           "practice": {
@@ -1943,175 +2613,329 @@
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "西装",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "套装；西服"
+                }
+              ]
             },
             {
               "text": "exhibition",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "展览",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "展览；展出"
+                }
+              ]
             },
             {
               "text": "sandwich",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "三明治",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "三明治"
+                }
+              ]
             },
             {
               "text": "biscuit",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "饼干",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "饼干"
+                }
+              ]
             },
             {
               "text": "leather",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "皮革",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "皮革"
+                }
+              ]
             },
             {
               "text": "blouse",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "女式衬衫",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "（女式）短上衣，衬衫"
+                }
+              ]
             },
             {
               "text": "be all ears",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "专心倾听",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "洗耳恭听"
+                }
+              ]
             },
             {
               "text": "lunar",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "月亮的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "月球的；月亮的"
+                }
+              ]
             },
             {
               "text": "suppose",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "认为；假设",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "（根据所知）认为，推断，料想"
+                }
+              ]
             },
             {
               "text": "beer",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "啤酒",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "啤酒"
+                }
+              ]
             },
             {
               "text": "sausage",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "香肠",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "香肠"
+                }
+              ]
             },
             {
               "text": "mirror",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "镜子；映照",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "写照；反映；镜子"
+                }
+              ]
             },
             {
               "text": "exist",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "存在",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "存在"
+                }
+              ]
             },
             {
               "text": "identity",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "身份特征",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "身份；特征"
+                }
+              ]
             },
             {
               "text": "unite",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "团结",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "团结"
+                }
+              ]
             },
             {
               "text": "identify",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "确认身份",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "确认；认出"
+                }
+              ]
             },
             {
               "text": "identify with",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "认同",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "认同；支持；与……有密切关联"
+                }
+              ]
             },
             {
               "text": "relate",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "联系",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "联系；把……联系起来"
+                }
+              ]
             },
             {
               "text": "relate to",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "涉及；理解并共鸣",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "理解；认同；与……产生共鸣"
+                }
+              ]
             },
             {
               "text": "ancestor",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "祖先",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "祖先"
+                }
+              ]
             },
             {
               "text": "value",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "重视；价值",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "重视；珍视"
+                },
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "价值"
+                }
+              ]
             },
             {
               "text": "achieve",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "实现",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "（凭长期努力）达到（某目标、地位、标准）"
+                }
+              ]
             },
             {
               "text": "conclude",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "得出结论",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "得出结论"
+                }
+              ]
             },
             {
               "text": "die out",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "逐渐消失",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "消失；灭绝"
+                }
+              ]
             },
             {
               "text": "spoon",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "勺子",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "勺；匙"
+                }
+              ]
             }
           ],
           "practice": {
@@ -2145,259 +2969,489 @@
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "建造",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "修建；建立"
+                }
+              ]
             },
             {
               "text": "sphere",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "球体",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "球；球体；球形"
+                }
+              ]
             },
             {
               "text": "CBD",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "中央商务区",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "abbr.",
+                  "meaning": "（= central businessdistrict） 中央商务区"
+                }
+              ]
             },
             {
               "text": "locate",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "位于",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "把……安置在（或建造于）"
+                }
+              ]
             },
             {
               "text": "steel",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "钢",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "钢；钢铁"
+                }
+              ]
             },
             {
               "text": "limit",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "限制",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "限度；限制；界限"
+                }
+              ]
             },
             {
               "text": "combine",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "结合",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "（使）结合，组合，联合，混合"
+                }
+              ]
             },
             {
               "text": "modernist",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "现代主义者；现代主义的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "（尤指艺术）现代主义的"
+                },
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "（尤指艺术的）现代主义者"
+                }
+              ]
             },
             {
               "text": "feature",
               "vocabularyPrintPage": 134,
               "vocabularyPdfPage": 141,
               "meaning": "特征",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "特色；特征"
+                }
+              ]
             },
             {
               "text": "skylight",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "天窗",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "（房顶的）天窗"
+                }
+              ]
             },
             {
               "text": "concrete",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "混凝土",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "混凝土"
+                }
+              ]
             },
             {
               "text": "pavilion",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "亭子",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "（公园中的）亭，阁"
+                }
+              ]
             },
             {
               "text": "northern",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "北方的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "北方的；北部的"
+                }
+              ]
             },
             {
               "text": "inner",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "内部的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "内部的"
+                }
+              ]
             },
             {
               "text": "court",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "庭院",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "庭院"
+                }
+              ]
             },
             {
               "text": "southern",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "南方的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "南方的；南部的"
+                }
+              ]
             },
             {
               "text": "outer",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "外部的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "外面的"
+                }
+              ]
             },
             {
               "text": "supreme",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "最高的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "（级别或地位）最高的，至高无上的"
+                }
+              ]
             },
             {
               "text": "symbol",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "象征",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "象征；符号"
+                }
+              ]
             },
             {
               "text": "emperor",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "皇帝",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "皇帝"
+                }
+              ]
             },
             {
               "text": "slippery",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "滑的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "滑的"
+                }
+              ]
             },
             {
               "text": "structure",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "结构",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "结构；构造"
+                }
+              ]
             },
             {
               "text": "nail",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "钉子",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "钉子"
+                }
+              ]
             },
             {
               "text": "yet",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "然而；还",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "conj.",
+                  "meaning": "但是；然而"
+                },
+                {
+                  "partOfSpeech": "adv.",
+                  "meaning": "（用于否定句和疑问句，谈论尚未发生但可能发生的事）"
+                }
+              ]
             },
             {
               "text": "upturned",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "向上翘的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "向上翘的；面朝上的"
+                }
+              ]
             },
             {
               "text": "dragon",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "龙",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "龙"
+                }
+              ]
             },
             {
               "text": "stone",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "石头",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "石头；石块；石子"
+                }
+              ]
             },
             {
               "text": "jade",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "玉",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "碧玉；翡翠"
+                }
+              ]
             },
             {
               "text": "carve",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "雕刻",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "雕刻；切开"
+                }
+              ]
             },
             {
               "text": "reflect",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "反映",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "反射；反映"
+                }
+              ]
             },
             {
               "text": "golden",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "金色的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "金色的；黄金般的"
+                }
+              ]
             },
             {
               "text": "brick",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "砖",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "砖"
+                }
+              ]
             },
             {
               "text": "construction",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "建造",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "建造；建筑物"
+                }
+              ]
             },
             {
               "text": "collection",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "收藏品",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "（常指同类的）收集物，收藏品"
+                }
+              ]
             },
             {
               "text": "guy",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "家伙",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "家伙；伙计们"
+                }
+              ]
             },
             {
               "text": "suburb",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "郊区",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "郊区"
+                }
+              ]
             },
             {
               "text": "environmentally friendly",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "环境友好的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "对环境友好的"
+                }
+              ]
             }
           ],
           "practice": {
@@ -2431,210 +3485,394 @@
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "污染",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "污染"
+                }
+              ]
             },
             {
               "text": "loss",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "损失",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "减少；丧失；损失"
+                }
+              ]
             },
             {
               "text": "soil",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "土壤",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "土壤"
+                }
+              ]
             },
             {
               "text": "cough",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "咳嗽",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "咳嗽；咳嗽声"
+                },
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "咳嗽"
+                }
+              ]
             },
             {
               "text": "shark",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "鲨鱼",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "鲨鱼"
+                }
+              ]
             },
             {
               "text": "compare",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "比较",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "比较；对比"
+                }
+              ]
             },
             {
               "text": "air conditioner",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "空调",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "空调"
+                }
+              ]
             },
             {
               "text": "road",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "道路",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "路；道路；公路"
+                }
+              ]
             },
             {
               "text": "spill",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "洒出；泄漏",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "泄漏（量）"
+                }
+              ]
             },
             {
               "text": "mine",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "矿井；采矿",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "（在某地）开矿，采矿"
+                }
+              ]
             },
             {
               "text": "solution",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "解决办法",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "解决办法；处理手段"
+                }
+              ]
             },
             {
               "text": "break down",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "分解",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "分解"
+                }
+              ]
             },
             {
               "text": "harmful",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "有害的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "有害的"
+                }
+              ]
             },
             {
               "text": "solve",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "解决",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "解决；处理"
+                }
+              ]
             },
             {
               "text": "remotely",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "远程地",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adv.",
+                  "meaning": "远程地"
+                }
+              ]
             },
             {
               "text": "operate",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "操控",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "操作；控制"
+                }
+              ]
             },
             {
               "text": "vehicle",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "车辆",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "车辆"
+                }
+              ]
             },
             {
               "text": "ROV",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "遥控潜水器",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "abbr.",
+                  "meaning": "（= remotely-operatedvehicle） 远程操纵潜水器"
+                }
+              ]
             },
             {
               "text": "bottom",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "底部",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "底部"
+                }
+              ]
             },
             {
               "text": "stand out",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "突出",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "显眼；突出"
+                }
+              ]
             },
             {
               "text": "unnatural",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "不自然的",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "非自然的"
+                }
+              ]
             },
             {
               "text": "go after",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "追求",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "追求；谋求"
+                }
+              ]
             },
             {
               "text": "expert",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "专家",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "专家"
+                }
+              ]
             },
             {
               "text": "workshop",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "研讨会",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "研讨会；讲习班"
+                }
+              ]
             },
             {
               "text": "university",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
               "meaning": "大学",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "大学"
+                }
+              ]
             },
             {
               "text": "pick up",
               "vocabularyPrintPage": 135,
               "vocabularyPdfPage": 142,
-              "meaning": "拾起",
-              "additionalSense": true
+              "meaning": "学会",
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "学会"
+                }
+              ]
             },
             {
               "text": "blossom",
               "vocabularyPrintPage": 136,
               "vocabularyPdfPage": 143,
               "meaning": "开花",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "开花"
+                }
+              ]
             },
             {
               "text": "peace",
               "vocabularyPrintPage": 136,
               "vocabularyPdfPage": 143,
               "meaning": "和平",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "和平；太平"
+                }
+              ]
             },
             {
               "text": "proposal",
               "vocabularyPrintPage": 136,
               "vocabularyPdfPage": 143,
               "meaning": "提议",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "建议"
+                }
+              ]
             },
             {
               "text": "sincerely",
               "vocabularyPrintPage": 136,
               "vocabularyPdfPage": 143,
               "meaning": "真诚地",
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adv.",
+                  "meaning": "（用于正式信函末尾署名前）谨致问候"
+                }
+              ]
             }
           ],
           "practice": {

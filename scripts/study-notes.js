@@ -37,17 +37,26 @@ function augment(items) {
     const item = byId.get(entry.contentId);
     if (![item?.title, ...(item?.aliases || [])].includes(entry.lemma)) throw Error(`Word-note headword mismatch: ${entry.contentId}`);
     if (!entry.forms.length && !entry.patterns.length && !entry.families.length) throw Error(`Empty word note: ${entry.contentId}`);
+    const missingSenses = new Set();
+    for (const form of entry.forms) {
+      if (!form.sense?.partOfSpeech || !form.sense.meaning) throw Error(`Unbound inflection: ${entry.contentId}/${form.label}`);
+      const sense = `${form.sense.partOfSpeech} ${form.sense.meaning}`;
+      if (!item.detail.includes(sense)) missingSenses.add(sense);
+    }
+    if (missingSenses.size) item.detail += `\n\n词形对应义：\n${[...missingSenses].join('\n')}`;
+    if (entry.forms.length) item.vocabularyRevision = '2026-10-18';
     const sections = [];
-    if (entry.forms.length) sections.push({ title: '常用词形', body: entry.forms.map(form => `${form.label}：${form.value}`).join('\n') });
+    if (entry.forms.length) sections.push({ title: '常用词形', body: entry.forms.map(form => `${form.sense.partOfSpeech} ${form.sense.meaning}\n${form.label}：${form.value}`).join('\n\n') });
     if (entry.patterns.length) sections.push({ title: '短语与搭配', body: entry.patterns.map(pattern =>
       `${pattern.pattern} · ${pattern.meaning}\n${pattern.example}\n${pattern.translation}\n${pattern.note}`).join('\n\n') });
     if (entry.families.length) sections.push({ title: '词族联系', body: entry.families.map(family => `${family.words}\n${family.note}`).join('\n\n') });
     if (entry.pitfalls.length) sections.push({ title: '容易混淆', body: entry.pitfalls.join('\n') });
     const form = entry.forms.find(form => form.label === '动词过去式') || entry.forms[0];
     const pattern = entry.patterns[0];
-    const formWord = entry.formMeaning && form?.label.startsWith('动词') ? `${entry.lemma}（${entry.formMeaning}）` : entry.lemma;
-    const exercises = [form ? { question: `回忆 ${formWord} 的${form.label}。`, answer: `${form.value}${entry.pitfalls.length ? `。提示：${entry.pitfalls[0]}` : ''}` }
-      : { question: `用自己的话解释 ${pattern?.pattern || entry.lemma} 的用法，并造一个句子。`,
+    const formWord = form ? `${entry.lemma}（${form.sense.meaning}）` : entry.lemma;
+    const openAnswer = form && /表达/.test(form.label);
+    const exercises = [form ? { question: openAnswer ? `用 ${formWord} 写出一个${form.label}。` : `回忆 ${formWord} 的${form.label}。`, answer: `${openAnswer ? '示例（其他符合此义的正确表达也可）：' : ''}${form.value}${entry.pitfalls.length ? `。提示：${entry.pitfalls[0]}` : ''}` }
+      : { question: pattern ? `用自己的话解释 ${pattern.pattern} 的用法，并造一个句子。` : `写出 ${entry.lemma} 的相关词族及词性，说明它们之间的联系。`,
         answer: pattern ? `参考：${pattern.meaning}。${pattern.note}\n自编例句：${pattern.example}\n${pattern.translation}` : entry.families.map(f => `${f.words}\n${f.note}`).join('\n') }];
     if (pattern && form) exercises.push({ question: `说明 ${pattern.pattern} 的含义，并用它造句。`,
       answer: `参考：${pattern.meaning}。${pattern.note}\n自编例句：${pattern.example}\n${pattern.translation}` });

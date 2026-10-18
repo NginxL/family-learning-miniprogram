@@ -9,15 +9,16 @@ const recitations = require('../data/catalogs/chinese-recitation-requirements.js
 const { decorate } = require('../miniprogram/lib/page');
 const { fixture } = require('./helpers');
 const { beforeChineseCorrections } = require('./chinese-baseline-helper');
+const { withoutWordPresentation } = require('./english-baseline-helper');
 const compact = value => value.replace(/[\s，。；、！？：“”‘’]/g, '');
 const event = id => ({ currentTarget: { dataset: { id } } });
 
-test('supplemental guides preserve identities, placement and automatic pools with only reviewed Chinese corrections', () => {
-  // Independent baseline at c6c4f8f; approved Chinese field changes are checked separately.
-  const original = knowledge.map(({ studyNotes, recitationRequirements, ...item }) => beforeChineseCorrections(item));
+test('supplemental guides preserve identities, placement and automatic pools with reviewed content corrections', () => {
+  // Independently projected b59064e baseline; corrected word presentation has dedicated semantic tests.
+  const original = knowledge.map(({ studyNotes, recitationRequirements, ...item }) => withoutWordPresentation(beforeChineseCorrections(item)));
   assert.equal(original.length, 4190);
   assert.equal(crypto.createHash('sha256').update(JSON.stringify(original)).digest('hex'),
-    '3774d9f395e3374a0b4784ef392b86d79c46129764356fb561279e17b0a023c4');
+    'e0dab3ba5dba328f670aded05c0392075ec9bb90b68a2cf15f0bb2d10527f96d');
   assert.equal(learning.catalog.length, 4234);
   const family = { children: [{ id: 'child' }], plans: [], autoPlans: { child: learning.emptyRules() } };
   for (const scope of ['starter', 'foundation', 'moe-all', 'tables', 'shanghai54', 'all']) {

@@ -1607,7 +1607,13 @@
               "meaning": "教室",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "教室"
+                }
+              ]
             },
             {
               "text": "keep tidy",
@@ -1615,84 +1621,156 @@
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
               "vocabularyPdfPage": 94,
-              "textbookForm": "keep … tidy"
+              "textbookForm": "keep … tidy",
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "保持……整洁"
+                }
+              ]
             },
             {
               "text": "sports field",
               "meaning": "运动场",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "运动场"
+                }
+              ]
             },
             {
               "text": "hall",
               "meaning": "大厅；礼堂",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "礼堂"
+                }
+              ]
             },
             {
               "text": "begin",
               "meaning": "开始",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "开始"
+                }
+              ]
             },
             {
               "text": "project",
               "meaning": "项目；课题",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "学校的课题"
+                }
+              ]
             },
             {
               "text": "computer room",
               "meaning": "电脑教室",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "计算机机房"
+                }
+              ]
             },
             {
               "text": "let",
               "meaning": "让",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "允许；让"
+                }
+              ]
             },
             {
               "text": "bamboo",
               "meaning": "竹子",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "竹子"
+                }
+              ]
             },
             {
               "text": "school building",
               "meaning": "教学楼",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "教学楼"
+                }
+              ]
             },
             {
               "text": "tall",
               "meaning": "高的",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "高大的"
+                }
+              ]
             },
             {
               "text": "student",
               "meaning": "学生",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "学生"
+                }
+              ]
             },
             {
               "text": "art room",
               "meaning": "美术教室",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "美术教室"
+                }
+              ]
             },
             {
               "text": "sure",
@@ -1700,7 +1778,13 @@
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
               "vocabularyPdfPage": 94,
-              "textbookForm": "Sure."
+              "textbookForm": "Sure.",
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "当然。"
+                }
+              ]
             },
             {
               "text": "See you soon",
@@ -1708,7 +1792,13 @@
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
               "vocabularyPdfPage": 94,
-              "textbookForm": "See you soon."
+              "textbookForm": "See you soon.",
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "一会儿见。"
+                }
+              ]
             },
             {
               "text": "library",
@@ -1753,35 +1843,65 @@
               "meaning": "可爱的",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "令人愉快的；极好的"
+                }
+              ]
             },
             {
               "text": "great",
               "meaning": "很好的；很棒的",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "好极的；使人快乐的"
+                }
+              ]
             },
             {
               "text": "often",
               "meaning": "经常",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adv.",
+                  "meaning": "时常"
+                }
+              ]
             },
             {
               "text": "always",
               "meaning": "总是",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adv.",
+                  "meaning": "总是"
+                }
+              ]
             },
             {
               "text": "interesting",
               "meaning": "有趣的",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "有趣的；有吸引力的"
+                }
+              ]
             },
             {
               "text": "helpful",
@@ -1789,21 +1909,39 @@
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
               "vocabularyPdfPage": 94,
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "愿意帮忙的"
+                }
+              ]
             },
             {
               "text": "English",
               "meaning": "英语",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "英语"
+                }
+              ]
             },
             {
               "text": "duck",
-              "meaning": "鸭子",
+              "meaning": "躲闪；躲避",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "躲闪；躲避"
+                }
+              ]
             },
             {
               "text": "Let me try",
@@ -1811,7 +1949,13 @@
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
               "vocabularyPdfPage": 94,
-              "textbookForm": "Let me try."
+              "textbookForm": "Let me try.",
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "让我试试。"
+                }
+              ]
             },
             {
               "text": "Take it easy",
@@ -1819,7 +1963,13 @@
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
               "vocabularyPdfPage": 94,
-              "textbookForm": "Take it easy."
+              "textbookForm": "Take it easy.",
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "放轻松。"
+                }
+              ]
             },
             {
               "text": "Keep going",
@@ -1827,7 +1977,13 @@
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
               "vocabularyPdfPage": 94,
-              "textbookForm": "Keep going."
+              "textbookForm": "Keep going.",
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "继续下去。"
+                }
+              ]
             },
             {
               "text": "different",
@@ -1872,133 +2028,247 @@
               "meaning": "熊猫",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "大熊猫"
+                }
+              ]
             },
             {
               "text": "black",
               "meaning": "黑色的",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "黑的；黑色的"
+                }
+              ]
             },
             {
               "text": "white",
               "meaning": "白色的",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "白的；白色的"
+                }
+              ]
             },
             {
               "text": "hometown",
               "meaning": "家乡",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "家乡"
+                }
+              ]
             },
             {
               "text": "monkey",
               "meaning": "猴子",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "猴子"
+                }
+              ]
             },
             {
               "text": "yellow",
               "meaning": "黄色的",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "黄的；黄色的"
+                }
+              ]
             },
             {
               "text": "elephant",
               "meaning": "大象",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "象"
+                }
+              ]
             },
             {
               "text": "grey",
               "meaning": "灰色的",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "灰色的"
+                }
+              ]
             },
             {
               "text": "trunk",
               "meaning": "象鼻",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "象鼻"
+                }
+              ]
             },
             {
               "text": "family",
               "meaning": "家庭",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "家庭"
+                }
+              ]
             },
             {
               "text": "India",
               "meaning": "印度",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "印度"
+                }
+              ]
             },
             {
               "text": "Africa",
               "meaning": "非洲",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "非洲"
+                }
+              ]
             },
             {
               "text": "baby elephant",
               "meaning": "小象",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "小象"
+                }
+              ]
             },
             {
               "text": "tail",
               "meaning": "尾巴",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "尾巴"
+                }
+              ]
             },
             {
               "text": "kind",
               "meaning": "友好的；种类",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "友好的"
+                }
+              ]
             },
             {
               "text": "polar bear",
               "meaning": "北极熊",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "北极熊"
+                }
+              ]
             },
             {
               "text": "the North Pole",
               "meaning": "北极",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "北极"
+                }
+              ]
             },
             {
               "text": "warm",
               "meaning": "温暖的",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "温暖的"
+                }
+              ]
             },
             {
               "text": "bed",
               "meaning": "床",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "床"
+                }
+              ]
             }
           ],
           "vocabularyAudioEvidence": {
@@ -2036,91 +2306,173 @@
               "meaning": "邀请；邀请函",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "（口头或书面的）邀请"
+                }
+              ]
             },
             {
               "text": "party",
               "meaning": "聚会",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "聚会；联欢会"
+                }
+              ]
             },
             {
               "text": "activity",
               "meaning": "活动",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 87,
-              "vocabularyPdfPage": 94
+              "vocabularyPdfPage": 94,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "活动"
+                }
+              ]
             },
             {
               "text": "share a cake",
               "meaning": "分享一个蛋糕",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "分享蛋糕"
+                }
+              ]
             },
             {
               "text": "bring",
               "meaning": "带来",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "带来"
+                }
+              ]
             },
             {
               "text": "letter",
               "meaning": "信",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "信；函"
+                }
+              ]
             },
             {
               "text": "child",
               "meaning": "孩子",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "儿童（复数 children）"
+                }
+              ]
             },
             {
               "text": "tradition",
               "meaning": "传统",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "传统"
+                }
+              ]
             },
             {
               "text": "love",
               "meaning": "爱",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "爱；热爱"
+                },
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "爱；热爱"
+                }
+              ]
             },
             {
               "text": "bowl",
               "meaning": "碗",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "碗"
+                }
+              ]
             },
             {
               "text": "egg",
               "meaning": "鸡蛋",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "鸡蛋"
+                }
+              ]
             },
             {
               "text": "wish",
               "meaning": "愿望；祝愿",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "祝愿"
+                }
+              ]
             },
             {
               "text": "soup",
               "meaning": "汤",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "汤；羹"
+                }
+              ]
             },
             {
               "text": "noodles",
@@ -2165,91 +2517,169 @@
               "meaning": "街区；社区",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "街区"
+                }
+              ]
             },
             {
               "text": "park",
               "meaning": "公园",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "公园"
+                }
+              ]
             },
             {
               "text": "shop",
               "meaning": "商店",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "商店"
+                }
+              ]
             },
             {
               "text": "cinema",
               "meaning": "电影院",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "电影院"
+                }
+              ]
             },
             {
               "text": "supermarket",
               "meaning": "超市",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "超市"
+                }
+              ]
             },
             {
               "text": "go around",
               "meaning": "四处走走",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "参观（附近某处）"
+                }
+              ]
             },
             {
               "text": "boat",
               "meaning": "小船",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "小船"
+                }
+              ]
             },
             {
               "text": "bridge",
               "meaning": "桥",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "桥"
+                }
+              ]
             },
             {
               "text": "photo",
               "meaning": "照片",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "照片"
+                }
+              ]
             },
             {
               "text": "amazing",
               "meaning": "令人惊叹的",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "令人大惊奇的"
+                }
+              ]
             },
             {
               "text": "out of battery",
               "meaning": "电池没电",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "没电"
+                }
+              ]
             },
             {
               "text": "people",
               "meaning": "人们",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "人"
+                }
+              ]
             },
             {
               "text": "restaurant",
               "meaning": "餐馆",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "餐馆"
+                }
+              ]
             },
             {
               "text": "That's amazing",
@@ -2257,7 +2687,13 @@
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
               "vocabularyPdfPage": 95,
-              "textbookForm": "That's amazing!"
+              "textbookForm": "That's amazing!",
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "真是令人惊叹！"
+                }
+              ]
             }
           ],
           "vocabularyAudioEvidence": {
@@ -2295,71 +2731,131 @@
               "meaning": "秋天",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "秋天"
+                }
+              ]
             },
             {
               "text": "farm",
               "meaning": "农场",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "农场"
+                }
+              ]
             },
             {
               "text": "boy",
               "meaning": "男孩",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "男孩"
+                }
+              ]
             },
             {
               "text": "fruit",
               "meaning": "水果",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "水果"
+                }
+              ]
             },
             {
               "text": "fly south",
               "meaning": "向南飞",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "往南飞"
+                }
+              ]
             },
             {
               "text": "girl",
               "meaning": "女孩",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "女孩"
+                }
+              ]
             },
             {
               "text": "golden",
               "meaning": "金色的",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "金色的"
+                }
+              ]
             },
             {
               "text": "apple",
               "meaning": "苹果",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "苹果"
+                }
+              ]
             },
             {
               "text": "worker",
               "meaning": "工人；工作者",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "工作者"
+                }
+              ]
             },
             {
               "text": "quick",
-              "meaning": "快的",
+              "meaning": "快！",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
               "vocabularyPdfPage": 95,
-              "textbookForm": "Quick!"
+              "textbookForm": "Quick!",
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "快！"
+                }
+              ]
             },
             {
               "text": "fall",
@@ -2411,91 +2907,169 @@
               "meaning": "早餐",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "早餐"
+                }
+              ]
             },
             {
               "text": "menu",
               "meaning": "菜单",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "菜单"
+                }
+              ]
             },
             {
               "text": "juice",
               "meaning": "果汁",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "果汁"
+                }
+              ]
             },
             {
               "text": "milk",
               "meaning": "牛奶",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "（牛或羊等的）奶"
+                }
+              ]
             },
             {
               "text": "soya milk",
               "meaning": "豆浆",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "豆浆"
+                }
+              ]
             },
             {
               "text": "banana",
               "meaning": "香蕉",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "香蕉"
+                }
+              ]
             },
             {
               "text": "week",
               "meaning": "星期；周",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "周；星期"
+                }
+              ]
             },
             {
               "text": "eat",
               "meaning": "吃",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "吃"
+                }
+              ]
             },
             {
               "text": "tomorrow",
               "meaning": "明天",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "明天"
+                }
+              ]
             },
             {
               "text": "energy",
               "meaning": "能量",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "能量"
+                }
+              ]
             },
             {
               "text": "protein",
               "meaning": "蛋白质",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "蛋白质"
+                }
+              ]
             },
             {
               "text": "vitamin",
               "meaning": "维生素",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "维生素"
+                }
+              ]
             },
             {
               "text": "cry",
               "meaning": "喊叫；哭",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "喊叫；呼喊"
+                }
+              ]
             }
           ],
           "vocabularyAudioEvidence": {
@@ -2538,7 +3112,13 @@
               "meaning": "遵守诺言",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "遵守（某人的） 诺言"
+                }
+              ]
             },
             {
               "text": "give back",
@@ -2546,91 +3126,169 @@
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
               "vocabularyPdfPage": 95,
-              "textbookForm": "give … back"
+              "textbookForm": "give … back",
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "归还……"
+                }
+              ]
             },
             {
               "text": "on time",
               "meaning": "准时",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "准时"
+                }
+              ]
             },
             {
               "text": "honest",
               "meaning": "诚实的",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "诚实的；正直的"
+                }
+              ]
             },
             {
               "text": "tell the truth",
               "meaning": "说实话",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "说真话"
+                }
+              ]
             },
             {
               "text": "never tell a lie",
               "meaning": "从不说谎",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "从不撒谎"
+                }
+              ]
             },
             {
               "text": "stop",
               "meaning": "停止",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "停止；停下"
+                }
+              ]
             },
             {
               "text": "doll",
               "meaning": "玩偶",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "玩偶；玩具娃娃"
+                }
+              ]
             },
             {
               "text": "break",
               "meaning": "弄坏；打破",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 88,
-              "vocabularyPdfPage": 95
+              "vocabularyPdfPage": 95,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "打碎；打破"
+                }
+              ]
             },
             {
               "text": "arm",
               "meaning": "手臂",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "手臂"
+                }
+              ]
             },
             {
               "text": "empty",
               "meaning": "空的",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "空的"
+                }
+              ]
             },
             {
               "text": "pot",
               "meaning": "罐；花盆",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "罐；壶；锅"
+                }
+              ]
             },
             {
               "text": "seed",
               "meaning": "种子",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "种子"
+                }
+              ]
             },
             {
               "text": "month",
               "meaning": "月",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "月份"
+                }
+              ]
             },
             {
               "text": "Are you all right",
@@ -2638,7 +3296,13 @@
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
               "vocabularyPdfPage": 96,
-              "textbookForm": "Are you all right?"
+              "textbookForm": "Are you all right?",
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "你还好吗？"
+                }
+              ]
             },
             {
               "text": "What happened",
@@ -2646,7 +3310,13 @@
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
               "vocabularyPdfPage": 96,
-              "textbookForm": "What happened?"
+              "textbookForm": "What happened?",
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "发生了什么？"
+                }
+              ]
             }
           ],
           "vocabularyAudioEvidence": {
@@ -2684,42 +3354,78 @@
               "meaning": "时间",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "时间"
+                }
+              ]
             },
             {
               "text": "hour hand",
               "meaning": "时针",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "（钟表的）时针"
+                }
+              ]
             },
             {
               "text": "minute hand",
               "meaning": "分针",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "（钟表的）分针"
+                }
+              ]
             },
             {
               "text": "seven o'clock",
               "meaning": "七点整",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "七点钟"
+                }
+              ]
             },
             {
               "text": "half past eleven",
               "meaning": "十一点半",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "十一点半"
+                }
+              ]
             },
             {
               "text": "ten to four",
               "meaning": "三点五十分",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "三点五十分"
+                }
+              ]
             },
             {
               "text": "evening",
@@ -2727,14 +3433,26 @@
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
               "vocabularyPdfPage": 96,
-              "additionalSense": true
+              "additionalSense": true,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "晚上；傍晚"
+                }
+              ]
             },
             {
               "text": "the Earth",
               "meaning": "地球",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "地球"
+                }
+              ]
             },
             {
               "text": "the Moon",
@@ -2742,14 +3460,26 @@
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
               "vocabularyPdfPage": 96,
-              "textbookForm": "the moon"
+              "textbookForm": "the moon",
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "月球"
+                }
+              ]
             },
             {
               "text": "night",
               "meaning": "夜晚",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "夜；夜晚"
+                }
+              ]
             },
             {
               "text": "What time is it",
@@ -2757,7 +3487,13 @@
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
               "vocabularyPdfPage": 96,
-              "textbookForm": "What time is it?"
+              "textbookForm": "What time is it?",
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "几点了？"
+                }
+              ]
             },
             {
               "text": "Happy New Year",
@@ -2765,7 +3501,13 @@
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
               "vocabularyPdfPage": 96,
-              "textbookForm": "Happy New Year!"
+              "textbookForm": "Happy New Year!",
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "新年快乐！"
+                }
+              ]
             }
           ],
           "vocabularyAudioEvidence": {
@@ -2803,112 +3545,208 @@
               "meaning": "父亲",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "父亲；爸爸"
+                }
+              ]
             },
             {
               "text": "sunny",
               "meaning": "晴朗的",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "阳光充足的"
+                }
+              ]
             },
             {
               "text": "rainy",
               "meaning": "下雨的",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "多雨的"
+                }
+              ]
             },
             {
               "text": "cloudy",
               "meaning": "多云的",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "阴天的；多云的"
+                }
+              ]
             },
             {
               "text": "brother",
               "meaning": "兄弟",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "哥哥；弟弟"
+                }
+              ]
             },
             {
               "text": "windy",
               "meaning": "有风的",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "多风的；风大的"
+                }
+              ]
             },
             {
               "text": "snowy",
               "meaning": "下雪的",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "adj.",
+                  "meaning": "下雪多的"
+                }
+              ]
             },
             {
               "text": "weather",
               "meaning": "天气",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "天气；气象"
+                }
+              ]
             },
             {
               "text": "weather report",
               "meaning": "天气预报",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "气象报告"
+                }
+              ]
             },
             {
               "text": "degree",
               "meaning": "度",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "度（温度单位）"
+                }
+              ]
             },
             {
               "text": "weather reporter",
               "meaning": "天气播报员",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "天气预报员"
+                }
+              ]
             },
             {
               "text": "lamb",
               "meaning": "小羊",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "小羊"
+                }
+              ]
             },
             {
               "text": "tortoise",
               "meaning": "陆龟",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "陆龟"
+                }
+              ]
             },
             {
               "text": "sign",
               "meaning": "迹象；标志",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "n.",
+                  "meaning": "迹象；征兆"
+                }
+              ]
             },
             {
               "text": "hurry",
               "meaning": "赶快",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": "v.",
+                  "meaning": "赶快；急忙（做某事）"
+                }
+              ]
             },
             {
               "text": "heavy rain",
               "meaning": "大雨",
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
-              "vocabularyPdfPage": 96
+              "vocabularyPdfPage": 96,
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "大雨"
+                }
+              ]
             },
             {
               "text": "Let me see",
@@ -2916,7 +3754,13 @@
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
               "vocabularyPdfPage": 96,
-              "textbookForm": "Let me see."
+              "textbookForm": "Let me see.",
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "让我看看。"
+                }
+              ]
             },
             {
               "text": "I see",
@@ -2924,7 +3768,13 @@
               "verificationNote": "Words to use 原页已核对；保留既有学习词头及ID，原书大小写、标点或可分结构另记。",
               "vocabularyPrintPage": 89,
               "vocabularyPdfPage": 96,
-              "textbookForm": "I see."
+              "textbookForm": "I see.",
+              "textbookSenses": [
+                {
+                  "partOfSpeech": null,
+                  "meaning": "我明白了。"
+                }
+              ]
             }
           ],
           "vocabularyAudioEvidence": {
