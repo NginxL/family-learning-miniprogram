@@ -1,0 +1,354 @@
+{
+  "checkedAt": "2026-10-18",
+  "scope": "已看官方原页核对的正文校订；保留内容 ID，历史任务快照不回写。旧版差异按来源注明。",
+  "entries": [
+    {
+      "contentId": "sh54-advice-son",
+      "checkedAt": "2026-10-18",
+      "summary": "七上原书作“治性”，治指修养；旧卡“冶性”已校订。",
+      "pages": [
+        {
+          "bookId": "chinese-7a",
+          "sourcePrintPage": 91,
+          "sourcePdfPage": 98,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "6f70ade774edb4ebee819cf7e30f9259c7afda1226448679c007857019894803"
+        }
+      ],
+      "originalSha256": "fe89918cad8909e821a2c6339dba04035bae3fb18606a895bf1ccce06f961824"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-029",
+      "checkedAt": "2026-10-18",
+      "summary": "七下原书作“自缘身在最高层”；旧卡“只缘”已校订。",
+      "pages": [
+        {
+          "bookId": "chinese-7b",
+          "sourcePrintPage": 134,
+          "sourcePdfPage": 141,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "0f7c995a5c4732bf400735ed4df01e8491a482beaed994ade713dc50de0a581a"
+        }
+      ],
+      "originalSha256": "7ced4d74926dd1244d7508fc56a0115609110e2c6c0adca37c807a849457fe9f"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-047",
+      "checkedAt": "2026-10-18",
+      "summary": "新版九上正文作“谤议”，注释注明一作“谤讥”；旧版九下作“谤讥”。学习正文采用新版九上用字及问句标点。",
+      "pages": [
+        {
+          "bookId": "chinese-9a",
+          "sourcePrintPage": 139,
+          "sourcePdfPage": 146,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "0bbc6ff2e618b22992e68bb8888af48a3b590f31ad2e26bc8329b83858334e61"
+        },
+        {
+          "bookId": "chinese-9a",
+          "sourcePrintPage": 140,
+          "sourcePdfPage": 147,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "c63342004c9a7b5919e3cac242922f3add8cea46655360ec673ae9ecd73bcde4"
+        }
+      ],
+      "originalSha256": "8f8d06aeff65f39e837aaf685873e753816b2fe04f285a174fa72bee558a1095"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-042",
+      "checkedAt": "2026-10-18",
+      "summary": "按九上原书在“故克之”后断句；下句为“夫大国，难测也”。",
+      "pages": [
+        {
+          "bookId": "chinese-9a",
+          "sourcePrintPage": 137,
+          "sourcePdfPage": 144,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "8337d446728be3b8197d4011f3b19b44773cbac80340c88099f604a851a8eba1"
+        }
+      ],
+      "originalSha256": "2f1664cd3e7c09b47dafefd12c52a69a3447db9def5a2d84056c3e2708ebb375"
+    },
+    {
+      "contentId": "sh54-songdongyang-textbook",
+      "checkedAt": "2026-10-18",
+      "summary": "按九下旧版原书分为四段；前两段包括“今虽耄老”至“况才之过于余者乎？”；“慕艳意”后为逗号。新版九下待核实。",
+      "pages": [
+        {
+          "bookId": "chinese-9b",
+          "sourcePrintPage": 54,
+          "sourcePdfPage": 61,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "bb7585318a0bdcb72502ee94861835cdca05eb4079272a6aa425255b33f95475"
+        },
+        {
+          "bookId": "chinese-9b",
+          "sourcePrintPage": 55,
+          "sourcePdfPage": 62,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "2cf393f9d26b856027c6a43f8268f6db8862c384816e8d641878bdd00604f672"
+        },
+        {
+          "bookId": "chinese-9b",
+          "sourcePrintPage": 56,
+          "sourcePdfPage": 63,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "d627d2e7cbdc9b604db3d5d9c53897c1bf7555e47a1408398131940557faa4ca"
+        }
+      ],
+      "originalSha256": "645acf06e486ec7c49adbd861f6aea405d47b22643a54bc41f8d943a887f4d12"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-059",
+      "checkedAt": "2026-10-18",
+      "summary": "此节选与九下旧版前两段对应；第二段止于“况才之过于余者乎？”，不在“今虽耄老”前分段。",
+      "pages": [
+        {
+          "bookId": "chinese-9b",
+          "sourcePrintPage": 54,
+          "sourcePdfPage": 61,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "bb7585318a0bdcb72502ee94861835cdca05eb4079272a6aa425255b33f95475"
+        },
+        {
+          "bookId": "chinese-9b",
+          "sourcePrintPage": 55,
+          "sourcePdfPage": 62,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "2cf393f9d26b856027c6a43f8268f6db8862c384816e8d641878bdd00604f672"
+        }
+      ],
+      "originalSha256": "852e0ab41a12b049c27800c18607e526200bef2d3650510275791aad9dfde365"
+    },
+    {
+      "contentId": "sh54-mengzi-dedao",
+      "checkedAt": "2026-10-18",
+      "summary": "按八上原书保留为一个自然段，不把论述层次另拆为段落。",
+      "pages": [
+        {
+          "bookId": "chinese-8a",
+          "sourcePrintPage": 144,
+          "sourcePdfPage": 151,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "c4ebb9193d664c9145cd8a74830b6418e2e4305fa93eae3226d84e4cd81b9e8f"
+        },
+        {
+          "bookId": "chinese-8a",
+          "sourcePrintPage": 145,
+          "sourcePdfPage": 152,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "449ff4d791e80073da41ba36732839cd34006e64de1fd3082e15e4468c6b1520"
+        }
+      ],
+      "originalSha256": "69b9b6eeb95f059db705237c7b1d3b1371908ef97ac6606eab355c8ea58be97d"
+    },
+    {
+      "contentId": "sh54-mengzi-youhuan",
+      "checkedAt": "2026-10-18",
+      "summary": "按八上原书分为两段；“故天将降大任”承接第一段，“人恒过”另起第二段。",
+      "pages": [
+        {
+          "bookId": "chinese-8a",
+          "sourcePrintPage": 146,
+          "sourcePdfPage": 153,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "3282b91100cde94d39b6bc5be73e7f146447f807c723ef2e78bfd869ada8fb42"
+        }
+      ],
+      "originalSha256": "e7610a79b63eef43845afbac15f26bb2fece6f18e8c8de9641323494fdfc495c"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-058",
+      "checkedAt": "2026-10-18",
+      "summary": "按八上原书合为一个自然段，并保留“藻、荇”之间的顿号。",
+      "pages": [
+        {
+          "bookId": "chinese-8a",
+          "sourcePrintPage": 65,
+          "sourcePdfPage": 72,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "8b11283e49fd2895ac8a5e707c3262194f0cb6a801fb0f18ed50ed97453083c5"
+        }
+      ],
+      "originalSha256": "3032213b1bcab3d09769ed4f449d4b6344453ee42d9550685f0874499ef8b649"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-055",
+      "checkedAt": "2026-10-18",
+      "summary": "按九上原书校订标点与末段分段；“时六年九月十五日”承接末段。“日星隐耀”沿用原书正文，原注另记“耀”一作“曜”。",
+      "pages": [
+        {
+          "bookId": "chinese-9a",
+          "sourcePrintPage": 50,
+          "sourcePdfPage": 57,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "21ebb60c8094176030fb73794bdf700a1bdbd8e920da5c89d3bafc59c1c7476a"
+        },
+        {
+          "bookId": "chinese-9a",
+          "sourcePrintPage": 51,
+          "sourcePdfPage": 58,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "fd986b86a6d4b8d9cefa8438c5066025b7fe363277b78379706dd544673b05ed"
+        },
+        {
+          "bookId": "chinese-9a",
+          "sourcePrintPage": 52,
+          "sourcePdfPage": 59,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "8baed9d009a47f7ffd9f173cf1692cba340b1258fc85f4a656e8ed92b81225cc"
+        }
+      ],
+      "originalSha256": "5783a38e207b8324bcff1e9eda8c7f500ca61fac632e9d5ab2713b5728eb0f63"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-048",
+      "checkedAt": "2026-10-18",
+      "summary": "按九上原书校订标点、引号及分段；“今当远离”承接末段，共八个自然段。",
+      "pages": [
+        {
+          "bookId": "chinese-9a",
+          "sourcePrintPage": 146,
+          "sourcePdfPage": 153,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "b716cbe12019279b72e9649607fe5df283d02a83fe291e07103bda021323f153"
+        },
+        {
+          "bookId": "chinese-9a",
+          "sourcePrintPage": 147,
+          "sourcePdfPage": 154,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "f6c8bb86ae6311adb86b8234008f80a9a2f4aae0e2bfbd6b7440a2af5bb1f805"
+        },
+        {
+          "bookId": "chinese-9a",
+          "sourcePrintPage": 148,
+          "sourcePdfPage": 155,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "e848a4f4c9da661b3013039b376199e6cabd8371bb52c52df9360e4d609ea22a"
+        }
+      ],
+      "originalSha256": "175a45b6e5a0d9d7e14817078d262d28e518fd433891d330e4c2ffa357119a68"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-040",
+      "checkedAt": "2026-10-18",
+      "summary": "按九下旧版原书校订领字停顿和下阕标点；新版九下待核实。",
+      "pages": [
+        {
+          "bookId": "chinese-9b",
+          "sourcePrintPage": 60,
+          "sourcePdfPage": 67,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "fd259e1441f0497a060610c9cfdf2b4c3c23f6e67a6733a6a4c0df882c993794"
+        }
+      ],
+      "originalSha256": "e43333e0b5c088e1a6005fa462600a07a49c9f6a6866e7afa163701a482c5fd6"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-041",
+      "checkedAt": "2026-10-18",
+      "summary": "按七上原书在“饭疏食”与“饮水”之间加逗号。",
+      "pages": [
+        {
+          "bookId": "chinese-7a",
+          "sourcePrintPage": 64,
+          "sourcePdfPage": 71,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "6755dc4762a2144bd0cfc295d91e9ded4d9e839a20da5ed0481ca082f49f8c0f"
+        }
+      ],
+      "originalSha256": "3b0025562c6282b4fcc730d417e3f34ecc760397d79f4d9b62a935e9525193c3"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-009",
+      "checkedAt": "2026-10-18",
+      "summary": "按七上原书，“乡书何处达”后为逗号。",
+      "pages": [
+        {
+          "bookId": "chinese-7a",
+          "sourcePrintPage": 16,
+          "sourcePdfPage": 23,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "524d4a76808365cef32439ecc2fbea755810d0994b51fe15c828d17763d1d883"
+        }
+      ],
+      "originalSha256": "7e3a40009f30fe8db21a4f24efd9a58005c379f51456876cfeb3f43a0ee4d984"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-008",
+      "checkedAt": "2026-10-18",
+      "summary": "按七下原书，末句以叹号结束。",
+      "pages": [
+        {
+          "bookId": "chinese-7b",
+          "sourcePrintPage": 133,
+          "sourcePdfPage": 140,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "54c4a55ac10262ad4ba07422cea423145203a15ed195c1e7025cfc05d1a5fd00"
+        }
+      ],
+      "originalSha256": "b40898e089bbfa83e8ee2a17712de9ef24472d6146ad4ce08accca563783b10f"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-057",
+      "checkedAt": "2026-10-18",
+      "summary": "按七下原书，末句以句号结束。",
+      "pages": [
+        {
+          "bookId": "chinese-7b",
+          "sourcePrintPage": 112,
+          "sourcePdfPage": 119,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "355935f27d752ee9d26795286540a30c0e295730a3e55adf680a351aeae68289"
+        }
+      ],
+      "originalSha256": "c72a9e627ee4e5de223f1645e1ea7c57f8ea6117a17b6f8c53f7f3e00627859b"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-006",
+      "checkedAt": "2026-10-18",
+      "summary": "七下原书首段止于“唯闻女叹息”，“问女何所思”另起第二段；库内题名保留别称“木兰辞”。",
+      "pages": [
+        {
+          "bookId": "chinese-7b",
+          "sourcePrintPage": 46,
+          "sourcePdfPage": 53,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "910917f84f6ffb8c511d6dc40082d1a3debf73ff090869fa626940c5b6b89560"
+        }
+      ],
+      "originalSha256": "6f7859a8b2e876388ce6279a092527ae997c667bd0b445ba0adf489ab6f84e68"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-023",
+      "checkedAt": "2026-10-18",
+      "summary": "七下原书诗句中的“后庭花”不加书名号。",
+      "pages": [
+        {
+          "bookId": "chinese-7b",
+          "sourcePrintPage": 174,
+          "sourcePdfPage": 181,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "4b65339910616cc2d25737dd9943fb3b9c95dff640b6479e00afa2df55bef5df"
+        }
+      ],
+      "originalSha256": "52eacc194054b7575065ef8109b528f95b6f0a6c8ac7b5f2de85138789d20c2f"
+    },
+    {
+      "contentId": "sh54-archery",
+      "checkedAt": "2026-10-18",
+      "summary": "六下原书在“退而习之”后另起第二段。",
+      "pages": [
+        {
+          "bookId": "chinese-6b",
+          "sourcePrintPage": 47,
+          "sourcePdfPage": 54,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=a953eeec-db0c-4c8b-860f-aa94f4727b6b&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "047f01f4fab92f1713c6468848e8241b07e541e76af62bcb5a4c3f4a17689ec5"
+        }
+      ],
+      "originalSha256": "3b823f8c2e3ad397c2a586991cea794fb779bf403db5f3282351e2ac3d18ef28"
+    }
+  ]
+}

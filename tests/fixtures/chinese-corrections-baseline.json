@@ -1,0 +1,582 @@
+{
+  "baselineCommit": "fca9b8d",
+  "purpose": "Explicit reviewed Chinese-only differences; restore these fields when testing the older catalogue hash. Do not recalculate unrelated baseline hashes.",
+  "patches": [
+    {
+      "id": "poem-willow",
+      "fields": {
+        "gradeMappings": {
+          "before": [
+            {
+              "grade": 2,
+              "bookId": "chinese-2b-sample",
+              "schoolSystem": "5-4",
+              "semester": "下册",
+              "edition": "根据2022年版课标修订的五四制公开样本；版次与ISBN待核实",
+              "sourceUrl": "https://www.textbook-info.com/post/2459.html",
+              "outlineDestination": "公开样本 PDF 5—6 页目录；印刷第 1 页",
+              "sourcePrintPage": 1,
+              "unit": "第1单元",
+              "unitId": "u1",
+              "mappingType": "textbook_item",
+              "sourceKind": "public_sample",
+              "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+              "status": "catalogue_verified"
+            }
+          ],
+          "afterSha256": "3cbcb249b34edb729f1f2454c3f7d8aa3cef3f4682a69e13552c643042046dd1"
+        }
+      }
+    },
+    {
+      "id": "moe-2022-zh-1-6-025",
+      "fields": {
+        "gradeMappings": {
+          "before": [
+            {
+              "grade": 2,
+              "bookId": "chinese-2b-sample",
+              "schoolSystem": "5-4",
+              "semester": "下册",
+              "edition": "人教社官方五四制电子书；封面审定2024；ISBN、印次未载",
+              "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=6f1d8652-05df-432b-8ee4-6a5652ec677e&catalogType=tchMaterial&subCatalog=tchMaterial",
+              "outlineDestination": "#page=74",
+              "sourceKind": "official_textbook",
+              "sourcePrintPage": 69,
+              "sourcePdfPage": 74,
+              "unit": "第6单元 · 观察自然",
+              "unitId": "u6",
+              "mappingType": "textbook_item",
+              "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页74核对作者或出处杜甫及首句“两个黄鹂鸣翠柳，一行白鹭上青天。”；正文沿用已核验公版作品。学校印次待确认。",
+              "status": "catalogue_verified"
+            }
+          ],
+          "afterSha256": "9724e3d12f72270f4f106fa863b135d2de89d1de530731d83f11766c4a194835"
+        }
+      }
+    },
+    {
+      "id": "moe-2022-zh-1-6-064",
+      "fields": {
+        "gradeMappings": {
+          "before": [
+            {
+              "grade": 2,
+              "bookId": "chinese-2b-sample",
+              "schoolSystem": "5-4",
+              "semester": "下册",
+              "edition": "根据2022年版课标修订的五四制公开样本；版次与ISBN待核实",
+              "sourceUrl": "https://www.textbook-info.com/post/2459.html",
+              "outlineDestination": "公开样本 PDF 5—6 页目录；印刷第 70 页",
+              "sourcePrintPage": 70,
+              "unit": "第6单元",
+              "unitId": "u6",
+              "mappingType": "textbook_item",
+              "sourceKind": "public_sample",
+              "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+              "status": "catalogue_verified"
+            }
+          ],
+          "afterSha256": "3d888223daf0320154ef09e72decbb98871f9e0905b46b046ae45e51d602cb16"
+        }
+      }
+    },
+    {
+      "id": "moe-2022-zh-1-6-075",
+      "fields": {
+        "gradeMappings": {
+          "before": [
+            {
+              "grade": 2,
+              "bookId": "chinese-2b-sample",
+              "schoolSystem": "5-4",
+              "semester": "下册",
+              "edition": "根据2022年版课标修订的五四制公开样本；版次与ISBN待核实",
+              "sourceUrl": "https://www.textbook-info.com/post/2459.html",
+              "outlineDestination": "公开样本 PDF 5—6 页目录；印刷第 2 页",
+              "sourcePrintPage": 2,
+              "unit": "第1单元",
+              "unitId": "u1",
+              "mappingType": "textbook_item",
+              "sourceKind": "public_sample",
+              "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+              "status": "catalogue_verified"
+            }
+          ],
+          "afterSha256": "c5ce179a9bb74a0a6ddd08bc9f7d3110b0daa2ee80152f896bc80b2dfe7c348b"
+        }
+      }
+    },
+    {
+      "id": "moe-2022-zh-7-9-008",
+      "fields": {
+        "detail": {
+          "before": "陈子昂\n前不见古人，后不见来者。\n念天地之悠悠，独怆然而涕下。",
+          "afterSha256": "692d50b2bf21d43a07861cf0671b9e53e32916fc8fcae859582b523e7a7e6c63"
+        },
+        "textSourceUrl": {
+          "before": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+          "afterSha256": "0c6b768c5d028f3ee0dbee666295777a3e7830cd620082d442276282255cf48f"
+        },
+        "note": {
+          "before": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+          "afterSha256": "203bf5f3347fd12246b807eb81fd61440a2a3f8d89c34824243cd4d47c948527"
+        }
+      }
+    },
+    {
+      "id": "moe-2022-zh-7-9-009",
+      "fields": {
+        "detail": {
+          "before": "王湾\n客路青山外，行舟绿水前。\n潮平两岸阔，风正一帆悬。\n海日生残夜，江春入旧年。\n乡书何处达？归雁洛阳边。",
+          "afterSha256": "29ac683279a298b151c8b072a2bd8c074eb5b7049de9b3eb37fcbc98f0cefc5f"
+        },
+        "textSourceUrl": {
+          "before": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+          "afterSha256": "a3956b2bb340f92202354c822805bff345b991fbdcc4f6f8226b9dd7c44af3a9"
+        },
+        "note": {
+          "before": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+          "afterSha256": "203bf5f3347fd12246b807eb81fd61440a2a3f8d89c34824243cd4d47c948527"
+        }
+      }
+    },
+    {
+      "id": "moe-2022-zh-7-9-015",
+      "fields": {
+        "gradeMappings": {
+          "before": [
+            {
+              "grade": 8,
+              "bookId": "chinese-8a",
+              "schoolSystem": "5-4",
+              "semester": "上册",
+              "editionStatus": "official_resource_verified",
+              "edition": "国家平台五四制2022课标修订原书，封面2024审核通过；纸本ISBN、版次及学校印次待确认",
+              "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+              "outlineDestination": "#page=161",
+              "sourceKind": "official_textbook",
+              "sourcePrintPage": 154,
+              "sourcePdfPage": 161,
+              "unit": "第6单元 · 志向与担当",
+              "unitId": "u6",
+              "mappingType": "textbook_item",
+              "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页161核对作者或出处杜甫及首句“国破山河在”；正文沿用已核验公版作品。学校印次待确认。",
+              "status": "catalogue_verified"
+            }
+          ],
+          "afterSha256": "e91e4de02f80f6b13b64f7d081f5d89cb7b2c03b202f1609d8de4e82d2fd5ba8"
+        }
+      }
+    },
+    {
+      "id": "moe-2022-zh-7-9-022",
+      "fields": {
+        "gradeMappings": {
+          "before": [
+            {
+              "grade": 8,
+              "bookId": "chinese-8a",
+              "schoolSystem": "5-4",
+              "semester": "上册",
+              "editionStatus": "official_resource_verified",
+              "edition": "国家平台五四制2022课标修订原书，封面2024审核通过；纸本ISBN、版次及学校印次待确认",
+              "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+              "outlineDestination": "#page=162",
+              "sourceKind": "official_textbook",
+              "sourcePrintPage": 155,
+              "sourcePdfPage": 162,
+              "unit": "第6单元 · 志向与担当",
+              "unitId": "u6",
+              "mappingType": "textbook_item",
+              "evidence": "人教社五四制官方教材篇名、年级、学期与印刷页已核对；电子页162核对作者或出处杜牧及首句“折戟沉沙铁未销”；正文沿用已核验公版作品。学校印次待确认。",
+              "status": "catalogue_verified"
+            }
+          ],
+          "afterSha256": "898059e2bf12b429bae9a213b421c80611b31923011acb4a8020842fd01026e2"
+        }
+      }
+    },
+    {
+      "id": "moe-2022-zh-7-9-029",
+      "fields": {
+        "detail": {
+          "before": "王安石\n飞来山上千寻塔，闻说鸡鸣见日升。\n不畏浮云遮望眼，只缘身在最高层。",
+          "afterSha256": "fb1df31aece3c8168a3d1a0bb8bad2b86ea0aecf31896a558e9759653d5baea9"
+        },
+        "textSourceUrl": {
+          "before": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+          "afterSha256": "0c6b768c5d028f3ee0dbee666295777a3e7830cd620082d442276282255cf48f"
+        },
+        "note": {
+          "before": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+          "afterSha256": "203bf5f3347fd12246b807eb81fd61440a2a3f8d89c34824243cd4d47c948527"
+        }
+      }
+    },
+    {
+      "id": "moe-2022-zh-7-9-040",
+      "fields": {
+        "detail": {
+          "before": "秋瑾\n小住京华，早又是，中秋佳节。为篱下，黄花开遍，秋容如拭。四面歌残终破楚，八年风味徒思浙。苦将侬，强派作蛾眉，殊未屑！\n\n身不得，男儿列。心却比，男儿烈！算平生肝胆，因人常热。俗子胸襟谁识我？英雄末路当磨折。莽红尘，何处觅知音？青衫湿！",
+          "afterSha256": "0589d60d24724a225e32384eabfa492c25d631a6a7f83a805958e9ceb1b4143d"
+        },
+        "textSourceUrl": {
+          "before": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+          "afterSha256": "b64885d95f673f8433de6335c68eec2f2d131bf0a115a8d09b064b722f2ab0d8"
+        },
+        "note": {
+          "before": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+          "afterSha256": "203bf5f3347fd12246b807eb81fd61440a2a3f8d89c34824243cd4d47c948527"
+        }
+      }
+    },
+    {
+      "id": "moe-2022-zh-7-9-041",
+      "fields": {
+        "detail": {
+          "before": "《论语》\n子曰：“学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？”《学而》\n\n曾子曰：“吾日三省吾身：为人谋而不忠乎？与朋友交而不信乎？传不习乎？”《学而》\n\n子曰：“吾十有五而志于学，三十而立，四十而不惑，五十而知天命，六十而耳顺，七十而从心所欲，不逾矩。”《为政》\n\n子曰：“温故而知新，可以为师矣。”《为政》\n\n子曰：“学而不思则罔，思而不学则殆。”《为政》\n\n子曰：“贤哉，回也！一箪食，一瓢饮，在陋巷，人不堪其忧，回也不改其乐。贤哉，回也！”《雍也》\n\n子曰：“知之者不如好之者，好之者不如乐之者。”《雍也》\n\n子曰：“饭疏食饮水，曲肱而枕之，乐亦在其中矣。不义而富且贵，于我如浮云。”《述而》\n\n子曰：“三人行，必有我师焉。择其善者而从之，其不善者而改之。”《述而》\n\n子在川上曰：“逝者如斯夫，不舍昼夜。”《子罕》\n\n子曰：“三军可夺帅也，匹夫不可夺志也。”《子罕》\n\n子夏曰：“博学而笃志，切问而近思，仁在其中矣。”《子张》",
+          "afterSha256": "9932d42675807071ba0a888a84bdae3973262b35a92f19522c5c9b46679b7d5c"
+        },
+        "textSourceUrl": {
+          "before": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+          "afterSha256": "a3956b2bb340f92202354c822805bff345b991fbdcc4f6f8226b9dd7c44af3a9"
+        },
+        "note": {
+          "before": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+          "afterSha256": "203bf5f3347fd12246b807eb81fd61440a2a3f8d89c34824243cd4d47c948527"
+        }
+      }
+    },
+    {
+      "id": "moe-2022-zh-7-9-042",
+      "fields": {
+        "detail": {
+          "before": "《左传》\n十年春，齐师伐我。公将战。曹刿请见。其乡人曰：“肉食者谋之，又何间焉？”刿曰：“肉食者鄙，未能远谋。”乃入见。问：“何以战？”公曰：“衣食所安，弗敢专也，必以分人。”对曰：“小惠未遍，民弗从也。”公曰：“牺牲玉帛，弗敢加也，必以信。”对曰：“小信未孚，神弗福也。”公曰：“小大之狱，虽不能察，必以情。”对曰：“忠之属也。可以一战。战则请从。”\n\n公与之乘，战于长勺。公将鼓之。刿曰：“未可。”齐人三鼓。刿曰：“可矣。”齐师败绩。公将驰之。刿曰：“未可。”下视其辙，登轼而望之，曰：“可矣。”遂逐齐师。\n\n既克，公问其故。对曰：“夫战，勇气也。一鼓作气，再而衰，三而竭。彼竭我盈，故克之，夫大国，难测也，惧有伏焉。吾视其辙乱，望其旗靡，故逐之。”",
+          "afterSha256": "c2471a792c370284f4c4e58d73a1138879e0e5b10245964409129841e42b2803"
+        },
+        "note": {
+          "before": "篇目、作者及选段已核对；上海教材逐字校对待确认；采用九年级五四制原书印刷136页“小惠未遍”；旧录“小惠未徧”保留为异文，原ID和旧任务快照不改写。",
+          "afterSha256": "02851ef068f7fc174fc6b8b6ab4473704e79dae7ceb219d3e89202a01c838b78"
+        }
+      }
+    },
+    {
+      "id": "moe-2022-zh-7-9-047",
+      "fields": {
+        "detail": {
+          "before": "《战国策》\n邹忌修八尺有余，而形貌昳丽。朝服衣冠，窥镜，谓其妻曰：“我孰与城北徐公美？”其妻曰：“君美甚，徐公何能及君也！”城北徐公，齐国之美丽者也。忌不自信，而复问其妾曰：“吾孰与徐公美？”妾曰：“徐公何能及君也！”旦日，客从外来，与坐谈，问之客曰：“吾与徐公孰美？”客曰：“徐公不若君之美也。”明日徐公来，孰视之，自以为不如；窥镜而自视，又弗如远甚。暮寝而思之，曰：“吾妻之美我者，私我也；妾之美我者，畏我也；客之美我者，欲有求于我也。”\n\n于是入朝见威王，曰：“臣诚知不如徐公美。臣之妻私臣，臣之妾畏臣，臣之客欲有求于臣，皆以美于徐公。今齐地方千里，百二十城，宫妇左右莫不私王，朝廷之臣莫不畏王，四境之内莫不有求于王：由此观之，王之蔽甚矣。”\n\n王曰：“善。”乃下令：“群臣吏民能面刺寡人之过者，受上赏；上书谏寡人者，受中赏；能谤讥于市朝，闻寡人之耳者，受下赏。”令初下，群臣进谏，门庭若市；数月之后，时时而间进；期年之后，虽欲言，无可进者。燕、赵、韩、魏闻之，皆朝于齐。此所谓战胜于朝廷。",
+          "afterSha256": "5758a654171e772690186ed23f7f852c961ee9674109688aaf509dd109297783"
+        },
+        "textSourceUrl": {
+          "before": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+          "afterSha256": "8830e80dd79840e508a2fee6b3dae94e4f3b02eabfa568ef324887a484c678b4"
+        },
+        "note": {
+          "before": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+          "afterSha256": "203bf5f3347fd12246b807eb81fd61440a2a3f8d89c34824243cd4d47c948527"
+        }
+      }
+    },
+    {
+      "id": "moe-2022-zh-7-9-048",
+      "fields": {
+        "detail": {
+          "before": "诸葛亮\n先帝创业未半而中道崩殂，今天下三分，益州疲弊，此诚危急存亡之秋也。然侍卫之臣不懈于内，忠志之士忘身于外者，盖追先帝之殊遇，欲报之于陛下也。诚宜开张圣听，以光先帝遗德，恢弘志士之气，不宜妄自菲薄，引喻失义，以塞忠谏之路也。\n\n宫中府中，俱为一体；陟罚臧否，不宜异同。若有作奸犯科及为忠善者，宜付有司论其刑赏，以昭陛下平明之理；不宜偏私，使内外异法也。\n\n侍中、侍郎郭攸之、费祎、董允等，此皆良实，志虑忠纯，是以先帝简拔以遗陛下：愚以为宫中之事，事无大小，悉以咨之，然后施行，必能裨补阙漏，有所广益。\n\n将军向宠，性行淑均，晓畅军事，试用于昔日，先帝称之曰“能”，是以众议举宠为督：愚以为营中之事，悉以咨之，必能使行阵和睦，优劣得所。\n\n亲贤臣，远小人，此先汉所以兴隆也；亲小人，远贤臣，此后汉所以倾颓也。先帝在时，每与臣论此事，未尝不叹息痛恨于桓、灵也。侍中、尚书、长史、参军，此悉贞良死节之臣，愿陛下亲之、信之，则汉室之隆，可计日而待也。\n\n臣本布衣，躬耕于南阳，苟全性命于乱世，不求闻达于诸侯。先帝不以臣卑鄙，猥自枉屈，三顾臣于草庐之中，咨臣以当世之事，由是感激，遂许先帝以驱驰。后值倾覆，受任于败军之际，奉命于危难之间：尔来二十有一年矣。\n\n先帝知臣谨慎，故临崩寄臣以大事也。受命以来，夙夜忧叹，恐托付不效，以伤先帝之明；故五月渡泸，深入不毛。今南方已定，兵甲已足，当奖率三军，北定中原，庶竭驽钝，攘除奸凶，兴复汉室，还于旧都。此臣所以报先帝而忠陛下之职分也。至于斟酌损益，进尽忠言，则攸之、祎、允之任也。\n\n愿陛下托臣以讨贼兴复之效，不效，则治臣之罪，以告先帝之灵。若无兴德之言，则责攸之、祎、允等之慢，以彰其咎；陛下亦宜自谋，以咨诹善道，察纳雅言，深追先帝遗诏。臣不胜受恩感激。\n\n今当远离，临表涕零，不知所言。",
+          "afterSha256": "ffcec1a731087379a24facee8c9a51d402fe5b5ce2b0cae6c95f8d1db5a9961b"
+        },
+        "textSourceUrl": {
+          "before": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+          "afterSha256": "8830e80dd79840e508a2fee6b3dae94e4f3b02eabfa568ef324887a484c678b4"
+        },
+        "note": {
+          "before": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+          "afterSha256": "203bf5f3347fd12246b807eb81fd61440a2a3f8d89c34824243cd4d47c948527"
+        }
+      }
+    },
+    {
+      "id": "moe-2022-zh-7-9-055",
+      "fields": {
+        "detail": {
+          "before": "范仲淹\n庆历四年春，滕子京谪守巴陵郡。越明年，政通人和，百废具兴。乃重修岳阳楼，增其旧制，刻唐贤今人诗赋于其上。属予作文以记之。\n\n予观夫巴陵胜状，在洞庭一湖。衔远山，吞长江，浩浩汤汤，横无际涯；朝晖夕阴，气象万千。此则岳阳楼之大观也，前人之述备矣。然则北通巫峡，南极潇湘，迁客骚人，多会于此，览物之情，得无异乎？\n\n若夫霪雨霏霏，连月不开，阴风怒号，浊浪排空；日星隐耀，山岳潜形；商旅不行，樯倾楫摧；薄暮冥冥，虎啸猿啼。登斯楼也，则有去国怀乡，忧谗畏讥，满目萧然，感极而悲者矣。\n\n至若春和景明，波澜不惊，上下天光，一碧万顷；沙鸥翔集，锦鳞游泳；岸芷汀兰，郁郁青青。而或长烟一空，皓月千里，浮光跃金，静影沉璧，渔歌互答，此乐何极！登斯楼也，则有心旷神怡，宠辱偕忘，把酒临风，其喜洋洋者矣。\n\n嗟夫！予尝求古仁人之心，或异二者之为，何哉？不以物喜，不以己悲；居庙堂之高则忧其民；处江湖之远则忧其君。是进亦忧，退亦忧。然则何时而乐耶？其必曰：“先天下之忧而忧，后天下之乐而乐”乎。噫！微斯人，吾谁与归？\n\n时六年九月十五日。",
+          "afterSha256": "c5b95c13f9a53d1d0fb3bd9df61dad086eeffca9f0296e9bc40bfdb31af147f6"
+        },
+        "note": {
+          "before": "篇目、作者及选段已核对；上海教材逐字校对待确认；采用九年级五四制原书印刷51页“霪雨霏霏”；旧录“淫雨霏霏”保留为异文，原ID和旧任务快照不改写。",
+          "afterSha256": "d0c296183cc7dfbcaecb1af5107172f1026dcee730ec6d8394986a47254108cc"
+        }
+      }
+    },
+    {
+      "id": "moe-2022-zh-7-9-057",
+      "fields": {
+        "detail": {
+          "before": "周敦颐\n水陆草木之花，可爱者甚蕃。晋陶渊明独爱菊。自李唐来，世人甚爱牡丹。予独爱莲之出淤泥而不染，濯清涟而不妖，中通外直，不蔓不枝，香远益清，亭亭净植，可远观而不可亵玩焉。\n\n予谓菊，花之隐逸者也；牡丹，花之富贵者也；莲，花之君子者也。噫！菊之爱，陶后鲜有闻。莲之爱，同予者何人？牡丹之爱，宜乎众矣！",
+          "afterSha256": "3dc6cd0f0fdada8e9be41f209854ffbb192e2527c8c0af9b083d01655b7847a7"
+        },
+        "textSourceUrl": {
+          "before": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+          "afterSha256": "0c6b768c5d028f3ee0dbee666295777a3e7830cd620082d442276282255cf48f"
+        },
+        "note": {
+          "before": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+          "afterSha256": "203bf5f3347fd12246b807eb81fd61440a2a3f8d89c34824243cd4d47c948527"
+        }
+      }
+    },
+    {
+      "id": "moe-2022-zh-7-9-058",
+      "fields": {
+        "detail": {
+          "before": "苏轼\n元丰六年十月十二日夜，解衣欲睡，月色入户，欣然起行。念无与为乐者，遂至承天寺寻张怀民。怀民亦未寝，相与步于中庭。\n庭下如积水空明，水中藻荇交横，盖竹柏影也。何夜无月？何处无竹柏？但少闲人如吾两人者耳。",
+          "afterSha256": "13f4216347061a0f43082ea72359e0a0d8538a7c67b01a0eca705d974d33d42d"
+        },
+        "textSourceUrl": {
+          "before": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+          "afterSha256": "1395a85640685e5c040254512e03a0a8e917580ef1030b880ea4e921091a8a28"
+        },
+        "note": {
+          "before": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+          "afterSha256": "203bf5f3347fd12246b807eb81fd61440a2a3f8d89c34824243cd4d47c948527"
+        }
+      }
+    },
+    {
+      "id": "moe-2022-zh-7-9-059",
+      "fields": {
+        "detail": {
+          "before": "宋濂\n余幼时即嗜学。家贫，无从致书以观，每假借于藏书之家，手自笔录，计日以还。天大寒，砚冰坚，手指不可屈伸，弗之怠。录毕，走送之，不敢稍逾约。以是人多以书假余，余因得遍观群书。既加冠，益慕圣贤之道，又患无硕师、名人与游，尝趋百里外，从乡之先达执经叩问。先达德隆望尊，门人弟子填其室，未尝稍降辞色。余立侍左右，援疑质理，俯身倾耳以请；或遇其叱咄，色愈恭，礼愈至，不敢出一言以复；俟其欣悦，则又请焉。故余虽愚，卒获有所闻。\n\n当余之从师也，负箧曳屣，行深山巨谷中，穷冬烈风，大雪深数尺，足肤皲裂而不知。至舍，四支僵劲不能动，媵人持汤沃灌，以衾拥覆，久而乃和。寓逆旅，主人日再食，无鲜肥滋味之享。同舍生皆被绮绣，戴朱缨宝饰之帽，腰白玉之环，左佩刀，右备容臭，烨然若神人；余则缊袍敝衣处其间，略无慕艳意。以中有足乐者，不知口体之奉不若人也。盖余之勤且艰若此。\n\n今虽耄老，未有所成，犹幸预君子之列，而承天子之宠光，缀公卿之后，日侍坐备顾问，四海亦谬称其氏名，况才之过于余者乎？",
+          "afterSha256": "c327546467d1e54122da2663e582a69410aa3c611926b82e75b515c73a0892c2"
+        },
+        "textSourceUrl": {
+          "before": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+          "afterSha256": "b64885d95f673f8433de6335c68eec2f2d131bf0a115a8d09b064b722f2ab0d8"
+        },
+        "note": {
+          "before": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+          "afterSha256": "203bf5f3347fd12246b807eb81fd61440a2a3f8d89c34824243cd4d47c948527"
+        }
+      }
+    },
+    {
+      "id": "sh54-advice-son",
+      "fields": {
+        "detail": {
+          "before": "诸葛亮\n夫君子之行，静以修身，俭以养德。非淡泊无以明志，非宁静无以致远。夫学须静也，才须学也。非学无以广才，非志无以成学。淫慢则不能励精，险躁则不能冶性。年与时驰，意与日去，遂成枯落，多不接世，悲守穷庐，将复何及！",
+          "afterSha256": "23928cd1fa9d3dd12f161e9e349818d4b651fa389e0a8b284485ed98a11bda17"
+        },
+        "source": {
+          "before": "五四制教材目录关联原作 · 正文待逐字核对",
+          "afterSha256": "150938b99f3bc28281f9f9c5e4f4b9790467bffec5d4735912a6cc6860b1c140"
+        },
+        "referenceUrl": {
+          "before": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+          "afterSha256": "a3956b2bb340f92202354c822805bff345b991fbdcc4f6f8226b9dd7c44af3a9"
+        },
+        "textSourceUrl": {
+          "before": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+          "afterSha256": "a3956b2bb340f92202354c822805bff345b991fbdcc4f6f8226b9dd7c44af3a9"
+        },
+        "note": {
+          "before": "公版原作参考；教材逐字校对待确认",
+          "afterSha256": "203bf5f3347fd12246b807eb81fd61440a2a3f8d89c34824243cd4d47c948527"
+        }
+      }
+    },
+    {
+      "id": "sh54-mengzi-dedao",
+      "fields": {
+        "detail": {
+          "before": "《孟子》\n天时不如地利，地利不如人和。\n三里之城，七里之郭，环而攻之而不胜。夫环而攻之，必有得天时者矣，然而不胜者，是天时不如地利也。城非不高也，池非不深也，兵革非不坚利也，米粟非不多也，委而去之，是地利不如人和也。\n故曰：域民不以封疆之界，固国不以山溪之险，威天下不以兵革之利。得道者多助，失道者寡助。寡助之至，亲戚畔之；多助之至，天下顺之。以天下之所顺，攻亲戚之所畔，故君子有不战，战必胜矣。",
+          "afterSha256": "9497530393f2c5a5ecf71c113e316b04540c7cc2bb52d6a43123e21bfe5f82a5"
+        },
+        "note": {
+          "before": "五四制2024审核原书印刷144页起／电子151页起核对；公版原作或书内选段，不含现代注释。按本册独立章目学习；与国家课标《孟子》三则分别保留，原有学习记录不改写。",
+          "afterSha256": "203bf5f3347fd12246b807eb81fd61440a2a3f8d89c34824243cd4d47c948527"
+        }
+      }
+    },
+    {
+      "id": "sh54-mengzi-youhuan",
+      "fields": {
+        "detail": {
+          "before": "《孟子》\n舜发于畎亩之中，傅说举于版筑之间，胶鬲举于鱼盐之中，管夷吾举于士，孙叔敖举于海，百里奚举于市。\n故天将降大任于是人也，必先苦其心志，劳其筋骨，饿其体肤，空乏其身，行拂乱其所为，所以动心忍性，曾益其所不能。\n人恒过，然后能改；困于心，衡于虑，而后作；征于色，发于声，而后喻。入则无法家拂士，出则无敌国外患者，国恒亡。然后知生于忧患而死于安乐也。",
+          "afterSha256": "2354cced8f71ae6b72711346989df719c2041fcf529c46605be659bbbe0ccbf9"
+        },
+        "note": {
+          "before": "五四制2024审核原书印刷146页起／电子153页起核对；公版原作或书内选段，不含现代注释。按本册独立章目学习；与国家课标《孟子》三则分别保留，原有学习记录不改写。",
+          "afterSha256": "203bf5f3347fd12246b807eb81fd61440a2a3f8d89c34824243cd4d47c948527"
+        }
+      }
+    },
+    {
+      "id": "sh54-songdongyang-textbook",
+      "fields": {
+        "detail": {
+          "before": "宋濂\n余幼时即嗜学。家贫，无从致书以观，每假借于藏书之家，手自笔录，计日以还。天大寒，砚冰坚，手指不可屈伸，弗之怠。录毕，走送之，不敢稍逾约。以是人多以书假余，余因得遍观群书。既加冠，益慕圣贤之道，又患无硕师、名人与游，尝趋百里外，从乡之先达执经叩问。先达德隆望尊，门人弟子填其室，未尝稍降辞色。余立侍左右，援疑质理，俯身倾耳以请；或遇其叱咄，色愈恭，礼愈至，不敢出一言以复；俟其欣悦，则又请焉。故余虽愚，卒获有所闻。\n\n当余之从师也，负箧曳屣，行深山巨谷中，穷冬烈风，大雪深数尺，足肤皲裂而不知。至舍，四支僵劲不能动，媵人持汤沃灌，以衾拥覆，久而乃和。寓逆旅，主人日再食，无鲜肥滋味之享。同舍生皆被绮绣，戴朱缨宝饰之帽，腰白玉之环，左佩刀，右备容臭，烨然若神人；余则缊袍敝衣处其间，略无慕艳意。以中有足乐者，不知口体之奉不若人也。盖余之勤且艰若此。\n\n今虽耄老，未有所成，犹幸预君子之列，而承天子之宠光，缀公卿之后，日侍坐备顾问，四海亦谬称其氏名，况才之过于余者乎？\n\n今诸生学于太学，县官日有廪稍之供，父母岁有裘葛之遗，无冻馁之患矣；坐大厦之下而诵诗书，无奔走之劳矣；有司业、博士为之师，未有问而不告、求而不得者也；凡所宜有之书，皆集于此，不必若余之手录，假诸人而后见也。其业有不精、德有不成者，非天质之卑，则心不若余之专耳，岂他人之过哉？\n东阳马生君则，在太学已二年，流辈甚称其贤。余朝京师，生以乡人子谒余，撰长书以为贽，辞甚畅达。与之论辨，言和而色夷。自谓少时用心于学甚劳，是可谓善学者矣。其将归见其亲也，余故道为学之难以告之。谓余勉乡人以学者，余之志也；诋我夸际遇之盛而骄乡人者，岂知予者哉？",
+          "afterSha256": "9be133434bdd6c55f88d408d47b08baeea8ba8ce1ec3ef313006a7fa0ba152ac"
+        },
+        "note": {
+          "before": "国家平台五四制2019审核／审定原书印刷54页起、电子61页起核对；公版原作或教材选段，不含现代注释。学校印次待确认。教材全文包含国家课标原节选；旧节选ID与正文保留，不能由节选完成推定全文完成。",
+          "afterSha256": "203bf5f3347fd12246b807eb81fd61440a2a3f8d89c34824243cd4d47c948527"
+        }
+      }
+    },
+    {
+      "id": "skill-zh-sh54-caochong",
+      "fields": {
+        "detail": {
+          "before": "学习目标：结合原句理解词义、句意和表达，依据文本回答。\n\n原句：访之群下\n\n知识说明：\n访：询问；咸：都；校：比较、校量。\n向众臣询问这件事。要结合上句理解所问是象的重量，不把访只按今天的访问解释。\n\n先练一练：\n1. 曹冲为什么先刻下水痕？\n2. “咸莫能出其理”表示一人还是众人想不出办法？\n\n作答后核对：\n1. 记录大象在船上时船下沉的位置，随后用替代物达到相同位置。\n2. 咸表示都，强调众臣都未想出办法。",
+          "afterSha256": "de9c390b55ad18dc1ea761505a2e6cc1d98da487179df0042416bd3296131bb4"
+        }
+      }
+    },
+    {
+      "id": "skill-zh-moe-2022-zh-7-9-041",
+      "fields": {
+        "textSourceUrl": {
+          "before": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+          "afterSha256": "a3956b2bb340f92202354c822805bff345b991fbdcc4f6f8226b9dd7c44af3a9"
+        }
+      }
+    },
+    {
+      "id": "skill-zh-sh54-advice-son",
+      "fields": {
+        "referenceUrl": {
+          "before": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+          "afterSha256": "a3956b2bb340f92202354c822805bff345b991fbdcc4f6f8226b9dd7c44af3a9"
+        },
+        "textSourceUrl": {
+          "before": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+          "afterSha256": "a3956b2bb340f92202354c822805bff345b991fbdcc4f6f8226b9dd7c44af3a9"
+        }
+      }
+    },
+    {
+      "id": "skill-zh-moe-2022-zh-7-9-057",
+      "fields": {
+        "textSourceUrl": {
+          "before": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+          "afterSha256": "0c6b768c5d028f3ee0dbee666295777a3e7830cd620082d442276282255cf48f"
+        }
+      }
+    },
+    {
+      "id": "skill-zh-moe-2022-zh-7-9-058",
+      "fields": {
+        "textSourceUrl": {
+          "before": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+          "afterSha256": "1395a85640685e5c040254512e03a0a8e917580ef1030b880ea4e921091a8a28"
+        }
+      }
+    },
+    {
+      "id": "skill-zh-sh54-dadao-zhixing",
+      "fields": {
+        "detail": {
+          "before": "学习目标：结合原句理解词义、句意和表达，依据文本回答。\n\n原句：选贤与能，讲信修睦\n\n知识说明：\n与：同“举”，推举；信：诚信；修：培养、建立。\n选拔贤德有才能的人，讲求诚信、培养和睦。解释与要联系选贤的并列结构。\n\n先练一练：\n1. “男有分，女有归”中的归在这里指什么？\n2. 文章怎样描写互助？\n\n作答后核对：\n1. 女子出嫁；需保留古代语境，不能简单译为回家。\n2. 由老有所终、幼有所长及对孤弱者的照顾等具体内容说明。",
+          "afterSha256": "41381f706509511bf8acf51561ea7f82b9dd57bf5073ffd04e45df4872b33a23"
+        }
+      }
+    },
+    {
+      "id": "skill-zh-moe-2022-zh-7-9-042",
+      "fields": {
+        "detail": {
+          "before": "学习目标：结合原句理解词义、句意和表达，依据文本回答。\n\n原句：小大之狱，虽不能察，必以情\n\n知识说明：\n狱：诉讼案件；察：明察；情：诚实、诚心。\n大小案件虽然不能一一明察，也一定诚心处理；狱在这里不是监狱。\n\n先练一练：\n1. “再而衰”的再是再次还是第二次？\n2. 曹刿追击前为什么看辙望旗？\n\n作答后核对：\n1. 第二次，和一鼓、三而竭形成明确序列。\n2. 要根据辙乱旗靡判断敌军确已溃退，防止贸然追击，体现依据观察决策。",
+          "afterSha256": "eccc8fa85e68a9204a46b262f7234304c088f92efa162d40dcd8218370d12d18"
+        }
+      }
+    },
+    {
+      "id": "skill-zh-moe-2022-zh-7-9-047",
+      "fields": {
+        "textSourceUrl": {
+          "before": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+          "afterSha256": "8830e80dd79840e508a2fee6b3dae94e4f3b02eabfa568ef324887a484c678b4"
+        }
+      }
+    },
+    {
+      "id": "skill-zh-moe-2022-zh-7-9-048",
+      "fields": {
+        "textSourceUrl": {
+          "before": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+          "afterSha256": "8830e80dd79840e508a2fee6b3dae94e4f3b02eabfa568ef324887a484c678b4"
+        }
+      }
+    },
+    {
+      "id": "skill-recite-moe-2022-zh-1-6-025",
+      "fields": {
+        "gradeMappings": {
+          "before": [
+            {
+              "grade": 2,
+              "bookId": "chinese-2b-sample",
+              "schoolSystem": "5-4",
+              "semester": "下册",
+              "edition": "人教社官方五四制电子书；封面审定2024；ISBN、印次未载",
+              "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=6f1d8652-05df-432b-8ee4-6a5652ec677e&catalogType=tchMaterial&subCatalog=tchMaterial",
+              "outlineDestination": "#page=74",
+              "sourceKind": "official_textbook",
+              "sourcePrintPage": 69,
+              "sourcePdfPage": 74,
+              "unit": "第6单元 · 观察自然",
+              "unitId": "u6",
+              "mappingType": "aligned_practice",
+              "evidence": "原作的年级、学期与位置已核实；此为依据原句自编的知识讲解与练习，不是教材原题，也不推定背诵要求。",
+              "status": "catalogue_verified"
+            }
+          ],
+          "afterSha256": "945b545cd8609a220d55775ca81a452433417f830d0fc01f397c376fef91e2c3"
+        }
+      }
+    },
+    {
+      "id": "moe-2022-zh-7-9-006",
+      "fields": {
+        "detail": {
+          "before": "北朝民歌\n唧唧复唧唧，木兰当户织。不闻机杼声，唯闻女叹息。问女何所思，问女何所忆。女亦无所思，女亦无所忆。昨夜见军帖，可汗大点兵，军书十二卷，卷卷有爷名。阿爷无大儿，木兰无长兄，愿为市鞍马，从此替爷征。\n\n东市买骏马，西市买鞍鞯，南市买辔头，北市买长鞭。旦辞爷娘去，暮宿黄河边，不闻爷娘唤女声，但闻黄河流水鸣溅溅。旦辞黄河去，暮至黑山头，不闻爷娘唤女声，但闻燕山胡骑鸣啾啾。\n\n万里赴戎机，关山度若飞。朔气传金柝，寒光照铁衣。将军百战死，壮士十年归。\n\n归来见天子，天子坐明堂。策勋十二转，赏赐百千强。可汗问所欲，木兰不用尚书郎，愿驰千里足，送儿还故乡。\n\n爷娘闻女来，出郭相扶将；阿姊闻妹来，当户理红妆；小弟闻姊来，磨刀霍霍向猪羊。开我东阁门，坐我西阁床，脱我战时袍，著我旧时裳。当窗理云鬓，对镜帖花黄。出门看火伴，火伴皆惊忙：同行十二年，不知木兰是女郎。\n\n雄兔脚扑朔，雌兔眼迷离；双兔傍地走，安能辨我是雄雌？",
+          "afterSha256": "a00235b15ac8f269e99f60f7029d227f5d4cc9ba9fcd21d9bdd282413cae5728"
+        },
+        "note": {
+          "before": "五四制2024审核原书印刷46页起正文已核对；学校印次待确认；采用本册“唯闻女叹息”；旧录“惟闻女叹息”作为异文记录，内容ID不变。",
+          "afterSha256": "a32fd095cac7425eb3f73d86d2a3b42389330ce92f8d0abf644bdb7782266cd1"
+        }
+      }
+    },
+    {
+      "id": "moe-2022-zh-7-9-023",
+      "fields": {
+        "detail": {
+          "before": "杜牧\n烟笼寒水月笼沙，夜泊秦淮近酒家。\n商女不知亡国恨，隔江犹唱《后庭花》。",
+          "afterSha256": "5a00375974bf137464b56b6d61cde786e1e71761a57aaf115ee226b533322e3f"
+        },
+        "textSourceUrl": {
+          "before": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+          "afterSha256": "0c6b768c5d028f3ee0dbee666295777a3e7830cd620082d442276282255cf48f"
+        },
+        "note": {
+          "before": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+          "afterSha256": "203bf5f3347fd12246b807eb81fd61440a2a3f8d89c34824243cd4d47c948527"
+        }
+      }
+    },
+    {
+      "id": "sh54-archery",
+      "fields": {
+        "detail": {
+          "before": "《列子》\n列子学射，中矣。请于关尹子。尹子曰：“子知子之所以中者乎？”对曰：“弗知也。”关尹子曰：“未可。”退而习之。三年，又以报关尹子。尹子曰：“子知子之所以中乎？”列子曰：“知之矣。”关尹子曰：“可矣，守而勿失也。非独射也，为国与身亦皆如之。故圣人不察存亡而察其所以然。”",
+          "afterSha256": "78a87abfc7f7d79636ebfbebb0c116a244c4a7e6ec85c593dd87c3fd203c7f6e"
+        },
+        "note": {
+          "before": "五四制原书印刷页47／电子页54逐字核对；沿用既有内容ID。",
+          "afterSha256": "203bf5f3347fd12246b807eb81fd61440a2a3f8d89c34824243cd4d47c948527"
+        }
+      }
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "checkedAt": "2026-10-18",
-  "scope": "新增41处要求的20张原书页图像核验记录；哈希标识本地核验图像，仓库不分发教材图片。其他已核条目见逐册核验文档。",
+  "scope": "背诵及熟读成诵要求的原书页图像核验记录；哈希标识本地核验图像，不分发教材图片。此前低年级第三方样本来源仍待官方原页替换。",
   "pages": [
     {
       "bookId": "chinese-1a-sample",
@@ -262,6 +262,254 @@
       "dictatedContentIds": [],
       "sha256": "b287571040d440bab3285e0863870258086d17aef94579ccdefb082db4132cb7",
       "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=f182b376-35af-4e94-849a-91ea3f97023c&catalogType=tchMaterial&subCatalog=tchMaterial"
+    },
+    {
+      "bookId": "chinese-2b-sample",
+      "sourcePrintPage": 3,
+      "sourcePdfPage": 9,
+      "sourceUrl": "https://book.pep.com.cn/1211001202252/mobile/index.html",
+      "sha256": "581fafafe68051a398f0f8014baddea2745d56eebdf9b7b5f74f3ebe43166785",
+      "contentIds": [
+        "poem-willow",
+        "moe-2022-zh-1-6-075"
+      ],
+      "dictatedContentIds": [],
+      "requirementQuote": "背诵课文。"
+    },
+    {
+      "bookId": "chinese-2b-sample",
+      "sourcePrintPage": 71,
+      "sourcePdfPage": 77,
+      "sourceUrl": "https://book.pep.com.cn/1211001202252/mobile/index.html",
+      "sha256": "c81da33a19df5f30794dff98c8be7abfea2b920f710bf4c047e9166332712276",
+      "contentIds": [
+        "moe-2022-zh-1-6-025",
+        "moe-2022-zh-1-6-064"
+      ],
+      "dictatedContentIds": [],
+      "requirementQuote": "背诵课文。"
+    },
+    {
+      "bookId": "chinese-5a-sample",
+      "sourcePrintPage": 53,
+      "sourcePdfPage": 58,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=e2055f40-fa27-4c9d-adf4-3586e26f418e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sha256": "21c277edaed5d364e5a8fb68f39d579057c2c86b4205b6fc91dbe18c360f7e76",
+      "contentIds": [
+        "moe-2022-zh-1-6-059",
+        "moe-2022-zh-1-6-067",
+        "moe-2022-zh-1-6-074"
+      ],
+      "dictatedContentIds": [
+        "moe-2022-zh-1-6-059"
+      ],
+      "requirementQuote": "背诵课文。默写《示儿》。"
+    },
+    {
+      "bookId": "chinese-5a-sample",
+      "sourcePrintPage": 93,
+      "sourcePdfPage": 98,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=e2055f40-fa27-4c9d-adf4-3586e26f418e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sha256": "9e348c6403586ad07e1a6e17adb948b826d7c2a3fc9d8b63d333645378f72c89",
+      "contentIds": [
+        "moe-2022-zh-1-6-029",
+        "sh54-shanju-qiuming",
+        "moe-2022-zh-1-6-034"
+      ],
+      "dictatedContentIds": [
+        "moe-2022-zh-1-6-029"
+      ],
+      "requirementQuote": "背诵课文。默写《枫桥夜泊》。"
+    },
+    {
+      "bookId": "chinese-5a-sample",
+      "sourcePrintPage": 103,
+      "sourcePdfPage": 108,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=e2055f40-fa27-4c9d-adf4-3586e26f418e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sha256": "39284bfd00b8817180758c8660a7a5b1af830bc4dfdbe7f5b0c45e3daa7b6fb7",
+      "contentIds": [
+        "sh54-guren-dushu-lunyu",
+        "sh54-guren-dushu-zhuxi"
+      ],
+      "dictatedContentIds": [],
+      "requirementQuote": "背诵课文。"
+    },
+    {
+      "bookId": "chinese-7a",
+      "sourcePrintPage": 65,
+      "sourcePdfPage": 72,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sha256": "fe42db8f4161a100da830f8a2792cf8738da1a55c0f5479f7344bb669c788407",
+      "contentIds": [
+        "moe-2022-zh-7-9-041"
+      ],
+      "dictatedContentIds": [],
+      "requirementQuote": "背诵全文。"
+    },
+    {
+      "bookId": "chinese-7a",
+      "sourcePrintPage": 92,
+      "sourcePdfPage": 99,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sha256": "395403f36cc574be840be0d23c6df57a8a10ae075d17ff309a798952cda58bcb",
+      "contentIds": [
+        "sh54-advice-son"
+      ],
+      "dictatedContentIds": [],
+      "requirementQuote": "背诵课文。"
+    },
+    {
+      "bookId": "chinese-7b",
+      "sourcePrintPage": 113,
+      "sourcePdfPage": 120,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sha256": "e123ce349507245270b3b3cd99d735d9c2d7cdf8437d2d64bf7365eea6ba5838",
+      "contentIds": [
+        "moe-2022-zh-7-9-053",
+        "moe-2022-zh-7-9-057"
+      ],
+      "dictatedContentIds": [
+        "moe-2022-zh-7-9-053",
+        "moe-2022-zh-7-9-057"
+      ],
+      "requirementQuote": "背诵并默写这两篇短文。"
+    },
+    {
+      "bookId": "chinese-8a",
+      "sourcePrintPage": 66,
+      "sourcePdfPage": 73,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sha256": "2cd3f9160134f41c04d534ea9862fa39cb77e3cd5b51e38499901cccf21ab290",
+      "contentIds": [
+        "moe-2022-zh-7-9-050",
+        "moe-2022-zh-7-9-058"
+      ],
+      "dictatedContentIds": [],
+      "requirementQuote": "背诵这两篇短文。"
+    },
+    {
+      "bookId": "chinese-8a",
+      "sourcePrintPage": 147,
+      "sourcePdfPage": 154,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sha256": "2516741a229f881de892dc841f1beec39ea3377f0b3ca4d73a13084bb0a5eb62",
+      "contentIds": [
+        "sh54-mengzi-dedao",
+        "sh54-mengzi-youhuan",
+        "sh54-mengzi-fugui"
+      ],
+      "dictatedContentIds": [],
+      "requirementQuote": "熟读并背诵《得道多助，失道寡助》《生于忧患，死于安乐》。\n背诵《富贵不能淫》中“居天下之广居……此之谓大丈夫”一段。"
+    },
+    {
+      "bookId": "chinese-8a",
+      "sourcePrintPage": 150,
+      "sourcePdfPage": 157,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sha256": "2611757f6def891d8ebc1eca4b55c232e4360f0e422a52645cdf6d20d0d3a243",
+      "contentIds": [
+        "sh54-yugong-yishan"
+      ],
+      "dictatedContentIds": [],
+      "requirementQuote": "熟读并背诵课文"
+    },
+    {
+      "bookId": "chinese-8a",
+      "sourcePrintPage": 157,
+      "sourcePdfPage": 164,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sha256": "767abf579a6f4fd0b30918d34244060b09313afe70f6c98da396a13e431683b8",
+      "contentIds": [
+        "moe-2022-zh-7-9-005",
+        "moe-2022-zh-7-9-015",
+        "moe-2022-zh-7-9-021",
+        "moe-2022-zh-7-9-022",
+        "moe-2022-zh-7-9-032"
+      ],
+      "dictatedContentIds": [],
+      "requirementQuote": "背诵这五首诗词。"
+    },
+    {
+      "bookId": "chinese-8b",
+      "sourcePrintPage": 136,
+      "sourcePdfPage": 143,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sha256": "b94dae4681d3abfa2f9578c7af60838d1c07298ad8add79c03f9fe10d7d42498",
+      "contentIds": [
+        "moe-2022-zh-7-9-044"
+      ],
+      "dictatedContentIds": [],
+      "requirementQuote": "背诵《北冥有鱼》"
+    },
+    {
+      "bookId": "chinese-9a",
+      "sourcePrintPage": 141,
+      "sourcePdfPage": 148,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sha256": "e9b9d224f22dbcd1a2f230462f22dc212853bc7c0d108548502f9d0e762f68e9",
+      "contentIds": [
+        "moe-2022-zh-7-9-047"
+      ],
+      "dictatedContentIds": [],
+      "requirementQuote": "背诵课文。"
+    },
+    {
+      "bookId": "chinese-9a",
+      "sourcePrintPage": 153,
+      "sourcePdfPage": 160,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sha256": "92834eb29f974b539c4ec0a6e4f39e7adcd335457afeda5cf5278176dc63b867",
+      "contentIds": [
+        "moe-2022-zh-7-9-003",
+        "moe-2022-zh-7-9-017",
+        "moe-2022-zh-7-9-034",
+        "moe-2022-zh-7-9-036",
+        "moe-2022-zh-7-9-038"
+      ],
+      "dictatedContentIds": [],
+      "familiarReadingContentIds": [
+        "moe-2022-zh-7-9-003",
+        "moe-2022-zh-7-9-017",
+        "moe-2022-zh-7-9-034",
+        "moe-2022-zh-7-9-036",
+        "moe-2022-zh-7-9-038"
+      ],
+      "requirementQuote": "熟读成诵"
+    },
+    {
+      "bookId": "chinese-9b",
+      "sourcePrintPage": 61,
+      "sourcePdfPage": 68,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sha256": "331dea0a10ac0323411f43db47117d14f7a5a2929b13caafff1fa3f7046228c1",
+      "contentIds": [
+        "moe-2022-zh-7-9-027",
+        "moe-2022-zh-7-9-030",
+        "moe-2022-zh-7-9-035",
+        "moe-2022-zh-7-9-040"
+      ],
+      "dictatedContentIds": [
+        "moe-2022-zh-7-9-027",
+        "moe-2022-zh-7-9-030",
+        "moe-2022-zh-7-9-035",
+        "moe-2022-zh-7-9-040"
+      ],
+      "requirementQuote": "背诵并默写本课的四首词。"
+    },
+    {
+      "bookId": "chinese-9b",
+      "sourcePrintPage": 128,
+      "sourcePdfPage": 135,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sha256": "9b8707d78dd25c4b92cc0bbc7f6f46618f9b77f4c18b31e3940b1b7b4c420918",
+      "contentIds": [
+        "moe-2022-zh-7-9-047"
+      ],
+      "dictatedContentIds": [],
+      "familiarReadingContentIds": [
+        "moe-2022-zh-7-9-047"
+      ],
+      "requirementQuote": "熟读成诵。"
     }
   ]
 }

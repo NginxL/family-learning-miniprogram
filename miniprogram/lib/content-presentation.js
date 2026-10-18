@@ -51,7 +51,13 @@ function learningGradeLabel(item) {
 }
 function withContentSources(item) {
     const knowledge = learning.catalogById.get(learning.contentId(item));
+    const revision = knowledge === null || knowledge === void 0 ? void 0 : knowledge.textRevision;
+    const hasOlderText = !!revision && typeof item.detail === 'string' && item.detail !== (knowledge === null || knowledge === void 0 ? void 0 : knowledge.detail);
     return { ...item,
+        textRevision: revision,
+        textCorrectionNotice: hasOlderText ? '正文已校订。本任务保留安排时的正文，请在“来源详情与说明”中查看校订正文；学习记录不变。' : '',
+        correctedDetail: hasOlderText && knowledge ? (knowledge.author && knowledge.detail.startsWith(`${knowledge.author}\n`)
+            ? knowledge.detail.slice(knowledge.author.length + 1) : knowledge.detail) : '',
         sourceGradeLabel: knowledge ? learning.knowledgeGradeLabel(knowledge) : '',
         sourceMappings: ((knowledge === null || knowledge === void 0 ? void 0 : knowledge.gradeMappings) || []).map((mapping, index) => ({ ...mapping, displayKey: `${mapping.bookId}:${index}` })),
         sourceReferenceUrl: (knowledge === null || knowledge === void 0 ? void 0 : knowledge.referenceUrl) || '', sourceTextUrl: (knowledge === null || knowledge === void 0 ? void 0 : knowledge.textSourceUrl) || '',
@@ -59,7 +65,7 @@ function withContentSources(item) {
             var _a;
             const mapping = (_a = knowledge === null || knowledge === void 0 ? void 0 : knowledge.gradeMappings) === null || _a === void 0 ? void 0 : _a.find(mapping => mapping.bookId === entry.bookId);
             const label = mapping ? `${learning.gradeLabels[mapping.grade]}${mapping.semester}${mapping.editionStatus === 'historical_reference' ? '（旧版参考）' : ''}：` : '';
-            return `${label}${entry.label}${entry.start ? `（${entry.start}—${entry.end}）` : ''}`;
+            return `${mapping ? label + entry.requirement : entry.label}${entry.start ? `（${entry.start}—${entry.end}）` : ''}`;
         }).join('\n')
     };
 }

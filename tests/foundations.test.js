@@ -70,9 +70,9 @@ test('foundation cards contain usable original instruction and independent pract
 });
 
 test('recitation requirements retain precise source pages and do not expand a partial assignment to a whole work', () => {
-  assert.equal(recitations.entries.length, 99);
-  assert.equal(new Set(recitations.entries.map(entry => entry.contentId)).size, 97);
-  assert.equal(new Set(recitations.entries.map(entry => `${entry.contentId}/${entry.bookId}`)).size, 99);
+  assert.equal(recitations.entries.length, 138);
+  assert.equal(new Set(recitations.entries.map(entry => entry.contentId)).size, 130);
+  assert.equal(new Set(recitations.entries.map(entry => `${entry.contentId}/${entry.bookId}`)).size, 138);
   for (const entry of recitations.entries) {
     const item = learning.catalogById.get(entry.contentId), mapping = item.gradeMappings.find(m => m.bookId === entry.bookId);
     assert.equal(entry.sourceUrl, mapping.sourceUrl);
@@ -82,7 +82,7 @@ test('recitation requirements retain precise source pages and do not expand a pa
   const song = learning.catalogById.get('sh54-songdongyang-textbook');
   const range = song.recitationRequirements[0];
   assert.equal(range.requirement, '背诵前两段'); assert.equal(range.sourcePdfPage, 63); assert.equal(range.sourcePrintPage, 56);
-  assert.equal(range.start, '余幼时即嗜学。'); assert.equal(range.end, '盖余之勤且艰若此。');
+  assert.equal(range.start, '余幼时即嗜学。'); assert.equal(range.end, '况才之过于余者乎？');
   assert.match(decorate(song).recitationNote, /旧版参考.*前两段/);
   assert.match(decorate(learning.catalogById.get('poem-goose')).recitationNote, /范围待核实/);
   assert.equal(decorate({ id: 'custom', kind: 'poetry', title: song.title, detail: '同名练习' }).recitationNote, undefined);
@@ -190,7 +190,7 @@ test('manual foundation work syncs across parents after a lost response and libr
 
 test('framework coverage numbers come from the same catalogue used by pages and never claim complete exam coverage', () => {
   assert.deepEqual(resources.examFramework.counts, { poetry: 260, word: 2748, sentence: 690, reading: 230,
-    englishReading: 161, recitation: 9, classical: 51, vocabulary: 10, grammar: 55, recitationRequirements: 99, unmappedWords: 404,
+    englishReading: 161, recitation: 9, classical: 51, vocabulary: 10, grammar: 55, recitationRequirements: 138, unmappedWords: 404,
     classicalGuides: 55, wordGuides: 644, phrasePatterns: 118, wordFamilies: 77 });
   assert.equal(resources.examFramework.complete, false); assert.equal(resources.examFramework.coverageRate, null);
   assert.equal(resources.curriculum.slots.filter(slot => slot.editionReview).length, 7);

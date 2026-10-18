@@ -3,7 +3,7 @@ const classical = require('../data/catalogs/chinese-classical-details.json');
 const english = require('../data/catalogs/english-word-study.json');
 const compact = text => text.replace(/[\s，。；、！？：“”‘’]/g, '');
 
-// Display-only additions: original content IDs, bodies and persisted task snapshots stay intact.
+// Display-only additions: no guide metadata is written into persisted task snapshots.
 function augment(items) {
   const byId = new Map(items.map(item => [item.id, item]));
   const used = new Set();
@@ -28,7 +28,8 @@ function augment(items) {
         { title: '容易混淆', body: entry.pitfall }
       ],
       exercises: entry.exercises.map(exercise => ({ ...exercise })),
-      sources: [{ title: '原作依据', url: item.textSourceUrl || item.referenceUrl }],
+      sources: [{ title: '原作依据', url: item.textSourceUrl || item.referenceUrl },
+        ...(entry.textbookEvidence || []).map(page => ({ title: `讲解核验原书第${page.sourcePrintPage}页 / 电子第${page.sourcePdfPage}页`, url: page.sourceUrl }))],
       searchTerms: entry.words.map(word => word.text)
     });
   }

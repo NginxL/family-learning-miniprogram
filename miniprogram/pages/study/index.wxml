@@ -19,6 +19,7 @@
       <view class="row"><view class="pill {{item.subject}}">{{item.modeLabel}}</view><view class="muted">{{item.pending ? '待同步' : item.done ? '已完成' : '待学习'}} · {{index + 1}} / {{group.count}}</view></view>
       <view class="task-title"><template is="pinyinText" data="{{enabled: showPinyin, lines: item.pinyin.title, text: item.title}}" /></view>
       <view wx:if="{{item.poetryByline}}" class="muted poetry-byline">{{item.poetryByline}}</view>
+      <view wx:if="{{item.textCorrectionNotice}}" class="notice">{{item.textCorrectionNotice}}</view>
       <view class="body"><template is="pinyinText" data="{{enabled: showPinyin, lines: item.pinyin.body, text: item.displayDetail || item.detail || '和家人一起完成这项学习。'}}" /></view>
       <view wx:if="{{item.recitationSummary}}" class="body recitation-summary">{{item.recitationSummary}}</view>
       <template is="studyNotes" data="{{item, notesOpenId, notesAnswersId}}" />

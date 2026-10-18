@@ -21,7 +21,8 @@
 | `english-moe-2022.json` | 1,600 组国家课标词头、505 个星标、通用词典参考 | 词头来自课标；部分释义来自 ECDICT，采用 MIT，见下方声明 |
 | `english-foundation-meanings.json` | 505 个基础词的常用义提示 | 自编简短释义，供家庭学习参考；不是教材单元词义 |
 | `english-reviewed-meanings.json` | 96项原通用词典卡的常用义、例句与中文提示 | 自编教学辅助，不冒充教材译文，原ID不变 |
-| `chinese-recitation-requirements.json`、`chinese-recitation-page-evidence.json` | 99处具名教材的背诵、默写与指定段落要求；新增原页核验摘要 | 原书课后要求的事实性范围和页码、核验图像SHA-256；未核范围保留待确认 |
+| `chinese-recitation-requirements.json`、`chinese-recitation-page-evidence.json` | 138处具名教材的背诵、默写、指定范围与熟读成诵要求；新增原页核验摘要 | 原书课后要求的事实性范围和页码、核验图像SHA-256；未核范围保留待确认 |
+| `chinese-text-revisions.json` | 19项原作用字、标点与分段校订，带原页定位及哈希 | 显示校订说明；旧任务正文与学习档案不回写 |
 | `chinese-classical-details.json` | 55篇公版文言原作的卡内讲解、句意自译与理解题 | 依据原作自编，沿用已核教材定位；不冒充教材注释，不单独生成学习ID |
 | `english-word-study.json` | 644项词卡内的词形、数量表达、118组短语搭配与77组词族 | ECDICT MIT词形经语境复核；British Council／Cambridge参考，例句和练习自编；不推定拓展用法的教材年级 |
 | `chinese-foundation-system.json`、`chinese-foundation-pinyin.json` | 9组背诵默写、51组文言理解，低年级2组附拼音 | 公版原句与原创讲解、问答，关联原作已核册次；不把练习当原书题目 |

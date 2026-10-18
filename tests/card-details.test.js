@@ -231,7 +231,9 @@ test('provenance is disclosed separately while the body, dynasty, original editi
   assert.match(learningGradeLabel(old), /旧版参考/);
   const recited = learning.catalog.find(item => item.recitationRequirements?.length);
   const display = withContentSources(decorate(recited));
-  assert.match(display.recitationSummary, new RegExp(recited.recitationRequirements[0].label));
+  const requirement = recited.recitationRequirements[0];
+  const mapping = recited.gradeMappings.find(m => m.bookId === requirement.bookId);
+  assert.equal(display.recitationSummary, `${learning.gradeLabels[mapping.grade]}${mapping.semester}：${requirement.requirement}`);
   assert.doesNotMatch(display.recitationSummary, /原书第|电子第|核实|核对/);
   for (const name of ['study', 'content']) {
     const markup = fs.readFileSync(path.join(root, `pages/${name}/index.wxml`), 'utf8');

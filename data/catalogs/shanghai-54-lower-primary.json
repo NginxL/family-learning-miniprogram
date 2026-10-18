@@ -1767,6 +1767,32 @@
               },
               "checkedAt": "2026-10-17",
               "textVariantNote": "本册只要求前四句“离离原上草”至“春风吹又生”；学习卡保留原作全文，后四句为拓展。"
+            },
+            {
+              "contentId": "poem-willow",
+              "sourcePrintPage": 1,
+              "sourcePdfPage": 7,
+              "sourceUrl": "https://book.pep.com.cn/1211001202252/mobile/index.html",
+              "sourceKind": "official_textbook",
+              "identityEvidence": {
+                "sourcePdfPage": 7,
+                "author": "贺知章",
+                "firstLine": "碧玉妆成一树高，万条垂下绿丝绦。"
+              },
+              "checkedAt": "2026-10-18"
+            },
+            {
+              "contentId": "moe-2022-zh-1-6-075",
+              "sourcePrintPage": 2,
+              "sourcePdfPage": 8,
+              "sourceUrl": "https://book.pep.com.cn/1211001202252/mobile/index.html",
+              "sourceKind": "official_textbook",
+              "identityEvidence": {
+                "sourcePdfPage": 8,
+                "author": "高鼎",
+                "firstLine": "草长莺飞二月天，拂堤杨柳醉春烟。"
+              },
+              "checkedAt": "2026-10-18"
             }
           ]
         },
@@ -2122,15 +2148,15 @@
             {
               "contentId": "moe-2022-zh-1-6-025",
               "sourcePrintPage": 69,
-              "sourcePdfPage": 74,
-              "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=6f1d8652-05df-432b-8ee4-6a5652ec677e&catalogType=tchMaterial&subCatalog=tchMaterial",
+              "sourcePdfPage": 75,
+              "sourceUrl": "https://book.pep.com.cn/1211001202252/mobile/index.html",
               "sourceKind": "official_textbook",
               "identityEvidence": {
-                "sourcePdfPage": 74,
+                "sourcePdfPage": 75,
                 "author": "杜甫",
                 "firstLine": "两个黄鹂鸣翠柳，一行白鹭上青天。"
               },
-              "checkedAt": "2026-10-17"
+              "checkedAt": "2026-10-18"
             },
             {
               "contentId": "sh54-solar-terms-song",
@@ -2144,6 +2170,19 @@
                 "firstLine": "春雨惊春清谷天，夏满芒夏暑相连。"
               },
               "checkedAt": "2026-10-17"
+            },
+            {
+              "contentId": "moe-2022-zh-1-6-064",
+              "sourcePrintPage": 70,
+              "sourcePdfPage": 76,
+              "sourceUrl": "https://book.pep.com.cn/1211001202252/mobile/index.html",
+              "sourceKind": "official_textbook",
+              "identityEvidence": {
+                "sourcePdfPage": 76,
+                "author": "杨万里",
+                "firstLine": "毕竟西湖六月中，风光不与四时同。"
+              },
+              "checkedAt": "2026-10-18"
             }
           ]
         },
@@ -2316,7 +2355,8 @@
           ]
         }
       ],
-      "sourcePageOffset": 6
+      "sourcePageOffset": 6,
+      "replacesOutlineMappings": true
     },
     {
       "id": "english-1a-sample",

@@ -8,12 +8,13 @@ const english = require('../data/catalogs/english-word-study.json');
 const recitations = require('../data/catalogs/chinese-recitation-requirements.json');
 const { decorate } = require('../miniprogram/lib/page');
 const { fixture } = require('./helpers');
+const { beforeChineseCorrections } = require('./chinese-baseline-helper');
 const compact = value => value.replace(/[\s，。；、！？：“”‘’]/g, '');
 const event = id => ({ currentTarget: { dataset: { id } } });
 
-test('supplemental guides preserve every original body, identity, placement and automatic-pool decision', () => {
-  // Independent baseline at c6c4f8f; only display notes and additional recitation evidence may change.
-  const original = knowledge.map(({ studyNotes, recitationRequirements, ...item }) => item);
+test('supplemental guides preserve identities, placement and automatic pools with only reviewed Chinese corrections', () => {
+  // Independent baseline at c6c4f8f; approved Chinese field changes are checked separately.
+  const original = knowledge.map(({ studyNotes, recitationRequirements, ...item }) => beforeChineseCorrections(item));
   assert.equal(original.length, 4190);
   assert.equal(crypto.createHash('sha256').update(JSON.stringify(original)).digest('hex'),
     '3774d9f395e3374a0b4784ef392b86d79c46129764356fb561279e17b0a023c4');
@@ -49,9 +50,9 @@ test('back-recitation evidence retains book-specific ranges and does not transfe
   assert.match(decorate(get('sh54-tiechu')).recitationNote, /范围待核实/);
   const title = 'moe-2022-zh-7-9-036';
   assert.match(decorate(get(title)).recitationNote, /旧版参考/);
-  assert.match(decorate(get(title)).recitationNote, /九年级上册：指定背诵、默写范围待核实/);
+  assert.match(decorate(get(title)).recitationNote, /9年级上册：熟读成诵/);
   const base = new Set(recitations.entries.slice(0, 58).map(e => `${e.contentId}/${e.bookId}`));
-  assert.equal(recitations.entries.filter(e => !base.has(`${e.contentId}/${e.bookId}`)).length, 41);
+  assert.equal(recitations.entries.filter(e => !base.has(`${e.contentId}/${e.bookId}`)).length, 80);
   assert.ok(recitations.entries.filter(e => e.bookId === 'chinese-4b-sample').every(e => get(e.contentId).recitationRequirements.some(r => /旧版参考/.test(r.label))));
 });
 

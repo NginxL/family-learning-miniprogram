@@ -304,7 +304,11 @@
       "contentId": "sh54-guren-dushu-lunyu",
       "words": [
         {
-          "text": "敏",
+          "text": "敏（敏而好学）",
+          "meaning": "聪敏"
+        },
+        {
+          "text": "敏（敏以求之）",
           "meaning": "勤勉"
         },
         {
@@ -348,6 +352,19 @@
         {
           "question": "只空想、不接触新知识，适合用哪一则提醒？",
           "answer": "最后一则“不如学也”：思考要有学习作基础，不能以脱离学习的空想代替求知。"
+        },
+        {
+          "question": "“敏而好学”与“敏以求之”的“敏”各是什么意思？",
+          "answer": "前者是聪敏，后者是勤勉。同一个字要放回具体语句辨义。"
+        }
+      ],
+      "textbookEvidence": [
+        {
+          "bookId": "chinese-5a-sample",
+          "sourcePrintPage": 102,
+          "sourcePdfPage": 107,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=e2055f40-fa27-4c9d-adf4-3586e26f418e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "b5e9e941543117f4a37b4e5441a12f23b83750476aa9cf117d8e6ce8382f5ca6"
         }
       ]
     },
@@ -635,7 +652,7 @@
         },
         {
           "text": "校",
-          "meaning": "比较、校量"
+          "meaning": "计数"
         }
       ],
       "sentences": [
@@ -654,6 +671,15 @@
         {
           "question": "为什么替代物要使船达到原来的水痕？",
           "answer": "这样才能使船承受的总重量与载象时相同，再由替代物的重量得到象的重量。"
+        }
+      ],
+      "textbookEvidence": [
+        {
+          "bookId": "chinese-6a",
+          "sourcePrintPage": 129,
+          "sourcePdfPage": 136,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=2ca4002f-cb3d-4a21-bcfe-ebb94032a400&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "26bebadd85a807d809be01278fb9c78859ebc0a4dcb7001b3c802869a65acb89"
         }
       ]
     },
@@ -966,6 +992,10 @@
         {
           "text": "黠",
           "meaning": "狡猾"
+        },
+        {
+          "text": "盖",
+          "meaning": "表示推测，相当于“大概”；原注另列承接上文、说明原因的一说"
         }
       ],
       "sentences": [
@@ -975,7 +1005,7 @@
         },
         {
           "text": "乃悟前狼假寐，盖以诱敌",
-          "meaning": "这才明白前面的狼假装睡觉，原来是用来诱惑对手。"
+          "meaning": "这才明白前面的狼假装睡觉，大概是用来诱惑对手。"
         }
       ],
       "structure": "按遇狼、惧狼、御狼、杀狼推进，结尾议论点出狼的狡诈终成笑谈。",
@@ -984,6 +1014,15 @@
         {
           "question": "屠户为什么转看柴堆后面很关键？",
           "answer": "发现另一只狼正从后面打洞袭击，揭示两狼的配合，也使屠户能及时消除后患。"
+        }
+      ],
+      "textbookEvidence": [
+        {
+          "bookId": "chinese-7a",
+          "sourcePrintPage": 125,
+          "sourcePdfPage": 132,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "dde2a7ff31e143cf2e13871788fd09e89e3aa4847c9ed63566821e71c2fe6503"
         }
       ]
     },
@@ -1228,7 +1267,7 @@
         },
         {
           "text": "白丁",
-          "meaning": "平民，这里指没有学问的人"
+          "meaning": "平民，指没有功名的人"
         },
         {
           "text": "调",
@@ -1259,6 +1298,15 @@
         {
           "question": "为什么写苔痕、草色，却说“不陋”？",
           "answer": "居室物质上朴素，环境清幽，主人德行与交往生活高雅，作者据此突出精神追求。"
+        }
+      ],
+      "textbookEvidence": [
+        {
+          "bookId": "chinese-7b",
+          "sourcePrintPage": 111,
+          "sourcePdfPage": 118,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "1e076f462f334c01c6c64fb52081926ab2184f9d3d363142feb473a1c5169c18"
         }
       ]
     },
@@ -1511,7 +1559,7 @@
         },
         {
           "text": "盖",
-          "meaning": "原来是"
+          "meaning": "大概是"
         },
         {
           "text": "但",
@@ -1534,6 +1582,15 @@
         {
           "question": "“何夜无月”之后为什么还说“但少闲人”？",
           "answer": "景物常有，能停下来欣赏并共享这种心境的人却不常有，突出人的感受与处境。"
+        }
+      ],
+      "textbookEvidence": [
+        {
+          "bookId": "chinese-8a",
+          "sourcePrintPage": 65,
+          "sourcePdfPage": 72,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "8b11283e49fd2895ac8a5e707c3262194f0cb6a801fb0f18ed50ed97453083c5"
         }
       ]
     },
@@ -1884,7 +1941,7 @@
         },
         {
           "text": "鲜美",
-          "meaning": "鲜艳美丽"
+          "meaning": "新鲜美好"
         },
         {
           "text": "交通",
@@ -1928,6 +1985,15 @@
           "question": "既写标记又写再也找不到，有什么叙事作用？",
           "answer": "增加故事的曲折与神秘感，使理想境界带有难以重返的意味；不宜把它直接当作地理实录。"
         }
+      ],
+      "textbookEvidence": [
+        {
+          "bookId": "chinese-8b",
+          "sourcePrintPage": 62,
+          "sourcePdfPage": 69,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "5a86087bd58a0be03375f95ff9eda4573275e43d23e76abbd27852e5eb894667"
+        }
       ]
     },
     {
@@ -1939,7 +2005,7 @@
         },
         {
           "text": "清冽",
-          "meaning": "清凉"
+          "meaning": "清澈；冽，同“洌”"
         },
         {
           "text": "可",
@@ -1983,6 +2049,15 @@
           "question": "第二段不直接反复说水清，怎样让读者感到清澈？",
           "answer": "用鱼似空游、日光直照、鱼影落石等可见细节侧面表现水的透明。"
         }
+      ],
+      "textbookEvidence": [
+        {
+          "bookId": "chinese-8b",
+          "sourcePrintPage": 66,
+          "sourcePdfPage": 73,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "5c0ac6dabf03db20629e1ed141e651b896fb9cd7126fd6f5b93aeef346009683"
+        }
       ]
     },
     {
@@ -2013,8 +2088,8 @@
           "meaning": "靠近"
         },
         {
-          "text": "属",
-          "meaning": "相类似"
+          "text": "不属",
+          "meaning": "不相关联；这里指佛印与苏、黄的神情没有呼应、互动"
         },
         {
           "text": "了了",
@@ -2041,6 +2116,15 @@
         {
           "question": "为什么要把微小尺寸与众多人、物并列说明？",
           "answer": "通过小尺寸与精细丰富的雕刻内容形成对照，突出雕刻者的精巧技艺。"
+        }
+      ],
+      "textbookEvidence": [
+        {
+          "bookId": "chinese-8b",
+          "sourcePrintPage": 69,
+          "sourcePdfPage": 76,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "9b3bd5bd1aa9a21fbae6f0e29a8e1c61c28103cbfaa3020b8cd4fcbad3940c4c"
         }
       ]
     },
@@ -2218,7 +2302,7 @@
         },
         {
           "text": "修",
-          "meaning": "培养"
+          "meaning": "修治"
         },
         {
           "text": "亲其亲",
@@ -2262,13 +2346,22 @@
           "question": "“不独亲其亲”是在否定爱自己的父母吗？",
           "answer": "不是，是在关爱自己父母的基础上推及他人，强调社会照顾不局限于一家。"
         }
+      ],
+      "textbookEvidence": [
+        {
+          "bookId": "chinese-8b",
+          "sourcePrintPage": 138,
+          "sourcePdfPage": 145,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "751ec217fdb6f8e584ec6ddfe23b6b8c0e5e3ff85dd6147261c0f028c5ee7d09"
+        }
       ]
     },
     {
       "contentId": "moe-2022-zh-7-9-052",
       "words": [
         {
-          "text": "祗",
+          "text": "只",
           "meaning": "只是"
         },
         {
@@ -2289,7 +2382,7 @@
         },
         {
           "text": "策",
-          "meaning": "鞭打"
+          "meaning": "用马鞭驱赶"
         },
         {
           "text": "通",
@@ -2316,6 +2409,22 @@
         {
           "question": "“天下无马”与“不知马”之间的矛盾是什么？",
           "answer": "千里马客观存在，管理者却因不识、不善养而使其才能无法显现，反过来责怪没有好马。"
+        }
+      ],
+      "textbookEvidence": [
+        {
+          "bookId": "chinese-8b",
+          "sourcePrintPage": 140,
+          "sourcePdfPage": 147,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "05a0059cb21a511587fcafe9723aeef90c7e49c23ae8d7f5dc364bb8b027714b"
+        },
+        {
+          "bookId": "chinese-8b",
+          "sourcePrintPage": 141,
+          "sourcePdfPage": 148,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "de09e1c01758cfdd27a368f51ca1c7ee9a89f1bff45847dd37f698366e0be9b3"
         }
       ]
     },
@@ -2383,7 +2492,7 @@
         },
         {
           "text": "临",
-          "meaning": "靠近"
+          "meaning": "居高面下"
         },
         {
           "text": "名",
@@ -2426,6 +2535,15 @@
         {
           "question": "作者为什么不只写自己的山水乐？",
           "answer": "还写百姓游乐与众宾欢，才能体现太守以众人的快乐为乐，拓宽“乐”的内涵。"
+        }
+      ],
+      "textbookEvidence": [
+        {
+          "bookId": "chinese-9a",
+          "sourcePrintPage": 53,
+          "sourcePdfPage": 60,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "0a48672a191266a938cd92a060275eac5e353214a2e8b432a2d4588595a0150a"
         }
       ]
     },
@@ -2518,12 +2636,16 @@
         {
           "text": "靡",
           "meaning": "倒下"
+        },
+        {
+          "text": "情",
+          "meaning": "诚心"
         }
       ],
       "sentences": [
         {
           "text": "小大之狱，虽不能察，必以情",
-          "meaning": "大大小小的诉讼案件，即使不能逐一查清，也一定按实情处理。"
+          "meaning": "大大小小的诉讼案件，虽然不能一一明察，也一定尽诚心处理。"
         },
         {
           "text": "一鼓作气，再而衰，三而竭",
@@ -2536,6 +2658,15 @@
         {
           "question": "曹刿进攻与追击前分别观察了什么？",
           "answer": "进攻看敌军三鼓后的士气变化，追击看车辙混乱、旗帜倒下，避免贸然行动。"
+        }
+      ],
+      "textbookEvidence": [
+        {
+          "bookId": "chinese-9a",
+          "sourcePrintPage": 137,
+          "sourcePdfPage": 144,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "8337d446728be3b8197d4011f3b19b44773cbac80340c88099f604a851a8eba1"
         }
       ]
     },
@@ -2636,12 +2767,21 @@
           "meaning": "燕雀怎么知道鸿鹄的志向呢？"
         }
       ],
-      "structure": "节选以佣耕时的对话表现不甘现状和远大志向，人物态度在回应中显露。",
-      "pitfall": "这里只讲现有节选，不把全文中起义的情节当成这段已经写出的内容；“安”不是平安。",
+      "structure": "先写佣耕时的对话与志向，再写失期处境、谋划起义，继而借鱼书篝火准备发动戍卒，最后写杀尉、号召与起义响应。",
+      "pitfall": "本页节选包含起义筹划和发动，止于“杀之以应陈涉”，不只佣耕对话；“安”在“燕雀安知”中是怎么。",
       "exercises": [
         {
           "question": "“燕雀”与“鸿鹄”的对比怎样服务于人物表达？",
           "answer": "用小鸟与大鸟的不同活动空间比喻眼界与志向的差异，表达陈涉不满足现状的心志。"
+        }
+      ],
+      "textbookEvidence": [
+        {
+          "bookId": "chinese-9a",
+          "sourcePrintPage": 145,
+          "sourcePdfPage": 152,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "80307adab34f540f41aa11e6225d936cc6baaa92a5be07cd516b8a07238832a8"
         }
       ]
     },
@@ -2784,7 +2924,7 @@
         },
         {
           "text": "色挠",
-          "meaning": "变了脸色"
+          "meaning": "面露胆怯之色"
         },
         {
           "text": "谢",
@@ -2807,6 +2947,15 @@
         {
           "question": "结尾秦王态度的变化如何反衬唐雎？",
           "answer": "由恫吓到色挠、道歉，反衬唐雎的坚定与胆识；需将前后言行相对照。"
+        }
+      ],
+      "textbookEvidence": [
+        {
+          "bookId": "chinese-9b",
+          "sourcePrintPage": 52,
+          "sourcePdfPage": 59,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "b68dc99ae7c25961c90e5323702757c6fb7b4dc8d30efb3a1da28b1a1b0cbae6"
         }
       ]
     },

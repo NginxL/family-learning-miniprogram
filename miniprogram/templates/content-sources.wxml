@@ -5,6 +5,12 @@
       <view wx:if="{{item.sourceGradeLabel}}" class="muted plan-help">{{item.sourceGradeLabel}}</view>
       <view wx:if="{{item.source}}" class="muted plan-help">来源：{{item.source}}</view>
       <view wx:if="{{item.note}}" class="muted plan-help">{{item.note}}</view>
+      <view wx:if="{{item.textRevision}}" class="source-book">
+        <view class="muted plan-help">正文校订 · {{item.textRevision.checkedAt}}：{{item.textRevision.summary}}</view>
+        <view class="muted plan-help">原书第 {{item.textRevision.sourcePrintPages}} 页 / 电子第 {{item.textRevision.sourcePdfPages}} 页</view>
+        <button class="quiet notes-source" data-url="{{item.textRevision.sourceUrl}}" bindtap="copyStudySource">复制正文校订依据链接</button>
+        <view wx:if="{{item.correctedDetail}}"><view class="muted plan-help">校订正文</view><view class="body">{{item.correctedDetail}}</view></view>
+      </view>
       <view wx:if="{{item.dynastyNote}}" class="muted plan-help">{{item.dynastyNote}}</view>
       <view wx:if="{{item.recitationNote}}" class="muted plan-help">{{item.recitationNote}}</view>
       <view wx:for="{{item.sourceMappings}}" wx:for-item="mapping" wx:key="displayKey" class="source-book muted">
@@ -16,7 +22,7 @@
       <view class="tab-row"><button wx:if="{{item.sourceReferenceUrl}}" class="quiet notes-source" data-url="{{item.sourceReferenceUrl}}" bindtap="copyStudySource">复制目录来源链接</button><button wx:if="{{item.sourceTextUrl}}" class="quiet notes-source" data-url="{{item.sourceTextUrl}}" bindtap="copyStudySource">复制正文 / 词典来源</button></view>
       <view wx:if="{{item.studyNotes}}">
         <view class="muted plan-help">学习笔记说明：{{item.studyNotes.notice}}</view>
-        <view class="tab-row"><button wx:for="{{item.studyNotes.sources}}" wx:for-item="source" wx:key="url" class="quiet notes-source" data-url="{{source.url}}" bindtap="copyStudySource">复制{{source.title}}链接</button></view>
+        <view class="tab-row"><button wx:for="{{item.studyNotes.sources}}" wx:for-item="source" wx:key="title" class="quiet notes-source" data-url="{{source.url}}" bindtap="copyStudySource">复制{{source.title}}链接</button></view>
       </view>
     </view>
   </view>

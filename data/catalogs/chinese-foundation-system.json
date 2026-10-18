@@ -199,7 +199,7 @@
       "anchorId": "sh54-caochong",
       "goal": "结合原句理解词义、句意和表达，依据文本回答。",
       "quote": "访之群下",
-      "explanation": "访：询问；咸：都；校：比较、校量。\n向众臣询问这件事。要结合上句理解所问是象的重量，不把访只按今天的访问解释。",
+      "explanation": "访：询问；咸：都；校：计数。\n向众臣询问这件事。要结合上句理解所问是象的重量，不把访只按今天的访问解释。",
       "exercises": [
         {
           "question": "曹冲为什么先刻下水痕？",
@@ -209,7 +209,18 @@
           "question": "“咸莫能出其理”表示一人还是众人想不出办法？",
           "answer": "咸表示都，强调众臣都未想出办法。"
         }
-      ]
+      ],
+      "textRevision": {
+        "checkedAt": "2026-10-18",
+        "summary": "按六上原书校订“校”的解释为“计数”。",
+        "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=2ca4002f-cb3d-4a21-bcfe-ebb94032a400&catalogType=tchMaterial&subCatalog=tchMaterial",
+        "sourcePrintPages": [
+          129
+        ],
+        "sourcePdfPages": [
+          136
+        ]
+      }
     },
     {
       "id": "skill-zh-sh54-archery",
@@ -750,7 +761,7 @@
       "anchorId": "sh54-dadao-zhixing",
       "goal": "结合原句理解词义、句意和表达，依据文本回答。",
       "quote": "选贤与能，讲信修睦",
-      "explanation": "与：同“举”，推举；信：诚信；修：培养、建立。\n选拔贤德有才能的人，讲求诚信、培养和睦。解释与要联系选贤的并列结构。",
+      "explanation": "与：同“举”，推举；信：诚信；修：修治。\n选拔贤德有才能的人，讲求诚信，调节关系以促成和睦。解释与要联系选贤的并列结构。",
       "exercises": [
         {
           "question": "“男有分，女有归”中的归在这里指什么？",
@@ -760,7 +771,18 @@
           "question": "文章怎样描写互助？",
           "answer": "由老有所终、幼有所长及对孤弱者的照顾等具体内容说明。"
         }
-      ]
+      ],
+      "textRevision": {
+        "checkedAt": "2026-10-18",
+        "summary": "按八下原书校订“修”的解释为“修治”，并调整句意说明。",
+        "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+        "sourcePrintPages": [
+          138
+        ],
+        "sourcePdfPages": [
+          145
+        ]
+      }
     },
     {
       "id": "skill-zh-moe-2022-zh-7-9-052",
@@ -845,7 +867,7 @@
       "anchorId": "moe-2022-zh-7-9-042",
       "goal": "结合原句理解词义、句意和表达，依据文本回答。",
       "quote": "小大之狱，虽不能察，必以情",
-      "explanation": "狱：诉讼案件；察：明察；情：诚实、诚心。\n大小案件虽然不能一一明察，也一定诚心处理；狱在这里不是监狱。",
+      "explanation": "狱：诉讼案件；察：明察；情：诚心。\n大小案件虽然不能一一明察，也一定尽诚心处理；狱在这里不是监狱。",
       "exercises": [
         {
           "question": "“再而衰”的再是再次还是第二次？",
@@ -855,7 +877,18 @@
           "question": "曹刿追击前为什么看辙望旗？",
           "answer": "要根据辙乱旗靡判断敌军确已溃退，防止贸然追击，体现依据观察决策。"
         }
-      ]
+      ],
+      "textRevision": {
+        "checkedAt": "2026-10-18",
+        "summary": "按九上原书将“情”明确解释为“诚心”，与原作讲解一致。",
+        "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+        "sourcePrintPages": [
+          137
+        ],
+        "sourcePdfPages": [
+          144
+        ]
+      }
     },
     {
       "id": "skill-zh-moe-2022-zh-7-9-047",

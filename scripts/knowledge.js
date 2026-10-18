@@ -9,6 +9,7 @@ const dynasties = require('../data/catalogs/poetry-dynasties.json');
 const curriculum = require('./curriculum');
 const lowerPrimary = require('./lower-primary');
 const foundations = require('./foundations');
+const textRevisions = require('./text-revisions');
 function period(entry) {
   const metadata = dynasties.entries.find((item) => item.id === entry.id);
   if (!metadata || metadata.title !== entry.title || metadata.author !== entry.author || !metadata.dynasty || !metadata.sources.length)
@@ -70,7 +71,7 @@ function knowledge() {
     minutes: 1, referenceUrl: tables.sourceUrl, collections: ['tables'],
     note: '另列表，不计入课标 1600 个主词条或 505 个带星词。'
   }));
-  return foundations.augment(lowerPrimary.augment([...poems, ...additional, ...words, ...tableWords]));
+  return textRevisions.augment(foundations.augment(lowerPrimary.augment([...poems, ...additional, ...words, ...tableWords])));
 }
 module.exports = { knowledge, resourcesFor: catalog => ({ ...module.exports.resources,
   examFramework: foundations.frameworkWithCounts(examFramework, catalog) }), resources: {

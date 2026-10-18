@@ -1,6 +1,6 @@
 {
   "checkedAt": "2026-10-18",
-  "scope": "已核实的教材背诵对象与范围事实；未列条目为要求待核实，不表示无需背诵。",
+  "scope": "具名五四制教材逐册核实的背诵、默写、指定范围与熟读成诵要求；不等同于上海当届完整考试范围。",
   "entries": [
     {
       "contentId": "sh54-shouzhudaitu",
@@ -460,8 +460,8 @@
       "sourcePrintPage": 56,
       "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
       "start": "余幼时即嗜学。",
-      "end": "盖余之勤且艰若此。",
-      "evidence": "原书课后要求核实；仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+      "end": "况才之过于余者乎？",
+      "evidence": "原书印刷56页要求“背诵课文前两段”；印刷55页第二段包含“今虽耄老”至“况才之过于余者乎？”。仅适用九下旧版参考。"
     },
     {
       "contentId": "moe-2022-zh-7-9-042",
@@ -894,6 +894,359 @@
       "sourcePrintPage": 98,
       "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=f182b376-35af-4e94-849a-91ea3f97023c&catalogType=tchMaterial&subCatalog=tchMaterial",
       "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "poem-willow",
+      "bookId": "chinese-2b-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 9,
+      "sourcePrintPage": 3,
+      "sourceUrl": "https://book.pep.com.cn/1211001202252/mobile/index.html",
+      "evidence": "原页要求：“背诵课文。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-075",
+      "bookId": "chinese-2b-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 9,
+      "sourcePrintPage": 3,
+      "sourceUrl": "https://book.pep.com.cn/1211001202252/mobile/index.html",
+      "evidence": "原页要求：“背诵课文。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-025",
+      "bookId": "chinese-2b-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 77,
+      "sourcePrintPage": 71,
+      "sourceUrl": "https://book.pep.com.cn/1211001202252/mobile/index.html",
+      "evidence": "原页要求：“背诵课文。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-064",
+      "bookId": "chinese-2b-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 77,
+      "sourcePrintPage": 71,
+      "sourceUrl": "https://book.pep.com.cn/1211001202252/mobile/index.html",
+      "evidence": "原页要求：“背诵课文。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-059",
+      "bookId": "chinese-5a-sample",
+      "requirement": "背诵并默写全文",
+      "sourcePdfPage": 58,
+      "sourcePrintPage": 53,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=e2055f40-fa27-4c9d-adf4-3586e26f418e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“背诵课文。默写《示儿》。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-067",
+      "bookId": "chinese-5a-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 58,
+      "sourcePrintPage": 53,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=e2055f40-fa27-4c9d-adf4-3586e26f418e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“背诵课文。默写《示儿》。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-074",
+      "bookId": "chinese-5a-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 58,
+      "sourcePrintPage": 53,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=e2055f40-fa27-4c9d-adf4-3586e26f418e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“背诵课文。默写《示儿》。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-029",
+      "bookId": "chinese-5a-sample",
+      "requirement": "背诵并默写全文",
+      "sourcePdfPage": 98,
+      "sourcePrintPage": 93,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=e2055f40-fa27-4c9d-adf4-3586e26f418e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“背诵课文。默写《枫桥夜泊》。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "sh54-shanju-qiuming",
+      "bookId": "chinese-5a-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 98,
+      "sourcePrintPage": 93,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=e2055f40-fa27-4c9d-adf4-3586e26f418e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“背诵课文。默写《枫桥夜泊》。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-034",
+      "bookId": "chinese-5a-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 98,
+      "sourcePrintPage": 93,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=e2055f40-fa27-4c9d-adf4-3586e26f418e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“背诵课文。默写《枫桥夜泊》。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "sh54-guren-dushu-lunyu",
+      "bookId": "chinese-5a-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 108,
+      "sourcePrintPage": 103,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=e2055f40-fa27-4c9d-adf4-3586e26f418e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“背诵课文。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "sh54-guren-dushu-zhuxi",
+      "bookId": "chinese-5a-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 108,
+      "sourcePrintPage": 103,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=e2055f40-fa27-4c9d-adf4-3586e26f418e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“背诵课文。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-041",
+      "bookId": "chinese-7a",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 72,
+      "sourcePrintPage": 65,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“背诵全文。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "sh54-advice-son",
+      "bookId": "chinese-7a",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 99,
+      "sourcePrintPage": 92,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“背诵课文。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-053",
+      "bookId": "chinese-7b",
+      "requirement": "背诵并默写全文",
+      "sourcePdfPage": 120,
+      "sourcePrintPage": 113,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“背诵并默写这两篇短文。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-057",
+      "bookId": "chinese-7b",
+      "requirement": "背诵并默写全文",
+      "sourcePdfPage": 120,
+      "sourcePrintPage": 113,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“背诵并默写这两篇短文。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-050",
+      "bookId": "chinese-8a",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 73,
+      "sourcePrintPage": 66,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“背诵这两篇短文。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-058",
+      "bookId": "chinese-8a",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 73,
+      "sourcePrintPage": 66,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“背诵这两篇短文。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "sh54-mengzi-dedao",
+      "bookId": "chinese-8a",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 154,
+      "sourcePrintPage": 147,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“熟读并背诵《得道多助，失道寡助》《生于忧患，死于安乐》。\n背诵《富贵不能淫》中“居天下之广居……此之谓大丈夫”一段。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "sh54-mengzi-youhuan",
+      "bookId": "chinese-8a",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 154,
+      "sourcePrintPage": 147,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“熟读并背诵《得道多助，失道寡助》《生于忧患，死于安乐》。\n背诵《富贵不能淫》中“居天下之广居……此之谓大丈夫”一段。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "sh54-mengzi-fugui",
+      "bookId": "chinese-8a",
+      "requirement": "背诵指定范围",
+      "sourcePdfPage": 154,
+      "sourcePrintPage": 147,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“熟读并背诵《得道多助，失道寡助》《生于忧患，死于安乐》。\n背诵《富贵不能淫》中“居天下之广居……此之谓大丈夫”一段。”仅适用于所列版本，不据此推定为上海当届完整默写范围。",
+      "start": "居天下之广居，",
+      "end": "此之谓大丈夫。"
+    },
+    {
+      "contentId": "sh54-yugong-yishan",
+      "bookId": "chinese-8a",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 157,
+      "sourcePrintPage": 150,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“熟读并背诵课文”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-005",
+      "bookId": "chinese-8a",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 164,
+      "sourcePrintPage": 157,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“背诵这五首诗词。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-015",
+      "bookId": "chinese-8a",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 164,
+      "sourcePrintPage": 157,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“背诵这五首诗词。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-021",
+      "bookId": "chinese-8a",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 164,
+      "sourcePrintPage": 157,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“背诵这五首诗词。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-022",
+      "bookId": "chinese-8a",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 164,
+      "sourcePrintPage": 157,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“背诵这五首诗词。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-032",
+      "bookId": "chinese-8a",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 164,
+      "sourcePrintPage": 157,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“背诵这五首诗词。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-044",
+      "bookId": "chinese-8b",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 143,
+      "sourcePrintPage": 136,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“背诵《北冥有鱼》”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-047",
+      "bookId": "chinese-9a",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 148,
+      "sourcePrintPage": 141,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“背诵课文。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-003",
+      "bookId": "chinese-9a",
+      "requirement": "熟读成诵",
+      "sourcePdfPage": 160,
+      "sourcePrintPage": 153,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“熟读成诵”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-017",
+      "bookId": "chinese-9a",
+      "requirement": "熟读成诵",
+      "sourcePdfPage": 160,
+      "sourcePrintPage": 153,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“熟读成诵”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-034",
+      "bookId": "chinese-9a",
+      "requirement": "熟读成诵",
+      "sourcePdfPage": 160,
+      "sourcePrintPage": 153,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“熟读成诵”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-036",
+      "bookId": "chinese-9a",
+      "requirement": "熟读成诵",
+      "sourcePdfPage": 160,
+      "sourcePrintPage": 153,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“熟读成诵”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-038",
+      "bookId": "chinese-9a",
+      "requirement": "熟读成诵",
+      "sourcePdfPage": 160,
+      "sourcePrintPage": 153,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“熟读成诵”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-027",
+      "bookId": "chinese-9b",
+      "requirement": "背诵并默写全文",
+      "sourcePdfPage": 68,
+      "sourcePrintPage": 61,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“背诵并默写本课的四首词。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-030",
+      "bookId": "chinese-9b",
+      "requirement": "背诵并默写全文",
+      "sourcePdfPage": 68,
+      "sourcePrintPage": 61,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“背诵并默写本课的四首词。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-035",
+      "bookId": "chinese-9b",
+      "requirement": "背诵并默写全文",
+      "sourcePdfPage": 68,
+      "sourcePrintPage": 61,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“背诵并默写本课的四首词。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-040",
+      "bookId": "chinese-9b",
+      "requirement": "背诵并默写全文",
+      "sourcePdfPage": 68,
+      "sourcePrintPage": 61,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“背诵并默写本课的四首词。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-047",
+      "bookId": "chinese-9b",
+      "requirement": "熟读成诵",
+      "sourcePdfPage": 135,
+      "sourcePrintPage": 128,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "原页要求：“熟读成诵。”仅适用于所列版本，不据此推定为上海当届完整默写范围。"
     }
   ]
 }

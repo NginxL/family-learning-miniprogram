@@ -55,6 +55,7 @@ function augment(items) {
     const englishLesson = ['vocabulary', 'grammar'].includes(lesson.area);
     const item = { id: lesson.id, kind: englishLesson ? 'english-reading' : 'reading', title: lesson.title,
       detail: lessonDetail(lesson), minutes: 8, learningArea: lesson.area, manualOnly: true,
+      ...(lesson.textRevision ? { textRevision: lesson.textRevision } : {}),
       source: `${areaLabels[lesson.area]} · 原创讲解与练习${englishLesson ? `；国家2022英语课标电子第${lesson.curriculumPdfPage}页` : '；关联原作来源见下方'}`,
       note: `知识点练习，由家长安排日期；不计入自动生成的阅读篇数。${lesson.level === 'understanding' ? '课标要求层次为辨认或理解，不扩写为必须熟练运用。' : ''}`,
       referenceUrl: anchor ? anchor.referenceUrl : english.sourceUrl,
@@ -74,7 +75,7 @@ function frameworkWithCounts(framework, catalog) {
     vocabulary: areaCount('vocabulary'), grammar: areaCount('grammar'), recitationRequirements: recitations.entries.length,
     unmappedWords: catalog.filter(item => item.kind === 'word' && !item.gradeMappings?.length).length, ...studyNotes.counts };
   const prefixes = {
-    'zh-classics': `${counts.poetry}项古诗文；${counts.recitationRequirements}处原书背诵要求；${counts.recitation}组记诵练习。`,
+    'zh-classics': `${counts.poetry}项古诗文；${counts.recitationRequirements}处原书记诵要求；${counts.recitation}组记诵练习。`,
     'zh-classical-reading': `${counts.classical}组独立文言练习；${counts.classicalGuides}篇原作内附字词、句意与理解。`,
     'zh-reading-writing': `${counts.reading}项语文阅读、识字与拼音练习，知识点练习另计。`,
     'en-vocabulary': `${counts.word}项词汇；${counts.wordGuides}项词卡附学习辅助，包含${counts.phrasePatterns}组短语搭配、${counts.wordFamilies}组词族；${counts.vocabulary}组独立词汇练习；${counts.unmappedWords}项词汇教材年级学期待核实。`,

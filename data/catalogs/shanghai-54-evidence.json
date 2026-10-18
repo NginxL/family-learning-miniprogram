@@ -948,10 +948,11 @@
       "id": "sh54-advice-son",
       "title": "诫子书",
       "author": "诸葛亮",
-      "original": "夫君子之行，静以修身，俭以养德。非淡泊无以明志，非宁静无以致远。夫学须静也，才须学也。非学无以广才，非志无以成学。淫慢则不能励精，险躁则不能冶性。年与时驰，意与日去，遂成枯落，多不接世，悲守穷庐，将复何及！",
-      "sourceUrl": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+      "original": "夫君子之行，静以修身，俭以养德。非淡泊无以明志，非宁静无以致远。夫学须静也，才须学也。非学无以广才，非志无以成学。淫慢则不能励精，险躁则不能治性。年与时驰，意与日去，遂成枯落，多不接世，悲守穷庐，将复何及！",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial",
       "transcriptionRecordId": "5b9a1430367d5cab18668602",
-      "reviewStatus": "公版原作参考；教材逐字校对待确认"
+      "reviewStatus": "所列五四制官方原页的用字、标点或分段已校订；异文说明及页码见正文校订记录；学校实际印次待确认。",
+      "textVariantNote": "七上原书作“治性”，治指修养；旧卡“冶性”已校订。"
     },
     {
       "id": "sh54-wolf",
@@ -966,9 +967,10 @@
       "id": "sh54-archery",
       "title": "关尹子教射",
       "author": "《列子》",
-      "original": "列子学射，中矣。请于关尹子。尹子曰：“子知子之所以中者乎？”对曰：“弗知也。”关尹子曰：“未可。”退而习之。三年，又以报关尹子。尹子曰：“子知子之所以中乎？”列子曰：“知之矣。”关尹子曰：“可矣，守而勿失也。非独射也，为国与身亦皆如之。故圣人不察存亡而察其所以然。”",
+      "original": "列子学射，中矣。请于关尹子。尹子曰：“子知子之所以中者乎？”对曰：“弗知也。”关尹子曰：“未可。”退而习之。\n\n三年，又以报关尹子。尹子曰：“子知子之所以中乎？”列子曰：“知之矣。”关尹子曰：“可矣，守而勿失也。非独射也，为国与身亦皆如之。故圣人不察存亡而察其所以然。”",
       "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=a953eeec-db0c-4c8b-860f-aa94f4727b6b&catalogType=tchMaterial&subCatalog=tchMaterial",
-      "reviewStatus": "五四制原书印刷页47／电子页54逐字核对；沿用既有内容ID。"
+      "reviewStatus": "所列五四制官方原页的用字、标点或分段已校订；异文说明及页码见正文校订记录；学校实际印次待确认。",
+      "textVariantNote": "六下原书在“退而习之”后另起第二段。"
     },
     {
       "id": "sh-exam-dai-song",

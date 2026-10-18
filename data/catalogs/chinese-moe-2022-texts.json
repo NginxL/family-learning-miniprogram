@@ -1221,18 +1221,19 @@
       "curriculumId": "moe-2022-zh-7-9-006",
       "title": "木兰诗（木兰辞）",
       "author": "北朝民歌",
-      "original": "唧唧复唧唧，木兰当户织。不闻机杼声，唯闻女叹息。问女何所思，问女何所忆。女亦无所思，女亦无所忆。昨夜见军帖，可汗大点兵，军书十二卷，卷卷有爷名。阿爷无大儿，木兰无长兄，愿为市鞍马，从此替爷征。\n\n东市买骏马，西市买鞍鞯，南市买辔头，北市买长鞭。旦辞爷娘去，暮宿黄河边，不闻爷娘唤女声，但闻黄河流水鸣溅溅。旦辞黄河去，暮至黑山头，不闻爷娘唤女声，但闻燕山胡骑鸣啾啾。\n\n万里赴戎机，关山度若飞。朔气传金柝，寒光照铁衣。将军百战死，壮士十年归。\n\n归来见天子，天子坐明堂。策勋十二转，赏赐百千强。可汗问所欲，木兰不用尚书郎，愿驰千里足，送儿还故乡。\n\n爷娘闻女来，出郭相扶将；阿姊闻妹来，当户理红妆；小弟闻姊来，磨刀霍霍向猪羊。开我东阁门，坐我西阁床，脱我战时袍，著我旧时裳。当窗理云鬓，对镜帖花黄。出门看火伴，火伴皆惊忙：同行十二年，不知木兰是女郎。\n\n雄兔脚扑朔，雌兔眼迷离；双兔傍地走，安能辨我是雄雌？",
+      "original": "唧唧复唧唧，木兰当户织。不闻机杼声，唯闻女叹息。\n\n问女何所思，问女何所忆。女亦无所思，女亦无所忆。昨夜见军帖，可汗大点兵，军书十二卷，卷卷有爷名。阿爷无大儿，木兰无长兄，愿为市鞍马，从此替爷征。\n\n东市买骏马，西市买鞍鞯，南市买辔头，北市买长鞭。旦辞爷娘去，暮宿黄河边，不闻爷娘唤女声，但闻黄河流水鸣溅溅。旦辞黄河去，暮至黑山头，不闻爷娘唤女声，但闻燕山胡骑鸣啾啾。\n\n万里赴戎机，关山度若飞。朔气传金柝，寒光照铁衣。将军百战死，壮士十年归。\n\n归来见天子，天子坐明堂。策勋十二转，赏赐百千强。可汗问所欲，木兰不用尚书郎，愿驰千里足，送儿还故乡。\n\n爷娘闻女来，出郭相扶将；阿姊闻妹来，当户理红妆；小弟闻姊来，磨刀霍霍向猪羊。开我东阁门，坐我西阁床，脱我战时袍，著我旧时裳。当窗理云鬓，对镜帖花黄。出门看火伴，火伴皆惊忙：同行十二年，不知木兰是女郎。\n\n雄兔脚扑朔，雌兔眼迷离；双兔傍地走，安能辨我是雄雌？",
       "gradeBand": "7-9",
       "sourcePdfPage": 68,
       "textSources": [
         "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial",
         "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
       ],
-      "reviewStatus": "五四制2024审核原书印刷46页起正文已核对；学校印次待确认",
+      "reviewStatus": "所列五四制官方原页的用字、标点或分段已校订；异文说明及页码见正文校订记录；学校实际印次待确认。",
       "notes": [
         "采用本册“唯闻女叹息”；旧录“惟闻女叹息”作为异文记录，内容ID不变。"
       ],
-      "transcriptionRecordId": "5b9a0136367d5c96f4cd295a"
+      "transcriptionRecordId": "5b9a0136367d5c96f4cd295a",
+      "textVariantNote": "七下原书首段止于“唯闻女叹息”，“问女何所思”另起第二段；库内题名保留别称“木兰辞”。"
     },
     {
       "id": "moe-2022-zh-7-9-007",
@@ -1254,30 +1255,34 @@
       "curriculumId": "moe-2022-zh-7-9-008",
       "title": "登幽州台歌",
       "author": "陈子昂",
-      "original": "前不见古人，后不见来者。\n念天地之悠悠，独怆然而涕下。",
+      "original": "前不见古人，后不见来者。\n念天地之悠悠，独怆然而涕下！",
       "gradeBand": "7-9",
       "sourcePdfPage": 68,
       "textSources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial",
         "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
       ],
-      "reviewStatus": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+      "reviewStatus": "所列五四制官方原页的用字、标点或分段已校订；异文说明及页码见正文校订记录；学校实际印次待确认。",
       "notes": [],
-      "transcriptionRecordId": "5b9a1437367d5cab18668631"
+      "transcriptionRecordId": "5b9a1437367d5cab18668631",
+      "textVariantNote": "按七下原书，末句以叹号结束。"
     },
     {
       "id": "moe-2022-zh-7-9-009",
       "curriculumId": "moe-2022-zh-7-9-009",
       "title": "次北固山下",
       "author": "王湾",
-      "original": "客路青山外，行舟绿水前。\n潮平两岸阔，风正一帆悬。\n海日生残夜，江春入旧年。\n乡书何处达？归雁洛阳边。",
+      "original": "客路青山外，行舟绿水前。\n潮平两岸阔，风正一帆悬。\n海日生残夜，江春入旧年。\n乡书何处达，归雁洛阳边。",
       "gradeBand": "7-9",
       "sourcePdfPage": 68,
       "textSources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial",
         "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
       ],
-      "reviewStatus": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+      "reviewStatus": "所列五四制官方原页的用字、标点或分段已校订；异文说明及页码见正文校订记录；学校实际印次待确认。",
       "notes": [],
-      "transcriptionRecordId": "5b9a04b7367d5cae5c9bff77"
+      "transcriptionRecordId": "5b9a04b7367d5cae5c9bff77",
+      "textVariantNote": "按七上原书，“乡书何处达”后为逗号。"
     },
     {
       "id": "moe-2022-zh-7-9-010",
@@ -1485,15 +1490,17 @@
       "curriculumId": "moe-2022-zh-7-9-023",
       "title": "泊秦淮",
       "author": "杜牧",
-      "original": "烟笼寒水月笼沙，夜泊秦淮近酒家。\n商女不知亡国恨，隔江犹唱《后庭花》。",
+      "original": "烟笼寒水月笼沙，夜泊秦淮近酒家。\n商女不知亡国恨，隔江犹唱后庭花。",
       "gradeBand": "7-9",
       "sourcePdfPage": 69,
       "textSources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial",
         "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
       ],
-      "reviewStatus": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+      "reviewStatus": "所列五四制官方原页的用字、标点或分段已校订；异文说明及页码见正文校订记录；学校实际印次待确认。",
       "notes": [],
-      "transcriptionRecordId": "5b9a1430367d5cab186685fd"
+      "transcriptionRecordId": "5b9a1430367d5cab186685fd",
+      "textVariantNote": "七下原书诗句中的“后庭花”不加书名号。"
     },
     {
       "id": "moe-2022-zh-7-9-024",
@@ -1578,15 +1585,17 @@
       "curriculumId": "moe-2022-zh-7-9-029",
       "title": "登飞来峰",
       "author": "王安石",
-      "original": "飞来山上千寻塔，闻说鸡鸣见日升。\n不畏浮云遮望眼，只缘身在最高层。",
+      "original": "飞来山上千寻塔，闻说鸡鸣见日升。\n不畏浮云遮望眼，自缘身在最高层。",
       "gradeBand": "7-9",
       "sourcePdfPage": 69,
       "textSources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial",
         "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
       ],
-      "reviewStatus": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+      "reviewStatus": "所列五四制官方原页的用字、标点或分段已校订；异文说明及页码见正文校订记录；学校实际印次待确认。",
       "notes": [],
-      "transcriptionRecordId": "5b9a1434367d5cab1866861d"
+      "transcriptionRecordId": "5b9a1434367d5cab1866861d",
+      "textVariantNote": "七下原书作“自缘身在最高层”；旧卡“只缘”已校订。"
     },
     {
       "id": "moe-2022-zh-7-9-030",
@@ -1743,48 +1752,53 @@
       "curriculumId": "moe-2022-zh-7-9-040",
       "title": "满江红",
       "author": "秋瑾",
-      "original": "小住京华，早又是，中秋佳节。为篱下，黄花开遍，秋容如拭。四面歌残终破楚，八年风味徒思浙。苦将侬，强派作蛾眉，殊未屑！\n\n身不得，男儿列。心却比，男儿烈！算平生肝胆，因人常热。俗子胸襟谁识我？英雄末路当磨折。莽红尘，何处觅知音？青衫湿！",
+      "original": "小住京华，早又是中秋佳节。为篱下黄花开遍，秋容如拭。四面歌残终破楚，八年风味徒思浙。苦将侬强派作蛾眉，殊未屑！\n\n身不得，男儿列，心却比，男儿烈。算平生肝胆，因人常热。俗子胸襟谁识我？英雄末路当磨折。莽红尘何处觅知音？青衫湿！",
       "gradeBand": "7-9",
       "sourcePdfPage": 69,
       "textSources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
         "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
       ],
-      "reviewStatus": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+      "reviewStatus": "所列五四制官方原页的用字、标点或分段已校订；异文说明及页码见正文校订记录；学校实际印次待确认。",
       "notes": [],
-      "transcriptionRecordId": "5b9a1448367d5cab186686a0"
+      "transcriptionRecordId": "5b9a1448367d5cab186686a0",
+      "textVariantNote": "按九下旧版原书校订领字停顿和下阕标点；新版九下待核实。"
     },
     {
       "id": "moe-2022-zh-7-9-041",
       "curriculumId": "moe-2022-zh-7-9-041",
       "title": "《论语》十二章",
       "author": "《论语》",
-      "original": "子曰：“学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？”《学而》\n\n曾子曰：“吾日三省吾身：为人谋而不忠乎？与朋友交而不信乎？传不习乎？”《学而》\n\n子曰：“吾十有五而志于学，三十而立，四十而不惑，五十而知天命，六十而耳顺，七十而从心所欲，不逾矩。”《为政》\n\n子曰：“温故而知新，可以为师矣。”《为政》\n\n子曰：“学而不思则罔，思而不学则殆。”《为政》\n\n子曰：“贤哉，回也！一箪食，一瓢饮，在陋巷，人不堪其忧，回也不改其乐。贤哉，回也！”《雍也》\n\n子曰：“知之者不如好之者，好之者不如乐之者。”《雍也》\n\n子曰：“饭疏食饮水，曲肱而枕之，乐亦在其中矣。不义而富且贵，于我如浮云。”《述而》\n\n子曰：“三人行，必有我师焉。择其善者而从之，其不善者而改之。”《述而》\n\n子在川上曰：“逝者如斯夫，不舍昼夜。”《子罕》\n\n子曰：“三军可夺帅也，匹夫不可夺志也。”《子罕》\n\n子夏曰：“博学而笃志，切问而近思，仁在其中矣。”《子张》",
+      "original": "子曰：“学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？”《学而》\n\n曾子曰：“吾日三省吾身：为人谋而不忠乎？与朋友交而不信乎？传不习乎？”《学而》\n\n子曰：“吾十有五而志于学，三十而立，四十而不惑，五十而知天命，六十而耳顺，七十而从心所欲，不逾矩。”《为政》\n\n子曰：“温故而知新，可以为师矣。”《为政》\n\n子曰：“学而不思则罔，思而不学则殆。”《为政》\n\n子曰：“贤哉，回也！一箪食，一瓢饮，在陋巷，人不堪其忧，回也不改其乐。贤哉，回也！”《雍也》\n\n子曰：“知之者不如好之者，好之者不如乐之者。”《雍也》\n\n子曰：“饭疏食，饮水，曲肱而枕之，乐亦在其中矣。不义而富且贵，于我如浮云。”《述而》\n\n子曰：“三人行，必有我师焉。择其善者而从之，其不善者而改之。”《述而》\n\n子在川上曰：“逝者如斯夫，不舍昼夜。”《子罕》\n\n子曰：“三军可夺帅也，匹夫不可夺志也。”《子罕》\n\n子夏曰：“博学而笃志，切问而近思，仁在其中矣。”《子张》",
       "gradeBand": "7-9",
       "sourcePdfPage": 69,
       "textSources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial",
         "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
       ],
-      "reviewStatus": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+      "reviewStatus": "所列五四制官方原页的用字、标点或分段已校订；异文说明及页码见正文校订记录；学校实际印次待确认。",
       "notes": [],
-      "transcriptionRecordId": "5b9a143a367d5cab18668648"
+      "transcriptionRecordId": "5b9a143a367d5cab18668648",
+      "textVariantNote": "按七上原书在“饭疏食”与“饮水”之间加逗号。"
     },
     {
       "id": "moe-2022-zh-7-9-042",
       "curriculumId": "moe-2022-zh-7-9-042",
       "title": "曹刿论战",
       "author": "《左传》",
-      "original": "十年春，齐师伐我。公将战。曹刿请见。其乡人曰：“肉食者谋之，又何间焉？”刿曰：“肉食者鄙，未能远谋。”乃入见。问：“何以战？”公曰：“衣食所安，弗敢专也，必以分人。”对曰：“小惠未遍，民弗从也。”公曰：“牺牲玉帛，弗敢加也，必以信。”对曰：“小信未孚，神弗福也。”公曰：“小大之狱，虽不能察，必以情。”对曰：“忠之属也。可以一战。战则请从。”\n\n公与之乘，战于长勺。公将鼓之。刿曰：“未可。”齐人三鼓。刿曰：“可矣。”齐师败绩。公将驰之。刿曰：“未可。”下视其辙，登轼而望之，曰：“可矣。”遂逐齐师。\n\n既克，公问其故。对曰：“夫战，勇气也。一鼓作气，再而衰，三而竭。彼竭我盈，故克之，夫大国，难测也，惧有伏焉。吾视其辙乱，望其旗靡，故逐之。”",
+      "original": "十年春，齐师伐我。公将战。曹刿请见。其乡人曰：“肉食者谋之，又何间焉？”刿曰：“肉食者鄙，未能远谋。”乃入见。问：“何以战？”公曰：“衣食所安，弗敢专也，必以分人。”对曰：“小惠未遍，民弗从也。”公曰：“牺牲玉帛，弗敢加也，必以信。”对曰：“小信未孚，神弗福也。”公曰：“小大之狱，虽不能察，必以情。”对曰：“忠之属也。可以一战。战则请从。”\n\n公与之乘，战于长勺。公将鼓之。刿曰：“未可。”齐人三鼓。刿曰：“可矣。”齐师败绩。公将驰之。刿曰：“未可。”下视其辙，登轼而望之，曰：“可矣。”遂逐齐师。\n\n既克，公问其故。对曰：“夫战，勇气也。一鼓作气，再而衰，三而竭。彼竭我盈，故克之。夫大国，难测也，惧有伏焉。吾视其辙乱，望其旗靡，故逐之。”",
       "gradeBand": "7-9",
       "sourcePdfPage": 70,
       "textSources": [
         "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
         "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
       ],
-      "reviewStatus": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+      "reviewStatus": "所列五四制官方原页的用字、标点或分段已校订；异文说明及页码见正文校订记录；学校实际印次待确认。",
       "notes": [
         "采用九年级五四制原书印刷136页“小惠未遍”；旧录“小惠未徧”保留为异文，原ID和旧任务快照不改写。"
       ],
-      "transcriptionRecordId": "5b9a033f367d5ca0f831362b"
+      "transcriptionRecordId": "5b9a033f367d5ca0f831362b",
+      "textVariantNote": "按九上原书在“故克之”后断句；下句为“夫大国，难测也”。"
     },
     {
       "id": "moe-2022-zh-7-9-043",
@@ -1858,30 +1872,34 @@
       "curriculumId": "moe-2022-zh-7-9-047",
       "title": "邹忌讽齐王纳谏",
       "author": "《战国策》",
-      "original": "邹忌修八尺有余，而形貌昳丽。朝服衣冠，窥镜，谓其妻曰：“我孰与城北徐公美？”其妻曰：“君美甚，徐公何能及君也！”城北徐公，齐国之美丽者也。忌不自信，而复问其妾曰：“吾孰与徐公美？”妾曰：“徐公何能及君也！”旦日，客从外来，与坐谈，问之客曰：“吾与徐公孰美？”客曰：“徐公不若君之美也。”明日徐公来，孰视之，自以为不如；窥镜而自视，又弗如远甚。暮寝而思之，曰：“吾妻之美我者，私我也；妾之美我者，畏我也；客之美我者，欲有求于我也。”\n\n于是入朝见威王，曰：“臣诚知不如徐公美。臣之妻私臣，臣之妾畏臣，臣之客欲有求于臣，皆以美于徐公。今齐地方千里，百二十城，宫妇左右莫不私王，朝廷之臣莫不畏王，四境之内莫不有求于王：由此观之，王之蔽甚矣。”\n\n王曰：“善。”乃下令：“群臣吏民能面刺寡人之过者，受上赏；上书谏寡人者，受中赏；能谤讥于市朝，闻寡人之耳者，受下赏。”令初下，群臣进谏，门庭若市；数月之后，时时而间进；期年之后，虽欲言，无可进者。燕、赵、韩、魏闻之，皆朝于齐。此所谓战胜于朝廷。",
+      "original": "邹忌修八尺有余，而形貌昳丽。朝服衣冠，窥镜，谓其妻曰：“我孰与城北徐公美？”其妻曰：“君美甚，徐公何能及君也？”城北徐公，齐国之美丽者也。忌不自信，而复问其妾曰：“吾孰与徐公美？”妾曰：“徐公何能及君也？”旦日，客从外来，与坐谈，问之客曰：“吾与徐公孰美？”客曰：“徐公不若君之美也。”明日徐公来，孰视之，自以为不如；窥镜而自视，又弗如远甚。暮寝而思之，曰：“吾妻之美我者，私我也；妾之美我者，畏我也；客之美我者，欲有求于我也。”\n\n于是入朝见威王，曰：“臣诚知不如徐公美。臣之妻私臣，臣之妾畏臣，臣之客欲有求于臣，皆以美于徐公。今齐地方千里，百二十城，宫妇左右莫不私王，朝廷之臣莫不畏王，四境之内莫不有求于王：由此观之，王之蔽甚矣。”\n\n王曰：“善。”乃下令：“群臣吏民能面刺寡人之过者，受上赏；上书谏寡人者，受中赏；能谤议于市朝，闻寡人之耳者，受下赏。”令初下，群臣进谏，门庭若市；数月之后，时时而间进；期年之后，虽欲言，无可进者。燕、赵、韩、魏闻之，皆朝于齐。此所谓战胜于朝廷。",
       "gradeBand": "7-9",
       "sourcePdfPage": 70,
       "textSources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
         "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
       ],
-      "reviewStatus": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+      "reviewStatus": "所列五四制官方原页的用字、标点或分段已校订；异文说明及页码见正文校订记录；学校实际印次待确认。",
       "notes": [],
-      "transcriptionRecordId": "5b9a11fe367d5c5b84062a6b"
+      "transcriptionRecordId": "5b9a11fe367d5c5b84062a6b",
+      "textVariantNote": "新版九上正文作“谤议”，注释注明一作“谤讥”；旧版九下作“谤讥”。学习正文采用新版九上用字及问句标点。"
     },
     {
       "id": "moe-2022-zh-7-9-048",
       "curriculumId": "moe-2022-zh-7-9-048",
       "title": "出师表",
       "author": "诸葛亮",
-      "original": "先帝创业未半而中道崩殂，今天下三分，益州疲弊，此诚危急存亡之秋也。然侍卫之臣不懈于内，忠志之士忘身于外者，盖追先帝之殊遇，欲报之于陛下也。诚宜开张圣听，以光先帝遗德，恢弘志士之气，不宜妄自菲薄，引喻失义，以塞忠谏之路也。\n\n宫中府中，俱为一体；陟罚臧否，不宜异同。若有作奸犯科及为忠善者，宜付有司论其刑赏，以昭陛下平明之理；不宜偏私，使内外异法也。\n\n侍中、侍郎郭攸之、费祎、董允等，此皆良实，志虑忠纯，是以先帝简拔以遗陛下：愚以为宫中之事，事无大小，悉以咨之，然后施行，必能裨补阙漏，有所广益。\n\n将军向宠，性行淑均，晓畅军事，试用于昔日，先帝称之曰“能”，是以众议举宠为督：愚以为营中之事，悉以咨之，必能使行阵和睦，优劣得所。\n\n亲贤臣，远小人，此先汉所以兴隆也；亲小人，远贤臣，此后汉所以倾颓也。先帝在时，每与臣论此事，未尝不叹息痛恨于桓、灵也。侍中、尚书、长史、参军，此悉贞良死节之臣，愿陛下亲之、信之，则汉室之隆，可计日而待也。\n\n臣本布衣，躬耕于南阳，苟全性命于乱世，不求闻达于诸侯。先帝不以臣卑鄙，猥自枉屈，三顾臣于草庐之中，咨臣以当世之事，由是感激，遂许先帝以驱驰。后值倾覆，受任于败军之际，奉命于危难之间：尔来二十有一年矣。\n\n先帝知臣谨慎，故临崩寄臣以大事也。受命以来，夙夜忧叹，恐托付不效，以伤先帝之明；故五月渡泸，深入不毛。今南方已定，兵甲已足，当奖率三军，北定中原，庶竭驽钝，攘除奸凶，兴复汉室，还于旧都。此臣所以报先帝而忠陛下之职分也。至于斟酌损益，进尽忠言，则攸之、祎、允之任也。\n\n愿陛下托臣以讨贼兴复之效，不效，则治臣之罪，以告先帝之灵。若无兴德之言，则责攸之、祎、允等之慢，以彰其咎；陛下亦宜自谋，以咨诹善道，察纳雅言，深追先帝遗诏。臣不胜受恩感激。\n\n今当远离，临表涕零，不知所言。",
+      "original": "先帝创业未半而中道崩殂，今天下三分，益州疲弊，此诚危急存亡之秋也。然侍卫之臣不懈于内，忠志之士忘身于外者，盖追先帝之殊遇，欲报之于陛下也。诚宜开张圣听，以光先帝遗德，恢弘志士之气，不宜妄自菲薄，引喻失义，以塞忠谏之路也。\n\n宫中府中，俱为一体，陟罚臧否，不宜异同。若有作奸犯科及为忠善者，宜付有司论其刑赏，以昭陛下平明之理，不宜偏私，使内外异法也。\n\n侍中、侍郎郭攸之、费祎、董允等，此皆良实，志虑忠纯，是以先帝简拔以遗陛下。愚以为宫中之事，事无大小，悉以咨之，然后施行，必能裨补阙漏，有所广益。\n\n将军向宠，性行淑均，晓畅军事，试用于昔日，先帝称之曰能，是以众议举宠为督。愚以为营中之事，悉以咨之，必能使行阵和睦，优劣得所。\n\n亲贤臣，远小人，此先汉所以兴隆也；亲小人，远贤臣，此后汉所以倾颓也。先帝在时，每与臣论此事，未尝不叹息痛恨于桓、灵也。侍中、尚书、长史、参军，此悉贞良死节之臣，愿陛下亲之信之，则汉室之隆，可计日而待也。\n\n臣本布衣，躬耕于南阳，苟全性命于乱世，不求闻达于诸侯。先帝不以臣卑鄙，猥自枉屈，三顾臣于草庐之中，咨臣以当世之事，由是感激，遂许先帝以驱驰。后值倾覆，受任于败军之际，奉命于危难之间，尔来二十有一年矣。\n\n先帝知臣谨慎，故临崩寄臣以大事也。受命以来，夙夜忧叹，恐托付不效，以伤先帝之明，故五月渡泸，深入不毛。今南方已定，兵甲已足，当奖率三军，北定中原，庶竭驽钝，攘除奸凶，兴复汉室，还于旧都。此臣所以报先帝而忠陛下之职分也。至于斟酌损益，进尽忠言，则攸之、祎、允之任也。\n\n愿陛下托臣以讨贼兴复之效；不效，则治臣之罪，以告先帝之灵。若无兴德之言，则责攸之、祎、允等之慢，以彰其咎。陛下亦宜自谋，以咨诹善道，察纳雅言，深追先帝遗诏。臣不胜受恩感激。今当远离，临表涕零，不知所言。",
       "gradeBand": "7-9",
       "sourcePdfPage": 70,
       "textSources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
         "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
       ],
-      "reviewStatus": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+      "reviewStatus": "所列五四制官方原页的用字、标点或分段已校订；异文说明及页码见正文校订记录；学校实际印次待确认。",
       "notes": [],
-      "transcriptionRecordId": "5b9a04b2367d5cae5c9bff63"
+      "transcriptionRecordId": "5b9a04b2367d5cae5c9bff63",
+      "textVariantNote": "按九上原书校订标点、引号及分段；“今当远离”承接末段，共八个自然段。"
     },
     {
       "id": "moe-2022-zh-7-9-049",
@@ -1984,18 +2002,19 @@
       "curriculumId": "moe-2022-zh-7-9-055",
       "title": "岳阳楼记",
       "author": "范仲淹",
-      "original": "庆历四年春，滕子京谪守巴陵郡。越明年，政通人和，百废具兴。乃重修岳阳楼，增其旧制，刻唐贤今人诗赋于其上。属予作文以记之。\n\n予观夫巴陵胜状，在洞庭一湖。衔远山，吞长江，浩浩汤汤，横无际涯；朝晖夕阴，气象万千。此则岳阳楼之大观也，前人之述备矣。然则北通巫峡，南极潇湘，迁客骚人，多会于此，览物之情，得无异乎？\n\n若夫霪雨霏霏，连月不开，阴风怒号，浊浪排空；日星隐耀，山岳潜形；商旅不行，樯倾楫摧；薄暮冥冥，虎啸猿啼。登斯楼也，则有去国怀乡，忧谗畏讥，满目萧然，感极而悲者矣。\n\n至若春和景明，波澜不惊，上下天光，一碧万顷；沙鸥翔集，锦鳞游泳；岸芷汀兰，郁郁青青。而或长烟一空，皓月千里，浮光跃金，静影沉璧，渔歌互答，此乐何极！登斯楼也，则有心旷神怡，宠辱偕忘，把酒临风，其喜洋洋者矣。\n\n嗟夫！予尝求古仁人之心，或异二者之为，何哉？不以物喜，不以己悲；居庙堂之高则忧其民；处江湖之远则忧其君。是进亦忧，退亦忧。然则何时而乐耶？其必曰：“先天下之忧而忧，后天下之乐而乐”乎。噫！微斯人，吾谁与归？\n\n时六年九月十五日。",
+      "original": "庆历四年春，滕子京谪守巴陵郡。越明年，政通人和，百废具兴。乃重修岳阳楼，增其旧制，刻唐贤今人诗赋于其上。属予作文以记之。\n\n予观夫巴陵胜状，在洞庭一湖。衔远山，吞长江，浩浩汤汤，横无际涯，朝晖夕阴，气象万千，此则岳阳楼之大观也，前人之述备矣。然则北通巫峡，南极潇湘，迁客骚人，多会于此，览物之情，得无异乎？\n\n若夫霪雨霏霏，连月不开，阴风怒号，浊浪排空，日星隐耀，山岳潜形，商旅不行，樯倾楫摧，薄暮冥冥，虎啸猿啼。登斯楼也，则有去国怀乡，忧谗畏讥，满目萧然，感极而悲者矣。\n\n至若春和景明，波澜不惊，上下天光，一碧万顷，沙鸥翔集，锦鳞游泳，岸芷汀兰，郁郁青青。而或长烟一空，皓月千里，浮光跃金，静影沉璧，渔歌互答，此乐何极！登斯楼也，则有心旷神怡，宠辱偕忘，把酒临风，其喜洋洋者矣。\n\n嗟夫！予尝求古仁人之心，或异二者之为，何哉？不以物喜，不以己悲，居庙堂之高则忧其民，处江湖之远则忧其君。是进亦忧，退亦忧。然则何时而乐耶？其必曰“先天下之忧而忧，后天下之乐而乐”乎！噫！微斯人，吾谁与归？时六年九月十五日。",
       "gradeBand": "7-9",
       "sourcePdfPage": 70,
       "textSources": [
         "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
         "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
       ],
-      "reviewStatus": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+      "reviewStatus": "所列五四制官方原页的用字、标点或分段已校订；异文说明及页码见正文校订记录；学校实际印次待确认。",
       "notes": [
         "采用九年级五四制原书印刷51页“霪雨霏霏”；旧录“淫雨霏霏”保留为异文，原ID和旧任务快照不改写。"
       ],
-      "transcriptionRecordId": "5b9a0254367d5caccce1aa14"
+      "transcriptionRecordId": "5b9a0254367d5caccce1aa14",
+      "textVariantNote": "按九上原书校订标点与末段分段；“时六年九月十五日”承接末段。“日星隐耀”沿用原书正文，原注另记“耀”一作“曜”。"
     },
     {
       "id": "moe-2022-zh-7-9-056",
@@ -2017,45 +2036,51 @@
       "curriculumId": "moe-2022-zh-7-9-057",
       "title": "爱莲说",
       "author": "周敦颐",
-      "original": "水陆草木之花，可爱者甚蕃。晋陶渊明独爱菊。自李唐来，世人甚爱牡丹。予独爱莲之出淤泥而不染，濯清涟而不妖，中通外直，不蔓不枝，香远益清，亭亭净植，可远观而不可亵玩焉。\n\n予谓菊，花之隐逸者也；牡丹，花之富贵者也；莲，花之君子者也。噫！菊之爱，陶后鲜有闻。莲之爱，同予者何人？牡丹之爱，宜乎众矣！",
+      "original": "水陆草木之花，可爱者甚蕃。晋陶渊明独爱菊。自李唐来，世人甚爱牡丹。予独爱莲之出淤泥而不染，濯清涟而不妖，中通外直，不蔓不枝，香远益清，亭亭净植，可远观而不可亵玩焉。\n\n予谓菊，花之隐逸者也；牡丹，花之富贵者也；莲，花之君子者也。噫！菊之爱，陶后鲜有闻。莲之爱，同予者何人？牡丹之爱，宜乎众矣。",
       "gradeBand": "7-9",
       "sourcePdfPage": 70,
       "textSources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial",
         "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
       ],
-      "reviewStatus": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+      "reviewStatus": "所列五四制官方原页的用字、标点或分段已校订；异文说明及页码见正文校订记录；学校实际印次待确认。",
       "notes": [],
-      "transcriptionRecordId": "5b9a0136367d5c96f4cd2956"
+      "transcriptionRecordId": "5b9a0136367d5c96f4cd2956",
+      "textVariantNote": "按七下原书，末句以句号结束。"
     },
     {
       "id": "moe-2022-zh-7-9-058",
       "curriculumId": "moe-2022-zh-7-9-058",
       "title": "记承天寺夜游",
       "author": "苏轼",
-      "original": "元丰六年十月十二日夜，解衣欲睡，月色入户，欣然起行。念无与为乐者，遂至承天寺寻张怀民。怀民亦未寝，相与步于中庭。\n庭下如积水空明，水中藻荇交横，盖竹柏影也。何夜无月？何处无竹柏？但少闲人如吾两人者耳。",
+      "original": "元丰六年十月十二日夜，解衣欲睡，月色入户，欣然起行。念无与为乐者，遂至承天寺寻张怀民。怀民亦未寝，相与步于中庭。庭下如积水空明，水中藻、荇交横，盖竹柏影也。何夜无月？何处无竹柏？但少闲人如吾两人者耳。",
       "gradeBand": "7-9",
       "sourcePdfPage": 70,
       "textSources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
         "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
       ],
-      "reviewStatus": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+      "reviewStatus": "所列五四制官方原页的用字、标点或分段已校订；异文说明及页码见正文校订记录；学校实际印次待确认。",
       "notes": [],
-      "transcriptionRecordId": "5b9a04b7367d5cae5c9bff74"
+      "transcriptionRecordId": "5b9a04b7367d5cae5c9bff74",
+      "textVariantNote": "按八上原书合为一个自然段，并保留“藻、荇”之间的顿号。"
     },
     {
       "id": "moe-2022-zh-7-9-059",
       "curriculumId": "moe-2022-zh-7-9-059",
       "title": "送东阳马生序",
       "author": "宋濂",
-      "original": "余幼时即嗜学。家贫，无从致书以观，每假借于藏书之家，手自笔录，计日以还。天大寒，砚冰坚，手指不可屈伸，弗之怠。录毕，走送之，不敢稍逾约。以是人多以书假余，余因得遍观群书。既加冠，益慕圣贤之道，又患无硕师、名人与游，尝趋百里外，从乡之先达执经叩问。先达德隆望尊，门人弟子填其室，未尝稍降辞色。余立侍左右，援疑质理，俯身倾耳以请；或遇其叱咄，色愈恭，礼愈至，不敢出一言以复；俟其欣悦，则又请焉。故余虽愚，卒获有所闻。\n\n当余之从师也，负箧曳屣，行深山巨谷中，穷冬烈风，大雪深数尺，足肤皲裂而不知。至舍，四支僵劲不能动，媵人持汤沃灌，以衾拥覆，久而乃和。寓逆旅，主人日再食，无鲜肥滋味之享。同舍生皆被绮绣，戴朱缨宝饰之帽，腰白玉之环，左佩刀，右备容臭，烨然若神人；余则缊袍敝衣处其间，略无慕艳意。以中有足乐者，不知口体之奉不若人也。盖余之勤且艰若此。\n\n今虽耄老，未有所成，犹幸预君子之列，而承天子之宠光，缀公卿之后，日侍坐备顾问，四海亦谬称其氏名，况才之过于余者乎？",
+      "original": "余幼时即嗜学。家贫，无从致书以观，每假借于藏书之家，手自笔录，计日以还。天大寒，砚冰坚，手指不可屈伸，弗之怠。录毕，走送之，不敢稍逾约。以是人多以书假余，余因得遍观群书。既加冠，益慕圣贤之道，又患无硕师、名人与游，尝趋百里外，从乡之先达执经叩问。先达德隆望尊，门人弟子填其室，未尝稍降辞色。余立侍左右，援疑质理，俯身倾耳以请；或遇其叱咄，色愈恭，礼愈至，不敢出一言以复；俟其欣悦，则又请焉。故余虽愚，卒获有所闻。\n\n当余之从师也，负箧曳屣，行深山巨谷中，穷冬烈风，大雪深数尺，足肤皲裂而不知。至舍，四支僵劲不能动，媵人持汤沃灌，以衾拥覆，久而乃和。寓逆旅，主人日再食，无鲜肥滋味之享。同舍生皆被绮绣，戴朱缨宝饰之帽，腰白玉之环，左佩刀，右备容臭，烨然若神人；余则缊袍敝衣处其间，略无慕艳意，以中有足乐者，不知口体之奉不若人也。盖余之勤且艰若此。今虽耄老，未有所成，犹幸预君子之列，而承天子之宠光，缀公卿之后，日侍坐备顾问，四海亦谬称其氏名，况才之过于余者乎？",
       "gradeBand": "7-9",
       "sourcePdfPage": 70,
       "textSources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
         "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
       ],
-      "reviewStatus": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+      "reviewStatus": "所列五四制官方原页的用字、标点或分段已校订；异文说明及页码见正文校订记录；学校实际印次待确认。",
       "notes": [],
-      "transcriptionRecordId": "5b9a144b367d5cab186686b6"
+      "transcriptionRecordId": "5b9a144b367d5cab186686b6",
+      "textVariantNote": "此节选与九下旧版前两段对应；第二段止于“况才之过于余者乎？”，不在“今虽耄老”前分段。"
     },
     {
       "id": "moe-2022-zh-7-9-060",

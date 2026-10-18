@@ -4,6 +4,7 @@ const crypto = require('node:crypto');
 const { books } = require('../scripts/lower-primary').data;
 const learning = require('../shared/learning');
 const resources = require('../shared/resources.json');
+const { beforeChineseCorrections } = require('./chinese-baseline-helper');
 
 const retainedIds = ['english-3b-legacy', 'chinese-4b-sample', 'english-4b-legacy',
   'chinese-5b-sample', 'english-5b-legacy', 'chinese-9b', 'english-9b-legacy'];
@@ -61,7 +62,7 @@ test('foundation additions preserve all prior identities, unchanged content and 
   // Hashes come from the d2ed740 baseline, not from the newly generated catalogue.
   assert.equal(digest(prior.map(({ id, kind, title, minutes }) => ({ id, kind, title, minutes }))),
     'a0b204dd9f2310dbc719b1b82494bef7a37173273ff8132696266474578113a1');
-  assert.equal(digest(prior.filter(item => !reviewedIds.has(item.id)).map(({ id, kind, title, detail, minutes }) => ({ id, kind, title, detail, minutes }))),
+  assert.equal(digest(prior.filter(item => !reviewedIds.has(item.id)).map(beforeChineseCorrections).map(({ id, kind, title, detail, minutes }) => ({ id, kind, title, detail, minutes }))),
     '45ad254b56c33acc34c72540ccfa136e28f9eda957ec08a4926118fffa15c17f');
   const tasks = retainedIds.map((bookId, i) => {
     const item = learning.searchCatalog({ bookId }).find(item => ['reading', 'english-reading'].includes(item.kind));

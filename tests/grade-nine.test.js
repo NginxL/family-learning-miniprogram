@@ -114,7 +114,7 @@ test('all 3733 earlier IDs and national excerpts survive; full-text credit is ne
     && !(i.id.startsWith('sh54-word-') && i.gradeMappings.every(m => m.grade === 9))).map(i => i.id).sort();
   assert.equal(oldIds.length, 3733); assert.equal(hash(oldIds.join('\n')), '66c7d944946323fca1ba3cb71c54aef9f04a7527fe9fef85b8a5a9b2f03ef605');
   const excerptId = 'moe-2022-zh-7-9-059', fullId = 'sh54-songdongyang-textbook', groupId = 'moe-2022-zh-7-9-043';
-  assert.equal(hash(learning.catalogById.get(excerptId).detail), '8622ee12e9ccd7e4ad2e425fe05a06e12bae9bd3a4f7960e199dd6221187a7a8');
+  assert.equal(hash(require('./chinese-baseline-helper').beforeChineseCorrections(learning.catalogById.get(excerptId)).detail), '8622ee12e9ccd7e4ad2e425fe05a06e12bae9bd3a4f7960e199dd6221187a7a8');
   assert.equal(hash(learning.catalogById.get(groupId).detail), 'b8a35d18f71f3611e416b7e3407cc90aae5fcffd24f1e0bc7bce5071f9cf2a64');
   const ledger = { records: {} }; done(ledger, excerptId); ledger.records[excerptId].mastered = true;
   const before = structuredClone(ledger);
