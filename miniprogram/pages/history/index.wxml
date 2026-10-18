@@ -11,15 +11,12 @@
     <view wx:if="{{historyCached}}" class="notice">当前显示本机缓存；联网刷新后可更新掌握状态、安排复习。</view>
     <view wx:if="{{historyError}}" class="notice">{{historyError}}</view>
     <view class="row"><view class="section">{{historyFilter === 'mastered' ? '已经学会的知识' : '一点点积累'}}</view><view class="muted">{{historyTotal}} 项</view></view>
-    <view wx:for="{{historyItems}}" wx:key="contentId" class="card">
-      <view class="row"><view class="pill {{item.subject}}">{{item.kindLabel}}</view><view class="muted">{{item.mastered ? '✓ 已掌握' : item.learnedCount ? '已学过' : '已安排'}}</view></view>
-      <view class="task-title" data-id="{{item.contentId}}" bindtap="expandContent">{{item.title}}</view>
-      <view wx:if="{{item.poetryByline}}" class="muted poetry-byline">{{item.poetryByline}}</view>
-      <view class="muted" style="margin-top:12rpx">{{item.lastLearned ? '最近学习：' + item.lastLearned + ' · 共 ' + item.learnedCount + ' 天' : '首次安排：' + item.firstSeen}}</view>
-      <view wx:if="{{expandedId === item.contentId}}"><view class="body">{{item.displayDetail || item.detail || '和家人一起回顾这项内容。'}}</view><view class="muted">{{item.source}}</view><view wx:if="{{item.note}}" class="muted plan-help">{{item.note}}</view></view>
-      <view class="row history-actions"><button class="quiet" data-id="{{item.contentId}}" bindtap="expandContent">{{expandedId === item.contentId ? '收起 ↑' : '回顾内容 ↓'}}</button><button wx:if="{{!isChild && item.learnedCount}}" class="quiet" data-id="{{item.contentId}}" disabled="{{busy || historyCached}}" bindtap="toggleMastery">{{item.mastered ? '还需巩固' : '确认已掌握'}}</button></view>
-      <button wx:if="{{!isChild && item.learnedCount}}" class="secondary small" data-id="{{item.contentId}}" disabled="{{busy || historyCached}}" bindtap="reviewToday">安排到今日复习</button>
-    </view>
+    <learning-card wx:for="{{historyItems}}" wx:key="contentId" data-id="{{item.contentId}}" bindopen="openContent"
+      title="{{item.title}}" tag="{{item.kindLabel}}" subject="{{item.subject}}" preview="{{item.poetryByline}}"
+      status="{{item.mastered ? '已掌握' : item.learnedCount ? '已学过' : '已安排'}}"
+      meta="{{item.lastLearned ? '最近学习 ' + item.lastLearned + ' · 共 ' + item.learnedCount + ' 天' : '首次安排 ' + item.firstSeen}}" has-actions="{{!isChild && item.learnedCount > 0}}">
+      <view slot="actions" class="learning-card-actions"><button class="quiet" data-id="{{item.contentId}}" disabled="{{busy || historyCached}}" catchtap="toggleMastery">{{item.mastered ? '还需巩固' : '确认已掌握'}}</button><button class="secondary small" data-id="{{item.contentId}}" disabled="{{busy || historyCached}}" catchtap="reviewToday">今日复习</button></view>
+    </learning-card>
     <view wx:if="{{!historyItems.length && !historyBusy && !historyError}}" class="card empty"><view class="empty-icon">🌱</view><view>{{historyFilter === 'mastered' ? '还没有确认掌握的内容' : '还没有符合条件的学习记录'}}</view><view class="subtitle">完成学习后，会出现在这里。家长可以再确认是否已经掌握。</view><button class="secondary" bindtap="openToday">前往今日学习</button></view>
     <button wx:if="{{nextOffset !== null}}" class="secondary" bindtap="loadMore" loading="{{historyBusy}}" disabled="{{historyBusy}}">继续查看</button>
     <view wx:if="{{historyBusy}}" class="status">正在读取学习记录…</view>

@@ -103,22 +103,33 @@ test('scheduling validates real dates and one-year bounds without relaxing compl
   assert.throws(() => validDate('2028-02-29', now));
   assert.equal(shiftDate('2027-12-31', 1), '2028-01-01'); assert.equal(shiftDate('2028-02-28', 1), '2028-02-29');
 });
-test('tomorrow page opens actual next-day groups, supports 20-item expansion, and follows Shanghai midnight', async t => {
+test('tomorrow cards open scoped, paged details and follow Shanghai midnight without future completion', async t => {
   const { f, call, childId } = await setup();
   await call('saveAutoPlans', { rules: learning.emptyRules().map(rule => rule.kind === 'word' ? { ...rule, quantity: 30, scope: 'foundation' } : rule) });
   const { engine } = f.client('parent-a'); await engine.sync(tomorrow);
-  const app = { engine, mode: 'cloud', navigation: {} }; global.getApp = () => app; global.wx = { showToast() {}, switchTab() {} };
+  const navigations = [];
+  const app = { engine, mode: 'cloud', navigation: {} }; global.getApp = () => app; global.wx = { showToast() {}, switchTab() {}, navigateTo(value) { navigations.push(value.url); value.complete?.(); } };
   t.after(() => { delete global.getApp; delete global.wx; delete global.Page; });
   const plans = page('plans', engine); plans.render();
   assert.equal(plans.data.editor, 'preview'); assert.equal(plans.data.date, tomorrow); assert.equal(plans.data.planDate, tomorrow);
-  assert.equal(plans.data.tasks.length, 30); assert.equal(plans.data.groups[0].items.length, 0);
-  plans.togglePreview(event('word')); assert.equal(plans.data.groups[0].items.length, 20);
-  plans.showMorePreview(); assert.equal(plans.data.groups[0].items.length, 30);
+  assert.equal(plans.data.tasks.length, 30); assert.equal(plans.data.groups[0].items, undefined, 'the list only sends compact summaries');
+  plans.openGroup(event('word'));
+  const route = Object.fromEntries(new URL(navigations.at(-1), 'https://local.test').searchParams);
+  assert.deepEqual(route, { familyId: engine.state.family.id, childId, date: tomorrow, kind: 'word', view: 'plan' });
+  const detail = page('study', engine); detail.onLoad(route); detail.render();
+  assert.equal(detail.data.planning, true); assert.equal(detail.data.items.length, 20);
+  detail.showMore(); assert.equal(detail.data.items.length, 30);
+  await detail.toggleGroup(); detail.openHomework(); assert.equal(navigations.length, 1);
   assert.throws(() => engine.enqueue(tomorrow, plans.data.tasks[0].id, true), /未来/); assert.equal(engine.state.queue.length, 0);
   plans.openLibrary(); assert.equal(app.navigation.libraryDate, tomorrow);
   const invite = await call('createInvite', { role: 'child', guardianConsent: true }); await f.call('child-a', 'joinFamily', { code: invite.code, memberName: '小树' });
   const child = f.client('child-a'); await child.engine.sync(tomorrow);
   const childPage = page('plans', child.engine); childPage.render(); assert.equal(childPage.data.isChild, true); assert.equal(childPage.data.tasks[0].childId, childId);
+  global.getApp = () => ({ ...app, engine: child.engine });
+  const childDetail = page('study', child.engine); childDetail.onLoad(route); childDetail.render();
+  childDetail.editTask(event(childDetail.data.items[0].id)); assert.equal(childDetail.data.editTarget, null);
+  await childDetail.toggleGroup(); assert.equal(child.engine.state.queue.length, 0);
+  global.getApp = () => app;
   f.advance(86400000); await plans.refresh(); plans.render();
   assert.equal(plans.data.date, '2026-10-14'); assert.equal(plans.data.planDate, '2026-10-14');
 });

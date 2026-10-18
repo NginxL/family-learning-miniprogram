@@ -1,0 +1,17 @@
+:host { display:block; }
+.learning-card { box-sizing:border-box; background:#fff; color:#253b32; border-radius:28rpx; padding:30rpx; margin-top:24rpx; box-shadow:0 6rpx 22rpx rgba(37,59,50,.035); overflow-wrap:anywhere; }
+.learning-card-pressed { background:#f0f4ec; }
+.card-top, .card-footer { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16rpx; }
+.card-tag { background:#eaf0e6; color:#426348; padding:7rpx 16rpx; border-radius:24rpx; font-size:22rpx; line-height:1.6; }
+.card-tag.english { background:#edf0fb; color:#62699a; }
+.card-tag.reading { background:#f4e6ee; color:#96617d; }
+.card-tag.math, .card-tag.other { background:#f9eee1; color:#98734b; }
+.card-status { color:#526f5b; font-size:24rpx; line-height:1.7; }
+.card-title { margin-top:18rpx; font-size:32rpx; font-weight:600; line-height:1.6; }
+.card-completed { color:#6c7c70; }
+.card-meta, .card-preview { color:#738077; font-size:24rpx; line-height:1.7; margin-top:10rpx; }
+.card-preview { display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2; overflow:hidden; white-space:pre-line; }
+.card-footer { margin-top:24rpx; min-height:72rpx; }
+.card-link { color:#526f5b; font-size:24rpx; line-height:1.7; }
+.card-link text { margin-left:8rpx; }
+.card-actions { max-width:100%; }

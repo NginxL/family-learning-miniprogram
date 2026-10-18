@@ -40,12 +40,13 @@ const resources = require("../../lib/learning/resources");
 const sync_engine_1 = require("../../lib/sync-engine");
 const pinyin_1 = require("../../lib/pinyin");
 const errors_1 = require("../../lib/errors");
+const content_detail_1 = require("../../lib/content-detail");
 const base = (0, page_1.common)();
 const definition = {
     ...base,
     data: { ...base.data, view: 'content', kinds: [{ id: '', label: '全部类型' }, ...learning.kinds.filter((kind) => kind.id !== 'math' && kind.id !== 'other')], kindIndex: 0,
         scopes: [{ id: 'all', label: '全部可用内容' }, { id: 'starter', label: '亲子入门' }], scope: 'all', scopeIndex: 0,
-        query: '', items: [], total: 0, hasMore: false, expandedId: '', bookId: '', bookTitle: '', resources,
+        query: '', items: [], total: 0, hasMore: false, bookId: '', bookTitle: '', resources,
         grade: 0, gradeLabels: ['全部年级 / 待核对', ...learning.gradeLabels.slice(1)],
         coverageOpen: false, poemCount: learning.catalog.filter((item) => item.kind === 'poetry').length,
         wordCount: learning.catalog.filter((item) => item.kind === 'word').length, filtersOpen: false,
@@ -218,7 +219,15 @@ const definition = {
     },
     typeQuery(event) { this.setData({ query: event.detail.value }); this.updateItems(); },
     loadMore() { this.visibleLimit += 30; this.updateItems(); },
-    expandContent(event) { const id = event.currentTarget.dataset.id; this.setData({ expandedId: this.data.expandedId === id ? '' : id }); },
+    openContent(event) {
+        var _a, _b;
+        const item = this.data.items.find(entry => entry.id === event.currentTarget.dataset.id);
+        if (!item)
+            return;
+        const sameFamily = ((_a = this.engine.snapshot().family) === null || _a === void 0 ? void 0 : _a.id) === ((_b = this.data.family) === null || _b === void 0 ? void 0 : _b.id);
+        (0, content_detail_1.openContentDetail)('library', item, this.data.childId, { gradeLabel: item.gradeLabel, status: sameFamily ? item.learnedLabel : '',
+            contextLabel: sameFamily && item.lastLearned ? `最近学习 ${item.lastLearned} · 已学 ${item.learnedCount} 天` : '', showPinyin: this.data.showPinyin });
+    },
     toggleCoverage() { this.setData({ coverageOpen: !this.data.coverageOpen }); },
     toggleFilters() { this.setData({ filtersOpen: !this.data.filtersOpen }); },
     togglePinyin() { this.pinyinChoice = { childId: this.data.childId, enabled: !this.data.showPinyin }; this.setData({ showPinyin: this.pinyinChoice.enabled }); },

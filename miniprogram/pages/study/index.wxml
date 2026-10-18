@@ -1,13 +1,15 @@
 <import src="../../templates/pinyin.wxml" />
 <import src="../../templates/study-notes.wxml" />
-<view class="page study-page">
+<import src="../../templates/planned-task-edit.wxml" />
+<view class="page study-page {{planning ? 'planning-page' : ''}}">
   <view wx:if="{{mode === 'demo'}}" class="notice">本机演示 · 数据仅保存在这台设备，未连接云端</view>
   <view wx:if="{{notice}}" class="notice" bindtap="dismissNotice">{{notice}}　×</view>
   <view wx:if="{{syncError}}" class="notice">{{syncError}}。已保存的任务仍可查看和打卡。</view>
   <block wx:if="{{group}}">
     <view class="eyebrow">{{childName}} · {{date}}</view>
     <view class="row"><view class="title grow">{{group.label}}</view><view class="pill {{group.subject}}">{{group.quantityLabel}}</view></view>
-    <view wx:if="{{isChild}}" class="notice">孩子身份 · 学完提交录音或照片，由家长确认完成。</view>
+    <view wx:if="{{planning}}" class="notice">{{isChild ? '先看看要学的内容，到学习当天再提交作业。' : '可修改日期或删除这次安排；已完成的学习记录保留。'}}</view>
+    <view wx:elif="{{isChild}}" class="notice">孩子身份 · 学完提交录音或照片，由家长确认完成。</view>
     <button wx:else class="secondary" bindtap="openHomework">查看孩子提交的作业 →</button>
     <view class="subtitle">{{group.modeSummary}} · 约 {{group.minutes}} 分钟</view>
     <view class="row study-summary"><view class="muted">{{group.doneCount}} / {{group.count}} 已完成</view><button class="quiet sync-button" bindtap="refresh">{{mode === 'demo' ? '本机保存' : syncLabel}} ↻</button></view>
@@ -22,10 +24,12 @@
       <view wx:if="{{item.recitationNote}}" class="body muted">{{item.recitationNote}}</view>
       <template is="studyNotes" data="{{item, notesOpenId, notesAnswersId}}" />
       <view wx:if="{{item.source}}" class="muted study-source">来源：{{item.source}}</view>
+      <button wx:if="{{planning && !isChild && !item.done}}" class="secondary" data-id="{{item.id}}" bindtap="editTask" disabled="{{busy}}">修改日期 / 删除</button>
     </view>
     <button wx:if="{{items.length < group.count}}" class="secondary load-more" bindtap="showMore">再看 {{group.count - items.length > 20 ? 20 : group.count - items.length}} 项 · 已展示 {{items.length}} / {{group.count}}</button>
     <view wx:else class="muted study-end">本组共 {{group.count}} 项，已全部展示</view>
-    <view class="study-footer">
+    <button wx:if="{{planning}}" class="secondary" bindtap="openToday">返回明日计划</button>
+    <view wx:else class="study-footer">
       <view class="muted footer-summary">{{group.doneCount}} / {{group.count}} 已完成<text wx:if="{{group.pendingCount}}"> · {{group.pendingCount}} 项待同步</text></view>
       <button wx:if="{{isChild}}" class="primary" bindtap="openHomework">{{group.done ? '查看已确认的作业' : '提交作业'}}</button>
       <button wx:else class="{{group.done ? 'secondary' : 'primary'}}" disabled="{{busy}}" loading="{{busy}}" bindtap="toggleGroup">{{group.done ? '已完成 · 撤销本组' : group.doneCount ? '完成本组剩余内容' : '完成本组'}}</button>
@@ -35,6 +39,7 @@
     <view class="section">{{pageError ? '暂时无法查看' : loading ? '正在准备学习内容…' : '暂无学习内容'}}</view>
     <view class="subtitle">{{pageError || (loading ? '请稍候，正在读取这一天的任务。' : emptyMessage)}}</view>
     <button wx:if="{{!pageError}}" class="primary" bindtap="refresh">重新加载</button>
-    <button class="secondary" bindtap="openToday">返回今日</button>
+    <button class="secondary" bindtap="openToday">返回学习列表</button>
   </view>
 </view>
+<template is="plannedTaskEdit" data="{{editTarget, editDate, today, maxPlanDate, busy}}" />

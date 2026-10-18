@@ -3,10 +3,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.parseTaskRoute = parseTaskRoute;
 const learning_1 = require("./learning/learning");
-function parseTaskRoute(query, today) {
+function parseTaskRoute(query, latestDate) {
     const { familyId, childId, date, kind } = query;
     const validId = (value) => typeof value === 'string' && /^[a-zA-Z0-9_-]{1,100}$/.test(value);
-    if (!validId(familyId) || !validId(childId) || !date || !/^\d{4}-\d{2}-\d{2}$/.test(date) || date > today)
+    if (!validId(familyId) || !validId(childId) || !date || !/^\d{4}-\d{2}-\d{2}$/.test(date) || date > latestDate)
         return null;
     const time = Date.parse(`${date}T00:00:00Z`);
     if (!Number.isFinite(time) || new Date(time).toISOString().slice(0, 10) !== date)

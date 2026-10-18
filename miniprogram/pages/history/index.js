@@ -3,6 +3,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const page_1 = require("../../lib/page");
 const errors_1 = require("../../lib/errors");
+const content_detail_1 = require("../../lib/content-detail");
 const base = (0, page_1.common)();
 const definition = {
     ...base,
@@ -17,7 +18,7 @@ const definition = {
     },
     afterSync() { return this.loadHistory(); },
     selectionChanged() {
-        this.setData({ historyItems: [], expandedId: '', nextOffset: null });
+        this.setData({ historyItems: [], nextOffset: null });
         this.loadHistory();
     },
     changeFilter(event) { this.setData({ historyFilter: event.currentTarget.dataset.id }); this.selectionChanged(); },
@@ -55,7 +56,16 @@ const definition = {
     },
     loadMore() { if (!this.data.historyBusy)
         this.loadHistory(true); },
-    expandContent(event) { const id = event.currentTarget.dataset.id; this.setData({ expandedId: this.data.expandedId === id ? '' : id }); },
+    openContent(event) {
+        var _a, _b;
+        const item = this.data.historyItems.find(entry => entry.contentId === event.currentTarget.dataset.id);
+        if (!item || ((_a = this.engine.snapshot().family) === null || _a === void 0 ? void 0 : _a.id) !== ((_b = this.data.family) === null || _b === void 0 ? void 0 : _b.id))
+            return;
+        (0, content_detail_1.openContentDetail)('history', item, this.data.childId, {
+            status: item.mastered ? '已掌握' : item.learnedCount ? '已学过' : '已安排',
+            contextLabel: item.lastLearned ? `最近学习 ${item.lastLearned} · 共 ${item.learnedCount} 天` : `首次安排 ${item.firstSeen}`
+        });
+    },
     async toggleMastery(event) {
         const item = this.data.historyItems.find((entry) => entry.contentId === event.currentTarget.dataset.id);
         if (!item)

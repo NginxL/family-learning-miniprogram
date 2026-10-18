@@ -1,5 +1,6 @@
 import { common, decorate } from '../../lib/page';
 import { errorDetails } from '../../lib/errors';
+import { openContentDetail } from '../../lib/content-detail';
 import type { ApiResults } from '../../../shared/api';
 import type { HistoryQuery } from '../../../shared/models';
 import type { CommonData, CommonMethods, CommonRuntime, DatasetEvent, Decorated, PageDefinition, ValueEvent } from '../../lib/page-types';
@@ -7,13 +8,12 @@ export interface HistoryData extends CommonData {
   historyItems: Array<Decorated<ApiResults['getHistory']['items'][number]>>;
   historyFilter: NonNullable<HistoryQuery['filter']>; query: string; historyBusy: boolean; historyError: string;
   historyCached: boolean; historyTotal: number; stats: ApiResults['getHistory']['stats']; nextOffset: number | null;
-  expandedId?: string;
 }
 export interface HistoryMethods extends CommonMethods {
   afterRender(): void; afterSync(): Promise<void>; selectionChanged(): void;
   changeFilter(event: DatasetEvent<{ id: HistoryData['historyFilter'] }>): void;
   typeQuery(event: ValueEvent): void; loadHistory(append?: boolean): Promise<void>; loadMore(): void;
-  expandContent(event: DatasetEvent): void; toggleMastery(event: DatasetEvent): Promise<void>; reviewToday(event: DatasetEvent): Promise<void>;
+  openContent(event: DatasetEvent): void; toggleMastery(event: DatasetEvent): Promise<void>; reviewToday(event: DatasetEvent): Promise<void>;
 }
 interface HistoryRuntime extends CommonRuntime { historyFamily?: string | null; historyRequest?: number; searchTimer?: ReturnType<typeof setTimeout> }
 const base = common();
@@ -30,7 +30,7 @@ const definition: PageDefinition<HistoryData, HistoryMethods, HistoryRuntime> = 
   },
   afterSync() { return this.loadHistory(); },
   selectionChanged() {
-    this.setData({ historyItems: [], expandedId: '', nextOffset: null }); this.loadHistory();
+    this.setData({ historyItems: [], nextOffset: null }); this.loadHistory();
   },
   changeFilter(event) { this.setData({ historyFilter: event.currentTarget.dataset.id }); this.selectionChanged(); },
   typeQuery(event) { this.setData({ query: event.detail.value }); clearTimeout(this.searchTimer); this.searchTimer = setTimeout(() => this.selectionChanged(), 350); },
@@ -56,7 +56,13 @@ const definition: PageDefinition<HistoryData, HistoryMethods, HistoryRuntime> = 
     } finally { if (this.historyRequest === request) this.setData({ historyBusy: false }); }
   },
   loadMore() { if (!this.data.historyBusy) this.loadHistory(true); },
-  expandContent(event) { const id = event.currentTarget.dataset.id; this.setData({ expandedId: this.data.expandedId === id ? '' : id }); },
+  openContent(event) {
+    const item = this.data.historyItems.find(entry => entry.contentId === event.currentTarget.dataset.id);
+    if (!item || this.engine.snapshot().family?.id !== this.data.family?.id) return;
+    openContentDetail('history', item, this.data.childId, {
+      status: item.mastered ? '已掌握' : item.learnedCount ? '已学过' : '已安排',
+      contextLabel: item.lastLearned ? `最近学习 ${item.lastLearned} · 共 ${item.learnedCount} 天` : `首次安排 ${item.firstSeen}` });
+  },
   async toggleMastery(event) {
     const item = this.data.historyItems.find((entry) => entry.contentId === event.currentTarget.dataset.id);
     if (!item) return;

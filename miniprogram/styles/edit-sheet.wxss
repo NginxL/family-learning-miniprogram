@@ -1,0 +1,4 @@
+.edit-mask { position:fixed; inset:0; z-index:100; display:flex; align-items:center; justify-content:center; background:rgba(24,39,30,.38); padding:24rpx; }
+.edit-sheet { width:100%; max-width:680rpx; max-height:85vh; overflow-y:auto; border-radius:28rpx; padding:32rpx; background:#fff; }
+.edit-delete { color:#a53d32; margin-top:20rpx; }
+.edit-cancel { margin:24rpx auto 0; padding:12rpx 36rpx; }

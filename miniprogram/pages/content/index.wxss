@@ -1,0 +1,2 @@
+@import "../../styles/study-content.wxss";
+.study-item { margin-top:0; }

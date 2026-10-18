@@ -1,6 +1,4 @@
 .filter-summary { font-size: 24rpx; color: #66786b; padding: 22rpx 0 8rpx; line-height: 1.8; }
-.library-status { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 12rpx; }
-.learned-badge { color: #27654c; background: #edf2eb; border-radius: 16rpx; padding: 4rpx 14rpx; font-size: 24rpx; }
 .schedule-mask { position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 100; display: flex; align-items: center; justify-content: center; background: rgba(24, 39, 30, .38); padding: 24rpx; }
 .schedule-sheet { width: 100%; max-width: 680rpx; max-height: 85vh; overflow-y: auto; border-radius: 28rpx; padding: 32rpx; background: #fff; }
 .schedule-shortcuts { display: flex; gap: 16rpx; margin-top: 28rpx; }

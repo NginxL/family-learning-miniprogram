@@ -18,6 +18,15 @@ for (const file of walk(root)) {
 }
 const app = JSON.parse(fs.readFileSync(path.join(root, 'miniprogram/app.json')));
 for (const page of app.pages) for (const extension of ['.js', '.wxml']) assert.ok(fs.existsSync(path.join(root, 'miniprogram', page + extension)), `${page}${extension} missing`);
+for (const page of app.pages) {
+  const configPath = path.join(root, 'miniprogram', page + '.json');
+  const config = fs.existsSync(configPath) ? JSON.parse(fs.readFileSync(configPath, 'utf8')) : {};
+  for (const component of Object.values(config.usingComponents || {})) {
+    const base = path.resolve(root, 'miniprogram', `.${component}`);
+    for (const extension of ['.js', '.json', '.wxml', '.wxss']) assert.ok(fs.existsSync(base + extension), `${component}${extension} missing`);
+    assert.equal(JSON.parse(fs.readFileSync(base + '.json')).component, true, `${component} must register as a component`);
+  }
+}
 const rules = JSON.parse(fs.readFileSync(path.join(root, 'cloud/database.rules.json')));
 for (const name of require('../cloudfunctions/familyApi/store').COLLECTIONS) assert.deepEqual(rules[name], { read: false, write: false });
 assert.deepEqual(JSON.parse(fs.readFileSync(path.join(root, 'cloud/storage.rules.json'))), { read: false, write: false });

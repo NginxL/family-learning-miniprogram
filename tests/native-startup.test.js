@@ -12,6 +12,7 @@ function nativeRuntime(mode) {
   const modules = new Map();
   let app;
   let page;
+  const components = [];
   let cloudCalls = 0;
   const context = vm.createContext({
     console,
@@ -19,6 +20,7 @@ function nativeRuntime(mode) {
     clearInterval() {},
     App: (value) => { app = value; },
     Page: (value) => { page = value; },
+    Component: (value) => { components.push(value); },
     getApp: () => app,
     wx: {
       getStorageSync: (key) => storage.get(key),
@@ -54,10 +56,13 @@ function nativeRuntime(mode) {
     page = null;
     load(`./pages/${name}/index`);
     assert.ok(page, `${name} did not register`);
+    const configPath = path.join(root, `pages/${name}/index.json`);
+    const config = fs.existsSync(configPath) ? JSON.parse(fs.readFileSync(configPath, 'utf8')) : {};
+    for (const component of Object.values(config.usingComponents || {})) load(`.${component}`);
     return { ...page, data: JSON.parse(JSON.stringify(page.data || {})),
       setData(patch) { Object.assign(this.data, JSON.parse(JSON.stringify(patch))); } };
   }
-  return { app, loadPage, cloudCalls: () => cloudCalls };
+  return { app, loadPage, components, cloudCalls: () => cloudCalls };
 }
 
 test('native JavaScript loader starts the demo, registers every page and creates daily tasks without cloud access', async () => {
@@ -75,6 +80,7 @@ test('native JavaScript loader starts the demo, registers every page and creates
     assert.equal(today.data.family.members[0].name, '我');
     assert.ok(today.data.allTaskCount > 0);
     assert.ok(today.data.groups.length > 0);
+    assert.equal(runtime.components.length, 1, 'all learning lists register the same native card component');
     assert.equal(runtime.app.engine.snapshot().status, 'online');
     assert.equal(runtime.cloudCalls(), 0);
   } finally { today.cleanup(); family.cleanup(); }

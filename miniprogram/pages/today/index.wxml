@@ -14,14 +14,12 @@
     <view class="tab-row subjects"><view wx:for="{{subjectOptions}}" wx:key="id" class="subject-chip {{subjectFilter === item.id ? 'selected' : ''}}" data-id="{{item.id}}" bindtap="selectSubject">{{item.label}}<text wx:if="{{item.count}}"> {{item.count}}</text></view></view>
     <view class="row"><view class="section">{{date === today ? '今日学习' : '学习记录'}}</view><view class="status" bindtap="refresh">{{mode === 'demo' ? '本机保存' : syncLabel}} ↻</view></view>
     <view wx:for="{{dayWarnings}}" wx:key="kind" class="notice">{{item.message}}</view>
-    <view wx:for="{{groups}}" wx:for-item="group" wx:key="id" class="card activity-card" data-id="{{group.id}}" bindtap="openGroup" hover-class="activity-card-pressed" aria-role="button" aria-label="{{group.label}}，{{group.quantityLabel}}，查看学习详情">
-      <view class="row activity-heading">
-        <view class="grow"><view class="activity-title {{group.done ? 'done-title' : ''}}">{{group.label}} <text class="pill {{group.subject}}">{{group.quantityLabel}}</text></view><view class="muted">{{group.modeSummary}} · 约 {{group.minutes}} 分钟</view></view>
-        <view class="activity-expand">查看详情 ›</view>
-      </view>
-      <view class="muted library-preview">{{group.preview}}</view>
-      <view class="row activity-actions"><view class="muted grow">{{group.doneCount}} / {{group.count}} 已完成<text wx:if="{{group.pendingCount}}"> · 待同步</text></view><button wx:if="{{isChild}}" class="small secondary" data-id="{{group.id}}" catchtap="openGroup">{{group.done ? '查看作业' : '查看并提交'}}</button><button wx:else class="small {{group.done ? 'secondary' : 'primary'}}" data-id="{{group.id}}" catchtap="toggleGroup">{{group.done ? '已完成 · 撤销' : group.doneCount ? '完成剩余' : '完成本组'}}</button></view>
-    </view>
+    <learning-card wx:for="{{groups}}" wx:for-item="group" wx:key="id" data-id="{{group.id}}" bindopen="openGroup"
+      title="{{group.label}}" tag="{{group.quantityLabel}}" subject="{{group.subject}}" completed="{{group.done}}"
+      meta="{{group.modeSummary}} · 约 {{group.minutes}} 分钟" preview="{{group.preview}}"
+      status="{{group.doneCount}} / {{group.count}} 已完成{{group.pendingCount ? ' · 待同步' : ''}}" has-actions="{{true}}">
+      <view slot="actions" class="learning-card-actions"><button wx:if="{{isChild}}" class="small secondary" data-id="{{group.id}}" catchtap="openGroup">{{group.done ? '查看作业' : '查看并提交'}}</button><button wx:else class="small {{group.done ? 'secondary' : 'primary'}}" data-id="{{group.id}}" catchtap="toggleGroup">{{group.done ? '已完成 · 撤销' : group.doneCount ? '完成剩余' : '完成本组'}}</button></view>
+    </learning-card>
     <view wx:if="{{!tasks.length}}" class="card empty"><view class="empty-icon">☀</view><view>{{subjectFilter === 'all' ? '这一天还没有学习任务' : '这个科目还没有学习任务'}}</view><view class="subtitle">{{date === today ? '设置每天数量，或由家长添加内容' : '这一天没有已保存的任务记录'}}</view><button wx:if="{{date === today}}" class="secondary" bindtap="openPlans">安排学习内容</button></view>
     <button wx:if="{{date !== today}}" class="secondary" bindtap="backToday">回到今天</button>
   </block>

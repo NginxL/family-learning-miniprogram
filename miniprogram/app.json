@@ -8,6 +8,7 @@
     "pages/progress/index",
     "pages/privacy/index",
     "pages/study/index",
+    "pages/content/index",
     "pages/homework/index"
   ],
   "window": {

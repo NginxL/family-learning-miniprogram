@@ -24,7 +24,7 @@ test('all WXML event handlers exist; family profile, manual cross-grade work, li
   const engine = new SyncEngine({ transport: createDemo(global.wx), storage: memoryStorage() });
   const app = { engine, mode: 'demo', navigation: {} }; global.getApp = () => app;
   t.after(() => { delete global.wx; delete global.getApp; delete global.Page; });
-  const names = ['today', 'plans', 'library', 'history', 'family', 'progress', 'study', 'homework'];
+  const names = ['today', 'plans', 'library', 'history', 'family', 'progress', 'study', 'content', 'homework'];
   for (const name of names) {
     const instance = page(name, engine);
     const template = fs.readFileSync(path.join(root, `miniprogram/pages/${name}/index.wxml`), 'utf8');
@@ -134,7 +134,7 @@ test('today summarizes 30 words, opens a scoped detail route and completes, sync
 
 test('the full today card opens details while its group completion button stops tap propagation', () => {
   const template = fs.readFileSync(path.join(root, 'miniprogram/pages/today/index.wxml'), 'utf8');
-  assert.match(template, /<view[^>]+class="card activity-card"[^>]+bindtap="openGroup"/);
+  assert.match(template, /<learning-card[^>]+bindopen="openGroup"/);
   assert.match(template, /<button[^>]+catchtap="toggleGroup"/);
   assert.doesNotMatch(template, /bindtap="toggleGroup"/);
 });

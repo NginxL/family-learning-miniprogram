@@ -1,0 +1,7 @@
+<view class="learning-card" bindtap="open" hover-class="learning-card-pressed" aria-role="button" aria-label="{{title}}，{{tag}}，查看详情">
+  <view class="card-top"><view class="card-tag {{subject}}">{{tag}}</view><view wx:if="{{status}}" class="card-status">{{status}}</view></view>
+  <view class="card-title {{completed ? 'card-completed' : ''}}">{{title}}</view>
+  <view wx:if="{{meta}}" class="card-meta">{{meta}}</view>
+  <view wx:if="{{preview}}" class="card-preview">{{preview}}</view>
+  <view class="card-footer"><view class="card-link">查看详情 <text aria-hidden="true">›</text></view><view wx:if="{{hasActions}}" class="card-actions" catchtap="stopActionTap"><slot name="actions" /></view></view>
+</view>

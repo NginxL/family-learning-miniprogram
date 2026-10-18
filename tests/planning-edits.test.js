@@ -158,34 +158,38 @@ test('planning edits enforce membership, parent role, dates, task identity/versi
   const visible = await s.day(tomorrow, 'child'); assert.ok(visible.omitted.every(item => item.childId === s.childId));
 });
 
-function page(engine) {
+function page(engine, route) {
   let definition; global.Page = value => { definition = value; };
-  const file = require.resolve('../miniprogram/pages/plans/index'); delete require.cache[file]; require(file);
-  return { ...definition, engine, active: true, data: clone(definition.data), setData(patch) { Object.assign(this.data, patch); } };
+  const file = require.resolve('../miniprogram/pages/study/index'); delete require.cache[file]; require(file);
+  const instance = { ...definition, engine, active: true, data: clone(definition.data), setData(patch) { Object.assign(this.data, patch); } };
+  instance.onLoad(route); return instance;
 }
 test('page adjusts dates, deletes only the selected task, retains request IDs for retries and closes on household, child or date change', async t => {
-  const s = await setup(); const { engine } = s.f.client('parent-a'); await engine.sync(tomorrow);
+  const s = await setup();
+  await s.call('saveAutoPlans', { rules: learning.emptyRules().map(rule => ({ ...rule, quantity: rule.kind === 'poetry' ? 2 : 0 })) });
+  const { engine } = s.f.client('parent-a'); await engine.sync(tomorrow);
   global.getApp = () => ({ engine, mode: 'cloud', navigation: {} }); const toasts = [];
   global.wx = { showToast: value => toasts.push(value.title) };
   t.after(() => { delete global.Page; delete global.wx; delete global.getApp; });
-  const plans = page(engine); plans.unsubscribe = engine.subscribe(() => plans.render()); t.after(() => plans.cleanup()); plans.render(); let task = plans.data.tasks[0];
+  const plans = page(engine, { familyId: engine.state.family.id, childId: s.childId, date: tomorrow, kind: 'poetry', view: 'plan' });
+  plans.unsubscribe = engine.subscribe(() => plans.render()); t.after(() => plans.cleanup()); plans.render(); let task = plans.data.items[0];
   plans.editTask(event(task.id)); assert.equal(plans.data.editTarget.taskId, task.id);
   await plans.saveTaskDate(); assert.equal(toasts.at(-1), '请选择不同的学习日期');
   plans.changeEditDate({ detail: { value: later } }); await plans.saveTaskDate();
   assert.equal(plans.data.editTarget, null); assert.ok(!(await s.day()).tasks.some(item => item.id === task.id));
-  task = plans.data.tasks[0]; plans.editTask(event(task.id));
+  task = plans.data.items[0]; plans.editTask(event(task.id));
   const command = engine.command.bind(engine); let firstId;
   engine.command = async (action, input) => { firstId = input.mutationId; await command(action, input); throw new Error('response lost'); };
   await plans.deleteTask(); assert.ok(plans.data.editTarget); assert.match(toasts.at(-1), /response lost/);
   engine.command = async (action, input) => { assert.equal(input.mutationId, firstId); return command(action, input); };
   await plans.deleteTask(); assert.equal(plans.data.editTarget, null); assert.equal((await s.day()).tasks.length, 0);
   engine.command = command; await s.call('assignContent', { contentId: 'sh54-jiande', date: tomorrow }); await plans.refresh();
-  plans.editTask(event(plans.data.tasks[0].id));
+  plans.editTask(event(plans.data.items[0].id));
   const view = await s.day(); await s.call('editPlannedTask', s.edit(view, view.tasks[0], later));
   await plans.deleteTask(); assert.equal(plans.data.editTarget, null); assert.match(toasts.at(-1), /家人已调整/);
   await s.call('assignContent', { contentId: 'sh54-jiande', date: tomorrow }); await plans.refresh();
-  plans.editTask(event(plans.data.tasks[0].id)); engine.state.family = { ...engine.state.family, id: 'changed' }; plans.render(); assert.equal(plans.data.editTarget, null);
-  await engine.sync(tomorrow); plans.render(); plans.editTask(event(plans.data.tasks[0].id)); plans.onHide(); assert.equal(plans.data.editTarget, null);
+  plans.editTask(event(plans.data.items[0].id)); engine.state.family = { ...engine.state.family, id: 'changed' }; plans.render(); assert.equal(plans.data.editTarget, null);
+  await engine.sync(tomorrow); plans.render(); plans.editTask(event(plans.data.items[0].id)); plans.onHide(); assert.equal(plans.data.editTarget, null);
 });
 
 test('demo edits persist deletion and rescheduling across reloads and share learned-content filtering', async () => {

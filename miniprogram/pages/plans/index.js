@@ -38,36 +38,28 @@ const page_1 = require("../../lib/page");
 const task_groups_1 = require("../../lib/task-groups");
 const sync_engine_1 = require("../../lib/sync-engine");
 const errors_1 = require("../../lib/errors");
+const content_detail_1 = require("../../lib/content-detail");
 const learning = __importStar(require("../../lib/learning/learning"));
 const base = (0, page_1.common)();
 const definition = {
     ...base,
     data: { ...base.data, followToday: false, followTomorrow: true, editor: 'preview', kinds: learning.kinds, kindIndex: 0, schedules: ['仅指定日期', '从指定日期起每天固定', '加入自动内容库'], scheduleIndex: 0,
         modes: ['全新', '复习'], rules: [], formTitle: '', formDetail: '', formMinutes: '5', draftDirty: false,
-        studyGrade: 0, gradeLabels: learning.gradeLabels, groups: [], expandedKind: '', previewLimit: 20,
-        planDate: '', maxPlanDate: '', previewReady: false, editTarget: null, editDate: '',
+        studyGrade: 0, gradeLabels: learning.gradeLabels, groups: [],
+        planDate: '', maxPlanDate: '', previewReady: false,
         templates: [], templateId: '', templateName: '', templateIndex: 0, activeTemplateId: '', activeTemplateName: '', activeTemplateSummary: '',
         templateRevision: 0, draftTemplateRevision: 0, templateConflict: false, newTemplateDraft: false,
         previewTemplateId: '', previewTemplateName: '', previewTemplateSummary: '', weeklyEnabled: false, weekdayLabel: '',
         templateAdvanced: false, templateCanDelete: false, scheduleDraft: null, scheduleConflict: false, scheduleRows: [] },
-    onHide() { this.setData({ editTarget: null, scheduleDraft: null }); base.onHide.call(this); },
+    onHide() { this.setData({ scheduleDraft: null }); base.onHide.call(this); },
     render() { this.setData({ subjectFilter: 'all' }); base.render.call(this); },
     afterRender() {
-        var _a, _b, _c, _d, _e;
-        const target = this.data.editTarget;
-        if (target && (this.data.isChild || ((_a = this.data.family) === null || _a === void 0 ? void 0 : _a.id) !== target.familyId || this.data.childId !== target.childId || this.data.date !== target.date))
-            this.setData({ editTarget: null });
-        const key = `${(_b = this.data.family) === null || _b === void 0 ? void 0 : _b.id}:${this.data.childId}:${this.data.date}:${this.data.subjectFilter}`;
-        if (key !== this.previewKey) {
-            this.previewKey = key;
-            this.setData({ expandedKind: '', previewLimit: 20 });
-        }
+        var _a, _b, _c;
         if (this.defaultPlanDate !== this.data.date) {
             this.defaultPlanDate = this.data.date;
             this.setData({ planDate: this.data.date, maxPlanDate: (0, sync_engine_1.shiftDate)(this.data.today, 365) });
         }
-        this.setData({ groups: (0, task_groups_1.groupTasks)(this.data.tasks).map((group) => ({ ...group,
-                items: group.id === this.data.expandedKind ? group.items.slice(0, this.data.previewLimit) : [] })),
+        this.setData({ groups: (0, task_groups_1.groupTasks)(this.data.tasks).map(({ items, ...group }) => group),
             previewReady: Boolean(this.data.family && this.engine.state.days[`${this.data.family.id}:${this.data.date}`]) });
         if (!this.data.family) {
             this.draftScope = '';
@@ -89,13 +81,13 @@ const definition = {
             this.setData({ scheduleDraft: null, templateAdvanced: false });
             this.loadTemplate(preview.id);
         }
-        else if (!this.data.draftDirty && !this.data.busy && !((_c = this.templateMutation) === null || _c === void 0 ? void 0 : _c.uncertain))
+        else if (!this.data.draftDirty && !this.data.busy && !((_a = this.templateMutation) === null || _a === void 0 ? void 0 : _a.uncertain))
             this.loadTemplate(this.data.templateId);
         else
-            this.setData({ templateConflict: set.revision !== this.data.draftTemplateRevision && !((_d = this.templateMutation) === null || _d === void 0 ? void 0 : _d.uncertain) });
+            this.setData({ templateConflict: set.revision !== this.data.draftTemplateRevision && !((_b = this.templateMutation) === null || _b === void 0 ? void 0 : _b.uncertain) });
         const schedule = this.data.scheduleDraft;
         if (schedule)
-            this.setData({ scheduleConflict: set.revision !== schedule.baseRevision && !((_e = this.scheduleMutation) === null || _e === void 0 ? void 0 : _e.uncertain),
+            this.setData({ scheduleConflict: set.revision !== schedule.baseRevision && !((_c = this.scheduleMutation) === null || _c === void 0 ? void 0 : _c.uncertain),
                 scheduleRows: (schedule.weekly ? [{ slot: 'weekdaysTemplateId', label: '周一至周五' }, { slot: 'weekendTemplateId', label: '周六、周日' }]
                     : [{ slot: 'activeId', label: '每天使用' }]).map((row) => ({ ...row, index: set.templates.findIndex((item) => item.id === schedule[row.slot]) })) });
         this.updateVisibleRules();
@@ -244,63 +236,27 @@ const definition = {
         wx.switchTab({ url: '/pages/library/index' });
     },
     changePlanDate(event) { this.setData({ planDate: event.detail.value }); },
-    editTask(event) {
-        if (this.data.busy || this.data.isChild || !this.data.family || this.data.date <= this.data.today)
+    openGroup(event) {
+        var _a;
+        const group = this.data.groups.find(item => item.id === event.currentTarget.dataset.id);
+        const family = this.engine.snapshot().family;
+        if (this.openingGroup || !group || !family || family.id !== ((_a = this.data.family) === null || _a === void 0 ? void 0 : _a.id)
+            || !family.children.some(child => child.id === this.data.childId))
             return;
-        const task = this.data.tasks.find((item) => item.id === event.currentTarget.dataset.id);
-        if (!task || task.done)
-            return;
-        const day = this.engine.viewDay(this.data.date);
-        this.editMutation = undefined;
-        this.setData({ editTarget: { familyId: this.data.family.id, childId: task.childId, date: this.data.date, taskId: task.id, contentId: task.contentId,
-                title: task.title, baseVersion: task.version, planRevision: day.planRevision || 0 }, editDate: this.data.date });
+        const query = Object.entries({ familyId: family.id, childId: this.data.childId, date: this.data.date, kind: group.id, view: 'plan' })
+            .map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+        this.openingGroup = true;
+        wx.navigateTo({ url: `/pages/study/index?${query}`,
+            fail: () => { wx.showToast({ title: '暂时无法打开，请重试', icon: 'none' }); },
+            complete: () => { this.openingGroup = false; } });
     },
-    closeEdit() { if (!this.data.busy)
-        this.setData({ editTarget: null }); },
-    changeEditDate(event) { if (!this.data.busy)
-        this.setData({ editDate: event.detail.value }); },
-    async saveTaskDate() { await this.applyTaskEdit(false); },
-    async deleteTask() { await this.applyTaskEdit(true); },
-    async applyTaskEdit(remove) {
+    openPlan(event) {
         var _a, _b;
-        const target = this.data.editTarget;
-        if (!target || this.data.busy || this.data.isChild || ((_a = this.data.family) === null || _a === void 0 ? void 0 : _a.id) !== target.familyId || this.data.childId !== target.childId || this.data.date !== target.date)
+        const plan = this.data.plans.find(item => item.id === event.currentTarget.dataset.id);
+        if (!plan || ((_a = this.engine.snapshot().family) === null || _a === void 0 ? void 0 : _a.id) !== ((_b = this.data.family) === null || _b === void 0 ? void 0 : _b.id))
             return;
-        if (!remove && this.data.editDate === target.date) {
-            wx.showToast({ title: '请选择不同的学习日期', icon: 'none' });
-            return;
-        }
-        const { title: _title, familyId: _familyId, childId: _childId, ...source } = target;
-        const payload = { ...source, ...(remove ? {} : { targetDate: this.data.editDate }) };
-        const fingerprint = JSON.stringify(payload);
-        if (((_b = this.editMutation) === null || _b === void 0 ? void 0 : _b.fingerprint) !== fingerprint)
-            this.editMutation = { fingerprint, id: this.engine.makeId() };
-        this.setData({ busy: true });
-        try {
-            const result = await this.engine.command('editPlannedTask', { ...payload, mutationId: this.editMutation.id });
-            if (this.data.editTarget === target) {
-                this.setData({ editTarget: null });
-                wx.showToast({ title: remove ? '已删除这次安排' : result.merged ? '已合并到目标日期' : `已改到${result.targetDate}`, icon: 'none' });
-            }
-        }
-        catch (cause) {
-            const error = (0, errors_1.errorDetails)(cause);
-            if (error.code === 'CONFLICT' && this.data.editTarget === target)
-                this.setData({ editTarget: null });
-            if (this.active)
-                wx.showToast({ title: error.message || '操作失败，请重试', icon: 'none', duration: 3000 });
-        }
-        finally {
-            this.setData({ busy: false });
-            this.render();
-        }
-        await this.refresh();
+        (0, content_detail_1.openContentDetail)('plan', plan, this.data.childId, { status: plan.enabled ? '已启用' : '已暂停', contextLabel: plan.scheduleLabel });
     },
-    togglePreview(event) {
-        this.setData({ expandedKind: this.data.expandedKind === event.currentTarget.dataset.id ? '' : event.currentTarget.dataset.id, previewLimit: 20 });
-        this.render();
-    },
-    showMorePreview() { this.setData({ previewLimit: this.data.previewLimit + 20 }); this.render(); },
     changeKind(event) { this.setData({ kindIndex: Number(event.detail.value) }); },
     changeSchedule(event) { this.setData({ scheduleIndex: Number(event.detail.value) }); },
     changeStudyGrade(event) { this.setData({ studyGrade: Number(event.detail.value) }); },

@@ -1,16 +1,6 @@
-.plan-preview-heading { padding: 8rpx 0; }
-.plan-expand { color: #27654c; font-size: 25rpx; margin-top: 20rpx; }
-.plan-preview-item { border-top: 1rpx solid #e5e9e1; padding: 20rpx 0; }
-.plan-preview-item .task-title { margin-top: 0; }
-.plan-edit-button { margin-top: 20rpx; }
-.edit-mask { position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center; background: rgba(24, 39, 30, .38); padding: 24rpx; }
-.edit-sheet { width: 100%; max-width: 680rpx; max-height: 85vh; overflow-y: auto; border-radius: 28rpx; padding: 32rpx; background: #fff; }
-.edit-delete { color: #a53d32; margin-top: 20rpx; }
-.edit-cancel { margin: 24rpx auto 0; padding: 12rpx 36rpx; }
+@import "../../styles/edit-sheet.wxss";
 .template-overview .rule-title { overflow-wrap: anywhere; }
 .template-editor .picker { margin-top: 18rpx; }
-.plan-preview-text { margin-top: 12rpx; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.plan-expand { margin-top: 10rpx; }
 .schedule-entry { width: 100%; padding: 24rpx 4rpx 0; text-align: left; font-size: 26rpx; color: #52675b; background: transparent; line-height: 1.6; }
 .schedule-entry::after { border: 0; }
 .template-name { margin-bottom: 12rpx; }

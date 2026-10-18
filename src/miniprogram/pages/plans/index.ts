@@ -2,13 +2,13 @@ import { common } from '../../lib/page';
 import { groupTasks } from '../../lib/task-groups';
 import { shiftDate } from '../../lib/sync-engine';
 import { errorDetails } from '../../lib/errors';
+import { openContentDetail } from '../../lib/content-detail';
 import * as learning from '../../lib/learning/learning';
 import type { AutoRule, ContentKind, SchoolGrade, SubjectFilter, Task, DailyTemplate } from '../../../shared/models';
 import type { ApiPayloads } from '../../../shared/api';
 import type { LearningApp, ClientFamily } from '../../lib/client-models';
 import type { CommonData, CommonMethods, CommonRuntime, DatasetEvent, Decorated, FieldEvent, PageDefinition, PickerEvent, ValueEvent } from '../../lib/page-types';
 export type RuleDraft = Omit<ReturnType<typeof learning.ruleRows>[number], 'quantity'> & { quantity: number | '' };
-interface EditTarget { familyId: string; childId: string; date: string; taskId: string; contentId: string; title: string; baseVersion: number; planRevision: number }
 interface ScheduleDraft { familyId: string; childId: string; baseRevision: number; weekly: boolean; activeId: string; weekdaysTemplateId: string; weekendTemplateId: string }
 type ScheduleSlot = 'activeId' | 'weekdaysTemplateId' | 'weekendTemplateId';
 export interface PlansData extends CommonData {
@@ -16,9 +16,8 @@ export interface PlansData extends CommonData {
   schedules: string[]; scheduleIndex: number; modes: string[]; rules: RuleDraft[];
   formTitle: string; formDetail: string; formMinutes: string; draftDirty: boolean;
   studyGrade: SchoolGrade | 0; gradeLabels: string[]; visibleRules?: RuleDraft[]; dailyCount?: number;
-  groups: ReturnType<typeof groupTasks<Decorated<Task>>>; expandedKind: ContentKind | ''; previewLimit: number;
+  groups: Array<Omit<ReturnType<typeof groupTasks<Decorated<Task>>>[number], 'items'>>;
   planDate: string; maxPlanDate: string; previewReady: boolean;
-  editTarget: EditTarget | null; editDate: string;
   templates: Array<DailyTemplate & { label: string }>; templateId: string; templateName: string; templateIndex: number;
   activeTemplateId: string; activeTemplateName: string; activeTemplateSummary: string;
   templateRevision: number; draftTemplateRevision: number; templateConflict: boolean; newTemplateDraft: boolean;
@@ -30,7 +29,7 @@ export interface PlansMethods extends CommonMethods {
   afterRender(): void; updateVisibleRules(): void;
   changeEditor(event: DatasetEvent<{ id: PlansData['editor'] }>): void;
   changeKind(event: PickerEvent): void; changeSchedule(event: PickerEvent): void; changeStudyGrade(event: PickerEvent): void;
-  changePlanDate(event: ValueEvent): void; togglePreview(event: DatasetEvent<{ id: ContentKind }>): void; showMorePreview(): void;
+  changePlanDate(event: ValueEvent): void; openGroup(event: DatasetEvent): void; openPlan(event: DatasetEvent): void;
   updateRule(kind: ContentKind, patch: Partial<Pick<RuleDraft, 'mode' | 'scope' | 'quantity'>>): void;
   changeMode(event: FieldEvent<string | number, { id: ContentKind }>): void;
   changeScope(event: FieldEvent<string | number, { id: ContentKind }>): void;
@@ -46,33 +45,26 @@ export interface PlansMethods extends CommonMethods {
   chooseScheduleTemplate(event: FieldEvent<string | number, { slot: ScheduleSlot }>): void; saveSchedule(): Promise<void>;
   addPlan(event: ValueEvent<{ title: string; detail: string; minutes: string }>): Promise<void>;
   togglePlan(event: FieldEvent<boolean, { id: string }>): Promise<void>;
-  editTask(event: DatasetEvent): void; closeEdit(): void; changeEditDate(event: ValueEvent): void;
-  saveTaskDate(): Promise<void>; deleteTask(): Promise<void>; applyTaskEdit(remove: boolean): Promise<void>;
 }
-interface PlansRuntime extends CommonRuntime { draftScope?: string; templateMutation?: { fingerprint: string; id: string; uncertain?: boolean }; scheduleMutation?: { fingerprint: string; id: string; uncertain?: boolean }; lastSubject?: SubjectFilter; previewKey?: string; defaultPlanDate?: string; editMutation?: { fingerprint: string; id: string } }
+interface PlansRuntime extends CommonRuntime { draftScope?: string; templateMutation?: { fingerprint: string; id: string; uncertain?: boolean }; scheduleMutation?: { fingerprint: string; id: string; uncertain?: boolean }; lastSubject?: SubjectFilter; defaultPlanDate?: string; openingGroup?: boolean }
 const base = common();
 const definition: PageDefinition<PlansData, PlansMethods, PlansRuntime> = {
   ...base,
   data: { ...base.data, followToday: false, followTomorrow: true, editor: 'preview', kinds: learning.kinds, kindIndex: 0, schedules: ['仅指定日期', '从指定日期起每天固定', '加入自动内容库'], scheduleIndex: 0,
     modes: ['全新', '复习'], rules: [], formTitle: '', formDetail: '', formMinutes: '5', draftDirty: false,
-    studyGrade: 0, gradeLabels: learning.gradeLabels, groups: [], expandedKind: '', previewLimit: 20,
-    planDate: '', maxPlanDate: '', previewReady: false, editTarget: null, editDate: '',
+    studyGrade: 0, gradeLabels: learning.gradeLabels, groups: [],
+    planDate: '', maxPlanDate: '', previewReady: false,
     templates: [], templateId: '', templateName: '', templateIndex: 0, activeTemplateId: '', activeTemplateName: '', activeTemplateSummary: '',
     templateRevision: 0, draftTemplateRevision: 0, templateConflict: false, newTemplateDraft: false,
     previewTemplateId: '', previewTemplateName: '', previewTemplateSummary: '', weeklyEnabled: false, weekdayLabel: '',
     templateAdvanced: false, templateCanDelete: false, scheduleDraft: null, scheduleConflict: false, scheduleRows: [] },
-  onHide() { this.setData({ editTarget: null, scheduleDraft: null }); base.onHide.call(this); },
+  onHide() { this.setData({ scheduleDraft: null }); base.onHide.call(this); },
   render() { this.setData({ subjectFilter: 'all' }); base.render.call(this); },
   afterRender() {
-    const target = this.data.editTarget;
-    if (target && (this.data.isChild || this.data.family?.id !== target.familyId || this.data.childId !== target.childId || this.data.date !== target.date)) this.setData({ editTarget: null });
-    const key = `${this.data.family?.id}:${this.data.childId}:${this.data.date}:${this.data.subjectFilter}`;
-    if (key !== this.previewKey) { this.previewKey = key; this.setData({ expandedKind: '', previewLimit: 20 }); }
     if (this.defaultPlanDate !== this.data.date) {
       this.defaultPlanDate = this.data.date; this.setData({ planDate: this.data.date, maxPlanDate: shiftDate(this.data.today, 365) });
     }
-    this.setData({ groups: groupTasks(this.data.tasks).map((group) => ({ ...group,
-      items: group.id === this.data.expandedKind ? group.items.slice(0, this.data.previewLimit) : [] })),
+    this.setData({ groups: groupTasks(this.data.tasks).map(({ items, ...group }) => group),
       previewReady: Boolean(this.data.family && this.engine.state.days[`${this.data.family.id}:${this.data.date}`]) });
     if (!this.data.family) { this.draftScope = ''; this.setData({ rules: [], templates: [], templateName: '', draftDirty: false, scheduleDraft: null }); return; }
     const set = learning.templateSet(this.data.family, this.data.childId);
@@ -195,45 +187,23 @@ const definition: PageDefinition<PlansData, PlansMethods, PlansRuntime> = {
     wx.switchTab({ url: '/pages/library/index' });
   },
   changePlanDate(event) { this.setData({ planDate: event.detail.value }); },
-  editTask(event) {
-    if (this.data.busy || this.data.isChild || !this.data.family || this.data.date <= this.data.today) return;
-    const task = this.data.tasks.find((item) => item.id === event.currentTarget.dataset.id);
-    if (!task || task.done) return;
-    const day = this.engine.viewDay(this.data.date);
-    this.editMutation = undefined;
-    this.setData({ editTarget: { familyId: this.data.family.id, childId: task.childId, date: this.data.date, taskId: task.id, contentId: task.contentId,
-      title: task.title, baseVersion: task.version, planRevision: day.planRevision || 0 }, editDate: this.data.date });
+  openGroup(event) {
+    const group = this.data.groups.find(item => item.id === event.currentTarget.dataset.id);
+    const family = this.engine.snapshot().family;
+    if (this.openingGroup || !group || !family || family.id !== this.data.family?.id
+      || !family.children.some(child => child.id === this.data.childId)) return;
+    const query = Object.entries({ familyId: family.id, childId: this.data.childId, date: this.data.date, kind: group.id, view: 'plan' })
+      .map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+    this.openingGroup = true;
+    wx.navigateTo({ url: `/pages/study/index?${query}`,
+      fail: () => { wx.showToast({ title: '暂时无法打开，请重试', icon: 'none' }); },
+      complete: () => { this.openingGroup = false; } });
   },
-  closeEdit() { if (!this.data.busy) this.setData({ editTarget: null }); },
-  changeEditDate(event) { if (!this.data.busy) this.setData({ editDate: event.detail.value }); },
-  async saveTaskDate() { await this.applyTaskEdit(false); },
-  async deleteTask() { await this.applyTaskEdit(true); },
-  async applyTaskEdit(remove) {
-    const target = this.data.editTarget;
-    if (!target || this.data.busy || this.data.isChild || this.data.family?.id !== target.familyId || this.data.childId !== target.childId || this.data.date !== target.date) return;
-    if (!remove && this.data.editDate === target.date) { wx.showToast({ title: '请选择不同的学习日期', icon: 'none' }); return; }
-    const { title: _title, familyId: _familyId, childId: _childId, ...source } = target;
-    const payload = { ...source, ...(remove ? {} : { targetDate: this.data.editDate }) };
-    const fingerprint = JSON.stringify(payload);
-    if (this.editMutation?.fingerprint !== fingerprint) this.editMutation = { fingerprint, id: this.engine.makeId() };
-    this.setData({ busy: true });
-    try {
-      const result = await this.engine.command('editPlannedTask', { ...payload, mutationId: this.editMutation.id });
-      if (this.data.editTarget === target) {
-        this.setData({ editTarget: null });
-        wx.showToast({ title: remove ? '已删除这次安排' : result.merged ? '已合并到目标日期' : `已改到${result.targetDate}`, icon: 'none' });
-      }
-    } catch (cause) {
-      const error = errorDetails(cause);
-      if (error.code === 'CONFLICT' && this.data.editTarget === target) this.setData({ editTarget: null });
-      if (this.active) wx.showToast({ title: error.message || '操作失败，请重试', icon: 'none', duration: 3000 });
-    } finally { this.setData({ busy: false }); this.render(); }
-    await this.refresh();
+  openPlan(event) {
+    const plan = this.data.plans.find(item => item.id === event.currentTarget.dataset.id);
+    if (!plan || this.engine.snapshot().family?.id !== this.data.family?.id) return;
+    openContentDetail('plan', plan, this.data.childId, { status: plan.enabled ? '已启用' : '已暂停', contextLabel: plan.scheduleLabel });
   },
-  togglePreview(event) {
-    this.setData({ expandedKind: this.data.expandedKind === event.currentTarget.dataset.id ? '' : event.currentTarget.dataset.id, previewLimit: 20 }); this.render();
-  },
-  showMorePreview() { this.setData({ previewLimit: this.data.previewLimit + 20 }); this.render(); },
   changeKind(event) { this.setData({ kindIndex: Number(event.detail.value) }); },
   changeSchedule(event) { this.setData({ scheduleIndex: Number(event.detail.value) }); },
   changeStudyGrade(event) { this.setData({ studyGrade: Number(event.detail.value) as SchoolGrade | 0 }); },

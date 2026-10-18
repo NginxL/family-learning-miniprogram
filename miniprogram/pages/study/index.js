@@ -7,21 +7,27 @@ const errors_1 = require("../../lib/errors");
 const task_route_1 = require("../../lib/task-route");
 const pinyin_1 = require("../../lib/pinyin");
 const study_notes_view_1 = require("../../lib/study-notes-view");
+const planned_task_edit_1 = require("../../lib/planned-task-edit");
+const sync_engine_1 = require("../../lib/sync-engine");
 const PAGE_SIZE = 20;
 const notes = (0, study_notes_view_1.studyNotesView)();
 const definition = {
     ...notes,
+    ...(0, planned_task_edit_1.plannedTaskEdit)(),
     data: { ...notes.data, group: null, items: [], visibleCount: PAGE_SIZE, childName: '', date: '', mode: 'demo', busy: false, isChild: false,
-        loading: true, pageError: '', emptyMessage: '', syncLabel: '', syncError: '', notice: '', showPinyin: false, hasPinyin: false },
+        loading: true, pageError: '', emptyMessage: '', syncLabel: '', syncError: '', notice: '', showPinyin: false, hasPinyin: false,
+        childId: '', today: '', maxPlanDate: '', editTarget: null, editDate: '', planning: false },
     onLoad(query) {
         this.engine = getApp().engine;
-        this.taskContext = (0, task_route_1.parseTaskRoute)(query, this.engine.today);
+        this.planningEntry = query.view === 'plan';
+        // Only the explicit plan entry may read future tasks. Homework keeps its original past/today route validation.
+        this.taskContext = (0, task_route_1.parseTaskRoute)(query, this.planningEntry ? (0, sync_engine_1.shiftDate)(this.engine.today, 365) : this.engine.today);
     },
     onShow() {
         this.cleanup();
         this.engine = getApp().engine;
         this.active = true;
-        this.setData({ busy: Boolean(this.submitting) });
+        this.setData({ busy: Boolean(this.submitting || this.editing) });
         this.unsubscribe = this.engine.subscribe(() => { if (this.active)
             this.render(); });
         this.render();
@@ -30,7 +36,7 @@ const definition = {
             this.timer = setInterval(() => this.refresh(), 20000);
         }
     },
-    onHide() { this.cleanup(); },
+    onHide() { this.setData({ editTarget: null }); this.cleanup(); },
     onUnload() { this.cleanup(); },
     cleanup() {
         this.active = false;
@@ -67,6 +73,10 @@ const definition = {
         else if (family && !child)
             pageError = '当前学习档案中找不到这位孩子，请返回今日重新选择。';
         const group = pageError ? null : this.currentGroup();
+        const planning = Boolean(route && route.date > snapshot.today);
+        const target = this.data.editTarget;
+        if (target && (pageError || !planning || (family === null || family === void 0 ? void 0 : family.myRole) === 'child' || !child))
+            this.setData({ editTarget: null });
         const cached = route && (family === null || family === void 0 ? void 0 : family.id) === route.familyId && Boolean(snapshot.days[`${family.id}:${route.date}`]);
         let syncLabel = snapshot.status === 'syncing' ? '正在同步…' : snapshot.status === 'online' ? '已同步' : '等待连接';
         if (group === null || group === void 0 ? void 0 : group.pendingCount)
@@ -78,6 +88,8 @@ const definition = {
         }
         const items = ((group === null || group === void 0 ? void 0 : group.items) || []).slice(0, this.data.visibleCount).map((item) => ({ ...item, pinyin: (0, pinyin_1.pinyinFor)(item) }));
         this.setData({ group: summary, items, hasPinyin: items.some((item) => item.pinyin), showPinyin: (_a = this.pinyinChoice) !== null && _a !== void 0 ? _a : (0, pinyin_1.defaultPinyin)(child === null || child === void 0 ? void 0 : child.schoolGrade),
+            childId: (child === null || child === void 0 ? void 0 : child.id) || '', today: snapshot.today,
+            maxPlanDate: (0, sync_engine_1.shiftDate)(snapshot.today, 365), planning,
             childName: (child === null || child === void 0 ? void 0 : child.name) || '', date: (route === null || route === void 0 ? void 0 : route.date) || '', mode: getApp().mode,
             pageError, loading: !pageError && !cached && (snapshot.status === 'syncing' || snapshot.status === 'idle'),
             emptyMessage: !family ? '暂时连接不上学习档案，联网后重试。' : !cached ? '这一天的任务尚未加载，联网后重试。' : '这一天没有这类学习任务。',
@@ -99,7 +111,7 @@ const definition = {
     showMore() { this.setData({ visibleCount: this.data.visibleCount + PAGE_SIZE }); this.render(); },
     togglePinyin() { this.pinyinChoice = !this.data.showPinyin; this.setData({ showPinyin: this.pinyinChoice }); },
     async toggleGroup() {
-        if (this.submitting || !this.active)
+        if (this.submitting || this.data.busy || !this.active || (this.taskContext && this.taskContext.date > this.engine.today))
             return;
         const group = this.currentGroup();
         const route = this.taskContext;
@@ -128,12 +140,12 @@ const definition = {
         }
     },
     openHomework() {
-        if (!this.taskContext || !this.currentGroup())
+        if (!this.taskContext || this.taskContext.date > this.engine.today || !this.currentGroup())
             return;
         const query = Object.entries(this.taskContext).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
         wx.navigateTo({ url: `/pages/homework/index?${query}` });
     },
-    openToday() { wx.switchTab({ url: '/pages/today/index' }); },
+    openToday() { wx.switchTab({ url: this.planningEntry ? '/pages/plans/index' : '/pages/today/index' }); },
     dismissNotice() { this.engine.dismissNotice(); }
 };
 Page(definition);

@@ -12,6 +12,7 @@
 | `src/cloud/` | 云函数入口、权限与参数校验、业务服务、数据库适配 | `cloudfunctions/familyApi/{index,service,store,validation,homework}.js` |
 | `src/client/cloud-transport.ts` | 小程序的云函数调用与响应信封检查 | `miniprogram/lib/cloud-transport.js` |
 | `src/miniprogram/app.ts`、`pages/` | 应用启动及页面的状态、事件、生命周期 | `miniprogram/app.js`、`miniprogram/pages/*/index.js` |
+| `src/miniprogram/components/learning-card/` | 今日、明日计划、知识库、回顾共用的卡片点击事件 | `miniprogram/components/learning-card/index.js`，WXML/WXSS 在同目录维护 |
 | `src/miniprogram/lib/` | 同步队列、页面共用逻辑、任务分组与错误信息；客户端模型及页面类型 | 同名运行模块输出到 `miniprogram/lib/`；类型在编译时擦除 |
 
 演示适配器 `miniprogram/lib/demo.js`、构建与数据采集脚本仍使用 JavaScript。页面、同步队列和真实云调用共用请求与响应约定；演示适配器通过声明文件接入，并由页面与原生模块加载测试验证。WXML、WXSS、页面路径和运行配置格式保持不变。
@@ -31,6 +32,10 @@ TypeScript 固定为 `6.0.2`，Node 类型固定到 Node 20，微信官方 API �
 编辑 `src/` 中的 TS 源文件，随后运行 `npm run build`，将源码与生成的 JS 一起提交。带有 `Generated from src/…` 标记的文件不得单独修改。`npm run check` 会重新编译并逐文件比对产物，遗漏构建或手改产物都会失败。
 
 `scripts/typescript-build.js` 在临时目录编译并生成产物映射，退出时删除临时目录；`scripts/sync-shared.js` 写入原有运行目录。构建不包含上传、发布、云函数部署或数据库写入。
+
+学习列表通过页面 `usingComponents` 引用同一个 `learning-card`，统一标题、类型、状态、摘要与详情入口。卡片只发出 `open` 事件；具名 `actions` 插槽阻断点击冒泡，业务操作由原页面处理。新增组件需要登记构建产物；`scripts/check.js` 与原生加载测试核验组件文件和注册。
+
+今日与明日分组共用 `pages/study`；`view=plan` 允许预览一年内的未来任务，但完成和作业入口仍只允许当天或过去日期。改期、删除由 `lib/planned-task-edit.ts` 调用原 `editPlannedTask` 接口，保留版本检查与重试 ID。知识库、历史和手动内容共用 `pages/content`；`lib/content-detail.ts` 通过 EventChannel 传递临时展示快照，正文不放入 URL 或持久化队列。历史正文保持所选记录值，家庭、孩子或身份不匹配时清空私有详情。相关验证见 `tests/card-details.test.js`、`tests/planning-edits.test.js`。
 
 `tsconfig.json` 的 `rootDirs` 只用于把云端和小程序的 `learning/*` 导入解析到共用 TS 源码；实际部署包中仍由构建脚本放置相应 JS 文件。构建读取 `miniprogram/app.json` 的页面清单，每个页面都须有对应 TS 源码。小程序知识数据继续生成 `.js` 模块，不依赖 Node 的 JSON 加载器。 `scripts/data-module.js`在构建时合并重复字符串与对象键布局，知识数据、教材来源及静态拼音使用同一编码。运行时同步构造独立的普通对象与数组，不使用`eval`或网络解码；源数据和云端JSON格式不变。`tests/data-module.test.js`核对客户端与源数据深度相等、对象独立性及特殊键，包体检查保留2 MiB上限。优化前四年级内容主包约1,998 KiB，采用新编码并加入五年级后约1,333 KiB（按`npm run check`统计）。
 

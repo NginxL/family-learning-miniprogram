@@ -1,5 +1,3 @@
-<import src="../../templates/pinyin.wxml" />
-<import src="../../templates/study-notes.wxml" />
 <view class="page">
   <view class="eyebrow">慢慢读 · 一点点积累</view><view class="title">知识库</view>
   <view class="subtitle">{{poemCount}} 篇 / 组古诗文 · {{wordCount}} 项英语词汇</view>
@@ -29,22 +27,11 @@
     <view wx:if="{{family && !learningReady}}" class="muted">{{learningBusy ? '正在读取学习记录…' : '学习记录暂未加载；当前展示全部内容。'}}</view>
     <view wx:if="{{learningCached}}" class="muted">已学标记来自本机缓存，联网刷新后更新。</view>
     <view wx:if="{{learningError}}" class="notice" bindtap="loadLearningStatus">{{learningError}} · 点击重试</view>
-    <view wx:for="{{items}}" wx:key="id" class="card">
-      <view class="row"><view class="pill {{item.subject}}">{{item.kindLabel}}</view><view class="library-status"><view wx:if="{{item.learnedLabel}}" class="learned-badge">{{item.learnedLabel}}</view><view wx:if="{{item.assigned}}" class="muted">已在今日</view></view></view>
-      <view class="task-title" data-id="{{item.id}}" bindtap="expandContent"><template is="pinyinText" data="{{enabled: showPinyin && expandedId === item.id, lines: item.pinyin.title, text: item.title}}" /></view>
-      <view class="muted library-preview">{{item.preview}}</view>
-      <view class="muted">{{item.gradeLabel}}</view>
-      <block wx:if="{{expandedId === item.id}}">
-        <view wx:if="{{item.learnedLabel}}" class="muted plan-help">最近学习 {{item.lastLearned}} · 已学 {{item.learnedCount}} 次</view>
-        <button wx:if="{{item.pinyin}}" class="quiet pinyin-toggle" bindtap="togglePinyin">{{showPinyin ? '隐藏拼音' : '显示拼音'}}</button>
-        <view class="body"><template is="pinyinText" data="{{enabled: showPinyin, lines: item.pinyin.body, text: item.displayDetail || item.detail}}" /></view><view wx:if="{{item.dynastyNote}}" class="muted">{{item.dynastyNote}}</view><view class="muted">{{item.source}}</view><view wx:if="{{item.note}}" class="muted plan-help">{{item.note}}</view>
-        <view wx:if="{{item.recitationNote}}" class="body muted">{{item.recitationNote}}</view>
-        <template is="studyNotes" data="{{item, notesOpenId, notesAnswersId}}" />
-        <view wx:for="{{item.gradeMappings}}" wx:for-item="mapping" wx:key="displayKey" class="muted plan-help"><view>{{gradeLabels[mapping.grade]}} {{mapping.semester}} · {{mapping.edition}}</view><view wx:if="{{mapping.sourcePrintPage}}">{{mapping.unit}} · 原书第 {{mapping.sourcePrintPage}} 页<text wx:if="{{mapping.sourcePdfPage}}"> / PDF 第 {{mapping.sourcePdfPage}} 页</text></view><view>{{mapping.evidence}}</view><button class="quiet" data-url="{{mapping.sourceUrl}}" bindtap="copySource">复制年级依据链接</button></view>
-        <view class="tab-row"><button wx:if="{{item.referenceUrl}}" class="quiet" data-url="{{item.referenceUrl}}" bindtap="copySource">复制目录来源链接</button><button wx:if="{{item.textSourceUrl}}" class="quiet" data-url="{{item.textSourceUrl}}" bindtap="copySource">复制正文 / 词典来源</button></view>
-      </block>
-      <view class="row" style="margin-top:20rpx"><button class="quiet" data-id="{{item.id}}" bindtap="expandContent">{{expandedId === item.id ? '收起 ↑' : '看看内容 ↓'}}</button><button wx:if="{{family && !isChild}}" class="small secondary" style="margin:0" data-id="{{item.id}}" bindtap="assignItem" disabled="{{busy}}">安排日期</button></view>
-    </view>
+    <learning-card wx:for="{{items}}" wx:key="id" data-id="{{item.id}}" bindopen="openContent" title="{{item.title}}"
+      tag="{{item.kindLabel}}" subject="{{item.subject}}" meta="{{item.gradeLabel}}" preview="{{item.preview}}"
+      status="{{item.learnedLabel}}{{item.learnedLabel && item.assigned ? ' · ' : ''}}{{item.assigned ? '已在今日' : ''}}" has-actions="{{family && !isChild}}">
+      <view slot="actions" class="learning-card-actions"><button class="small secondary" data-id="{{item.id}}" catchtap="assignItem" disabled="{{busy}}">安排日期</button></view>
+    </learning-card>
     <view wx:if="{{!items.length}}" class="card empty">{{learningFilterIndex && learningReady ? '当前筛选范围没有符合该学习状态的内容，试试全部学习状态。' : grade ? '这个筛选范围尚无已核实的年级内容，不代表这个年级没有学习要求。' : '没有匹配的内容，试试其他关键词或范围。'}}</view>
     <button wx:if="{{hasMore}}" class="secondary" bindtap="loadMore">再看 30 项</button>
     <button wx:if="{{family}}" class="quiet plan-help" bindtap="openToday">查看今日任务 →</button>
