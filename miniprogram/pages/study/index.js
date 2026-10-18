@@ -6,9 +6,12 @@ const task_groups_1 = require("../../lib/task-groups");
 const errors_1 = require("../../lib/errors");
 const task_route_1 = require("../../lib/task-route");
 const pinyin_1 = require("../../lib/pinyin");
+const study_notes_view_1 = require("../../lib/study-notes-view");
 const PAGE_SIZE = 20;
+const notes = (0, study_notes_view_1.studyNotesView)();
 const definition = {
-    data: { group: null, items: [], visibleCount: PAGE_SIZE, childName: '', date: '', mode: 'demo', busy: false, isChild: false,
+    ...notes,
+    data: { ...notes.data, group: null, items: [], visibleCount: PAGE_SIZE, childName: '', date: '', mode: 'demo', busy: false, isChild: false,
         loading: true, pageError: '', emptyMessage: '', syncLabel: '', syncError: '', notice: '', showPinyin: false, hasPinyin: false },
     onLoad(query) {
         this.engine = getApp().engine;

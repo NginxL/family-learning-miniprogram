@@ -41,7 +41,16 @@ export interface Content {
   studyGrade?: SchoolGrade | null;
   builtin?: false;
 }
+export interface StudyNotes {
+  title: string;
+  notice: string;
+  sections: Array<{ title: string; body: string }>;
+  exercises: Array<{ question: string; answer: string }>;
+  sources: Array<{ title: string; url: string }>;
+  searchTerms: string[];
+}
 export interface KnowledgeItem extends Content {
+  studyNotes?: StudyNotes;
   learningArea?: LearningArea;
   manualOnly?: true;
   recitationRequirements?: Array<{ contentId: string; bookId: string; label: string; requirement: string;

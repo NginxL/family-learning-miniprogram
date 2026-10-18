@@ -1,4 +1,5 @@
 <import src="../../templates/pinyin.wxml" />
+<import src="../../templates/study-notes.wxml" />
 <view class="page study-page">
   <view wx:if="{{mode === 'demo'}}" class="notice">本机演示 · 数据仅保存在这台设备，未连接云端</view>
   <view wx:if="{{notice}}" class="notice" bindtap="dismissNotice">{{notice}}　×</view>
@@ -19,6 +20,7 @@
       <view class="body"><template is="pinyinText" data="{{enabled: showPinyin, lines: item.pinyin.body, text: item.displayDetail || item.detail || '和家人一起完成这项学习。'}}" /></view>
       <view wx:if="{{item.note}}" class="study-note">{{item.note}}</view>
       <view wx:if="{{item.recitationNote}}" class="body muted">{{item.recitationNote}}</view>
+      <template is="studyNotes" data="{{item, notesOpenId, notesAnswersId}}" />
       <view wx:if="{{item.source}}" class="muted study-source">来源：{{item.source}}</view>
     </view>
     <button wx:if="{{items.length < group.count}}" class="secondary load-more" bindtap="showMore">再看 {{group.count - items.length > 20 ? 20 : group.count - items.length}} 项 · 已展示 {{items.length}} / {{group.count}}</button>

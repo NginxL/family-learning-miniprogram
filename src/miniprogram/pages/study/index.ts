@@ -3,9 +3,10 @@ import { groupTasks } from '../../lib/task-groups';
 import { errorDetails } from '../../lib/errors';
 import { parseTaskRoute, type TaskRouteQuery } from '../../lib/task-route';
 import { pinyinFor, defaultPinyin, type PinyinText } from '../../lib/pinyin';
+import { studyNotesView } from '../../lib/study-notes-view';
 import type { HomeworkScope, Task } from '../../../shared/models';
 import type { AppMode, LearningApp } from '../../lib/client-models';
-import type { Decorated, PageDefinition } from '../../lib/page-types';
+import type { Decorated, PageDefinition, StudyNotesData, StudyNotesMethods } from '../../lib/page-types';
 import type { SyncEngine } from '../../lib/sync-engine';
 
 type Group = ReturnType<typeof groupTasks<Decorated<Task>>>[number];
@@ -13,7 +14,7 @@ type StudyRoute = HomeworkScope;
 type Query = TaskRouteQuery;
 const PAGE_SIZE = 20;
 
-export interface StudyData {
+export interface StudyData extends StudyNotesData {
   group: Omit<Group, 'items'> | null;
   items: Array<Decorated<Task> & { pinyin: PinyinText | null }>;
   showPinyin: boolean;
@@ -31,7 +32,7 @@ export interface StudyData {
   syncError: string;
   notice: string;
 }
-export interface StudyMethods {
+export interface StudyMethods extends StudyNotesMethods {
   onLoad(query: Query): void;
   onShow(): void;
   onHide(): void;
@@ -58,8 +59,10 @@ interface StudyRuntime {
   pinyinChoice?: boolean;
 }
 
+const notes = studyNotesView();
 const definition: PageDefinition<StudyData, StudyMethods, StudyRuntime> = {
-  data: { group: null, items: [], visibleCount: PAGE_SIZE, childName: '', date: '', mode: 'demo', busy: false, isChild: false,
+  ...notes,
+  data: { ...notes.data, group: null, items: [], visibleCount: PAGE_SIZE, childName: '', date: '', mode: 'demo', busy: false, isChild: false,
     loading: true, pageError: '', emptyMessage: '', syncLabel: '', syncError: '', notice: '', showPinyin: false, hasPinyin: false },
   onLoad(query) {
     this.engine = getApp<LearningApp>().engine;

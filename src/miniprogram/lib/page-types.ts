@@ -1,5 +1,5 @@
 import type { ApiAction } from '../../shared/api';
-import type { ChildProfile, ContentInput, Day, Plan, SubjectFilter, Task, TaskMode } from '../../shared/models';
+import type { ChildProfile, ContentInput, Day, Plan, StudyNotes, SubjectFilter, Task, TaskMode } from '../../shared/models';
 import type { AppMode, ClientFamily, ClientResults, CommandPayloads } from './client-models';
 import type { SyncEngine } from './sync-engine';
 
@@ -12,10 +12,16 @@ export type DatasetEvent<D extends object = { id: string }> = {
 export type ValueEvent<V = string> = Pick<WechatMiniprogram.CustomEvent<{ value: V }>, 'detail'>;
 export type FieldEvent<V, D extends object> = ValueEvent<V> & DatasetEvent<D>;
 export type PickerEvent = ValueEvent<string | number>;
-export type Decorated<T> = T & { kindLabel: string; subjectLabel: string; modeLabel: string; poetryByline?: string; dynastyNote?: string; displayDetail?: string; recitationNote?: string };
+export type Decorated<T> = T & { kindLabel: string; subjectLabel: string; modeLabel: string; poetryByline?: string; dynastyNote?: string; displayDetail?: string; recitationNote?: string; studyNotes?: StudyNotes };
 export type Decoratable = ContentInput & { mode?: TaskMode };
 export type DisplayChild = ChildProfile & { gradeLabel: string };
-export interface CommonData {
+export interface StudyNotesData { notesOpenId: string; notesAnswersId: string }
+export interface StudyNotesMethods {
+  toggleStudyNotes(event: DatasetEvent): void;
+  toggleStudyAnswers(event: DatasetEvent): void;
+  copyStudySource(event: DatasetEvent<{ url: string }>): void;
+}
+export interface CommonData extends StudyNotesData {
   family: ClientFamily | null;
   children: DisplayChild[];
   childId: string;
@@ -51,7 +57,7 @@ export interface CommonRuntime {
   afterSync?(): Promise<void>;
   selectionChanged?(): void | Promise<void>;
 }
-export interface CommonMethods {
+export interface CommonMethods extends StudyNotesMethods {
   onShow(): void;
   onHide(): void;
   onUnload(): void;

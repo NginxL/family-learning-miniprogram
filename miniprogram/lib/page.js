@@ -40,23 +40,32 @@ const sync_engine_1 = require("./sync-engine");
 const errors_1 = require("./errors");
 const learning = __importStar(require("./learning/learning"));
 const child_profile_1 = require("./learning/child-profile");
+const study_notes_view_1 = require("./study-notes-view");
 const modeLabels = { new: '全新', review: '复习', manual: '家长安排' };
 const decorate = (item) => {
-    var _a, _b, _c, _d;
+    var _a, _b, _c;
     const knowledge = learning.catalogById.get(learning.contentId(item));
     const poetry = learning.kindOf(item) === 'poetry' ? knowledge : undefined;
-    const recitationNote = (_a = poetry === null || poetry === void 0 ? void 0 : poetry.recitationRequirements) === null || _a === void 0 ? void 0 : _a.map(entry => `${entry.label}${entry.start ? `（${entry.start}—${entry.end}）` : ''}；原书第${entry.sourcePrintPage}页 / 电子第${entry.sourcePdfPage}页。`).join('\n');
-    return { ...item, ...(poetry ? { poetryByline: `${poetry.dynasty || '朝代待考'} · ${poetry.author || '作者待考'}`, dynastyNote: poetry.dynastyNote || '',
+    const requirements = (poetry === null || poetry === void 0 ? void 0 : poetry.recitationRequirements) || [];
+    const pendingBooks = [...new Map(((poetry === null || poetry === void 0 ? void 0 : poetry.gradeMappings) || []).filter(mapping => !requirements.some(entry => entry.bookId === mapping.bookId))
+            .map(mapping => [mapping.bookId, `${learning.gradeLabels[mapping.grade]}${mapping.semester}${mapping.editionStatus === 'historical_reference' ? '（旧版参考）' : ''}`])).values()];
+    const recitationNote = requirements.length ? [
+        ...requirements.map(entry => `${entry.label}${entry.start ? `（${entry.start}—${entry.end}）` : ''}；原书第${entry.sourcePrintPage}页 / 电子第${entry.sourcePdfPage}页。`),
+        ...(pendingBooks.length ? [`${pendingBooks.join('、')}：指定背诵、默写范围待核实。`] : [])
+    ].join('\n') : '';
+    return { ...item, studyNotes: knowledge === null || knowledge === void 0 ? void 0 : knowledge.studyNotes, ...(poetry ? { poetryByline: `${poetry.dynasty || '朝代待考'} · ${poetry.author || '作者待考'}`, dynastyNote: poetry.dynastyNote || '',
             recitationNote: recitationNote || '当前有原作与来源；该版本指定背诵、默写范围待核实，不将全文自动标为必背。',
-            displayDetail: poetry.author && ((_b = item.detail) === null || _b === void 0 ? void 0 : _b.startsWith(`${poetry.author}\n`)) ? item.detail.slice(poetry.author.length + 1) : item.detail || '' } : {}),
-        kindLabel: ((_c = learning.learningAreas.find(area => area.id === (knowledge === null || knowledge === void 0 ? void 0 : knowledge.learningArea))) === null || _c === void 0 ? void 0 : _c.label) || learning.definition(learning.kindOf(item)).label,
-        subjectLabel: ((_d = learning.subjects.find((subject) => subject.id === item.subject)) === null || _d === void 0 ? void 0 : _d.label) || '其他',
+            displayDetail: poetry.author && ((_a = item.detail) === null || _a === void 0 ? void 0 : _a.startsWith(`${poetry.author}\n`)) ? item.detail.slice(poetry.author.length + 1) : item.detail || '' } : {}),
+        kindLabel: ((_b = learning.learningAreas.find(area => area.id === (knowledge === null || knowledge === void 0 ? void 0 : knowledge.learningArea))) === null || _b === void 0 ? void 0 : _b.label) || learning.definition(learning.kindOf(item)).label,
+        subjectLabel: ((_c = learning.subjects.find((subject) => subject.id === item.subject)) === null || _c === void 0 ? void 0 : _c.label) || '其他',
         modeLabel: modeLabels[item.mode || 'manual'] || '家长安排' };
 };
 exports.decorate = decorate;
 function common() {
+    const notes = (0, study_notes_view_1.studyNotesView)();
     return {
-        data: { family: null, children: [], childId: '', tasks: [], plans: [], members: [], date: (0, sync_engine_1.chinaDate)(), today: (0, sync_engine_1.chinaDate)(),
+        ...notes,
+        data: { ...notes.data, family: null, children: [], childId: '', tasks: [], plans: [], members: [], date: (0, sync_engine_1.chinaDate)(), today: (0, sync_engine_1.chinaDate)(),
             followToday: true, subjectFilter: 'all', subjectOptions: learning.subjects, mode: 'demo', busy: false, isChild: false },
         onShow() {
             this.engine = getApp().engine;

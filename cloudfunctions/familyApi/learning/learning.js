@@ -341,14 +341,17 @@ function ruleRows(family, childId, rules = activeTemplate(family, childId).rules
 function searchCatalog(input = {}) {
     const query = (input.query || '').trim().toLowerCase();
     // Retain legacy math IDs for saved tasks/history, but remove them from the selectable library.
-    return catalog.filter((item) => item.kind !== 'math' && (!input.kind || item.kind === input.kind)
-        && (!input.learningArea || item.learningArea === input.learningArea)
-        && (!input.subject || input.subject === 'all' || definition(item.kind).subject === input.subject)
-        && (!input.scope || inScope(item, input.scope)) && (!input.bookId || (item.bookIds || []).includes(input.bookId))
-        && (!(input.grade || input.semester || input.unitId) || (item.gradeMappings || []).some((mapping) => (!input.grade || mapping.grade === input.grade) && (!input.semester || mapping.semester === input.semester)
-            && (!input.bookId || mapping.bookId === input.bookId) && (!input.unitId || mapping.unitId === input.unitId)
-            && mapping.schoolSystem === '5-4' && mapping.status === 'catalogue_verified'))
-        && (!query || `${item.title} ${item.author || ''} ${item.dynasty || ''} ${item.detail}`.toLowerCase().includes(query)));
+    return catalog.filter((item) => {
+        var _a;
+        return item.kind !== 'math' && (!input.kind || item.kind === input.kind)
+            && (!input.learningArea || item.learningArea === input.learningArea)
+            && (!input.subject || input.subject === 'all' || definition(item.kind).subject === input.subject)
+            && (!input.scope || inScope(item, input.scope)) && (!input.bookId || (item.bookIds || []).includes(input.bookId))
+            && (!(input.grade || input.semester || input.unitId) || (item.gradeMappings || []).some((mapping) => (!input.grade || mapping.grade === input.grade) && (!input.semester || mapping.semester === input.semester)
+                && (!input.bookId || mapping.bookId === input.bookId) && (!input.unitId || mapping.unitId === input.unitId)
+                && mapping.schoolSystem === '5-4' && mapping.status === 'catalogue_verified'))
+            && (!query || `${item.title} ${item.author || ''} ${item.dynasty || ''} ${item.detail} ${(((_a = item.studyNotes) === null || _a === void 0 ? void 0 : _a.searchTerms) || []).join(' ')}`.toLowerCase().includes(query));
+    });
 }
 const gradeLabels = ['未设置', '一年级', '二年级', '三年级', '四年级', '五年级', '六年级（预备）', '七年级', '八年级', '九年级'];
 exports.gradeLabels = gradeLabels;

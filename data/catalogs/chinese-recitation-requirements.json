@@ -525,6 +525,375 @@
       "sourcePrintPage": 140,
       "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
       "evidence": "原书课后要求核实；仅适用于所列版本，不据此推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-001",
+      "bookId": "chinese-1a-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 68,
+      "sourcePrintPage": 63,
+      "sourceUrl": "https://keben.app/book/0358",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "poem-quiet-night",
+      "bookId": "chinese-1b-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 44,
+      "sourcePrintPage": 39,
+      "sourceUrl": "https://keben.app/book/0359",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "poem-pond",
+      "bookId": "chinese-1b-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 68,
+      "sourcePrintPage": 63,
+      "sourceUrl": "https://keben.app/book/0359",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "poem-small-pond",
+      "bookId": "chinese-1b-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 68,
+      "sourcePrintPage": 63,
+      "sourceUrl": "https://keben.app/book/0359",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "poem-stork-tower",
+      "bookId": "chinese-2a-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 46,
+      "sourcePrintPage": 41,
+      "sourceUrl": "https://keben.app/book/0352",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-019",
+      "bookId": "chinese-2a-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 46,
+      "sourcePrintPage": 41,
+      "sourceUrl": "https://keben.app/book/0352",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "poem-river-snow",
+      "bookId": "chinese-2a-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 88,
+      "sourcePrintPage": 83,
+      "sourceUrl": "https://keben.app/book/0352",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-003",
+      "bookId": "chinese-2a-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 88,
+      "sourcePrintPage": 83,
+      "sourceUrl": "https://keben.app/book/0352",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-035",
+      "bookId": "chinese-3a-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 20,
+      "sourcePrintPage": 15,
+      "sourceUrl": "https://keben.app/book/0357",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-045",
+      "bookId": "chinese-3a-sample",
+      "requirement": "背诵并默写全文",
+      "sourcePdfPage": 20,
+      "sourcePrintPage": 15,
+      "sourceUrl": "https://keben.app/book/0357",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "sh54-night-reading",
+      "bookId": "chinese-3a-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 20,
+      "sourcePrintPage": 15,
+      "sourceUrl": "https://keben.app/book/0357",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-014",
+      "bookId": "chinese-3a-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 90,
+      "sourcePrintPage": 85,
+      "sourceUrl": "https://keben.app/book/0357",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-023",
+      "bookId": "chinese-3a-sample",
+      "requirement": "背诵并默写全文",
+      "sourcePdfPage": 90,
+      "sourcePrintPage": 85,
+      "sourceUrl": "https://keben.app/book/0357",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-054",
+      "bookId": "chinese-3a-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 90,
+      "sourcePrintPage": 85,
+      "sourceUrl": "https://keben.app/book/0357",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "sh54-sima-guang",
+      "bookId": "chinese-3a-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 101,
+      "sourcePrintPage": 96,
+      "sourceUrl": "https://keben.app/book/0357",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-027",
+      "bookId": "chinese-3b-sample",
+      "requirement": "背诵并默写全文",
+      "sourcePdfPage": 9,
+      "sourcePrintPage": 3,
+      "sourceUrl": "https://book.pep.com.cn/1211001302252/",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-055",
+      "bookId": "chinese-3b-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 9,
+      "sourcePrintPage": 3,
+      "sourceUrl": "https://book.pep.com.cn/1211001302252/",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-058",
+      "bookId": "chinese-3b-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 9,
+      "sourcePrintPage": 3,
+      "sourceUrl": "https://book.pep.com.cn/1211001302252/",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "sh54-mujiangyin",
+      "bookId": "chinese-4a-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 41,
+      "sourcePrintPage": 35,
+      "sourceUrl": "https://book.pep.com.cn/1211001401262/",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-056",
+      "bookId": "chinese-4a-sample",
+      "requirement": "背诵并默写全文",
+      "sourcePdfPage": 41,
+      "sourcePrintPage": 35,
+      "sourceUrl": "https://book.pep.com.cn/1211001401262/",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "sh54-xuemei",
+      "bookId": "chinese-4a-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 41,
+      "sourcePrintPage": 35,
+      "sourceUrl": "https://book.pep.com.cn/1211001401262/",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "sh54-jingwei",
+      "bookId": "chinese-4a-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 56,
+      "sourcePrintPage": 50,
+      "sourceUrl": "https://book.pep.com.cn/1211001401262/",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "sh54-wangrong",
+      "bookId": "chinese-4a-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 108,
+      "sourcePrintPage": 102,
+      "sourceUrl": "https://book.pep.com.cn/1211001401262/",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-011",
+      "bookId": "chinese-4a-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 124,
+      "sourcePrintPage": 118,
+      "sourceUrl": "https://book.pep.com.cn/1211001401262/",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-012",
+      "bookId": "chinese-4a-sample",
+      "requirement": "背诵并默写全文",
+      "sourcePdfPage": 124,
+      "sourcePrintPage": 118,
+      "sourceUrl": "https://book.pep.com.cn/1211001401262/",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-057",
+      "bookId": "chinese-4a-sample",
+      "requirement": "背诵并默写全文",
+      "sourcePdfPage": 124,
+      "sourcePrintPage": 118,
+      "sourceUrl": "https://book.pep.com.cn/1211001401262/",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-062",
+      "bookId": "chinese-4b-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 9,
+      "sourcePrintPage": 3,
+      "sourceUrl": "https://book.pep.com.cn/1211001402192/",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "sh54-xinshi",
+      "bookId": "chinese-4b-sample",
+      "requirement": "背诵并默写全文",
+      "sourcePdfPage": 9,
+      "sourcePrintPage": 3,
+      "sourceUrl": "https://book.pep.com.cn/1211001402192/",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "sh54-qingpingle-cunju",
+      "bookId": "chinese-4b-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 9,
+      "sourcePrintPage": 3,
+      "sourceUrl": "https://book.pep.com.cn/1211001402192/",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "sh54-nangying",
+      "bookId": "chinese-4b-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 83,
+      "sourcePrintPage": 77,
+      "sourceUrl": "https://book.pep.com.cn/1211001402192/",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-013",
+      "bookId": "chinese-4b-sample",
+      "requirement": "背诵并默写全文",
+      "sourcePdfPage": 109,
+      "sourcePrintPage": 103,
+      "sourceUrl": "https://book.pep.com.cn/1211001402192/",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-032",
+      "bookId": "chinese-4b-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 109,
+      "sourcePrintPage": 103,
+      "sourceUrl": "https://book.pep.com.cn/1211001402192/",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-070",
+      "bookId": "chinese-4b-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 109,
+      "sourcePrintPage": 103,
+      "sourceUrl": "https://book.pep.com.cn/1211001402192/",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-061",
+      "bookId": "chinese-5b-sample",
+      "requirement": "背诵并默写全文",
+      "sourcePdfPage": 8,
+      "sourcePrintPage": 3,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=f182b376-35af-4e94-849a-91ea3f97023c&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "sh54-zhizi-nongbing",
+      "bookId": "chinese-5b-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 8,
+      "sourcePrintPage": 3,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=f182b376-35af-4e94-849a-91ea3f97023c&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "sh54-cunwan",
+      "bookId": "chinese-5b-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 8,
+      "sourcePrintPage": 3,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=f182b376-35af-4e94-849a-91ea3f97023c&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "sh54-congjunxing-wangchangling",
+      "bookId": "chinese-5b-sample",
+      "requirement": "背诵并默写全文",
+      "sourcePdfPage": 50,
+      "sourcePrintPage": 45,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=f182b376-35af-4e94-849a-91ea3f97023c&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-060",
+      "bookId": "chinese-5b-sample",
+      "requirement": "背诵并默写全文",
+      "sourcePdfPage": 50,
+      "sourcePrintPage": 45,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=f182b376-35af-4e94-849a-91ea3f97023c&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "sh54-wenguanjun",
+      "bookId": "chinese-5b-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 50,
+      "sourcePrintPage": 45,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=f182b376-35af-4e94-849a-91ea3f97023c&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "sh54-zixiangmaodun",
+      "bookId": "chinese-5b-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 79,
+      "sourcePrintPage": 74,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=f182b376-35af-4e94-849a-91ea3f97023c&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
+    },
+    {
+      "contentId": "sh54-yangshi-zhizi",
+      "bookId": "chinese-5b-sample",
+      "requirement": "背诵全文",
+      "sourcePdfPage": 103,
+      "sourcePrintPage": 98,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=f182b376-35af-4e94-849a-91ea3f97023c&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。"
     }
   ]
 }

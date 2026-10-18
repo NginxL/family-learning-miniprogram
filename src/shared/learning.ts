@@ -284,7 +284,7 @@ function searchCatalog(input: CatalogQuery = {}) {
       (!input.grade || mapping.grade === input.grade) && (!input.semester || mapping.semester === input.semester)
       && (!input.bookId || mapping.bookId === input.bookId) && (!input.unitId || mapping.unitId === input.unitId)
       && mapping.schoolSystem === '5-4' && mapping.status === 'catalogue_verified'))
-    && (!query || `${item.title} ${item.author || ''} ${item.dynasty || ''} ${item.detail}`.toLowerCase().includes(query)));
+    && (!query || `${item.title} ${item.author || ''} ${item.dynasty || ''} ${item.detail} ${(item.studyNotes?.searchTerms || []).join(' ')}`.toLowerCase().includes(query)));
 }
 const gradeLabels = ['未设置', '一年级', '二年级', '三年级', '四年级', '五年级', '六年级（预备）', '七年级', '八年级', '九年级'];
 function knowledgeGradeLabel(item: KnowledgeItem): string {

@@ -34,6 +34,24 @@ export function assertKnowledge(value: unknown): asserts value is KnowledgeItem[
     requireField(item.manualOnly === undefined || item.manualOnly === true, `${path}.manualOnly`);
     requireField(!item.learningArea || item.manualOnly === true, `${path}.manualOnly must protect existing templates`);
     if (item.learningArea) requireField(item.kind === (['grammar', 'vocabulary'].includes(item.learningArea as string) ? 'english-reading' : 'reading'), `${path}.learningArea kind`);
+    if (item.studyNotes !== undefined) {
+      const notes = item.studyNotes;
+      requireField(['poetry', 'word'].includes(item.kind as string) && object(notes), `${path}.studyNotes`);
+      for (const key of ['title', 'notice']) requireField(typeof notes[key] === 'string' && notes[key].length > 0, `${path}.studyNotes.${key}`);
+      for (const [key, fields] of [['sections', ['title', 'body']], ['exercises', ['question', 'answer']], ['sources', ['title', 'url']]] as const) {
+        const rows = notes[key];
+        requireField(Array.isArray(rows) && rows.length > 0, `${path}.studyNotes.${key}`);
+        const unique = new Set<string>();
+        for (const row of rows) {
+          requireField(object(row), `${path}.studyNotes.${key} entry`);
+          for (const field of fields) requireField(typeof row[field] === 'string' && row[field].length > 0, `${path}.studyNotes.${key}.${field}`);
+          const identity = row[fields[0]] as string;
+          requireField(!unique.has(identity), `${path}.studyNotes.${key} duplicate`); unique.add(identity);
+          if (key === 'sources') requireField(typeof row.url === 'string' && row.url.startsWith('https://'), `${path}.studyNotes.sources.url`);
+        }
+      }
+      requireField(strings(notes.searchTerms) && notes.searchTerms.length > 0 && notes.searchTerms.every(term => term.trim().length > 0), `${path}.studyNotes.searchTerms`);
+    }
     if (item.recitationRequirements !== undefined) {
       requireField(item.kind === 'poetry' && Array.isArray(item.recitationRequirements), `${path}.recitationRequirements`);
       item.recitationRequirements.forEach((entry: unknown) => {

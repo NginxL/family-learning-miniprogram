@@ -1,0 +1,267 @@
+{
+  "checkedAt": "2026-10-18",
+  "scope": "新增41处要求的20张原书页图像核验记录；哈希标识本地核验图像，仓库不分发教材图片。其他已核条目见逐册核验文档。",
+  "pages": [
+    {
+      "bookId": "chinese-1a-sample",
+      "sourcePdfPage": 68,
+      "sourcePrintPage": 63,
+      "contentIds": [
+        "moe-2022-zh-1-6-001"
+      ],
+      "dictatedContentIds": [],
+      "sha256": "0ef5874908b84944aa603be6e7566b91772ec05650f73b48ee268274f7550519",
+      "sourceUrl": "https://keben.app/book/0358"
+    },
+    {
+      "bookId": "chinese-1b-sample",
+      "sourcePdfPage": 44,
+      "sourcePrintPage": 39,
+      "contentIds": [
+        "poem-quiet-night"
+      ],
+      "dictatedContentIds": [],
+      "sha256": "a64efae4f3ec429e63c010b36dd7f52a0070502e3e50ee51d309a33ec3369574",
+      "sourceUrl": "https://keben.app/book/0359"
+    },
+    {
+      "bookId": "chinese-1b-sample",
+      "sourcePdfPage": 68,
+      "sourcePrintPage": 63,
+      "contentIds": [
+        "poem-pond",
+        "poem-small-pond"
+      ],
+      "dictatedContentIds": [],
+      "sha256": "1cb043aba60d5c4803427ca1220c141e0fed948816740ea5f308d7c3686842ff",
+      "sourceUrl": "https://keben.app/book/0359"
+    },
+    {
+      "bookId": "chinese-2a-sample",
+      "sourcePdfPage": 46,
+      "sourcePrintPage": 41,
+      "contentIds": [
+        "poem-stork-tower",
+        "moe-2022-zh-1-6-019"
+      ],
+      "dictatedContentIds": [],
+      "sha256": "c26141d7378111f87960be4b518f42db336f2cc0fbbdff0e52e44498035da07c",
+      "sourceUrl": "https://keben.app/book/0352"
+    },
+    {
+      "bookId": "chinese-2a-sample",
+      "sourcePdfPage": 88,
+      "sourcePrintPage": 83,
+      "contentIds": [
+        "poem-river-snow",
+        "moe-2022-zh-1-6-003"
+      ],
+      "dictatedContentIds": [],
+      "sha256": "ddc93787a598f028e3f11ae808d79f401e5d56f6c11a2d695abb0dd3a6836eeb",
+      "sourceUrl": "https://keben.app/book/0352"
+    },
+    {
+      "bookId": "chinese-3a-sample",
+      "sourcePdfPage": 20,
+      "sourcePrintPage": 15,
+      "contentIds": [
+        "moe-2022-zh-1-6-035",
+        "moe-2022-zh-1-6-045",
+        "sh54-night-reading"
+      ],
+      "dictatedContentIds": [
+        "moe-2022-zh-1-6-045"
+      ],
+      "sha256": "c73a04fb010db678bd0bc3fa01afef5f1776187fd9a38be28b0ca7c8c7bcb4f4",
+      "sourceUrl": "https://keben.app/book/0357"
+    },
+    {
+      "bookId": "chinese-3a-sample",
+      "sourcePdfPage": 90,
+      "sourcePrintPage": 85,
+      "contentIds": [
+        "moe-2022-zh-1-6-014",
+        "moe-2022-zh-1-6-023",
+        "moe-2022-zh-1-6-054"
+      ],
+      "dictatedContentIds": [
+        "moe-2022-zh-1-6-023"
+      ],
+      "sha256": "02a4860ca34a4005cda73a1756307607f8e13e7ca2185b46c238a8ed6b657f20",
+      "sourceUrl": "https://keben.app/book/0357"
+    },
+    {
+      "bookId": "chinese-3a-sample",
+      "sourcePdfPage": 101,
+      "sourcePrintPage": 96,
+      "contentIds": [
+        "sh54-sima-guang"
+      ],
+      "dictatedContentIds": [],
+      "sha256": "a054531710be0ee77df0817df1d3df2ff37eb842cacc7bf8a1c30b2881444b09",
+      "sourceUrl": "https://keben.app/book/0357"
+    },
+    {
+      "bookId": "chinese-3b-sample",
+      "sourcePdfPage": 9,
+      "sourcePrintPage": 3,
+      "contentIds": [
+        "moe-2022-zh-1-6-027",
+        "moe-2022-zh-1-6-055",
+        "moe-2022-zh-1-6-058"
+      ],
+      "dictatedContentIds": [
+        "moe-2022-zh-1-6-027"
+      ],
+      "sha256": "e8ec2044b27800422ef3e67d9b555356b26afffb1a30db346e552ba44cc4b42f",
+      "sourceUrl": "https://book.pep.com.cn/1211001302252/"
+    },
+    {
+      "bookId": "chinese-4a-sample",
+      "sourcePdfPage": 41,
+      "sourcePrintPage": 35,
+      "contentIds": [
+        "sh54-mujiangyin",
+        "moe-2022-zh-1-6-056",
+        "sh54-xuemei"
+      ],
+      "dictatedContentIds": [
+        "moe-2022-zh-1-6-056"
+      ],
+      "sha256": "33b2b7a35755b6b3a8dbde0b533fae5424ecf1ab976f29c7ed23f737999e43fd",
+      "sourceUrl": "https://book.pep.com.cn/1211001401262/"
+    },
+    {
+      "bookId": "chinese-4a-sample",
+      "sourcePdfPage": 56,
+      "sourcePrintPage": 50,
+      "contentIds": [
+        "sh54-jingwei"
+      ],
+      "dictatedContentIds": [],
+      "sha256": "6fb2f282d04794116cbfd6b010c2a4229ab17c427a45bf1cf1d7921944a7c4b7",
+      "sourceUrl": "https://book.pep.com.cn/1211001401262/"
+    },
+    {
+      "bookId": "chinese-4a-sample",
+      "sourcePdfPage": 108,
+      "sourcePrintPage": 102,
+      "contentIds": [
+        "sh54-wangrong"
+      ],
+      "dictatedContentIds": [],
+      "sha256": "65fd359d83ea59050ba4a323e8cd777fff9e1f2899111da33d0a3c0773f2d93a",
+      "sourceUrl": "https://book.pep.com.cn/1211001401262/"
+    },
+    {
+      "bookId": "chinese-4a-sample",
+      "sourcePdfPage": 124,
+      "sourcePrintPage": 118,
+      "contentIds": [
+        "moe-2022-zh-1-6-011",
+        "moe-2022-zh-1-6-012",
+        "moe-2022-zh-1-6-057"
+      ],
+      "dictatedContentIds": [
+        "moe-2022-zh-1-6-012",
+        "moe-2022-zh-1-6-057"
+      ],
+      "sha256": "59ddf7702e36cd4d48f965fa0c68cff23c6aa71ea21ffbf06117bb09eedbd22f",
+      "sourceUrl": "https://book.pep.com.cn/1211001401262/"
+    },
+    {
+      "bookId": "chinese-4b-sample",
+      "sourcePdfPage": 9,
+      "sourcePrintPage": 3,
+      "contentIds": [
+        "moe-2022-zh-1-6-062",
+        "sh54-xinshi",
+        "sh54-qingpingle-cunju"
+      ],
+      "dictatedContentIds": [
+        "sh54-xinshi"
+      ],
+      "sha256": "7150c6433005df7c90728972772eb2bc5037698ec55af915a913efef80acf1ce",
+      "sourceUrl": "https://book.pep.com.cn/1211001402192/"
+    },
+    {
+      "bookId": "chinese-4b-sample",
+      "sourcePdfPage": 83,
+      "sourcePrintPage": 77,
+      "contentIds": [
+        "sh54-nangying"
+      ],
+      "dictatedContentIds": [],
+      "sha256": "a51c0de4546c49d4a98ecec22d6008490f2d1f0bb4538dd3f83230d83140a510",
+      "sourceUrl": "https://book.pep.com.cn/1211001402192/"
+    },
+    {
+      "bookId": "chinese-4b-sample",
+      "sourcePdfPage": 109,
+      "sourcePrintPage": 103,
+      "contentIds": [
+        "moe-2022-zh-1-6-013",
+        "moe-2022-zh-1-6-032",
+        "moe-2022-zh-1-6-070"
+      ],
+      "dictatedContentIds": [
+        "moe-2022-zh-1-6-013"
+      ],
+      "sha256": "37790ab006a0ffd91d54793b40c8f45a057e8dcdb1eed139827cfa3326cef427",
+      "sourceUrl": "https://book.pep.com.cn/1211001402192/"
+    },
+    {
+      "bookId": "chinese-5b-sample",
+      "sourcePdfPage": 8,
+      "sourcePrintPage": 3,
+      "contentIds": [
+        "moe-2022-zh-1-6-061",
+        "sh54-zhizi-nongbing",
+        "sh54-cunwan"
+      ],
+      "dictatedContentIds": [
+        "moe-2022-zh-1-6-061"
+      ],
+      "sha256": "11ba9b5dde067092078c0d61ac613d8c2a9ba50a9663106e028541589b230bc7",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=f182b376-35af-4e94-849a-91ea3f97023c&catalogType=tchMaterial&subCatalog=tchMaterial"
+    },
+    {
+      "bookId": "chinese-5b-sample",
+      "sourcePdfPage": 50,
+      "sourcePrintPage": 45,
+      "contentIds": [
+        "sh54-congjunxing-wangchangling",
+        "moe-2022-zh-1-6-060",
+        "sh54-wenguanjun"
+      ],
+      "dictatedContentIds": [
+        "sh54-congjunxing-wangchangling",
+        "moe-2022-zh-1-6-060"
+      ],
+      "sha256": "c8953329282718ccd6e7744877a81e5501aaf20aaaa45bf85996431838f463b0",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=f182b376-35af-4e94-849a-91ea3f97023c&catalogType=tchMaterial&subCatalog=tchMaterial"
+    },
+    {
+      "bookId": "chinese-5b-sample",
+      "sourcePdfPage": 79,
+      "sourcePrintPage": 74,
+      "contentIds": [
+        "sh54-zixiangmaodun"
+      ],
+      "dictatedContentIds": [],
+      "sha256": "cd3e3f5745a5ed40a56634b61d7cf83550b3ad32ba5a72b953b07470db21c93c",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=f182b376-35af-4e94-849a-91ea3f97023c&catalogType=tchMaterial&subCatalog=tchMaterial"
+    },
+    {
+      "bookId": "chinese-5b-sample",
+      "sourcePdfPage": 103,
+      "sourcePrintPage": 98,
+      "contentIds": [
+        "sh54-yangshi-zhizi"
+      ],
+      "dictatedContentIds": [],
+      "sha256": "b287571040d440bab3285e0863870258086d17aef94579ccdefb082db4132cb7",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=f182b376-35af-4e94-849a-91ea3f97023c&catalogType=tchMaterial&subCatalog=tchMaterial"
+    }
+  ]
+}

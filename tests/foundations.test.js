@@ -70,9 +70,9 @@ test('foundation cards contain usable original instruction and independent pract
 });
 
 test('recitation requirements retain precise source pages and do not expand a partial assignment to a whole work', () => {
-  assert.equal(recitations.entries.length, 58);
-  assert.equal(new Set(recitations.entries.map(entry => entry.contentId)).size, 56);
-  assert.equal(new Set(recitations.entries.map(entry => `${entry.contentId}/${entry.bookId}`)).size, 58);
+  assert.equal(recitations.entries.length, 99);
+  assert.equal(new Set(recitations.entries.map(entry => entry.contentId)).size, 97);
+  assert.equal(new Set(recitations.entries.map(entry => `${entry.contentId}/${entry.bookId}`)).size, 99);
   for (const entry of recitations.entries) {
     const item = learning.catalogById.get(entry.contentId), mapping = item.gradeMappings.find(m => m.bookId === entry.bookId);
     assert.equal(entry.sourceUrl, mapping.sourceUrl);
@@ -190,7 +190,8 @@ test('manual foundation work syncs across parents after a lost response and libr
 
 test('framework coverage numbers come from the same catalogue used by pages and never claim complete exam coverage', () => {
   assert.deepEqual(resources.examFramework.counts, { poetry: 260, word: 2748, sentence: 690, reading: 230,
-    englishReading: 161, recitation: 9, classical: 51, vocabulary: 10, grammar: 55, recitationRequirements: 58, unmappedWords: 404 });
+    englishReading: 161, recitation: 9, classical: 51, vocabulary: 10, grammar: 55, recitationRequirements: 99, unmappedWords: 404,
+    classicalGuides: 55, wordGuides: 644, phrasePatterns: 118, wordFamilies: 77 });
   assert.equal(resources.examFramework.complete, false); assert.equal(resources.examFramework.coverageRate, null);
   assert.equal(resources.curriculum.slots.filter(slot => slot.editionReview).length, 7);
   assert.ok(resources.curriculum.slots.every(slot => slot.fullCoverage === false));

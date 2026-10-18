@@ -74,3 +74,7 @@ button[disabled] { opacity:.5; }
 .pinyin-glyph { line-height:48rpx; white-space:pre; }
 .pinyin-punctuation { padding:0; min-width:.65em; }
 .pinyin-toggle { min-height:80rpx; margin-top:0; text-align:right; }
+.study-notes { border-top:1rpx solid #edf0e9; margin-top:24rpx; padding-top:4rpx; }
+.notes-toggle { min-height:88rpx; text-align:left; }
+.notes-body { overflow-wrap:anywhere; }
+button.notes-source { padding:16rpx 12rpx; text-align:left; }

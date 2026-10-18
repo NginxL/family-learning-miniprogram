@@ -21,7 +21,9 @@
 | `english-moe-2022.json` | 1,600 组国家课标词头、505 个星标、通用词典参考 | 词头来自课标；部分释义来自 ECDICT，采用 MIT，见下方声明 |
 | `english-foundation-meanings.json` | 505 个基础词的常用义提示 | 自编简短释义，供家庭学习参考；不是教材单元词义 |
 | `english-reviewed-meanings.json` | 96项原通用词典卡的常用义、例句与中文提示 | 自编教学辅助，不冒充教材译文，原ID不变 |
-| `chinese-recitation-requirements.json` | 58处具名教材的背诵、默写与指定段落要求 | 原书课后要求的事实性范围和页码；未核范围保留待确认 |
+| `chinese-recitation-requirements.json`、`chinese-recitation-page-evidence.json` | 99处具名教材的背诵、默写与指定段落要求；新增原页核验摘要 | 原书课后要求的事实性范围和页码、核验图像SHA-256；未核范围保留待确认 |
+| `chinese-classical-details.json` | 55篇公版文言原作的卡内讲解、句意自译与理解题 | 依据原作自编，沿用已核教材定位；不冒充教材注释，不单独生成学习ID |
+| `english-word-study.json` | 644项词卡内的词形、数量表达、118组短语搭配与77组词族 | ECDICT MIT词形经语境复核；British Council／Cambridge参考，例句和练习自编；不推定拓展用法的教材年级 |
 | `chinese-foundation-system.json`、`chinese-foundation-pinyin.json` | 9组背诵默写、51组文言理解，低年级2组附拼音 | 公版原句与原创讲解、问答，关联原作已核册次；不把练习当原书题目 |
 | `english-foundation-system.json` | 10组词汇运用、55组语法讲解与问答 | 国家课标及五四制原书目录定位；未映射知识点不指定年级 |
 | `english-moe-2022-tables.json` | 数词／月份／星期另列表 77 项 | 词表来自课标；中文提示自编 |
@@ -32,7 +34,7 @@
 
 朝代标签按内容ID与转录记录匹配；部分补充篇目按同一作者归属核对。`source_record`表示转录元数据，`author_period`表示作者时代依据，`reviewed`表示另附核对来源，`unresolved`表示待考，`textbook_page`表示具名原书作者或出处注核对；这些状态不等同于校内教材核准。诸葛亮由原始错误的“两汉”改为“三国·蜀汉”；《司马光》的“元代”指《宋史》编纂时代，不能误作故事人物的生活年代。《礼记》《战国策》区分材料时代与编纂时代，《列子》保留今本成书争议；未署作者的《画》标为“朝代待考”。具体证据与说明保存在该JSON，页面展示需要保留的争议说明。
 
-ECDICT 来源：[skywind3000/ECDICT](https://github.com/skywind3000/ECDICT)，固定版本 `bc015ed2e24a7abef49fc6dbbb7fe32c1dadaf8b`。Copyright (c) 2025 Linwei，MIT License；完整许可保留在 [licenses/ECDICT-MIT.txt](../../licenses/ECDICT-MIT.txt)。这里只提取课标所需的参考释义，不分发整个词典 CSV。
+ECDICT 来源：[skywind3000/ECDICT](https://github.com/skywind3000/ECDICT)，固定版本 `bc015ed2e24a7abef49fc6dbbb7fe32c1dadaf8b`。Copyright (c) 2025 Linwei，MIT License；完整许可保留在 [licenses/ECDICT-MIT.txt](../../licenses/ECDICT-MIT.txt)。只提取所需参考释义与常用词形，不分发整个词典 CSV；词形另经义项与变体复核。
 
 现代课本整册、课文中的现代作品、扫描 PDF、录音及注释没有进入本仓库。源码公开不改变这些材料的权利归属。小程序保留官方阅读入口和事实性书目信息。
 
@@ -51,3 +53,5 @@ ECDICT 来源：[skywind3000/ECDICT](https://github.com/skywind3000/ECDICT)，�
 公开样本一上、一下、二上、三上封面标注审定 2024；样本版权页没有具体 ISBN 和印次，不能据网站的“2024版”称其为学校当前用书。古诗文的五四制目录与样本总计267个年级映射，包含二下9项、三下10项、四年级23项、五年级35项、六年级26项、七年级38项、八年级48项和九年级47项；同名《绝句》另核对原页作者与首句。另有一至九年级字词与原创练习映射。来源区分`official_outline`、`public_sample`、`official_textbook`和`official_audio`；音频依据不推断纸本页码，已知版本差异保存在词项证据中。
 
 `scripts/foundations.js`校对词卡、附加背诵要求并生成125组知识练习。`learningArea`用于学习方向筛选；`manualOnly`使新练习仅由家长安排，不改变已有自动阅读数量。新增练习ID不继承原作的已学状态；原任务类型、记录和云接口格式保留。基础数量由最终目录构建生成，见[基础知识体系核验](../../docs/基础知识体系核验.md)。
+
+`scripts/study-notes.js`将逐篇、逐词辅助编译为可选的`studyNotes`字段，验证原句、词头与来源；仅供页面展示与知识库搜索，不写入任务正文快照、同步写入队列或学习档案。课堂原作、词头的`gradeMappings`不推导出拓展用法的年级。核验范围见[背诵要求与逐篇辅助核验](../../docs/背诵要求与逐篇辅助核验.md)。

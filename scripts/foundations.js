@@ -3,6 +3,7 @@ const reviewed = require('../data/catalogs/english-reviewed-meanings.json');
 const recitations = require('../data/catalogs/chinese-recitation-requirements.json');
 const chinese = require('../data/catalogs/chinese-foundation-system.json');
 const english = require('../data/catalogs/english-foundation-system.json');
+const studyNotes = require('./study-notes');
 const { data } = require('./lower-primary');
 const areaLabels = { recitation: '背诵与默写', classical: '文言理解', vocabulary: '词汇运用', grammar: '英语语法' };
 const books = new Map(data.books.map(book => [book.id, book]));
@@ -62,7 +63,7 @@ function augment(items) {
       bookIds: [...new Set(gradeMappings.map(mapping => mapping.bookId))] };
     items.push(item); byId.set(item.id, item);
   }
-  return items;
+  return studyNotes.augment(items);
 }
 
 function frameworkWithCounts(framework, catalog) {
@@ -71,12 +72,12 @@ function frameworkWithCounts(framework, catalog) {
   const counts = { poetry: count('poetry'), word: count('word'), sentence: count('sentence'), reading: count('reading'),
     englishReading: count('english-reading'), recitation: areaCount('recitation'), classical: areaCount('classical'),
     vocabulary: areaCount('vocabulary'), grammar: areaCount('grammar'), recitationRequirements: recitations.entries.length,
-    unmappedWords: catalog.filter(item => item.kind === 'word' && !item.gradeMappings?.length).length };
+    unmappedWords: catalog.filter(item => item.kind === 'word' && !item.gradeMappings?.length).length, ...studyNotes.counts };
   const prefixes = {
     'zh-classics': `${counts.poetry}项古诗文；${counts.recitationRequirements}处原书背诵要求；${counts.recitation}组记诵练习。`,
-    'zh-classical-reading': `${counts.classical}组文言词句与理解练习。`,
+    'zh-classical-reading': `${counts.classical}组独立文言练习；${counts.classicalGuides}篇原作内附字词、句意与理解。`,
     'zh-reading-writing': `${counts.reading}项语文阅读、识字与拼音练习，知识点练习另计。`,
-    'en-vocabulary': `${counts.word}项词汇；${counts.vocabulary}组词义、词形与搭配练习；${counts.unmappedWords}项词汇教材年级学期待核实。`,
+    'en-vocabulary': `${counts.word}项词汇；${counts.wordGuides}项词卡附学习辅助，包含${counts.phrasePatterns}组短语搭配、${counts.wordFamilies}组词族；${counts.vocabulary}组独立词汇练习；${counts.unmappedWords}项词汇教材年级学期待核实。`,
     'en-grammar': `${counts.grammar}组语法基础讲解与配套练习。`,
     'en-listening-speaking': `${counts.sentence}句原创口语任务；已有录音作业提交。`,
     'en-reading-writing': `${counts.englishReading}篇原创英语短文，词汇与语法知识点另计。`
