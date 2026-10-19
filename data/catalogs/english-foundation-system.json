@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-18",
+  "checkedAt": "2026-10-19",
   "sourceUrl": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582349487953.pdf",
   "scope": "词汇与语法基础知识及原创练习；教材映射仅依据所列五四制原书目录。无教材映射的知识点不指定年级学期。",
   "lessons": [
@@ -374,7 +374,7 @@
         },
         {
           "question": "把five改为序数词并写出“第五页”。",
-          "answer": "fifth；the fifth page。"
+          "answer": "five的序数词是fifth。用序数词表达“第五页”为the fifth page；page five也表示“第五页”，但这里的five仍是基数词。"
         }
       ],
       "curriculumPdfPage": 146,
@@ -385,7 +385,8 @@
           "unitId": "u6",
           "cataloguePdfPage": 8
         }
-      ]
+      ],
+      "contentRevision": "2026-10-19"
     },
     {
       "id": "skill-en-prepositions",
@@ -494,7 +495,7 @@
           "answer": "is sleeping。look提示眼前正在进行的动作。"
         },
         {
-          "question": "改错：I am knowing the answer。",
+          "question": "改错：I am knowing the answer.",
           "answer": "I know the answer. know在此表示知道的状态。"
         }
       ],
@@ -506,7 +507,8 @@
           "unitId": "u2",
           "cataloguePdfPage": 8
         }
-      ]
+      ],
+      "contentRevision": "2026-10-19"
     },
     {
       "id": "skill-en-frequency",
@@ -702,7 +704,7 @@
       "area": "grammar",
       "title": "mustn't与needn't",
       "goal": "理解规则，在具体句子中辨别并运用。",
-      "explanation": "mustn't表示禁止；needn't或don't have to表示不必，不能混为一谈。must表示必须；一般疑问句的否定回答常用needn't。",
+      "explanation": "mustn't表示禁止；needn't或don't have to表示不必，不能混为一谈。当must表示‘必须’，用Must开头的问句询问是否有必要做某事时，否定回答可用No, ... needn't或don't have to。这不是所有一般疑问句或must表示推测时的通用答法。",
       "example": "You mustn't run here. You needn't hurry.（这里禁止奔跑。你不必着急。）",
       "exercises": [
         {
@@ -722,7 +724,8 @@
           "unitId": "u2",
           "cataloguePdfPage": 7
         }
-      ]
+      ],
+      "contentRevision": "2026-10-19"
     },
     {
       "id": "skill-en-better-need",
@@ -733,7 +736,7 @@
       "example": "You had better take a coat. I need to leave.（你最好带外套。我需要离开。）",
       "exercises": [
         {
-          "question": "改错：You had better to wait。",
+          "question": "改错：You had better to wait.",
           "answer": "You had better wait. 后接原形，不加to。"
         },
         {
@@ -749,7 +752,8 @@
           "unitId": "u2",
           "cataloguePdfPage": 8
         }
-      ]
+      ],
+      "contentRevision": "2026-10-19"
     },
     {
       "id": "skill-en-questions",
@@ -795,15 +799,15 @@
           "answer": "与陈述部分的情态动词can保持对应。"
         }
       ],
-      "curriculumPdfPage": 147,
       "level": "foundation",
       "textbookEvidence": [
         {
           "bookId": "english-6a-2024",
-          "unitId": "u5",
+          "unitId": "u6",
           "cataloguePdfPage": 10
         }
-      ]
+      ],
+      "contentRevision": "2026-10-19"
     },
     {
       "id": "skill-en-imperatives",
@@ -818,7 +822,7 @@
           "answer": "Don't open the window. 用Don't加原形。"
         },
         {
-          "question": "改错：Please to sit down。",
+          "question": "改错：Please to sit down.",
           "answer": "Please sit down. 祈使句用动词原形。"
         }
       ],
@@ -830,7 +834,8 @@
           "unitId": "u2",
           "cataloguePdfPage": 6
         }
-      ]
+      ],
+      "contentRevision": "2026-10-19"
     },
     {
       "id": "skill-en-exclamations",
@@ -872,7 +877,7 @@
           "answer": "is。milk不可数，按单数处理。"
         },
         {
-          "question": "改错：There has a book on the desk。",
+          "question": "改错：There has a book on the desk.",
           "answer": "There is a book on the desk. 存在句使用there be。"
         }
       ],
@@ -884,7 +889,8 @@
           "unitId": "u6",
           "cataloguePdfPage": 8
         }
-      ]
+      ],
+      "contentRevision": "2026-10-19"
     },
     {
       "id": "skill-en-preparatory-it",
@@ -1030,7 +1036,7 @@
       "example": "We stayed inside because it rained.（因为下雨，我们待在室内。）",
       "exercises": [
         {
-          "question": "改错：Because it rained, so we stayed inside。",
+          "question": "改错：Because it rained, so we stayed inside.",
           "answer": "Because it rained, we stayed inside. 或It rained, so we stayed inside. 保留一种连接方式。"
         },
         {
@@ -1046,7 +1052,8 @@
           "unitId": "u5",
           "cataloguePdfPage": 8
         }
-      ]
+      ],
+      "contentRevision": "2026-10-19"
     },
     {
       "id": "skill-en-concession",
@@ -1057,8 +1064,8 @@
       "example": "Although it was cold, we went out.（虽然很冷，我们还是出去了。）",
       "exercises": [
         {
-          "question": "改错：Although he was tired, but he kept reading。",
-          "answer": "Although he was tired, he kept reading. 去掉but。"
+          "question": "改错：Although he was tired, but he kept reading.",
+          "answer": "两种改法均可：Although he was tired, he kept reading.（去掉but）；He was tired, but he kept reading.（去掉Although）。"
         },
         {
           "question": "上述句子中与“疲倦”相对的结果是什么？",
@@ -1073,7 +1080,8 @@
           "unitId": "u4",
           "cataloguePdfPage": 6
         }
-      ]
+      ],
+      "contentRevision": "2026-10-19"
     },
     {
       "id": "skill-en-condition",
@@ -1268,7 +1276,7 @@
       "id": "skill-en-relative-clauses",
       "area": "grammar",
       "title": "理解who、which、that引导的关系从句",
-      "goal": "理解规则，在具体句子中辨别并运用。",
+      "goal": "在语境中辨认相关形式并理解含义；不要求熟练运用。",
       "explanation": "关系从句修饰前面的名词。who通常指人，which通常指物，that可指人或物。国家课标此项强调辨认限定性从句并理解句意。",
       "example": "The girl who won the race is my friend.（赢得比赛的女孩是我的朋友。）",
       "exercises": [
@@ -1289,7 +1297,8 @@
           "unitId": "u2",
           "cataloguePdfPage": 6
         }
-      ]
+      ],
+      "contentRevision": "2026-10-19"
     },
     {
       "id": "skill-en-passive-present",
@@ -1358,7 +1367,7 @@
           "answer": "will be planted。结构是will be加过去分词。"
         },
         {
-          "question": "改错：The work will finished soon。",
+          "question": "改错：The work will finished soon.",
           "answer": "The work will be finished soon. 被动结构不能省略be。"
         }
       ],
@@ -1370,13 +1379,14 @@
           "unitId": "u6",
           "cataloguePdfPage": 8
         }
-      ]
+      ],
+      "contentRevision": "2026-10-19"
     },
     {
       "id": "skill-en-nonfinite",
       "area": "grammar",
       "title": "理解-ing与-ed非谓语形式",
-      "goal": "理解规则，在具体句子中辨别并运用。",
+      "goal": "在语境中辨认相关形式并理解含义；不要求熟练运用。",
       "explanation": "国家课标把本项列为仅作理解要求。除了进行时、被动语态的组成部分，-ing/-ed形式还可在句中发挥其他作用，应看结构与语境。",
       "example": "Swimming is fun. The broken cup is on the table.（游泳很有趣。破杯子在桌上。）",
       "exercises": [
@@ -1390,13 +1400,14 @@
         }
       ],
       "curriculumPdfPage": 148,
-      "level": "understanding"
+      "level": "understanding",
+      "contentRevision": "2026-10-19"
     },
     {
       "id": "skill-en-subject-agreement",
       "area": "grammar",
       "title": "理解主谓一致",
-      "goal": "理解规则，在具体句子中辨别并运用。",
+      "goal": "在语境中辨认相关形式并理解含义；不要求熟练运用。",
       "explanation": "国家课标把本项列为仅作理解要求；基础学习先观察主语单复数与谓语的对应。不要只看紧挨动词的名词。",
       "example": "The box of books is heavy.（那箱书很重。）",
       "exercises": [
@@ -1410,13 +1421,14 @@
         }
       ],
       "curriculumPdfPage": 149,
-      "level": "understanding"
+      "level": "understanding",
+      "contentRevision": "2026-10-19"
     },
     {
       "id": "skill-en-interjections",
       "area": "grammar",
       "title": "理解感叹词的语气",
-      "goal": "理解规则，在具体句子中辨别并运用。",
+      "goal": "在语境中辨认相关形式并理解含义；不要求熟练运用。",
       "explanation": "国家课标把感叹词列为仅作理解要求；oh、wow等可以表达惊讶或情绪，具体意义由语气和情境决定。",
       "example": "Wow! What a beautiful rainbow!（哇！多美的彩虹！）",
       "exercises": [
@@ -1430,7 +1442,8 @@
         }
       ],
       "curriculumPdfPage": 146,
-      "level": "understanding"
+      "level": "understanding",
+      "contentRevision": "2026-10-19"
     },
     {
       "id": "skill-en-word-context",
@@ -1616,7 +1629,7 @@
       "id": "skill-en-abbreviations",
       "area": "vocabulary",
       "title": "理解缩写与变体",
-      "goal": "把词义、词形和搭配放回语境学习。",
+      "goal": "在语境中辨认相关形式并理解含义；不要求熟练运用。",
       "explanation": "国家课标把缩写和简写列为仅作理解要求；区分缩写、英美拼写和国家词表的合列词头，避免把同一知识重复计数。",
       "example": "ad = advertisement；colour = color；I'm = I am（广告；颜色的英美拼写；我是）",
       "exercises": [
@@ -1630,7 +1643,8 @@
         }
       ],
       "curriculumPdfPage": 147,
-      "level": "understanding"
+      "level": "understanding",
+      "contentRevision": "2026-10-19"
     }
   ]
 }

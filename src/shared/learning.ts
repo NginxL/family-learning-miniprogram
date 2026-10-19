@@ -289,7 +289,9 @@ function searchCatalog(input: CatalogQuery = {}) {
 const gradeLabels = ['未设置', '一年级', '二年级', '三年级', '四年级', '五年级', '六年级（预备）', '七年级', '八年级', '九年级'];
 function knowledgeGradeLabel(item: KnowledgeItem): string {
   if (item.gradeMappings?.length) return [...new Set(item.gradeMappings.map(mapping => `${gradeLabels[mapping.grade]}${mapping.semester}${mapping.editionStatus === 'historical_reference' ? '（旧版参考）' : ''}`))].join('、')
-    + (item.gradeMappings.every(mapping => mapping.mappingType === 'aligned_practice') ? ' · 原创配套练习' : ' · 教材归属已核实');
+    + (item.gradeMappings.every(mapping => mapping.mappingType === 'aligned_practice') ? ' · 原创配套练习' : '')
+    + (item.gradeMappings.some(mapping => mapping.sourceKind === 'public_sample') ? ' · 含第三方样本，官方原页待核实'
+      : item.gradeMappings.some(mapping => mapping.sourceKind === 'official_audio') ? ' · 含官方音频依据，纸本原页待核实' : ' · 官方教材目录归属已核实');
   if (item.learningArea) return '课标基础知识 · 教材年级、学期待核实';
   if (item.kind === 'word' && item.collections.includes('moe-all')) return '国家课标词表 · 教材年级、学期待核实';
   if (item.kind === 'word' && item.collections.includes('tables')) return '国家课标另列表 · 教材年级、学期待核实';

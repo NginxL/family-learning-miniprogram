@@ -2507,7 +2507,8 @@
             "question": "1. What appeared when the page opened?\n2. Why did the class change the text colour?\n3. Was a home address needed?",
             "questionHint": "从页面设计、可读性和必要信息三个方面找答案。",
             "answer": "1. Large buttons. 2. A reader could not see the pale text clearly. 3. No.",
-            "grammar": "比较 as soon as 和 until 引导的时间从句；再找出 nobody，说明它为什么作单数主语。"
+            "grammar": "比较as soon as和until引导的时间从句。nobody作主语通常按单数处理；文中had没有人称、数的变化，不能由had判断单数。另看自编例句Nobody needs a password.中的needs。",
+            "contentRevision": "2026-10-19"
           }
         },
         {
@@ -2911,7 +2912,8 @@
             "question": "1. What question did Ben ask?\n2. Why did he use the same ruler?\n3. What did he decide to do next?",
             "questionHint": "注意问题、比较条件和下一步行动。",
             "answer": "1. Why the shadow moved. 2. To make the comparison fair. 3. Read more.",
-            "grammar": "找出 want to、choose to、decide to；比较 to observe 的不定式用法与句首 To make 表示的目的。"
+            "grammar": "找出wanted to know和decided to read，辨认不定式。He chose a fixed place to observe it中，chose后面直接接a fixed place，不是choose to do结构；句首To make表示目的。",
+            "contentRevision": "2026-10-19"
           }
         },
         {

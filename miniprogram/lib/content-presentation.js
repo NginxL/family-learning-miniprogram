@@ -53,18 +53,24 @@ function withContentSources(item) {
     const knowledge = learning.catalogById.get(learning.contentId(item));
     const revision = knowledge === null || knowledge === void 0 ? void 0 : knowledge.textRevision;
     const vocabularyRevision = knowledge === null || knowledge === void 0 ? void 0 : knowledge.vocabularyRevision;
-    const hasOlderText = (!!revision || !!vocabularyRevision) && typeof item.detail === 'string' && item.detail !== (knowledge === null || knowledge === void 0 ? void 0 : knowledge.detail);
+    const contentRevision = knowledge === null || knowledge === void 0 ? void 0 : knowledge.contentRevision;
+    const hasOlderText = (!!revision || !!vocabularyRevision || !!contentRevision) && typeof item.detail === 'string' && item.detail !== (knowledge === null || knowledge === void 0 ? void 0 : knowledge.detail);
     return { ...item,
         textRevision: revision,
         vocabularyRevision,
+        contentRevision,
+        commonSenseSources: (knowledge === null || knowledge === void 0 ? void 0 : knowledge.commonSenseSources) || [],
         dictionaryReference: (knowledge === null || knowledge === void 0 ? void 0 : knowledge.dictionaryReference) || '',
         textCorrectionNotice: hasOlderText ? (vocabularyRevision
             ? '词义和词形说明已校订。本任务保留安排时的内容，学习笔记使用新版；请在“来源详情与说明”中核对新版词卡，学习记录不变。'
-            : '正文已校订。本任务保留安排时的正文，请在“来源详情与说明”中查看校订正文；学习记录不变。') : '',
+            : contentRevision ? '讲解或练习已校订。本任务保留安排时的内容，请在“来源详情与说明”中核对新版；学习记录不变。'
+                : '正文已校订。本任务保留安排时的正文，请在“来源详情与说明”中查看校订正文；学习记录不变。') : '',
         correctedDetail: hasOlderText && knowledge ? (knowledge.author && knowledge.detail.startsWith(`${knowledge.author}\n`)
             ? knowledge.detail.slice(knowledge.author.length + 1) : knowledge.detail) : '',
         sourceGradeLabel: knowledge ? learning.knowledgeGradeLabel(knowledge) : '',
-        sourceMappings: ((knowledge === null || knowledge === void 0 ? void 0 : knowledge.gradeMappings) || []).map((mapping, index) => ({ ...mapping, displayKey: `${mapping.bookId}:${index}` })),
+        sourceMappings: ((knowledge === null || knowledge === void 0 ? void 0 : knowledge.gradeMappings) || []).map((mapping, index) => ({ ...mapping, displayKey: `${mapping.bookId}:${index}`,
+            verificationLabel: mapping.sourceKind === 'public_sample' ? '第三方样本 · 官方原页及册次待核实'
+                : mapping.sourceKind === 'official_audio' ? '官方配套音频 · 纸本原页待核实' : '官方教材来源' })),
         sourceReferenceUrl: (knowledge === null || knowledge === void 0 ? void 0 : knowledge.referenceUrl) || '', sourceTextUrl: (knowledge === null || knowledge === void 0 ? void 0 : knowledge.textSourceUrl) || '',
         recitationSummary: ((knowledge === null || knowledge === void 0 ? void 0 : knowledge.recitationRequirements) || []).map(entry => {
             var _a;

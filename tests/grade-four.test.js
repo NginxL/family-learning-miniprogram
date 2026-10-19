@@ -93,10 +93,10 @@ test('English grade-four unit words distinguish verified printed upper-semester 
   const hard = learning.catalogById.get('word-hard');
   for (const meaning of ['硬的', '困难的', '努力地']) assert.ok(hard.detail.includes(meaning));
   assert.match(hard.detail, /adv\. 努力地/);
-  assert.match(hard.gradeMappings.find(m => m.bookId === b.id).evidence, /自编常用义提示：硬的/);
+  assert.match(hard.gradeMappings.find(m => m.bookId === b.id).evidence, /自编单元学习提示（原页义项待核实）：硬的/);
   const triangle = learning.catalogById.get('sh54-word-triangle');
   assert.match(triangle.detail, /三角形；三角铁/);
-  assert.match(triangle.gradeMappings.find(m => m.bookId === b.id).evidence, /自编常用义提示：三角铁/);
+  assert.match(triangle.gradeMappings.find(m => m.bookId === b.id).evidence, /自编单元学习提示（原页义项待核实）：三角铁/);
   const tv = learning.catalogById.get('word-tv');
   assert.ok(tv.aliases.includes('TV') && tv.aliases.includes('television'));
   assert.equal(tv.gradeMappings.filter(m => m.bookId === b.id && m.unitId === 'u7').length, 1);

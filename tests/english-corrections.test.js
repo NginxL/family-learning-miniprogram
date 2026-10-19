@@ -10,6 +10,7 @@ const repairs = require('../data/catalogs/english-common-sense-repairs.json').en
 const guides = require('../data/catalogs/english-word-study.json');
 const baseline = require('./fixtures/english-corrections-baseline.json');
 const { withoutWordPresentation } = require('./english-baseline-helper');
+const { beforePostReviewCorrections } = require('./post-review-baseline-helper');
 const { withContentSources } = require('../miniprogram/lib/content-presentation');
 const { decorate } = require('../miniprogram/lib/page');
 const { fixture } = require('./helpers');
@@ -20,8 +21,8 @@ const occurrence = (bookId, unitId, text) => books.find(b => b.id === bookId).un
 test('English corrections preserve all IDs, placements, pools and every non-word field against b59064e', () => {
   assert.equal(knowledge.length, baseline.knowledgeCount);
   assert.equal(learning.catalog.length, baseline.catalogCount);
-  assert.equal(hash(knowledge.map(withoutWordPresentation)), baseline.stableSha256);
-  assert.equal(hash(knowledge.filter(item => item.kind !== 'word')), baseline.nonWordSha256);
+  assert.equal(hash(knowledge.map(beforePostReviewCorrections).map(withoutWordPresentation)), baseline.stableSha256);
+  assert.equal(hash(knowledge.filter(item => item.kind !== 'word').map(beforePostReviewCorrections)), baseline.nonWordSha256);
   assert.equal(books.filter(b => b.editionStatus === 'historical_reference').length, 7);
 });
 
@@ -62,7 +63,7 @@ test('all 2146 printed occurrences have page-bound POS/senses, without inventing
       }
     }
   }
-  assert.equal(count, 2146); assert.equal(unlabelled, 221);
+  assert.equal(count, 2146); assert.equal(unlabelled, 223);
   for (const b of books.filter(b => b.subject === 'english' && !b.inventory.vocabularyListComplete))
     assert.ok(b.units.flatMap(u => u.words).every(w => !w.textbookSenses));
   assert.equal(occurrence('english-4a-2026','u6','quick').textbookSenses[0].partOfSpeech, null);
@@ -103,7 +104,10 @@ test('all 599 inflection guides bind forms to visible POS and meaning, including
     const item = learning.catalogById.get(entry.contentId);
     for (const form of entry.forms) {
       assert.ok(form.sense?.partOfSpeech); assert.ok(form.sense.meaning);
-      assert.ok(item.detail.includes(`${form.sense.partOfSpeech} ${form.sense.meaning}`), `${entry.lemma}: ${form.label}`);
+      // Several same-POS meanings may share one line after exact duplicate removal.
+      const lines = item.detail.split('\n').map(line => line.match(/^(?:[^·\n]+ · )?([a-z. &]+) (.+)$/))
+        .filter(match => match && match[1].split(/\s*&\s*/).includes(form.sense.partOfSpeech));
+      assert.ok(form.sense.meaning.split('；').every(part => lines.some(match => match[2].split('；').includes(part))), `${entry.lemma}: ${form.label}`);
       assert.ok(item.studyNotes.sections[0].body.includes(form.sense.meaning));
     }
     if (entry.forms.some(f => /表达/.test(f.label))) assert.match(item.studyNotes.exercises[0].answer, /示例.*其他.*也可/);

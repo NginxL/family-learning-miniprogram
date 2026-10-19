@@ -24,8 +24,13 @@ export function assertKnowledge(value: unknown): asserts value is KnowledgeItem[
     requireField(typeof item.kind === 'string' && kinds.includes(item.kind), `${path}.kind`);
     requireField(typeof item.minutes === 'number' && Number.isFinite(item.minutes) && item.minutes > 0, `${path}.minutes`);
     requireField(strings(item.collections) && item.collections.every((scope) => scopes.includes(scope)), `${path}.collections`);
-    for (const key of ['author', 'dynasty', 'dynastyNote', 'workId', 'note', 'curriculumId', 'referenceUrl', 'textSourceUrl'])
+    for (const key of ['author', 'dynasty', 'dynastyNote', 'workId', 'note', 'curriculumId', 'referenceUrl', 'textSourceUrl', 'contentRevision', 'vocabularyRevision', 'dictionaryReference'])
       requireField(item[key] === undefined || typeof item[key] === 'string', `${path}.${key}`);
+    if (item.commonSenseSources !== undefined) {
+      requireField(item.kind === 'word' && Array.isArray(item.commonSenseSources) && item.commonSenseSources.length > 0, `${path}.commonSenseSources`);
+      for (const source of item.commonSenseSources) requireField(object(source) && typeof source.title === 'string' && source.title.length > 0
+        && typeof source.url === 'string' && source.url.startsWith('https://'), `${path}.commonSenseSources entry`);
+    }
     for (const key of ['aliases', 'bookIds', 'coveredContentIds']) requireField(item[key] === undefined || strings(item[key]), `${path}.${key}`);
     requireField(item.subject === undefined || (typeof item.subject === 'string' && ['poetry', 'english', 'reading', 'math', 'other'].includes(item.subject)), `${path}.subject`);
     requireField(item.builtin === undefined || item.builtin === false, `${path}.builtin`);

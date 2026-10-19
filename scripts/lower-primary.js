@@ -27,6 +27,7 @@ function mapping(book, unit, type, page = unit.sourcePrintPage, pdfPage = unit.s
     unit: unitLabel(unit), unitId: unit.id, mappingType: type,
     evidence: type === 'aligned_practice' ? '按已核实单元主题自编；不是教材课文或课后原题。页码为所依据单元的起始位置，学校版次待确认。' : `${book.sourceKind === 'official_textbook' ? '官方教材原书' : '教材公开样本'}字词与册次已核实；页码为目录标注的单元起始位置，学校版次待确认。`,
     status: 'catalogue_verified' };
+  if (book.sourceKind === 'public_sample') result.evidence = `第三方教材样本关联；官方原页、册次归属及学校版次待核实。${type === 'aligned_practice' ? '本内容按样本主题自编，不是教材原文。' : '页码为样本所标位置，不代表官方原书已核实。'}`;
   if (book.sourceKind === 'official_audio') {
     result.sourceUrl = book.sourceEvidence.officialResourceUrl;
     result.outlineDestination = unit.sourceAudioTrack;
@@ -65,9 +66,10 @@ function attach(item, book, unit, type, word) {
     location.outlineDestination = `#page=${word.topicCataloguePdfPage}`;
     location.evidence = '国家平台五四制原书目录 Topic words 核对；此为目录电子页，不是卷末词表页。';
   }
+  if (location.sourceKind === 'public_sample') location.evidence = '第三方教材样本关联；官方原页、册次归属及学校版次待核实。页码为样本所标位置，单元提示是自编学习辅助。';
   if (word?.textbookForm) location.evidence += ` 原书词形：${word.textbookForm}；学习词头沿用既有ID。`;
   if (word?.verificationNote) location.evidence += ` ${word.verificationNote}`;
-  if (word?.additionalSense && !word.textbookSenses) location.evidence += ` 自编常用义提示：${word.meaning}。`;
+  if (word?.additionalSense && !word.textbookSenses) location.evidence += ` 自编单元学习提示（原页义项待核实）：${word.meaning}。`;
   const locations = item.gradeMappings || [];
   const locationKey = JSON.stringify(location);
   if (!locations.some(existing => JSON.stringify(existing) === locationKey)) item.gradeMappings = [...locations, location];
@@ -134,6 +136,7 @@ function augment(items) {
   for (const book of data.books) for (const unit of book.units) {
     const add = (item, type) => {
       if (byId.has(item.id)) throw Error(`Duplicate lower-primary content: ${item.id}`);
+      if (book.sourceKind === 'public_sample') item.source = item.source.replace('已核实单元主题', '第三方样本单元主题');
       attach(item, book, unit, type); byId.set(item.id, item); items.push(item);
     };
     const prefix = `sh54-${book.subject === 'chinese' ? 'zh' : 'en'}-${book.grade}${book.semester === '上册' ? 'a' : 'b'}-${unit.id}`;
@@ -144,7 +147,7 @@ function augment(items) {
       item.bookIds = [...new Set([...(item.bookIds || []), book.id])];
       item.gradeMappings = [...(item.gradeMappings || []), { ...mapping(book, unit, 'textbook_item', poem.sourcePrintPage, poem.sourcePdfPage),
         ...(poem.sourceUrl ? { sourceUrl: poem.sourceUrl, sourceKind: poem.sourceKind || book.sourceKind } : {}),
-        evidence: `${(poem.sourceKind || book.sourceKind) === 'public_sample' ? '五四制公开教材样本' : '人教社五四制官方教材'}篇名、年级、学期与印刷页已核对；${poem.identityEvidence ? `电子页${poem.identityEvidence.sourcePdfPage}核对作者或出处${poem.identityEvidence.author}及首句“${poem.identityEvidence.firstLine}”；` : ''}正文沿用已核验公版作品。${poem.textVariantNote || ''}学校印次待确认。` }];
+        evidence: `${(poem.sourceKind || book.sourceKind) === 'public_sample' ? '第三方教材样本关联；官方原页、册次归属待核实' : '人教社五四制官方教材篇名、年级、学期与印刷页已核对'}；${poem.identityEvidence ? `电子页${poem.identityEvidence.sourcePdfPage}核对作者或出处${poem.identityEvidence.author}及首句“${poem.identityEvidence.firstLine}”；` : ''}正文沿用已核验公版作品。${poem.textVariantNote || ''}学校印次待确认。` }];
     }
     if (book.subject === 'chinese') {
       if (hasLiteracy(book, unit)) add({ id: `${prefix}-literacy`, kind: 'reading', title: `识字写字 · 第${unit.number}组`, detail: literacyDetail(unit),
@@ -175,10 +178,12 @@ function augment(items) {
       }
       for (const [i, sentence] of unit.practice.body.split('\n').entries()) add({
         id: `${prefix}-sentence-${i + 1}`, kind: 'sentence', title: sentence,
+        ...(unit.practice.revisedSentences?.includes(i + 1) ? { contentRevision: unit.practice.contentRevision } : {}),
         detail: `${sentence}\n${unit.practice.translation[i]}\n\n读一读，再换一个人物或物品说一说。`,
         source: '原创口语例句 · 依据已核实单元主题编写', minutes: 3, collections: [], referenceUrl: book.sourceUrl
       }, 'aligned_practice');
       add({ id: `${prefix}-reading`, kind: 'english-reading', title: unit.practice.title,
+        ...(unit.practice.contentRevision ? { contentRevision: unit.practice.contentRevision } : {}),
         detail: practiceDetail(unit.practice, 'english'), source: '原创英语短文、中文提示与读后问答 · 非教材课文',
         minutes: 5, collections: [], referenceUrl: book.sourceUrl }, 'aligned_practice');
     }

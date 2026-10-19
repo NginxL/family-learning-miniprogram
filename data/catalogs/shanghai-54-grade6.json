@@ -905,7 +905,7 @@
               "textbookSenses": [
                 {
                   "partOfSpeech": "n.",
-                  "meaning": "（= information andcommunications technology） 信息通信技术（课程）"
+                  "meaning": "（= information and communications technology） 信息通信技术（课程）"
                 }
               ]
             },
@@ -3518,7 +3518,7 @@
             "title": "More Than a Score",
             "body": "Our basketball team loses its first match by two points.\nWho can help us understand the result?\nOur teacher asks us to watch a short recording and notice how we pass the ball.\nWe find that the player with the ball often misses a teammate near the basket.\nAt the next practice, we warm up and then practise looking before passing.\nThe score matters, but learning to work as a team matters too.",
             "translation": [
-              "我们的篮球队在首场比赛中输了两分。",
+              "我们的篮球队以两分之差输掉了首场比赛。",
               "谁能帮助我们理解这个结果呢？",
               "老师让我们看一段录像，观察传球方式。",
               "我们发现持球人常常没有注意到篮筐旁的队友。",
@@ -3528,7 +3528,11 @@
             "question": "1. What problem do they notice?\n2. Who guides the team?\n3. What do they practise next?",
             "questionHint": "发现了什么问题？谁指导他们？接着练什么？",
             "answer": "1. Missing an available teammate. 2. Their teacher. 3. Looking before passing.",
-            "grammar": "What询问事物或内容，Who询问人：What do we practise? Who helps us?"
+            "grammar": "What询问事物或内容，Who询问人：What do we practise? Who helps us?",
+            "contentRevision": "2026-10-19",
+            "revisedSentences": [
+              1
+            ]
           }
         },
         {

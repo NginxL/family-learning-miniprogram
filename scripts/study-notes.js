@@ -1,6 +1,7 @@
 'use strict';
 const classical = require('../data/catalogs/chinese-classical-details.json');
 const english = require('../data/catalogs/english-word-study.json');
+const { hasSense } = require('./english-vocabulary');
 const compact = text => text.replace(/[\s，。；、！？：“”‘’]/g, '');
 
 // Display-only additions: no guide metadata is written into persisted task snapshots.
@@ -41,10 +42,10 @@ function augment(items) {
     for (const form of entry.forms) {
       if (!form.sense?.partOfSpeech || !form.sense.meaning) throw Error(`Unbound inflection: ${entry.contentId}/${form.label}`);
       const sense = `${form.sense.partOfSpeech} ${form.sense.meaning}`;
-      if (!item.detail.includes(sense)) missingSenses.add(sense);
+      if (!item.detail.includes(sense) && !hasSense(item.detail, form.sense.partOfSpeech, form.sense.meaning)) missingSenses.add(sense);
     }
     if (missingSenses.size) item.detail += `\n\n词形对应义：\n${[...missingSenses].join('\n')}`;
-    if (entry.forms.length) item.vocabularyRevision = '2026-10-18';
+    if (entry.forms.length) item.vocabularyRevision = '2026-10-19';
     const sections = [];
     if (entry.forms.length) sections.push({ title: '常用词形', body: entry.forms.map(form => `${form.sense.partOfSpeech} ${form.sense.meaning}\n${form.label}：${form.value}`).join('\n\n') });
     if (entry.patterns.length) sections.push({ title: '短语与搭配', body: entry.patterns.map(pattern =>
@@ -55,7 +56,7 @@ function augment(items) {
     const pattern = entry.patterns[0];
     const formWord = form ? `${entry.lemma}（${form.sense.meaning}）` : entry.lemma;
     const openAnswer = form && /表达/.test(form.label);
-    const exercises = [form ? { question: openAnswer ? `用 ${formWord} 写出一个${form.label}。` : `回忆 ${formWord} 的${form.label}。`, answer: `${openAnswer ? '示例（其他符合此义的正确表达也可）：' : ''}${form.value}${entry.pitfalls.length ? `。提示：${entry.pitfalls[0]}` : ''}` }
+    const exercises = [form ? { question: openAnswer ? `用 ${formWord} 写出一个${form.label}。` : `回忆 ${formWord}的${form.label}。`, answer: `${openAnswer ? '示例（其他符合此义的正确表达也可）：' : ''}${form.value}${entry.pitfalls.length ? `。提示：${entry.pitfalls[0]}` : ''}` }
       : { question: pattern ? `用自己的话解释 ${pattern.pattern} 的用法，并造一个句子。` : `写出 ${entry.lemma} 的相关词族及词性，说明它们之间的联系。`,
         answer: pattern ? `参考：${pattern.meaning}。${pattern.note}\n自编例句：${pattern.example}\n${pattern.translation}` : entry.families.map(f => `${f.words}\n${f.note}`).join('\n') }];
     if (pattern && form) exercises.push({ question: `说明 ${pattern.pattern} 的含义，并用它造句。`,

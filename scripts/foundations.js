@@ -20,7 +20,13 @@ function augment(items) {
   const byId = new Map(items.map(item => [item.id, item]));
   for (const entry of reviewed.entries) {
     const item = byId.get(entry.id);
-    if (!item || item.kind !== 'word' || !item.note.includes('通用词典参考')) throw Error(`Reviewed word no longer matches baseline: ${entry.id}`);
+    if (!item || item.kind !== 'word') throw Error(`Reviewed word no longer matches baseline: ${entry.id}`);
+    // A newer dictionary review takes precedence, without removing its original example.
+    if (item.commonSenseSources) {
+      item.detail += `\n\n自编例句：${entry.example}\n${entry.translation}`;
+      continue;
+    }
+    if (!item.note.includes('通用词典参考')) throw Error(`Reviewed word no longer matches baseline: ${entry.id}`);
     item.detail = `${item.title}\n${entry.meaning}\n\n自编例句：${entry.example}\n${entry.translation}`;
     item.source = `${item.source.split('；')[0]}；常用义、例句与中文提示自编`;
     item.note = '已整理常用义和语境例句；不是完整词典释义或教材译文。教材年级、学期待核实。';
@@ -42,7 +48,7 @@ function augment(items) {
     const anchor = lesson.anchorId && byId.get(lesson.anchorId);
     if (lesson.anchorId && (!anchor || !compact(anchor.detail).includes(compact(lesson.quote)))) throw Error(`Invalid source quote: ${lesson.id}`);
     const gradeMappings = anchor ? (anchor.gradeMappings || []).map(mapping => ({ ...mapping, mappingType: 'aligned_practice',
-      evidence: '原作的年级、学期与位置已核实；此为依据原句自编的知识讲解与练习，不是教材原题，也不推定背诵要求。' })) :
+      evidence: `${mapping.sourceKind === 'public_sample' ? '原作年级与位置依据第三方样本，官方原页待核实' : '原作的年级、学期与位置已核实'}；此为依据原句自编的知识讲解与练习，不是教材原题，也不推定背诵要求。` })) :
       (lesson.textbookEvidence || []).map(evidence => {
         const book = books.get(evidence.bookId), unit = book?.units.find(unit => unit.id === evidence.unitId);
         if (!book || !unit || book.subject !== 'english' || book.editionStatus === 'historical_reference') throw Error(`Invalid grammar placement: ${lesson.id}`);
@@ -56,9 +62,10 @@ function augment(items) {
     const item = { id: lesson.id, kind: englishLesson ? 'english-reading' : 'reading', title: lesson.title,
       detail: lessonDetail(lesson), minutes: 8, learningArea: lesson.area, manualOnly: true,
       ...(lesson.textRevision ? { textRevision: lesson.textRevision } : {}),
-      source: `${areaLabels[lesson.area]} · 原创讲解与练习${englishLesson ? `；国家2022英语课标电子第${lesson.curriculumPdfPage}页` : '；关联原作来源见下方'}`,
+      ...(lesson.contentRevision ? { contentRevision: lesson.contentRevision } : {}),
+      source: `${areaLabels[lesson.area]} · 原创讲解与练习${englishLesson ? (lesson.curriculumPdfPage ? `；国家2022英语课标电子第${lesson.curriculumPdfPage}页` : '；关联教材来源见下方') : '；关联原作来源见下方'}`,
       note: `知识点练习，由家长安排日期；不计入自动生成的阅读篇数。${lesson.level === 'understanding' ? '课标要求层次为辨认或理解，不扩写为必须熟练运用。' : ''}`,
-      referenceUrl: anchor ? anchor.referenceUrl : english.sourceUrl,
+      referenceUrl: anchor ? anchor.referenceUrl : lesson.curriculumPdfPage ? english.sourceUrl : gradeMappings[0]?.sourceUrl,
       ...(anchor?.textSourceUrl ? { textSourceUrl: anchor.textSourceUrl } : {}),
       collections: gradeMappings.length ? ['shanghai54'] : [], gradeMappings,
       bookIds: [...new Set(gradeMappings.map(mapping => mapping.bookId))] };
@@ -83,7 +90,7 @@ function frameworkWithCounts(framework, catalog) {
     'en-listening-speaking': `${counts.sentence}句原创口语任务；已有录音作业提交。`,
     'en-reading-writing': `${counts.englishReading}篇原创英语短文，词汇与语法知识点另计。`
   };
-  return { ...framework, contentUpdatedAt: '2026-10-18', counts,
+  return { ...framework, contentUpdatedAt: '2026-10-19', counts,
     areas: framework.areas.map(area => ({ ...area, available: prefixes[area.id] + area.available })) };
 }
 module.exports = { augment, frameworkWithCounts };

@@ -1573,10 +1573,11 @@
               "他们的反馈使我们更留意措辞。",
               "尝试新事物让我们懂得，倾听和修改能使想法更好。"
             ],
-            "question": "1. What is wrong with the first label?\n2. Who tests the new label?\n3. What helps the idea improve?",
-            "questionHint": "首版有什么问题？谁来测试？怎样改进？",
+            "question": "1. What is wrong with the first label?\n2. Who is asked to explain what the label means?\n3. What helps the idea improve?",
+            "questionHint": "首版有什么问题？请谁解释标签含义？怎样改进？",
             "answer": "1. The instructions are hard to read. 2. Students from another class. 3. Listening to comments and revising.",
-            "grammar": "双宾语SVOO：The teacher gives us a challenge. 宾语补足语SVOC：The comments make us careful. 比较us后面两部分的作用。"
+            "grammar": "双宾语SVOO：The teacher gives us a challenge. 宾语补足语SVOC：The comments make us careful. 比较us后面两部分的作用。",
+            "contentRevision": "2026-10-19"
           }
         },
         {

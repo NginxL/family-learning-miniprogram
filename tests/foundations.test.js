@@ -92,7 +92,7 @@ test('grammar source locations are catalogue evidence and understanding-only cur
   // Independently read contents pages, not guessed chapter positions or six-three grades.
   const examples = {
     'skill-en-personal-pronouns': ['english-6a-2024', 'u2', 9],
-    'skill-en-question-tags': ['english-6a-2024', 'u5', 10],
+    'skill-en-question-tags': ['english-6a-2024', 'u6', 10],
     'skill-en-present-perfect': ['english-7a-2024', 'u4', 8],
     'skill-en-past-continuous': ['english-7b-2024', 'u5', 8],
     'skill-en-time-clauses': ['english-8a-2024', 'u1', 6],

@@ -3057,12 +3057,16 @@
             "translation": [
               "我画一颗大星星。",
               "然后我画五颗小星星。",
-              "现在我画了六颗星星。"
+              "现在我有六颗星星了。"
             ],
             "question": "How many stars are there?",
             "questionHint": "一共有几颗星星？",
             "answer": "Six. 六颗。",
-            "origin": "original"
+            "origin": "original",
+            "contentRevision": "2026-10-19",
+            "revisedSentences": [
+              3
+            ]
           },
           "wordBankEntries": [
             "one",

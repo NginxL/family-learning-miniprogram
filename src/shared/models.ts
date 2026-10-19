@@ -51,6 +51,8 @@ export interface StudyNotes {
 }
 export interface KnowledgeItem extends Content {
   vocabularyRevision?: string;
+  contentRevision?: string;
+  commonSenseSources?: Array<{ title: string; url: string }>;
   dictionaryReference?: string;
   textRevision?: { checkedAt: string; summary: string; sourceUrl: string; sourcePrintPages: number[]; sourcePdfPages: number[] };
   studyNotes?: StudyNotes;

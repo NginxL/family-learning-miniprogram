@@ -359,7 +359,9 @@ function knowledgeGradeLabel(item) {
     var _a;
     if ((_a = item.gradeMappings) === null || _a === void 0 ? void 0 : _a.length)
         return [...new Set(item.gradeMappings.map(mapping => `${gradeLabels[mapping.grade]}${mapping.semester}${mapping.editionStatus === 'historical_reference' ? '（旧版参考）' : ''}`))].join('、')
-            + (item.gradeMappings.every(mapping => mapping.mappingType === 'aligned_practice') ? ' · 原创配套练习' : ' · 教材归属已核实');
+            + (item.gradeMappings.every(mapping => mapping.mappingType === 'aligned_practice') ? ' · 原创配套练习' : '')
+            + (item.gradeMappings.some(mapping => mapping.sourceKind === 'public_sample') ? ' · 含第三方样本，官方原页待核实'
+                : item.gradeMappings.some(mapping => mapping.sourceKind === 'official_audio') ? ' · 含官方音频依据，纸本原页待核实' : ' · 官方教材目录归属已核实');
     if (item.learningArea)
         return '课标基础知识 · 教材年级、学期待核实';
     if (item.kind === 'word' && item.collections.includes('moe-all'))

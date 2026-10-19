@@ -15,13 +15,20 @@
         <view class="muted plan-help">词义与词形校订 · {{item.vocabularyRevision}}；教材单元用法与页码见下方册次依据。</view>
         <view wx:if="{{item.correctedDetail}}"><view class="muted plan-help">新版词卡</view><view class="body">{{item.correctedDetail}}</view></view>
       </view>
+      <view wx:if="{{item.contentRevision}}" class="source-book">
+        <view class="muted plan-help">讲解与练习校订 · {{item.contentRevision}}；依据见下方来源说明。</view>
+        <view wx:if="{{item.correctedDetail}}"><view class="muted plan-help">新版内容</view><view class="body">{{item.correctedDetail}}</view></view>
+      </view>
+      <view class="tab-row"><button wx:for="{{item.commonSenseSources}}" wx:for-item="source" wx:key="url" class="quiet notes-source" data-url="{{source.url}}" bindtap="copyStudySource">复制常用义依据：{{source.title}}</button></view>
       <view wx:if="{{item.dictionaryReference}}" class="source-book"><view class="muted plan-help">原通用词典参考（含少用义，不作为教材单元义或中考要求）</view><view class="body">{{item.dictionaryReference}}</view></view>
       <view wx:if="{{item.dynastyNote}}" class="muted plan-help">{{item.dynastyNote}}</view>
       <view wx:if="{{item.recitationNote}}" class="muted plan-help">{{item.recitationNote}}</view>
       <view wx:for="{{item.sourceMappings}}" wx:for-item="mapping" wx:key="displayKey" class="source-book muted">
         <view>{{gradeLabels[mapping.grade]}} {{mapping.semester}} · {{mapping.edition}}</view>
+        <view>{{mapping.verificationLabel}}</view>
         <view wx:if="{{mapping.editionStatus === 'historical_reference'}}">旧版参考 · 新版待核实</view>
-        <view wx:if="{{mapping.sourcePrintPage}}">{{mapping.unit}} · 原书第 {{mapping.sourcePrintPage}} 页<text wx:if="{{mapping.sourcePdfPage}}"> / PDF 第 {{mapping.sourcePdfPage}} 页</text></view>
+        <view wx:if="{{mapping.unit}}">{{mapping.unit}}</view>
+        <view wx:if="{{mapping.sourcePrintPage || mapping.sourcePdfPage}}"><text wx:if="{{mapping.sourcePrintPage}}">{{mapping.sourceKind === 'public_sample' ? '样本所标' : '原书'}}第 {{mapping.sourcePrintPage}} 页</text><text wx:if="{{mapping.sourcePdfPage}}">{{mapping.sourcePrintPage ? ' / ' : ''}}PDF 第 {{mapping.sourcePdfPage}} 页</text></view>
         <view>{{mapping.evidence}}</view><button class="quiet notes-source" data-url="{{mapping.sourceUrl}}" bindtap="copyStudySource">复制年级依据链接</button>
       </view>
       <view class="tab-row"><button wx:if="{{item.sourceReferenceUrl}}" class="quiet notes-source" data-url="{{item.sourceReferenceUrl}}" bindtap="copyStudySource">复制目录来源链接</button><button wx:if="{{item.sourceTextUrl}}" class="quiet notes-source" data-url="{{item.sourceTextUrl}}" bindtap="copyStudySource">复制正文 / 词典来源</button></view>

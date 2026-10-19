@@ -34,7 +34,7 @@ function knowledge() {
         ...(entry.sourcePrintPage ? { sourcePrintPage: entry.sourcePrintPage, unit: entry.unit } : {}),
         ...(entry.unitId ? { unitId: entry.unitId, mappingType: 'textbook_item' } : {}),
         sourceKind: book.sourceKind || 'official_outline',
-        evidence: book.sourceKind === 'public_sample' ? '五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认' : '官方教材目录篇名与册次已核对；正文异文校对另计', status: 'catalogue_verified' });
+        evidence: book.sourceKind === 'public_sample' ? '第三方教材样本关联；官方原页、册次归属及学校版次待核实' : '官方教材目录篇名与册次已核对；正文异文校对另计', status: 'catalogue_verified' });
       gradeMappings.set(entry.contentId, grades);
     }
   }));
@@ -75,7 +75,7 @@ function knowledge() {
 }
 module.exports = { knowledge, resourcesFor: catalog => ({ ...module.exports.resources,
   examFramework: foundations.frameworkWithCounts(examFramework, catalog) }), resources: {
-  checkedAt: '2026-10-18',
+  checkedAt: '2026-10-19',
   curriculum: curriculum(knowledge()),
   examFramework,
   coverage: '上海五四制：小学1–5、初中6–9年级。36个学科册次均有可直接学习的配套内容。一至五年级语文十册字表及81组原创练习已整理；四、五、九下语文为2019审定原书。六至九年级语文两册分别有26、38、48、47处古诗文映射，各有16篇原创练习。三上英语完整纸本词表159项；六至八年级英语两册分别核实533、533、468个完整单元词项；九上199项完整单元词表。三至五及九下英语按2026年春季官方资源保留旧版音频选词，不能视为完整词表或2027年春季用书。各册配原创阅读和例句。七册旧版对应的新版下册、学校版次和逐课全量知识仍待核实；不是全教材或中考全量。',

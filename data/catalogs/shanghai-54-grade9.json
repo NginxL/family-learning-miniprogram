@@ -2999,7 +2999,7 @@
               "textbookSenses": [
                 {
                   "partOfSpeech": "abbr.",
-                  "meaning": "（= central businessdistrict） 中央商务区"
+                  "meaning": "（= central business district） 中央商务区"
                 }
               ]
             },
@@ -3469,8 +3469,9 @@
             ],
             "question": "1. What part of the entrance was kept?\n2. What is the purpose of the ramp?\n3. Find two examples of the past passive.",
             "questionHint": "区分保留的结构和新增的便利设施。",
-            "answer": "1. The original stone entrance.\n2. To help people who find steps difficult.\n3. “was built” and “were added”.",
-            "grammar": "一般过去时被动语态：was/were＋过去分词。把“They checked the roof”改为“The roof was checked”。"
+            "answer": "1. The original stone entrance.\n2. To help people who find steps difficult.\n3. Any two: was built, was checked, were added, was kept.",
+            "grammar": "一般过去时被动语态：was/were＋过去分词。把“They checked the roof”改为“The roof was checked”。",
+            "contentRevision": "2026-10-19"
           }
         },
         {
@@ -3714,7 +3715,7 @@
               "textbookSenses": [
                 {
                   "partOfSpeech": "abbr.",
-                  "meaning": "（= remotely-operatedvehicle） 远程操纵潜水器"
+                  "meaning": "（= remotely-operated vehicle） 远程操纵潜水器"
                 }
               ]
             },

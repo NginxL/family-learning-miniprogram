@@ -1795,7 +1795,7 @@
               "textbookForm": "See you soon.",
               "textbookSenses": [
                 {
-                  "partOfSpeech": "n.",
+                  "partOfSpeech": null,
                   "meaning": "一会儿见。"
                 }
               ]

@@ -511,5 +511,63 @@
       "sourcePrintPage": 135,
       "sourcePdfPage": 142
     }
+  ],
+  "recheckedAt": "2026-10-19",
+  "postReviewCorrections": [
+    {
+      "bookId": "english-3a-2026",
+      "word": "It's great to see you again.",
+      "sourcePrintPage": 89,
+      "sourcePdfPage": 96,
+      "sha256": "cbf3229ed8aa41692f400a9f0c056ca1f69789745fb20b2f491b7d2b150f189e",
+      "method": "官方页图核对；文字层或OCR辅助转录",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=319f0cb8-03af-70e7-7c8e-5a2241688ade&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "correction": "原书未标词性；去掉误录的n.",
+      "checkedAt": "2026-10-19"
+    },
+    {
+      "bookId": "english-4a-2026",
+      "word": "See you soon",
+      "sourcePrintPage": 87,
+      "sourcePdfPage": 94,
+      "sha256": "922044640adf5ebe3d43ba9aa3e5010e33094743f1910f52cb7be2f1bd063373",
+      "method": "官方页图核对；文字层或OCR辅助转录",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=3bac9453-ecbd-9133-f0a3-92cb2c6530c5&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "correction": "原书未标词性；去掉误录的n.",
+      "checkedAt": "2026-10-19"
+    },
+    {
+      "bookId": "english-6a-2024",
+      "word": "ICT",
+      "sourcePrintPage": 134,
+      "sourcePdfPage": 143,
+      "sha256": "79357a3584bb0b70c0bf345543cbd659256624b2594901fe132377dde48fd1d9",
+      "method": "官方原书文字层核对；页图留存",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=060066ae-cd3b-d133-02c2-e34685671790&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "correction": "全称分词：information and communications technology",
+      "checkedAt": "2026-10-19"
+    },
+    {
+      "bookId": "english-9a-2024",
+      "word": "CBD",
+      "sourcePrintPage": 134,
+      "sourcePdfPage": 141,
+      "sha256": "198e26b935beac3f7dc525732a50bca7b382e2b98c49102fce5cca37ca9d68f0",
+      "method": "官方原书文字层核对；页图留存",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=1dcc5207-c993-09a4-09a8-079686747f38&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "correction": "全称分词：central business district",
+      "checkedAt": "2026-10-19"
+    },
+    {
+      "bookId": "english-9a-2024",
+      "word": "ROV",
+      "sourcePrintPage": 135,
+      "sourcePdfPage": 142,
+      "sha256": "c0e721fce615af8b18592565a7a9d57b1420dd82cf1449e3bfd9cf8f5d4bcef7",
+      "method": "官方页图核对；文字层或OCR辅助转录",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=1dcc5207-c993-09a4-09a8-079686747f38&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "correction": "全称分词：remotely-operated vehicle",
+      "checkedAt": "2026-10-19"
+    }
   ]
 }
