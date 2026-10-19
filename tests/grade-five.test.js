@@ -86,7 +86,7 @@ test('grade-five English separates complete printed Words to use from lower-seme
   assert.ok(a.units[3].words.some(w => w.text === 'toe' && w.vocabularyPrintPage === 89));
   assert.equal(a.inventory.vocabularyListComplete, true);
   assert.equal(a.units[5].vocabularyAudioEvidence.contextTrack.track, '37 Unit 6 Fun time.mp3');
-  assert.match(learning.catalogById.get('word-will').detail, /意志；决心/);
+  assert.match(learning.catalogById.get('word-will').detail, /意志；毅力/);
   assert.match(learning.catalogById.get('word-mouse').detail, /老鼠；鼠标/);
   assert.match(learning.catalogById.get('word-chicken').detail, /鸡；鸡肉/);
   for (const [id, senses] of [['word-chinese', ['汉语', '中国人', '中国的']], ['word-drink', ['喝', '饮料']],

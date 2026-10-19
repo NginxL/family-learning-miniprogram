@@ -54,7 +54,7 @@ test('same-POS duplicate meanings do not repeat while noun and verb senses remai
   assert.equal(word('match').detail.split('比赛').length - 1, 1);
   assert.equal(word('mean').detail.split('意思是').length - 1, 1);
   assert.match(word('light').detail, /v\. 点燃/);assert.match(word('light').detail,/adj\. 轻的；浅色的/);
-  assert.match(word('company').studyNotes.exercises[0].question,/company（公司）的/);
+  assert.match(word('company').studyNotes.exercises[0].question,/company「公司」的/);
   assert.doesNotMatch(word('homework').studyNotes.exercises[0].question,/（（|））/);
 });
 

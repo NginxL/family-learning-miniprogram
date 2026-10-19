@@ -55,7 +55,7 @@ test('all 533 English unit entries have exact original-page locations, including
   const tie = learning.catalogById.get('word-tie');
   assert.ok(tie.gradeMappings.some(m => m.bookId === a.id && m.unitId === 'u2'));
   assert.ok(tie.gradeMappings.some(m => m.bookId === a.id && m.unitId === 'u4'));
-  assert.match(tie.detail, /纽带/); assert.match(tie.detail, /平手/);
+  assert.match(tie.detail, /纽带/); assert.match(tie.detail, /（比赛或竞争中）得分相同/);
 });
 
 test('26 sixth-grade poem locations replace partial outlines while preserving canonical IDs and textual distinctions', () => {

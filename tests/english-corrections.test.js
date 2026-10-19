@@ -115,7 +115,7 @@ test('all 599 inflection guides bind forms to visible POS and meaning, including
   }
   const get = head => guides.entries.find(e=>e.lemma===head);
   assert.equal(get('company').forms[0].sense.meaning, '公司');
-  assert.match(word('company').studyNotes.exercises[0].question, /company（公司）/);
+  assert.match(word('company').studyNotes.exercises[0].question, /company「公司」/);
   assert.equal(get('fine').forms[0].sense.meaning, '优质的；精细的');
   assert.match(get('fine').pitfalls.join(''), /身体好/);
   for (const f of get('light').forms) assert.equal(f.sense.partOfSpeech, f.label.startsWith('动词') ? 'v.' : 'adj.');

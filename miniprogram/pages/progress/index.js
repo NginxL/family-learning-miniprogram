@@ -5,9 +5,19 @@ const page_1 = require("../../lib/page");
 const learning_1 = require("../../lib/learning/learning");
 const errors_1 = require("../../lib/errors");
 const base = (0, page_1.common)();
+// Source disclosure is local so it also works with the unchanged 1.1.0 cloud response.
+const gradeSourceNotes = Object.fromEntries(learning_1.gradeLabels.slice(1).map((_, index) => {
+    const grade = index + 1;
+    const sampleOnly = learning_1.catalog.filter(item => {
+        const mappings = (item.gradeMappings || []).filter(mapping => mapping.grade === grade && mapping.schoolSystem === '5-4'
+            && mapping.status === 'catalogue_verified' && mapping.mappingType !== 'aligned_practice');
+        return mappings.length > 0 && mappings.every(mapping => mapping.sourceKind === 'public_sample');
+    }).length;
+    return [grade, sampleOnly ? `其中 ${sampleOnly} 项仅有第三方样本依据，官方原页待核实。` : ''];
+}));
 const definition = {
     ...base,
-    data: { ...base.data, progress: null, progressBusy: false, progressError: '', progressCached: false },
+    data: { ...base.data, progress: null, progressBusy: false, progressError: '', progressCached: false, gradeSourceNotes },
     afterRender() {
         const key = `${this.data.family && this.data.family.id}:${this.data.childId}`;
         if (key !== this.progressKey) {

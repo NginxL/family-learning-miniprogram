@@ -22,6 +22,15 @@
   "complete": false,
   "target": "小学1–5年级、初中6–9年级（六年级为预备年级）；语文和英语分别覆盖上下学期。",
   "acceptance": "36个学科册次均须核实教材版本、完整篇目/单元目录、所需知识及学校选用情况，缺项为零后才可声明九年覆盖。",
+  "editionTransition": {
+    "title": "上海教材换版时间表",
+    "sourceTitle": "沪教委基〔2024〕19号",
+    "sourceUrl": "https://www.shqp.gov.cn/edu/edu/upload/202408/0829_152637_882.pdf",
+    "sourcePdfPage": 2,
+    "checkedAt": "2026-10-19",
+    "summary": "市教委明确：2026学年起，所有年级各学科全覆盖使用新教材。",
+    "boundary": "七册旧版下册保留为历史参考；2027年春季对应新版原书与学校实际版次待核实。换版时间表不能代替具体内容核验。"
+  },
   "requiredAreas": {
     "chinese": [
       "识字写字与拼音",

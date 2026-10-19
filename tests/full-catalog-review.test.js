@@ -103,7 +103,8 @@ test('starter cards retain reviewed textbook senses and do not erase later-unit 
     assert.ok(learning.catalogById.get(id).detail.includes(meaning),id);
   for (const b of books) for (const u of b.units) for (const w of u.words || []) if (w.additionalSense) {
     const item = learning.searchCatalog({ bookId:b.id,unitId:u.id,kind:'word' }).find(i => i.aliases.includes(w.text));
-    for (const sense of w.meaning.split('；')) assert.ok(item.detail.includes(sense),`${b.id}/${u.id}/${w.text}: ${sense}`);
+    const meanings = w.textbookSenses?.length ? w.textbookSenses.map(sense => sense.meaning) : [w.meaning];
+    for (const sense of meanings.flatMap(meaning => meaning.split('；'))) assert.ok(item.detail.includes(sense),`${b.id}/${u.id}/${w.text}: ${sense}`);
   }
 });
 

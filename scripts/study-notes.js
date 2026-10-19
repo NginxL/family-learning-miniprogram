@@ -54,7 +54,7 @@ function augment(items) {
     if (entry.pitfalls.length) sections.push({ title: '容易混淆', body: entry.pitfalls.join('\n') });
     const form = entry.forms.find(form => form.label === '动词过去式') || entry.forms[0];
     const pattern = entry.patterns[0];
-    const formWord = form ? `${entry.lemma}（${form.sense.meaning}）` : entry.lemma;
+    const formWord = form ? `${entry.lemma}「${form.sense.meaning}」` : entry.lemma;
     const openAnswer = form && /表达/.test(form.label);
     const exercises = [form ? { question: openAnswer ? `用 ${formWord} 写出一个${form.label}。` : `回忆 ${formWord}的${form.label}。`, answer: `${openAnswer ? '示例（其他符合此义的正确表达也可）：' : ''}${form.value}${entry.pitfalls.length ? `。提示：${entry.pitfalls[0]}` : ''}` }
       : { question: pattern ? `用自己的话解释 ${pattern.pattern} 的用法，并造一个句子。` : `写出 ${entry.lemma} 的相关词族及词性，说明它们之间的联系。`,

@@ -46,8 +46,8 @@ function collect(item, word, state) {
   if (word.textbookSenses) {
     for (const sense of word.textbookSenses) entry.textbook.push({ ...sense, form: word.textbookForm || word.text });
   }
-  // Keep earlier authored hints available, but never present them as common or printed senses.
-  entry.hints.push(word.meaning);
+  // A verified occurrence supersedes its authored hint; other unverified units remain explicit.
+  if (!word.textbookSenses?.length) entry.hints.push(word.meaning);
   if (word.textbookForm) entry.forms.push(word.textbookForm);
   // Foundations use canonical aliases (e.g. colour/color); keep every existing common sense.
   for (const alias of item.aliases || []) if (foundation[alias]) entry.common.push(foundation[alias]);
@@ -69,7 +69,13 @@ function finish(items, state) {
     const blocks = [];
     if (common) blocks.push(`常用义：\n${common}`);
     if (textbook.length) blocks.push(`教材用法：\n${textbook.join('\n')}`);
-    const hints = unique(entry.hints).filter(hint => ![common, ...textbook].some(text => text.includes(hint)));
+    const knownMeanings = new Set([
+      ...senseRows(common).map(row => row.meaning),
+      ...common.split('\n').filter(line => !senseRows(line).length).flatMap(line => line.split('；')),
+      ...entry.textbook.flatMap(sense => sense.meaning.split('；'))
+    ].map(compact));
+    const hints = unique(entry.hints.flatMap(hint => hint.split('；')))
+      .filter(hint => !knownMeanings.has(compact(hint)));
     if (hints.length) blocks.push(`单元学习提示（自编，原页义项待核实）：\n${hints.join('；')}`);
     if (entry.forms.length && !textbook.length) blocks.push(`教材写法：${unique(entry.forms).join('；')}`);
     item.detail = [item.title, ...blocks].join('\n\n');

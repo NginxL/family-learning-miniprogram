@@ -53,7 +53,8 @@ test('199 ninth-grade upper-volume words have original page evidence; 159 audio 
   for (const book of [a, b]) for (const u of book.units) for (const w of u.words) {
     const item = learning.searchCatalog({ bookId: book.id, unitId: u.id }).find(i => i.kind === 'word' && i.aliases.includes(w.text));
     assert.ok(item, `${book.id}/${u.id}/${w.text}`);
-    assert.ok(item.detail.includes(w.meaning.split('；')[0]));
+    const meanings = w.textbookSenses?.length ? w.textbookSenses.map(sense => sense.meaning) : [w.meaning];
+    for (const sense of meanings.flatMap(meaning => meaning.split('；'))) assert.ok(item.detail.includes(sense), `${book.id}/${u.id}/${w.text}`);
     const mapping = item.gradeMappings.find(m => m.bookId === book.id && m.unitId === u.id);
     if (book === a) {
       assert.ok([132,133,134,135,136].includes(w.vocabularyPrintPage));

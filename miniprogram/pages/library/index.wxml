@@ -56,6 +56,13 @@
   </block>
   <block wx:else>
     <view class="card"><view class="rule-title">内容覆盖</view><view class="body">{{resources.coverage}}</view><view class="muted">国家底库：古诗文 75 + 60 篇 / 组；英语 1600 个主词条，其中 505 个二级带星词，另有 77 项另列表。教材补充、原创练习与底库分别计数。核对日期 {{resources.checkedAt}}。</view></view>
+    <view class="card" wx:if="{{resources.curriculum.editionTransition}}">
+      <view class="rule-title">{{resources.curriculum.editionTransition.title}}</view>
+      <view class="body">{{resources.curriculum.editionTransition.summary}}</view>
+      <view class="muted">{{resources.curriculum.editionTransition.boundary}}</view>
+      <view class="muted plan-help">{{resources.curriculum.editionTransition.sourceTitle}} · PDF第{{resources.curriculum.editionTransition.sourcePdfPage}}页 · 核验于{{resources.curriculum.editionTransition.checkedAt}}</view>
+      <button class="quiet" data-url="{{resources.curriculum.editionTransition.sourceUrl}}" bindtap="copySource">复制换版依据链接</button>
+    </view>
     <view class="section">上海五四学制 · 逐册覆盖</view>
     <view class="muted">{{resources.curriculum.target}}</view>
     <picker range="{{curriculumGradeLabels}}" value="{{curriculumGradeIndex}}" bindchange="changeCurriculumGrade"><view class="picker">{{curriculumGradeLabels[curriculumGradeIndex]}} ▾</view></picker>
