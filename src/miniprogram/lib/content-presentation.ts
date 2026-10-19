@@ -33,6 +33,7 @@ export function withContentSources<T extends ContentInput>(item: T) {
       verificationLabel: mapping.sourceKind === 'public_sample' ? '第三方样本 · 官方原页及册次待核实'
         : mapping.sourceKind === 'official_audio' ? '官方配套音频 · 纸本原页待核实' : '官方教材来源' })),
     sourceReferenceUrl: knowledge?.referenceUrl || '', sourceTextUrl: knowledge?.textSourceUrl || '',
+    recitationSources: knowledge?.recitationRequirements || [],
     recitationSummary: (knowledge?.recitationRequirements || []).map(entry => {
       const mapping = knowledge?.gradeMappings?.find(mapping => mapping.bookId === entry.bookId);
       const label = mapping ? `${learning.gradeLabels[mapping.grade]}${mapping.semester}${mapping.editionStatus === 'historical_reference' ? '（旧版参考）' : ''}：` : '';

@@ -72,6 +72,7 @@ function withContentSources(item) {
             verificationLabel: mapping.sourceKind === 'public_sample' ? '第三方样本 · 官方原页及册次待核实'
                 : mapping.sourceKind === 'official_audio' ? '官方配套音频 · 纸本原页待核实' : '官方教材来源' })),
         sourceReferenceUrl: (knowledge === null || knowledge === void 0 ? void 0 : knowledge.referenceUrl) || '', sourceTextUrl: (knowledge === null || knowledge === void 0 ? void 0 : knowledge.textSourceUrl) || '',
+        recitationSources: (knowledge === null || knowledge === void 0 ? void 0 : knowledge.recitationRequirements) || [],
         recitationSummary: ((knowledge === null || knowledge === void 0 ? void 0 : knowledge.recitationRequirements) || []).map(entry => {
             var _a;
             const mapping = (_a = knowledge === null || knowledge === void 0 ? void 0 : knowledge.gradeMappings) === null || _a === void 0 ? void 0 : _a.find(mapping => mapping.bookId === entry.bookId);

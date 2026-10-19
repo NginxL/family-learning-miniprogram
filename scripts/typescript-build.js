@@ -6,6 +6,7 @@ const { execFileSync } = require('node:child_process');
 const root = path.resolve(__dirname, '..');
 const { knowledge, resourcesFor } = require('./knowledge');
 const lowerPrimary = require('./lower-primary');
+const recitationPages = require('../data/catalogs/chinese-recitation-page-evidence.json').pages;
 const { dataModule } = require('./data-module');
 
 // Build and check share one map; checked-in JS is never a second source of truth.
@@ -15,7 +16,7 @@ function artifacts() {
     execFileSync(process.execPath, [require.resolve('typescript/bin/tsc'), '-p', path.join(root, 'tsconfig.build.json'), '--outDir', output, '--pretty', 'false'], { cwd: root, stdio: 'pipe' });
     const { assertKnowledge } = require(path.join(output, 'shared/knowledge-validation.js'));
     const items = knowledge();
-    assertKnowledge(items);
+    assertKnowledge(items, recitationPages);
     // Count the final catalogue, including legacy starter entries, using the same compiled code as clients.
     fs.writeFileSync(path.join(output, 'shared/knowledge-data.json'), JSON.stringify(items));
     const resources = resourcesFor(require(path.join(output, 'shared/catalog.js')));

@@ -10,9 +10,23 @@ const strings = (value: unknown): value is string[] => Array.isArray(value) && v
 const kinds = ['poetry', 'word', 'sentence', 'english-reading', 'reading', 'math', 'other'];
 const scopes = ['starter', 'foundation', 'moe-all', 'tables', 'shanghai54', 'shanghai-exam', 'all'];
 
+interface RecitationPageEvidence {
+  bookId: string;
+  contentIds: readonly string[];
+  sourceUrl: string;
+  sourcePdfPage: number;
+  sourcePrintPage: number;
+  sha256: string;
+  requirementQuote?: string;
+  sourceKind?: string;
+  schoolSystem?: string;
+  grade?: number;
+  semester?: string;
+}
+
 // JSON has no static types. Check structure before declaring the generated module typed.
 // Curriculum evidence still needs independent factual verification.
-export function assertKnowledge(value: unknown): asserts value is KnowledgeItem[] {
+export function assertKnowledge(value: unknown, recitationPages: readonly RecitationPageEvidence[] = []): asserts value is KnowledgeItem[] {
   requireField(Array.isArray(value), 'root must be an array');
   const ids = new Set<string>();
   value.forEach((item: unknown, index: number) => {
@@ -93,7 +107,15 @@ export function assertKnowledge(value: unknown): asserts value is KnowledgeItem[
     if (item.learningArea) requireField((item.gradeMappings || []).every(mapping => mapping.mappingType === 'aligned_practice'), `${item.id}.learningArea mappingType`);
     for (const entry of item.recitationRequirements || []) {
       const mapping = item.gradeMappings?.find(mapping => mapping.bookId === entry.bookId);
-      requireField(mapping && mapping.sourceUrl === entry.sourceUrl, `${item.id}.recitationRequirements source`);
+      const sameSource = mapping && mapping.sourceUrl === entry.sourceUrl
+        && entry.sourcePdfPage - entry.sourcePrintPage === (mapping.sourcePdfPage || 0) - (mapping.sourcePrintPage || 0);
+      const reviewedSource = mapping && recitationPages.some(page => page.bookId === entry.bookId
+        && page.contentIds.includes(item.id) && page.sourceUrl === entry.sourceUrl
+        && page.sourcePdfPage === entry.sourcePdfPage && page.sourcePrintPage === entry.sourcePrintPage
+        && page.sourceKind === 'official_textbook' && page.schoolSystem === mapping.schoolSystem
+        && page.grade === mapping.grade && page.semester === mapping.semester
+        && !!page.requirementQuote && /^[a-f0-9]{64}$/.test(page.sha256));
+      requireField(sameSource || reviewedSource, `${item.id}.recitationRequirements source`);
       if (entry.start) requireField(item.detail.includes(entry.start) && item.detail.includes(entry.end!), `${item.id}.recitationRequirements excerpt`);
     }
   }

@@ -23,6 +23,11 @@
       <view wx:if="{{item.dictionaryReference}}" class="source-book"><view class="muted plan-help">原通用词典参考（含少用义，不作为教材单元义或中考要求）</view><view class="body">{{item.dictionaryReference}}</view></view>
       <view wx:if="{{item.dynastyNote}}" class="muted plan-help">{{item.dynastyNote}}</view>
       <view wx:if="{{item.recitationNote}}" class="muted plan-help">{{item.recitationNote}}</view>
+      <view wx:for="{{item.recitationSources}}" wx:for-item="requirement" wx:key="bookId" class="source-book muted">
+        <view>背诵要求 · {{requirement.label}}</view>
+        <view>{{requirement.evidence}}</view>
+        <button class="quiet notes-source" data-url="{{requirement.sourceUrl}}" bindtap="copyStudySource">复制背诵要求依据链接</button>
+      </view>
       <view wx:for="{{item.sourceMappings}}" wx:for-item="mapping" wx:key="displayKey" class="source-book muted">
         <view>{{gradeLabels[mapping.grade]}} {{mapping.semester}} · {{mapping.edition}}</view>
         <view>{{mapping.verificationLabel}}</view>

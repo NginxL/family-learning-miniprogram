@@ -25,6 +25,12 @@ test('build rejects malformed external catalogue data before publishing typed ru
   assert.throws(() => module.exports.artifacts(), /manualOnly must protect existing templates/);
   corrupt = (items) => { items.find(item => item.recitationRequirements).recitationRequirements[0].sourceUrl = 'https://example.com/unverified'; };
   assert.throws(() => module.exports.artifacts(), /recitationRequirements source/);
+  corrupt = (items) => { items.find(item => item.id === 'sh54-night-reading').recitationRequirements
+    .find(entry => entry.bookId === 'chinese-3a-sample').sourceUrl = 'https://basic.smartedu.cn/tchMaterial/detail?contentId=unreviewed'; };
+  assert.throws(() => module.exports.artifacts(), /recitationRequirements source/);
+  corrupt = (items) => { items.find(item => item.id === 'sh54-night-reading').recitationRequirements
+    .find(entry => entry.bookId === 'chinese-3a-sample').sourcePdfPage++; };
+  assert.throws(() => module.exports.artifacts(), /recitationRequirements source/);
   corrupt = (items) => { items.find(item => item.studyNotes).studyNotes.exercises[0].answer = ''; };
   assert.throws(() => module.exports.artifacts(), /studyNotes.exercises.answer/);
   corrupt = (items) => { items.find(item => item.studyNotes).studyNotes.sources[0].url = 'javascript:alert(1)'; };

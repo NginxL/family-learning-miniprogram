@@ -204,7 +204,7 @@
               "label": "3年级上册：背诵全文"
             }
           ],
-          "afterSha256": "b32f0c6402a003bce81644783e846eb433bfc979103e4d7edcebbbb39c27c8f0"
+          "afterSha256": "e34777da261c0849e22f3e1ed34ebdda5e3b762f7d5007a46653e4598af43808"
         }
       }
     },
@@ -354,7 +354,7 @@
               "label": "3年级上册：背诵并默写全文"
             }
           ],
-          "afterSha256": "6c3205f62e2bcabafcc0ed05b0b9c33c47b8f31d48aa25236f616202df7ddf03"
+          "afterSha256": "35720914be8dbe77056f03880719139c6c1cb8b3955534c6cabc76706ff0f741"
         }
       }
     },
@@ -396,7 +396,7 @@
               "label": "3年级上册：背诵全文"
             }
           ],
-          "afterSha256": "e8d069f9e910804c97d0e8cfe61ef06db1e5084d3027066bc12ffaf2d3753207"
+          "afterSha256": "400918bf0d2cc2b622633b9b07b468648cf1c6bf0fd36daa08f67ae354f35fe5"
         }
       }
     },
@@ -573,7 +573,7 @@
               "label": "3年级上册：背诵并默写全文"
             }
           ],
-          "afterSha256": "e981cb87ec1cbd7c9a5c55b69756c8c4f9b6735cc8643e9fdc5c256ce5d0d457"
+          "afterSha256": "581cfa41ebee118e419a4c7c27160daa79508abe4ee2cc583ca2d0222bc2f352"
         }
       }
     },
@@ -615,7 +615,7 @@
               "label": "3年级上册：背诵全文"
             }
           ],
-          "afterSha256": "14052f06b1e58a6933a0e024669046790c56bbea406b90a7e5afa4b40d69948a"
+          "afterSha256": "5f00f8b618f49c3a021b3bd28082ff247dc04fbf6e912236c858c42451a8f325"
         }
       }
     },
@@ -805,7 +805,7 @@
               "label": "3年级上册：背诵全文"
             }
           ],
-          "afterSha256": "40fd96353d82efb5bd00df07bf5834c5147fb3716b24805b7e376752e5d1b320"
+          "afterSha256": "1c385740e93b1a0628080406b5bda03f2f23fdc45b2510c4bdaac878df522dd2"
         }
       }
     },
@@ -901,7 +901,7 @@
               "label": "3年级上册：背诵全文"
             }
           ],
-          "afterSha256": "37a2f8f4178f7165df0cd9fdb6510d2f043832f9942a1f97fa9c61ed1e8b6d8c"
+          "afterSha256": "eeb68a92a723afa0d9b9266202c7d1e17f63481c995c900340437ef2723cfead"
         }
       }
     },
@@ -7714,6 +7714,56 @@
           "appearance n. 出现、外貌；disappear v. 消失"
         ]
       }
+    },
+    {
+      "id": "sh54-night-reading",
+      "kind": "poetry",
+      "title": "《夜书所见》",
+      "author": "叶绍翁",
+      "dynasty": "宋代",
+      "detail": "叶绍翁\n萧萧梧叶送寒声，江上秋风动客情。\n知有儿童挑促织，夜深篱落一灯明。",
+      "minutes": 5,
+      "source": "五四制公开教材样本核对 · 公版原作 / 节选",
+      "referenceUrl": "https://keben.app/book/0357",
+      "textSourceUrl": "https://keben.app/book/0357",
+      "note": "公版原作／节选已对照所核电子样本原页；样本封面审定2024，ISBN、印次与学校实际采用版本待确认",
+      "collections": [
+        "shanghai54"
+      ],
+      "bookIds": [
+        "chinese-3a-sample"
+      ],
+      "gradeMappings": [
+        {
+          "grade": 3,
+          "bookId": "chinese-3a-sample",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "edition": "封面标注审定2024；电子样本未载ISBN、印次",
+          "sourceUrl": "https://keben.app/book/0357",
+          "outlineDestination": "#page=20",
+          "sourcePdfPage": 20,
+          "sourcePrintPage": 15,
+          "unit": "第二单元·第4课古诗三首",
+          "unitId": "u2",
+          "mappingType": "textbook_item",
+          "sourceKind": "public_sample",
+          "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+          "status": "catalogue_verified"
+        }
+      ],
+      "recitationRequirements": [
+        {
+          "contentId": "sh54-night-reading",
+          "bookId": "chinese-3a-sample",
+          "requirement": "背诵全文",
+          "sourcePdfPage": 20,
+          "sourcePrintPage": 15,
+          "sourceUrl": "https://keben.app/book/0357",
+          "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。",
+          "label": "3年级上册：背诵全文"
+        }
+      ]
     }
   ]
 }

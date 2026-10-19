@@ -7,6 +7,7 @@ const chinese = require('../data/catalogs/chinese-foundation-system.json');
 const english = require('../data/catalogs/english-foundation-system.json');
 const reviewed = require('../data/catalogs/english-reviewed-meanings.json');
 const recitations = require('../data/catalogs/chinese-recitation-requirements.json');
+const recitationPages = require('../data/catalogs/chinese-recitation-page-evidence.json').pages;
 const { decorate } = require('../miniprogram/lib/page');
 const { pinyinFor } = require('../miniprogram/lib/pinyin');
 const { fixture } = require('./helpers');
@@ -75,8 +76,15 @@ test('recitation requirements retain precise source pages and do not expand a pa
   assert.equal(new Set(recitations.entries.map(entry => `${entry.contentId}/${entry.bookId}`)).size, 138);
   for (const entry of recitations.entries) {
     const item = learning.catalogById.get(entry.contentId), mapping = item.gradeMappings.find(m => m.bookId === entry.bookId);
-    assert.equal(entry.sourceUrl, mapping.sourceUrl);
-    assert.equal(entry.sourcePdfPage - entry.sourcePrintPage, mapping.sourcePdfPage - mapping.sourcePrintPage);
+    if (entry.sourceUrl === mapping.sourceUrl) {
+      assert.equal(entry.sourcePdfPage - entry.sourcePrintPage, mapping.sourcePdfPage - mapping.sourcePrintPage);
+    } else {
+      const page = recitationPages.find(p => p.bookId === entry.bookId && p.contentIds.includes(entry.contentId)
+        && p.sourceUrl === entry.sourceUrl && p.sourcePdfPage === entry.sourcePdfPage && p.sourcePrintPage === entry.sourcePrintPage);
+      assert.ok(page, `${entry.contentId}: independent requirement needs reviewed evidence`);
+      assert.equal(page.sourceKind, 'official_textbook'); assert.equal(page.grade, mapping.grade);
+      assert.equal(page.semester, mapping.semester); assert.equal(page.schoolSystem, mapping.schoolSystem);
+    }
     assert.ok(item.recitationRequirements.some(e => e.bookId === entry.bookId && e.requirement === entry.requirement));
   }
   const song = learning.catalogById.get('sh54-songdongyang-textbook');

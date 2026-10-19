@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-18",
-  "scope": "背诵及熟读成诵要求的原书页图像核验记录；哈希标识本地核验图像，不分发教材图片。此前低年级第三方样本来源仍待官方原页替换。",
+  "checkedAt": "2026-10-19",
+  "scope": "背诵及熟读成诵要求的页图核验记录；哈希标识本地核验图像，不分发教材图片。三上7条要求已核官方原页，篇目位置映射独立保留；其余低年级第三方样本来源仍待官方原页替换。",
   "pages": [
     {
       "bookId": "chinese-1a-sample",
@@ -72,8 +72,14 @@
       "dictatedContentIds": [
         "moe-2022-zh-1-6-045"
       ],
-      "sha256": "c73a04fb010db678bd0bc3fa01afef5f1776187fd9a38be28b0ca7c8c7bcb4f4",
-      "sourceUrl": "https://keben.app/book/0357"
+      "sha256": "3bd075d40569213526390d7ca9d6e5e04f343da2320777bb39b0e4b428045b1b",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=9185e4a3-efb4-4ec0-bfd9-1cb194c260d3&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourceKind": "official_textbook",
+      "schoolSystem": "5-4",
+      "grade": 3,
+      "semester": "上册",
+      "checkedAt": "2026-10-19",
+      "requirementQuote": "有感情地朗读课文。背诵课文。默写《山行》。"
     },
     {
       "bookId": "chinese-3a-sample",
@@ -87,8 +93,14 @@
       "dictatedContentIds": [
         "moe-2022-zh-1-6-023"
       ],
-      "sha256": "02a4860ca34a4005cda73a1756307607f8e13e7ca2185b46c238a8ed6b657f20",
-      "sourceUrl": "https://keben.app/book/0357"
+      "sha256": "dea59ab3c85b0cc2f3ce2831b25aef840583f089205a2a3a4cf5c12e924d2847",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=9185e4a3-efb4-4ec0-bfd9-1cb194c260d3&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourceKind": "official_textbook",
+      "schoolSystem": "5-4",
+      "grade": 3,
+      "semester": "上册",
+      "checkedAt": "2026-10-19",
+      "requirementQuote": "有感情地朗读课文。背诵课文。默写《望天门山》。"
     },
     {
       "bookId": "chinese-3a-sample",
@@ -98,8 +110,14 @@
         "sh54-sima-guang"
       ],
       "dictatedContentIds": [],
-      "sha256": "a054531710be0ee77df0817df1d3df2ff37eb842cacc7bf8a1c30b2881444b09",
-      "sourceUrl": "https://keben.app/book/0357"
+      "sha256": "91d59270c85fa044888f0f006eba1bbd57facd936c6c760e11cb9355c4f9ed0b",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=9185e4a3-efb4-4ec0-bfd9-1cb194c260d3&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourceKind": "official_textbook",
+      "schoolSystem": "5-4",
+      "grade": 3,
+      "semester": "上册",
+      "checkedAt": "2026-10-19",
+      "requirementQuote": "跟着老师朗读课文，注意读准字音，把握好停顿。背诵课文。"
     },
     {
       "bookId": "chinese-3b-sample",

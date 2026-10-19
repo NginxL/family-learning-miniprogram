@@ -73,23 +73,40 @@ test('above and appear show reviewed common senses while retaining original unit
   assert.equal(word('appear').studyNotes.exercises[0].answer, 'appeared');
 });
 
-test('grade-three upper recitation evidence stays explicitly provisional until official pages are reviewed', () => {
+test('grade-three official recitation evidence does not upgrade unreviewed work placements', () => {
   const entries = requirements.filter(r => r.bookId === 'chinese-3a-sample');
   assert.equal(entries.length, 7);
+  const url = 'https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=9185e4a3-efb4-4ec0-bfd9-1cb194c260d3&catalogType=tchMaterial&subCatalog=tchMaterial';
+  const expectedPages = [
+    [15, 20, ['moe-2022-zh-1-6-035', 'moe-2022-zh-1-6-045', 'sh54-night-reading'], '有感情地朗读课文。背诵课文。默写《山行》。', '3bd075d40569213526390d7ca9d6e5e04f343da2320777bb39b0e4b428045b1b'],
+    [85, 90, ['moe-2022-zh-1-6-014', 'moe-2022-zh-1-6-023', 'moe-2022-zh-1-6-054'], '有感情地朗读课文。背诵课文。默写《望天门山》。', 'dea59ab3c85b0cc2f3ce2831b25aef840583f089205a2a3a4cf5c12e924d2847'],
+    [96, 101, ['sh54-sima-guang'], '跟着老师朗读课文，注意读准字音，把握好停顿。背诵课文。', '91d59270c85fa044888f0f006eba1bbd57facd936c6c760e11cb9355c4f9ed0b']
+  ];
+  for (const [print, pdf, ids, quote, sha256] of expectedPages) {
+    const page = pages.find(p => p.bookId === 'chinese-3a-sample' && p.sourcePdfPage === pdf);
+    assert.equal(page.sourcePrintPage, print); assert.deepEqual(page.contentIds, ids);
+    assert.equal(page.sourceUrl, url); assert.equal(page.sourceKind, 'official_textbook');
+    assert.equal(page.requirementQuote, quote); assert.equal(page.sha256, sha256);
+  }
   for (const r of entries) {
-    assert.equal(r.sourceUrl, 'https://keben.app/book/0357');
-    assert.match(r.evidence, /第三方样本.*官方原页待复核/);
+    assert.equal(r.sourceUrl, url);
+    assert.match(r.evidence, /国家平台五四制三年级上册原书课后要求已核对/);
     assert.equal(r.sourcePdfPage - r.sourcePrintPage, 5);
     const item = get(r.contentId), mapping = item.gradeMappings.find(m => m.bookId === r.bookId);
+    assert.equal(mapping.sourceUrl, 'https://keben.app/book/0357');
     assert.equal(mapping.sourceKind, 'public_sample'); assert.equal(mapping.grade, 3); assert.equal(mapping.semester, '上册');
     assert.deepEqual(item.recitationRequirements.find(e => e.bookId === r.bookId), { ...r, label: `3年级上册：${r.requirement}` });
     const source = withContentSources(decorate(item));
     assert.match(source.sourceGradeLabel, /官方原页待核实/);
+    assert.equal(source.recitationSources.find(s => s.bookId === r.bookId).sourceUrl, url);
+    assert.equal(source.sourceMappings.find(s => s.bookId === r.bookId).sourceUrl, mapping.sourceUrl);
   }
   assert.deepEqual(entries.map(r => r.sourcePrintPage), [15, 15, 15, 85, 85, 85, 96]);
   assert.equal(entries.filter(r => r.requirement === '背诵并默写全文').length, 2);
   const document = fs.readFileSync('docs/背诵要求与逐篇辅助核验.md', 'utf8');
-  assert.ok(document.includes('| 3年级上册 | 11 | 7 | 第三方样本要求；官方原页待复核 |'));
+  assert.ok(document.includes('| 3年级上册 | 11 | 7 | 7条要求已核国家平台原书；篇目位置证据独立保留 |'));
+  const template = fs.readFileSync('miniprogram/templates/content-sources.wxml', 'utf8');
+  assert.ok(template.includes('data-url="{{requirement.sourceUrl}}" bindtap="copyStudySource">复制背诵要求依据链接'));
 });
 
 test('original vocabulary pages distinguish expressions and restore acronym word boundaries', () => {

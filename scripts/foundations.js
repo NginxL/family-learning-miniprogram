@@ -36,7 +36,9 @@ function augment(items) {
   for (const entry of recitations.entries) {
     const item = byId.get(entry.contentId), book = books.get(entry.bookId);
     const location = item?.gradeMappings?.find(mapping => mapping.bookId === entry.bookId);
-    if (!book || !location || entry.sourceUrl !== location.sourceUrl || entry.sourcePdfPage - entry.sourcePrintPage !== location.sourcePdfPage - location.sourcePrintPage)
+    // A requirement page may have newer official evidence than the work's placement.
+    // assertKnowledge validates that independent source against the reviewed page manifest.
+    if (!book || !location)
       throw Error(`Unmatched recitation source: ${entry.contentId}/${entry.bookId}`);
     if (entry.start && (!item.detail.includes(entry.start) || !item.detail.includes(entry.end))) throw Error(`Invalid excerpt boundary: ${entry.contentId}`);
     item.recitationRequirements = [...(item.recitationRequirements || []), { ...entry,
