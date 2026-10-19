@@ -109,6 +109,56 @@ test('grade-three official recitation evidence does not upgrade unreviewed work 
   assert.ok(template.includes('data-url="{{requirement.sourceUrl}}" bindtap="copyStudySource">复制背诵要求依据链接'));
 });
 
+test('eight early-primary requirements use official original pages without expanding dictation or placement claims', () => {
+  const expected = [
+    ['chinese-1a-sample', '7775818d-f3ac-4f53-b43d-af3918a8634a', 1, '上册', 63, 68, ['moe-2022-zh-1-6-001'], '28b663afbc21420dea45dadca7ff7d8b1af58b43ae132a2f7f2cf6075d4018ad'],
+    ['chinese-1b-sample', '7f4f199b-aab1-49b4-90e5-e36cfe975f02', 1, '下册', 39, 44, ['poem-quiet-night'], '05ee712f0fbcfa4247278e6b977d343ee65145cf55219780a932277115ed80f2'],
+    ['chinese-1b-sample', '7f4f199b-aab1-49b4-90e5-e36cfe975f02', 1, '下册', 63, 68, ['poem-pond', 'poem-small-pond'], 'f4d1ace2342b58feea6eea6d37fdc7b96ec882be8ff88954c2964161aa2bcb37'],
+    ['chinese-2a-sample', 'cd28f45f-7f29-4dfb-bd35-ba310b57bc8c', 2, '上册', 41, 46, ['poem-stork-tower', 'moe-2022-zh-1-6-019'], '51c458b34ada2e322dac9739b8c7248444b1a79134737bd300b68af9650a0d81'],
+    ['chinese-2a-sample', 'cd28f45f-7f29-4dfb-bd35-ba310b57bc8c', 2, '上册', 83, 88, ['poem-river-snow', 'moe-2022-zh-1-6-003'], 'f3982bcdf3cad4340a078b011cd7091bef06b184680b38adbd8a364e2e60dd9b']
+  ];
+  const selected = requirements.filter(r => expected.some(([book]) => r.bookId === book));
+  assert.equal(selected.length, 8);
+  for (const [book, contentId, grade, semester, print, pdf, ids, sha256] of expected) {
+    const url = `https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=${contentId}&catalogType=tchMaterial&subCatalog=tchMaterial`;
+    const page = pages.find(p => p.bookId === book && p.sourcePdfPage === pdf);
+    assert.equal(page.sourcePrintPage, print); assert.deepEqual(page.contentIds, ids);
+    assert.equal(page.sha256, sha256); assert.equal(page.sourceUrl, url);
+    assert.equal(page.sourceKind, 'official_textbook'); assert.equal(page.schoolSystem, '5-4');
+    assert.equal(page.grade, grade); assert.equal(page.semester, semester);
+    assert.equal(page.requirementQuote, '朗读课文。背诵课文。'); assert.deepEqual(page.dictatedContentIds, []);
+    for (const id of ids) {
+      const r = selected.find(r => r.bookId === book && r.contentId === id);
+      assert.equal(r.sourceUrl, url); assert.equal(r.sourcePrintPage, print); assert.equal(r.sourcePdfPage, pdf);
+      assert.equal(r.requirement, '背诵全文'); assert.equal(r.start, undefined); assert.equal(r.end, undefined);
+      assert.ok(r.evidence.includes('原文：“朗读课文。背诵课文。”')); assert.match(r.evidence, /该页未见明确默写要求/);
+      const view = withContentSources(decorate(get(id))), mapping = view.sourceMappings.find(m => m.bookId === book);
+      assert.equal(new URL(mapping.sourceUrl).hostname, 'keben.app'); assert.equal(mapping.sourceKind, 'public_sample');
+      assert.match(mapping.verificationLabel, /第三方样本/);
+      assert.equal(view.recitationSources.find(s => s.bookId === book).sourceUrl, url);
+    }
+  }
+});
+
+test('all recitation views share Chinese grade labels without changing stored labels, ranges or legacy status', () => {
+  let count = 0;
+  for (const item of learning.catalog.filter(item => item.recitationRequirements?.length)) {
+    const before = JSON.stringify(item), view = withContentSources(decorate(item));
+    for (const entry of item.recitationRequirements) {
+      const mapping = item.gradeMappings.find(m => m.bookId === entry.bookId);
+      const expected = `${learning.gradeLabels[mapping.grade]}${mapping.semester}${mapping.editionStatus === 'historical_reference' ? '（旧版参考）' : ''}：${entry.requirement}`;
+      assert.equal(view.recitationSources.find(s => s.bookId === entry.bookId).label, expected);
+      assert.ok(view.recitationNote.includes(expected)); assert.ok(view.recitationSummary.includes(expected));
+      assert.match(entry.label, /^[1-9]年级/);
+      if (entry.start) assert.ok(view.recitationSummary.includes(`（${entry.start}—${entry.end}）`));
+      count++;
+    }
+    assert.doesNotMatch(view.recitationNote, /[1-9]年级/); assert.doesNotMatch(view.recitationSummary, /[1-9]年级/);
+    assert.equal(JSON.stringify(item), before);
+  }
+  assert.equal(count, 138);
+});
+
 test('original vocabulary pages distinguish expressions and restore acronym word boundaries', () => {
   for (const [book, head, page, expected] of [
     ['english-3a-2026',"It's great to see you again.",89,null],['english-4a-2026','See you soon',87,null],

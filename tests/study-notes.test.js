@@ -51,7 +51,7 @@ test('back-recitation evidence retains book-specific ranges and does not transfe
   assert.match(decorate(get('sh54-tiechu')).recitationNote, /范围待核实/);
   const title = 'moe-2022-zh-7-9-036';
   assert.match(decorate(get(title)).recitationNote, /旧版参考/);
-  assert.match(decorate(get(title)).recitationNote, /9年级上册：熟读成诵/);
+  assert.match(decorate(get(title)).recitationNote, /九年级上册：熟读成诵/);
   const base = new Set(recitations.entries.slice(0, 58).map(e => `${e.contentId}/${e.bookId}`));
   assert.equal(recitations.entries.filter(e => !base.has(`${e.contentId}/${e.bookId}`)).length, 80);
   assert.ok(recitations.entries.filter(e => e.bookId === 'chinese-4b-sample').every(e => get(e.contentId).recitationRequirements.some(r => /旧版参考/.test(r.label))));

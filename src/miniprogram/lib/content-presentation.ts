@@ -1,5 +1,13 @@
 import * as learning from './learning/learning';
-import type { ContentInput, KnowledgeItem } from '../../shared/models';
+import type { ContentInput, GradeMapping, KnowledgeItem } from '../../shared/models';
+
+type RecitationRequirement = NonNullable<KnowledgeItem['recitationRequirements']>[number];
+
+// Preserve stored labels while using the same grade names in every learning view.
+export function recitationLabel(entry: RecitationRequirement, mappings: readonly GradeMapping[] = []): string {
+  const mapping = mappings.find(mapping => mapping.bookId === entry.bookId);
+  return mapping ? `${learning.gradeLabels[mapping.grade]}${mapping.semester}${mapping.editionStatus === 'historical_reference' ? '（旧版参考）' : ''}：${entry.requirement}` : entry.label;
+}
 
 // Concise learning labels; the original verification wording remains in the source disclosure.
 export function learningGradeLabel(item: KnowledgeItem): string {
@@ -16,6 +24,8 @@ export function withContentSources<T extends ContentInput>(item: T) {
   const vocabularyRevision = knowledge?.vocabularyRevision;
   const contentRevision = knowledge?.contentRevision;
   const hasOlderText = (!!revision || !!vocabularyRevision || !!contentRevision) && typeof item.detail === 'string' && item.detail !== knowledge?.detail;
+  const recitationSources = (knowledge?.recitationRequirements || []).map(entry => ({ ...entry,
+    label: recitationLabel(entry, knowledge?.gradeMappings) }));
   return { ...item,
     textRevision: revision,
     vocabularyRevision,
@@ -33,11 +43,7 @@ export function withContentSources<T extends ContentInput>(item: T) {
       verificationLabel: mapping.sourceKind === 'public_sample' ? '第三方样本 · 官方原页及册次待核实'
         : mapping.sourceKind === 'official_audio' ? '官方配套音频 · 纸本原页待核实' : '官方教材来源' })),
     sourceReferenceUrl: knowledge?.referenceUrl || '', sourceTextUrl: knowledge?.textSourceUrl || '',
-    recitationSources: knowledge?.recitationRequirements || [],
-    recitationSummary: (knowledge?.recitationRequirements || []).map(entry => {
-      const mapping = knowledge?.gradeMappings?.find(mapping => mapping.bookId === entry.bookId);
-      const label = mapping ? `${learning.gradeLabels[mapping.grade]}${mapping.semester}${mapping.editionStatus === 'historical_reference' ? '（旧版参考）' : ''}：` : '';
-      return `${mapping ? label + entry.requirement : entry.label}${entry.start ? `（${entry.start}—${entry.end}）` : ''}`;
-    }).join('\n')
+    recitationSources,
+    recitationSummary: recitationSources.map(entry => `${entry.label}${entry.start ? `（${entry.start}—${entry.end}）` : ''}`).join('\n')
   };
 }

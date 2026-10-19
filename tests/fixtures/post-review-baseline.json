@@ -28,6 +28,21 @@
             }
           ],
           "afterSha256": "7130c9280d3b0023132a8da1490325bf8f7ab21831ad271d595381c551df7540"
+        },
+        "recitationRequirements": {
+          "before": [
+            {
+              "contentId": "moe-2022-zh-1-6-001",
+              "bookId": "chinese-1a-sample",
+              "requirement": "背诵全文",
+              "sourcePdfPage": 68,
+              "sourcePrintPage": 63,
+              "sourceUrl": "https://keben.app/book/0358",
+              "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。",
+              "label": "1年级上册：背诵全文"
+            }
+          ],
+          "afterSha256": "c4169b371e501a8b2678acb22dda3fee57c5a5b508081f25b1141b856d40de2b"
         }
       }
     },
@@ -55,6 +70,21 @@
             }
           ],
           "afterSha256": "236984232fc52788ded32491184ea0a679abccc0738bac741751c846f5d690b7"
+        },
+        "recitationRequirements": {
+          "before": [
+            {
+              "contentId": "moe-2022-zh-1-6-003",
+              "bookId": "chinese-2a-sample",
+              "requirement": "背诵全文",
+              "sourcePdfPage": 88,
+              "sourcePrintPage": 83,
+              "sourceUrl": "https://keben.app/book/0352",
+              "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。",
+              "label": "2年级上册：背诵全文"
+            }
+          ],
+          "afterSha256": "e014cef0144692ee3d667b3f516b0d38e04f7e9bb8d2d02e09a2565722984110"
         }
       }
     },
@@ -136,6 +166,21 @@
             }
           ],
           "afterSha256": "9d3b9ea2af6128f25e5e5ab3c79807eef0bc0bc69346f6984c1d41e97169b995"
+        },
+        "recitationRequirements": {
+          "before": [
+            {
+              "contentId": "poem-stork-tower",
+              "bookId": "chinese-2a-sample",
+              "requirement": "背诵全文",
+              "sourcePdfPage": 46,
+              "sourcePrintPage": 41,
+              "sourceUrl": "https://keben.app/book/0352",
+              "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。",
+              "label": "2年级上册：背诵全文"
+            }
+          ],
+          "afterSha256": "8334c494342b5f61dce6db0976bf76bf45510d65e338be38295d73801b373f57"
         }
       }
     },
@@ -232,6 +277,21 @@
             }
           ],
           "afterSha256": "8eb9c22c1642b3e1967b7f03bc52aaaaecf9cb5b2b9bbc9106f22b562b00e4f4"
+        },
+        "recitationRequirements": {
+          "before": [
+            {
+              "contentId": "poem-quiet-night",
+              "bookId": "chinese-1b-sample",
+              "requirement": "背诵全文",
+              "sourcePdfPage": 44,
+              "sourcePrintPage": 39,
+              "sourceUrl": "https://keben.app/book/0359",
+              "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。",
+              "label": "1年级下册：背诵全文"
+            }
+          ],
+          "afterSha256": "1b9597d7907f978710bcdb27661283c95af9e1f97461333b44aa199c005984be"
         }
       }
     },
@@ -259,6 +319,21 @@
             }
           ],
           "afterSha256": "a06ffead0f39b3a268a17a0e70c9878b456f7d6793ab66cb7f5664477d43d765"
+        },
+        "recitationRequirements": {
+          "before": [
+            {
+              "contentId": "moe-2022-zh-1-6-019",
+              "bookId": "chinese-2a-sample",
+              "requirement": "背诵全文",
+              "sourcePdfPage": 46,
+              "sourcePrintPage": 41,
+              "sourceUrl": "https://keben.app/book/0352",
+              "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。",
+              "label": "2年级上册：背诵全文"
+            }
+          ],
+          "afterSha256": "64479d1814bc65ac6fe4c5ae1bbffa9b6fbde9adc8f05ae6e6c88aaa97559e60"
         }
       }
     },
@@ -424,6 +499,21 @@
             }
           ],
           "afterSha256": "215c727ebb796aceffae50d005e73d25893c4b2585fa15ee1540fe34b0afd0f1"
+        },
+        "recitationRequirements": {
+          "before": [
+            {
+              "contentId": "poem-pond",
+              "bookId": "chinese-1b-sample",
+              "requirement": "背诵全文",
+              "sourcePdfPage": 68,
+              "sourcePrintPage": 63,
+              "sourceUrl": "https://keben.app/book/0359",
+              "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。",
+              "label": "1年级下册：背诵全文"
+            }
+          ],
+          "afterSha256": "b0f2f705af9c556478ebbb2844e4d894c49080d88c8d1e367957b651ea67fbc3"
         }
       }
     },
@@ -505,6 +595,21 @@
             }
           ],
           "afterSha256": "ba5b5a99743b9f06ba1f5d5aacb9af4864bd3c0b91ca26b33235f47512bb9c03"
+        },
+        "recitationRequirements": {
+          "before": [
+            {
+              "contentId": "poem-river-snow",
+              "bookId": "chinese-2a-sample",
+              "requirement": "背诵全文",
+              "sourcePdfPage": 88,
+              "sourcePrintPage": 83,
+              "sourceUrl": "https://keben.app/book/0352",
+              "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。",
+              "label": "2年级上册：背诵全文"
+            }
+          ],
+          "afterSha256": "cfadecfa13488cffeb910b704c15b067e377e628b968615f59fc5fff47f7459d"
         }
       }
     },
@@ -643,6 +748,21 @@
             }
           ],
           "afterSha256": "b9ec89af22f900974cad6968ae9243cddc52c7d9b1a7feeaf6b38117fa6d6ba9"
+        },
+        "recitationRequirements": {
+          "before": [
+            {
+              "contentId": "poem-small-pond",
+              "bookId": "chinese-1b-sample",
+              "requirement": "背诵全文",
+              "sourcePdfPage": 68,
+              "sourcePrintPage": 63,
+              "sourceUrl": "https://keben.app/book/0359",
+              "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。",
+              "label": "1年级下册：背诵全文"
+            }
+          ],
+          "afterSha256": "109e40c05b8e03116988d4225020e1d14e7ca045fbfcdef84737a14123639a87"
         }
       }
     },
@@ -7762,6 +7882,59 @@
           "sourceUrl": "https://keben.app/book/0357",
           "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。",
           "label": "3年级上册：背诵全文"
+        }
+      ]
+    },
+    {
+      "id": "poem-quiet-night",
+      "kind": "poetry",
+      "title": "《静夜思》",
+      "author": "李白",
+      "dynasty": "唐代",
+      "detail": "李白\n床前明月光，疑是地上霜。\n举头望明月，低头思故乡。",
+      "minutes": 5,
+      "source": "国家语文课标 2022 · 1-6 年级推荐 · PDF 第 66 页",
+      "referenceUrl": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582344386456.pdf",
+      "textSourceUrl": "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json",
+      "note": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+      "collections": [
+        "moe-all",
+        "foundation",
+        "shanghai54"
+      ],
+      "bookIds": [
+        "chinese-1b-sample"
+      ],
+      "curriculumId": "moe-2022-zh-1-6-017",
+      "gradeMappings": [
+        {
+          "grade": 1,
+          "bookId": "chinese-1b-sample",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "edition": "封面标注审定2024；公开样本未载ISBN及印次",
+          "sourceUrl": "https://keben.app/book/0359",
+          "outlineDestination": "#page=44",
+          "sourcePdfPage": 44,
+          "sourcePrintPage": 39,
+          "unit": "第4单元",
+          "unitId": "u4",
+          "mappingType": "textbook_item",
+          "sourceKind": "public_sample",
+          "evidence": "五四制公开教材样本篇名、年级与位置已核对；学校使用版次待确认",
+          "status": "catalogue_verified"
+        }
+      ],
+      "recitationRequirements": [
+        {
+          "contentId": "poem-quiet-night",
+          "bookId": "chinese-1b-sample",
+          "requirement": "背诵全文",
+          "sourcePdfPage": 44,
+          "sourcePrintPage": 39,
+          "sourceUrl": "https://keben.app/book/0359",
+          "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。",
+          "label": "1年级下册：背诵全文"
         }
       ]
     }

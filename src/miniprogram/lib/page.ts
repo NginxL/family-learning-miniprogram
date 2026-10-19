@@ -6,6 +6,7 @@ import { errorDetails } from './errors';
 import * as learning from './learning/learning';
 import { withCurrentAge } from './learning/child-profile';
 import { studyNotesView } from './study-notes-view';
+import { recitationLabel } from './content-presentation';
 const modeLabels = { new: '全新', review: '复习', manual: '家长安排' };
 const decorate = <T extends Decoratable>(item: T): Decorated<T> => {
   const knowledge = learning.catalogById.get(learning.contentId(item));
@@ -14,7 +15,7 @@ const decorate = <T extends Decoratable>(item: T): Decorated<T> => {
   const pendingBooks = [...new Map((poetry?.gradeMappings || []).filter(mapping => !requirements.some(entry => entry.bookId === mapping.bookId))
     .map(mapping => [mapping.bookId, `${learning.gradeLabels[mapping.grade]}${mapping.semester}${mapping.editionStatus === 'historical_reference' ? '（旧版参考）' : ''}`])).values()];
   const recitationNote = requirements.length ? [
-    ...requirements.map(entry => `${entry.label}${entry.start ? `（${entry.start}—${entry.end}）` : ''}；原书第${entry.sourcePrintPage}页 / 电子第${entry.sourcePdfPage}页。`),
+    ...requirements.map(entry => `${recitationLabel(entry, poetry?.gradeMappings)}${entry.start ? `（${entry.start}—${entry.end}）` : ''}；原书第${entry.sourcePrintPage}页 / 电子第${entry.sourcePdfPage}页。`),
     ...(pendingBooks.length ? [`${pendingBooks.join('、')}：指定背诵、默写范围待核实。`] : [])
   ].join('\n') : '';
   return { ...item, studyNotes: knowledge?.studyNotes, ...(poetry ? { poetryByline: `${poetry.dynasty || '朝代待考'} · ${poetry.author || '作者待考'}`, dynastyNote: poetry.dynastyNote || '',

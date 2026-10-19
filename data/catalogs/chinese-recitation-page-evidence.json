@@ -1,6 +1,6 @@
 {
   "checkedAt": "2026-10-19",
-  "scope": "背诵及熟读成诵要求的页图核验记录；哈希标识本地核验图像，不分发教材图片。三上7条要求已核官方原页，篇目位置映射独立保留；其余低年级第三方样本来源仍待官方原页替换。",
+  "scope": "背诵及熟读成诵要求的页图核验记录；哈希标识本地核验图像，不分发教材图片。一上、一下、二上及三上15条要求已核官方原页；篇目位置映射独立保留，不因要求页核验而整体升级。",
   "pages": [
     {
       "bookId": "chinese-1a-sample",
@@ -10,8 +10,14 @@
         "moe-2022-zh-1-6-001"
       ],
       "dictatedContentIds": [],
-      "sha256": "0ef5874908b84944aa603be6e7566b91772ec05650f73b48ee268274f7550519",
-      "sourceUrl": "https://keben.app/book/0358"
+      "sha256": "28b663afbc21420dea45dadca7ff7d8b1af58b43ae132a2f7f2cf6075d4018ad",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=7775818d-f3ac-4f53-b43d-af3918a8634a&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourceKind": "official_textbook",
+      "schoolSystem": "5-4",
+      "grade": 1,
+      "semester": "上册",
+      "checkedAt": "2026-10-19",
+      "requirementQuote": "朗读课文。背诵课文。"
     },
     {
       "bookId": "chinese-1b-sample",
@@ -21,8 +27,14 @@
         "poem-quiet-night"
       ],
       "dictatedContentIds": [],
-      "sha256": "a64efae4f3ec429e63c010b36dd7f52a0070502e3e50ee51d309a33ec3369574",
-      "sourceUrl": "https://keben.app/book/0359"
+      "sha256": "05ee712f0fbcfa4247278e6b977d343ee65145cf55219780a932277115ed80f2",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=7f4f199b-aab1-49b4-90e5-e36cfe975f02&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourceKind": "official_textbook",
+      "schoolSystem": "5-4",
+      "grade": 1,
+      "semester": "下册",
+      "checkedAt": "2026-10-19",
+      "requirementQuote": "朗读课文。背诵课文。"
     },
     {
       "bookId": "chinese-1b-sample",
@@ -33,8 +45,14 @@
         "poem-small-pond"
       ],
       "dictatedContentIds": [],
-      "sha256": "1cb043aba60d5c4803427ca1220c141e0fed948816740ea5f308d7c3686842ff",
-      "sourceUrl": "https://keben.app/book/0359"
+      "sha256": "f4d1ace2342b58feea6eea6d37fdc7b96ec882be8ff88954c2964161aa2bcb37",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=7f4f199b-aab1-49b4-90e5-e36cfe975f02&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourceKind": "official_textbook",
+      "schoolSystem": "5-4",
+      "grade": 1,
+      "semester": "下册",
+      "checkedAt": "2026-10-19",
+      "requirementQuote": "朗读课文。背诵课文。"
     },
     {
       "bookId": "chinese-2a-sample",
@@ -45,8 +63,14 @@
         "moe-2022-zh-1-6-019"
       ],
       "dictatedContentIds": [],
-      "sha256": "c26141d7378111f87960be4b518f42db336f2cc0fbbdff0e52e44498035da07c",
-      "sourceUrl": "https://keben.app/book/0352"
+      "sha256": "51c458b34ada2e322dac9739b8c7248444b1a79134737bd300b68af9650a0d81",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=cd28f45f-7f29-4dfb-bd35-ba310b57bc8c&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourceKind": "official_textbook",
+      "schoolSystem": "5-4",
+      "grade": 2,
+      "semester": "上册",
+      "checkedAt": "2026-10-19",
+      "requirementQuote": "朗读课文。背诵课文。"
     },
     {
       "bookId": "chinese-2a-sample",
@@ -57,8 +81,14 @@
         "moe-2022-zh-1-6-003"
       ],
       "dictatedContentIds": [],
-      "sha256": "ddc93787a598f028e3f11ae808d79f401e5d56f6c11a2d695abb0dd3a6836eeb",
-      "sourceUrl": "https://keben.app/book/0352"
+      "sha256": "f3982bcdf3cad4340a078b011cd7091bef06b184680b38adbd8a364e2e60dd9b",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=cd28f45f-7f29-4dfb-bd35-ba310b57bc8c&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourceKind": "official_textbook",
+      "schoolSystem": "5-4",
+      "grade": 2,
+      "semester": "上册",
+      "checkedAt": "2026-10-19",
+      "requirementQuote": "朗读课文。背诵课文。"
     },
     {
       "bookId": "chinese-3a-sample",

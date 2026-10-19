@@ -34,9 +34,15 @@ var __importStar = (this && this.__importStar) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.recitationLabel = recitationLabel;
 exports.learningGradeLabel = learningGradeLabel;
 exports.withContentSources = withContentSources;
 const learning = __importStar(require("./learning/learning"));
+// Preserve stored labels while using the same grade names in every learning view.
+function recitationLabel(entry, mappings = []) {
+    const mapping = mappings.find(mapping => mapping.bookId === entry.bookId);
+    return mapping ? `${learning.gradeLabels[mapping.grade]}${mapping.semester}${mapping.editionStatus === 'historical_reference' ? '（旧版参考）' : ''}：${entry.requirement}` : entry.label;
+}
 // Concise learning labels; the original verification wording remains in the source disclosure.
 function learningGradeLabel(item) {
     var _a;
@@ -55,6 +61,8 @@ function withContentSources(item) {
     const vocabularyRevision = knowledge === null || knowledge === void 0 ? void 0 : knowledge.vocabularyRevision;
     const contentRevision = knowledge === null || knowledge === void 0 ? void 0 : knowledge.contentRevision;
     const hasOlderText = (!!revision || !!vocabularyRevision || !!contentRevision) && typeof item.detail === 'string' && item.detail !== (knowledge === null || knowledge === void 0 ? void 0 : knowledge.detail);
+    const recitationSources = ((knowledge === null || knowledge === void 0 ? void 0 : knowledge.recitationRequirements) || []).map(entry => ({ ...entry,
+        label: recitationLabel(entry, knowledge === null || knowledge === void 0 ? void 0 : knowledge.gradeMappings) }));
     return { ...item,
         textRevision: revision,
         vocabularyRevision,
@@ -72,12 +80,6 @@ function withContentSources(item) {
             verificationLabel: mapping.sourceKind === 'public_sample' ? '第三方样本 · 官方原页及册次待核实'
                 : mapping.sourceKind === 'official_audio' ? '官方配套音频 · 纸本原页待核实' : '官方教材来源' })),
         sourceReferenceUrl: (knowledge === null || knowledge === void 0 ? void 0 : knowledge.referenceUrl) || '', sourceTextUrl: (knowledge === null || knowledge === void 0 ? void 0 : knowledge.textSourceUrl) || '',
-        recitationSources: (knowledge === null || knowledge === void 0 ? void 0 : knowledge.recitationRequirements) || [],
-        recitationSummary: ((knowledge === null || knowledge === void 0 ? void 0 : knowledge.recitationRequirements) || []).map(entry => {
-            var _a;
-            const mapping = (_a = knowledge === null || knowledge === void 0 ? void 0 : knowledge.gradeMappings) === null || _a === void 0 ? void 0 : _a.find(mapping => mapping.bookId === entry.bookId);
-            const label = mapping ? `${learning.gradeLabels[mapping.grade]}${mapping.semester}${mapping.editionStatus === 'historical_reference' ? '（旧版参考）' : ''}：` : '';
-            return `${mapping ? label + entry.requirement : entry.label}${entry.start ? `（${entry.start}—${entry.end}）` : ''}`;
-        }).join('\n')
-    };
+        recitationSources,
+        recitationSummary: recitationSources.map(entry => `${entry.label}${entry.start ? `（${entry.start}—${entry.end}）` : ''}`).join('\n') };
 }

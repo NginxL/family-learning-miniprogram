@@ -41,6 +41,7 @@ const errors_1 = require("./errors");
 const learning = __importStar(require("./learning/learning"));
 const child_profile_1 = require("./learning/child-profile");
 const study_notes_view_1 = require("./study-notes-view");
+const content_presentation_1 = require("./content-presentation");
 const modeLabels = { new: '全新', review: '复习', manual: '家长安排' };
 const decorate = (item) => {
     var _a, _b, _c;
@@ -50,7 +51,7 @@ const decorate = (item) => {
     const pendingBooks = [...new Map(((poetry === null || poetry === void 0 ? void 0 : poetry.gradeMappings) || []).filter(mapping => !requirements.some(entry => entry.bookId === mapping.bookId))
             .map(mapping => [mapping.bookId, `${learning.gradeLabels[mapping.grade]}${mapping.semester}${mapping.editionStatus === 'historical_reference' ? '（旧版参考）' : ''}`])).values()];
     const recitationNote = requirements.length ? [
-        ...requirements.map(entry => `${entry.label}${entry.start ? `（${entry.start}—${entry.end}）` : ''}；原书第${entry.sourcePrintPage}页 / 电子第${entry.sourcePdfPage}页。`),
+        ...requirements.map(entry => `${(0, content_presentation_1.recitationLabel)(entry, poetry === null || poetry === void 0 ? void 0 : poetry.gradeMappings)}${entry.start ? `（${entry.start}—${entry.end}）` : ''}；原书第${entry.sourcePrintPage}页 / 电子第${entry.sourcePdfPage}页。`),
         ...(pendingBooks.length ? [`${pendingBooks.join('、')}：指定背诵、默写范围待核实。`] : [])
     ].join('\n') : '';
     return { ...item, studyNotes: knowledge === null || knowledge === void 0 ? void 0 : knowledge.studyNotes, ...(poetry ? { poetryByline: `${poetry.dynasty || '朝代待考'} · ${poetry.author || '作者待考'}`, dynastyNote: poetry.dynastyNote || '',
