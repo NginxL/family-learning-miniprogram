@@ -13,7 +13,7 @@ function page(name, engine) {
 }
 
 test('reading aids exactly retain source punctuation and line breaks, and cover every verified first/second-grade poem', () => {
-  assert.equal(Object.keys(pinyinEntries).length, 21);
+  assert.equal(Object.keys(pinyinEntries).length, 22);
   assert.equal(Object.keys(lowerPinyin).length, 241);
   for (const [id, entry] of Object.entries({ ...pinyinEntries, ...lowerPinyin })) {
     const item = learning.catalogById.get(id); assert.ok(item, id);

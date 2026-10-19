@@ -1,3 +1,4 @@
+const { isPriorContent } = require('./completion-baseline-helper');
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
@@ -17,10 +18,10 @@ const word = head => learning.catalog.find(item => item.kind === 'word' && [item
 const practice = (book, unit) => books.find(b => b.id === book).units.find(u => u.id === unit).practice;
 
 test('post-review corrections preserve IDs, placement, excerpt coverage and seven legacy books', () => {
-  assert.equal(knowledge.length, baseline.knowledgeCount);
-  assert.equal(learning.catalog.length, baseline.catalogCount);
+  assert.equal(knowledge.filter(isPriorContent).length, baseline.knowledgeCount);
+  assert.equal(learning.catalog.filter(isPriorContent).length, baseline.catalogCount);
   // The reviewed field patch must match exactly; a broad regenerated catalogue hash is not sufficient.
-  assert.equal(hash(learning.catalog.map(beforePostReviewCorrections).map(identity)), baseline.identitySha256);
+  assert.equal(hash(learning.catalog.filter(isPriorContent).map(beforePostReviewCorrections).map(identity)), baseline.identitySha256);
   const changed = get('skill-en-question-tags').gradeMappings[0];
   assert.equal(changed.unitId, 'u6'); assert.equal(changed.grade, 6); assert.equal(changed.semester, '上册');
   assert.equal(get('skill-en-question-tags').manualOnly, true);

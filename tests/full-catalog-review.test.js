@@ -1,3 +1,4 @@
+const { isPriorContent } = require('./completion-baseline-helper');
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const crypto = require('node:crypto');
@@ -39,7 +40,7 @@ test('all 36 five-four slots and content locations agree without duplicate mappi
 });
 
 test('all 4064 pre-review knowledge IDs and 4072 grade/unit associations survive the source upgrade', () => {
-  const old = knowledge.filter(i => !i.learningArea && i.id !== 'sh54-word-flour');
+  const old = knowledge.filter(isPriorContent).filter(i => !i.learningArea && i.id !== 'sh54-word-flour');
   assert.equal(old.length, 4064);
   assert.equal(hash(old.map(i => i.id).sort().join('\n')), '749228be83e0a72567d96ec7041fedae1dd0aff575d91d99303f410df9c7f340');
   const mappings = old.flatMap(i => (i.gradeMappings || []).map(m => [i.id,m.bookId,m.unitId || '',m.grade,m.semester].join('|'))).sort();

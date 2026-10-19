@@ -14,6 +14,8 @@ exports.ruleRows = ruleRows;
 exports.searchCatalog = searchCatalog;
 exports.progress = progress;
 exports.knowledgeGradeLabel = knowledgeGradeLabel;
+exports.hasRecitation = hasRecitation;
+exports.recitationPool = recitationPool;
 exports.planningKey = planningKey;
 exports.wasLearned = wasLearned;
 exports.omitTask = omitTask;
@@ -89,7 +91,9 @@ function templateForDate(family, childId, date) {
 function templateSummary(rules) {
     return rules.filter((rule) => rule.quantity > 0).map((rule) => {
         const kind = definition(rule.kind);
-        return `${kind.label} ${rule.quantity}${kind.unit}${rule.mode === 'review' ? '（复习）' : ''}`;
+        const qualifiers = [rule.mode === 'review' ? '复习' : '', rule.kind === 'poetry'
+                ? (rule.recitationPolicy === 'only' ? '只选教材必背' : rule.recitationPolicy === 'first' ? '教材必背优先' : '') : ''].filter(Boolean);
+        return `${kind.label} ${rule.quantity}${kind.unit}${qualifiers.length ? `（${qualifiers.join('，')}）` : ''}`;
     }).join(' · ') || '暂停自动安排';
 }
 // A changed active template never fills previously disabled types into an already-generated day.
@@ -265,6 +269,8 @@ function generateDay(family, day, ledgers, preview = false) {
                 const seenWorks = new Set(Object.values(ledger.records).map((entry) => { const item = content(entry.item); return item.workId || item.id; }));
                 const seenKeys = new Set(Object.values(ledger.records).flatMap((entry) => planningKeys(entry.item)));
                 pool = materialPool(family, child.id, rule.scope || 'starter').filter((item) => item.kind === rule.kind && !seenWorks.has(item.workId || item.id) && !overlapsKeys(seenKeys, item));
+                if (rule.kind === 'poetry')
+                    pool = recitationPool(pool, rule.recitationPolicy);
                 // A work and its textbook excerpt are separate study units, but are not new twice.
                 const selectedWorks = new Set();
                 pool = pool.filter((item) => { if (overlapsKeys(selectedWorks, item))
@@ -275,6 +281,8 @@ function generateDay(family, day, ledgers, preview = false) {
                     .sort((a, b) => a.completedDates[a.completedDates.length - 1].localeCompare(b.completedDates[b.completedDates.length - 1]) || a.item.id.localeCompare(b.item.id))
                     .map((entry) => content(entry.item)).filter((item) => !catalogById.has(item.id) || inScope(catalogById.get(item.id), rule.scope || 'starter'));
             }
+            if (rule.kind === 'poetry')
+                pool = recitationPool(pool, rule.recitationPolicy);
             const quantity = Math.max(0, rule.quantity - omitted.filter((item) => item.kind === rule.kind && item.automatic).length);
             const chosen = [];
             for (const item of pool) {
@@ -335,8 +343,30 @@ function ruleRows(family, childId, rules = activeTemplate(family, childId).rules
         const rule = { mode: 'new', quantity: 0, scope: 'starter', ...(rules.find((item) => item.kind === kind.id) || {}) };
         const scopes = scopeOptions(kind.id);
         return { ...kind, ...rule, scopes, scopeIndex: Math.max(0, scopes.findIndex((scope) => scope.id === rule.scope)),
-            poolCount: materialPool(family, childId, rule.scope).filter((item) => item.kind === kind.id).length };
+            recitationPolicy: rule.recitationPolicy || 'all', recitationPolicyIndex: ['all', 'first', 'only'].indexOf(rule.recitationPolicy || 'all'),
+            poolCount: recitationPool(materialPool(family, childId, rule.scope).filter((item) => item.kind === kind.id), rule.recitationPolicy).length };
     });
+}
+// Requirements belong to a named edition; a different book's requirement must
+// not make a work appear required in the selected book/semester.
+function hasRecitation(item, input = {}) {
+    var _a;
+    const knowledge = catalogById.get(item.id);
+    return Boolean((_a = knowledge === null || knowledge === void 0 ? void 0 : knowledge.recitationRequirements) === null || _a === void 0 ? void 0 : _a.some(entry => {
+        var _a;
+        return (input.recitation === 'familiar' ? entry.requirement === '熟读成诵' : entry.requirement.startsWith('背诵'))
+            && (!input.bookId || entry.bookId === input.bookId)
+            && (!(input.grade || input.semester || input.unitId) || ((_a = knowledge.gradeMappings) === null || _a === void 0 ? void 0 : _a.some(mapping => mapping.bookId === entry.bookId && (!input.grade || mapping.grade === input.grade)
+                && (!input.semester || mapping.semester === input.semester) && (!input.unitId || mapping.unitId === input.unitId))));
+    }));
+}
+function recitationPool(items, policy) {
+    if (policy === 'only')
+        return items.filter(item => hasRecitation(item));
+    // Stable partition preserves catalogue order / oldest-review-first within each tier.
+    if (policy === 'first')
+        return [...items.filter(item => hasRecitation(item)), ...items.filter(item => !hasRecitation(item))];
+    return items;
 }
 function searchCatalog(input = {}) {
     const query = (input.query || '').trim().toLowerCase();
@@ -344,6 +374,7 @@ function searchCatalog(input = {}) {
     return catalog.filter((item) => {
         var _a;
         return item.kind !== 'math' && (!input.kind || item.kind === input.kind)
+            && (!input.recitation || hasRecitation(item, input))
             && (!input.learningArea || item.learningArea === input.learningArea)
             && (!input.subject || input.subject === 'all' || definition(item.kind).subject === input.subject)
             && (!input.scope || inScope(item, input.scope)) && (!input.bookId || (item.bookIds || []).includes(input.bookId))

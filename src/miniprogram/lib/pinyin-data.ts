@@ -3,6 +3,12 @@
 // This is not a textbook transcription or automatic transliteration service.
 export interface PinyinEntry { title: string; detail: string; titleReading: string; detailReading: string }
 export const pinyinEntries: Record<string, PinyinEntry> = {
+  "sh54-grass-excerpt": {
+    "title": "《赋得古原草送别》（前四句）",
+    "detail": "白居易\n离离原上草，一岁一枯荣。\n野火烧不尽，春风吹又生。",
+    "titleReading": "fù dé gǔ yuán cǎo sòng bié qián sì jù",
+    "detailReading": "bái jū yì lí lí yuán shàng cǎo yī suì yī kū róng yě huǒ shāo bù jìn chūn fēng chuī yòu shēng"
+  },
   "poem-goose": {
     "title": "《咏鹅》",
     "detail": "骆宾王\n鹅，鹅，鹅，曲项向天歌。\n白毛浮绿水，红掌拨清波。",

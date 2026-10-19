@@ -45,7 +45,7 @@ const base = (0, page_1.common)();
 const definition = {
     ...base,
     data: { ...base.data, followToday: false, followTomorrow: true, editor: 'preview', kinds: learning.kinds, kindIndex: 0, schedules: ['仅指定日期', '从指定日期起每天固定', '加入自动内容库'], scheduleIndex: 0,
-        modes: ['全新', '复习'], rules: [], formTitle: '', formDetail: '', formMinutes: '5', draftDirty: false,
+        recitationPolicies: ['全部古诗文', '优先教材必背', '只选教材必背'], modes: ['全新', '复习'], rules: [], formTitle: '', formDetail: '', formMinutes: '5', draftDirty: false,
         studyGrade: 0, gradeLabels: learning.gradeLabels, groups: [],
         planDate: '', maxPlanDate: '', previewReady: false,
         templates: [], templateId: '', templateName: '', templateIndex: 0, activeTemplateId: '', activeTemplateName: '', activeTemplateSummary: '',
@@ -269,10 +269,16 @@ const definition = {
                     return rule;
                 const next = { ...rule, ...patch };
                 next.scopeIndex = next.scopes.findIndex((scope) => scope.id === next.scope);
-                next.poolCount = learning.materialPool(this.data.family, this.data.childId, next.scope).filter((item) => item.kind === kind).length;
+                next.recitationPolicyIndex = ['all', 'first', 'only'].indexOf(next.recitationPolicy);
+                next.poolCount = learning.recitationPool(learning.materialPool(this.data.family, this.data.childId, next.scope).filter((item) => item.kind === kind), next.recitationPolicy).length;
                 return next;
             }), draftDirty: true });
         this.updateVisibleRules();
+    },
+    changeRecitationPolicy(event) {
+        const policy = ['all', 'first', 'only'][Number(event.detail.value)];
+        if (policy)
+            this.updateRule('poetry', { recitationPolicy: policy });
     },
     changeMode(event) { this.updateRule(event.currentTarget.dataset.id, { mode: ['new', 'review'][Number(event.detail.value)] }); },
     changeScope(event) {
@@ -284,6 +290,7 @@ const definition = {
         this.rememberSelection();
         getApp().navigation.libraryKind = rule.id;
         getApp().navigation.libraryScope = rule.scope;
+        getApp().navigation.libraryRecitation = rule.id === 'poetry' && rule.recitationPolicy === 'only' ? 'required' : undefined;
         wx.switchTab({ url: '/pages/library/index' });
     },
     changeQuantity(event) { this.updateRule(event.currentTarget.dataset.id, { quantity: event.detail.value === '' ? '' : Number(event.detail.value) }); },
@@ -309,7 +316,7 @@ const definition = {
             wx.showToast({ title: '请先保存或放弃当前修改', icon: 'none' });
             return;
         }
-        const rules = this.data.rules.map((rule) => ({ kind: rule.id, mode: rule.mode, quantity: rule.quantity, scope: rule.scope }));
+        const rules = this.data.rules.map((rule) => ({ kind: rule.id, mode: rule.mode, quantity: rule.quantity, scope: rule.scope, ...(rule.id === 'poetry' && rule.recitationPolicy !== 'all' ? { recitationPolicy: rule.recitationPolicy } : {}) }));
         if (!rules.every((rule) => typeof rule.quantity === 'number' && Number.isInteger(rule.quantity) && rule.quantity >= 0 && rule.quantity <= learning.definition(rule.kind).max)) {
             wx.showToast({ title: '请填写范围内的整数数量', icon: 'none' });
             return;

@@ -1,12 +1,12 @@
 # 内容数据、来源与使用范围
 
-数据版本：正文与教材证据2026-10-12；一至九年级教材证据与拼音辅助2026-10-17；基础知识体系2026-10-18。入库范围和核验缺口见[知识库与年级核验](../../docs/知识库与年级核验.md)。
+数据版本：正文与教材证据2026-10-12；一至九年级教材证据与拼音辅助2026-10-17；基础知识体系2026-10-18；必背链路、文言补充及英语词义结构2026-10-19。入库范围和核验缺口见[知识库与年级核验](../../docs/知识库与年级核验.md)。
 
 | 文件 | 用途 | 来源与许可 |
 |---|---|---|
 | `chinese-moe-2022-index.json` | 135 条国家课标索引，保留年段和选段标识 | 教育部课标的事实性目录，包含官方页码 |
 | `chinese-moe-2022-texts.json` | 对应 135 篇／组原作 | 仅古代公版原作；逐项保留转录出处；未复制现代注释、译文或录音 |
-| `poetry-dynasties.json` | 260项古诗文朝代／时代、证据状态与争议说明 | 固定版转录记录的事实性元数据；国图、地方志及学术资料纠正例外；逐项附来源，不改变原教材核验结论 |
+| `poetry-dynasties.json` | 261项古诗文朝代／时代、证据状态与争议说明 | 固定版转录记录的事实性元数据；国图、地方志及学术资料纠正例外；逐项附来源，不改变原教材核验结论 |
 | `shanghai-54-evidence.json` | 六年级原书、七上目录、五册小学公开样本、24 项补充原作或节选 | 国家平台目录／公开样本的事实及公版原作；学校选用版次、全文异文待确认 |
 | `shanghai-54-lower-primary.json` | 一、二年级语文／英语八册的单元、已核实字词事实、原创练习及注音 | 公开样本、人教社五四制原书和新华书店官方配套Word bank音频交叉核对；图片和音频仅本地核验，练习、词义和问答自编。依据与差异见[低年级核验记录](../../docs/低年级教材核验记录.md) |
 | `shanghai-54-grade3.json` | 三年级语文上下册完整字表、英语三上完整纸本词表159项、三下音频词项及38个单元原创练习 | 人教社／国家平台五四制原书、上海官方教材清单与新华教材配套音频；英语三下为历史试用本参考。学校印次、英语三下纸本完整词表待确认，见[三年级核验记录](../../docs/三年级教材核验记录.md) |
@@ -24,9 +24,13 @@
 | `chinese-recitation-requirements.json`、`chinese-recitation-page-evidence.json` | 138处具名教材的背诵、默写、指定范围与熟读成诵要求；新增原页核验摘要 | 原书课后要求的事实性范围和页码、核验图像SHA-256；未核范围保留待确认 |
 | `chinese-placement-page-evidence.json` | 一上、一下、二上、三上31处古诗文的独立官方位置证据 | 国家平台具名原书封面、出版说明、目录及正文页的元数据、页图SHA-256；不包含教材图像，不推定整册字表或学校印次 |
 | `chinese-text-revisions.json` | 19项原作用字、标点与分段校订，带原页定位及哈希 | 显示校订说明；旧任务正文与学习档案不回写 |
+| `chinese-excerpt-evidence.json` | 《赋得古原草送别》前四句独立节选卡的范围 | 二下官方原书印刷12／电子17页和图像SHA-256；该页未明示背诵／默写，不推定必背 |
+| `chinese-classical-supplements.json` | 55篇文言的补充字词、文化提示及59道迁移／理解题 | 具名原书页码、原作语境与核验图像哈希；中文讲解与练习自编，2篇教材册次待核实 |
+| `english-dictionary-senses.json`、`english-dictionary-sense-evidence.json` | 982张原词卡的补充常用义、词性及逐义来源 | 911词选取Open English Wordnet 2025的1701个义项；其余71词参考Collins、Cambridge或British Council。中文释义自编；见下方许可及校验方法 |
+| `english-structure-supplements.json` | 45组句型、用法比较与练习 | Cambridge、Collins与British Council的具名词条或语法说明；例句自编，不推定教材册次 |
 | `chinese-classical-details.json` | 55篇公版文言原作的卡内讲解、句意自译与理解题 | 依据原作自编，沿用已核教材定位；不冒充教材注释，不单独生成学习ID |
 | `english-word-study.json` | 644项词卡内的词形、数量表达、118组短语搭配与77组词族 | ECDICT MIT词形经语境复核；British Council／Cambridge参考，例句和练习自编；不推定拓展用法的教材年级 |
-| `chinese-foundation-system.json`、`chinese-foundation-pinyin.json` | 9组背诵默写、51组文言理解，低年级2组附拼音 | 公版原句与原创讲解、问答，关联原作已核册次；不把练习当原书题目 |
+| `chinese-foundation-system.json`、`chinese-foundation-pinyin.json` | 9组背诵默写、55组文言理解，低年级2组附拼音 | 公版原句与原创讲解、问答，关联原作已核册次；不把练习当原书题目 |
 | `english-foundation-system.json` | 10组词汇运用、55组语法讲解与问答 | 国家课标及五四制原书目录定位；未映射知识点不指定年级 |
 | `english-moe-2022-tables.json` | 数词／月份／星期另列表 77 项 | 词表来自课标；中文提示自编 |
 
@@ -40,9 +44,11 @@ ECDICT 来源：[skywind3000/ECDICT](https://github.com/skywind3000/ECDICT)，�
 
 现代课本整册、课文中的现代作品、扫描 PDF、录音及注释没有进入本仓库。源码公开不改变这些材料的权利归属。小程序保留官方阅读入口和事实性书目信息。
 
+Open English Wordnet 2025 来源：[官方发行版](https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition)、[原始XML压缩包](https://en-word.net/static/english-wordnet-2025.xml.gz)。Copyright Open English Wordnet contributors，基于 Princeton WordNet；采用 [CC BY 4.0](../../licenses/Open-English-Wordnet-2025.txt)，并保留 [Princeton WordNet声明](../../licenses/Princeton-WordNet.txt)。项目选择所需义项并改编成中文简短释义，不分发完整词典。原始定义哈希、sense ID和synset保存在证据清单，便于复核；来源定位校验不等同于所有中文释义的教学审定。
+
 ## 生成与校验
 
-自编语文短文维护在`src/shared/catalog.ts`，新增英语短文及读后问题维护在`src/shared/reading-catalog.ts`，均按稳定ID接入知识库和任务。`src/miniprogram/lib/pinyin-data.ts`保留原有21项注音；`scripts/lower-primary.js`按一至九年级源数据生成另外239项注音，基础体系另有2项低年级背诵注音；客户端仅为完全匹配的文字显示拼音。内容范围、标调与剩余核验事项见[阅读与拼音](../../docs/阅读与拼音.md)。
+自编语文短文维护在`src/shared/catalog.ts`，新增英语短文及读后问题维护在`src/shared/reading-catalog.ts`，均按稳定ID接入知识库和任务。`src/miniprogram/lib/pinyin-data.ts`保留原有22项注音；`scripts/lower-primary.js`按一至九年级源数据生成另外239项注音，基础体系另有2项低年级背诵注音；客户端仅为完全匹配的文字显示拼音。内容范围、标调与剩余核验事项见[阅读与拼音](../../docs/阅读与拼音.md)。
 
 `npm run build` 从上述源数据生成 `shared/knowledge-data.json`、`shared/resources.json`，云函数使用同样的 JSON 文件，小程序使用对应的 `.js` 数据模块，以兼容微信原生模块加载；小模块合并重复字符串、公共前缀与对象键布局；大模块在构建时使用DEFLATE压缩，客户端用fflate纯JavaScript离线同步解码，导出值与云端JSON逐项一致。没有网络加载、动态代码执行或学习记录格式变化；第三方许可见[fflate MIT声明](../../miniprogram/THIRD_PARTY_NOTICES.txt)。生成文件不手工修改；修改源数据后必须重建并运行 `npm run verify`。
 
@@ -54,8 +60,12 @@ ECDICT 来源：[skywind3000/ECDICT](https://github.com/skywind3000/ECDICT)，�
 
 内容 ID 区分同名诗、不同作者、不同首句与英语大小写；不能为合并方便而把 `May` 和 `may`、`Miss` 和 `miss` 合并。新增或修正教材映射要同时附证据及适用版本。
 
-公开样本一上、一下、二上、三上封面标注审定 2024；样本版权页没有具体 ISBN 和印次，不能据网站的“2024版”称其为学校当前用书。古诗文的五四制目录与样本总计267个年级映射，包含二下9项、三下10项、四年级23项、五年级35项、六年级26项、七年级38项、八年级48项和九年级47项；同名《绝句》另核对原页作者与首句。另有一至九年级字词与原创练习映射。来源区分`official_outline`、`public_sample`、`official_textbook`和`official_audio`；音频依据不推断纸本页码，已知版本差异保存在词项证据中。
+公开样本一上、一下、二上、三上封面标注审定 2024；样本版权页没有具体 ISBN 和印次，不能据网站的“2024版”称其为学校当前用书。古诗文的五四制目录与样本总计268个年级映射，包含二下10项、三下10项、四年级23项、五年级35项、六年级26项、七年级38项、八年级48项和九年级47项；同名《绝句》另核对原页作者与首句。另有一至九年级字词与原创练习映射。来源区分`official_outline`、`public_sample`、`official_textbook`和`official_audio`；音频依据不推断纸本页码，已知版本差异保存在词项证据中。
 
-`scripts/foundations.js`校对词卡、附加背诵要求并生成125组知识练习。`learningArea`用于学习方向筛选；`manualOnly`使新练习仅由家长安排，不改变已有自动阅读数量。新增练习ID不继承原作的已学状态；原任务类型、记录和云接口格式保留。基础数量由最终目录构建生成，见[基础知识体系核验](../../docs/基础知识体系核验.md)。
+`scripts/foundations.js`校对词卡、附加背诵要求并生成129组知识练习。`learningArea`用于学习方向筛选；`manualOnly`使新练习仅由家长安排，不改变已有自动阅读数量。新增练习ID不继承原作的已学状态；原任务类型、记录和云接口格式保留。基础数量由最终目录构建生成，见[基础知识体系核验](../../docs/基础知识体系核验.md)。
+
+`scripts/recitation-practice.js`按已核要求的起止范围生成132道自测及答案哈希；6条熟读成诵不改成强制默写。官方节选独立ID不覆盖全文完成状态。
+
+下载官方Wordnet压缩包后，可执行`python3 scripts/verify-wordnet-evidence.py /path/to/english-wordnet-2025.xml.gz`校验原始文件版本、1701个义项定位、词性和定义哈希；命令不修改知识库、不联网。
 
 `scripts/study-notes.js`将逐篇、逐词辅助编译为可选的`studyNotes`字段，验证原句、词头与来源；仅供页面展示与知识库搜索，不写入任务正文快照、同步写入队列或学习档案。课堂原作、词头的`gradeMappings`不推导出拓展用法的年级。核验范围见[背诵要求与逐篇辅助核验](../../docs/背诵要求与逐篇辅助核验.md)。

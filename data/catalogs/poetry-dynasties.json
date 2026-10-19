@@ -2871,6 +2871,17 @@
         "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial"
       ],
       "note": "原书作者或出处与时代核对。"
+    },
+    {
+      "id": "sh54-grass-excerpt",
+      "title": "赋得古原草送别（前四句）",
+      "author": "白居易",
+      "dynasty": "唐代",
+      "status": "source_record",
+      "sources": [
+        "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
+      ],
+      "recordId": "5b9a1206367d5c5b84062a74"
     }
   ]
 }

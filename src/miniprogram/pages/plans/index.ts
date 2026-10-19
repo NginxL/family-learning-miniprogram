@@ -13,6 +13,7 @@ export type RuleDraft = Omit<ReturnType<typeof learning.ruleRows>[number], 'quan
 interface ScheduleDraft { familyId: string; childId: string; baseRevision: number; weekly: boolean; activeId: string; weekdaysTemplateId: string; weekendTemplateId: string }
 type ScheduleSlot = 'activeId' | 'weekdaysTemplateId' | 'weekendTemplateId';
 export interface PlansData extends CommonData {
+  recitationPolicies: string[];
   editor: 'preview' | 'auto' | 'manual'; kinds: typeof learning.kinds; kindIndex: number;
   schedules: string[]; scheduleIndex: number; modes: string[]; rules: RuleDraft[];
   formTitle: string; formDetail: string; formMinutes: string; draftDirty: boolean;
@@ -31,7 +32,8 @@ export interface PlansMethods extends CommonMethods {
   changeEditor(event: DatasetEvent<{ id: PlansData['editor'] }>): void;
   changeKind(event: PickerEvent): void; changeSchedule(event: PickerEvent): void; changeStudyGrade(event: PickerEvent): void;
   changePlanDate(event: ValueEvent): void; openGroup(event: DatasetEvent): void; openPlan(event: DatasetEvent): void;
-  updateRule(kind: ContentKind, patch: Partial<Pick<RuleDraft, 'mode' | 'scope' | 'quantity'>>): void;
+  updateRule(kind: ContentKind, patch: Partial<Pick<RuleDraft, 'mode' | 'scope' | 'quantity' | 'recitationPolicy'>>): void;
+  changeRecitationPolicy(event: PickerEvent): void;
   changeMode(event: FieldEvent<string | number, { id: ContentKind }>): void;
   changeScope(event: FieldEvent<string | number, { id: ContentKind }>): void;
   browseRule(event: DatasetEvent<{ id: ContentKind }>): void;
@@ -52,7 +54,7 @@ const base = common();
 const definition: PageDefinition<PlansData, PlansMethods, PlansRuntime> = {
   ...base,
   data: { ...base.data, followToday: false, followTomorrow: true, editor: 'preview', kinds: learning.kinds, kindIndex: 0, schedules: ['仅指定日期', '从指定日期起每天固定', '加入自动内容库'], scheduleIndex: 0,
-    modes: ['全新', '复习'], rules: [], formTitle: '', formDetail: '', formMinutes: '5', draftDirty: false,
+    recitationPolicies: ['全部古诗文', '优先教材必背', '只选教材必背'], modes: ['全新', '复习'], rules: [], formTitle: '', formDetail: '', formMinutes: '5', draftDirty: false,
     studyGrade: 0, gradeLabels: learning.gradeLabels, groups: [],
     planDate: '', maxPlanDate: '', previewReady: false,
     templates: [], templateId: '', templateName: '', templateIndex: 0, activeTemplateId: '', activeTemplateName: '', activeTemplateSummary: '',
@@ -213,10 +215,15 @@ const definition: PageDefinition<PlansData, PlansMethods, PlansRuntime> = {
       if (rule.id !== kind) return rule;
       const next = { ...rule, ...patch };
       next.scopeIndex = next.scopes.findIndex((scope) => scope.id === next.scope);
-      next.poolCount = learning.materialPool(this.data.family!, this.data.childId, next.scope).filter((item) => item.kind === kind).length;
+      next.recitationPolicyIndex = ['all', 'first', 'only'].indexOf(next.recitationPolicy);
+      next.poolCount = learning.recitationPool(learning.materialPool(this.data.family!, this.data.childId, next.scope).filter((item) => item.kind === kind), next.recitationPolicy).length;
       return next;
     }), draftDirty: true });
     this.updateVisibleRules();
+  },
+  changeRecitationPolicy(event) {
+    const policy = (['all', 'first', 'only'] as const)[Number(event.detail.value)];
+    if (policy) this.updateRule('poetry', { recitationPolicy: policy });
   },
   changeMode(event) { this.updateRule(event.currentTarget.dataset.id, { mode: (['new', 'review'] as const)[Number(event.detail.value)] }); },
   changeScope(event) {
@@ -226,6 +233,7 @@ const definition: PageDefinition<PlansData, PlansMethods, PlansRuntime> = {
   browseRule(event) {
     const rule = this.data.rules.find((item) => item.id === event.currentTarget.dataset.id)!;
     this.rememberSelection(); getApp<LearningApp>().navigation!.libraryKind = rule.id; getApp<LearningApp>().navigation!.libraryScope = rule.scope;
+    getApp<LearningApp>().navigation!.libraryRecitation = rule.id === 'poetry' && rule.recitationPolicy === 'only' ? 'required' : undefined;
     wx.switchTab({ url: '/pages/library/index' });
   },
   changeQuantity(event) { this.updateRule(event.currentTarget.dataset.id, { quantity: event.detail.value === '' ? '' : Number(event.detail.value) }); },
@@ -242,7 +250,7 @@ const definition: PageDefinition<PlansData, PlansMethods, PlansRuntime> = {
     if (this.data.busy || this.data.isChild || !this.data.family) return;
     if (this.data.templateConflict) { wx.showToast({ title: '请重新载入家人更新后的模板', icon: 'none' }); return; }
     if (action !== 'saveDailyTemplate' && (this.data.newTemplateDraft || this.data.draftDirty)) { wx.showToast({ title: '请先保存或放弃当前修改', icon: 'none' }); return; }
-    const rules = this.data.rules.map((rule) => ({ kind: rule.id, mode: rule.mode, quantity: rule.quantity, scope: rule.scope }));
+    const rules: Array<Omit<AutoRule, 'quantity'> & { quantity: number | '' }> = this.data.rules.map((rule) => ({ kind: rule.id, mode: rule.mode, quantity: rule.quantity, scope: rule.scope, ...(rule.id === 'poetry' && rule.recitationPolicy !== 'all' ? { recitationPolicy: rule.recitationPolicy } : {}) }));
     if (!rules.every((rule): rule is AutoRule => typeof rule.quantity === 'number' && Number.isInteger(rule.quantity) && rule.quantity >= 0 && rule.quantity <= learning.definition(rule.kind).max)) {
       wx.showToast({ title: '请填写范围内的整数数量', icon: 'none' }); return;
     }

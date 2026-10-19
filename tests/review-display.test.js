@@ -62,7 +62,7 @@ test('progress discloses sample-only grade mappings without requiring a new clou
     engine: { getProgress: async () => result }, setData(patch) { Object.assign(this.data, patch); } };
   instance.afterRender(); await instance.loadProgress();
   assert.strictEqual(instance.data.progress, result); assert.equal(JSON.stringify(result), before);
-  assert.equal(instance.data.progress.grades[0].total, 151); assert.equal(instance.data.progress.grades[1].total, 120);
+  assert.equal(instance.data.progress.grades[0].total, 151); assert.equal(instance.data.progress.grades[1].total, 121);
   assert.match(instance.data.gradeSourceNotes[1], /16 项仅有第三方样本依据/);
   assert.match(instance.data.gradeSourceNotes[2], /53 项仅有第三方样本依据/);
   assert.equal(instance.data.gradeSourceNotes[3], '');

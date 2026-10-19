@@ -28,7 +28,9 @@ function validatedRules(value: unknown): AutoRule[] {
       && isInteger(rule.quantity) && rule.quantity >= 0 && rule.quantity <= kind.max, 'INVALID', '每日数量或新学／复习类型无效');
     const scope = rule.scope || 'starter';
     requireValue(isOneOf(scope, learning.scopeOptions(kind.id).map((item) => item.id)), 'INVALID', '学习内容范围无效');
-    seen.add(kind.id); return { kind: kind.id, mode: rule.mode, quantity: rule.quantity, scope };
+    requireValue(rule.recitationPolicy === undefined || (kind.id === 'poetry' && isOneOf(rule.recitationPolicy, ['all', 'first', 'only'] as const)), 'INVALID', '背诵范围设置无效');
+    seen.add(kind.id); return { kind: kind.id, mode: rule.mode, quantity: rule.quantity, scope,
+      ...(kind.id === 'poetry' && rule.recitationPolicy ? { recitationPolicy: rule.recitationPolicy as AutoRule['recitationPolicy'] } : {}) };
   });
 }
 
@@ -46,7 +48,7 @@ function publicFamily(family: Family, uid: string, today: string): PublicFamily 
   const childId = member.role === 'child' ? member.childId : undefined;
   requireValue(member.role !== 'child' || (childId && family.children.some((child) => child.id === childId)), 'FORBIDDEN', '孩子绑定状态无效，请联系家长');
   return {
-    id: family.id, name: family.name, ownerId: family.ownerId,
+    id: family.id, name: family.name, ownerId: family.ownerId, recitationPlanningVersion: 1,
     members: family.members.map(({ id, name, role, childId }) => ({ id, name, role, ...(childId ? { childId } : {}) })),
     children: family.children.filter((child) => !childId || child.id === childId).map((child) => withCurrentAge(child, today)), plans: clone(family.plans.filter((plan) => !childId || plan.childId === childId)), autoPlans: clone(childId ? { [childId]: family.autoPlans?.[childId] || [] } : family.autoPlans || {}),
     ...(family.templateSets ? { templateSets: clone(childId ? (family.templateSets[childId] ? { [childId]: family.templateSets[childId] } : {}) : family.templateSets) } : {}),

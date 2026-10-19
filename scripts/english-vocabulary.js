@@ -6,7 +6,8 @@ const unique = values => [...new Map(values.filter(Boolean).map(value => [compac
 // Common senses are independent of a book occurrence. Never let the first unit replace them.
 // These additions recover common meanings lost by the previous first-occurrence overwrite.
 const restored = require('../data/catalogs/english-common-sense-repairs.json').entries;
-const reviewed = require('../data/catalogs/english-high-frequency-senses.json').entries;
+const reviewed = { ...require('../data/catalogs/english-dictionary-senses.json').entries,
+  ...require('../data/catalogs/english-high-frequency-senses.json').entries };
 
 // Exact sense matching only: a noun meaning must never hide a verb/adjective meaning.
 function senseRows(text) {

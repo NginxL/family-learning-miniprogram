@@ -3,6 +3,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.shiftDate = exports.chinaDate = exports.SyncEngine = void 0;
 const errors_1 = require("./errors");
+const learning_1 = require("./learning/learning");
 const empty = () => ({ userId: null, family: null, days: {}, histories: {}, progresses: {}, learningStatuses: {}, queue: [], notice: '' });
 const clone = (value) => JSON.parse(JSON.stringify(value));
 const dayKey = (familyId, date) => `${familyId}:${date}`;
@@ -85,11 +86,16 @@ class SyncEngine {
         this.save(next);
     }
     async command(action, payload) {
-        var _a;
+        var _a, _b, _c, _d, _e;
         // Membership/plan writes require a connection; only check-ins are queued offline.
         // Keep the v1 null-family request path: the service rejects writes without membership.
         if (((_a = this.state.family) === null || _a === void 0 ? void 0 : _a.myRole) === 'child' && !['uploadHomeworkAttachment', 'submitHomework', 'getHomework', 'getHomeworkAttachment'].includes(action))
             throw Object.assign(new Error('此操作需要家长确认'), { code: 'PARENT_REQUIRED' });
+        if ((action === 'saveDailyTemplate' || action === 'saveAutoPlans') && ((_b = this.state.family) === null || _b === void 0 ? void 0 : _b.recitationPlanningVersion) !== 1
+            && ((_c = payload.rules) === null || _c === void 0 ? void 0 : _c.some(rule => rule.recitationPolicy && rule.recitationPolicy !== 'all')))
+            throw Object.assign(new Error('教材必背安排等待服务更新；当前模板未修改。可在本机演示版体验。'), { code: 'UNSUPPORTED' });
+        if ((action === 'assignContent' || action === 'reviewContent') && (((_d = learning_1.catalogById.get(payload.contentId)) === null || _d === void 0 ? void 0 : _d.minimumServiceVersion) || 0) > (((_e = this.state.family) === null || _e === void 0 ? void 0 : _e.recitationPlanningVersion) || 0))
+            throw Object.assign(new Error('这项新内容等待服务更新；当前学习记录未修改。可在本机演示版安排。'), { code: 'UNSUPPORTED' });
         const input = { ...payload, familyId: this.state.family && this.state.family.id };
         const data = await this.transport(action, input);
         await this.sync();

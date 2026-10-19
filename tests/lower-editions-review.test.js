@@ -1,3 +1,4 @@
+const { isPriorContent } = require('./completion-baseline-helper');
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const crypto = require('node:crypto');
@@ -55,7 +56,7 @@ test('source browser exposes the seven pending editions without labelling other 
 });
 
 test('foundation additions preserve all prior identities, unchanged content and completed legacy snapshots', () => {
-  const prior = learning.catalog.filter(item => !item.learningArea);
+  const prior = learning.catalog.filter(isPriorContent).filter(item => !item.learningArea);
   const digest = rows => crypto.createHash('sha256').update(JSON.stringify(rows.sort((a, b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0))).digest('hex');
   assert.equal(prior.length, 4109);
   // Hashes come from the d2ed740 baseline, not from the newly generated catalogue.

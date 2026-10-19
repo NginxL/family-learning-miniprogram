@@ -1,3 +1,4 @@
+const { isPriorContent, beforeCompletion, assertProgressDelta } = require('./completion-baseline-helper');
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const proof = require('../data/catalogs/chinese-placement-page-evidence.json');
@@ -65,8 +66,8 @@ test('work-only evidence does not upgrade unreviewed character tables or origina
 });
 
 test('official source replacements preserve every task snapshot, numeric progress and learned/mastered state', () => {
-  assert.equal(hash(learning.catalog.map(item => learning.taskFrom(item, 'child', 'task-' + item.id, 'manual'))), baseline.tasksSha256);
-  assert.equal(hash(learning.progress({ records: {} })), baseline.progressSha256);
+  assert.equal(hash(learning.catalog.filter(isPriorContent).map(beforeCompletion).map(item => learning.taskFrom(item, 'child', 'task-' + item.id, 'manual'))), baseline.tasksSha256);
+  assertProgressDelta(learning.progress({ records: {} }));
   const ledger = { records: {} };
   const tasks = proof.books.flatMap(book => book.positions.map(page => ({ ...learning.taskFrom(
     learning.catalogById.get(page.contentId), 'child', 'old-' + page.contentId, 'manual'), done: true })));

@@ -1,3 +1,4 @@
+const { isPriorContent } = require('./completion-baseline-helper');
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const crypto = require('node:crypto');
@@ -15,11 +16,11 @@ const event = id => ({ currentTarget: { dataset: { id } } });
 
 test('supplemental guides preserve identities, placement and automatic pools with reviewed content corrections', () => {
   // Independently projected b59064e baseline; corrected word presentation has dedicated semantic tests.
-  const original = knowledge.map(({ studyNotes, recitationRequirements, ...item }) => withoutWordPresentation(beforeChineseCorrections(item)));
+  const original = knowledge.filter(isPriorContent).map(({ studyNotes, recitationRequirements, ...item }) => withoutWordPresentation(beforeChineseCorrections(item)));
   assert.equal(original.length, 4190);
   assert.equal(crypto.createHash('sha256').update(JSON.stringify(original)).digest('hex'),
     'e0dab3ba5dba328f670aded05c0392075ec9bb90b68a2cf15f0bb2d10527f96d');
-  assert.equal(learning.catalog.length, 4234);
+  assert.equal(learning.catalog.filter(isPriorContent).length, 4234);
   const family = { children: [{ id: 'child' }], plans: [], autoPlans: { child: learning.emptyRules() } };
   for (const scope of ['starter', 'foundation', 'moe-all', 'tables', 'shanghai54', 'all']) {
     const pool = learning.materialPool(family, 'child', scope);
@@ -34,7 +35,7 @@ test('each classical guide is anchored to its own text and does not invent missi
     const item = learning.catalogById.get(entry.contentId), notes = item.studyNotes;
     assert.equal(item.kind, 'poetry'); assert.ok(entry.words.length >= 5);
     for (const sentence of entry.sentences) assert.ok(compact(item.detail).includes(compact(sentence.text)), entry.contentId);
-    assert.deepEqual(notes.exercises, entry.exercises);
+    assert.deepEqual(notes.exercises.slice(0, entry.exercises.length), entry.exercises);
     assert.ok(notes.sources.every(source => source.url.startsWith('https://')));
     assert.ok(notes.notice.includes('自编')); assert.ok(notes.notice.includes('不是教材注释'));
   }

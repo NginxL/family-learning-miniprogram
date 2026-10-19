@@ -2,6 +2,7 @@ import type { ApiAction, ApiPayloads } from '../../shared/api';
 import type { Day, Task } from '../../shared/models';
 import type { CacheActions, CacheBodies, CacheBucket, Cached, ClientResults, ClientTransport, CommandPayloads, SyncOptions, SyncSnapshot, SyncState, SyncStatus, SyncStorage } from './client-models';
 import { errorDetails } from './errors';
+import { catalogById } from './learning/learning';
 const empty = (): SyncState => ({ userId: null, family: null, days: {}, histories: {}, progresses: {}, learningStatuses: {}, queue: [], notice: '' });
 const clone = <T>(value: T): T => JSON.parse(JSON.stringify(value));
 const dayKey = (familyId: string, date: string) => `${familyId}:${date}`;
@@ -83,6 +84,11 @@ class SyncEngine {
     // Keep the v1 null-family request path: the service rejects writes without membership.
     if (this.state.family?.myRole === 'child' && !['uploadHomeworkAttachment', 'submitHomework', 'getHomework', 'getHomeworkAttachment'].includes(action))
       throw Object.assign(new Error('此操作需要家长确认'), { code: 'PARENT_REQUIRED' });
+    if ((action === 'saveDailyTemplate' || action === 'saveAutoPlans') && this.state.family?.recitationPlanningVersion !== 1
+      && (payload as CommandPayloads['saveDailyTemplate']).rules?.some(rule => rule.recitationPolicy && rule.recitationPolicy !== 'all'))
+      throw Object.assign(new Error('教材必背安排等待服务更新；当前模板未修改。可在本机演示版体验。'), { code: 'UNSUPPORTED' });
+    if ((action === 'assignContent' || action === 'reviewContent') && (catalogById.get((payload as CommandPayloads['assignContent']).contentId)?.minimumServiceVersion || 0) > (this.state.family?.recitationPlanningVersion || 0))
+      throw Object.assign(new Error('这项新内容等待服务更新；当前学习记录未修改。可在本机演示版安排。'), { code: 'UNSUPPORTED' });
     const input = { ...payload, familyId: this.state.family && this.state.family.id } as ApiPayloads[A];
     const data = await this.transport(action, input);
     await this.sync();

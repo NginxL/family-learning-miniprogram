@@ -51,7 +51,7 @@ test('national source inventories retain 75/60 works, 1600 headword groups, 505 
   assert.deepEqual(new Set(Object.keys(meanings.entries)), new Set(english.entries.filter((entry) => entry.level2).map((entry) => entry.word)));
   assert.equal(tables.entries.length, 77);
   assert.deepEqual(tables.entries.reduce((counts, entry) => ({ ...counts, [entry.table]: (counts[entry.table] || 0) + 1 }), {}), { '基数词': 30, '序数词': 28, '月份': 12, '星期': 7 });
-  assert.equal(learning.catalog.filter((item) => item.kind === 'poetry').length, 260);
+  assert.equal(learning.catalog.filter((item) => item.kind === 'poetry').length, 261);
   assert.equal(learning.catalog.filter((item) => item.kind === 'word').length, 2748);
 });
 
@@ -73,7 +73,7 @@ test('content identity preserves case and distinct same-title works; default sco
 
 test('grade mappings require a named five-four textbook and an observed title; national bands never become individual grades', () => {
   const mappings = learning.catalog.filter(item => item.kind === 'poetry').flatMap((item) => (item.gradeMappings || []).map((mapping) => ({ item, mapping })));
-  assert.equal(mappings.length, 267);
+  assert.equal(mappings.length, 268);
   for (const { item, mapping } of mappings) {
     const book = regional.books.find(entry => entry.id === mapping.bookId);
     const detailed = inventories.find(entry => entry.id === mapping.bookId);
@@ -81,7 +81,11 @@ test('grade mappings require a named five-four textbook and an observed title; n
       && poem.sourcePdfPage === mapping.sourcePdfPage && poem.sourcePrintPage === mapping.sourcePrintPage);
     assert.ok(mapping.outlineDestination);
     if (poem) assert.equal(mapping.sourceUrl, poem.sourceUrl || detailed.sourceUrl);
-    else {
+    else if (item.id === 'sh54-grass-excerpt') {
+      const evidence = require('../data/catalogs/chinese-excerpt-evidence.json').entries[0];
+      assert.equal(mapping.sourceUrl, evidence.sourceUrl); assert.equal(mapping.sourcePrintPage, evidence.sourcePrintPage);
+      assert.equal(mapping.sourcePdfPage, evidence.sourcePdfPage); assert.equal(mapping.sourceKind, 'official_textbook');
+    } else {
       const official = placementPages.books.find(source => source.bookId === mapping.bookId
         && source.positions.some(page => page.contentId === item.id && page.sourcePdfPage === mapping.sourcePdfPage
           && page.sourcePrintPage === mapping.sourcePrintPage && page.unitId === mapping.unitId));
@@ -90,9 +94,9 @@ test('grade mappings require a named five-four textbook and an observed title; n
     }
     assert.equal(mapping.schoolSystem, '5-4'); assert.equal(mapping.status, 'catalogue_verified');
   }
-  assert.equal(learning.searchCatalog({ kind: 'poetry', grade: 2, semester: '下册' }).length, 9, 'new original-page evidence fills the six missing 2B locations');
+  assert.equal(learning.searchCatalog({ kind: 'poetry', grade: 2, semester: '下册' }).length, 10, 'new original-page evidence fills the six missing 2B locations');
   assert.ok(learning.catalogById.get('moe-2022-zh-1-6-025').gradeMappings.some(m => m.grade === 2 && /两个黄鹂/.test(m.evidence)));
-  assert.equal(learning.searchCatalog({ kind: 'poetry', grade: 2 }).length, 16);
+  assert.equal(learning.searchCatalog({ kind: 'poetry', grade: 2 }).length, 17);
   assert.equal(learning.searchCatalog({ kind: 'poetry', grade: 1 }).length, 13);
   assert.equal(learning.searchCatalog({ grade: 3 }).filter(item => !item.learningArea).length, 378);
   assert.equal(learning.searchCatalog({ grade: 6 }).filter(item => !item.learningArea).length, 664);

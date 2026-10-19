@@ -35,6 +35,7 @@ export interface Navigation {
   date?: string;
   libraryKind?: ContentKind;
   libraryScope?: ContentScope;
+  libraryRecitation?: 'required';
   libraryGrade?: SchoolGrade | 0;
   libraryView?: 'exam';
 }

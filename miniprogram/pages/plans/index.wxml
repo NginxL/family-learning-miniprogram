@@ -36,6 +36,7 @@
           <view wx:for="{{visibleRules}}" wx:key="id" class="rule-settings">
             <view class="row"><view>{{item.label}}</view><picker range="{{modes}}" value="{{item.mode === 'review' ? 1 : 0}}" data-id="{{item.id}}" bindchange="changeMode" disabled="{{busy}}"><view class="mode-picker">{{item.mode === 'review' ? '复习' : '全新'}} ▾</view></picker></view>
             <picker range="{{item.scopes}}" range-key="label" value="{{item.scopeIndex}}" data-id="{{item.id}}" bindchange="changeScope" disabled="{{busy}}"><view class="picker">{{item.scopes[item.scopeIndex].label}} ▾</view></picker>
+            <picker wx:if="{{item.id === 'poetry'}}" range="{{recitationPolicies}}" value="{{item.recitationPolicyIndex}}" bindchange="changeRecitationPolicy" disabled="{{busy}}"><view class="picker">{{recitationPolicies[item.recitationPolicyIndex]}} ▾</view></picker>
             <button class="quiet" data-id="{{item.id}}" bindtap="browseRule">查看内容 · {{item.poolCount}} 项 →</button>
             <view wx:if="{{item.id === 'english-reading' && !item.poolCount}}" class="muted">请先在「添加任务」中录入英文文章，加入自动内容库。</view>
           </view>

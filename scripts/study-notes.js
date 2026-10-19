@@ -1,6 +1,8 @@
 'use strict';
 const classical = require('../data/catalogs/chinese-classical-details.json');
+const classicalSupplements = require('../data/catalogs/chinese-classical-supplements.json');
 const english = require('../data/catalogs/english-word-study.json');
+const structures = require('../data/catalogs/english-structure-supplements.json');
 const { hasSense } = require('./english-vocabulary');
 const compact = text => text.replace(/[\s，。；、！？：“”‘’]/g, '');
 
@@ -15,6 +17,8 @@ function augment(items) {
     item.studyNotes = notes;
   };
   for (const entry of classical.entries) {
+    const supplement = classicalSupplements.entries.find(row => row.contentId === entry.contentId);
+    if (!supplement) throw Error(`Missing classical supplement: ${entry.contentId}`);
     const item = byId.get(entry.contentId);
     if (!item || entry.words.length < 5 || entry.sentences.length < 2 || !entry.structure || !entry.pitfall
       || entry.sentences.some(sentence => !compact(item.detail).includes(compact(sentence.text))))
@@ -26,12 +30,15 @@ function augment(items) {
         { title: '字词放回原句', body: entry.words.map(word => `${word.text}：${word.meaning}`).join('\n') },
         { title: '重点句意', body: entry.sentences.map(sentence => `${sentence.text}\n${sentence.meaning}`).join('\n\n') },
         { title: '篇章理解', body: entry.structure },
-        { title: '容易混淆', body: entry.pitfall }
+        { title: '容易混淆', body: entry.pitfall },
+        { title: '课后字词与用法', body: supplement.words.map(word => `${word.text}：${word.meaning}`).join('\n') },
+        { title: '文化与阅读提示', body: supplement.culture }
       ],
-      exercises: entry.exercises.map(exercise => ({ ...exercise })),
+      exercises: [...entry.exercises, ...supplement.exercises].map(exercise => ({ ...exercise })),
       sources: [{ title: '原作依据', url: item.textSourceUrl || item.referenceUrl },
-        ...(entry.textbookEvidence || []).map(page => ({ title: `讲解核验原书第${page.sourcePrintPage}页 / 电子第${page.sourcePdfPage}页`, url: page.sourceUrl }))],
-      searchTerms: entry.words.map(word => word.text)
+        ...(entry.textbookEvidence || []).map(page => ({ title: `讲解核验原书第${page.sourcePrintPage}页 / 电子第${page.sourcePdfPage}页`, url: page.sourceUrl })),
+        { title: supplement.pages.length ? `补充学习依据 · 原书第${supplement.pages.map(p => p.sourcePrintPage).join('、')}页` : '补充学习原作依据（教材册次待核实）', url: supplement.sourceUrl }],
+      searchTerms: [...entry.words, ...supplement.words].map(word => word.text)
     });
   }
   for (const entry of english.entries) {
@@ -68,7 +75,18 @@ function augment(items) {
       searchTerms: [entry.lemma, ...entry.forms.map(form => form.value), ...entry.patterns.map(pattern => pattern.pattern), ...entry.families.map(family => family.words)]
     });
   }
+  for (const entry of structures.entries) {
+    const item = byId.get(entry.contentId);
+    if (item?.kind !== 'word' || ![item.title, ...(item.aliases || [])].includes(entry.lemma)) throw Error(`Invalid structure target: ${entry.contentId}`);
+    item.studyNotes ||= { title: '句型与搭配', notice: '跨年级用法补充，例句与练习自编；词卡所在册次不代表这些用法都出自该册，不是完整中考范围。', sections: [], exercises: [], sources: [], searchTerms: [] };
+    item.studyNotes.sections.push({ title: '句型与用法补充', body: `${entry.pattern}\n${entry.meaning}\n${entry.example}\n${entry.translation}\n${entry.note}` });
+    item.studyNotes.exercises.push({ ...entry.exercise });
+    item.studyNotes.sources.push(...entry.sources.filter(source => !item.studyNotes.sources.some(existing => existing.url === source.url)));
+    item.studyNotes.searchTerms.push(entry.pattern);
+  }
   return items;
 }
-module.exports = { augment, counts: { classicalGuides: classical.entries.length, wordGuides: english.entries.length,
-  phrasePatterns: english.entries.reduce((n, e) => n + e.patterns.length, 0), wordFamilies: english.entries.reduce((n, e) => n + e.families.length, 0) } };
+module.exports = { augment, counts: { classicalGuides: classical.entries.length,
+  wordGuides: new Set([...english.entries, ...structures.entries].map(entry => entry.contentId)).size,
+  phrasePatterns: english.entries.reduce((n, e) => n + e.patterns.length, 0) + structures.entries.length,
+  wordFamilies: english.entries.reduce((n, e) => n + e.families.length, 0) } };

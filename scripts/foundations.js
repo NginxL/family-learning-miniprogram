@@ -61,7 +61,7 @@ function augment(items) {
           evidence: '五四制原书目录所列语法主题已核对；电子页指目录证据页，不是语法正文页。讲解、例句与题目自编；学校印次待确认。' };
       });
     const englishLesson = ['vocabulary', 'grammar'].includes(lesson.area);
-    const item = { id: lesson.id, kind: englishLesson ? 'english-reading' : 'reading', title: lesson.title,
+    const item = { id: lesson.id, ...(lesson.minimumServiceVersion ? { minimumServiceVersion: lesson.minimumServiceVersion } : {}), kind: englishLesson ? 'english-reading' : 'reading', title: lesson.title,
       detail: lessonDetail(lesson), minutes: 8, learningArea: lesson.area, manualOnly: true,
       ...(lesson.textRevision ? { textRevision: lesson.textRevision } : {}),
       ...(lesson.contentRevision ? { contentRevision: lesson.contentRevision } : {}),

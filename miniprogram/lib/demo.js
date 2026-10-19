@@ -15,7 +15,7 @@ function createDemo(wx) {
   const validateRules = rules => {
       if (!Array.isArray(rules) || rules.length !== learning.kinds.length || new Set(rules.map((rule) => rule.kind)).size !== learning.kinds.length
         || rules.some((rule) => !learning.kinds.some((kind) => kind.id === rule.kind && Number.isInteger(rule.quantity) && rule.quantity >= 0 && rule.quantity <= kind.max)
-          || !['new', 'review'].includes(rule.mode) || !learning.scopeOptions(rule.kind).some((scope) => scope.id === (rule.scope || 'starter')))) throw new Error('每日数量或类型无效');
+          || (rule.recitationPolicy !== undefined && (rule.kind !== 'poetry' || !['all', 'first', 'only'].includes(rule.recitationPolicy))) || !['new', 'review'].includes(rule.mode) || !learning.scopeOptions(rule.kind).some((scope) => scope.id === (rule.scope || 'starter')))) throw new Error('每日数量或类型无效');
   };
   const profile = (input, today) => {
     const birthDate = input.birthDate == null || input.birthDate === '' ? null : input.birthDate;
@@ -29,14 +29,14 @@ function createDemo(wx) {
   return async (action, input = {}) => {
     const state = read(); state.ledgers = state.ledgers || {};
     const today = chinaDate();
-    if (state.family) state.family.children = state.family.children.map((child) => withCurrentAge(child, today));
+    if (state.family) { state.family.recitationPlanningVersion = 1; state.family.children = state.family.children.map((child) => withCurrentAge(child, today)); }
     const ledgerFor = (childId) => {
       if (!state.family.children.some((child) => child.id === childId)) throw new Error('孩子档案不存在');
       return state.ledgers[childId] || (state.ledgers[childId] = { records: {} });
     };
     if (action === 'bootstrap') {
       if (!state.family && input.ensureDefault === true) {
-        state.family = { id: 'demo-family', name: '我的家庭', ownerId: 'demo-parent', myRole: 'owner', canJoinFamily: false,
+        state.family = { id: 'demo-family', name: '我的家庭', ownerId: 'demo-parent', myRole: 'owner', recitationPlanningVersion: 1, canJoinFamily: false,
           members: [{ id: 'demo-parent', name: '我', role: 'owner' }],
           children: [{ id: 'demo-child', name: '孩子', age: 6, schoolGrade: 1, ageRecordedOn: today, version: 0 }],
           plans: [], autoPlans: { 'demo-child': learning.defaultRules() } };
@@ -48,7 +48,7 @@ function createDemo(wx) {
       if (state.family) throw new Error('家庭已创建，请刷新');
       if (!input.name || !input.memberName || !input.childName) throw new Error('请填写家庭名称、你的称呼和孩子昵称');
       const childId = 'demo-child';
-      state.family = { id: 'demo-family', name: input.name, ownerId: 'demo-parent', myRole: 'owner',
+      state.family = { id: 'demo-family', name: input.name, ownerId: 'demo-parent', myRole: 'owner', recitationPlanningVersion: 1,
         members: [{ id: 'demo-parent', name: input.memberName, role: 'owner' }], children: [{ id: childId, name: input.childName, ...profile(input, today), version: 0 }],
         plans: [], autoPlans: { [childId]: learning.defaultRules() } };
       write(state); return { family: state.family };

@@ -50,6 +50,8 @@ export interface StudyNotes {
   searchTerms: string[];
 }
 export interface KnowledgeItem extends Content {
+  minimumServiceVersion?: number;
+  recitationPractice?: Array<{ bookId: string; requirement: string; start?: string; end?: string; answerSha256: string }>;
   vocabularyRevision?: string;
   contentRevision?: string;
   commonSenseSources?: Array<{ title: string; url: string }>;
@@ -114,11 +116,13 @@ export interface Task extends LearningContent {
   pending?: boolean;
   repeatAllowed?: true;
 }
+export type RecitationPolicy = 'all' | 'first' | 'only';
 export interface AutoRule {
   kind: ContentKind;
   mode: LearningMode;
   scope: ContentScope;
   quantity: number;
+  recitationPolicy?: RecitationPolicy;
 }
 export interface DailyTemplate { id: string; name: string; rules: AutoRule[] }
 export interface WeeklyTemplateSchedule { weekdaysTemplateId: string; weekendTemplateId: string }
@@ -173,6 +177,7 @@ export interface Family extends PlanningFamily {
   homeworkBytes?: number;
 }
 export interface PublicFamily extends Omit<Family, 'createdAt' | 'activeInviteHash' | 'autoCreated' | 'scheduledContents'> {
+  recitationPlanningVersion?: 1;
   myRole: Member['role'];
   canJoinFamily: boolean;
   myChildId?: string;
@@ -197,6 +202,7 @@ export interface HistoryQuery {
   offset?: number;
 }
 export interface CatalogQuery {
+  recitation?: 'required' | 'familiar';
   learningArea?: LearningArea;
   kind?: ContentKind;
   subject?: SubjectFilter;

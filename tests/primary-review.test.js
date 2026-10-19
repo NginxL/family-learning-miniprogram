@@ -50,7 +50,7 @@ test('first-grade complete audio Word banks and fourth/fifth-grade printed lists
 });
 
 test('primary supplementary poems reuse canonical records and distinguish excerpt scope and page systems', () => {
-  for (const [grade, semester, total] of [[2,'下册',9],[3,'下册',10],[4,'上册',12],[4,'下册',11]])
+  for (const [grade, semester, total] of [[2,'下册',10],[3,'下册',10],[4,'上册',12],[4,'下册',11]])
     assert.equal(learning.searchCatalog({ grade, semester, kind: 'poetry' }).length, total);
   const grass = learning.catalogById.get('moe-2022-zh-1-6-037');
   assert.match(grass.gradeMappings.find(m => m.bookId === 'chinese-2b-sample').evidence, /后四句|后4句|前四句/);

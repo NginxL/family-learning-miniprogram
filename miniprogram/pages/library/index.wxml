@@ -16,6 +16,7 @@
     <picker range="{{scopes}}" range-key="label" value="{{scopeIndex}}" bindchange="changeScope"><view class="picker">{{scopes[scopeIndex].label}} ▾</view></picker>
     <picker range="{{gradeLabels}}" value="{{grade}}" bindchange="changeGrade"><view class="picker">{{gradeLabels[grade]}} ▾</view></picker>
     <picker range="{{semesterLabels}}" value="{{semesterIndex}}" bindchange="changeSemester"><view class="picker">{{semesterLabels[semesterIndex]}} ▾</view></picker>
+    <picker range="{{recitationLabels}}" value="{{recitationIndex}}" bindchange="changeRecitation"><view class="picker">{{recitationLabels[recitationIndex]}} ▾</view></picker>
     <picker wx:if="{{family}}" range="{{learningFilterLabels}}" value="{{learningFilterIndex}}" bindchange="changeLearningFilter"><view class="picker">{{learningFilterLabels[learningFilterIndex]}} ▾</view></picker>
     <view wx:if="{{grade || semesterIndex}}" class="muted">教材字词、古诗与单元原创练习分别标注；尚未覆盖整年级。</view>
     </block>

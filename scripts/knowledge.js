@@ -10,6 +10,7 @@ const curriculum = require('./curriculum');
 const lowerPrimary = require('./lower-primary');
 const foundations = require('./foundations');
 const textRevisions = require('./text-revisions');
+const recitationPractice = require('./recitation-practice');
 const { officialPlacements } = require('./chinese-placement');
 function period(entry) {
   const metadata = dynasties.entries.find((item) => item.id === entry.id);
@@ -75,7 +76,7 @@ function knowledge() {
     minutes: 1, referenceUrl: tables.sourceUrl, collections: ['tables'],
     note: '另列表，不计入课标 1600 个主词条或 505 个带星词。'
   }));
-  return textRevisions.augment(foundations.augment(lowerPrimary.augment([...poems, ...additional, ...words, ...tableWords])));
+  return recitationPractice.augment(textRevisions.augment(foundations.augment(lowerPrimary.augment([...poems, ...additional, ...words, ...tableWords]))));
 }
 module.exports = { knowledge, resourcesFor: catalog => ({ ...module.exports.resources,
   examFramework: foundations.frameworkWithCounts(examFramework, catalog) }), resources: {
@@ -85,6 +86,8 @@ module.exports = { knowledge, resourcesFor: catalog => ({ ...module.exports.reso
   coverage: '上海五四制：小学1–5、初中6–9年级。36个学科册次均有可直接学习的配套内容。一至五年级语文十册字表及81组原创练习已整理；四、五、九下语文为2019审定原书。六至九年级语文两册分别有26、38、48、47处古诗文映射，各有16篇原创练习。三上英语完整纸本词表159项；六至八年级英语两册分别核实533、533、468个完整单元词项；九上199项完整单元词表。三至五及九下英语按2026年春季官方资源保留旧版音频选词，不能视为完整词表或2027年春季用书。各册配原创阅读和例句。七册旧版对应的新版下册、学校版次和逐课全量知识仍待核实；不是全教材或中考全量。',
   books: [...new Map([...regional.books, ...lowerPrimary.bookSummaries()].map(book => [book.id, book])).values()],
   links: [
+    { title: 'Open English Wordnet 2025 · 词义来源与许可', url: 'https://en-word.net/', note: 'Open English Wordnet contributors；基于Princeton WordNet。CC BY 4.0；选择义项后中文改编，非完整词典或上海中考范围。完整许可随代码包保留。' },
+    { title: 'Open English Wordnet 2025 · 固定发行版', url: 'https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition', note: '词条和义项定位保存于数据证据清单；教材单元义单独核验。' },
     { title: '上海 2026 秋季教学用书通知', url: regional.noticeUrl, note: '市级用书目录；学校实际选用版本待确认' },
     { title: '上海 2026 春季教学用书通知', url: 'https://edu.sh.gov.cn/xxgk2_zdgz_jcjy_04/20260104/665a9f94e26543cf8a2be770a2d4af61.html', note: '三至五及九下英语仍列试用本；2025学年第二学期，不能当作2027年春季用书证明' },
     { title: '上海智慧教育平台 · 教材配套资源', url: 'https://www.sh.smartedu.cn/teachingMaterial?type=11', note: '2026 学年第一学期学生版；与具体学校选用版次分开核验' },

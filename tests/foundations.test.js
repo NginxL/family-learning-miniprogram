@@ -51,9 +51,9 @@ test('unmapped vocabulary remains ungraded while named five-four book mappings r
 });
 
 test('foundation cards contain usable original instruction and independent practice identities', () => {
-  assert.equal(foundation.length, 125);
+  assert.equal(foundation.length, 129);
   const counts = Object.fromEntries(learning.learningAreas.map(area => [area.id, foundation.filter(i => i.learningArea === area.id).length]));
-  assert.deepEqual(counts, { recitation: 9, classical: 51, vocabulary: 10, grammar: 55 });
+  assert.deepEqual(counts, { recitation: 9, classical: 55, vocabulary: 10, grammar: 55 });
   for (const lesson of [...chinese.lessons, ...english.lessons]) {
     const item = learning.catalogById.get(lesson.id);
     assert.ok(item.manualOnly); assert.equal(item.workId, undefined); assert.equal(item.coveredContentIds, undefined);
@@ -190,16 +190,16 @@ test('manual foundation work syncs across parents after a lost response and libr
   page.changeLearningFilter({ detail: { value: 1 } }); assert.equal(page.data.total, 54);
   page.changeLearningFilter({ detail: { value: 0 } });
   page.changeLearningArea({ detail: { value: page.data.learningAreas.findIndex(i => i.id === 'classical') } });
-  assert.equal(page.data.total, 51);
+  assert.equal(page.data.total, 55);
   page.showBook({ currentTarget: { dataset: { id: 'english-9a-2024' } } });
   assert.equal(page.data.learningAreaIndex, 0); assert.ok(page.data.items.some(i => i.kind === 'word'));
-  assert.equal(page.data.readingCount, 230); assert.equal(page.data.englishReadingCount, 161); assert.equal(page.data.foundationCount, 125);
+  assert.equal(page.data.readingCount, 230); assert.equal(page.data.englishReadingCount, 161); assert.equal(page.data.foundationCount, 129);
 });
 
 test('framework coverage numbers come from the same catalogue used by pages and never claim complete exam coverage', () => {
-  assert.deepEqual(resources.examFramework.counts, { poetry: 260, word: 2748, sentence: 690, reading: 230,
-    englishReading: 161, recitation: 9, classical: 51, vocabulary: 10, grammar: 55, recitationRequirements: 138, unmappedWords: 404,
-    classicalGuides: 55, wordGuides: 644, phrasePatterns: 118, wordFamilies: 77 });
+  assert.deepEqual(resources.examFramework.counts, { poetry: 261, word: 2748, sentence: 690, reading: 230,
+    englishReading: 161, recitation: 9, classical: 55, vocabulary: 10, grammar: 55, recitationRequirements: 138, unmappedWords: 404,
+    classicalGuides: 55, wordGuides: 646, phrasePatterns: 163, wordFamilies: 77 });
   assert.equal(resources.examFramework.complete, false); assert.equal(resources.examFramework.coverageRate, null);
   assert.equal(resources.curriculum.slots.filter(slot => slot.editionReview).length, 7);
   assert.ok(resources.curriculum.slots.every(slot => slot.fullCoverage === false));

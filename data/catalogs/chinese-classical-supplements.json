@@ -1,0 +1,2832 @@
+{
+  "checkedAt": "2026-10-19",
+  "scope": "55篇既有文言文的课后字词缺口、文化与迁移练习；不宣称覆盖所有可能考点。",
+  "entries": [
+    {
+      "contentId": "sh54-sima-guang",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=9185e4a3-efb4-4ec0-bfd9-1cb194c260d3&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-3a-sample",
+      "pages": [
+        {
+          "sourcePrintPage": 96,
+          "sourcePdfPage": 101,
+          "sha256": "91d59270c85fa044888f0f006eba1bbd57facd936c6c760e11cb9355c4f9ed0b"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "去",
+          "meaning": "离开"
+        },
+        {
+          "text": "之",
+          "meaning": "在“击瓮破之”中指瓮"
+        }
+      ],
+      "culture": "本文出自《宋史·司马光传》，用简短的动作描写表现人物。",
+      "exercises": [
+        {
+          "question": "比较“众皆弃去”和“光持石击瓮”的行动，说明人物特点。",
+          "answer": "众人因惊慌离开，司马光用石头破瓮救人；从具体行动看出他遇事冷静、能想办法。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-shouzhudaitu",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=bd1e1af7-f570-436d-afa4-f326691676f4&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-3b-sample",
+      "pages": [
+        {
+          "sourcePrintPage": 16,
+          "sourcePdfPage": 21,
+          "sha256": "cfae7de7cafcbf0a4b49fcfb7ff307fb4934cb75a587208b708c78ae6adbf94f"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "因",
+          "meaning": "于是"
+        },
+        {
+          "text": "为宋国笑",
+          "meaning": "被宋国人嘲笑"
+        },
+        {
+          "text": "复",
+          "meaning": "再，又"
+        }
+      ],
+      "culture": "寓言借故事讲道理；“走”在文中指跑，不是现代的步行。",
+      "exercises": [
+        {
+          "question": "解释“为宋国笑”中的“为”，并说明宋人错在哪里。",
+          "answer": "“为”表示被动。宋人把偶然得到兔子的事当作常规，放弃了耕作。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-jingwei",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d3b5a21b-f8d1-4633-8231-407100c8204d&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-4a-sample",
+      "pages": [
+        {
+          "sourcePrintPage": 50,
+          "sourcePdfPage": 55,
+          "sha256": "29ea5ee2b3d3455f397b07b70c5632f1706a7d6b3210c45e27fddd8538d11fa2"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "为",
+          "meaning": "成为，变为"
+        },
+        {
+          "text": "于",
+          "meaning": "在"
+        },
+        {
+          "text": "以",
+          "meaning": "用来"
+        }
+      ],
+      "culture": "《山海经》记载神话传说，不能把神话情节当作历史事实。",
+      "exercises": [
+        {
+          "question": "“故为精卫”和“为宋国笑”的“为”含义相同吗？",
+          "answer": "不同。前者是“成为”，后者表示“被”。要放回句子判断。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-nangying",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=750e0014-1488-4774-9f73-8781de6faf51&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-4b-sample",
+      "pages": [
+        {
+          "sourcePrintPage": 76,
+          "sourcePdfPage": 81,
+          "sha256": "dff2790db854dda9694c6527ab815fed9b4be76065e44e27970a4d81eaa5f7c9"
+        },
+        {
+          "sourcePrintPage": 77,
+          "sourcePdfPage": 82,
+          "sha256": "e333d6b3298591132c7131e9e3f331cdb58b3b61f816dd357a1d246bd2f7714a"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "囊萤",
+          "meaning": "用袋子装萤火虫"
+        },
+        {
+          "text": "以夜继日",
+          "meaning": "用夜晚接着白天学习"
+        }
+      ],
+      "culture": "“囊萤”写家贫而勤学；理解历史故事中的条件，不把照明方法当作现实学习建议。",
+      "exercises": [
+        {
+          "question": "“以夜继日”表现怎样的学习态度？结合条件作答。",
+          "answer": "在家贫、缺少灯油的条件下仍设法读书，表现勤奋；学习其态度，不需要照搬古人的照明方式。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-wangrong",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d3b5a21b-f8d1-4633-8231-407100c8204d&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-4a-sample",
+      "pages": [
+        {
+          "sourcePrintPage": 102,
+          "sourcePdfPage": 107,
+          "sha256": "49f450a910c6bcc7f4628656748bb4f05698a596842fdefdc6c46c6e35de7ba9"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "尝",
+          "meaning": "曾经"
+        },
+        {
+          "text": "走",
+          "meaning": "跑"
+        },
+        {
+          "text": "信然",
+          "meaning": "确实如此"
+        }
+      ],
+      "culture": "《世说新语》记述人物言谈轶事；“七岁”交代王戎当时的年龄。",
+      "exercises": [
+        {
+          "question": "王戎作判断用了哪两个观察到的条件？",
+          "answer": "树在路边，而且李子很多还把枝条压弯；由此推断果实苦，后面的取果验证了判断。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-tiechu",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=750e0014-1488-4774-9f73-8781de6faf51&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-4b-sample",
+      "pages": [
+        {
+          "sourcePrintPage": 76,
+          "sourcePdfPage": 81,
+          "sha256": "dff2790db854dda9694c6527ab815fed9b4be76065e44e27970a4d81eaa5f7c9"
+        },
+        {
+          "sourcePrintPage": 77,
+          "sourcePdfPage": 82,
+          "sha256": "e333d6b3298591132c7131e9e3f331cdb58b3b61f816dd357a1d246bd2f7714a"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "还",
+          "meaning": "回去"
+        },
+        {
+          "text": "欲",
+          "meaning": "想要"
+        },
+        {
+          "text": "感其意",
+          "meaning": "被她的意志所感动"
+        }
+      ],
+      "culture": "“世传”说明是流传的故事；课文用故事劝人坚持学习，不等同于已考证的李白生平。",
+      "exercises": [
+        {
+          "question": "“是”在“过是溪”中是什么意思？与现代判断词“是”相同吗？",
+          "answer": "指“这”，即经过这条溪；不是现代表示判断的“是”。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-guren-dushu-lunyu",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=e2055f40-fa27-4c9d-adf4-3586e26f418e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-5a-sample",
+      "pages": [
+        {
+          "sourcePrintPage": 102,
+          "sourcePdfPage": 107,
+          "sha256": "b5e9e941543117f4a37b4e5441a12f23b83750476aa9cf117d8e6ce8382f5ca6"
+        },
+        {
+          "sourcePrintPage": 103,
+          "sourcePdfPage": 108,
+          "sha256": "39284bfd00b8817180758c8660a7a5b1af830bc4dfdbe7f5b0c45e3daa7b6fb7"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "知",
+          "meaning": "在“是知也”中同“智”，智慧"
+        }
+      ],
+      "culture": "《论语》主要记录孔子及其弟子的言行。“敏”必须结合所在句区分。",
+      "exercises": [
+        {
+          "question": "“敏而好学”和“敏以求之”的“敏”各是什么意思？",
+          "answer": "前者指聪敏；后者指勤勉。同一个字在不同句中不一定同义。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-guren-dushu-zhuxi",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=e2055f40-fa27-4c9d-adf4-3586e26f418e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-5a-sample",
+      "pages": [
+        {
+          "sourcePrintPage": 103,
+          "sourcePdfPage": 108,
+          "sha256": "39284bfd00b8817180758c8660a7a5b1af830bc4dfdbe7f5b0c45e3daa7b6fb7"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "心到最急",
+          "meaning": "用心最重要"
+        },
+        {
+          "text": "岂",
+          "meaning": "难道"
+        },
+        {
+          "text": "乎",
+          "meaning": "句末语气词"
+        }
+      ],
+      "culture": "朱熹是宋代学者；这一段谈读书方法，重点是专心。",
+      "exercises": [
+        {
+          "question": "作者为什么把“心到”放在首位？",
+          "answer": "心不在书上，眼睛和嘴巴的活动难以保证真正理解与记忆；这是对“三到”关系的说明。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-yangshi-zhizi",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=f182b376-35af-4e94-849a-91ea3f97023c&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-5b-sample",
+      "pages": [
+        {
+          "sourcePrintPage": 98,
+          "sourcePdfPage": 103,
+          "sha256": "6a857fd8928cd0ab79e1fcffaedd6663886bd0d5b51db73977f5b38486e108e1"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "为设果",
+          "meaning": "给他摆出水果"
+        },
+        {
+          "text": "应声",
+          "meaning": "随着说话声马上回答"
+        }
+      ],
+      "culture": "“夫子”是对对方的敬称；“未闻”使反驳带有礼貌，而不是直接斥责对方。",
+      "exercises": [
+        {
+          "question": "杨氏之子为什么说“未闻”而不直接说“孔雀是夫子家禽”？",
+          "answer": "沿用对方把姓和果名相联系的方式反驳，“未闻”保留了礼貌和委婉语气。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-zixiangmaodun",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=f182b376-35af-4e94-849a-91ea3f97023c&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-5b-sample",
+      "pages": [
+        {
+          "sourcePrintPage": 74,
+          "sourcePdfPage": 79,
+          "sha256": "d0c94d94407695216a0ff6acca31476da16faf8a6e8021d4b3f448c24d0631f8"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "夫",
+          "meaning": "句首发语词"
+        },
+        {
+          "text": "立",
+          "meaning": "成立"
+        },
+        {
+          "text": "其",
+          "meaning": "代词，他的"
+        }
+      ],
+      "culture": "寓言中的“矛”和“盾”是古代兵器；从同一对象的前后说法检验是否矛盾。",
+      "exercises": [
+        {
+          "question": "把“不可陷之盾”和“无不陷之矛”放在一起，矛盾在哪里？",
+          "answer": "如果盾什么也刺不穿，矛就不能刺穿它；如果矛什么都能刺穿，盾就不是不可刺穿。两种绝对说法不能同时成立。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-chess",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=a953eeec-db0c-4c8b-860f-aa94f4727b6b&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-6b",
+      "pages": [
+        {
+          "sourcePrintPage": 46,
+          "sourcePdfPage": 53,
+          "sha256": "de4368b275113cca7484c68b841c2fd2129f959ec868fd451eec9f1dc6dfab94"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "与",
+          "meaning": "同“欤”，句末疑问语气"
+        },
+        {
+          "text": "为",
+          "meaning": "因为"
+        },
+        {
+          "text": "缴",
+          "meaning": "系在箭上的丝绳"
+        }
+      ],
+      "culture": "“弈”指下棋；“弈秋”是善于下棋的人名。两人条件相近，学习态度不同。",
+      "exercises": [
+        {
+          "question": "“为是其智弗若与”是在确认天赋不同吗？",
+          "answer": "是在提出疑问：是因为他的智慧不如前者吗？后文否定这个解释，强调专心的重要。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-two-children",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=2ca4002f-cb3d-4a21-bcfe-ebb94032a400&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-6a",
+      "pages": [
+        {
+          "sourcePrintPage": 128,
+          "sourcePdfPage": 135,
+          "sha256": "e74c7e0b6bc7c3c65c1abf5f122b8d6008cb2a3c3c73bde10fb0f19bebea4244"
+        },
+        {
+          "sourcePrintPage": 129,
+          "sourcePdfPage": 136,
+          "sha256": "26bebadd85a807d809be01278fb9c78859ebc0a4dcb7001b3c802869a65acb89"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "游",
+          "meaning": "游历"
+        },
+        {
+          "text": "为",
+          "meaning": "同“谓”，说"
+        },
+        {
+          "text": "知",
+          "meaning": "同“智”，智慧"
+        }
+      ],
+      "culture": "“辩”是争论；两个孩子依据不同感官现象推理，孔子不强作判断。",
+      "exercises": [
+        {
+          "question": "比较“为是其智弗若与”和“孰为汝多知乎”的“为”。",
+          "answer": "前一句是“因为”，后一句同“谓”，是“说”。“知”在后一句同“智”。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-caochong",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=2ca4002f-cb3d-4a21-bcfe-ebb94032a400&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-6a",
+      "pages": [
+        {
+          "sourcePrintPage": 129,
+          "sourcePdfPage": 136,
+          "sha256": "26bebadd85a807d809be01278fb9c78859ebc0a4dcb7001b3c802869a65acb89"
+        },
+        {
+          "sourcePrintPage": 130,
+          "sourcePdfPage": 137,
+          "sha256": "40d85ce281bd2e0865afa1a8752244414448ab52671752889e11818124af73b0"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "聪察岐嶷",
+          "meaning": "明察聪慧"
+        },
+        {
+          "text": "施行",
+          "meaning": "实际实行"
+        }
+      ],
+      "culture": "古代“斛”等计量和现代单位不可直接混算；本文重点是记录吃水位置和替换重物。",
+      "exercises": [
+        {
+          "question": "用自己的话说明曹冲怎样把难题变成容易处理的问题。",
+          "answer": "先记大象上船后的水位，再以重物替代到同一水位，分别称这些重物的重量并合计。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-archery",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=a953eeec-db0c-4c8b-860f-aa94f4727b6b&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-6b",
+      "pages": [
+        {
+          "sourcePrintPage": 47,
+          "sourcePdfPage": 54,
+          "sha256": "047f01f4fab92f1713c6468848e8241b07e541e76af62bcb5a4c3f4a17689ec5"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "子",
+          "meaning": "对对方的敬称，您"
+        },
+        {
+          "text": "然",
+          "meaning": "这样"
+        },
+        {
+          "text": "所以然",
+          "meaning": "这样做或这样发生的原因"
+        }
+      ],
+      "culture": "本文讨论不只知结果，还要知原因；“关尹子”是人物称呼。",
+      "exercises": [
+        {
+          "question": "“中”与“所以中”有什么区别？",
+          "answer": "“中”是射中这个结果；“所以中”是能射中的原因、方法。能解释和把握原因，才更可能稳定地做到。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-yongxue",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-7a",
+      "pages": [
+        {
+          "sourcePrintPage": 34,
+          "sourcePdfPage": 41,
+          "sha256": "c51885dfe0d4612756439b76954cb5a05571fcd94ae0bdebc477426630e7e422"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "差（chā）",
+          "meaning": "大致，差不多"
+        },
+        {
+          "text": "即",
+          "meaning": "就是"
+        },
+        {
+          "text": "无奕女",
+          "meaning": "谢无奕的女儿"
+        }
+      ],
+      "culture": "结尾交代谢道韫身份；赏析比喻可以从颜色、形态、动态等不同角度说明理由。",
+      "exercises": [
+        {
+          "question": "“撒盐”和“柳絮”两个比喻，分别可以从什么角度评价？",
+          "answer": "撒盐可从白色颗粒看相似；柳絮可从轻盈飘舞看相似。答案开放，需结合雪的状态解释，不能只写哪个一定好。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-chentaiqiu",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-7a",
+      "pages": [
+        {
+          "sourcePrintPage": 35,
+          "sourcePdfPage": 42,
+          "sha256": "b984ea0cda4f9281cf059e6f98ce6ac4d04aef1904b0f0108c5cb22ea412a033"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "不（fǒu）",
+          "meaning": "同“否”"
+        },
+        {
+          "text": "乃",
+          "meaning": "才"
+        },
+        {
+          "text": "舍",
+          "meaning": "丢下"
+        },
+        {
+          "text": "去",
+          "meaning": "离开"
+        }
+      ],
+      "culture": "“尊君”是称对方父亲，“家君”是称自己父亲；称谓反映交谈双方的关系。",
+      "exercises": [
+        {
+          "question": "从守信、尊重和礼貌三个角度评价元方，意见可以不同。",
+          "answer": "可肯定他指出失约和无礼，也可讨论“入门不顾”是否足够礼貌；要引用具体言行，不把开放题写成唯一结论。"
+        }
+      ]
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-041",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-7a",
+      "pages": [
+        {
+          "sourcePrintPage": 62,
+          "sourcePdfPage": 69,
+          "sha256": "bb8775364fd9a84e2861355291ed984a6e24b2c9ec6bb767dff188a26335b051"
+        },
+        {
+          "sourcePrintPage": 63,
+          "sourcePdfPage": 70,
+          "sha256": "8ea4e9b44db368e387ae108e0ee06f02a91c9ec9f73b13f23f71b828a32cf8a5"
+        },
+        {
+          "sourcePrintPage": 64,
+          "sourcePdfPage": 71,
+          "sha256": "6755dc4762a2144bd0cfc295d91e9ded4d9e839a20da5ed0481ca082f49f8c0f"
+        },
+        {
+          "sourcePrintPage": 65,
+          "sourcePdfPage": 72,
+          "sha256": "fe42db8f4161a100da830f8a2792cf8738da1a55c0f5479f7344bb669c788407"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "有",
+          "meaning": "同“又”，连接整数与零数"
+        },
+        {
+          "text": "逾",
+          "meaning": "越过"
+        },
+        {
+          "text": "饭",
+          "meaning": "名词作动词，吃"
+        },
+        {
+          "text": "水",
+          "meaning": "这里指冷水"
+        },
+        {
+          "text": "乐之",
+          "meaning": "以它为乐"
+        },
+        {
+          "text": "三省",
+          "meaning": "多次反省，一说实指后面三方面"
+        }
+      ],
+      "culture": "《论语》是语录体著作；“子曰”的“子”是对孔子的尊称。",
+      "exercises": [
+        {
+          "question": "结合“饭疏食，饮水”和“两小儿辩日”的“探汤”，解释水、汤。",
+          "answer": "这两处“水”是冷水，“汤”是热水；不要套用现代“汤菜”的意思。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-advice-son",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-7a",
+      "pages": [
+        {
+          "sourcePrintPage": 91,
+          "sourcePdfPage": 98,
+          "sha256": "6f70ade774edb4ebee819cf7e30f9259c7afda1226448679c007857019894803"
+        },
+        {
+          "sourcePrintPage": 92,
+          "sourcePdfPage": 99,
+          "sha256": "395403f36cc574be840be0d23c6df57a8a10ae075d17ff309a798952cda58bcb"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "夫",
+          "meaning": "句首发语词"
+        },
+        {
+          "text": "静",
+          "meaning": "屏除杂念和干扰，宁静专一"
+        },
+        {
+          "text": "以",
+          "meaning": "用来"
+        },
+        {
+          "text": "遂",
+          "meaning": "最终"
+        }
+      ],
+      "culture": "“诫”是告诫；家书把修身、学习与立志联系起来。",
+      "exercises": [
+        {
+          "question": "“非学无以广才，非志无以成学”怎样把学习和志向相连？",
+          "answer": "不学习难以增长才干，没有志向难以学有所成；两句分别指出才能与学习、学习与志向的条件关系。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-wolf",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-7a",
+      "pages": [
+        {
+          "sourcePrintPage": 125,
+          "sourcePdfPage": 132,
+          "sha256": "dde2a7ff31e143cf2e13871788fd09e89e3aa4847c9ed63566821e71c2fe6503"
+        },
+        {
+          "sourcePrintPage": 126,
+          "sourcePdfPage": 133,
+          "sha256": "ecc8461a58218d4a2341abdac350551bdb3d4da6d6bd0c97bd82f23ec9db223e"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "止",
+          "meaning": "在“止有剩骨”等处是只，在“得骨止”处是停止"
+        },
+        {
+          "text": "意",
+          "meaning": "在“意暇甚”处是神情态度，在“意将隧入”处是意图"
+        },
+        {
+          "text": "敌",
+          "meaning": "在“受其敌”处是攻击，在“诱敌”处指敌方"
+        },
+        {
+          "text": "隧",
+          "meaning": "从通道，名词作状语"
+        },
+        {
+          "text": "暴",
+          "meaning": "突然"
+        }
+      ],
+      "culture": "《聊斋志异》是文言短篇小说集；结尾议论联系前面的叙事。",
+      "exercises": [
+        {
+          "question": "比较“止有剩骨”和“一狼得骨止”的“止”。",
+          "answer": "前者是“只”，后者是“停止”。这处“只”的词义不应自动标成通假字。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-chuanjing",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-7a",
+      "pages": [
+        {
+          "sourcePrintPage": 147,
+          "sourcePdfPage": 154,
+          "sha256": "1b62e592e85a9d8da97b10927fd9a59810f62fcc0d945f4885868b091d86eeff"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "闻之于宋君",
+          "meaning": "使宋君听到这件事"
+        },
+        {
+          "text": "得一人之使",
+          "meaning": "得到一个人的劳力"
+        },
+        {
+          "text": "求闻",
+          "meaning": "求取、听取传闻，结合末句理解"
+        }
+      ],
+      "culture": "寓言表现传闻在转述中失真；区分当事人原话、传播者理解和查证结果。",
+      "exercises": [
+        {
+          "question": "宋君是怎样核实传闻的？这与“国人道之”有什么不同？",
+          "answer": "派人向丁氏询问，回到当事人处求证；国人只是转述，缺少核实。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-qiren-youtian",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-7a",
+      "pages": [
+        {
+          "sourcePrintPage": 148,
+          "sourcePdfPage": 155,
+          "sha256": "d54f57cb4635887b069a4973617552bc110a55c3c4780e1e2dc8a94d37a974d8"
+        },
+        {
+          "sourcePrintPage": 149,
+          "sourcePdfPage": 156,
+          "sha256": "3d850c88c95c9296f4bcc0928a55be9cfa6e7f80bbb193cea2f1554d98926e39"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "舍（shì）",
+          "meaning": "同“释”，消除"
+        },
+        {
+          "text": "奈何",
+          "meaning": "为何"
+        },
+        {
+          "text": "中伤（zhòng）",
+          "meaning": "伤害"
+        },
+        {
+          "text": "因",
+          "meaning": "于是"
+        }
+      ],
+      "culture": "《列子》中的寓言反映古人的认识；文中解释天体的说法不当作现代科学结论。",
+      "exercises": [
+        {
+          "question": "杞人得到解释后“舍然大喜”，其中“舍”怎样理解？",
+          "answer": "同“释”，消除疑虑；故事表现了无根据忧虑被解除的过程。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-sunquan-quanxue",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-7b",
+      "pages": [
+        {
+          "sourcePrintPage": 20,
+          "sourcePdfPage": 27,
+          "sha256": "dfe8bad120f005fd690abaabde9365366fae3664fd4f1d4b8dc139cd4c648098"
+        },
+        {
+          "sourcePrintPage": 21,
+          "sourcePdfPage": 28,
+          "sha256": "748a5d8ed7380829cede9e05899d12beab256bb4b3fd6cebdf2ee6945d22a87e"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "卿",
+          "meaning": "古代君对臣的爱称，朋友、夫妻间也可用爱称"
+        },
+        {
+          "text": "孤",
+          "meaning": "古代王侯自称"
+        },
+        {
+          "text": "大兄",
+          "meaning": "对朋友辈的敬称"
+        },
+        {
+          "text": "见事",
+          "meaning": "明白事理"
+        },
+        {
+          "text": "见往事",
+          "meaning": "了解历史"
+        },
+        {
+          "text": "孰若",
+          "meaning": "哪里比得上"
+        },
+        {
+          "text": "邪",
+          "meaning": "同“耶”，疑问语气"
+        }
+      ],
+      "culture": "对话中的称谓区分君臣和朋友；吕蒙的变化通过鲁肃的反应从侧面表现。",
+      "exercises": [
+        {
+          "question": "为什么写鲁肃“大惊”，而不只写吕蒙读了多少书？",
+          "answer": "他人的惊讶和赞叹从侧面说明吕蒙才略增长，使变化更具体可信。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-maiyouweng",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-7b",
+      "pages": [
+        {
+          "sourcePrintPage": 82,
+          "sourcePdfPage": 89,
+          "sha256": "ac3729acad66feeb3b4a3da97d46cd652260bdc5623a8a468ae7210482745426"
+        },
+        {
+          "sourcePrintPage": 83,
+          "sourcePdfPage": 90,
+          "sha256": "6cab759e0efedb8f29325d12519a89ffb8256344c564e438dec83df2ca998a2b"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "杓",
+          "meaning": "同“勺”"
+        },
+        {
+          "text": "酌",
+          "meaning": "在“酌油”处指倒入，在“徐以杓酌油”处指舀取"
+        },
+        {
+          "text": "轻",
+          "meaning": "轻视"
+        },
+        {
+          "text": "以",
+          "meaning": "在“以此自矜”处指凭借，在“以钱覆其口”处指用"
+        }
+      ],
+      "culture": "文中通过言语、神态和动作比较人物；“但手熟尔”概括熟能生巧。",
+      "exercises": [
+        {
+          "question": "解释两次“酌”的动作是否相同。",
+          "answer": "不完全相同。“酌油”的说明中指倒油，“以杓酌油”指用勺舀油，需结合动作的对象和过程。"
+        }
+      ]
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-053",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-7b",
+      "pages": [
+        {
+          "sourcePrintPage": 111,
+          "sourcePdfPage": 118,
+          "sha256": "1e076f462f334c01c6c64fb52081926ab2184f9d3d363142feb473a1c5169c18"
+        },
+        {
+          "sourcePrintPage": 113,
+          "sourcePdfPage": 120,
+          "sha256": "e123ce349507245270b3b3cd99d735d9c2d7cdf8437d2d64bf7365eea6ba5838"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "惟",
+          "meaning": "加强肯定语气"
+        },
+        {
+          "text": "上",
+          "meaning": "长到"
+        },
+        {
+          "text": "入",
+          "meaning": "映入"
+        },
+        {
+          "text": "素琴",
+          "meaning": "不加装饰的琴"
+        },
+        {
+          "text": "金经",
+          "meaning": "佛经"
+        }
+      ],
+      "culture": "“铭”本是刻写在器物上用于警戒或称述功德的文字，后来成为文体。",
+      "exercises": [
+        {
+          "question": "“何陋之有”的正常理解是什么？为什么不能逐字套现代语序？",
+          "answer": "意思是“有什么简陋的呢”；“何陋”被提到“有”前，理解时要还原句子关系。"
+        }
+      ]
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-057",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-7b",
+      "pages": [
+        {
+          "sourcePrintPage": 112,
+          "sourcePdfPage": 119,
+          "sha256": "355935f27d752ee9d26795286540a30c0e295730a3e55adf680a351aeae68289"
+        },
+        {
+          "sourcePrintPage": 113,
+          "sourcePdfPage": 120,
+          "sha256": "e123ce349507245270b3b3cd99d735d9c2d7cdf8437d2d64bf7365eea6ba5838"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "蔓、枝",
+          "meaning": "名词作动词，生藤蔓、长枝节"
+        },
+        {
+          "text": "水陆草木之花",
+          "meaning": "之，的"
+        },
+        {
+          "text": "莲之出淤泥而不染",
+          "meaning": "之，用在主谓之间"
+        },
+        {
+          "text": "菊之爱",
+          "meaning": "对菊的喜爱，结合句式理解"
+        }
+      ],
+      "culture": "“说”是古代议论性文体。菊和牡丹与莲形成对照，突出作者的价值选择。",
+      "exercises": [
+        {
+          "question": "菊、牡丹分别怎样衬托莲？",
+          "answer": "菊表现隐逸，与莲形成相近而有区别的衬托；牡丹联系富贵和世俗追求，与莲形成对比。需结合作者对三者的评价。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-huoban",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-7b",
+      "pages": [
+        {
+          "sourcePrintPage": 169,
+          "sourcePdfPage": 176,
+          "sha256": "95a5baee2194ec1bc1c9bdfc96e5bb89088e8346a1ac5b81b0396c944e25f7b0"
+        },
+        {
+          "sourcePrintPage": 170,
+          "sourcePdfPage": 177,
+          "sha256": "11ba6cfcca07648ba92daab10092e723855a4c976f623c2a325676b2f75008b6"
+        },
+        {
+          "sourcePrintPage": 171,
+          "sourcePdfPage": 178,
+          "sha256": "97ceb678455eba97092f7a87c6dbb35ff978f5da95398c7061acb075dfa239fa"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "已",
+          "meaning": "在“已后”中同“以”"
+        },
+        {
+          "text": "镕",
+          "meaning": "同“熔”"
+        },
+        {
+          "text": "为",
+          "meaning": "在“盛为之”中是做，在“为予群从所得”中表被动"
+        },
+        {
+          "text": "印",
+          "meaning": "在“始印五经”中是印刷，在“其印自落”中是字印"
+        },
+        {
+          "text": "火",
+          "meaning": "在“火烧”中是火，在“再火”中是用火烤"
+        },
+        {
+          "text": "就",
+          "meaning": "在“持就火”中是靠近，在“瞬息可就”中是完成"
+        },
+        {
+          "text": "帖",
+          "meaning": "在“每字为一帖”中是标签，在“以纸帖之”中是用标签标记"
+        },
+        {
+          "text": "旋",
+          "meaning": "旋即"
+        },
+        {
+          "text": "素",
+          "meaning": "平时"
+        },
+        {
+          "text": "殊",
+          "meaning": "根本"
+        }
+      ],
+      "culture": "沈括的《梦溪笔谈》记载科技等见闻；说明活字制版、印刷、拆版的过程。",
+      "exercises": [
+        {
+          "question": "“持就火炀之”和“瞬息可就”两个“就”各是什么意思？",
+          "answer": "前者是靠近火；后者是完成。一个词的含义由句子的动作和对象决定。"
+        }
+      ]
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-051",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-8a",
+      "pages": [
+        {
+          "sourcePrintPage": 62,
+          "sourcePdfPage": 69
+        },
+        {
+          "sourcePrintPage": 63,
+          "sourcePdfPage": 70
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "自",
+          "meaning": "在“自三峡”中是在，在“自非”中是如果"
+        },
+        {
+          "text": "绝",
+          "meaning": "在“阻绝”中是断绝，在“绝巘”中是极高，在“哀转久绝”中是消失"
+        },
+        {
+          "text": "素",
+          "meaning": "白色"
+        },
+        {
+          "text": "沿",
+          "meaning": "顺流而下"
+        },
+        {
+          "text": "良",
+          "meaning": "很"
+        },
+        {
+          "text": "荣",
+          "meaning": "茂盛"
+        },
+        {
+          "text": "自（迁移）",
+          "meaning": "在“自以为”中是自己"
+        },
+        {
+          "text": "素（迁移）",
+          "meaning": "在“调素琴”中是不加装饰的"
+        }
+      ],
+      "culture": "《水经注》以水道为纲，兼记地理风物；课文按季节组织景物。",
+      "exercises": [
+        {
+          "question": "“沿溯阻绝”和“哀转久绝”的“绝”是否同义？",
+          "answer": "前者指航道被阻断，后者指声音消失，不能只记一个现代义。"
+        }
+      ]
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-050",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-8a",
+      "pages": [
+        {
+          "sourcePrintPage": 64,
+          "sourcePdfPage": 71
+        },
+        {
+          "sourcePrintPage": 66,
+          "sourcePdfPage": 73,
+          "sha256": "2cd3f9160134f41c04d534ea9862fa39cb77e3cd5b51e38499901cccf21ab290"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "康乐",
+          "meaning": "谢灵运，封康乐公"
+        },
+        {
+          "text": "欲界之仙都",
+          "meaning": "人间仙境"
+        },
+        {
+          "text": "共",
+          "meaning": "共同"
+        },
+        {
+          "text": "俱",
+          "meaning": "都"
+        },
+        {
+          "text": "入",
+          "meaning": "到来"
+        },
+        {
+          "text": "见",
+          "meaning": "显露、看见，结合“清流见底”"
+        },
+        {
+          "text": "乱",
+          "meaning": "交错"
+        }
+      ],
+      "culture": "题目第二个“书”指书信；称谢灵运为康乐是用封号指人。",
+      "exercises": [
+        {
+          "question": "“自康乐以来，未复有能与其奇者”表达什么？",
+          "answer": "把自己与能欣赏山水之美的知音相联系，既有自许，也有知音难得的感慨；“与”读 yù，参与、领略。"
+        }
+      ]
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-058",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-8a",
+      "pages": [
+        {
+          "sourcePrintPage": 65,
+          "sourcePdfPage": 72
+        },
+        {
+          "sourcePrintPage": 66,
+          "sourcePdfPage": 73,
+          "sha256": "2cd3f9160134f41c04d534ea9862fa39cb77e3cd5b51e38499901cccf21ab290"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "空明",
+          "meaning": "清澈透明"
+        },
+        {
+          "text": "藻、荇",
+          "meaning": "水生植物"
+        },
+        {
+          "text": "中庭",
+          "meaning": "院子里"
+        },
+        {
+          "text": "但",
+          "meaning": "只是"
+        }
+      ],
+      "culture": "元丰是宋神宗年号。苏轼当时被贬黄州，任团练副使，不得签书公事，理解“闲人”要结合处境和赏月的心境。",
+      "exercises": [
+        {
+          "question": "“闲人”只是没有事情做的人吗？",
+          "answer": "不仅如此，也有闲情欣赏月色；结合贬居处境，可体会旷达与感慨交织，答案应有正文依据。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-yu-zhu-yuansi",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-8a",
+      "pages": [
+        {
+          "sourcePrintPage": 67,
+          "sourcePdfPage": 74
+        },
+        {
+          "sourcePrintPage": 68,
+          "sourcePdfPage": 75
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "东西",
+          "meaning": "向东向西"
+        },
+        {
+          "text": "竞上",
+          "meaning": "争着向上"
+        },
+        {
+          "text": "上蔽",
+          "meaning": "在上面遮蔽"
+        },
+        {
+          "text": "轩、邈",
+          "meaning": "向高处、远处伸展"
+        },
+        {
+          "text": "转",
+          "meaning": "同“啭”，鸟鸣"
+        },
+        {
+          "text": "经纶",
+          "meaning": "筹划治理"
+        },
+        {
+          "text": "息心",
+          "meaning": "平息追求名利的心"
+        },
+        {
+          "text": "缥碧",
+          "meaning": "浅青色"
+        },
+        {
+          "text": "鸢飞戾天",
+          "meaning": "鹰飞到天上，比喻极力追求名利"
+        },
+        {
+          "text": "省略",
+          "meaning": "在“从流飘荡”中，联系上下文补出主语“我”理解"
+        }
+      ],
+      "culture": "题中“书”是书信；对山水的欣赏与淡泊名利的感受相连。",
+      "exercises": [
+        {
+          "question": "“任意东西”“横柯上蔽”中的方位词怎样用？",
+          "answer": "“东西”表示向东或向西，“上”表示在上面；都须理解出方向或位置，不能只当名词名称。"
+        },
+        {
+          "question": "“从流飘荡，任意东西”的主语是谁？请补出后解释。",
+          "answer": "联系全文游览情境，主语是“我”：我随着江流飘荡，任船向东或向西。省略成分要由上下文确定。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-mengzi-dedao",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-8a",
+      "pages": [
+        {
+          "sourcePrintPage": 144,
+          "sourcePdfPage": 151
+        },
+        {
+          "sourcePrintPage": 145,
+          "sourcePdfPage": 152
+        },
+        {
+          "sourcePrintPage": 147,
+          "sourcePdfPage": 154,
+          "sha256": "2516741a229f881de892dc841f1beec39ea3377f0b3ca4d73a13084bb0a5eb62"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "威",
+          "meaning": "威慑"
+        },
+        {
+          "text": "至",
+          "meaning": "极点"
+        },
+        {
+          "text": "君子",
+          "meaning": "能施行仁政的君主"
+        },
+        {
+          "text": "城",
+          "meaning": "内城"
+        },
+        {
+          "text": "郭",
+          "meaning": "外城"
+        }
+      ],
+      "culture": "《孟子》常以层层比较和推论论证；文中“亲戚”包括内外亲属，范围与现代常用义有差异。",
+      "exercises": [
+        {
+          "question": "“固国不以山溪之险”的“固”与“汝心之固”的“固”有何不同？",
+          "answer": "前者是巩固，后者是顽固；前一句讲政治治理，后一句评价思想状态。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-mengzi-fugui",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-8a",
+      "pages": [
+        {
+          "sourcePrintPage": 145,
+          "sourcePdfPage": 152
+        },
+        {
+          "sourcePrintPage": 147,
+          "sourcePdfPage": 154,
+          "sha256": "2516741a229f881de892dc841f1beec39ea3377f0b3ca4d73a13084bb0a5eb62"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "戒",
+          "meaning": "在“戒之曰”中是告诫，在“必敬必戒”中是谨慎"
+        },
+        {
+          "text": "命",
+          "meaning": "教导"
+        },
+        {
+          "text": "诚",
+          "meaning": "确实"
+        }
+      ],
+      "culture": "文中的“妾妇之道”含有旧时代的性别伦理，不是应照搬的现代价值；学习重点是独立人格和坚守原则。",
+      "exercises": [
+        {
+          "question": "“富贵不能淫”三句怎样表现大丈夫？",
+          "answer": "富贵、贫贱、威武三种处境都不能使其惑乱、动摇或屈服，突出原则和气节。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-mengzi-youhuan",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-8a",
+      "pages": [
+        {
+          "sourcePrintPage": 146,
+          "sourcePdfPage": 153
+        },
+        {
+          "sourcePrintPage": 147,
+          "sourcePdfPage": 154,
+          "sha256": "2516741a229f881de892dc841f1beec39ea3377f0b3ca4d73a13084bb0a5eb62"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "敌国",
+          "meaning": "势力地位相当的国家，敌是匹敌"
+        },
+        {
+          "text": "空乏",
+          "meaning": "财资缺乏"
+        },
+        {
+          "text": "曾",
+          "meaning": "同“增”"
+        },
+        {
+          "text": "衡",
+          "meaning": "同“横”，梗塞"
+        },
+        {
+          "text": "拂",
+          "meaning": "在“法家拂士”中同“弼”，辅佐"
+        },
+        {
+          "text": "征于色，发于声，而后喻",
+          "meaning": "教材注释解释为从别人的脸色、言语中得到告诫才明白，另说是在自己的脸色、言语中显露后才被别人了解"
+        },
+        {
+          "text": "征",
+          "meaning": "表现"
+        },
+        {
+          "text": "发",
+          "meaning": "显露"
+        },
+        {
+          "text": "喻",
+          "meaning": "了解，明白"
+        },
+        {
+          "text": "入、出",
+          "meaning": "国内、国外"
+        }
+      ],
+      "culture": "文章从个人磨炼推论到国家存亡；不能把“受苦”简单等同于必然成功。",
+      "exercises": [
+        {
+          "question": "比较“敌国”和“诱敌”的“敌”。",
+          "answer": "前者是匹敌、相当，后者指敌方；国家能否有忧患意识与有没有外患相关。"
+        },
+        {
+          "question": "分别解释“困于心，衡于虑，而后作”和“入则无法家拂士，出则无敌国外患者，国恒亡”。",
+          "answer": "前句说内心困苦、思虑梗塞之后才能奋起有所作为；后句说国内若没有守法度的大臣和能辅佐君主的贤士，国外若没有势力相当的国家和外来的忧患，这个国家往往会灭亡。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-yugong-yishan",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-8a",
+      "pages": [
+        {
+          "sourcePrintPage": 148,
+          "sourcePdfPage": 155
+        },
+        {
+          "sourcePrintPage": 149,
+          "sourcePdfPage": 156
+        },
+        {
+          "sourcePrintPage": 150,
+          "sourcePdfPage": 157,
+          "sha256": "2611757f6def891d8ebc1eca4b55c232e4360f0e422a52645cdf6d20d0d3a243"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "且",
+          "meaning": "在“年且九十”中将近，在“且焉置土石”中况且"
+        },
+        {
+          "text": "指",
+          "meaning": "在“指通豫南”中是直，在“争高直指”中是指向"
+        },
+        {
+          "text": "易",
+          "meaning": "在“寒暑易节”中是更替，在“未为简易”中是容易"
+        },
+        {
+          "text": "止",
+          "meaning": "在“笑而止之”中是阻止，在“止露尻尾”中是只"
+        },
+        {
+          "text": "苦",
+          "meaning": "在“何苦”中是愁苦，在“苦其心志”中是使……痛苦"
+        },
+        {
+          "text": "诚",
+          "meaning": "在“帝感其诚”中是诚心，在“诚不欺孤”中是确实"
+        },
+        {
+          "text": "曾",
+          "meaning": "连……都"
+        },
+        {
+          "text": "亡",
+          "meaning": "同“无”"
+        },
+        {
+          "text": "反",
+          "meaning": "同“返”"
+        },
+        {
+          "text": "阴",
+          "meaning": "水的南岸"
+        },
+        {
+          "text": "诸",
+          "meaning": "之于"
+        },
+        {
+          "text": "毛",
+          "meaning": "草木"
+        },
+        {
+          "text": "彻",
+          "meaning": "通达"
+        },
+        {
+          "text": "已",
+          "meaning": "停止"
+        },
+        {
+          "text": "陇",
+          "meaning": "同“垄”"
+        }
+      ],
+      "culture": "寓言中“智叟”“愚公”的称呼与人物远见形成反差；神话结尾表现愿望，不作现实地理解释。",
+      "exercises": [
+        {
+          "question": "比较“年且九十”和“且焉置土石”的“且”。",
+          "answer": "前者是将近，后者是况且。解释不能离开各自句子。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-zhou-yafu",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-8a",
+      "pages": [
+        {
+          "sourcePrintPage": 151,
+          "sourcePdfPage": 158
+        },
+        {
+          "sourcePrintPage": 152,
+          "sourcePdfPage": 159,
+          "sha256": "8db0583a92f90c289ab014785395a7d7aeb5639ea106d6612a06c120311d90ac"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "式",
+          "meaning": "同“轼”，扶车前横木致敬"
+        },
+        {
+          "text": "介胄",
+          "meaning": "名词作动词，披甲戴盔"
+        },
+        {
+          "text": "固",
+          "meaning": "必定"
+        },
+        {
+          "text": "居无何",
+          "meaning": "过了不久"
+        },
+        {
+          "text": "为动",
+          "meaning": "被感动"
+        },
+        {
+          "text": "称谢",
+          "meaning": "致意问候"
+        },
+        {
+          "text": "诏",
+          "meaning": "既可指皇帝命令，也可作下令"
+        },
+        {
+          "text": "彀",
+          "meaning": "张开弓弩"
+        }
+      ],
+      "culture": "“宗正”主管皇族事务，“河内守”是河内郡长官；“文帝之后六年”是汉文帝后元六年。",
+      "exercises": [
+        {
+          "question": "比较“使人称谢”和唐雎故事中“长跪而谢之”的“谢”。",
+          "answer": "前者是致意问候，后者是道歉；不能统一翻译成谢谢。"
+        }
+      ]
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-049",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-8b",
+      "pages": [
+        {
+          "sourcePrintPage": 62,
+          "sourcePdfPage": 69,
+          "sha256": "5a86087bd58a0be03375f95ff9eda4573275e43d23e76abbd27852e5eb894667"
+        },
+        {
+          "sourcePrintPage": 63,
+          "sourcePdfPage": 70
+        },
+        {
+          "sourcePrintPage": 64,
+          "sourcePdfPage": 71
+        },
+        {
+          "sourcePrintPage": 65,
+          "sourcePdfPage": 72
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "乃",
+          "meaning": "在“乃大惊”中于是，在“乃不知有汉”中竟然"
+        },
+        {
+          "text": "要（yāo）",
+          "meaning": "邀请"
+        },
+        {
+          "text": "具",
+          "meaning": "详细"
+        },
+        {
+          "text": "延",
+          "meaning": "邀请"
+        },
+        {
+          "text": "间隔",
+          "meaning": "隔绝"
+        },
+        {
+          "text": "不足",
+          "meaning": "不值得，不必"
+        },
+        {
+          "text": "既",
+          "meaning": "已经"
+        },
+        {
+          "text": "寻",
+          "meaning": "随即，不久"
+        },
+        {
+          "text": "扶",
+          "meaning": "沿着"
+        },
+        {
+          "text": "向",
+          "meaning": "先前的"
+        },
+        {
+          "text": "诣",
+          "meaning": "拜访"
+        },
+        {
+          "text": "规",
+          "meaning": "打算"
+        }
+      ],
+      "culture": "“太元”是东晋年号；虚构的桃花源寄托作者愿望，不作为可定位的现实村落。",
+      "exercises": [
+        {
+          "question": "为什么“乃不知有汉”的“乃”不能解释为“于是”？",
+          "answer": "它强调与外界隔绝之久而出人意料，应理解为竟然、居然。"
+        }
+      ]
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-054",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-8b",
+      "pages": [
+        {
+          "sourcePrintPage": 66,
+          "sourcePdfPage": 73,
+          "sha256": "5c0ac6dabf03db20629e1ed141e651b896fb9cd7126fd6f5b93aeef346009683"
+        },
+        {
+          "sourcePrintPage": 67,
+          "sourcePdfPage": 74
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "西",
+          "meaning": "向西"
+        },
+        {
+          "text": "斗",
+          "meaning": "像北斗星那样"
+        },
+        {
+          "text": "蛇",
+          "meaning": "像蛇那样"
+        },
+        {
+          "text": "犬牙",
+          "meaning": "像狗牙那样"
+        },
+        {
+          "text": "凄、寒",
+          "meaning": "使……凄凉、使……寒冷"
+        },
+        {
+          "text": "隶",
+          "meaning": "跟随"
+        },
+        {
+          "text": "悄怆",
+          "meaning": "忧伤"
+        },
+        {
+          "text": "尤",
+          "meaning": "格外"
+        },
+        {
+          "text": "澈",
+          "meaning": "穿透"
+        },
+        {
+          "text": "幽邃",
+          "meaning": "幽深"
+        }
+      ],
+      "culture": "柳宗元被贬永州时写山水游记；景物感受随心境变化，前面的乐与后面的凄清不是矛盾。",
+      "exercises": [
+        {
+          "question": "“斗折蛇行”和“犬牙差互”怎样写出岸势和水流？",
+          "answer": "借北斗、蛇和狗牙的形态作比，写弯折曲行与交错不齐；这些名词在句中表示“像……一样”。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-hezhouji",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-8b",
+      "pages": [
+        {
+          "sourcePrintPage": 68,
+          "sourcePdfPage": 75
+        },
+        {
+          "sourcePrintPage": 69,
+          "sourcePdfPage": 76,
+          "sha256": "9b3bd5bd1aa9a21fbae6f0e29a8e1c61c28103cbfaa3020b8cd4fcbad3940c4c"
+        },
+        {
+          "sourcePrintPage": 70,
+          "sourcePdfPage": 77
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "有",
+          "meaning": "同“又”"
+        },
+        {
+          "text": "矫",
+          "meaning": "举"
+        },
+        {
+          "text": "属",
+          "meaning": "关联，在“不属”中"
+        },
+        {
+          "text": "诎",
+          "meaning": "弯曲"
+        },
+        {
+          "text": "衡",
+          "meaning": "同“横”"
+        },
+        {
+          "text": "甫",
+          "meaning": "男子美称"
+        },
+        {
+          "text": "篆章",
+          "meaning": "篆字图章"
+        },
+        {
+          "text": "简",
+          "meaning": "挑选"
+        },
+        {
+          "text": "修狭",
+          "meaning": "长而窄"
+        },
+        {
+          "text": "夷",
+          "meaning": "平"
+        },
+        {
+          "text": "类",
+          "meaning": "像"
+        },
+        {
+          "text": "数量表达",
+          "meaning": "如“为人五”表示刻了五个人，数量可置于名词后，量词的使用也与现代不同"
+        }
+      ],
+      "culture": "“大苏”指苏轼，“鲁直”是黄庭坚的字；“天启壬戌”把年号与干支相结合。",
+      "exercises": [
+        {
+          "question": "核舟记的“属”和三峡的“属引”分别怎么理解？",
+          "answer": "“不属”是不相关联；“属引”是接连不断。需结合描写对象区分。"
+        },
+        {
+          "question": "把“为人五”改成现代汉语，并说明数量表达的差别。",
+          "answer": "刻了五个人。古文中数量可以放在所修饰的名词之后；现代常把数量、量词放在名词前。并不是古文所有数量都必须后置。"
+        }
+      ]
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-044",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-8b",
+      "pages": [
+        {
+          "sourcePrintPage": 134,
+          "sourcePdfPage": 141
+        },
+        {
+          "sourcePrintPage": 135,
+          "sourcePdfPage": 142
+        },
+        {
+          "sourcePrintPage": 136,
+          "sourcePdfPage": 143,
+          "sha256": "b94dae4681d3abfa2f9578c7af60838d1c07298ad8add79c03f9fe10d7d42498"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "怒",
+          "meaning": "奋力"
+        },
+        {
+          "text": "其",
+          "meaning": "在“其正色邪”中表示选择"
+        },
+        {
+          "text": "是",
+          "meaning": "这"
+        },
+        {
+          "text": "而",
+          "meaning": "在“怒而飞”中连接状语和动作"
+        },
+        {
+          "text": "海运",
+          "meaning": "海水运动"
+        },
+        {
+          "text": "天池",
+          "meaning": "天然形成的大水池"
+        },
+        {
+          "text": "扶摇",
+          "meaning": "旋风"
+        },
+        {
+          "text": "野马",
+          "meaning": "山野中的雾气"
+        }
+      ],
+      "culture": "《庄子》常用寓言和想象说理；鹏的巨大形象与开阔视野是理解的基础。",
+      "exercises": [
+        {
+          "question": "“其正色邪？其远而无所至极邪？”是在确定天空只有一种成因吗？",
+          "answer": "不是。连续提出选择性疑问，引导读者思考所见与距离、视角的关系；不要把开放思考写成唯一结论。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-zhuangzi-haoliang",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-8b",
+      "pages": [
+        {
+          "sourcePrintPage": 135,
+          "sourcePdfPage": 142
+        },
+        {
+          "sourcePrintPage": 136,
+          "sourcePdfPage": 143,
+          "sha256": "b94dae4681d3abfa2f9578c7af60838d1c07298ad8add79c03f9fe10d7d42498"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "固",
+          "meaning": "固然"
+        },
+        {
+          "text": "请",
+          "meaning": "请允许我"
+        },
+        {
+          "text": "循其本",
+          "meaning": "追溯话题的本源"
+        },
+        {
+          "text": "安",
+          "meaning": "在论辩中存在如何、何处的理解差异"
+        }
+      ],
+      "culture": "庄子与惠子采用不同认识角度；讨论“鱼乐”可以比较审美体会与逻辑论证。",
+      "exercises": [
+        {
+          "question": "两人的分歧能否只用“谁赢了”解释？",
+          "answer": "不宜。可以讨论论证中“安”的转换，也可以比较庄子的直觉体验与惠子的求证要求；有依据即可，不要求唯一答案。"
+        }
+      ]
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-045",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-8b",
+      "pages": [
+        {
+          "sourcePrintPage": 137,
+          "sourcePdfPage": 144
+        },
+        {
+          "sourcePrintPage": 139,
+          "sourcePdfPage": 146
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "旨",
+          "meaning": "味美"
+        },
+        {
+          "text": "兑",
+          "meaning": "同“说”"
+        },
+        {
+          "text": "学（xiào）",
+          "meaning": "同“敩”，教导"
+        },
+        {
+          "text": "其",
+          "meaning": "表示推测"
+        },
+        {
+          "text": "此之谓",
+          "meaning": "说的就是这个"
+        }
+      ],
+      "culture": "《礼记》中的论说由吃食物作类比，再谈学习与教学相互促进。",
+      "exercises": [
+        {
+          "question": "为什么先写“虽有嘉肴，弗食，不知其旨”？",
+          "answer": "用吃过才知味的经验类比学习后才知不足，帮助读者理解实践的重要。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-dadao-zhixing",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-8b",
+      "pages": [
+        {
+          "sourcePrintPage": 138,
+          "sourcePdfPage": 145,
+          "sha256": "751ec217fdb6f8e584ec6ddfe23b6b8c0e5e3ff85dd6147261c0f028c5ee7d09"
+        },
+        {
+          "sourcePrintPage": 139,
+          "sourcePdfPage": 146
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "与（jǔ）",
+          "meaning": "推举"
+        },
+        {
+          "text": "子其子",
+          "meaning": "以自己的子女为子女"
+        },
+        {
+          "text": "闭",
+          "meaning": "用门闩插上"
+        },
+        {
+          "text": "兴",
+          "meaning": "出现"
+        },
+        {
+          "text": "作",
+          "meaning": "发生"
+        },
+        {
+          "text": "乱",
+          "meaning": "作乱"
+        },
+        {
+          "text": "贼",
+          "meaning": "伤害"
+        }
+      ],
+      "culture": "文章描绘“大同”理想；理解古代制度和称谓时，要区分历史语境与现代社会。",
+      "exercises": [
+        {
+          "question": "“不独亲其亲，不独子其子”两个重复的词用法相同吗？",
+          "answer": "前一个“亲、子”是动词，分别是以……为亲、以……为子；后一个是名词，指亲人、子女。"
+        }
+      ]
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-052",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-8b",
+      "pages": [
+        {
+          "sourcePrintPage": 140,
+          "sourcePdfPage": 147,
+          "sha256": "05a0059cb21a511587fcafe9723aeef90c7e49c23ae8d7f5dc364bb8b027714b"
+        },
+        {
+          "sourcePrintPage": 141,
+          "sourcePdfPage": 148
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "石（dàn）",
+          "meaning": "古代容量单位"
+        },
+        {
+          "text": "食（sì）",
+          "meaning": "同“饲”，喂养"
+        },
+        {
+          "text": "一食",
+          "meaning": "吃一顿"
+        },
+        {
+          "text": "且",
+          "meaning": "尚且"
+        },
+        {
+          "text": "其",
+          "meaning": "在“其真无马邪”中加强诘问语气"
+        }
+      ],
+      "culture": "“说”是议论性文体；借千里马与伯乐讨论人才遭遇，不只是介绍养马。",
+      "exercises": [
+        {
+          "question": "“食马者”与“一食或尽粟一石”的“食”读音和意义有何不同？",
+          "answer": "前者读 sì，喂养；后者读 shí，吃。“一石”的石读 dàn，是容量单位。"
+        },
+        {
+          "question": "翻译“马之千里者，一食或尽粟一石”，注意“食”和“石”的读音。",
+          "answer": "能日行千里的马，吃一顿有时能吃完一石粮食。食读 shí，吃；石读 dàn，是古代容量单位。"
+        }
+      ]
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-055",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-9a",
+      "pages": [
+        {
+          "sourcePrintPage": 50,
+          "sourcePdfPage": 57,
+          "sha256": "21ebb60c8094176030fb73794bdf700a1bdbd8e920da5c89d3bafc59c1c7476a"
+        },
+        {
+          "sourcePrintPage": 51,
+          "sourcePdfPage": 58
+        },
+        {
+          "sourcePrintPage": 52,
+          "sourcePdfPage": 59
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "具",
+          "meaning": "同“俱”"
+        },
+        {
+          "text": "越明年",
+          "meaning": "到第二年"
+        },
+        {
+          "text": "制",
+          "meaning": "规模"
+        },
+        {
+          "text": "汤汤（shāng）",
+          "meaning": "水势浩大"
+        },
+        {
+          "text": "备",
+          "meaning": "详尽"
+        },
+        {
+          "text": "极",
+          "meaning": "至，到达"
+        },
+        {
+          "text": "或",
+          "meaning": "或许"
+        },
+        {
+          "text": "得无",
+          "meaning": "表示推测"
+        },
+        {
+          "text": "迁客",
+          "meaning": "被贬的人"
+        },
+        {
+          "text": "骚人",
+          "meaning": "文人"
+        },
+        {
+          "text": "其",
+          "meaning": "在“其喜洋洋者矣”中表示揣度"
+        },
+        {
+          "text": "若夫、至若",
+          "meaning": "用于引出下文，前者近于“像那”，后者近于“至于”"
+        },
+        {
+          "text": "去国",
+          "meaning": "离开国都"
+        }
+      ],
+      "culture": "“庆历”是宋仁宗年号；“记”可记事写景，也可借此议论志向。",
+      "exercises": [
+        {
+          "question": "比较“薄暮冥冥”和现代“纸很薄”的“薄”。",
+          "answer": "“薄暮”的“薄”是迫近，指将近傍晚；不是厚度小。"
+        }
+      ]
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-056",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-9a",
+      "pages": [
+        {
+          "sourcePrintPage": 53,
+          "sourcePdfPage": 60,
+          "sha256": "0a48672a191266a938cd92a060275eac5e353214a2e8b432a2d4588595a0150a"
+        },
+        {
+          "sourcePrintPage": 54,
+          "sourcePdfPage": 61
+        },
+        {
+          "sourcePrintPage": 55,
+          "sourcePdfPage": 62
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "谓",
+          "meaning": "在“太守谓谁”中是为、是"
+        },
+        {
+          "text": "洌",
+          "meaning": "清"
+        },
+        {
+          "text": "射",
+          "meaning": "投壶"
+        },
+        {
+          "text": "觥筹",
+          "meaning": "酒杯和酒筹"
+        },
+        {
+          "text": "颓然",
+          "meaning": "醉倒的样子"
+        },
+        {
+          "text": "太守",
+          "meaning": "州郡长官"
+        }
+      ],
+      "culture": "“与民同乐”结合百姓游乐和太守醉乐理解；“也”可以表示判断，也可用于陈述。",
+      "exercises": [
+        {
+          "question": "“醉翁之意不在酒，在乎山水之间也”的“也”一定是判断吗？",
+          "answer": "这里陈述意趣所在，宜理解为陈述、肯定语气；“环滁皆山也”则用于判断，要按句子功能区分。"
+        }
+      ]
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-060",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-9a",
+      "pages": [
+        {
+          "sourcePrintPage": 56,
+          "sourcePdfPage": 63
+        },
+        {
+          "sourcePrintPage": 57,
+          "sourcePdfPage": 64
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "白",
+          "meaning": "酒杯"
+        },
+        {
+          "text": "相公",
+          "meaning": "对士人的尊称"
+        },
+        {
+          "text": "更",
+          "meaning": "还"
+        },
+        {
+          "text": "强（qiǎng）",
+          "meaning": "勉强"
+        },
+        {
+          "text": "更定",
+          "meaning": "晚上八时左右"
+        }
+      ],
+      "culture": "“崇祯”是明思宗年号；记游中的时间、天气、人物行动共同构成幽静氛围。",
+      "exercises": [
+        {
+          "question": "比较“三大白”和“上下一白”的“白”。",
+          "answer": "前者指酒杯，后者指白色；不能因字相同就作相同解释。"
+        }
+      ]
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-042",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-9a",
+      "pages": [
+        {
+          "sourcePrintPage": 136,
+          "sourcePdfPage": 143
+        },
+        {
+          "sourcePrintPage": 137,
+          "sourcePdfPage": 144,
+          "sha256": "8337d446728be3b8197d4011f3b19b44773cbac80340c88099f604a851a8eba1"
+        },
+        {
+          "sourcePrintPage": 138,
+          "sourcePdfPage": 145
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "忠",
+          "meaning": "尽力做好分内的事"
+        },
+        {
+          "text": "孚",
+          "meaning": "使人信服"
+        },
+        {
+          "text": "福",
+          "meaning": "赐福"
+        },
+        {
+          "text": "鼓",
+          "meaning": "击鼓进军"
+        },
+        {
+          "text": "肉食者",
+          "meaning": "居高位、享厚禄的人"
+        },
+        {
+          "text": "对",
+          "meaning": "下对上的回答"
+        },
+        {
+          "text": "再",
+          "meaning": "第二次"
+        }
+      ],
+      "culture": "《左传》以鲁国纪年，文中“我”指鲁国；“十年”是鲁庄公十年。",
+      "exercises": [
+        {
+          "question": "“再而衰”的“再”与“日再食”的“再”怎样区分？",
+          "answer": "前者是第二次，后者是两次。一个说明次序，一个说明数量。"
+        }
+      ]
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-047",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-9a",
+      "pages": [
+        {
+          "sourcePrintPage": 139,
+          "sourcePdfPage": 146
+        },
+        {
+          "sourcePrintPage": 140,
+          "sourcePdfPage": 147,
+          "sha256": "c63342004c9a7b5919e3cac242922f3add8cea46655360ec673ae9ecd73bcde4"
+        },
+        {
+          "sourcePrintPage": 141,
+          "sourcePdfPage": 148,
+          "sha256": "e9b9d224f22dbcd1a2f230462f22dc212853bc7c0d108548502f9d0e762f68e9"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "孰",
+          "meaning": "在“孰视之”中同“熟”"
+        },
+        {
+          "text": "窥镜",
+          "meaning": "照镜子"
+        },
+        {
+          "text": "朝（zhāo）",
+          "meaning": "早晨"
+        },
+        {
+          "text": "服",
+          "meaning": "穿戴"
+        },
+        {
+          "text": "朝（cháo）于齐",
+          "meaning": "到齐国朝见"
+        },
+        {
+          "text": "期（jī）年",
+          "meaning": "满一年"
+        },
+        {
+          "text": "昳丽",
+          "meaning": "容貌光艳美丽"
+        },
+        {
+          "text": "讽",
+          "meaning": "委婉规劝"
+        }
+      ],
+      "culture": "《战国策》记载战国时期的故事和说辞，经西汉刘向编订；不能把编订年代直接当作事件年代。",
+      "exercises": [
+        {
+          "question": "“我孰与城北徐公美”怎样译？“孰”与“孰视之”相同吗？",
+          "answer": "译为我与城北徐公相比谁更美；前者是疑问代词谁，后者同“熟”，仔细。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-chenshe-shijia",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-9a",
+      "pages": [
+        {
+          "sourcePrintPage": 142,
+          "sourcePdfPage": 149,
+          "sha256": "2687417ca162f29730d3498b0ef4ef4cb4b31d486db5da0ddfe98c08f216aeb2"
+        },
+        {
+          "sourcePrintPage": 143,
+          "sourcePdfPage": 150
+        },
+        {
+          "sourcePrintPage": 144,
+          "sourcePdfPage": 151
+        },
+        {
+          "sourcePrintPage": 145,
+          "sourcePdfPage": 152
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "次",
+          "meaning": "在“皆次当行”中是编次，在“次所”中是驻扎"
+        },
+        {
+          "text": "等",
+          "meaning": "同样，也可指你们这类复数"
+        },
+        {
+          "text": "数（shuò）",
+          "meaning": "屡次，数（shù）：几"
+        },
+        {
+          "text": "书",
+          "meaning": "写，也可指帛书"
+        },
+        {
+          "text": "適",
+          "meaning": "同“谪”"
+        },
+        {
+          "text": "唱",
+          "meaning": "同“倡”"
+        },
+        {
+          "text": "指",
+          "meaning": "同“旨”"
+        },
+        {
+          "text": "以",
+          "meaning": "同“已”"
+        },
+        {
+          "text": "被",
+          "meaning": "同“披”"
+        },
+        {
+          "text": "会",
+          "meaning": "适逢"
+        },
+        {
+          "text": "度（duó）",
+          "meaning": "估计"
+        },
+        {
+          "text": "亡",
+          "meaning": "逃跑"
+        },
+        {
+          "text": "诚",
+          "meaning": "如果"
+        },
+        {
+          "text": "王（wàng）",
+          "meaning": "称王"
+        },
+        {
+          "text": "罾",
+          "meaning": "用网捕"
+        },
+        {
+          "text": "间（jiàn）",
+          "meaning": "暗中"
+        },
+        {
+          "text": "忿恚",
+          "meaning": "使……恼怒"
+        },
+        {
+          "text": "挺",
+          "meaning": "脱出鞘"
+        },
+        {
+          "text": "藉第令",
+          "meaning": "即使"
+        },
+        {
+          "text": "宁",
+          "meaning": "难道"
+        },
+        {
+          "text": "坚、锐",
+          "meaning": "铠甲、武器"
+        }
+      ],
+      "culture": "“世家”是《史记》的一类传记；故事在秦二世时期，文中“鸿鹄”比喻远大志向。",
+      "exercises": [
+        {
+          "question": "比较“乃丹书帛曰”和“得鱼腹中书”的“书”。",
+          "answer": "前者是写，后者是写有文字的帛书。叙事范围还包括起义准备，不能只概括佣耕对话。"
+        }
+      ]
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-048",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-9a",
+      "pages": [
+        {
+          "sourcePrintPage": 146,
+          "sourcePdfPage": 153
+        },
+        {
+          "sourcePrintPage": 147,
+          "sourcePdfPage": 154
+        },
+        {
+          "sourcePrintPage": 148,
+          "sourcePdfPage": 155
+        },
+        {
+          "sourcePrintPage": 149,
+          "sourcePdfPage": 156
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "异同",
+          "meaning": "不同"
+        },
+        {
+          "text": "痛恨",
+          "meaning": "痛心遗憾"
+        },
+        {
+          "text": "感激",
+          "meaning": "感奋激发"
+        },
+        {
+          "text": "遗（wèi）",
+          "meaning": "给予"
+        },
+        {
+          "text": "阙",
+          "meaning": "同“缺”"
+        },
+        {
+          "text": "效",
+          "meaning": "效果，也可指实现、取得"
+        },
+        {
+          "text": "庶",
+          "meaning": "希望"
+        },
+        {
+          "text": "驽钝",
+          "meaning": "自谦才智平庸"
+        },
+        {
+          "text": "布衣",
+          "meaning": "平民"
+        },
+        {
+          "text": "尔来",
+          "meaning": "从那时以来"
+        },
+        {
+          "text": "三顾",
+          "meaning": "三次拜访"
+        },
+        {
+          "text": "开张",
+          "meaning": "扩大"
+        },
+        {
+          "text": "卑鄙",
+          "meaning": "地位低微，见识短浅"
+        }
+      ],
+      "culture": "“表”是古代臣下向君主陈述意见的文体；“陛下”称君主，“臣”是臣下自称。",
+      "exercises": [
+        {
+          "question": "“先帝不以臣卑鄙”和现代“行为卑鄙”的意思相同吗？",
+          "answer": "不同。前者指地位低微、见识短浅，是谦辞；现代常指品行恶劣。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-mengzi-yuwosuoyu",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-9b",
+      "pages": [
+        {
+          "sourcePrintPage": 48,
+          "sourcePdfPage": 55
+        },
+        {
+          "sourcePrintPage": 49,
+          "sourcePdfPage": 56,
+          "sha256": "db95cca206e3524682c75584dc039fe177c41e8d5482a5563816de00a388a44a"
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "得",
+          "meaning": "在“所识穷乏者得我”中同“德”，感激"
+        },
+        {
+          "text": "与",
+          "meaning": "同“欤”"
+        },
+        {
+          "text": "辩",
+          "meaning": "同“辨”"
+        },
+        {
+          "text": "已",
+          "meaning": "停止"
+        },
+        {
+          "text": "如使",
+          "meaning": "假如"
+        },
+        {
+          "text": "于",
+          "meaning": "在“甚于生”中是比，在“于我何加”中是对于"
+        },
+        {
+          "text": "为",
+          "meaning": "在“为之”中是做，在“为宫室之美”中是为了"
+        }
+      ],
+      "culture": "文章用选择鱼和熊掌作类比，讨论生与义；理解“本心”要联系羞恶之心。",
+      "exercises": [
+        {
+          "question": "“乡为身死而不受，今为宫室之美为之”中的“为”能都读成同一个意义吗？",
+          "answer": "不能。要分别辨析为了某种目的和做某件事；作答应结合各句的宾语、语境。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-tangju-buru",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-9b",
+      "pages": [
+        {
+          "sourcePrintPage": 51,
+          "sourcePdfPage": 58
+        },
+        {
+          "sourcePrintPage": 52,
+          "sourcePdfPage": 59,
+          "sha256": "b68dc99ae7c25961c90e5323702757c6fb7b4dc8d30efb3a1da28b1a1b0cbae6"
+        },
+        {
+          "sourcePrintPage": 53,
+          "sourcePdfPage": 60
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "错",
+          "meaning": "同“措”"
+        },
+        {
+          "text": "说",
+          "meaning": "同“悦”"
+        },
+        {
+          "text": "仓",
+          "meaning": "同“苍”"
+        },
+        {
+          "text": "抢（qiāng）",
+          "meaning": "碰撞"
+        },
+        {
+          "text": "缟素",
+          "meaning": "穿丧服"
+        },
+        {
+          "text": "挺",
+          "meaning": "拔"
+        },
+        {
+          "text": "谕",
+          "meaning": "明白"
+        },
+        {
+          "text": "徒",
+          "meaning": "只"
+        },
+        {
+          "text": "虽然",
+          "meaning": "虽然这样"
+        },
+        {
+          "text": "广",
+          "meaning": "扩充"
+        },
+        {
+          "text": "逆",
+          "meaning": "违背"
+        },
+        {
+          "text": "其",
+          "meaning": "在“其许寡人”中表祈使"
+        }
+      ],
+      "culture": "“寡人”是古代君主自称，“足下”是对对方的敬称；对话推动矛盾和人物变化。",
+      "exercises": [
+        {
+          "question": "“虽然，受地于先王”的“虽然”与现代转折连词有何差别？",
+          "answer": "这里可拆解为“虽然这样”，指承认前面事实后再说明理由；不能只按现代“虽然……但是……”机械套用。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh54-songdongyang-textbook",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=ab06a72c-93e6-4135-b549-900db6783fa9&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "bookId": "chinese-9b",
+      "pages": [
+        {
+          "sourcePrintPage": 54,
+          "sourcePdfPage": 61,
+          "sha256": "bb7585318a0bdcb72502ee94861835cdca05eb4079272a6aa425255b33f95475"
+        },
+        {
+          "sourcePrintPage": 55,
+          "sourcePdfPage": 62,
+          "sha256": "2cf393f9d26b856027c6a43f8268f6db8862c384816e8d641878bdd00604f672"
+        },
+        {
+          "sourcePrintPage": 56,
+          "sourcePdfPage": 63
+        }
+      ],
+      "evidence": "依据具名原书注释、课后题及逐篇复核记录整理；说明、比较与练习自编，不照录完整教参。",
+      "words": [
+        {
+          "text": "稍",
+          "meaning": "略微"
+        },
+        {
+          "text": "至",
+          "meaning": "周到"
+        },
+        {
+          "text": "再",
+          "meaning": "两次"
+        },
+        {
+          "text": "遗（wèi）",
+          "meaning": "给予"
+        },
+        {
+          "text": "致",
+          "meaning": "得到"
+        },
+        {
+          "text": "支",
+          "meaning": "同“肢”"
+        },
+        {
+          "text": "食（sì）",
+          "meaning": "给……吃"
+        },
+        {
+          "text": "腰",
+          "meaning": "在腰间佩带"
+        },
+        {
+          "text": "辨",
+          "meaning": "同“辩”"
+        },
+        {
+          "text": "耄老",
+          "meaning": "年老"
+        },
+        {
+          "text": "廪稍",
+          "meaning": "公家供给的粮食"
+        },
+        {
+          "text": "贽",
+          "meaning": "初见尊长时的礼物"
+        },
+        {
+          "text": "汤",
+          "meaning": "热水"
+        },
+        {
+          "text": "被",
+          "meaning": "同“披”，穿着"
+        },
+        {
+          "text": "诸",
+          "meaning": "之于"
+        }
+      ],
+      "culture": "“赠序”是临别赠言类文章；“生”是对晚辈读书人的称呼，马生不等于作者本人。",
+      "exercises": [
+        {
+          "question": "“略无慕艳意，以中有足乐者”怎样解释学习动力？",
+          "answer": "内心有读书的乐趣，因而不羡慕别人华美衣食；应联系求学经历，不泛化为忽视基本生活条件。"
+        }
+      ]
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-046",
+      "sourceUrl": "https://sr.fzu.edu.cn/info/1002/1017.htm",
+      "pages": [],
+      "evidence": "依据已入库公版原作整理；五四制册次及教材注释待核实，不新增教材映射。",
+      "words": [
+        {
+          "text": "太山",
+          "meaning": "泛指大山、高山"
+        },
+        {
+          "text": "善哉",
+          "meaning": "赞叹的话"
+        }
+      ],
+      "culture": "“鼓琴”是弹琴；知音指能理解对方心意的人。教材册次仍待核实。",
+      "exercises": [
+        {
+          "question": "“伯牙破琴绝弦，终身不复鼓琴”说明什么？",
+          "answer": "以决绝行动表达失去知音的悲痛；结合钟子期能够理解琴声中志向的前文说明。"
+        }
+      ]
+    },
+    {
+      "contentId": "sh-exam-dai-song",
+      "sourceUrl": "https://xbzs.ecnu.edu.cn/CN/article/downloadArticleFile.do?attachType=PDF&id=11506",
+      "pages": [],
+      "evidence": "依据已入库公版原作整理；五四制册次及教材注释待核实，不新增教材映射。",
+      "words": [
+        {
+          "text": "处士",
+          "meaning": "有才德而隐居未仕的人"
+        },
+        {
+          "text": "所宝以百数",
+          "meaning": "珍藏的书画以百计"
+        },
+        {
+          "text": "谬",
+          "meaning": "错误"
+        }
+      ],
+      "culture": "题目中的“书”是写，记下；“处士”是人物称谓。教材册次仍待核实。",
+      "exercises": [
+        {
+          "question": "“耕当问奴，织当问婢”的字面义和道理是什么？",
+          "answer": "耕种的事问从事耕作的人，织布的事问织作的人；文中“奴、婢”反映旧时身份，学习的道理是尊重实际经验。"
+        }
+      ]
+    }
+  ]
+}

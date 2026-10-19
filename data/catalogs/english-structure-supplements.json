@@ -1,0 +1,953 @@
+{
+  "checkedAt": "2026-10-19",
+  "scope": "复审列出的核心句型及易混搭配，共45组。依据具名词典和语法资料自编说明、例句、练习；属于跨年级用法补充，不将词卡的教材归属当作这些用法的教材归属。",
+  "entries": [
+    {
+      "contentId": "word-hope",
+      "lemma": "hope",
+      "pattern": "hope to do / hope (that) ... / hope for sth",
+      "meaning": "希望自己做某事；希望某事发生；盼望某事物。不能套用 hope sb to do。",
+      "example": "I hope to read the book this week.",
+      "translation": "我希望本周读这本书。",
+      "note": "普通将来的愿望用 hope；wish 后的虚拟从句另作拓展。",
+      "exercise": {
+        "question": "改正：I hope you to come tomorrow.",
+        "answer": "I hope you can come tomorrow.（也可用其他语义相同的正确 that 从句。）"
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · expect-hope-wait",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/expect-hope-wait"
+        }
+      ]
+    },
+    {
+      "contentId": "word-wish",
+      "lemma": "wish",
+      "pattern": "wish sb sth / wish (sb) to do",
+      "meaning": "祝愿某人获得某物；正式表达想要自己或某人做某事。",
+      "example": "We wish our team success.",
+      "translation": "我们祝愿球队成功。",
+      "note": "wish to do 比 want to do 正式；不把两种结构混为 hope sb to do。",
+      "exercise": {
+        "question": "用 wish 表达“祝你好运”。",
+        "answer": "I wish you good luck. / Wish you luck."
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · wish",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/wish"
+        }
+      ]
+    },
+    {
+      "contentId": "word-let",
+      "lemma": "let",
+      "pattern": "let sb do / let's (not) do",
+      "meaning": "让某人做；建议大家一起做或不做。",
+      "example": "Let's not waste paper.",
+      "translation": "我们不要浪费纸张。",
+      "note": "let 后接不带 to 的动词原形；否定建议用 let's not。",
+      "exercise": {
+        "question": "改正：Let me to try.",
+        "answer": "Let me try."
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · let-let-s",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/let"
+        }
+      ]
+    },
+    {
+      "contentId": "word-have",
+      "lemma": "have",
+      "pattern": "have sb do / have sth done / have to do",
+      "meaning": "请或让某人做；请人完成某事（或遭遇某事）；不得不做。",
+      "example": "Dad had his bike repaired.",
+      "translation": "爸爸请人修了自行车。",
+      "note": "have sth done 不表示一定亲自完成；have to 的否定 don't have to 表示不必。此组为拓展比较。",
+      "exercise": {
+        "question": "“I had my hair cut.”是否一定是我自己剪头发？",
+        "answer": "不是，通常表示请别人理发。"
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · have-something-done",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/have-something-"
+        },
+        {
+          "title": "Cambridge Grammar · have",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/have"
+        }
+      ]
+    },
+    {
+      "contentId": "word-like",
+      "lemma": "like",
+      "pattern": "like doing / like to do / would like (sb) to do",
+      "meaning": "喜欢做；愿意做或想让某人做。like 还可作介词，表示像。",
+      "example": "I would like to join the reading club.",
+      "translation": "我想加入读书社团。",
+      "note": "would like 后用 to do；What is ... like? 询问特征，look like 表示看起来像。",
+      "exercise": {
+        "question": "填空：Would you like ___ (read) with us?",
+        "answer": "to read"
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · like",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/like"
+        },
+        {
+          "title": "Cambridge Grammar · infinitive-verbs",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/verb-ing"
+        }
+      ]
+    },
+    {
+      "contentId": "word-find",
+      "lemma": "find",
+      "pattern": "find it + adj. + to do / find sb doing / find sb or sth + adj.",
+      "meaning": "觉得做某事怎样；发现某人正在做；发现某人或某物处于某种状态。",
+      "example": "I find it useful to take notes.",
+      "translation": "我发现记笔记很有用。",
+      "note": "it 作形式宾语；真正的内容是后面的 to do。find out 表示查明。",
+      "exercise": {
+        "question": "改正：I find useful to read aloud.",
+        "answer": "I find it useful to read aloud."
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · word-patterns-find",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/word-patterns-find"
+        }
+      ]
+    },
+    {
+      "contentId": "word-watch",
+      "lemma": "watch",
+      "pattern": "watch sb do / watch sb doing",
+      "meaning": "看到整个动作或过程；看到动作正在进行。",
+      "example": "We watched the bird fly away.",
+      "translation": "我们看着那只鸟飞走了。",
+      "note": "主动结构中 do 前不加 to；doing 强调当时正在发生。",
+      "exercise": {
+        "question": "选择并解释：I watched him crossing the road. 强调什么？",
+        "answer": "强调看见他正在过马路，未必看到整个过程。"
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · 感官动词后的原形与 -ing",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/hear-see-etc-object-infinitive-or-ing"
+        }
+      ]
+    },
+    {
+      "contentId": "word-notice",
+      "lemma": "notice",
+      "pattern": "notice sb do / notice sb doing",
+      "meaning": "注意到一个动作或全过程；注意到正在进行的动作。",
+      "example": "I noticed a child reading by the window.",
+      "translation": "我注意到一个孩子正在窗边看书。",
+      "note": "do 与 doing 的选择取决于强调全过程还是进行中，不能机械互换。",
+      "exercise": {
+        "question": "填空：I noticed her ___ (open) the door and enter the room. 强调整个动作。",
+        "answer": "open"
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · 感官动词后的原形与 -ing",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/hear-see-etc-object-infinitive-or-ing"
+        }
+      ]
+    },
+    {
+      "contentId": "word-feel",
+      "lemma": "feel",
+      "pattern": "feel + adj. / feel like doing",
+      "meaning": "感觉怎样；想要做某事。",
+      "example": "I feel like taking a short walk.",
+      "translation": "我想散一小会儿步。",
+      "note": "feel 作系动词时接形容词；feel like 后接 doing。",
+      "exercise": {
+        "question": "改正：I feel like to swim.",
+        "answer": "I feel like swimming."
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · main",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/main"
+        },
+        {
+          "title": "Cambridge · feel like doing",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/feel-like-doing"
+        }
+      ]
+    },
+    {
+      "contentId": "word-sound",
+      "lemma": "sound",
+      "pattern": "sound + adj.",
+      "meaning": "听起来怎样，描述主语给人的印象。",
+      "example": "Your idea sounds interesting.",
+      "translation": "你的主意听起来很有趣。",
+      "note": "此系动词用法不用被动语态，也不把形容词改成副词。",
+      "exercise": {
+        "question": "改正：The plan sounds well.（表达计划不错）",
+        "answer": "The plan sounds good."
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · main",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/main"
+        }
+      ]
+    },
+    {
+      "contentId": "word-smell",
+      "lemma": "smell",
+      "pattern": "smell + adj. / smell sth",
+      "meaning": "闻起来怎样；主动闻某物。",
+      "example": "The flowers smell sweet.",
+      "translation": "这些花闻起来香甜。",
+      "note": "闻起来的系动词用法接形容词；主动闻东西是另一种用法。",
+      "exercise": {
+        "question": "填空：The soup smells ___ (good / well).",
+        "answer": "good"
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · main",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/main"
+        },
+        {
+          "title": "Collins · smell",
+          "url": "https://www.collinsdictionary.com/us/dictionary/english/smell"
+        }
+      ]
+    },
+    {
+      "contentId": "word-taste",
+      "lemma": "taste",
+      "pattern": "taste + adj. / taste sth",
+      "meaning": "尝起来怎样；品尝某物。",
+      "example": "The soup tastes delicious.",
+      "translation": "这汤尝起来很美味。",
+      "note": "系动词 taste 后接形容词；品尝的动作可直接接宾语。",
+      "exercise": {
+        "question": "改正：The cake is tasted nice.（表达味道好）",
+        "answer": "The cake tastes nice."
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · main",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/main"
+        },
+        {
+          "title": "Collins · taste",
+          "url": "https://www.collinsdictionary.com/us/dictionary/english/taste"
+        }
+      ]
+    },
+    {
+      "contentId": "word-leave",
+      "lemma": "leave",
+      "pattern": "leave for / leave A for B / leave sth + 地点",
+      "meaning": "动身去；离开甲地去乙地；把东西留下或落在某处。",
+      "example": "I left my notebook in the classroom.",
+      "translation": "我把笔记本落在教室了。",
+      "note": "表示忘记带东西并说出地点时用 leave，不用 forget sth + 地点。",
+      "exercise": {
+        "question": "改正：I forgot my bag on the bus.",
+        "answer": "I left my bag on the bus."
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · forget-or-leave",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/forget-or-leave"
+        },
+        {
+          "title": "Collins · leave",
+          "url": "https://www.collinsdictionary.com/us/dictionary/english/leave"
+        }
+      ]
+    },
+    {
+      "contentId": "word-plan",
+      "lemma": "plan",
+      "pattern": "plan to do / plan for sth",
+      "meaning": "计划做；为某事作计划。",
+      "example": "We plan to visit the library on Saturday.",
+      "translation": "我们计划周六去图书馆。",
+      "note": "plan 的过去式 planned、现在分词 planning 都双写 n。",
+      "exercise": {
+        "question": "填空：They plan ___ (start) early.",
+        "answer": "to start"
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · infinitive-verbs",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/verb-ing"
+        },
+        {
+          "title": "Collins · plan",
+          "url": "https://www.collinsdictionary.com/us/dictionary/english/plan"
+        }
+      ]
+    },
+    {
+      "contentId": "word-offer",
+      "lemma": "offer",
+      "pattern": "offer to do / offer sb sth / offer sth to sb",
+      "meaning": "主动提出做；向某人提供某物。",
+      "example": "She offered to help us.",
+      "translation": "她主动提出帮助我们。",
+      "note": "offer 强调主动提出或提供；两个宾语的位置可以转换。",
+      "exercise": {
+        "question": "用 offer 改写：He offered me a seat.",
+        "answer": "He offered a seat to me."
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · transitive-and-intransitive-verbs",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/transitive-and-intransitive-verbs"
+        },
+        {
+          "title": "Collins · offer",
+          "url": "https://www.collinsdictionary.com/us/dictionary/english/offer"
+        }
+      ]
+    },
+    {
+      "contentId": "word-busy",
+      "lemma": "busy",
+      "pattern": "be busy doing / be busy with sth",
+      "meaning": "忙于做某事；忙于某事物。",
+      "example": "We are busy making a class poster.",
+      "translation": "我们正忙着制作班级海报。",
+      "note": "doing 前不加 to；with 后接名词或代词。",
+      "exercise": {
+        "question": "改正：She is busy to write.",
+        "answer": "She is busy writing."
+      },
+      "sources": [
+        {
+          "title": "Collins · busy",
+          "url": "https://www.collinsdictionary.com/us/dictionary/english/busy"
+        }
+      ]
+    },
+    {
+      "contentId": "word-reach",
+      "lemma": "reach",
+      "pattern": "reach / arrive at or in / get to",
+      "meaning": "reach 直接接地点；arrive at 接具体地点，in 常接城市或国家；get to 接地点。",
+      "example": "We reached the museum at nine.",
+      "translation": "我们九点到了博物馆。",
+      "note": "到达 home、here、there 时通常不加 to；arrive 不直接带地点宾语。",
+      "exercise": {
+        "question": "改正：We reached to Shanghai yesterday.",
+        "answer": "We reached Shanghai yesterday."
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · word-patterns-reach",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/word-patterns-reach"
+        },
+        {
+          "title": "Cambridge Grammar · arrive",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/word-patterns-arrive-somewhere"
+        }
+      ]
+    },
+    {
+      "contentId": "word-join",
+      "lemma": "join",
+      "pattern": "join / join sb in doing / take part in",
+      "meaning": "加入组织、加入某人；与某人一起参与；参加活动。",
+      "example": "Please join us in cleaning the room.",
+      "translation": "请和我们一起打扫房间。",
+      "note": "join 也能用于某些活动，不能绝对记成只能加组织；take part in 强调参与活动。",
+      "exercise": {
+        "question": "填空：She joined the club and took part ___ its first game.",
+        "answer": "in"
+      },
+      "sources": [
+        {
+          "title": "Collins · join",
+          "url": "https://www.collinsdictionary.com/us/dictionary/english/join"
+        },
+        {
+          "title": "Collins · take-part",
+          "url": "https://www.collinsdictionary.com/us/dictionary/english/take-part"
+        }
+      ]
+    },
+    {
+      "contentId": "word-win",
+      "lemma": "win",
+      "pattern": "win sth / beat sb",
+      "meaning": "赢得比赛或奖项；打败对手或队伍。",
+      "example": "Our team won the match and beat a strong team.",
+      "translation": "我们赢了比赛，击败了一支强队。",
+      "note": "win 后不把对手直接当宾语；beat 的过去式 beat，过去分词 beaten。",
+      "exercise": {
+        "question": "填空：We ___ the other team and ___ the prize.",
+        "answer": "beat；won"
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · word-choice-win-or-beat",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/word-choice-win-or-beat"
+        }
+      ]
+    },
+    {
+      "contentId": "word-rise",
+      "lemma": "rise",
+      "pattern": "rise / raise",
+      "meaning": "rise 表示自行上升，不直接带宾语；raise 表示使某物上升，带宾语。",
+      "example": "The sun rises as we raise the flag.",
+      "translation": "太阳升起时，我们升起国旗。",
+      "note": "rise—rose—risen；raise—raised—raised。",
+      "exercise": {
+        "question": "填空：Please ___ your hand. The temperature ___ yesterday.",
+        "answer": "raise；rose"
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · raise-or-rise",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/raise-or-rise"
+        }
+      ]
+    },
+    {
+      "contentId": "word-few",
+      "lemma": "few",
+      "pattern": "few / a few / fewer",
+      "meaning": "修饰可数名词复数；few 强调几乎没有，a few 表示有一些；fewer 表示更少。",
+      "example": "We have a few books, so we can share them.",
+      "translation": "我们有几本书，可以一起看。",
+      "note": "不要把 few 用于不可数名词。",
+      "exercise": {
+        "question": "选词：There is ___ water left.（few / little）",
+        "answer": "little，因为 water 在此不可数。"
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · little-a-little-few-a-few",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/little-a-little-few-a-few"
+        },
+        {
+          "title": "Cambridge Grammar · less-or-fewer",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/less-or-fewer"
+        }
+      ]
+    },
+    {
+      "contentId": "word-little",
+      "lemma": "little",
+      "pattern": "little / a little / less",
+      "meaning": "修饰不可数名词；little 强调几乎没有，a little 表示还有一些；less 表示更少。",
+      "example": "This bag is a little heavier.",
+      "translation": "这个包稍微重一点。",
+      "note": "a little 也可修饰形容词比较级；little 还可以是形容词小的，须结合语境。",
+      "exercise": {
+        "question": "填空：We still have ___ time, so don't hurry.（little / a little）",
+        "answer": "a little，表示还有一点时间。"
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · little-a-little-few-a-few",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/little-a-little-few-a-few"
+        }
+      ]
+    },
+    {
+      "contentId": "word-number",
+      "lemma": "number",
+      "pattern": "a number of / the number of",
+      "meaning": "a number of 加可数复数表示若干，谓语通常用复数；the number of 表示数量，谓语用单数。",
+      "example": "A number of pupils are here. The number of pupils is twenty.",
+      "translation": "一些学生到了，学生人数是二十。",
+      "note": "判断主语中心：表示若干人还是一个总数。",
+      "exercise": {
+        "question": "填空：The number of books ___ (be) increasing.",
+        "answer": "is"
+      },
+      "sources": [
+        {
+          "title": "Collins · number",
+          "url": "https://www.collinsdictionary.com/us/dictionary/english/number"
+        },
+        {
+          "title": "Collins · collective noun：number 的一致关系",
+          "url": "https://www.collinsdictionary.com/us/dictionary/english/collective-noun"
+        }
+      ]
+    },
+    {
+      "contentId": "word-last",
+      "lemma": "last",
+      "pattern": "last / latest / lately",
+      "meaning": "last 可指上一次或最后；latest 表示最新；lately 表示最近，是副词。",
+      "example": "This is her latest book. She has written a lot lately.",
+      "translation": "这是她最新的书，她最近写了很多。",
+      "note": "latest 修饰名词；lately 常描述近期状态或反复发生的事。",
+      "exercise": {
+        "question": "选词：Have you read the ___ news?（last / latest）",
+        "answer": "latest"
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · word-choice-last-or-latest",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/word-choice-last-or-latest"
+        },
+        {
+          "title": "Cambridge Grammar · late-or-lately",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/late-or-lately"
+        }
+      ]
+    },
+    {
+      "contentId": "word-hard",
+      "lemma": "hard",
+      "pattern": "hard / hardly",
+      "meaning": "hard 作副词时表示努力地、猛烈地；hardly 表示几乎不。",
+      "example": "She works hard but hardly complains.",
+      "translation": "她工作努力，却几乎不抱怨。",
+      "note": "hardly 不是 hard 的普通副词形式。",
+      "exercise": {
+        "question": "改正：He studies hardly.（想表达努力学习）",
+        "answer": "He studies hard."
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · hard",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/hard"
+        }
+      ]
+    },
+    {
+      "contentId": "word-begin",
+      "lemma": "begin",
+      "pattern": "begin or start to do / doing / begin with",
+      "meaning": "开始做；以……开始。",
+      "example": "We began to read after lunch.",
+      "translation": "我们午饭后开始阅读。",
+      "note": "多数一般情境可接 to do 或 doing；不推定所有语境完全等同。",
+      "exercise": {
+        "question": "写出另一种正确表达：It began to rain.",
+        "answer": "It began raining."
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · infinitive-verbs",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/verb-ing"
+        },
+        {
+          "title": "Collins · begin",
+          "url": "https://www.collinsdictionary.com/us/dictionary/english/begin"
+        }
+      ]
+    },
+    {
+      "contentId": "word-miss",
+      "lemma": "miss",
+      "pattern": "miss doing / miss a bus or chance",
+      "meaning": "怀念做某事；错过车次或机会。",
+      "example": "I miss reading with my old classmates.",
+      "translation": "我怀念和以前同学一起读书。",
+      "note": "miss 后表示做某事用 doing；表示错过不等于 lose。",
+      "exercise": {
+        "question": "填空：She misses ___ (play) with her friends.",
+        "answer": "playing"
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · miss",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/miss"
+        }
+      ]
+    },
+    {
+      "contentId": "word-happen",
+      "lemma": "happen",
+      "pattern": "happen to sb / happen to do",
+      "meaning": "某事发生在某人身上；碰巧做某事。",
+      "example": "I happened to meet my teacher at the station.",
+      "translation": "我碰巧在车站遇见老师。",
+      "note": "happen 是不及物动词，通常不用被动语态。",
+      "exercise": {
+        "question": "改正：What was happened yesterday?",
+        "answer": "What happened yesterday?"
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · happen",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/happen"
+        }
+      ]
+    },
+    {
+      "contentId": "word-teach",
+      "lemma": "teach",
+      "pattern": "teach sb sth / teach sb to do / teach oneself",
+      "meaning": "教某人某事；教某人做；自学。",
+      "example": "My sister taught me to draw a tree.",
+      "translation": "姐姐教我画树。",
+      "note": "teach—taught—taught；oneself 与主语一致。",
+      "exercise": {
+        "question": "填空：She taught ___ (she) to swim.",
+        "answer": "herself"
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · infinitive-verbs",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/verb-ing"
+        },
+        {
+          "title": "Collins · teach",
+          "url": "https://www.collinsdictionary.com/us/dictionary/english/teach"
+        }
+      ]
+    },
+    {
+      "contentId": "word-think",
+      "lemma": "think",
+      "pattern": "think of or about / think it + adj. + to do / I don't think ...",
+      "meaning": "想到或考虑；认为做某事怎样；我认为……不……。",
+      "example": "I don't think this answer is right.",
+      "translation": "我认为这个答案不对。",
+      "note": "表达否定判断时常把 not 放在 think 所在主句；不是所有情境都必须如此。",
+      "exercise": {
+        "question": "改写为常见表达：I think he will not come.",
+        "answer": "I don't think he will come."
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · think",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/think"
+        },
+        {
+          "title": "Cambridge Grammar · negation_2",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/negation_2"
+        }
+      ]
+    },
+    {
+      "contentId": "word-worry",
+      "lemma": "worry",
+      "pattern": "worry about / be worried about",
+      "meaning": "担心；为……感到忧虑。",
+      "example": "Don't worry about tomorrow's lesson.",
+      "translation": "别担心明天的课。",
+      "note": "worry 是动词，worried 可作形容词；注意 be。",
+      "exercise": {
+        "question": "改正：She is worry about the exam.",
+        "answer": "She is worried about the exam. / She worries about the exam."
+      },
+      "sources": [
+        {
+          "title": "Collins · worry",
+          "url": "https://www.collinsdictionary.com/us/dictionary/english/worry"
+        },
+        {
+          "title": "Collins · worried",
+          "url": "https://www.collinsdictionary.com/us/dictionary/english/worried"
+        }
+      ]
+    },
+    {
+      "contentId": "word-tell",
+      "lemma": "tell",
+      "pattern": "tell sb (not) to do / tell sb sth / tell A from B",
+      "meaning": "告诉某人做或不做；告诉某人某事；区分甲乙。",
+      "example": "Please tell me how to get there.",
+      "translation": "请告诉我怎样到那里。",
+      "note": "tell 常带人作宾语；tell 与 say 的宾语结构不同。",
+      "exercise": {
+        "question": "填空：The teacher told us ___ (not run) inside.",
+        "answer": "not to run"
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · say-or-tell",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/say-or-tell"
+        },
+        {
+          "title": "Collins · tell",
+          "url": "https://www.collinsdictionary.com/us/dictionary/english/tell"
+        }
+      ]
+    },
+    {
+      "contentId": "word-it",
+      "lemma": "it",
+      "pattern": "It is + adj. + for sb + to do",
+      "meaning": "用 it 先占据主语位置，再说明某人做某事怎样。",
+      "example": "It is useful for us to read every day.",
+      "translation": "每天阅读对我们很有用。",
+      "note": "评价做事者品质时常用 of sb，如 kind of you；不能一律用 for。",
+      "exercise": {
+        "question": "改正：It is useful for us read aloud.",
+        "answer": "It is useful for us to read aloud."
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · it-as-empty-subject",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/it-as-empty-subject"
+        },
+        {
+          "title": "British Council · to-infinitives：形容词后的 for / of",
+          "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/infinitives"
+        }
+      ]
+    },
+    {
+      "contentId": "word-good",
+      "lemma": "good",
+      "pattern": "be good for / to / with / at",
+      "meaning": "对……有益；对……友好；善于与……相处或使用；擅长。",
+      "example": "She is good with children.",
+      "translation": "她善于和孩子相处。",
+      "note": "介词决定含义；good at 后可接 doing。",
+      "exercise": {
+        "question": "填空：Reading is good ___ you.",
+        "answer": "for"
+      },
+      "sources": [
+        {
+          "title": "Collins · good",
+          "url": "https://www.collinsdictionary.com/us/dictionary/english/good"
+        }
+      ]
+    },
+    {
+      "contentId": "word-famous",
+      "lemma": "famous",
+      "pattern": "be famous for / as",
+      "meaning": "以某特点闻名；作为某身份闻名。",
+      "example": "This town is famous for its old bridge.",
+      "translation": "这座小镇因古桥闻名。",
+      "note": "for 后是特点或原因，as 后是身份。",
+      "exercise": {
+        "question": "填空：He is famous ___ a writer.",
+        "answer": "as"
+      },
+      "sources": [
+        {
+          "title": "Collins · famous",
+          "url": "https://www.collinsdictionary.com/us/dictionary/english/famous"
+        }
+      ]
+    },
+    {
+      "contentId": "word-need",
+      "lemma": "need",
+      "pattern": "need to do / needn't do / don't need to do",
+      "meaning": "需要做；不必做。",
+      "example": "You needn't bring any paper.",
+      "translation": "你不必带纸。",
+      "note": "needn't 后用原形；don't need 后用 to do；二者都不等于 mustn't 禁止。",
+      "exercise": {
+        "question": "改正：You needn't to wait.",
+        "answer": "You needn't wait. / You don't need to wait."
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · need",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/need"
+        }
+      ]
+    },
+    {
+      "contentId": "word-keep",
+      "lemma": "keep",
+      "pattern": "keep sth for + 时长 / borrow sth",
+      "meaning": "keep 表示持有的状态，borrow 表示借入的动作。",
+      "example": "You may keep the book for two weeks.",
+      "translation": "这本书你可以借阅两周。",
+      "note": "持续时长常与 keep 相配；已借多久用 have kept，不用 have borrowed ... for ... 表示持续持有。",
+      "exercise": {
+        "question": "改正：I have borrowed this book for a week.（持续持有）",
+        "answer": "I have kept this book for a week."
+      },
+      "sources": [
+        {
+          "title": "Collins · keep",
+          "url": "https://www.collinsdictionary.com/us/dictionary/english/keep"
+        },
+        {
+          "title": "Cambridge Grammar · lend-or-borrow",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/lend-or-borrow"
+        }
+      ]
+    },
+    {
+      "contentId": "word-ask",
+      "lemma": "ask",
+      "pattern": "ask sb for sth / ask sb to do",
+      "meaning": "向某人索取或请求某物；请某人做某事。",
+      "example": "I asked my teacher for help.",
+      "translation": "我向老师求助。",
+      "note": "ask for 的宾语是所要的东西；ask sb to do 指所请的人去做。",
+      "exercise": {
+        "question": "填空：She asked me ___ (help) her.",
+        "answer": "to help"
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · ask-and-ask-for",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/ask-and-ask-for"
+        }
+      ]
+    },
+    {
+      "contentId": "word-help",
+      "lemma": "help",
+      "pattern": "can't help doing",
+      "meaning": "忍不住做某事。",
+      "example": "We couldn't help laughing at the funny story.",
+      "translation": "听到有趣的故事，我们忍不住笑了。",
+      "note": "与 help sb (to) do 帮助某人做不同。",
+      "exercise": {
+        "question": "填空：He couldn't help ___ (smile).",
+        "answer": "smiling"
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · infinitive-verbs",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/verb-ing"
+        }
+      ]
+    },
+    {
+      "contentId": "word-dream",
+      "lemma": "dream",
+      "pattern": "dream of or about doing",
+      "meaning": "梦见或梦想做某事。",
+      "example": "She dreams of becoming a doctor.",
+      "translation": "她梦想成为医生。",
+      "note": "介词 of/about 后接 doing；dream to do 不是这里采用的结构。",
+      "exercise": {
+        "question": "填空：They dream of ___ (travel) by train.",
+        "answer": "travelling / traveling"
+      },
+      "sources": [
+        {
+          "title": "Collins · dream",
+          "url": "https://www.collinsdictionary.com/us/dictionary/english/dream"
+        }
+      ]
+    },
+    {
+      "contentId": "word-allow",
+      "lemma": "allow",
+      "pattern": "allow doing / allow sb to do",
+      "meaning": "允许某种活动；允许某人做某事。",
+      "example": "They allow visitors to take notes.",
+      "translation": "他们允许参观者记笔记。",
+      "note": "带人作宾语时用 to do；不带人可用 doing。",
+      "exercise": {
+        "question": "改正：They don't allow to park here.",
+        "answer": "They don't allow parking here. / They don't allow people to park here."
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · allow-permit-or-let",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/allow-permit-or-let."
+        },
+        {
+          "title": "Collins · allow：V-ing 与宾语 + to do",
+          "url": "https://www.collinsdictionary.com/dictionary/english/allow"
+        }
+      ]
+    },
+    {
+      "contentId": "word-mind",
+      "lemma": "mind",
+      "pattern": "Would you mind doing? / Do you mind if ...?",
+      "meaning": "礼貌请求对方做某事；询问对方是否介意。",
+      "example": "Would you mind opening the door?",
+      "translation": "你介意开一下门吗？",
+      "note": "同意请求时用 Not at all. / Of course not. 表示不介意；不能只按中文的是或否回答。",
+      "exercise": {
+        "question": "如何表示不介意对方坐在这里？",
+        "answer": "Not at all. / Of course not. / No, please sit down."
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · mind",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/mind"
+        },
+        {
+          "title": "Cambridge Grammar · negation_2",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/negation_2"
+        }
+      ]
+    },
+    {
+      "contentId": "word-too",
+      "lemma": "too",
+      "pattern": "too / either（也）",
+      "meaning": "too 常用于肯定句末，either 常用于否定句末。",
+      "example": "I don't like the rain either.",
+      "translation": "我也不喜欢下雨。",
+      "note": "这里比较也的用法；too 还可表示太。",
+      "exercise": {
+        "question": "填空：She can't come, and I can't, ___.",
+        "answer": "either"
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · also-as-well-or-too",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/also-as-well-or-too"
+        }
+      ]
+    },
+    {
+      "contentId": "word-stop",
+      "lemma": "stop",
+      "pattern": "stop sb from doing / stop doing / stop to do",
+      "meaning": "阻止某人做；停止正在做的事；停下来去做另一件事。",
+      "example": "We stopped talking to listen.",
+      "translation": "我们停止说话，转而倾听。",
+      "note": "stop doing 与 stop to do 的动作关系不同。",
+      "exercise": {
+        "question": "解释：We stopped to drink some water.",
+        "answer": "我们停下原来的活动，去喝点水。"
+      },
+      "sources": [
+        {
+          "title": "Cambridge Grammar · infinitive-verbs",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/verb-ing"
+        },
+        {
+          "title": "Collins · stop",
+          "url": "https://www.collinsdictionary.com/us/dictionary/english/stop"
+        }
+      ]
+    },
+    {
+      "contentId": "word-compare",
+      "lemma": "compare",
+      "pattern": "compare A with or to B",
+      "meaning": "把甲与乙作比较；compare A to B 还可表示把甲比作乙。",
+      "example": "The writer compares the moon to a silver plate.",
+      "translation": "作者把月亮比作银盘。",
+      "note": "比较异同的用法中 with/to 都可见；不要机械规定 to 只能用于比喻。",
+      "exercise": {
+        "question": "“compare two answers”要求做什么？",
+        "answer": "比较两个答案的相同和不同；不是把两个答案看成同一个。"
+      },
+      "sources": [
+        {
+          "title": "Collins · compare",
+          "url": "https://www.collinsdictionary.com/us/dictionary/english/compare"
+        }
+      ]
+    }
+  ]
+}

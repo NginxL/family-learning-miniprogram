@@ -1,3 +1,4 @@
+const { isPriorContent } = require('./completion-baseline-helper');
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const { createHash } = require('node:crypto');
@@ -19,10 +20,10 @@ const word = name => learning.catalog.find(item => item.kind === 'word' && [item
 const occurrence = (bookId, unitId, text) => books.find(b => b.id === bookId).units.find(u => u.id === unitId).words.find(w => w.text === text);
 
 test('English corrections preserve all IDs, placements, pools and every non-word field against b59064e', () => {
-  assert.equal(knowledge.length, baseline.knowledgeCount);
-  assert.equal(learning.catalog.length, baseline.catalogCount);
-  assert.equal(hash(knowledge.map(beforePostReviewCorrections).map(withoutWordPresentation)), baseline.stableSha256);
-  assert.equal(hash(knowledge.filter(item => item.kind !== 'word').map(beforePostReviewCorrections)), baseline.nonWordSha256);
+  assert.equal(knowledge.filter(isPriorContent).length, baseline.knowledgeCount);
+  assert.equal(learning.catalog.filter(isPriorContent).length, baseline.catalogCount);
+  assert.equal(hash(knowledge.filter(isPriorContent).map(beforePostReviewCorrections).map(withoutWordPresentation)), baseline.stableSha256);
+  assert.equal(hash(knowledge.filter(isPriorContent).filter(item => item.kind !== 'word').map(beforePostReviewCorrections)), baseline.nonWordSha256);
   assert.equal(books.filter(b => b.editionStatus === 'historical_reference').length, 7);
 });
 
@@ -33,7 +34,11 @@ test('every mapped foundation sense survives later units without relying on addi
   }
   for (const [head, body] of Object.entries(repairs)) {
     const item = word(head); assert.ok(item);
-    for (const line of body.split('\n')) assert.ok(item.detail.includes(line), `${head}: ${line}`);
+    for (const line of body.split('\n')) {
+      const match = line.match(/^([a-z. ]+) (.+)$/);
+      if (match) assert.ok(require('../scripts/english-vocabulary').hasSense(item.detail, match[1], match[2]), `${head}: ${line}`);
+      else assert.ok(item.detail.includes(line), `${head}: ${line}`);
+    }
   }
   for (const [head, sense] of [['taste','味道'],['fish','鱼肉'],['rain','下雨'],['snow','下雪'],['art','艺术'],['rice','稻米']])
     assert.ok(word(head).detail.includes(sense), head);
