@@ -1,7 +1,27 @@
 {
   "checkedAt": "2026-10-19",
-  "scope": "复审列出的16个多义词的常见义项；依据词典词条自编中文提示，不照搬例句，不作为完整词典、词频排名或上海中考范围。教材单元义单独保留。",
+  "scope": "复审列出的16词及第四轮具名above、appear，共18个词的已审常用义；依据词典词条自编中文提示，不照搬例句，不作为完整词典、词频排名或上海中考范围。教材单元义单独保留。",
   "entries": {
+    "above": {
+      "meaning": "prep. 在……上方；超过（数量或水平）\nadv. 在上面；在上文",
+      "sources": [
+        {
+          "title": "Collins · above",
+          "url": "https://www.collinsdictionary.com/dictionary/english/above"
+        }
+      ],
+      "checkedAt": "2026-10-19"
+    },
+    "appear": {
+      "meaning": "v. 出现；显得；似乎",
+      "sources": [
+        {
+          "title": "Collins · appear",
+          "url": "https://www.collinsdictionary.com/dictionary/english/appear"
+        }
+      ],
+      "checkedAt": "2026-10-19"
+    },
     "just": {
       "meaning": "adv. 刚刚；仅仅；恰好",
       "sources": [

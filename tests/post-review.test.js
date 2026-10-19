@@ -29,7 +29,7 @@ test('post-review corrections preserve IDs, placement, excerpt coverage and seve
 });
 
 test('reviewed common senses are independent of unit-only meanings and include dictionary links', () => {
-  const expected = { just: '刚刚', order: '顺序', ring: '戒指', pass: '及格', date: '约会', character: '性格',
+  const expected = { above: '在……上方', appear: '出现', just: '刚刚', order: '顺序', ring: '戒指', pass: '及格', date: '约会', character: '性格',
     hit: '击打', beat: '打败', fair: '公平的', mark: '分数', wave: '挥手', figure: '数字', stage: '阶段',
     cover: '封面', novel: '新奇的', general: '将军' };
   assert.deepEqual(Object.keys(common.entries).sort(), Object.keys(expected).sort());
@@ -56,6 +56,40 @@ test('same-POS duplicate meanings do not repeat while noun and verb senses remai
   assert.match(word('light').detail, /v\. 点燃/);assert.match(word('light').detail,/adj\. 轻的；浅色的/);
   assert.match(word('company').studyNotes.exercises[0].question,/company「公司」的/);
   assert.doesNotMatch(word('homework').studyNotes.exercises[0].question,/（（|））/);
+});
+
+test('above and appear show reviewed common senses while retaining original unit meanings and inflection scope', () => {
+  for (const [head, expected, unitMeaning] of [
+    ['above', ['prep. 在……上方；超过（数量或水平）', 'adv. 在上面；在上文'], 'adv. （水平）超过，更多，更大'],
+    ['appear', ['v. 出现；显得；似乎'], 'v. 显得；看来；似乎']
+  ]) {
+    const item = word(head), section = item.detail.match(/常用义：\n([\s\S]*?)(?:\n\n|$)/)?.[1];
+    for (const line of expected) assert.ok(section?.includes(line), `${head}: ${line}`);
+    assert.ok(item.detail.includes(unitMeaning));
+    assert.equal(item.commonSenseSources[0].url, `https://www.collinsdictionary.com/dictionary/english/${head}`);
+    assert.ok(item.dictionaryReference, 'unreviewed dictionary reference is retained separately');
+  }
+  assert.match(word('appear').studyNotes.exercises[0].question, /appear「显得；看来；似乎」/);
+  assert.equal(word('appear').studyNotes.exercises[0].answer, 'appeared');
+});
+
+test('grade-three upper recitation evidence stays explicitly provisional until official pages are reviewed', () => {
+  const entries = requirements.filter(r => r.bookId === 'chinese-3a-sample');
+  assert.equal(entries.length, 7);
+  for (const r of entries) {
+    assert.equal(r.sourceUrl, 'https://keben.app/book/0357');
+    assert.match(r.evidence, /第三方样本.*官方原页待复核/);
+    assert.equal(r.sourcePdfPage - r.sourcePrintPage, 5);
+    const item = get(r.contentId), mapping = item.gradeMappings.find(m => m.bookId === r.bookId);
+    assert.equal(mapping.sourceKind, 'public_sample'); assert.equal(mapping.grade, 3); assert.equal(mapping.semester, '上册');
+    assert.deepEqual(item.recitationRequirements.find(e => e.bookId === r.bookId), { ...r, label: `3年级上册：${r.requirement}` });
+    const source = withContentSources(decorate(item));
+    assert.match(source.sourceGradeLabel, /官方原页待核实/);
+  }
+  assert.deepEqual(entries.map(r => r.sourcePrintPage), [15, 15, 15, 85, 85, 85, 96]);
+  assert.equal(entries.filter(r => r.requirement === '背诵并默写全文').length, 2);
+  const document = fs.readFileSync('docs/背诵要求与逐篇辅助核验.md', 'utf8');
+  assert.ok(document.includes('| 3年级上册 | 11 | 7 | 第三方样本要求；官方原页待复核 |'));
 });
 
 test('original vocabulary pages distinguish expressions and restore acronym word boundaries', () => {

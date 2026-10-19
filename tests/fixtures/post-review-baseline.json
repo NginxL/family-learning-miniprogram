@@ -190,6 +190,21 @@
             }
           ],
           "afterSha256": "eebcfc9135f0ec8f6f8e56209d8f7f5d8e31e6d076254e9b6734f8c5231060cf"
+        },
+        "recitationRequirements": {
+          "before": [
+            {
+              "contentId": "moe-2022-zh-1-6-014",
+              "bookId": "chinese-3a-sample",
+              "requirement": "背诵全文",
+              "sourcePdfPage": 90,
+              "sourcePrintPage": 85,
+              "sourceUrl": "https://keben.app/book/0357",
+              "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。",
+              "label": "3年级上册：背诵全文"
+            }
+          ],
+          "afterSha256": "b32f0c6402a003bce81644783e846eb433bfc979103e4d7edcebbbb39c27c8f0"
         }
       }
     },
@@ -325,6 +340,21 @@
             }
           ],
           "afterSha256": "eebcfc9135f0ec8f6f8e56209d8f7f5d8e31e6d076254e9b6734f8c5231060cf"
+        },
+        "recitationRequirements": {
+          "before": [
+            {
+              "contentId": "moe-2022-zh-1-6-023",
+              "bookId": "chinese-3a-sample",
+              "requirement": "背诵并默写全文",
+              "sourcePdfPage": 90,
+              "sourcePrintPage": 85,
+              "sourceUrl": "https://keben.app/book/0357",
+              "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。",
+              "label": "3年级上册：背诵并默写全文"
+            }
+          ],
+          "afterSha256": "6c3205f62e2bcabafcc0ed05b0b9c33c47b8f31d48aa25236f616202df7ddf03"
         }
       }
     },
@@ -352,6 +382,21 @@
             }
           ],
           "afterSha256": "04120e680bf8abbe1a4e6619d9e384c2f9d65f588d5b3eff4aa14906dd2673d7"
+        },
+        "recitationRequirements": {
+          "before": [
+            {
+              "contentId": "moe-2022-zh-1-6-035",
+              "bookId": "chinese-3a-sample",
+              "requirement": "背诵全文",
+              "sourcePdfPage": 20,
+              "sourcePrintPage": 15,
+              "sourceUrl": "https://keben.app/book/0357",
+              "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。",
+              "label": "3年级上册：背诵全文"
+            }
+          ],
+          "afterSha256": "e8d069f9e910804c97d0e8cfe61ef06db1e5084d3027066bc12ffaf2d3753207"
         }
       }
     },
@@ -514,6 +559,21 @@
             }
           ],
           "afterSha256": "04120e680bf8abbe1a4e6619d9e384c2f9d65f588d5b3eff4aa14906dd2673d7"
+        },
+        "recitationRequirements": {
+          "before": [
+            {
+              "contentId": "moe-2022-zh-1-6-045",
+              "bookId": "chinese-3a-sample",
+              "requirement": "背诵并默写全文",
+              "sourcePdfPage": 20,
+              "sourcePrintPage": 15,
+              "sourceUrl": "https://keben.app/book/0357",
+              "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。",
+              "label": "3年级上册：背诵并默写全文"
+            }
+          ],
+          "afterSha256": "e981cb87ec1cbd7c9a5c55b69756c8c4f9b6735cc8643e9fdc5c256ce5d0d457"
         }
       }
     },
@@ -541,6 +601,21 @@
             }
           ],
           "afterSha256": "d6c51c8ef38c21efe5fd88807d9feb4babcd8159a19428e5ff4a4dcb8c32c8a4"
+        },
+        "recitationRequirements": {
+          "before": [
+            {
+              "contentId": "moe-2022-zh-1-6-054",
+              "bookId": "chinese-3a-sample",
+              "requirement": "背诵全文",
+              "sourcePdfPage": 90,
+              "sourcePrintPage": 85,
+              "sourceUrl": "https://keben.app/book/0357",
+              "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。",
+              "label": "3年级上册：背诵全文"
+            }
+          ],
+          "afterSha256": "14052f06b1e58a6933a0e024669046790c56bbea406b90a7e5afa4b40d69948a"
         }
       }
     },
@@ -716,6 +791,21 @@
             }
           ],
           "afterSha256": "2216dd7bb797dded02abea7396f0d9236ee0e3684bd3792d1b3106c4c4237819"
+        },
+        "recitationRequirements": {
+          "before": [
+            {
+              "contentId": "sh54-night-reading",
+              "bookId": "chinese-3a-sample",
+              "requirement": "背诵全文",
+              "sourcePdfPage": 20,
+              "sourcePrintPage": 15,
+              "sourceUrl": "https://keben.app/book/0357",
+              "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。",
+              "label": "3年级上册：背诵全文"
+            }
+          ],
+          "afterSha256": "40fd96353d82efb5bd00df07bf5834c5147fb3716b24805b7e376752e5d1b320"
         }
       }
     },
@@ -797,6 +887,21 @@
             }
           ],
           "afterSha256": "e35654aa03b01533ec715fef05267e7710caab4a73412f43d408f65f7b2b5bf9"
+        },
+        "recitationRequirements": {
+          "before": [
+            {
+              "contentId": "sh54-sima-guang",
+              "bookId": "chinese-3a-sample",
+              "requirement": "背诵全文",
+              "sourcePdfPage": 101,
+              "sourcePrintPage": 96,
+              "sourceUrl": "https://keben.app/book/0357",
+              "evidence": "已逐页核对原书课后要求；背诵与默写分别记录，仅适用于所列版本，不推定为上海当届完整默写范围。",
+              "label": "3年级上册：背诵全文"
+            }
+          ],
+          "afterSha256": "37a2f8f4178f7165df0cd9fdb6510d2f043832f9942a1f97fa9c61ed1e8b6d8c"
         }
       }
     },
@@ -7485,6 +7590,130 @@
       "bookIds": [
         "english-6a-2024"
       ]
+    },
+    {
+      "id": "word-above",
+      "kind": "word",
+      "title": "above",
+      "detail": "above\n\n常用义：超过；在上方\n\n教材用法：\nadv. （水平）超过，更多，更大",
+      "source": "国家英语课标 2022 · 三级词 · 印刷页 98；常用义合并；教材词性与单元义见册次来源",
+      "minutes": 1,
+      "referenceUrl": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582349487953.pdf",
+      "textSourceUrl": "https://github.com/skywind3000/ECDICT",
+      "note": "常用义与教材单元义分别保留；教材用法中的词性照原书，标“表达”的条目原书未标词性。音频与目录选词的纸本词性仍待核实；不是完整词典或中考词汇范围。",
+      "collections": [
+        "moe-all",
+        "shanghai54"
+      ],
+      "aliases": [
+        "above"
+      ],
+      "dictionaryReference": "prep. 在上方, 超出\nadv. 在上面",
+      "bookIds": [
+        "english-7a-2024"
+      ],
+      "gradeMappings": [
+        {
+          "grade": 7,
+          "bookId": "english-7a-2024",
+          "schoolSystem": "5-4",
+          "semester": "上册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制2022课标修订原书，封面2024审核通过；纸本ISBN、版次及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=9dafb61c-5293-2faf-f0a1-59e20b43eaed&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=151",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 142,
+          "sourcePdfPage": 151,
+          "unit": "第3单元 · Jobs",
+          "unitId": "u3",
+          "mappingType": "textbook_item",
+          "evidence": "国家平台五四制原书 Words and expressions in each unit 词形、单元、词性及义项已核对；学校印次待确认。 本单元原书用法：adv. （水平）超过，更多，更大。",
+          "status": "catalogue_verified"
+        }
+      ],
+      "vocabularyRevision": "2026-10-18"
+    },
+    {
+      "id": "word-appear",
+      "kind": "word",
+      "title": "appear",
+      "detail": "appear\n\n常用义：显得；出现\n\n教材用法：\nv. 显得；看来；似乎",
+      "source": "国家英语课标 2022 · 三级词 · 印刷页 100；常用义合并；教材词性与单元义见册次来源",
+      "minutes": 1,
+      "referenceUrl": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582349487953.pdf",
+      "textSourceUrl": "https://github.com/skywind3000/ECDICT",
+      "note": "常用义与教材单元义分别保留；教材用法中的词性照原书，标“表达”的条目原书未标词性。音频与目录选词的纸本词性仍待核实；不是完整词典或中考词汇范围。",
+      "collections": [
+        "moe-all",
+        "shanghai54"
+      ],
+      "aliases": [
+        "appear"
+      ],
+      "dictionaryReference": "vi. 出现, 显得, 来到\n[法] 出庭, 到案, 出现",
+      "bookIds": [
+        "english-7b-2024"
+      ],
+      "gradeMappings": [
+        {
+          "grade": 7,
+          "bookId": "english-7b-2024",
+          "schoolSystem": "5-4",
+          "semester": "下册",
+          "editionStatus": "official_resource_verified",
+          "edition": "国家平台五四制2022课标修订原书，封面2024审核通过；纸本ISBN、版次及学校印次待确认",
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=5f72a1e5-6754-7c81-9759-b7f310b16263&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "outlineDestination": "#page=140",
+          "sourceKind": "official_textbook",
+          "sourcePrintPage": 133,
+          "sourcePdfPage": 140,
+          "unit": "第5单元 · Wild animals",
+          "unitId": "u5",
+          "mappingType": "textbook_item",
+          "evidence": "国家平台五四制原书 Words and expressions in each unit 词形、单元、词性及义项已核对；学校印次待确认。 本单元原书用法：v. 显得；看来；似乎。",
+          "status": "catalogue_verified"
+        }
+      ],
+      "vocabularyRevision": "2026-10-18",
+      "studyNotes": {
+        "title": "词形、短语与词族",
+        "notice": "常用用法与自编例句。词卡的教材归属只针对原词条，不代表这些拓展用法都出自该册；不是完整中考词汇清单。",
+        "sections": [
+          {
+            "title": "常用词形",
+            "body": "v. 显得；看来；似乎\n动词第三人称单数：appears\n\nv. 显得；看来；似乎\n动词过去式：appeared\n\nv. 显得；看来；似乎\n动词过去分词：appeared\n\nv. 显得；看来；似乎\n动词 -ing 形式：appearing"
+          },
+          {
+            "title": "词族联系",
+            "body": "appearance n. 出现、外貌；disappear v. 消失\nappearance 拼写中保留 appear，注意中间的 ar。"
+          }
+        ],
+        "exercises": [
+          {
+            "question": "回忆 appear（显得；看来；似乎） 的动词过去式。",
+            "answer": "appeared"
+          }
+        ],
+        "sources": [
+          {
+            "title": "ECDICT 词形数据（MIT许可，固定版本）",
+            "url": "https://github.com/skywind3000/ECDICT/tree/bc015ed2e24a7abef49fc6dbbb7fe32c1dadaf8b"
+          },
+          {
+            "title": "British Council · 不规则动词",
+            "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/irregular-verbs"
+          }
+        ],
+        "searchTerms": [
+          "appear",
+          "appears",
+          "appeared",
+          "appeared",
+          "appearing",
+          "appearance n. 出现、外貌；disappear v. 消失"
+        ]
+      }
     }
   ]
 }

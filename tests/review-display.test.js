@@ -65,6 +65,7 @@ test('progress discloses sample-only grade mappings without requiring a new clou
   assert.equal(instance.data.progress.grades[0].total, 151); assert.equal(instance.data.progress.grades[1].total, 120);
   assert.match(instance.data.gradeSourceNotes[1], /29 项仅有第三方样本依据/);
   assert.match(instance.data.gradeSourceNotes[2], /60 项仅有第三方样本依据/);
+  assert.match(instance.data.gradeSourceNotes[3], /11 项仅有第三方样本依据/);
   assert.equal(instance.data.gradeSourceNotes[9], '');
   const template = fs.readFileSync('miniprogram/pages/progress/index.wxml', 'utf8');
   assert.match(template, /查看已入库内容/); assert.match(template, /gradeSourceNotes\[item.grade\]/);
