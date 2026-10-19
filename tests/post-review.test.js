@@ -73,7 +73,7 @@ test('above and appear show reviewed common senses while retaining original unit
   assert.equal(word('appear').studyNotes.exercises[0].answer, 'appeared');
 });
 
-test('grade-three official recitation evidence does not upgrade unreviewed work placements', () => {
+test('grade-three official recitation and placement pages remain separate evidence', () => {
   const entries = requirements.filter(r => r.bookId === 'chinese-3a-sample');
   assert.equal(entries.length, 7);
   const url = 'https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=9185e4a3-efb4-4ec0-bfd9-1cb194c260d3&catalogType=tchMaterial&subCatalog=tchMaterial';
@@ -93,23 +93,23 @@ test('grade-three official recitation evidence does not upgrade unreviewed work 
     assert.match(r.evidence, /国家平台五四制三年级上册原书课后要求已核对/);
     assert.equal(r.sourcePdfPage - r.sourcePrintPage, 5);
     const item = get(r.contentId), mapping = item.gradeMappings.find(m => m.bookId === r.bookId);
-    assert.equal(mapping.sourceUrl, 'https://keben.app/book/0357');
-    assert.equal(mapping.sourceKind, 'public_sample'); assert.equal(mapping.grade, 3); assert.equal(mapping.semester, '上册');
+    assert.equal(mapping.sourceUrl, url);
+    assert.equal(mapping.sourceKind, 'official_textbook'); assert.equal(mapping.grade, 3); assert.equal(mapping.semester, '上册');
     assert.deepEqual(item.recitationRequirements.find(e => e.bookId === r.bookId), { ...r, label: `3年级上册：${r.requirement}` });
     const source = withContentSources(decorate(item));
-    assert.match(source.sourceGradeLabel, /官方原页待核实/);
+    assert.doesNotMatch(source.sourceGradeLabel, /官方原页待核实/);
     assert.equal(source.recitationSources.find(s => s.bookId === r.bookId).sourceUrl, url);
     assert.equal(source.sourceMappings.find(s => s.bookId === r.bookId).sourceUrl, mapping.sourceUrl);
   }
   assert.deepEqual(entries.map(r => r.sourcePrintPage), [15, 15, 15, 85, 85, 85, 96]);
   assert.equal(entries.filter(r => r.requirement === '背诵并默写全文').length, 2);
   const document = fs.readFileSync('docs/背诵要求与逐篇辅助核验.md', 'utf8');
-  assert.ok(document.includes('| 3年级上册 | 11 | 7 | 7条要求已核国家平台原书；篇目位置证据独立保留 |'));
+  assert.ok(document.includes('| 3年级上册 | 11 | 7 | 要求及篇目位置分别核对国家平台原书 |'));
   const template = fs.readFileSync('miniprogram/templates/content-sources.wxml', 'utf8');
   assert.ok(template.includes('data-url="{{requirement.sourceUrl}}" bindtap="copyStudySource">复制背诵要求依据链接'));
 });
 
-test('eight early-primary requirements use official original pages without expanding dictation or placement claims', () => {
+test('eight early-primary requirements retain their official requirement pages without expanding dictation', () => {
   const expected = [
     ['chinese-1a-sample', '7775818d-f3ac-4f53-b43d-af3918a8634a', 1, '上册', 63, 68, ['moe-2022-zh-1-6-001'], '28b663afbc21420dea45dadca7ff7d8b1af58b43ae132a2f7f2cf6075d4018ad'],
     ['chinese-1b-sample', '7f4f199b-aab1-49b4-90e5-e36cfe975f02', 1, '下册', 39, 44, ['poem-quiet-night'], '05ee712f0fbcfa4247278e6b977d343ee65145cf55219780a932277115ed80f2'],
@@ -133,8 +133,8 @@ test('eight early-primary requirements use official original pages without expan
       assert.equal(r.requirement, '背诵全文'); assert.equal(r.start, undefined); assert.equal(r.end, undefined);
       assert.ok(r.evidence.includes('原文：“朗读课文。背诵课文。”')); assert.match(r.evidence, /该页未见明确默写要求/);
       const view = withContentSources(decorate(get(id))), mapping = view.sourceMappings.find(m => m.bookId === book);
-      assert.equal(new URL(mapping.sourceUrl).hostname, 'keben.app'); assert.equal(mapping.sourceKind, 'public_sample');
-      assert.match(mapping.verificationLabel, /第三方样本/);
+      assert.equal(mapping.sourceUrl, url); assert.equal(mapping.sourceKind, 'official_textbook');
+      assert.equal(mapping.verificationLabel, '官方教材来源');
       assert.equal(view.recitationSources.find(s => s.bookId === book).sourceUrl, url);
     }
   }
@@ -211,7 +211,7 @@ test('source disclosure distinguishes third-party samples and displays PDF-only 
       assert.doesNotMatch(view.sourceGradeLabel,/归属已核实/);
     }
   }
-  assert.equal(samples,286);
+  assert.equal(samples,253);
   const tag=withContentSources(decorate(get('skill-en-question-tags')));
   assert.equal(tag.sourceMappings[0].sourcePdfPage,10);assert.equal(tag.sourceMappings[0].sourcePrintPage,undefined);
   const template=fs.readFileSync('miniprogram/templates/content-sources.wxml','utf8');

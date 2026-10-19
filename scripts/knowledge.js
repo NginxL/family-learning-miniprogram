@@ -10,6 +10,7 @@ const curriculum = require('./curriculum');
 const lowerPrimary = require('./lower-primary');
 const foundations = require('./foundations');
 const textRevisions = require('./text-revisions');
+const { officialPlacements } = require('./chinese-placement');
 function period(entry) {
   const metadata = dynasties.entries.find((item) => item.id === entry.id);
   if (!metadata || metadata.title !== entry.title || metadata.author !== entry.author || !metadata.dynasty || !metadata.sources.length)
@@ -18,6 +19,7 @@ function period(entry) {
 }
 function knowledge() {
   const mappings = new Map();
+  const placements = officialPlacements(regional.books);
   // These identify unique works in a named official book's visible outline.
   // Ambiguous/truncated titles and unexpanded groups remain candidates, never grade facts.
   const gradeMappings = new Map();
@@ -34,7 +36,8 @@ function knowledge() {
         ...(entry.sourcePrintPage ? { sourcePrintPage: entry.sourcePrintPage, unit: entry.unit } : {}),
         ...(entry.unitId ? { unitId: entry.unitId, mappingType: 'textbook_item' } : {}),
         sourceKind: book.sourceKind || 'official_outline',
-        evidence: book.sourceKind === 'public_sample' ? '第三方教材样本关联；官方原页、册次归属及学校版次待核实' : '官方教材目录篇名与册次已核对；正文异文校对另计', status: 'catalogue_verified' });
+        evidence: book.sourceKind === 'public_sample' ? '第三方教材样本关联；官方原页、册次归属及学校版次待核实' : '官方教材目录篇名与册次已核对；正文异文校对另计', status: 'catalogue_verified',
+        ...placements.get(`${book.id}:${entry.contentId}`) });
       gradeMappings.set(entry.contentId, grades);
     }
   }));
@@ -54,7 +57,8 @@ function knowledge() {
     ...(entry.coveredContentIds ? { coveredContentIds: entry.coveredContentIds } : {}),
     detail: `${entry.author}\n${entry.original}`, minutes: entry.original.length > 300 ? 15 : 5,
     source: entry.examEvidence ? '上海 2026 中考评析关联篇目' : /https:\/\/(book\.pep\.com\.cn|basic\.smartedu\.cn)\//.test(entry.sourceUrl) ? '五四制官方教材原页核对 · 公版原作 / 节选' : entry.sourceUrl.startsWith('https://keben.app/') ? '五四制公开教材样本核对 · 公版原作 / 节选' : '五四制教材目录关联原作 · 正文待逐字核对',
-    referenceUrl: entry.examEvidence || regional.books.find((book) => (mappings.get(entry.id) || []).includes(book.id))?.url || entry.sourceUrl,
+    referenceUrl: entry.examEvidence || placements.get(`${mappings.get(entry.id)?.[0]}:${entry.id}`)?.sourceUrl
+      || regional.books.find((book) => (mappings.get(entry.id) || []).includes(book.id))?.url || entry.sourceUrl,
     textSourceUrl: entry.sourceUrl, note: entry.reviewStatus,
     collections: [entry.examEvidence ? 'shanghai-exam' : 'shanghai54'], bookIds: mappings.get(entry.id) || [], gradeMappings: gradeMappings.get(entry.id) || []
   }));

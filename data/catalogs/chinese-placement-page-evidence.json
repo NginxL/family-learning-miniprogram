@@ -1,0 +1,553 @@
+{
+  "checkedAt": "2026-10-19",
+  "scope": "仅核具名古诗文的篇名、册次、单元及正文位置。字表、现代课文、全书内容和学校实际印次不由此推定；背诵要求另存独立证据。页图仅作本地核验，不随仓库分发。",
+  "books": [
+    {
+      "bookId": "chinese-1a-sample",
+      "title": "义务教育教科书（五·四学制）·语文一年级上册",
+      "grade": 1,
+      "semester": "上册",
+      "schoolSystem": "5-4",
+      "publisher": "人民教育出版社",
+      "platformContentId": "7775818d-f3ac-4f53-b43d-af3918a8634a",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=7775818d-f3ac-4f53-b43d-af3918a8634a&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourceKind": "official_textbook",
+      "edition": "国家平台五四制原书，封面审定2024；电子版未载ISBN、印次",
+      "identityPages": [
+        {
+          "sourcePdfPage": 1,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/7775818d-f3ac-4f53-b43d-af3918a8634a.t/zh-CN/1787020605372/transcode/image/1.jpg",
+          "sha256": "8cb79c755e026f68e05ca6696b4e01eae699d464c9224012a59b97445b4a8cd6",
+          "role": "cover"
+        },
+        {
+          "sourcePdfPage": 3,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/7775818d-f3ac-4f53-b43d-af3918a8634a.t/zh-CN/1787020605372/transcode/image/3.jpg",
+          "sha256": "5d205ef16e514d48f2c8b8fc9651a08a9038a577ef09f3634c3f1031a98925cc",
+          "role": "publication"
+        },
+        {
+          "sourcePdfPage": 4,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/7775818d-f3ac-4f53-b43d-af3918a8634a.t/zh-CN/1787020605372/transcode/image/4.jpg",
+          "sha256": "42e0661c867883a3c34cc32288801c6013697a09206eb21a95164f4302b352db",
+          "role": "contents"
+        },
+        {
+          "sourcePdfPage": 5,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/7775818d-f3ac-4f53-b43d-af3918a8634a.t/zh-CN/1787020605372/transcode/image/5.jpg",
+          "sha256": "124d3cfece3e5c32ed0d6574262db5cb8ffe2e753e0b9cc18ae2d7fc68fdd8f2",
+          "role": "contents"
+        },
+        {
+          "sourcePdfPage": 6,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/7775818d-f3ac-4f53-b43d-af3918a8634a.t/zh-CN/1787020605372/transcode/image/6.jpg",
+          "sha256": "be1286b905060b42b494d39523578edcd0d61ca76d41ba1d6ff107976dc14f2f",
+          "role": "contents"
+        }
+      ],
+      "positions": [
+        {
+          "contentId": "poem-goose",
+          "observedTitle": "咏鹅",
+          "observedAuthor": "骆宾王",
+          "firstLine": "鹅，鹅，鹅",
+          "sourcePrintPage": 16,
+          "sourcePdfPage": 21,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/7775818d-f3ac-4f53-b43d-af3918a8634a.t/zh-CN/1787020605372/transcode/image/21.jpg",
+          "sha256": "addcef65ffbacfeb6d06565dbf515bd876d9e4d525208b77e1a1838bd7812268",
+          "unitId": "u1",
+          "column": "第一单元·语文园地一·日积月累"
+        },
+        {
+          "contentId": "sh54-painting",
+          "observedTitle": "画",
+          "observedAuthor": null,
+          "firstLine": "远看山有色",
+          "sourcePrintPage": 29,
+          "sourcePdfPage": 34,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/7775818d-f3ac-4f53-b43d-af3918a8634a.t/zh-CN/1787020605372/transcode/image/34.jpg",
+          "sha256": "a309bf143a8b3a9ecf0026501455213489009404e23fc865542c47dff2391709",
+          "unitId": "u2",
+          "column": "第二单元·语文园地二·日积月累",
+          "note": "所核页未署作者；作者归属不由此页推定。"
+        },
+        {
+          "contentId": "poem-farmer-two",
+          "observedTitle": "悯农（其二）",
+          "observedAuthor": "李绅",
+          "firstLine": "锄禾日当午",
+          "sourcePrintPage": 58,
+          "sourcePdfPage": 63,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/7775818d-f3ac-4f53-b43d-af3918a8634a.t/zh-CN/1787020605372/transcode/image/63.jpg",
+          "sha256": "9cb4911be1483673c2ad863afc87676e0f9cda55ed071980130080011bf6a778",
+          "unitId": "u4",
+          "column": "第四单元·语文园地四·日积月累"
+        },
+        {
+          "contentId": "moe-2022-zh-1-6-001",
+          "observedTitle": "江南",
+          "observedAuthor": "汉乐府",
+          "firstLine": "江南可采莲",
+          "sourcePrintPage": 62,
+          "sourcePdfPage": 67,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/7775818d-f3ac-4f53-b43d-af3918a8634a.t/zh-CN/1787020605372/transcode/image/67.jpg",
+          "sha256": "1ded283aeb388c110c09bf44385e41a2b7036e52db830abf7d5276b0b8593b89",
+          "unitId": "u5",
+          "column": "第五单元·阅读第2课"
+        },
+        {
+          "contentId": "sh54-moon-excerpt",
+          "observedTitle": "古朗月行（节选）",
+          "observedAuthor": "李白",
+          "firstLine": "小时不识月",
+          "sourcePrintPage": 82,
+          "sourcePdfPage": 87,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/7775818d-f3ac-4f53-b43d-af3918a8634a.t/zh-CN/1787020605372/transcode/image/87.jpg",
+          "sha256": "3f85021680c4d8f556f7c2d9cf922a35afe81386b0a106c0a773882fb546f2ff",
+          "unitId": "u6",
+          "column": "第六单元·语文园地六·日积月累",
+          "note": "只核所收四句，至“飞在青云端”；不扩为全诗。"
+        },
+        {
+          "contentId": "poem-wind",
+          "observedTitle": "风",
+          "observedAuthor": "李峤",
+          "firstLine": "解落三秋叶",
+          "sourcePrintPage": 102,
+          "sourcePdfPage": 107,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/7775818d-f3ac-4f53-b43d-af3918a8634a.t/zh-CN/1787020605372/transcode/image/107.jpg",
+          "sha256": "e7261bc898753d8c24e5a6deb1981ba802675d11fdf9fbd20a0c51cee6978d24",
+          "unitId": "u8",
+          "column": "第八单元·语文园地八·日积月累"
+        }
+      ]
+    },
+    {
+      "bookId": "chinese-1b-sample",
+      "title": "义务教育教科书（五·四学制）·语文一年级下册",
+      "grade": 1,
+      "semester": "下册",
+      "schoolSystem": "5-4",
+      "publisher": "人民教育出版社",
+      "platformContentId": "7f4f199b-aab1-49b4-90e5-e36cfe975f02",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=7f4f199b-aab1-49b4-90e5-e36cfe975f02&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourceKind": "official_textbook",
+      "edition": "国家平台五四制原书，封面审定2024；电子版未载ISBN、印次",
+      "identityPages": [
+        {
+          "sourcePdfPage": 1,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/7f4f199b-aab1-49b4-90e5-e36cfe975f02.t/zh-CN/1772437091779/transcode/image/1.jpg",
+          "sha256": "d8b8f751362b2b765104f67d78d878ed4b3438b6d102b10316ee6aad7fcfce76",
+          "role": "cover"
+        },
+        {
+          "sourcePdfPage": 3,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/7f4f199b-aab1-49b4-90e5-e36cfe975f02.t/zh-CN/1772437091779/transcode/image/3.jpg",
+          "sha256": "c5a06fbf00b7cb58530f852ea64283189ddb58bb7c31c1f646736951ec8b2aa7",
+          "role": "publication"
+        },
+        {
+          "sourcePdfPage": 4,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/7f4f199b-aab1-49b4-90e5-e36cfe975f02.t/zh-CN/1772437091779/transcode/image/4.jpg",
+          "sha256": "9970e528286e526a2bb6568fb25205a5f9c550024d8b35f1b1c2673b6ae7aef3",
+          "role": "contents"
+        },
+        {
+          "sourcePdfPage": 5,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/7f4f199b-aab1-49b4-90e5-e36cfe975f02.t/zh-CN/1772437091779/transcode/image/5.jpg",
+          "sha256": "5a00540c2a177155812b9a1c032231e70bb8d94569df1765b8db79db9e060531",
+          "role": "contents"
+        },
+        {
+          "sourcePdfPage": 6,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/7f4f199b-aab1-49b4-90e5-e36cfe975f02.t/zh-CN/1772437091779/transcode/image/6.jpg",
+          "sha256": "17cb713e7be7c65d78f4300d43f8672dc632f81430f720a546b4502b2be7464c",
+          "role": "contents"
+        }
+      ],
+      "positions": [
+        {
+          "contentId": "poem-spring-morning",
+          "observedTitle": "春晓",
+          "observedAuthor": "孟浩然",
+          "firstLine": "春眠不觉晓",
+          "sourcePrintPage": 12,
+          "sourcePdfPage": 17,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/7f4f199b-aab1-49b4-90e5-e36cfe975f02.t/zh-CN/1772437091779/transcode/image/17.jpg",
+          "sha256": "5b8644047e4285d92c569175f99ec7df2c7e2938bb50d64252c3297a3dc0a802",
+          "unitId": "u1",
+          "column": "第一单元·语文园地一·日积月累"
+        },
+        {
+          "contentId": "poem-hermit",
+          "observedTitle": "寻隐者不遇",
+          "observedAuthor": "贾岛",
+          "firstLine": "松下问童子",
+          "sourcePrintPage": 23,
+          "sourcePdfPage": 28,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/7f4f199b-aab1-49b4-90e5-e36cfe975f02.t/zh-CN/1772437091779/transcode/image/28.jpg",
+          "sha256": "e9ee85296583af27ea00dbb8f9a4e987ecd9f2019247860193ca0a57497dbc9e",
+          "unitId": "u2",
+          "column": "第二单元·语文园地二·日积月累"
+        },
+        {
+          "contentId": "moe-2022-zh-1-6-020",
+          "observedTitle": "赠汪伦",
+          "observedAuthor": "李白",
+          "firstLine": "李白乘舟将欲行",
+          "sourcePrintPage": 35,
+          "sourcePdfPage": 40,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/7f4f199b-aab1-49b4-90e5-e36cfe975f02.t/zh-CN/1772437091779/transcode/image/40.jpg",
+          "sha256": "e7c164a0701e22b519e413d28155a59f17f8f65ca8b7612aa47a2c25150d5730",
+          "unitId": "u3",
+          "column": "第三单元·语文园地三·日积月累"
+        },
+        {
+          "contentId": "poem-quiet-night",
+          "observedTitle": "静夜思",
+          "observedAuthor": "李白",
+          "firstLine": "床前明月光",
+          "sourcePrintPage": 39,
+          "sourcePdfPage": 44,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/7f4f199b-aab1-49b4-90e5-e36cfe975f02.t/zh-CN/1772437091779/transcode/image/44.jpg",
+          "sha256": "05ee712f0fbcfa4247278e6b977d343ee65145cf55219780a932277115ed80f2",
+          "unitId": "u4",
+          "column": "第四单元·阅读第7课"
+        },
+        {
+          "contentId": "poem-pond",
+          "observedTitle": "池上",
+          "observedAuthor": "白居易",
+          "firstLine": "小娃撑小艇",
+          "sourcePrintPage": 61,
+          "sourcePdfPage": 66,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/7f4f199b-aab1-49b4-90e5-e36cfe975f02.t/zh-CN/1772437091779/transcode/image/66.jpg",
+          "sha256": "3b2c1c15a9bb837d1ee2b3d8683aec38850d8305dd9ea5efcd26335916bfda17",
+          "unitId": "u6",
+          "column": "第六单元·第10课古诗二首"
+        },
+        {
+          "contentId": "poem-small-pond",
+          "observedTitle": "小池",
+          "observedAuthor": "杨万里",
+          "firstLine": "泉眼无声惜细流",
+          "sourcePrintPage": 62,
+          "sourcePdfPage": 67,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/7f4f199b-aab1-49b4-90e5-e36cfe975f02.t/zh-CN/1772437091779/transcode/image/67.jpg",
+          "sha256": "a292a993180701e1a85afd70d71559f0389d6188e3c87f1b968806b2d74325d8",
+          "unitId": "u6",
+          "column": "第六单元·第10课古诗二首"
+        },
+        {
+          "contentId": "sh54-painted-rooster",
+          "observedTitle": "画鸡",
+          "observedAuthor": "唐寅",
+          "firstLine": "头上红冠不用裁",
+          "sourcePrintPage": 110,
+          "sourcePdfPage": 115,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/7f4f199b-aab1-49b4-90e5-e36cfe975f02.t/zh-CN/1772437091779/transcode/image/115.jpg",
+          "sha256": "5e19d5abd88fd3a7970b7a00b67a7d3f4e545ede2c2bfea3b883eb179fb8ab61",
+          "unitId": "u8",
+          "column": "第八单元·语文园地八·日积月累"
+        }
+      ]
+    },
+    {
+      "bookId": "chinese-2a-sample",
+      "title": "义务教育教科书（五·四学制）·语文二年级上册",
+      "grade": 2,
+      "semester": "上册",
+      "schoolSystem": "5-4",
+      "publisher": "人民教育出版社",
+      "platformContentId": "cd28f45f-7f29-4dfb-bd35-ba310b57bc8c",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=cd28f45f-7f29-4dfb-bd35-ba310b57bc8c&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourceKind": "official_textbook",
+      "edition": "国家平台五四制原书，封面审定2024；电子版未载ISBN、印次",
+      "identityPages": [
+        {
+          "sourcePdfPage": 1,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/cd28f45f-7f29-4dfb-bd35-ba310b57bc8c.t/zh-CN/1787020606480/transcode/image/1.jpg",
+          "sha256": "c2331525e0421d39e48eb9e60c7abc27225a206dfcd982e651d5eb582a71b900",
+          "role": "cover"
+        },
+        {
+          "sourcePdfPage": 3,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/cd28f45f-7f29-4dfb-bd35-ba310b57bc8c.t/zh-CN/1787020606480/transcode/image/3.jpg",
+          "sha256": "0fbdd82d4a9cbcc1937cf5ca3e49b154823553efe60bf184015ebd9d55baa7d7",
+          "role": "publication"
+        },
+        {
+          "sourcePdfPage": 4,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/cd28f45f-7f29-4dfb-bd35-ba310b57bc8c.t/zh-CN/1787020606480/transcode/image/4.jpg",
+          "sha256": "c62de3cb2e5ca32fbeca59cd22b8eed748286d95af07497b53c31f44f44d742e",
+          "role": "contents"
+        },
+        {
+          "sourcePdfPage": 5,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/cd28f45f-7f29-4dfb-bd35-ba310b57bc8c.t/zh-CN/1787020606480/transcode/image/5.jpg",
+          "sha256": "b74adbd4ccbe3ccabcbe61f2a0eedfe171c3715e2a2e0e958c87f5a612599455",
+          "role": "contents"
+        }
+      ],
+      "positions": [
+        {
+          "contentId": "sh54-plum-blossoms",
+          "observedTitle": "梅花",
+          "observedAuthor": "王安石",
+          "firstLine": "墙角数枝梅",
+          "sourcePrintPage": 12,
+          "sourcePdfPage": 17,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/cd28f45f-7f29-4dfb-bd35-ba310b57bc8c.t/zh-CN/1787020606480/transcode/image/17.jpg",
+          "sha256": "7023ac14c2a8c1782823aede9ffb0c73c0cea9a7fbeea46174273057b8eb9445",
+          "unitId": "u1",
+          "column": "第一单元·语文园地一·日积月累"
+        },
+        {
+          "contentId": "moe-2022-zh-1-6-040",
+          "observedTitle": "小儿垂钓",
+          "observedAuthor": "胡令能",
+          "firstLine": "蓬头稚子学垂纶",
+          "sourcePrintPage": 37,
+          "sourcePdfPage": 42,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/cd28f45f-7f29-4dfb-bd35-ba310b57bc8c.t/zh-CN/1787020606480/transcode/image/42.jpg",
+          "sha256": "77f2245cf20803555740ec01e1b8815e481f839d796c2ba9c8bd4ab59def048d",
+          "unitId": "u3",
+          "column": "第三单元·语文园地三·日积月累"
+        },
+        {
+          "contentId": "poem-stork-tower",
+          "observedTitle": "登鹳雀楼",
+          "observedAuthor": "王之涣",
+          "firstLine": "白日依山尽",
+          "sourcePrintPage": 39,
+          "sourcePdfPage": 44,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/cd28f45f-7f29-4dfb-bd35-ba310b57bc8c.t/zh-CN/1787020606480/transcode/image/44.jpg",
+          "sha256": "d6ad251446d0d796c10c1663e11df9da5fa7c5bcf97bd788ce2525fda492d73e",
+          "unitId": "u4",
+          "column": "第四单元·第7课古诗二首"
+        },
+        {
+          "contentId": "moe-2022-zh-1-6-019",
+          "observedTitle": "望庐山瀑布",
+          "observedAuthor": "李白",
+          "firstLine": "日照香炉生紫烟",
+          "sourcePrintPage": 40,
+          "sourcePdfPage": 45,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/cd28f45f-7f29-4dfb-bd35-ba310b57bc8c.t/zh-CN/1787020606480/transcode/image/45.jpg",
+          "sha256": "8a38348d74d9db3fe27bca28e044468c50a81782bc833b05a1b7e868388a4abc",
+          "unitId": "u4",
+          "column": "第四单元·第7课古诗二首"
+        },
+        {
+          "contentId": "poem-river-snow",
+          "observedTitle": "江雪",
+          "observedAuthor": "柳宗元",
+          "firstLine": "千山鸟飞绝",
+          "sourcePrintPage": 81,
+          "sourcePdfPage": 86,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/cd28f45f-7f29-4dfb-bd35-ba310b57bc8c.t/zh-CN/1787020606480/transcode/image/86.jpg",
+          "sha256": "e9dbe74acb6caf2af89984471b5e52f4a6695460981e8b030d4778a101f3d2fa",
+          "unitId": "u7",
+          "column": "第七单元·第18课古诗二首"
+        },
+        {
+          "contentId": "moe-2022-zh-1-6-003",
+          "observedTitle": "敕勒歌",
+          "observedAuthor": "北朝民歌",
+          "firstLine": "敕勒川，阴山下",
+          "sourcePrintPage": 82,
+          "sourcePdfPage": 87,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/cd28f45f-7f29-4dfb-bd35-ba310b57bc8c.t/zh-CN/1787020606480/transcode/image/87.jpg",
+          "sha256": "e3ad296f7bd78dab0dcb68a8860fc413d50a306b371ae271076f6bb4772cab72",
+          "unitId": "u7",
+          "column": "第七单元·第18课古诗二首"
+        },
+        {
+          "contentId": "sh54-mountain-temple",
+          "observedTitle": "夜宿山寺",
+          "observedAuthor": "李白",
+          "firstLine": "危楼高百尺",
+          "sourcePrintPage": 93,
+          "sourcePdfPage": 98,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/cd28f45f-7f29-4dfb-bd35-ba310b57bc8c.t/zh-CN/1787020606480/transcode/image/98.jpg",
+          "sha256": "5a16016911167f8ac902ad97bfedd0bd5be0742f0ce81ed51d2691922a57fab4",
+          "unitId": "u7",
+          "column": "第七单元·语文园地七·日积月累"
+        }
+      ]
+    },
+    {
+      "bookId": "chinese-3a-sample",
+      "title": "义务教育教科书（五·四学制）·语文三年级上册",
+      "grade": 3,
+      "semester": "上册",
+      "schoolSystem": "5-4",
+      "publisher": "人民教育出版社",
+      "platformContentId": "9185e4a3-efb4-4ec0-bfd9-1cb194c260d3",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=9185e4a3-efb4-4ec0-bfd9-1cb194c260d3&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourceKind": "official_textbook",
+      "edition": "国家平台五四制原书，封面审定2024；电子版未载ISBN、印次",
+      "identityPages": [
+        {
+          "sourcePdfPage": 1,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/9185e4a3-efb4-4ec0-bfd9-1cb194c260d3.t/zh-CN/1787020607234/transcode/image/1.jpg",
+          "sha256": "f1374125d5cbb26a888fabf7b6e23ab0276a3cde77c244c8f6f2eaf75eb987cb",
+          "role": "cover"
+        },
+        {
+          "sourcePdfPage": 3,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/9185e4a3-efb4-4ec0-bfd9-1cb194c260d3.t/zh-CN/1787020607234/transcode/image/3.jpg",
+          "sha256": "a5218e3a60d3078c5c4501f1a238ffd63dbee5cb037c9bab876714bc542bf6f6",
+          "role": "publication"
+        },
+        {
+          "sourcePdfPage": 4,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/9185e4a3-efb4-4ec0-bfd9-1cb194c260d3.t/zh-CN/1787020607234/transcode/image/4.jpg",
+          "sha256": "fbac7602ddf6b97a53a384f60e5203ae9e26a0bd4dc311d9360e85905a530fdb",
+          "role": "contents"
+        },
+        {
+          "sourcePdfPage": 5,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/9185e4a3-efb4-4ec0-bfd9-1cb194c260d3.t/zh-CN/1787020607234/transcode/image/5.jpg",
+          "sha256": "0d6fd2df750f1e0e4d186327f70d7df58436cb5f5e2a1a83517b06ec04d88c83",
+          "role": "contents"
+        }
+      ],
+      "positions": [
+        {
+          "contentId": "moe-2022-zh-1-6-073",
+          "observedTitle": "所见",
+          "observedAuthor": "袁枚",
+          "firstLine": "牧童骑黄牛",
+          "sourcePrintPage": 12,
+          "sourcePdfPage": 17,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/9185e4a3-efb4-4ec0-bfd9-1cb194c260d3.t/zh-CN/1787020607234/transcode/image/17.jpg",
+          "sha256": "37ab8459d08d19633eafa10eaf100e1bde0103aa7879a0aa83cb266c91d8e386",
+          "unitId": "u1",
+          "column": "第一单元·语文园地·日积月累"
+        },
+        {
+          "contentId": "moe-2022-zh-1-6-035",
+          "observedTitle": "望洞庭",
+          "observedAuthor": "刘禹锡",
+          "firstLine": "湖光秋月两相和",
+          "sourcePrintPage": 14,
+          "sourcePdfPage": 19,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/9185e4a3-efb4-4ec0-bfd9-1cb194c260d3.t/zh-CN/1787020607234/transcode/image/19.jpg",
+          "sha256": "9374c8a344dab506e555290f6dee619ed35da3af7ce2345cadc2f8c564e57ecf",
+          "unitId": "u2",
+          "column": "第二单元·第4课古诗三首"
+        },
+        {
+          "contentId": "moe-2022-zh-1-6-045",
+          "observedTitle": "山行",
+          "observedAuthor": "杜牧",
+          "firstLine": "远上寒山石径斜",
+          "sourcePrintPage": 14,
+          "sourcePdfPage": 19,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/9185e4a3-efb4-4ec0-bfd9-1cb194c260d3.t/zh-CN/1787020607234/transcode/image/19.jpg",
+          "sha256": "9374c8a344dab506e555290f6dee619ed35da3af7ce2345cadc2f8c564e57ecf",
+          "unitId": "u2",
+          "column": "第二单元·第4课古诗三首"
+        },
+        {
+          "contentId": "sh54-night-reading",
+          "observedTitle": "夜书所见",
+          "observedAuthor": "叶绍翁",
+          "firstLine": "萧萧梧叶送寒声",
+          "sourcePrintPage": 15,
+          "sourcePdfPage": 20,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/9185e4a3-efb4-4ec0-bfd9-1cb194c260d3.t/zh-CN/1787020607234/transcode/image/20.jpg",
+          "sha256": "3bd075d40569213526390d7ca9d6e5e04f343da2320777bb39b0e4b428045b1b",
+          "unitId": "u2",
+          "column": "第二单元·第4课古诗三首"
+        },
+        {
+          "contentId": "sh54-boat-night",
+          "observedTitle": "舟夜书所见",
+          "observedAuthor": "查慎行",
+          "firstLine": "月黑见渔灯",
+          "sourcePrintPage": 26,
+          "sourcePdfPage": 31,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/9185e4a3-efb4-4ec0-bfd9-1cb194c260d3.t/zh-CN/1787020607234/transcode/image/31.jpg",
+          "sha256": "ba3f42390b17c013461cfc90516c88aac28b099d5a0683a46bccd2e239852ddc",
+          "unitId": "u2",
+          "column": "第二单元·语文园地·日积月累"
+        },
+        {
+          "contentId": "poem-baidi",
+          "observedTitle": "早发白帝城",
+          "observedAuthor": "李白",
+          "firstLine": "朝辞白帝彩云间",
+          "sourcePrintPage": 82,
+          "sourcePdfPage": 87,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/9185e4a3-efb4-4ec0-bfd9-1cb194c260d3.t/zh-CN/1787020607234/transcode/image/87.jpg",
+          "sha256": "9d7d152b6aaf61e0d5d0556ac934a96cd7024e6ad169e9d42b5bacded4dd50ad",
+          "unitId": "u6",
+          "column": "第六单元·语文园地·日积月累"
+        },
+        {
+          "contentId": "moe-2022-zh-1-6-014",
+          "observedTitle": "鹿柴",
+          "observedAuthor": "王维",
+          "firstLine": "空山不见人",
+          "sourcePrintPage": 84,
+          "sourcePdfPage": 89,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/9185e4a3-efb4-4ec0-bfd9-1cb194c260d3.t/zh-CN/1787020607234/transcode/image/89.jpg",
+          "sha256": "ea8932cef00aa8d753dffec04626f60df51f22d9681871b1673486bb8fac58e4",
+          "unitId": "u7",
+          "column": "第七单元·第20课古诗三首"
+        },
+        {
+          "contentId": "moe-2022-zh-1-6-023",
+          "observedTitle": "望天门山",
+          "observedAuthor": "李白",
+          "firstLine": "天门中断楚江开",
+          "sourcePrintPage": 84,
+          "sourcePdfPage": 89,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/9185e4a3-efb4-4ec0-bfd9-1cb194c260d3.t/zh-CN/1787020607234/transcode/image/89.jpg",
+          "sha256": "ea8932cef00aa8d753dffec04626f60df51f22d9681871b1673486bb8fac58e4",
+          "unitId": "u7",
+          "column": "第七单元·第20课古诗三首"
+        },
+        {
+          "contentId": "moe-2022-zh-1-6-054",
+          "observedTitle": "饮湖上初晴后雨",
+          "observedAuthor": "苏轼",
+          "firstLine": "水光潋滟晴方好",
+          "sourcePrintPage": 85,
+          "sourcePdfPage": 90,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/9185e4a3-efb4-4ec0-bfd9-1cb194c260d3.t/zh-CN/1787020607234/transcode/image/90.jpg",
+          "sha256": "dea59ab3c85b0cc2f3ce2831b25aef840583f089205a2a3a4cf5c12e924d2847",
+          "unitId": "u7",
+          "column": "第七单元·第20课古诗三首"
+        },
+        {
+          "contentId": "sh54-lotus-song",
+          "observedTitle": "采莲曲",
+          "observedAuthor": "王昌龄",
+          "firstLine": "荷叶罗裙一色裁",
+          "sourcePrintPage": 94,
+          "sourcePdfPage": 99,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/9185e4a3-efb4-4ec0-bfd9-1cb194c260d3.t/zh-CN/1787020607234/transcode/image/99.jpg",
+          "sha256": "2ce72cba88a8a6e857933dce3480cc79ead39838b4d5c2d8cbc2e6a365da24ce",
+          "unitId": "u7",
+          "column": "第七单元·语文园地·日积月累"
+        },
+        {
+          "contentId": "sh54-sima-guang",
+          "observedTitle": "司马光",
+          "observedAuthor": null,
+          "firstLine": "群儿戏于庭",
+          "sourcePrintPage": 96,
+          "sourcePdfPage": 101,
+          "imageUrl": "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/9185e4a3-efb4-4ec0-bfd9-1cb194c260d3.t/zh-CN/1787020607234/transcode/image/101.jpg",
+          "sha256": "91d59270c85fa044888f0f006eba1bbd57facd936c6c760e11cb9355c4f9ed0b",
+          "unitId": "u8",
+          "column": "第八单元·第23课",
+          "note": "注释注明选自《宋史·司马光传》，题目为后人所加；正文页未单独署作者。"
+        }
+      ]
+    }
+  ]
+}

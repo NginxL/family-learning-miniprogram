@@ -13,6 +13,7 @@ const gradeFive = require('../data/catalogs/shanghai-54-grade5.json');
 const inventories = require('../scripts/lower-primary').data.books;
 const framework = require('../data/catalogs/shanghai-zhongkao-framework.json');
 const dynasties = require('../data/catalogs/poetry-dynasties.json');
+const placementPages = require('../data/catalogs/chinese-placement-page-evidence.json');
 
 test('every poetry period has item-level evidence; doubtful authors and compilation periods stay explicit', () => {
   const poems = learning.catalog.filter(item => item.kind === 'poetry');
@@ -81,7 +82,10 @@ test('grade mappings require a named five-four textbook and an observed title; n
     assert.ok(mapping.outlineDestination);
     if (poem) assert.equal(mapping.sourceUrl, poem.sourceUrl || detailed.sourceUrl);
     else {
-      assert.equal(book?.url, mapping.sourceUrl);
+      const official = placementPages.books.find(source => source.bookId === mapping.bookId
+        && source.positions.some(page => page.contentId === item.id && page.sourcePdfPage === mapping.sourcePdfPage
+          && page.sourcePrintPage === mapping.sourcePrintPage && page.unitId === mapping.unitId));
+      assert.equal(official?.sourceUrl || book?.url, mapping.sourceUrl);
       assert.ok(book.entries.some(entry => entry.contentId === item.id && entry.outlineDestination === mapping.outlineDestination));
     }
     assert.equal(mapping.schoolSystem, '5-4'); assert.equal(mapping.status, 'catalogue_verified');

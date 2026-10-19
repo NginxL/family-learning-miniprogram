@@ -22,6 +22,7 @@
 | `english-foundation-meanings.json` | 505 个基础词的常用义提示 | 自编简短释义，供家庭学习参考；不是教材单元词义 |
 | `english-reviewed-meanings.json` | 96项原通用词典卡的常用义、例句与中文提示 | 自编教学辅助，不冒充教材译文，原ID不变 |
 | `chinese-recitation-requirements.json`、`chinese-recitation-page-evidence.json` | 138处具名教材的背诵、默写、指定范围与熟读成诵要求；新增原页核验摘要 | 原书课后要求的事实性范围和页码、核验图像SHA-256；未核范围保留待确认 |
+| `chinese-placement-page-evidence.json` | 一上、一下、二上、三上31处古诗文的独立官方位置证据 | 国家平台具名原书封面、出版说明、目录及正文页的元数据、页图SHA-256；不包含教材图像，不推定整册字表或学校印次 |
 | `chinese-text-revisions.json` | 19项原作用字、标点与分段校订，带原页定位及哈希 | 显示校订说明；旧任务正文与学习档案不回写 |
 | `chinese-classical-details.json` | 55篇公版文言原作的卡内讲解、句意自译与理解题 | 依据原作自编，沿用已核教材定位；不冒充教材注释，不单独生成学习ID |
 | `english-word-study.json` | 644项词卡内的词形、数量表达、118组短语搭配与77组词族 | ECDICT MIT词形经语境复核；British Council／Cambridge参考，例句和练习自编；不推定拓展用法的教材年级 |
@@ -46,6 +47,8 @@ ECDICT 来源：[skywind3000/ECDICT](https://github.com/skywind3000/ECDICT)，�
 `npm run build` 从上述源数据生成 `shared/knowledge-data.json`、`shared/resources.json`，云函数使用同样的 JSON 文件，小程序使用对应的 `.js` 数据模块，以兼容微信原生模块加载；小模块合并重复字符串、公共前缀与对象键布局；大模块在构建时使用DEFLATE压缩，客户端用fflate纯JavaScript离线同步解码，导出值与云端JSON逐项一致。没有网络加载、动态代码执行或学习记录格式变化；第三方许可见[fflate MIT声明](../../miniprogram/THIRD_PARTY_NOTICES.txt)。生成文件不手工修改；修改源数据后必须重建并运行 `npm run verify`。
 
 年级记录由具名教材的 `gradeVerification` 控制。只有 `catalogue_verified` 且有阅读器定位值、原页页码或官方音轨位置的教材条目进入教材进度；`aligned_practice`表示依单元主题原创的内容，进度单独计数；候选、截断标题、未展开组及学校采用版本不会因生成脚本运行而自动升级为已核实。`bookIds` 可保留候选关联，不能单凭它计算年级掌握程度。
+
+`scripts/chinese-placement.js`按册次ID与内容ID校验独立位置证据，再替换该条关联的来源。四册31处古诗文现已用官方原书逐页确认，详见[位置核验记录](../../docs/低年级古诗文位置官方核验.md)；原始样本记录保留，字表及其他未经独立核验的关联继续使用样本来源。
 
 `scripts/curriculum.js`将九年覆盖清单与既有篇目证据关联，并校验36个册次、五年小学／四年初中的边界和来源。书目来源不产生新的`gradeMappings`；全册目录、知识项与版次未齐时，`fullCoverage`保持`false`。
 

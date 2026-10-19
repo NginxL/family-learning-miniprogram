@@ -27,7 +27,7 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "7130c9280d3b0023132a8da1490325bf8f7ab21831ad271d595381c551df7540"
+          "afterSha256": "7b4cc0d2119e5a91c9df7ffd161be12fd7ae6ce505165313f603c5f0d7cf8282"
         },
         "recitationRequirements": {
           "before": [
@@ -69,7 +69,7 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "236984232fc52788ded32491184ea0a679abccc0738bac741751c846f5d690b7"
+          "afterSha256": "57eec4b987498bbf5aacabb4bafd079e9fd290fecd95ee5e6b482ff4d7f3ca2c"
         },
         "recitationRequirements": {
           "before": [
@@ -111,7 +111,7 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "ced2a86996899b660564108a109fccff505b805805aff2bba954c6b87e0117a3"
+          "afterSha256": "fc81f412283860dcfef39900b6efd02c1654149db13ff6ed90087caed9c9bf63"
         }
       }
     },
@@ -138,7 +138,7 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "faeb842ffbe5c3d0b19e116ef1961e7d233753ec084412b4a138ee9c9116826d"
+          "afterSha256": "ea10b1566b5d57a6607f532190538a5ee29e5a8a227549d13d63e8e8bc88099d"
         }
       }
     },
@@ -165,7 +165,7 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "9d3b9ea2af6128f25e5e5ab3c79807eef0bc0bc69346f6984c1d41e97169b995"
+          "afterSha256": "17fdeb091f458d3331c343c950ab8c359584c68f109686a823bcde4d85251494"
         },
         "recitationRequirements": {
           "before": [
@@ -207,7 +207,7 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "be6e543b2c5ecc752b50620cfef4634db34d23ebbf476944380e6166eb788586"
+          "afterSha256": "d5eaa5105718ce69f4b0e5bbc6c797861a7112e1aab52a6e568e6324c3e85cd4"
         }
       }
     },
@@ -234,7 +234,7 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "eebcfc9135f0ec8f6f8e56209d8f7f5d8e31e6d076254e9b6734f8c5231060cf"
+          "afterSha256": "25fd359a95964cb5f37d37e098578a80f35cc8e7c9fda6d4c79e9585343d88b8"
         },
         "recitationRequirements": {
           "before": [
@@ -276,7 +276,7 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "8eb9c22c1642b3e1967b7f03bc52aaaaecf9cb5b2b9bbc9106f22b562b00e4f4"
+          "afterSha256": "f149acd46149d35fa3e7e723855cee0395aba8747d4509d996118c29bbc5fe41"
         },
         "recitationRequirements": {
           "before": [
@@ -318,7 +318,7 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "a06ffead0f39b3a268a17a0e70c9878b456f7d6793ab66cb7f5664477d43d765"
+          "afterSha256": "e2d193e07744bdfbfc5e5c132159bbe7d2185741d8ec847443b847b26022e2ae"
         },
         "recitationRequirements": {
           "before": [
@@ -360,7 +360,7 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "81e37e07a9a7ba1729bf77bfd580acedf5ca45eed3303ca85231e11f074c1b6e"
+          "afterSha256": "480196e368db558c6cf818628bf58af26637d4cd33420bf6931fee192f9d275d"
         }
       }
     },
@@ -387,7 +387,7 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "317d5b0b8b75c08944a85bb335bfb586cba7a76cf254ecde8d21d9366f973451"
+          "afterSha256": "692d4ebacd80fbc81bc6bae037c2c83690c4e106b033620d51760e2ac1836cdf"
         }
       }
     },
@@ -414,7 +414,7 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "eebcfc9135f0ec8f6f8e56209d8f7f5d8e31e6d076254e9b6734f8c5231060cf"
+          "afterSha256": "25fd359a95964cb5f37d37e098578a80f35cc8e7c9fda6d4c79e9585343d88b8"
         },
         "recitationRequirements": {
           "before": [
@@ -456,7 +456,7 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "04120e680bf8abbe1a4e6619d9e384c2f9d65f588d5b3eff4aa14906dd2673d7"
+          "afterSha256": "4f5e836b8f37fd5df21898d30cd5b368ded5d250abf3f4d49a3c8f6cf1195608"
         },
         "recitationRequirements": {
           "before": [
@@ -498,7 +498,7 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "215c727ebb796aceffae50d005e73d25893c4b2585fa15ee1540fe34b0afd0f1"
+          "afterSha256": "0666d02375d2555459adee2528b3363543389de0d16e7a5f754c547936d3da61"
         },
         "recitationRequirements": {
           "before": [
@@ -540,7 +540,7 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "862f8134da869732fa0b2ff7ba4b2ef1478b9438eedcbe9a3fc4dac9e98044f7"
+          "afterSha256": "733f0d872545a1b465754cfc31b1c9a10e0867d9a58fd009cc0e08666ca52d60"
         }
       }
     },
@@ -567,7 +567,7 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "45bd6d3aa779e380823f5ce81be9d8d231f00554dca11989bd8858ad240c8051"
+          "afterSha256": "5af4b0e36c238999714f75ddf5bbc98ba3f545c0b1a3d18f5bccbd8205dffa04"
         }
       }
     },
@@ -594,7 +594,7 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "ba5b5a99743b9f06ba1f5d5aacb9af4864bd3c0b91ca26b33235f47512bb9c03"
+          "afterSha256": "0252de0b39dff4ef99cdb95cb9f88a49f2d56470701307068ad242679b1c5ff6"
         },
         "recitationRequirements": {
           "before": [
@@ -636,7 +636,7 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "6878d7c42da0d1510425b5e77a1d15f2f7acdc19ef9643d6e5191e3d74cc84e5"
+          "afterSha256": "6967a93fbdbd54076e385366eac9bb0af28fbe4d1b3f7b46e7c9db3af1b6e0ae"
         }
       }
     },
@@ -663,7 +663,7 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "04120e680bf8abbe1a4e6619d9e384c2f9d65f588d5b3eff4aa14906dd2673d7"
+          "afterSha256": "4f5e836b8f37fd5df21898d30cd5b368ded5d250abf3f4d49a3c8f6cf1195608"
         },
         "recitationRequirements": {
           "before": [
@@ -705,7 +705,7 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "d6c51c8ef38c21efe5fd88807d9feb4babcd8159a19428e5ff4a4dcb8c32c8a4"
+          "afterSha256": "8b576cbfe8ccba8e07b5e4390938278996e410b5b6cfcc9472097fc4a625eb50"
         },
         "recitationRequirements": {
           "before": [
@@ -747,7 +747,7 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "b9ec89af22f900974cad6968ae9243cddc52c7d9b1a7feeaf6b38117fa6d6ba9"
+          "afterSha256": "66ddc43da9cc25f803a65ffa06df97472c835bc1a3e6a7490ea8e9e223aabd2a"
         },
         "recitationRequirements": {
           "before": [
@@ -789,7 +789,7 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "bf6fa1f927bd3b12b602c031a2f4ac69d81cf2bc24242731eb10e1d7788561d7"
+          "afterSha256": "9e000bcb4cc1b1bc97e6beb31fc1723dd379dcbe68a4311377239dc01dce1818"
         }
       }
     },
@@ -856,7 +856,11 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "2b2896a0aeb41cea4ae9da9cd9b7ce77b9f7dffbbdf557946a844b53bd5aa53a"
+          "afterSha256": "f0f3bededdbbe1fbb9b27a698e3cc13507eba0161f0a82a2638f6562d7651b24"
+        },
+        "referenceUrl": {
+          "before": "https://keben.app/book/0358",
+          "afterSha256": "de90259a0b8614aab8f396cd68bc96f468006c4b29057d8be339642cf7f98416"
         }
       }
     },
@@ -883,7 +887,11 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "d85a655fbcf4d6503a57dc3df341f0afc1a05c24c051cae15123d2770968ed43"
+          "afterSha256": "3fdb446390d162d70619526178d4ae40180b49e47c519b33d15e36dc83fb074e"
+        },
+        "referenceUrl": {
+          "before": "https://keben.app/book/0358",
+          "afterSha256": "de90259a0b8614aab8f396cd68bc96f468006c4b29057d8be339642cf7f98416"
         }
       }
     },
@@ -910,7 +918,7 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "2216dd7bb797dded02abea7396f0d9236ee0e3684bd3792d1b3106c4c4237819"
+          "afterSha256": "b09de16fedd61ece44637b049a9effe177433465bdaece94d3651f505f6894d9"
         },
         "recitationRequirements": {
           "before": [
@@ -926,6 +934,10 @@
             }
           ],
           "afterSha256": "1c385740e93b1a0628080406b5bda03f2f23fdc45b2510c4bdaac878df522dd2"
+        },
+        "referenceUrl": {
+          "before": "https://keben.app/book/0357",
+          "afterSha256": "f2a085d5a203c1592ed42b312d6e63e1cc179ec8e1fe6fef41ba6efd8781e178"
         }
       }
     },
@@ -952,7 +964,11 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "f38409c839abca6d173dcc7cd80014f6a4c6fe796d7718d34bf6a094fa17ba92"
+          "afterSha256": "7b23345a1fb6b4d46184ec60d9dfad561ef42728b6cf052e55cc2f3c6349dcc8"
+        },
+        "referenceUrl": {
+          "before": "https://keben.app/book/0357",
+          "afterSha256": "f2a085d5a203c1592ed42b312d6e63e1cc179ec8e1fe6fef41ba6efd8781e178"
         }
       }
     },
@@ -979,7 +995,11 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "200138cdc57337683bfec39f78b78f071844be9cfedf89c498ff7071205fc467"
+          "afterSha256": "58a86fec64c2033173aba9144f32db4d6ea142fb02cbea596d4ded4eb303a816"
+        },
+        "referenceUrl": {
+          "before": "https://keben.app/book/0357",
+          "afterSha256": "f2a085d5a203c1592ed42b312d6e63e1cc179ec8e1fe6fef41ba6efd8781e178"
         }
       }
     },
@@ -1006,7 +1026,7 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "e35654aa03b01533ec715fef05267e7710caab4a73412f43d408f65f7b2b5bf9"
+          "afterSha256": "50bdc6a8de7ef02ecbe3dc726c2abc3b043db2bbcf87a00aded03e0c1b78427f"
         },
         "recitationRequirements": {
           "before": [
@@ -1022,6 +1042,10 @@
             }
           ],
           "afterSha256": "eeb68a92a723afa0d9b9266202c7d1e17f63481c995c900340437ef2723cfead"
+        },
+        "referenceUrl": {
+          "before": "https://keben.app/book/0357",
+          "afterSha256": "f2a085d5a203c1592ed42b312d6e63e1cc179ec8e1fe6fef41ba6efd8781e178"
         }
       }
     },
@@ -1048,7 +1072,11 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "931662a58dddcefd6d82e618e636f4e4975f03a7a719e9b4d9bc6e716663fd76"
+          "afterSha256": "a6b43d7aa6f3f942ac8341e934b796d862ee93be9a66743b24692a4de824cf95"
+        },
+        "referenceUrl": {
+          "before": "https://keben.app/book/0359",
+          "afterSha256": "0d23d4f64cbc1f9c76b0e0758b50816e59a1c035fa90f5064490bf2aac973387"
         }
       }
     },
@@ -1075,7 +1103,11 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "24750d4dfe23253d51af67e1b064fadb51f84185750aa97ad7db991a91166f16"
+          "afterSha256": "cdf227f0dff83bee833db0d525e3c9ea514dde38d613a492706b83ab9afec755"
+        },
+        "referenceUrl": {
+          "before": "https://keben.app/book/0352",
+          "afterSha256": "5fec62a7a8bc1bdcd96c08fc806fddcbc756543caddcbfb651eef24fb36dfbcd"
         }
       }
     },
@@ -1102,7 +1134,11 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "1d803fe0e387cb68991ff09fc6843a111a58bea256057ef7ff54cade9b233944"
+          "afterSha256": "70d294de92a41ad790adff2854e457a5e7dc2c08dd7c91680093d2acf58a0466"
+        },
+        "referenceUrl": {
+          "before": "https://keben.app/book/0352",
+          "afterSha256": "5fec62a7a8bc1bdcd96c08fc806fddcbc756543caddcbfb651eef24fb36dfbcd"
         }
       }
     },
@@ -7247,7 +7283,11 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "400946a58483a7cfd6a96b2abef76ade7e5a4c37055c1987e21f5a4b7fed1cfe"
+          "afterSha256": "90870b86120fb0cf0bbaa135e20d7b03465ebe207d11bc478e40bde702e8d3c3"
+        },
+        "referenceUrl": {
+          "before": "https://keben.app/book/0357",
+          "afterSha256": "f2a085d5a203c1592ed42b312d6e63e1cc179ec8e1fe6fef41ba6efd8781e178"
         }
       }
     },
@@ -7274,7 +7314,7 @@
               "status": "catalogue_verified"
             }
           ],
-          "afterSha256": "2a57428e3f3ad90788ac48af07fa00ba71f3c20fce32a4907009eaf71ba7b788"
+          "afterSha256": "96e18c3a8dabf0b124c1a0be4ec938944ce832caa7331f0a9bd369550652bc70"
         }
       }
     },
