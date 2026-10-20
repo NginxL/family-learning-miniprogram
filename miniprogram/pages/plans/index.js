@@ -316,7 +316,7 @@ const definition = {
             wx.showToast({ title: '请先保存或放弃当前修改', icon: 'none' });
             return;
         }
-        const rules = this.data.rules.map((rule) => ({ kind: rule.id, mode: rule.mode, quantity: rule.quantity, scope: rule.scope, ...(rule.id === 'poetry' && rule.recitationPolicy !== 'all' ? { recitationPolicy: rule.recitationPolicy } : {}) }));
+        const rules = this.data.rules.map((rule) => ({ kind: rule.id, mode: rule.mode, quantity: rule.quantity, scope: rule.scope, ...(rule.id === 'poetry' ? { recitationPolicy: rule.recitationPolicy } : {}) }));
         if (!rules.every((rule) => typeof rule.quantity === 'number' && Number.isInteger(rule.quantity) && rule.quantity >= 0 && rule.quantity <= learning.definition(rule.kind).max)) {
             wx.showToast({ title: '请填写范围内的整数数量', icon: 'none' });
             return;

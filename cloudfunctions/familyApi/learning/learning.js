@@ -24,6 +24,7 @@ exports.templateSet = templateSet;
 exports.activeTemplate = activeTemplate;
 exports.templateForDate = templateForDate;
 exports.templateSummary = templateSummary;
+exports.preserveRuleSettings = preserveRuleSettings;
 exports.freezeTemplateDay = freezeTemplateDay;
 exports.learningStatus = learningStatus;
 const catalog = require("./catalog");
@@ -95,6 +96,15 @@ function templateSummary(rules) {
                 ? (rule.recitationPolicy === 'only' ? '只选教材必背' : rule.recitationPolicy === 'first' ? '教材必背优先' : '') : ''].filter(Boolean);
         return `${kind.label} ${rule.quantity}${kind.unit}${qualifiers.length ? `（${qualifiers.join('，')}）` : ''}`;
     }).join(' · ') || '暂停自动安排';
+}
+// Missing fields from an older client are not an instruction to reset a newer
+// setting. Merge only after request validation and receipt fingerprinting.
+function preserveRuleSettings(rules, previous = []) {
+    return rules.map(rule => {
+        const prior = previous.find(item => item.kind === rule.kind);
+        return rule.kind === 'poetry' && rule.recitationPolicy === undefined && (prior === null || prior === void 0 ? void 0 : prior.recitationPolicy) !== undefined
+            ? { ...rule, recitationPolicy: prior.recitationPolicy } : { ...rule };
+    });
 }
 // A changed active template never fills previously disabled types into an already-generated day.
 function freezeTemplateDay(family, day, childId) {
@@ -282,7 +292,7 @@ function generateDay(family, day, ledgers, preview = false) {
                     .map((entry) => content(entry.item)).filter((item) => !catalogById.has(item.id) || inScope(catalogById.get(item.id), rule.scope || 'starter'));
             }
             if (rule.kind === 'poetry')
-                pool = recitationPool(pool, rule.recitationPolicy);
+                pool = recitationPool(pool, rule.recitationPolicy, rule.mode !== 'review');
             const quantity = Math.max(0, rule.quantity - omitted.filter((item) => item.kind === rule.kind && item.automatic).length);
             const chosen = [];
             for (const item of pool) {
@@ -347,8 +357,8 @@ function ruleRows(family, childId, rules = activeTemplate(family, childId).rules
             poolCount: recitationPool(materialPool(family, childId, rule.scope).filter((item) => item.kind === kind.id), rule.recitationPolicy).length };
     });
 }
-// Requirements belong to a named edition; a different book's requirement must
-// not make a work appear required in the selected book/semester.
+// An explicit historical book selection keeps its own requirements. Global
+// filters and automatic plans use current editions only, never a retired rule.
 function hasRecitation(item, input = {}) {
     var _a;
     const knowledge = catalogById.get(item.id);
@@ -356,16 +366,38 @@ function hasRecitation(item, input = {}) {
         var _a;
         return (input.recitation === 'familiar' ? entry.requirement === '熟读成诵' : entry.requirement.startsWith('背诵'))
             && (!input.bookId || entry.bookId === input.bookId)
-            && (!(input.grade || input.semester || input.unitId) || ((_a = knowledge.gradeMappings) === null || _a === void 0 ? void 0 : _a.some(mapping => mapping.bookId === entry.bookId && (!input.grade || mapping.grade === input.grade)
-                && (!input.semester || mapping.semester === input.semester) && (!input.unitId || mapping.unitId === input.unitId))));
+            && ((_a = knowledge.gradeMappings) === null || _a === void 0 ? void 0 : _a.some(mapping => mapping.bookId === entry.bookId
+                && (input.bookId || mapping.editionStatus !== 'historical_reference')
+                && (!input.grade || mapping.grade === input.grade) && (!input.semester || mapping.semester === input.semester)
+                && (!input.unitId || mapping.unitId === input.unitId)));
     }));
 }
-function recitationPool(items, policy) {
+function recitationRank(item, required) {
+    var _a;
+    const knowledge = catalogById.get(item.id);
+    const mappings = ((_a = knowledge === null || knowledge === void 0 ? void 0 : knowledge.gradeMappings) === null || _a === void 0 ? void 0 : _a.filter(mapping => {
+        var _a;
+        return mapping.editionStatus !== 'historical_reference'
+            && (!required || ((_a = knowledge.recitationRequirements) === null || _a === void 0 ? void 0 : _a.some(entry => entry.bookId === mapping.bookId && entry.requirement.startsWith('背诵'))));
+    })) || [];
+    return Math.min(Infinity, ...mappings.map(mapping => mapping.grade * 100000
+        + (mapping.semester === '下册' ? 10000 : 0) + (mapping.sourcePrintPage || mapping.sourcePdfPage || 999)));
+}
+function recitationPool(items, policy, orderByGrade = true) {
+    if (policy !== 'only' && policy !== 'first')
+        return items;
+    const required = items.filter(item => hasRecitation(item));
+    const others = items.filter(item => !hasRecitation(item));
+    // New learning follows book order. Review keeps oldest-completion-first
+    // inside each tier; neither path mutates saved tasks or the catalogue.
+    if (orderByGrade) {
+        required.sort((a, b) => recitationRank(a, true) - recitationRank(b, true));
+        others.sort((a, b) => recitationRank(a, false) - recitationRank(b, false));
+    }
     if (policy === 'only')
-        return items.filter(item => hasRecitation(item));
-    // Stable partition preserves catalogue order / oldest-review-first within each tier.
+        return required;
     if (policy === 'first')
-        return [...items.filter(item => hasRecitation(item)), ...items.filter(item => !hasRecitation(item))];
+        return [...required, ...others];
     return items;
 }
 function searchCatalog(input = {}) {
@@ -410,8 +442,22 @@ function progress(ledger) {
     const grades = Array.from({ length: 9 }, (_, index) => {
         const grade = (index + 1);
         const gradeItems = catalog.filter((item) => (item.gradeMappings || []).some((mapping) => mapping.grade === grade && mapping.schoolSystem === '5-4' && mapping.status === 'catalogue_verified'));
-        const items = gradeItems.filter(item => item.gradeMappings.some(mapping => mapping.grade === grade && mapping.mappingType !== 'aligned_practice'));
-        const practiceItems = gradeItems.filter(item => !items.includes(item));
+        const textbookItems = gradeItems.filter(item => item.gradeMappings.some(mapping => mapping.grade === grade && mapping.mappingType !== 'aligned_practice'));
+        // A full work can contain the separately tracked excerpt used at the same
+        // book position. Count the taught excerpt once, without deleting either ID
+        // or turning excerpt completion into whole-work completion.
+        const items = textbookItems.filter(item => {
+            var _a;
+            if (!((_a = item.coveredContentIds) === null || _a === void 0 ? void 0 : _a.length))
+                return true;
+            const mappings = item.gradeMappings.filter(mapping => mapping.grade === grade && mapping.mappingType !== 'aligned_practice');
+            const excerpts = textbookItems.filter(child => { var _a; return (_a = item.coveredContentIds) === null || _a === void 0 ? void 0 : _a.includes(child.id); });
+            const excerptMappings = excerpts.flatMap(child => child.gradeMappings || []);
+            const everyPositionHasExcerpt = mappings.every(mapping => excerptMappings.some(other => other.bookId === mapping.bookId && other.unitId === mapping.unitId
+                && other.sourcePdfPage !== undefined && other.sourcePdfPage === mapping.sourcePdfPage));
+            return !everyPositionHasExcerpt;
+        });
+        const practiceItems = gradeItems.filter(item => !textbookItems.includes(item));
         const stats = count(items);
         const parentItems = records.filter((entry) => entry.item.studyGrade === grade);
         return { grade, label: gradeLabels[grade], stage: grade <= 5 ? '小学' : '初中', ...stats, practice: count(practiceItems),

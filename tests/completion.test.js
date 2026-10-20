@@ -37,10 +37,11 @@ test('completion additions preserve all 4234 existing IDs, order and every field
 });
 
 test('required and familiar filters honor the selected edition, grade, semester and unit independently', () => {
-  const requiredIds = new Set(requirements.filter(r => r.requirement.startsWith('背诵')).map(r => r.contentId));
+  const current = r => get(r.contentId).gradeMappings.some(m => m.bookId === r.bookId && m.editionStatus !== 'historical_reference');
+  const requiredIds = new Set(requirements.filter(r => r.requirement.startsWith('背诵') && current(r)).map(r => r.contentId));
   assert.deepEqual(new Set(learning.searchCatalog({ recitation: 'required' }).map(i => i.id)), requiredIds);
   assert.deepEqual(new Set(learning.searchCatalog({ recitation: 'familiar' }).map(i => i.id)),
-    new Set(requirements.filter(r => r.requirement === '熟读成诵').map(r => r.contentId)));
+    new Set(requirements.filter(r => r.requirement === '熟读成诵' && current(r)).map(r => r.contentId)));
   for (const entry of requirements) {
     const mapping = get(entry.contentId).gradeMappings.find(m => m.bookId === entry.bookId);
     const query = { recitation: entry.requirement === '熟读成诵' ? 'familiar' : 'required',

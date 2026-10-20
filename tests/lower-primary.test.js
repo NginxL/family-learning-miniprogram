@@ -136,7 +136,7 @@ test('original unit practice is counted separately from verified textbook progre
   assert.equal(progress.grades[1].learned, 0);
   assert.equal(progress.grades[1].practice.learned, 1);
   assert.equal(progress.grades[1].practice.total, 97);
-  assert.equal(progress.grades[1].total, 121);
+  assert.equal(progress.grades[1].total, 120, 'full work and four-line excerpt share one taught position');
   assert.equal(progress.highestGradeStarted, 0);
   assert.equal(progress.unclassifiedLearned, 0);
 });

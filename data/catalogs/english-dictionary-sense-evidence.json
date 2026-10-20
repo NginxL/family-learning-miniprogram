@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-19",
+  "checkedAt": "2026-10-20",
   "sourceRelease": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
   "sourceFile": "https://en-word.net/static/english-wordnet-2025.xml.gz",
   "sourceSha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
@@ -511,6 +511,13 @@
           "partOfSpeech": "v.",
           "meaning": "警告",
           "definitionSha256": "2c5a6658277fd24fcea0aff80187d630993d82b51685f80c5cf328d9aa8589e7"
+        },
+        {
+          "senseId": "oewn-alarm__1.06.01..",
+          "synset": "oewn-02697521-n",
+          "partOfSpeech": "n.",
+          "meaning": "闹钟",
+          "definitionSha256": "d79f6f7fdf011844fa1e579e274febb162057931c175b28ff6a12a781ce4b8a7"
         }
       ]
     },
@@ -4544,7 +4551,16 @@
     "each": {
       "source": "Cambridge Grammar · 限定词与代词",
       "method": "按官方语法说明核对词性与功能，自编中文释义。",
-      "sourceUrl": "https://dictionary.cambridge.org/us/grammar/british-grammar/determiners-used-as-pronouns"
+      "sourceUrl": "https://dictionary.cambridge.org/us/grammar/british-grammar/determiners-used-as-pronouns",
+      "senses": [
+        {
+          "senseId": "oewn-each__4.02.00..",
+          "synset": "oewn-00241635-r",
+          "partOfSpeech": "adv.",
+          "meaning": "各；每个",
+          "definitionSha256": "a44d21234c575085a89d84317f977b542bde42cf691e75d261e96aedb377ea0e"
+        }
+      ]
     },
     "eagle": {
       "source": "Open English Wordnet 2025",
@@ -4623,7 +4639,16 @@
     "either": {
       "source": "Cambridge Grammar · 限定词与代词",
       "method": "按官方语法说明核对词性与功能，自编中文释义。",
-      "sourceUrl": "https://dictionary.cambridge.org/us/grammar/british-grammar/determiners-used-as-pronouns"
+      "sourceUrl": "https://dictionary.cambridge.org/us/grammar/british-grammar/determiners-used-as-pronouns",
+      "senses": [
+        {
+          "senseId": "oewn-either__4.02.00..",
+          "synset": "oewn-00025252-r",
+          "partOfSpeech": "adv.",
+          "meaning": "也（用于否定句）",
+          "definitionSha256": "b1b0e57d9053a410062cd14eb86cdc91fcc8a7cd29dd78f2ff01b6c4b07567f7"
+        }
+      ]
     },
     "elder": {
       "source": "Open English Wordnet 2025",
@@ -4634,13 +4659,15 @@
           "partOfSpeech": "n.",
           "meaning": "长者",
           "definitionSha256": "ad22244036755fc4ea98e3bd9f9f7919769603c25005e54ecf0881bd98251433"
-        },
+        }
+      ],
+      "externalSenses": [
         {
-          "senseId": "oewn-elder__5.00.00.senior.00",
-          "synset": "oewn-02107311-s",
           "partOfSpeech": "adj.",
-          "meaning": "年龄较大的（用于同名父子等的区别）",
-          "definitionSha256": "e3df13b25b7378f396f687940ef64caff7ad700e2d16f81956a2bb2649bd5d7b"
+          "meaning": "年长的（用于家人，如 elder sister 姐姐）",
+          "sourceUrl": "https://dictionary.cambridge.org/dictionary/essential-british-english/elder",
+          "section": "elder adjective B1：年龄较大的家庭成员",
+          "checkedAt": "2026-10-20"
         }
       ]
     },
@@ -5871,6 +5898,13 @@
           "partOfSpeech": "v.",
           "meaning": "形成",
           "definitionSha256": "3da9db20ff0cf57709e29d14f508885dfb1ad67bb7838a1abb05b48de2bb056a"
+        },
+        {
+          "senseId": "oewn-form__1.09.01..",
+          "synset": "oewn-05847533-n",
+          "partOfSpeech": "n.",
+          "meaning": "形式；类型",
+          "definitionSha256": "ff99f729ab3b906b2758b466abd449d95bf8da914bd8974ea0b4004a82426037"
         }
       ]
     },
@@ -8712,6 +8746,15 @@
           "meaning": "可移动的",
           "definitionSha256": "3dcea74042ff8340f3b6bcb9805e3e60a2c141027a20e76b80dae40b2cca87e3"
         }
+      ],
+      "externalSenses": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "手机（英式用法）",
+          "sourceUrl": "https://dictionary.cambridge.org/us/dictionary/english/mobile",
+          "section": "noun PHONE：mobile phone",
+          "checkedAt": "2026-10-20"
+        }
       ]
     },
     "model": {
@@ -9453,7 +9496,7 @@
     "other": {
       "source": "Cambridge Grammar · 限定词",
       "method": "按官方语法说明核对词性与功能，自编中文释义。",
-      "sourceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/determiners-the-my-some-this."
+      "sourceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/other-others-the-other-or-another"
     },
     "outside": {
       "source": "Collins",
@@ -10075,6 +10118,15 @@
           "meaning": "可塑的",
           "definitionSha256": "85c81a3a3739502f3bbfc83361df4a889905f9b436627bf1a6470d17072d7c11"
         }
+      ],
+      "externalSenses": [
+        {
+          "partOfSpeech": "adj.",
+          "meaning": "塑料制的",
+          "sourceUrl": "https://dictionary.cambridge.org/us/dictionary/english/plastic",
+          "section": "adjective SUBSTANCE",
+          "checkedAt": "2026-10-20"
+        }
       ]
     },
     "plate": {
@@ -10251,6 +10303,15 @@
           "meaning": "水塘",
           "definitionSha256": "0434159f4e1ba185ae4d7b262e65ba5afd9753e6db0ca627ec61f56552418cf5"
         }
+      ],
+      "externalSenses": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "游泳池",
+          "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/swimming-pool",
+          "section": "American Dictionary：short form pool",
+          "checkedAt": "2026-10-20"
+        }
       ]
     },
     "poor": {
@@ -10360,7 +10421,7 @@
           "senseId": "oewn-positive__3.00.01..",
           "synset": "oewn-01823004-a",
           "partOfSpeech": "adj.",
-          "meaning": "肯定的",
+          "meaning": "肯定的；积极的",
           "definitionSha256": "5b28254abe339ec2fef545c5832e6fc79e0cbd2f66e4c275ba026ffb8969cc5f"
         },
         {
@@ -10746,6 +10807,15 @@
           "partOfSpeech": "adj.",
           "meaning": "基本的",
           "definitionSha256": "1b48bf3b7fb885c47a23fa737f180a186b985d809ae5ec7b05f652231faa70f0"
+        }
+      ],
+      "externalSenses": [
+        {
+          "partOfSpeech": "adj.",
+          "meaning": "小学的",
+          "sourceUrl": "https://dictionary.cambridge.org/us/dictionary/english/primary",
+          "section": "adjective EDUCATION",
+          "checkedAt": "2026-10-20"
         }
       ]
     },
@@ -13312,6 +13382,13 @@
           "partOfSpeech": "adj.",
           "meaning": "群居的",
           "definitionSha256": "9db93f3b66e80f149159be25a68900a494deaa96c4c4a6aef880c28743dde68d"
+        },
+        {
+          "senseId": "oewn-social__5.00.00.sociable.00",
+          "synset": "oewn-02266116-s",
+          "partOfSpeech": "adj.",
+          "meaning": "社交的",
+          "definitionSha256": "b5b065d49ed283aec64c9a09dd167ae3f4ec55d0f584ea55c249cf44d36e3493"
         }
       ]
     },
@@ -13609,11 +13686,11 @@
           "definitionSha256": "bb30d45179c99bb3269df0c78066e1f8a8ec36e26cc90b910f3e057d71a462b3"
         },
         {
-          "senseId": "oewn-spell__1.26.00..",
-          "synset": "oewn-14430940-n",
+          "senseId": "oewn-spell__1.10.00..",
+          "synset": "oewn-07174442-n",
           "partOfSpeech": "n.",
           "meaning": "咒语",
-          "definitionSha256": "2b1b2a347141f98e19cd0ec283f48c1f66fa90ef4ec8c35b21cd61295f772a5e"
+          "definitionSha256": "2bad5a0596661502515a7483ff79e1183bc6710ccd19d2d6203af6be61f5639c"
         }
       ]
     },
@@ -14125,7 +14202,7 @@
     "such": {
       "source": "Cambridge Grammar · 限定词",
       "method": "按官方语法说明核对词性与功能，自编中文释义。",
-      "sourceUrl": "https://dictionary.cambridge.org/uk/grammar/british-grammar/determiners-and-singular-countable-nouns"
+      "sourceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/such"
     },
     "sudden": {
       "source": "Open English Wordnet 2025",
@@ -14875,7 +14952,16 @@
     "ton": {
       "source": "Collins",
       "method": "按已读取词条自编简短中文义项；不复制词典例句。",
-      "sourceUrl": "https://www.collinsdictionary.com/us/dictionary/english/ton"
+      "sourceUrl": "https://www.collinsdictionary.com/us/dictionary/english/ton",
+      "externalSenses": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "大量（口语，常用 tons of）",
+          "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/ton",
+          "section": "tons plural informal",
+          "checkedAt": "2026-10-20"
+        }
+      ]
     },
     "tonight": {
       "source": "Open English Wordnet 2025",
@@ -15914,6 +16000,13 @@
           "partOfSpeech": "adj.",
           "meaning": "失控的",
           "definitionSha256": "7fabe83644be07611778f8aa1fe1f14b3365fc07f02e157c50b2a48a068f0c1d"
+        },
+        {
+          "senseId": "oewn-wild__1.26.00..",
+          "synset": "oewn-13962386-n",
+          "partOfSpeech": "n.",
+          "meaning": "野外（in the wild，指自然生存状态）",
+          "definitionSha256": "7e15b8874ade09e545691382507b3bee84db69f2c3925c7f8161c4c4d9de53d1"
         }
       ]
     },
@@ -16147,6 +16240,15 @@
           "partOfSpeech": "adv.",
           "meaning": "还（用于否定句）",
           "definitionSha256": "a8242cecd6302029453798efa3291e1b84326d5603b00975720e8a6f6723fc65"
+        }
+      ],
+      "externalSenses": [
+        {
+          "partOfSpeech": "conj.",
+          "meaning": "但是；然而",
+          "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/yet",
+          "section": "yet conjunction：despite that",
+          "checkedAt": "2026-10-20"
         }
       ]
     },
@@ -16408,8 +16510,15 @@
           "senseId": "oewn-emperor__1.18.00..",
           "synset": "oewn-10072812-n",
           "partOfSpeech": "n.",
-          "meaning": "皇帝",
+          "meaning": "皇帝（emperor）",
           "definitionSha256": "9f4c341a75c9f2b2c00ba5ff339a80c090f6c538179ccd3aef685826146eef3f"
+        },
+        {
+          "senseId": "oewn-empress__1.18.00..",
+          "synset": "oewn-10073247-n",
+          "partOfSpeech": "n.",
+          "meaning": "女皇、皇后（empress）",
+          "definitionSha256": "1945a52367dc0eb8f43cda909fd31dfe4f321c64aa58e9787780a5a2c360069d"
         }
       ]
     },
@@ -16690,8 +16799,15 @@
           "senseId": "oewn-prince__1.18.00..",
           "synset": "oewn-10492384-n",
           "partOfSpeech": "n.",
-          "meaning": "王子",
+          "meaning": "王子（prince）",
           "definitionSha256": "b3d0a96592a2f2df5a1fcf0722de0b86784994e09fca27bd9029204f5a961e09"
+        },
+        {
+          "senseId": "oewn-princess__1.18.00..",
+          "synset": "oewn-10493649-n",
+          "partOfSpeech": "n.",
+          "meaning": "公主（princess）",
+          "definitionSha256": "828246eed6bcfde08d80cdc60c726bdb05d5f765ddcd35083110e1476810c669"
         }
       ]
     },

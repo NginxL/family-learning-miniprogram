@@ -50,7 +50,11 @@ test('all 468 eighth-grade vocabulary positions have verified word-head pages an
       const item = learning.searchCatalog({ bookId: book.id, unitId: u.id }).find(i => i.kind === 'word' && i.aliases.includes(w.text));
       assert.ok(item, `${book.id}/${u.id}/${w.text}`);
       assert.ok(item.gradeMappings.some(m => m.bookId === book.id && m.unitId === u.id && m.sourcePrintPage === w.vocabularyPrintPage));
-      for (const sense of w.textbookSenses) assert.ok(item.detail.includes(sense.meaning), `${book.id}/${u.id}/${w.text}`);
+      for (const sense of w.textbookSenses) {
+        for (const part of require('../scripts/english-vocabulary').splitMeanings(sense.meaning))
+          assert.ok(item.detail.replace(/\s/g, '').includes(part.replace(/\s/g, '')), `${book.id}/${u.id}/${w.text}: ${part}`);
+        assert.ok(item.gradeMappings.find(m => m.bookId === book.id && m.unitId === u.id).evidence.includes(sense.meaning));
+      }
     }
   }
   assert.equal(a.inventory.vocabularyCount + b.inventory.vocabularyCount, 468);

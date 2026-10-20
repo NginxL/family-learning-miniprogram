@@ -245,7 +245,7 @@ function createService({ store, media, now = Date.now, randomId = () => crypto.r
       }
       if (action === 'saveAutoPlans') {
         childExists(input.childId);
-        const rules = validatedRules(input.rules);
+        const rules = learning.preserveRuleSettings(validatedRules(input.rules), learning.activeTemplate(family, input.childId).rules);
         if (family.templateSets?.[input.childId]) {
           const set = learning.templateSet(family, input.childId);
           await freezeCurrentDay(input.childId);
@@ -294,7 +294,8 @@ function createService({ store, media, now = Date.now, randomId = () => crypto.r
           requireValue(!set.templates.some((item) => item.id !== templateId && item.name === name), 'INVALID', '已有同名模板，请换一个名称');
           requireValue(index >= 0 || set.templates.length < 10, 'LIMIT', '每个孩子最多保存10个模板');
           if (set.activeId === templateId || learning.templateForDate(family, input.childId, today).id === templateId || input.activate) await freezeCurrentDay(input.childId);
-          const template = { id: templateId, name: name!, rules: rules! };
+          const template = { id: templateId, name: name!,
+            rules: learning.preserveRuleSettings(rules!, index >= 0 ? set.templates[index].rules : []) };
           if (index >= 0) set.templates[index] = template; else set.templates.push(template);
           if (input.activate) set.activeId = templateId;
         } else {

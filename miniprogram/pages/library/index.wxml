@@ -21,6 +21,7 @@
     <view wx:if="{{grade || semesterIndex}}" class="muted">教材字词、古诗与单元原创练习分别标注；尚未覆盖整年级。</view>
     </block>
     <view wx:if="{{bookId}}" class="notice" bindtap="clearBook">{{bookTitle}} · 清除筛选 ×</view>
+    <view wx:if="{{recitationIndex}}" class="muted">{{bookId ? '按所选册次的原书要求筛选。' : '按已核非旧版教材要求筛选；旧版要求可进入对应教材查看。'}}</view>
     <picker wx:if="{{bookId && bookUnits.length > 1}}" range="{{bookUnits}}" range-key="label" value="{{unitIndex}}" bindchange="changeUnit"><view class="picker">{{bookUnits[unitIndex].label}} ▾</view></picker>
     <view class="row"><view class="section">可选内容 {{total}} 项</view><button class="quiet" bindtap="openPlans">设每日数量 →</button></view>
     <view class="muted" bindtap="toggleCoverage">国家课标底库 + 五四制教材关联内容 {{coverageOpen ? '↑' : '· 查看覆盖范围 ↓'}}</view>

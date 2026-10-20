@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-19",
+  "checkedAt": "2026-10-20",
   "scope": "补齐原有国家课标词卡中缺少具名常用义依据的982词。逐条选择核心义项并自编中文提示；不是完整词典、词频排名或上海中考专用词表。教材义独立保留。",
   "entries": {
     "ability": {
@@ -283,14 +283,14 @@
       "checkedAt": "2026-10-19"
     },
     "alarm": {
-      "meaning": "n. 警报器；惊恐\nv. 警告",
+      "meaning": "n. 闹钟；警报器；惊恐\nv. 警告",
       "sources": [
         {
           "title": "Open English Wordnet 2025 · alarm（中文释义自编）",
           "url": "https://en-word.net/"
         }
       ],
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-20"
     },
     "alive": {
       "meaning": "adj. 活着的；充满活力的",
@@ -2523,14 +2523,18 @@
       "checkedAt": "2026-10-19"
     },
     "each": {
-      "meaning": "det. 每个\npron. 各个\nadv. 每个地",
+      "meaning": "det. 每个\npron. 各个\nadv. 各；每个",
       "sources": [
         {
           "title": "Cambridge Grammar · 限定词与代词",
           "url": "https://dictionary.cambridge.org/us/grammar/british-grammar/determiners-used-as-pronouns"
+        },
+        {
+          "title": "Open English Wordnet 2025 · each（副词义）",
+          "url": "https://en-word.net/"
         }
       ],
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-20"
     },
     "eagle": {
       "meaning": "n. 鹰",
@@ -2594,17 +2598,21 @@
           "url": "https://en-word.net/"
         }
       ],
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-20"
     },
     "elder": {
-      "meaning": "n. 长者\nadj. 年龄较大的（用于同名父子等的区别）",
+      "meaning": "n. 长者\nadj. 年长的（用于家人，如 elder sister 姐姐）",
       "sources": [
         {
           "title": "Open English Wordnet 2025 · elder（中文释义自编）",
           "url": "https://en-word.net/"
+        },
+        {
+          "title": "Cambridge Dictionary · elder（中文释义自编）",
+          "url": "https://dictionary.cambridge.org/dictionary/essential-british-english/elder"
         }
       ],
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-20"
     },
     "electric": {
       "meaning": "adj. 电的；用电的",
@@ -3307,14 +3315,14 @@
       "checkedAt": "2026-10-19"
     },
     "form": {
-      "meaning": "n. 词形；形状；表格\nv. 建立；组成；形成",
+      "meaning": "n. 形式；类型；词形；形状；表格\nv. 建立；组成；形成",
       "sources": [
         {
           "title": "Open English Wordnet 2025 · form（中文释义自编）",
           "url": "https://en-word.net/"
         }
       ],
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-20"
     },
     "forward": {
       "meaning": "adv. 向前\nadj. 向前的\nv. 转寄",
@@ -4951,14 +4959,18 @@
       "checkedAt": "2026-10-19"
     },
     "mobile": {
-      "meaning": "adj. 可移动的",
+      "meaning": "adj. 可移动的\nn. 手机（英式用法）",
       "sources": [
         {
           "title": "Open English Wordnet 2025 · mobile（中文释义自编）",
           "url": "https://en-word.net/"
+        },
+        {
+          "title": "Cambridge Dictionary · mobile（中文释义自编）",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/mobile"
         }
       ],
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-20"
     },
     "model": {
       "meaning": "n. 模型；型号；模特；榜样\nadj. 模范的",
@@ -5414,11 +5426,11 @@
       "meaning": "det. 其他的；另外的\npron. 其他的人或物（常用 others）",
       "sources": [
         {
-          "title": "Cambridge Grammar · 限定词",
-          "url": "https://dictionary.cambridge.org/grammar/british-grammar/determiners-the-my-some-this."
+          "title": "Cambridge Grammar · Other, others, the other or another?",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/other-others-the-other-or-another"
         }
       ],
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-20"
     },
     "outside": {
       "meaning": "prep. 在……外面\nadv. 在外面；向外面\nadj. 外面的\nn. 外部",
@@ -5801,14 +5813,18 @@
       "checkedAt": "2026-10-19"
     },
     "plastic": {
-      "meaning": "n. 塑料\nadj. 可塑的",
+      "meaning": "n. 塑料\nadj. 可塑的；塑料制的",
       "sources": [
         {
           "title": "Open English Wordnet 2025 · plastic（中文释义自编）",
           "url": "https://en-word.net/"
+        },
+        {
+          "title": "Cambridge Dictionary · plastic（中文释义自编）",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/plastic"
         }
       ],
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-20"
     },
     "plate": {
       "meaning": "n. 盘子；板",
@@ -5901,14 +5917,18 @@
       "checkedAt": "2026-10-19"
     },
     "pool": {
-      "meaning": "n. 水池；水塘",
+      "meaning": "n. 水池；水塘；游泳池",
       "sources": [
         {
           "title": "Open English Wordnet 2025 · pool（中文释义自编）",
           "url": "https://en-word.net/"
+        },
+        {
+          "title": "Cambridge Dictionary · pool（中文释义自编）",
+          "url": "https://dictionary.cambridge.org/dictionary/english/swimming-pool"
         }
       ],
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-20"
     },
     "poor": {
       "meaning": "adj. 贫穷的；可怜的",
@@ -5971,14 +5991,14 @@
       "checkedAt": "2026-10-19"
     },
     "positive": {
-      "meaning": "adj. 肯定的；有益的；正数的",
+      "meaning": "adj. 肯定的；积极的；有益的；正数的",
       "sources": [
         {
           "title": "Open English Wordnet 2025 · positive（中文释义自编）",
           "url": "https://en-word.net/"
         }
       ],
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-20"
     },
     "possible": {
       "meaning": "adj. 可能的",
@@ -6151,14 +6171,18 @@
       "checkedAt": "2026-10-19"
     },
     "primary": {
-      "meaning": "adj. 主要的；基本的",
+      "meaning": "adj. 主要的；基本的；小学的",
       "sources": [
         {
           "title": "Open English Wordnet 2025 · primary（中文释义自编）",
           "url": "https://en-word.net/"
+        },
+        {
+          "title": "Cambridge Dictionary · primary（中文释义自编）",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/primary"
         }
       ],
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-20"
     },
     "print": {
       "meaning": "n. 印刷文字\nv. 印刷",
@@ -7531,14 +7555,14 @@
       "checkedAt": "2026-10-19"
     },
     "social": {
-      "meaning": "adj. 社会的；群居的",
+      "meaning": "adj. 社会的；群居的；社交的",
       "sources": [
         {
           "title": "Open English Wordnet 2025 · social（中文释义自编）",
           "url": "https://en-word.net/"
         }
       ],
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-20"
     },
     "socialism": {
       "meaning": "n. 社会主义（政治理论）；社会主义制度",
@@ -7708,7 +7732,7 @@
           "url": "https://en-word.net/"
         }
       ],
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-20"
     },
     "spend": {
       "meaning": "v. 度过；花费",
@@ -7954,11 +7978,11 @@
       "meaning": "det. 这样的；如此的",
       "sources": [
         {
-          "title": "Cambridge Grammar · 限定词",
-          "url": "https://dictionary.cambridge.org/uk/grammar/british-grammar/determiners-and-singular-countable-nouns"
+          "title": "Cambridge Grammar · Such",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/such"
         }
       ],
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-20"
     },
     "sudden": {
       "meaning": "adj. 突然的",
@@ -8401,14 +8425,18 @@
       "checkedAt": "2026-10-19"
     },
     "ton": {
-      "meaning": "n. 吨（公吨为 1000 千克；英吨、美吨的重量不同）",
+      "meaning": "n. 吨（公吨为 1000 千克；英吨、美吨的重量不同）；大量（口语，常用 tons of）",
       "sources": [
         {
           "title": "Collins · ton",
           "url": "https://www.collinsdictionary.com/us/dictionary/english/ton"
+        },
+        {
+          "title": "Cambridge Dictionary · ton（中文释义自编）",
+          "url": "https://dictionary.cambridge.org/dictionary/english/ton"
         }
       ],
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-20"
     },
     "tonight": {
       "meaning": "n. 今晚\nadv. 在今晚",
@@ -9011,14 +9039,14 @@
       "checkedAt": "2026-10-19"
     },
     "wild": {
-      "meaning": "adj. 野生的；失控的",
+      "meaning": "adj. 野生的；失控的\nn. 野外（in the wild，指自然生存状态）",
       "sources": [
         {
           "title": "Open English Wordnet 2025 · wild（中文释义自编）",
           "url": "https://en-word.net/"
         }
       ],
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-20"
     },
     "wind": {
       "meaning": "n. 风\nv. 蜿蜒（读音与“风”不同）",
@@ -9141,14 +9169,18 @@
       "checkedAt": "2026-10-19"
     },
     "yet": {
-      "meaning": "adv. 至今；还（用于否定句）",
+      "meaning": "adv. 至今；还（用于否定句）\nconj. 但是；然而",
       "sources": [
         {
           "title": "Open English Wordnet 2025 · yet（中文释义自编）",
           "url": "https://en-word.net/"
+        },
+        {
+          "title": "Cambridge Dictionary · yet（中文释义自编）",
+          "url": "https://dictionary.cambridge.org/dictionary/english/yet"
         }
       ],
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-20"
     },
     "yogurt": {
       "meaning": "n. 酸奶",
@@ -9541,14 +9573,14 @@
       "checkedAt": "2026-10-19"
     },
     "emperor / empress": {
-      "meaning": "n. 皇帝",
+      "meaning": "n. 皇帝（emperor）；女皇、皇后（empress）",
       "sources": [
         {
-          "title": "Open English Wordnet 2025 · emperor（中文释义自编）",
+          "title": "Open English Wordnet 2025 · emperor / empress（中文释义自编）",
           "url": "https://en-word.net/"
         }
       ],
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-20"
     },
     "exam (=examination)": {
       "meaning": "n. 考试",
@@ -9741,14 +9773,14 @@
       "checkedAt": "2026-10-19"
     },
     "prince / princess": {
-      "meaning": "n. 王子",
+      "meaning": "n. 王子（prince）；公主（princess）",
       "sources": [
         {
-          "title": "Open English Wordnet 2025 · prince（中文释义自编）",
+          "title": "Open English Wordnet 2025 · prince / princess（中文释义自编）",
           "url": "https://en-word.net/"
         }
       ],
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-20"
     },
     "programme (AmE program)": {
       "meaning": "n. 广播或电视节目；计划；计算机程序（通常拼作 program）",

@@ -57,6 +57,15 @@ function templateSummary(rules: AutoRule[]): string {
     return `${kind.label} ${rule.quantity}${kind.unit}${qualifiers.length ? `（${qualifiers.join('，')}）` : ''}`;
   }).join(' · ') || '暂停自动安排';
 }
+// Missing fields from an older client are not an instruction to reset a newer
+// setting. Merge only after request validation and receipt fingerprinting.
+function preserveRuleSettings(rules: AutoRule[], previous: AutoRule[] = []): AutoRule[] {
+  return rules.map(rule => {
+    const prior = previous.find(item => item.kind === rule.kind);
+    return rule.kind === 'poetry' && rule.recitationPolicy === undefined && prior?.recitationPolicy !== undefined
+      ? { ...rule, recitationPolicy: prior.recitationPolicy } : { ...rule };
+  });
+}
 // A changed active template never fills previously disabled types into an already-generated day.
 function freezeTemplateDay(family: PlanningFamily, day: Day, childId: string): void {
   const generated = day.generated?.[childId];
@@ -220,7 +229,7 @@ function generateDay(family: PlanningFamily, day: Day, ledgers: Record<string, L
           .sort((a, b) => a.completedDates[a.completedDates.length - 1].localeCompare(b.completedDates[b.completedDates.length - 1]) || a.item.id.localeCompare(b.item.id))
           .map((entry) => content(entry.item)).filter((item) => !catalogById.has(item.id) || inScope(catalogById.get(item.id)!, rule.scope || 'starter'));
       }
-      if (rule.kind === 'poetry') pool = recitationPool(pool, rule.recitationPolicy);
+      if (rule.kind === 'poetry') pool = recitationPool(pool, rule.recitationPolicy, rule.mode !== 'review');
       const quantity = Math.max(0, rule.quantity - omitted.filter((item) => item.kind === rule.kind && item.automatic).length);
       const chosen = [];
       for (const item of pool) {
@@ -278,21 +287,37 @@ function ruleRows(family: PlanningFamily, childId: string, rules: AutoRule[] = a
       poolCount: recitationPool(materialPool(family, childId, rule.scope).filter((item) => item.kind === kind.id), rule.recitationPolicy).length };
   });
 }
-// Requirements belong to a named edition; a different book's requirement must
-// not make a work appear required in the selected book/semester.
+// An explicit historical book selection keeps its own requirements. Global
+// filters and automatic plans use current editions only, never a retired rule.
 function hasRecitation(item: { id: string }, input: CatalogQuery = {}): boolean {
   const knowledge = catalogById.get(item.id);
   return Boolean(knowledge?.recitationRequirements?.some(entry =>
     (input.recitation === 'familiar' ? entry.requirement === '熟读成诵' : entry.requirement.startsWith('背诵'))
     && (!input.bookId || entry.bookId === input.bookId)
-    && (!(input.grade || input.semester || input.unitId) || knowledge.gradeMappings?.some(mapping =>
-      mapping.bookId === entry.bookId && (!input.grade || mapping.grade === input.grade)
-      && (!input.semester || mapping.semester === input.semester) && (!input.unitId || mapping.unitId === input.unitId)))));
+    && knowledge.gradeMappings?.some(mapping => mapping.bookId === entry.bookId
+      && (input.bookId || mapping.editionStatus !== 'historical_reference')
+      && (!input.grade || mapping.grade === input.grade) && (!input.semester || mapping.semester === input.semester)
+      && (!input.unitId || mapping.unitId === input.unitId))));
 }
-function recitationPool<T extends { id: string }>(items: T[], policy: AutoRule['recitationPolicy']): T[] {
-  if (policy === 'only') return items.filter(item => hasRecitation(item));
-  // Stable partition preserves catalogue order / oldest-review-first within each tier.
-  if (policy === 'first') return [...items.filter(item => hasRecitation(item)), ...items.filter(item => !hasRecitation(item))];
+function recitationRank(item: { id: string }, required: boolean): number {
+  const knowledge = catalogById.get(item.id);
+  const mappings = knowledge?.gradeMappings?.filter(mapping => mapping.editionStatus !== 'historical_reference'
+    && (!required || knowledge.recitationRequirements?.some(entry => entry.bookId === mapping.bookId && entry.requirement.startsWith('背诵')))) || [];
+  return Math.min(Infinity, ...mappings.map(mapping => mapping.grade * 100000
+    + (mapping.semester === '下册' ? 10000 : 0) + (mapping.sourcePrintPage || mapping.sourcePdfPage || 999)));
+}
+function recitationPool<T extends { id: string }>(items: T[], policy: AutoRule['recitationPolicy'], orderByGrade = true): T[] {
+  if (policy !== 'only' && policy !== 'first') return items;
+  const required = items.filter(item => hasRecitation(item));
+  const others = items.filter(item => !hasRecitation(item));
+  // New learning follows book order. Review keeps oldest-completion-first
+  // inside each tier; neither path mutates saved tasks or the catalogue.
+  if (orderByGrade) {
+    required.sort((a, b) => recitationRank(a, true) - recitationRank(b, true));
+    others.sort((a, b) => recitationRank(a, false) - recitationRank(b, false));
+  }
+  if (policy === 'only') return required;
+  if (policy === 'first') return [...required, ...others];
   return items;
 }
 function searchCatalog(input: CatalogQuery = {}) {
@@ -329,8 +354,21 @@ function progress(ledger: LearningLedger) {
   const grades = Array.from({ length: 9 }, (_, index) => {
     const grade = (index + 1) as SchoolGrade;
     const gradeItems = catalog.filter((item) => (item.gradeMappings || []).some((mapping) => mapping.grade === grade && mapping.schoolSystem === '5-4' && mapping.status === 'catalogue_verified'));
-    const items = gradeItems.filter(item => item.gradeMappings!.some(mapping => mapping.grade === grade && mapping.mappingType !== 'aligned_practice'));
-    const practiceItems = gradeItems.filter(item => !items.includes(item));
+    const textbookItems = gradeItems.filter(item => item.gradeMappings!.some(mapping => mapping.grade === grade && mapping.mappingType !== 'aligned_practice'));
+    // A full work can contain the separately tracked excerpt used at the same
+    // book position. Count the taught excerpt once, without deleting either ID
+    // or turning excerpt completion into whole-work completion.
+    const items = textbookItems.filter(item => {
+      if (!item.coveredContentIds?.length) return true;
+      const mappings = item.gradeMappings!.filter(mapping => mapping.grade === grade && mapping.mappingType !== 'aligned_practice');
+      const excerpts = textbookItems.filter(child => item.coveredContentIds?.includes(child.id));
+      const excerptMappings = excerpts.flatMap(child => child.gradeMappings || []);
+      const everyPositionHasExcerpt = mappings.every(mapping => excerptMappings.some(other =>
+        other.bookId === mapping.bookId && other.unitId === mapping.unitId
+        && other.sourcePdfPage !== undefined && other.sourcePdfPage === mapping.sourcePdfPage));
+      return !everyPositionHasExcerpt;
+    });
+    const practiceItems = gradeItems.filter(item => !textbookItems.includes(item));
     const stats = count(items);
     const parentItems = records.filter((entry) => entry.item.studyGrade === grade);
     return { grade, label: gradeLabels[grade], stage: grade <= 5 ? '小学' : '初中', ...stats, practice: count(practiceItems),
@@ -356,4 +394,4 @@ function progress(ledger: LearningLedger) {
 export { catalog, catalogById, kinds, subjects, kindOf, definition, contentId, content, defaultRules, emptyRules,
   scopeOptions, inScope, materialPool, recordTasks, taskFrom, generateDay, history, ruleRows, searchCatalog, gradeLabels, progress,
   learningAreas, knowledgeGradeLabel, hasRecitation, recitationPool,
-  planningKey, wasLearned, omitTask, allowsRepeat, templateSet, activeTemplate, templateForDate, templateSummary, freezeTemplateDay, learningStatus };
+  planningKey, wasLearned, omitTask, allowsRepeat, templateSet, activeTemplate, templateForDate, templateSummary, preserveRuleSettings, freezeTemplateDay, learningStatus };

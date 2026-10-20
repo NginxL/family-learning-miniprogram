@@ -99,7 +99,7 @@ function createDemo(wx) {
         if (set.templates.some(item => item.id !== input.templateId && item.name === name)) throw invalid('已有同名模板，请换一个名称');
         if (index < 0 && set.templates.length >= 10) throw invalid('每个孩子最多保存10个模板');
         if (set.activeId === input.templateId || learning.templateForDate(state.family, input.childId, today).id === input.templateId || input.activate) freeze();
-        const template = { id: input.templateId, name, rules: input.rules };
+        const template = { id: input.templateId, name, rules: learning.preserveRuleSettings(input.rules, index >= 0 ? set.templates[index].rules : []) };
         if (index >= 0) set.templates[index] = template; else set.templates.push(template);
         if (input.activate) set.activeId = input.templateId;
       } else {
@@ -251,14 +251,15 @@ function createDemo(wx) {
     } else if (action === 'saveAutoPlans') {
       ledgerFor(input.childId);
       validateRules(input.rules);
+      const rules = learning.preserveRuleSettings(input.rules, learning.activeTemplate(state.family, input.childId).rules);
       if (state.family.templateSets && state.family.templateSets[input.childId]) {
         const set = learning.templateSet(state.family, input.childId);
         if (state.days[today]) learning.freezeTemplateDay(state.family, state.days[today], input.childId);
-        set.templates.find(item => item.id === set.activeId).rules = input.rules;
+        set.templates.find(item => item.id === set.activeId).rules = rules;
         set.revision += 1; state.family.templateSets[input.childId] = set;
       }
       state.family.autoPlans = state.family.autoPlans || {};
-      state.family.autoPlans[input.childId] = input.rules;
+      state.family.autoPlans[input.childId] = rules;
     } else if (action === 'setPlanEnabled') {
       const plan = state.family.plans.find((item) => item.id === input.planId);
       if (!plan) throw new Error('计划不存在');

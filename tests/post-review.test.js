@@ -66,7 +66,9 @@ test('above and appear show reviewed common senses while retaining original unit
   ]) {
     const item = word(head), section = item.detail.match(/常用义：\n([\s\S]*?)(?:\n\n|$)/)?.[1];
     for (const line of expected) assert.ok(section?.includes(line), `${head}: ${line}`);
-    assert.ok(item.detail.includes(unitMeaning));
+    const [, pos, meaning] = unitMeaning.match(/^(\S+) (.+)$/);
+    assert.ok(require('../scripts/english-vocabulary').hasSense(item.detail, pos, meaning));
+    assert.ok(item.gradeMappings.some(m => m.evidence.includes(unitMeaning)));
     assert.equal(item.commonSenseSources[0].url, `https://www.collinsdictionary.com/dictionary/english/${head}`);
     assert.ok(item.dictionaryReference, 'unreviewed dictionary reference is retained separately');
   }

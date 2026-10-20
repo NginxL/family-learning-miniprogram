@@ -675,15 +675,17 @@
       "curriculumId": "moe-2022-zh-1-6-045",
       "title": "山行",
       "author": "杜牧",
-      "original": "远上寒山石径斜，白云深处有人家。\n停车坐爱枫林晚，霜叶红于二月花。",
+      "original": "远上寒山石径斜，白云生处有人家。\n停车坐爱枫林晚，霜叶红于二月花。",
       "gradeBand": "1-6",
       "sourcePdfPage": 67,
       "textSources": [
+        "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=9185e4a3-efb4-4ec0-bfd9-1cb194c260d3&catalogType=tchMaterial&subCatalog=tchMaterial",
         "https://github.com/aopao/chinese-gushiwen/blob/c2345d0abf2404b8b3601e4afc2e8fd12f90d6c8/guwen/guwen0-1000.json"
       ],
-      "reviewStatus": "篇目、作者及选段已核对；上海教材逐字校对待确认",
+      "reviewStatus": "已核五四制三上原书印刷第14页正文、注释；教材采用“白云生处”。",
       "notes": [],
-      "transcriptionRecordId": "5b9a1432367d5cab18668609"
+      "transcriptionRecordId": "5b9a1432367d5cab18668609",
+      "textVariantNote": "五四制三上原书作“白云生处”，注③释“生”为产生、生出；旧卡“深处”保留为异文说明，不作本册默写底本。"
     },
     {
       "id": "moe-2022-zh-1-6-046",

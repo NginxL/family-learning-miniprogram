@@ -1,6 +1,6 @@
 # 内容数据、来源与使用范围
 
-数据版本：正文与教材证据2026-10-12；一至九年级教材证据与拼音辅助2026-10-17；基础知识体系2026-10-18；必背链路、文言补充及英语词义结构2026-10-19。入库范围和核验缺口见[知识库与年级核验](../../docs/知识库与年级核验.md)。
+数据版本：正文与教材证据2026-10-12；一至九年级教材证据与拼音辅助2026-10-17；基础知识体系2026-10-18；必背链路、文言补充及英语词义结构2026-10-19；验收勘误2026-10-20。入库范围和核验缺口见[知识库与年级核验](../../docs/知识库与年级核验.md)。
 
 | 文件 | 用途 | 来源与许可 |
 |---|---|---|
@@ -26,7 +26,7 @@
 | `chinese-text-revisions.json` | 19项原作用字、标点与分段校订，带原页定位及哈希 | 显示校订说明；旧任务正文与学习档案不回写 |
 | `chinese-excerpt-evidence.json` | 《赋得古原草送别》前四句独立节选卡的范围 | 二下官方原书印刷12／电子17页和图像SHA-256；该页未明示背诵／默写，不推定必背 |
 | `chinese-classical-supplements.json` | 55篇文言的补充字词、文化提示及59道迁移／理解题 | 具名原书页码、原作语境与核验图像哈希；中文讲解与练习自编，2篇教材册次待核实 |
-| `english-dictionary-senses.json`、`english-dictionary-sense-evidence.json` | 982张原词卡的补充常用义、词性及逐义来源 | 911词选取Open English Wordnet 2025的1701个义项；其余71词参考Collins、Cambridge或British Council。中文释义自编；见下方许可及校验方法 |
+| `english-dictionary-senses.json`、`english-dictionary-sense-evidence.json` | 982张原词卡的补充常用义、词性及逐义来源 | 913词包含Open English Wordnet 2025的1708个义项；其余69词及部分补充义参考Collins、Cambridge或British Council。中文释义自编；见下方许可及校验方法 |
 | `english-structure-supplements.json` | 45组句型、用法比较与练习 | Cambridge、Collins与British Council的具名词条或语法说明；例句自编，不推定教材册次 |
 | `chinese-classical-details.json` | 55篇公版文言原作的卡内讲解、句意自译与理解题 | 依据原作自编，沿用已核教材定位；不冒充教材注释，不单独生成学习ID |
 | `english-word-study.json` | 644项词卡内的词形、数量表达、118组短语搭配与77组词族 | ECDICT MIT词形经语境复核；British Council／Cambridge参考，例句和练习自编；不推定拓展用法的教材年级 |
@@ -66,6 +66,6 @@ Open English Wordnet 2025 来源：[官方发行版](https://github.com/globalwo
 
 `scripts/recitation-practice.js`按已核要求的起止范围生成132道自测及答案哈希；6条熟读成诵不改成强制默写。官方节选独立ID不覆盖全文完成状态。
 
-下载官方Wordnet压缩包后，可执行`python3 scripts/verify-wordnet-evidence.py /path/to/english-wordnet-2025.xml.gz`校验原始文件版本、1701个义项定位、词性和定义哈希；命令不修改知识库、不联网。
+下载官方Wordnet压缩包后，可执行`python3 scripts/verify-wordnet-evidence.py /path/to/english-wordnet-2025.xml.gz`校验原始文件版本、1708个义项定位、词性和定义哈希；命令不修改知识库、不联网。
 
 `scripts/study-notes.js`将逐篇、逐词辅助编译为可选的`studyNotes`字段，验证原句、词头与来源；仅供页面展示与知识库搜索，不写入任务正文快照、同步写入队列或学习档案。课堂原作、词头的`gradeMappings`不推导出拓展用法的年级。核验范围见[背诵要求与逐篇辅助核验](../../docs/背诵要求与逐篇辅助核验.md)。

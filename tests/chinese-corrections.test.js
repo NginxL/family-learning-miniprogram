@@ -42,7 +42,7 @@ test('text corrections use the verified textbook characters, punctuation and par
     assert.equal(createHash('sha256').update(body(r.contentId)).digest('hex'), r.originalSha256, r.contentId);
     assert.ok(r.pages.every(p => /https:\/\/(basic.smartedu.cn|book.pep.com.cn)\//.test(p.sourceUrl) && /^[a-f0-9]{64}$/.test(p.sha256)));
   }
-  assert.equal(learning.catalog.filter(i=>i.textRevision).length,22,'19 original texts and 3 independent classical lessons');
+  assert.equal(learning.catalog.filter(i=>i.textRevision).length,23,'20 original texts including 山行 and 3 independent classical lessons');
 });
 
 test('Song Dongyang recitation includes the complete second paragraph while preserving excerpt identity', () => {

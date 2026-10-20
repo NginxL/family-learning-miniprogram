@@ -31,7 +31,7 @@ function augment(items) {
         { title: '重点句意', body: entry.sentences.map(sentence => `${sentence.text}\n${sentence.meaning}`).join('\n\n') },
         { title: '篇章理解', body: entry.structure },
         { title: '容易混淆', body: entry.pitfall },
-        { title: '课后字词与用法', body: supplement.words.map(word => `${word.text}：${word.meaning}`).join('\n') },
+        { title: '字词补充与跨篇比较', body: supplement.words.map(word => `${word.text}：${word.meaning}`).join('\n') },
         { title: '文化与阅读提示', body: supplement.culture }
       ],
       exercises: [...entry.exercises, ...supplement.exercises].map(exercise => ({ ...exercise })),

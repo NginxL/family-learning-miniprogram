@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-19",
+  "checkedAt": "2026-10-20",
   "scope": "复审列出的核心句型及易混搭配，共45组。依据具名词典和语法资料自编说明、例句、练习；属于跨年级用法补充，不将词卡的教材归属当作这些用法的教材归属。",
   "entries": [
     {
@@ -16,8 +16,8 @@
       },
       "sources": [
         {
-          "title": "Cambridge Grammar · expect-hope-wait",
-          "url": "https://dictionary.cambridge.org/grammar/british-grammar/expect-hope-wait"
+          "title": "Cambridge Grammar · expect-hope-or-wait",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/expect-hope-or-wait"
         }
       ]
     },
@@ -31,7 +31,7 @@
       "note": "wish to do 比 want to do 正式；不把两种结构混为 hope sb to do。",
       "exercise": {
         "question": "用 wish 表达“祝你好运”。",
-        "answer": "I wish you good luck. / Wish you luck."
+        "answer": "I wish you good luck. / I wish you luck."
       },
       "sources": [
         {
@@ -55,7 +55,7 @@
       "sources": [
         {
           "title": "Cambridge Grammar · let-let-s",
-          "url": "https://dictionary.cambridge.org/grammar/british-grammar/let"
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/let-let-s"
         }
       ]
     },
@@ -74,11 +74,15 @@
       "sources": [
         {
           "title": "Cambridge Grammar · have-something-done",
-          "url": "https://dictionary.cambridge.org/grammar/british-grammar/have-something-"
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/have-something-done"
         },
         {
           "title": "Cambridge Grammar · have",
           "url": "https://dictionary.cambridge.org/grammar/british-grammar/have"
+        },
+        {
+          "title": "Cambridge Grammar · Have got to and have to",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/have-to"
         }
       ]
     },
@@ -100,8 +104,8 @@
           "url": "https://dictionary.cambridge.org/grammar/british-grammar/like"
         },
         {
-          "title": "Cambridge Grammar · infinitive-verbs",
-          "url": "https://dictionary.cambridge.org/grammar/british-grammar/verb-ing"
+          "title": "Cambridge Grammar · verb-patterns-verb-infinitive-or-verb-ing",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/verb-patterns-verb-infinitive-or-verb-ing"
         }
       ]
     },
@@ -133,7 +137,7 @@
       "translation": "我们看着那只鸟飞走了。",
       "note": "主动结构中 do 前不加 to；doing 强调当时正在发生。",
       "exercise": {
-        "question": "选择并解释：I watched him crossing the road. 强调什么？",
+        "question": "解释：I watched him crossing the road. 强调什么？",
         "answer": "强调看见他正在过马路，未必看到整个过程。"
       },
       "sources": [
@@ -176,12 +180,12 @@
       },
       "sources": [
         {
-          "title": "Cambridge Grammar · main",
-          "url": "https://dictionary.cambridge.org/grammar/british-grammar/main"
+          "title": "Cambridge Grammar · verbs-types",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/verbs-types"
         },
         {
-          "title": "Cambridge · feel like doing",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/feel-like-doing"
+          "title": "Cambridge Dictionary · feel like something/doing something",
+          "url": "https://dictionary.cambridge.org/dictionary/english/feel-like"
         }
       ]
     },
@@ -195,12 +199,12 @@
       "note": "此系动词用法不用被动语态，也不把形容词改成副词。",
       "exercise": {
         "question": "改正：The plan sounds well.（表达计划不错）",
-        "answer": "The plan sounds good."
+        "answer": "The plan sounds good.（也可用 great / fine 等表达计划不错的形容词。）"
       },
       "sources": [
         {
-          "title": "Cambridge Grammar · main",
-          "url": "https://dictionary.cambridge.org/grammar/british-grammar/main"
+          "title": "Cambridge Grammar · verbs-types",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/verbs-types"
         }
       ]
     },
@@ -218,8 +222,8 @@
       },
       "sources": [
         {
-          "title": "Cambridge Grammar · main",
-          "url": "https://dictionary.cambridge.org/grammar/british-grammar/main"
+          "title": "Cambridge Grammar · verbs-types",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/verbs-types"
         },
         {
           "title": "Collins · smell",
@@ -241,8 +245,8 @@
       },
       "sources": [
         {
-          "title": "Cambridge Grammar · main",
-          "url": "https://dictionary.cambridge.org/grammar/british-grammar/main"
+          "title": "Cambridge Grammar · verbs-types",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/verbs-types"
         },
         {
           "title": "Collins · taste",
@@ -287,8 +291,8 @@
       },
       "sources": [
         {
-          "title": "Cambridge Grammar · infinitive-verbs",
-          "url": "https://dictionary.cambridge.org/grammar/british-grammar/verb-ing"
+          "title": "Cambridge Grammar · verb-patterns-verb-infinitive-or-verb-ing",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/verb-patterns-verb-infinitive-or-verb-ing"
         },
         {
           "title": "Collins · plan",
@@ -303,15 +307,15 @@
       "meaning": "主动提出做；向某人提供某物。",
       "example": "She offered to help us.",
       "translation": "她主动提出帮助我们。",
-      "note": "offer 强调主动提出或提供；两个宾语的位置可以转换。",
+      "note": "两个宾语换位时须加 to：offer sb sth → offer sth to sb；offer to do 表示主动提出做。",
       "exercise": {
         "question": "用 offer 改写：He offered me a seat.",
         "answer": "He offered a seat to me."
       },
       "sources": [
         {
-          "title": "Cambridge Grammar · transitive-and-intransitive-verbs",
-          "url": "https://dictionary.cambridge.org/grammar/british-grammar/transitive-and-intransitive-verbs"
+          "title": "Cambridge Grammar · objects",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/objects"
         },
         {
           "title": "Collins · offer",
@@ -348,7 +352,7 @@
       "note": "到达 home、here、there 时通常不加 to；arrive 不直接带地点宾语。",
       "exercise": {
         "question": "改正：We reached to Shanghai yesterday.",
-        "answer": "We reached Shanghai yesterday."
+        "answer": "We reached Shanghai yesterday.（也可 We arrived in Shanghai yesterday. / We got to Shanghai yesterday.）"
       },
       "sources": [
         {
@@ -393,7 +397,7 @@
       "translation": "我们赢了比赛，击败了一支强队。",
       "note": "win 后不把对手直接当宾语；beat 的过去式 beat，过去分词 beaten。",
       "exercise": {
-        "question": "填空：We ___ the other team and ___ the prize.",
+        "question": "填空：We ___ the other team and ___ the prize last week.",
         "answer": "beat；won"
       },
       "sources": [
@@ -515,7 +519,7 @@
       "lemma": "hard",
       "pattern": "hard / hardly",
       "meaning": "hard 作副词时表示努力地、猛烈地；hardly 表示几乎不。",
-      "example": "She works hard but hardly complains.",
+      "example": "She works hard but hardly ever complains.",
       "translation": "她工作努力，却几乎不抱怨。",
       "note": "hardly 不是 hard 的普通副词形式。",
       "exercise": {
@@ -526,6 +530,10 @@
         {
           "title": "Cambridge Grammar · hard",
           "url": "https://dictionary.cambridge.org/grammar/british-grammar/hard"
+        },
+        {
+          "title": "Cambridge Grammar · hardly",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/hardly"
         }
       ]
     },
@@ -539,16 +547,20 @@
       "note": "多数一般情境可接 to do 或 doing；不推定所有语境完全等同。",
       "exercise": {
         "question": "写出另一种正确表达：It began to rain.",
-        "answer": "It began raining."
+        "answer": "It began raining.（也可 It started to rain. / It started raining.，答案不唯一。）"
       },
       "sources": [
         {
-          "title": "Cambridge Grammar · infinitive-verbs",
-          "url": "https://dictionary.cambridge.org/grammar/british-grammar/verb-ing"
+          "title": "Cambridge Grammar · verb-patterns-verb-infinitive-or-verb-ing",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/verb-patterns-verb-infinitive-or-verb-ing"
         },
         {
           "title": "Collins · begin",
           "url": "https://www.collinsdictionary.com/us/dictionary/english/begin"
+        },
+        {
+          "title": "Cambridge Grammar · begin-or-start",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/begin-or-start"
         }
       ]
     },
@@ -599,13 +611,13 @@
       "translation": "姐姐教我画树。",
       "note": "teach—taught—taught；oneself 与主语一致。",
       "exercise": {
-        "question": "填空：She taught ___ (she) to swim.",
+        "question": "填空：She taught ___ (she) to swim when she was ten.（表达自学）",
         "answer": "herself"
       },
       "sources": [
         {
-          "title": "Cambridge Grammar · infinitive-verbs",
-          "url": "https://dictionary.cambridge.org/grammar/british-grammar/verb-ing"
+          "title": "Cambridge Grammar · verb-patterns-verb-infinitive-or-verb-ing",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/verb-patterns-verb-infinitive-or-verb-ing"
         },
         {
           "title": "Collins · teach",
@@ -668,8 +680,8 @@
       "translation": "请告诉我怎样到那里。",
       "note": "tell 常带人作宾语；tell 与 say 的宾语结构不同。",
       "exercise": {
-        "question": "填空：The teacher told us ___ (not run) inside.",
-        "answer": "not to run"
+        "question": "解释 tell A from B，并用它表达“我能区分这两只鸟”。",
+        "answer": "表示区分甲乙。例：I can tell the two birds apart. / I can tell one bird from the other.（合理表达均可。）"
       },
       "sources": [
         {
@@ -696,8 +708,8 @@
       },
       "sources": [
         {
-          "title": "Cambridge Grammar · it-as-empty-subject",
-          "url": "https://dictionary.cambridge.org/grammar/british-grammar/it-as-empty-subject"
+          "title": "Cambridge Grammar · dummy-subjects",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/dummy-subjects"
         },
         {
           "title": "British Council · to-infinitives：形容词后的 for / of",
@@ -769,10 +781,10 @@
       "meaning": "keep 表示持有的状态，borrow 表示借入的动作。",
       "example": "You may keep the book for two weeks.",
       "translation": "这本书你可以借阅两周。",
-      "note": "持续时长常与 keep 相配；已借多久用 have kept，不用 have borrowed ... for ... 表示持续持有。",
+      "note": "表示到现在已持有多久，可用 have kept / have had ... for ...；borrow 侧重借入动作。borrow sth for + 时长也可表示约定借期，不能把所有 borrow ... for ... 都判错。",
       "exercise": {
         "question": "改正：I have borrowed this book for a week.（持续持有）",
-        "answer": "I have kept this book for a week."
+        "answer": "I have kept this book for a week. / I have had this book for a week.（表示持续持有，答案不唯一。）"
       },
       "sources": [
         {
@@ -782,6 +794,10 @@
         {
           "title": "Cambridge Grammar · lend-or-borrow",
           "url": "https://dictionary.cambridge.org/grammar/british-grammar/lend-or-borrow"
+        },
+        {
+          "title": "British Council · Present perfect：持续到现在的状态",
+          "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/present-perfect"
         }
       ]
     },
@@ -794,8 +810,8 @@
       "translation": "我向老师求助。",
       "note": "ask for 的宾语是所要的东西；ask sb to do 指所请的人去做。",
       "exercise": {
-        "question": "填空：She asked me ___ (help) her.",
-        "answer": "to help"
+        "question": "填空：She asked the teacher ___ help.（向老师求助）",
+        "answer": "for"
       },
       "sources": [
         {
@@ -818,8 +834,12 @@
       },
       "sources": [
         {
-          "title": "Cambridge Grammar · infinitive-verbs",
-          "url": "https://dictionary.cambridge.org/grammar/british-grammar/verb-ing"
+          "title": "Cambridge Grammar · verb-patterns-verb-infinitive-or-verb-ing",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/verb-patterns-verb-infinitive-or-verb-ing"
+        },
+        {
+          "title": "Cambridge Grammar · help-somebody-to-do",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/help-somebody-to-do"
         }
       ]
     },
@@ -857,7 +877,7 @@
       "sources": [
         {
           "title": "Cambridge Grammar · allow-permit-or-let",
-          "url": "https://dictionary.cambridge.org/grammar/british-grammar/allow-permit-or-let."
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/allow-permit-or-let"
         },
         {
           "title": "Collins · allow：V-ing 与宾语 + to do",
@@ -916,13 +936,13 @@
       "translation": "我们停止说话，转而倾听。",
       "note": "stop doing 与 stop to do 的动作关系不同。",
       "exercise": {
-        "question": "解释：We stopped to drink some water.",
-        "answer": "我们停下原来的活动，去喝点水。"
+        "question": "填空：The rain stopped us from ___ (play) outside.",
+        "answer": "playing"
       },
       "sources": [
         {
-          "title": "Cambridge Grammar · infinitive-verbs",
-          "url": "https://dictionary.cambridge.org/grammar/british-grammar/verb-ing"
+          "title": "Cambridge Grammar · stop-ing-form-or-to-infinitive",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/stop-ing-form-or-to-infinitive"
         },
         {
           "title": "Collins · stop",

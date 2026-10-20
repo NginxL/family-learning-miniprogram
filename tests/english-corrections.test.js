@@ -64,7 +64,11 @@ test('all 2146 printed occurrences have page-bound POS/senses, without inventing
         if (sense.partOfSpeech !== null) assert.match(sense.partOfSpeech, allowed);
         else unlabelled++;
         assert.ok(sense.meaning); assert.doesNotMatch(sense.meaning, /本词表|未列入词汇表|Unit \d|被认力|[\x00-\x08]/);
-        assert.ok(item.detail.includes(sense.meaning)); assert.ok(map.evidence.includes(sense.meaning));
+        // Individual senses can be shared with the common-sense block, while
+        // the original unit wording remains intact in the source disclosure.
+        for (const part of require('../scripts/english-vocabulary').splitMeanings(sense.meaning))
+          assert.ok(item.detail.replace(/\s/g, '').includes(part.replace(/\s/g, '')), `${w.text}: ${part}`);
+        assert.ok(map.evidence.includes(sense.meaning));
       }
     }
   }
@@ -72,7 +76,8 @@ test('all 2146 printed occurrences have page-bound POS/senses, without inventing
   for (const b of books.filter(b => b.subject === 'english' && !b.inventory.vocabularyListComplete))
     assert.ok(b.units.flatMap(u => u.words).every(w => !w.textbookSenses));
   assert.equal(occurrence('english-4a-2026','u6','quick').textbookSenses[0].partOfSpeech, null);
-  assert.match(word('practice').detail, /practise \(AmE practice\).*v\. 练习/);
+  assert.match(word('practice').detail, /practise \(AmE practice\)/);
+  assert.ok(require('../scripts/english-vocabulary').hasSense(word('practice').detail, 'v.', '练习'));
   assert.match(word('ask for help').detail, /ask … for help/);
 });
 

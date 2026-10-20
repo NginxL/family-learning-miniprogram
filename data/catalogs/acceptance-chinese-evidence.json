@@ -1,0 +1,168 @@
+{
+  "checkedAt": "2026-10-20",
+  "scope": "复核修正所用官方原页；引申说明和跨篇比较为自编，未把课后问题推定为教材标准答案。",
+  "entries": [
+    {
+      "contentId": "moe-2022-zh-1-6-045",
+      "bookId": "chinese-3a-sample",
+      "sourcePrintPage": 14,
+      "sourcePdfPage": 19,
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=9185e4a3-efb4-4ec0-bfd9-1cb194c260d3&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sha256": "9374c8a344dab506e555290f6dee619ed35da3af7ce2345cadc2f8c564e57ecf",
+      "summary": "五四制三上原书作“白云生处”，注③释“生”为产生、生出；旧任务快照保留，学习时显示校订正文。"
+    },
+    {
+      "contentId": "sh54-huoban",
+      "bookId": "chinese-7b",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d08cae24-887e-45bd-8ccb-b56af508a293&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourcePrintPage": 169,
+      "sourcePdfPage": 176,
+      "sha256": "95a5baee2194ec1bc1c9bdfc96e5bb89088e8346a1ac5b81b0396c944e25f7b0",
+      "summary": "正文“每韵为一帖”及注㉒，不是“每字为一帖”。"
+    },
+    {
+      "contentId": "sh54-yugong-yishan",
+      "bookId": "chinese-8a",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourcePrintPage": 150,
+      "sourcePdfPage": 157,
+      "sha256": "2611757f6def891d8ebc1eca4b55c232e4360f0e422a52645cdf6d20d0d3a243",
+      "summary": "课后四第6组为“帝感其诚／公孙衍、张仪岂不诚大丈夫哉”；其余跨篇引句补出处。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-050",
+      "bookId": "chinese-8a",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourcePrintPage": 66,
+      "sourcePdfPage": 73,
+      "sha256": "2cd3f9160134f41c04d534ea9862fa39cb77e3cd5b51e38499901cccf21ab290",
+      "summary": "课后四第2组为“高峰入云”，未单独注“入”；释义按原句整理。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-054",
+      "bookId": "chinese-8b",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourcePrintPage": 67,
+      "sourcePdfPage": 74,
+      "sha256": "5b3ce6b079c65a7f35408b52f8537c81a46f625d08a17548162afb16717792ce",
+      "summary": "注⑥释悄怆为凄凉。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-055",
+      "bookId": "chinese-9a",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourcePrintPage": 52,
+      "sourcePdfPage": 59,
+      "sha256": "8baed9d009a47f7ffd9f173cf1692cba340b1258fc85f4a656e8ed92b81225cc",
+      "summary": "注④把揣度语气定位到“其必曰……乎”；不是“其喜洋洋者矣”。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-052",
+      "bookId": "chinese-8b",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourcePrintPage": 140,
+      "sourcePdfPage": 147,
+      "sha256": "05a0059cb21a511587fcafe9723aeef90c7e49c23ae8d7f5dc364bb8b027714b",
+      "summary": "注⑧只说明容量单位，未注读音；删除无该原页依据的 dàn 及相关读音考查。"
+    },
+    {
+      "contentId": "sh54-dadao-zhixing",
+      "bookId": "chinese-8b",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourcePrintPage": 138,
+      "sourcePdfPage": 145,
+      "sha256": "751ec217fdb6f8e584ec6ddfe23b6b8c0e5e3ff85dd6147261c0f028c5ee7d09",
+      "summary": "注⑤、⑥分别说明第二个“亲”指父母、第二个“子”指子女。"
+    },
+    {
+      "contentId": "sh54-chenshe-shijia",
+      "bookId": "chinese-9a",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourcePrintPage": 142,
+      "sourcePdfPage": 149,
+      "sha256": "2687417ca162f29730d3498b0ef4ef4cb4b31d486db5da0ddfe98c08f216aeb2",
+      "summary": "注⑩区分燕雀与鸿鹄所比喻的人，不能把“鸿鹄”本身释为志向。"
+    },
+    {
+      "contentId": "sh54-mengzi-fugui",
+      "bookId": "chinese-8a",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourcePrintPage": 145,
+      "sourcePdfPage": 152,
+      "sha256": "449ff4d791e80073da41ba36732839cd34006e64de1fd3082e15e4468c6b1520",
+      "summary": "注⑩释“诚”为确实。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-060",
+      "bookId": "chinese-9a",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourcePrintPage": 56,
+      "sourcePdfPage": 63,
+      "sha256": "086805abe425df5327dcde71c0f4d0bda4b6c1bbfd224ceed031c0a088cdece6",
+      "summary": "注③释“更定”为晚上八时左右。"
+    },
+    {
+      "contentId": "sh54-qiren-youtian",
+      "bookId": "chinese-7a",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=df82f043-281e-48ef-931a-34b951ae8c26&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourcePrintPage": 148,
+      "sourcePdfPage": 155,
+      "sha256": "d54f57cb4635887b069a4973617552bc110a55c3c4780e1e2dc8a94d37a974d8",
+      "summary": "注⑨“中（zhòng）伤”释为伤害。"
+    },
+    {
+      "contentId": "sh54-archery",
+      "bookId": "chinese-6b",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=a953eeec-db0c-4c8b-860f-aa94f4727b6b&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourcePrintPage": 47,
+      "sourcePdfPage": 54,
+      "sha256": "047f01f4fab92f1713c6468848e8241b07e541e76af62bcb5a4c3f4a17689ec5",
+      "summary": "注③“子”为第二人称代词，您。"
+    },
+    {
+      "contentId": "sh54-zhou-yafu",
+      "bookId": "chinese-8a",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8b697f9-6a7a-4057-85ef-7651f68aa91e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourcePrintPage": 152,
+      "sourcePdfPage": 159,
+      "sha256": "8db0583a92f90c289ab014785395a7d7aeb5639ea106d6612a06c120311d90ac",
+      "summary": "注⑱明确“介胄”在句中用作动词。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-044",
+      "bookId": "chinese-8b",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourcePrintPage": 134,
+      "sourcePdfPage": 141,
+      "sha256": "3651822ef42219b70913cc3a562c3222d8171adb7a8756c1779a458e9b44310d",
+      "summary": "注④怒为奋力。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-044",
+      "bookId": "chinese-8b",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=03491549-8712-48a3-8fc8-5a616e6f492e&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourcePrintPage": 135,
+      "sourcePdfPage": 142,
+      "sha256": "ba2ec78dd1432127909661a68e9924aeaab24ebccfb1fc81e72d8cc3b026af7c",
+      "summary": "注①其表示选择，注②另一个“其”指大鹏。"
+    },
+    {
+      "contentId": "sh54-two-children",
+      "bookId": "chinese-6a",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=2ca4002f-cb3d-4a21-bcfe-ebb94032a400&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourcePrintPage": 129,
+      "sourcePdfPage": 136,
+      "sha256": "26bebadd85a807d809be01278fb9c78859ebc0a4dcb7001b3c802869a65acb89",
+      "summary": "注⑦知同智，智慧；同页曹冲原文未出现斛。"
+    },
+    {
+      "contentId": "moe-2022-zh-7-9-056",
+      "bookId": "chinese-9a",
+      "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d6941a82-0aa3-4c6c-a198-b95ea84a6852&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "sourcePrintPage": 55,
+      "sourcePdfPage": 62,
+      "sha256": "5d82a04caa0e97ea39606e0c1b5001fd00e663cacc6614d49c2a569a1a8e5895",
+      "summary": "课后三只要求体会判断或陈述语气，未给各句答案；注③颓然为倒下的样子。"
+    }
+  ]
+}

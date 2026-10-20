@@ -1,0 +1,193 @@
+{
+  "checkedAt": "2026-10-20",
+  "dictionaryHeads": [
+    "spell",
+    "prince / princess",
+    "emperor / empress",
+    "elder",
+    "plastic",
+    "other",
+    "mobile",
+    "ton",
+    "pool",
+    "primary",
+    "alarm",
+    "wild",
+    "yet",
+    "positive",
+    "form",
+    "social",
+    "each",
+    "either",
+    "such"
+  ],
+  "method": "词典义项 ID 和英文释义哈希由官方 Open English Wordnet 2025 XML 复核；新增 Cambridge 义项按官方词典页面核对。中文释义和练习自编。",
+  "sourceUrlChanges": [
+    {
+      "contentId": "word-hope",
+      "before": "https://dictionary.cambridge.org/grammar/british-grammar/expect-hope-wait",
+      "after": "https://dictionary.cambridge.org/grammar/british-grammar/expect-hope-or-wait"
+    },
+    {
+      "contentId": "word-let",
+      "before": "https://dictionary.cambridge.org/grammar/british-grammar/let",
+      "after": "https://dictionary.cambridge.org/grammar/british-grammar/let-let-s"
+    },
+    {
+      "contentId": "word-have",
+      "before": "https://dictionary.cambridge.org/grammar/british-grammar/have-something-",
+      "after": "https://dictionary.cambridge.org/grammar/british-grammar/have-something-done"
+    },
+    {
+      "contentId": "word-like",
+      "before": "https://dictionary.cambridge.org/grammar/british-grammar/verb-ing",
+      "after": "https://dictionary.cambridge.org/grammar/british-grammar/verb-patterns-verb-infinitive-or-verb-ing"
+    },
+    {
+      "contentId": "word-feel",
+      "before": "https://dictionary.cambridge.org/grammar/british-grammar/main",
+      "after": "https://dictionary.cambridge.org/grammar/british-grammar/verbs-types"
+    },
+    {
+      "contentId": "word-feel",
+      "before": "https://dictionary.cambridge.org/us/dictionary/english/feel-like-doing",
+      "after": "https://dictionary.cambridge.org/dictionary/english/feel-like"
+    },
+    {
+      "contentId": "word-sound",
+      "before": "https://dictionary.cambridge.org/grammar/british-grammar/main",
+      "after": "https://dictionary.cambridge.org/grammar/british-grammar/verbs-types"
+    },
+    {
+      "contentId": "word-smell",
+      "before": "https://dictionary.cambridge.org/grammar/british-grammar/main",
+      "after": "https://dictionary.cambridge.org/grammar/british-grammar/verbs-types"
+    },
+    {
+      "contentId": "word-taste",
+      "before": "https://dictionary.cambridge.org/grammar/british-grammar/main",
+      "after": "https://dictionary.cambridge.org/grammar/british-grammar/verbs-types"
+    },
+    {
+      "contentId": "word-plan",
+      "before": "https://dictionary.cambridge.org/grammar/british-grammar/verb-ing",
+      "after": "https://dictionary.cambridge.org/grammar/british-grammar/verb-patterns-verb-infinitive-or-verb-ing"
+    },
+    {
+      "contentId": "word-offer",
+      "before": "https://dictionary.cambridge.org/grammar/british-grammar/transitive-and-intransitive-verbs",
+      "after": "https://dictionary.cambridge.org/grammar/british-grammar/objects"
+    },
+    {
+      "contentId": "word-begin",
+      "before": "https://dictionary.cambridge.org/grammar/british-grammar/verb-ing",
+      "after": "https://dictionary.cambridge.org/grammar/british-grammar/verb-patterns-verb-infinitive-or-verb-ing"
+    },
+    {
+      "contentId": "word-teach",
+      "before": "https://dictionary.cambridge.org/grammar/british-grammar/verb-ing",
+      "after": "https://dictionary.cambridge.org/grammar/british-grammar/verb-patterns-verb-infinitive-or-verb-ing"
+    },
+    {
+      "contentId": "word-it",
+      "before": "https://dictionary.cambridge.org/grammar/british-grammar/it-as-empty-subject",
+      "after": "https://dictionary.cambridge.org/grammar/british-grammar/dummy-subjects"
+    },
+    {
+      "contentId": "word-help",
+      "before": "https://dictionary.cambridge.org/grammar/british-grammar/verb-ing",
+      "after": "https://dictionary.cambridge.org/grammar/british-grammar/verb-patterns-verb-infinitive-or-verb-ing"
+    },
+    {
+      "contentId": "word-allow",
+      "before": "https://dictionary.cambridge.org/grammar/british-grammar/allow-permit-or-let.",
+      "after": "https://dictionary.cambridge.org/grammar/british-grammar/allow-permit-or-let"
+    },
+    {
+      "contentId": "word-stop",
+      "before": "https://dictionary.cambridge.org/grammar/british-grammar/verb-ing",
+      "after": "https://dictionary.cambridge.org/grammar/british-grammar/stop-ing-form-or-to-infinitive"
+    }
+  ],
+  "urlScope": "采用与内容对应的完整专题地址。403、抓取超时或缺少网页存档不单独构成页面不存在的证据。",
+  "structureEvidence": [
+    {
+      "sourceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/allow-permit-or-let",
+      "archivedFile": "cam-allow-permit-or-let.html",
+      "sha256": "debc3df30a371842fadbbe86980a1aff760d5e54d7f9d68ad73f6fa7912ab826",
+      "method": "阅读原网站页面存档核对规则；示例与练习自编。",
+      "archiveLookupUrl": "https://web.archive.org/web/2026id_/https://dictionary.cambridge.org/grammar/british-grammar/allow-permit-or-let"
+    },
+    {
+      "sourceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/dummy-subjects",
+      "archivedFile": "cam-dummy-subjects.html",
+      "sha256": "be239e99f673ee8fde1bb35044dde088153341afae444a6fed6bd8b3eee42866",
+      "method": "阅读原网站页面存档核对规则；示例与练习自编。",
+      "archiveLookupUrl": "https://web.archive.org/web/2026id_/https://dictionary.cambridge.org/grammar/british-grammar/dummy-subjects"
+    },
+    {
+      "sourceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/expect-hope-or-wait",
+      "archivedFile": "cam-expect-hope-or-wait.html",
+      "sha256": "02f83a3dbc3807c69eb347fe4678baa59eb0830fa75a074e544c2ddd43abb712",
+      "method": "阅读原网站页面存档核对规则；示例与练习自编。",
+      "archiveLookupUrl": "https://web.archive.org/web/2026id_/https://dictionary.cambridge.org/grammar/british-grammar/expect-hope-or-wait"
+    },
+    {
+      "sourceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/have-something-done",
+      "archivedFile": "cam-have-something-done.html",
+      "sha256": "b30b3445d3a802c3932487261fe2f00a8391effa9f121966ebf0e39998d897d5",
+      "method": "阅读原网站页面存档核对规则；示例与练习自编。",
+      "archiveLookupUrl": "https://web.archive.org/web/2026id_/https://dictionary.cambridge.org/grammar/british-grammar/have-something-done"
+    },
+    {
+      "sourceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/let-let-s",
+      "archivedFile": "cam-let-let-s.html",
+      "sha256": "9fed4f60b6c23cb2af91042ebcc2a25e9d32c5ab0eb4a85bb7e30277a92e3139",
+      "method": "阅读原网站页面存档核对规则；示例与练习自编。",
+      "archiveLookupUrl": "https://web.archive.org/web/2026id_/https://dictionary.cambridge.org/grammar/british-grammar/let-let-s"
+    },
+    {
+      "sourceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/objects",
+      "archivedFile": "cam-objects.html",
+      "sha256": "072bc66eda74637d465524ce3bd45cc54cde7a53718c9755f08c238335d330a6",
+      "method": "阅读原网站页面存档核对规则；示例与练习自编。",
+      "archiveLookupUrl": "https://web.archive.org/web/2026id_/https://dictionary.cambridge.org/grammar/british-grammar/objects"
+    },
+    {
+      "sourceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/stop-ing-form-or-to-infinitive",
+      "archivedFile": "cam-stop-ing-form-or-to-infinitive.html",
+      "sha256": "be8d0f7b7e49811f81739c142e372daae84c7145da41b51965a92b5bea7ba661",
+      "method": "阅读原网站页面存档核对规则；示例与练习自编。",
+      "archiveLookupUrl": "https://web.archive.org/web/2026id_/https://dictionary.cambridge.org/grammar/british-grammar/stop-ing-form-or-to-infinitive"
+    },
+    {
+      "sourceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/verb-patterns-verb-infinitive-or-verb-ing",
+      "archivedFile": "cam-verb-patterns-verb-infinitive-or-verb-ing.html",
+      "sha256": "1d5339eb0ac2505ac18028ae57c30803d854df3e42c589041f6e4d0a0972e56a",
+      "method": "阅读原网站页面存档核对规则；示例与练习自编。",
+      "archiveLookupUrl": "https://web.archive.org/web/2026id_/https://dictionary.cambridge.org/grammar/british-grammar/verb-patterns-verb-infinitive-or-verb-ing"
+    },
+    {
+      "sourceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/verbs-types",
+      "archivedFile": "cam-verbs-types.html",
+      "sha256": "a896ca9ae244dc94b5c91222007a0117dde668ceec0622aea9bef25aaca6af79",
+      "method": "阅读原网站页面存档核对规则；示例与练习自编。",
+      "archiveLookupUrl": "https://web.archive.org/web/2026id_/https://dictionary.cambridge.org/grammar/british-grammar/verbs-types"
+    },
+    {
+      "sourceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/help-somebody-to-do",
+      "summary": "help sb (to) do",
+      "method": "官方网页检索正文已读取；直接抓取受限，不把抓取错误视为页面不存在。"
+    },
+    {
+      "sourceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/have-to",
+      "summary": "have to 的形式与否定",
+      "method": "官方网页检索正文已读取；直接抓取受限，不把抓取错误视为页面不存在。"
+    },
+    {
+      "sourceUrl": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/present-perfect",
+      "summary": "现在完成时可表示过去开始、现在仍持续的状态",
+      "method": "官方网页检索正文已读取；直接抓取受限，不把抓取错误视为页面不存在。"
+    }
+  ]
+}

@@ -250,7 +250,7 @@ const definition: PageDefinition<PlansData, PlansMethods, PlansRuntime> = {
     if (this.data.busy || this.data.isChild || !this.data.family) return;
     if (this.data.templateConflict) { wx.showToast({ title: '请重新载入家人更新后的模板', icon: 'none' }); return; }
     if (action !== 'saveDailyTemplate' && (this.data.newTemplateDraft || this.data.draftDirty)) { wx.showToast({ title: '请先保存或放弃当前修改', icon: 'none' }); return; }
-    const rules: Array<Omit<AutoRule, 'quantity'> & { quantity: number | '' }> = this.data.rules.map((rule) => ({ kind: rule.id, mode: rule.mode, quantity: rule.quantity, scope: rule.scope, ...(rule.id === 'poetry' && rule.recitationPolicy !== 'all' ? { recitationPolicy: rule.recitationPolicy } : {}) }));
+    const rules: Array<Omit<AutoRule, 'quantity'> & { quantity: number | '' }> = this.data.rules.map((rule) => ({ kind: rule.id, mode: rule.mode, quantity: rule.quantity, scope: rule.scope, ...(rule.id === 'poetry' ? { recitationPolicy: rule.recitationPolicy } : {}) }));
     if (!rules.every((rule): rule is AutoRule => typeof rule.quantity === 'number' && Number.isInteger(rule.quantity) && rule.quantity >= 0 && rule.quantity <= learning.definition(rule.kind).max)) {
       wx.showToast({ title: '请填写范围内的整数数量', icon: 'none' }); return;
     }

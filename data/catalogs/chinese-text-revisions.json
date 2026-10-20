@@ -349,6 +349,21 @@
         }
       ],
       "originalSha256": "3b823f8c2e3ad397c2a586991cea794fb779bf403db5f3282351e2ac3d18ef28"
+    },
+    {
+      "contentId": "moe-2022-zh-1-6-045",
+      "checkedAt": "2026-10-20",
+      "summary": "五四制三上原书作“白云生处”，注③释“生”为产生、生出；旧任务快照保留，学习时显示校订正文。",
+      "pages": [
+        {
+          "bookId": "chinese-3a-sample",
+          "sourcePrintPage": 14,
+          "sourcePdfPage": 19,
+          "sourceUrl": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=9185e4a3-efb4-4ec0-bfd9-1cb194c260d3&catalogType=tchMaterial&subCatalog=tchMaterial",
+          "sha256": "9374c8a344dab506e555290f6dee619ed35da3af7ce2345cadc2f8c564e57ecf"
+        }
+      ],
+      "originalSha256": "e71e97084f370b973be4b900f2faf9be21c8de50ade9d514c007199b55ab59eb"
     }
   ]
 }
