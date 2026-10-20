@@ -180,9 +180,12 @@
       "method": "官方网页检索正文已读取；直接抓取受限，不把抓取错误视为页面不存在。"
     },
     {
-      "sourceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/have-to",
+      "sourceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/have-got-to-and-have-to",
       "summary": "have to 的形式与否定",
-      "method": "官方网页检索正文已读取；直接抓取受限，不把抓取错误视为页面不存在。"
+      "archivedFile": "cam-have-got-to-and-have-to.html",
+      "sha256": "f3325b1058aa64af3726b6d45f7cea96a085656404dc2412183d1ac86fd9efbd",
+      "archiveLookupUrl": "https://web.archive.org/web/20251115145116id_/https://dictionary.cambridge.org/grammar/british-grammar/have-got-to-and-have-to",
+      "method": "已读取2025-11-15的Cambridge原页存档，标题及canonical均对应完整专题路径；核对否定式与用法。当前直接抓取受限，旧短路径仍有检索缓存，不以抓取失败认定页面不存在。"
     },
     {
       "sourceUrl": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/present-perfect",
