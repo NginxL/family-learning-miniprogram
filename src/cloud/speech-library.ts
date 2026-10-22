@@ -9,7 +9,9 @@ export const SPEECH_FILE_LIMIT = 512 * 1024;
 // Measured 32kbps files project about 200MiB for Chinese, both English accents
 // and existing general audio. This is an app guard, not a paid plan upgrade.
 export const SPEECH_STORAGE_LIMIT = 256 * 1024 * 1024;
-export const SPEECH_TRANSFER_LIMIT = 128 * 1024 * 1024;
+// Import readback shares the existing daily counter with playback. Allow the
+// projected full library to be verified in one day without resetting usage.
+export const SPEECH_TRANSFER_LIMIT = 256 * 1024 * 1024;
 // Preserve existing API error codes; only free synthesis exhaustion may switch
 // providers. Authorization, corruption and storage/transfer limits never do.
 export class FreeSpeechUnavailable extends DomainError {}

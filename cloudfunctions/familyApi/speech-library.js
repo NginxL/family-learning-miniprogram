@@ -13,7 +13,9 @@ exports.SPEECH_FILE_LIMIT = 512 * 1024;
 // Measured 32kbps files project about 200MiB for Chinese, both English accents
 // and existing general audio. This is an app guard, not a paid plan upgrade.
 exports.SPEECH_STORAGE_LIMIT = 256 * 1024 * 1024;
-exports.SPEECH_TRANSFER_LIMIT = 128 * 1024 * 1024;
+// Import readback shares the existing daily counter with playback. Allow the
+// projected full library to be verified in one day without resetting usage.
+exports.SPEECH_TRANSFER_LIMIT = 256 * 1024 * 1024;
 // Preserve existing API error codes; only free synthesis exhaustion may switch
 // providers. Authorization, corruption and storage/transfer limits never do.
 class FreeSpeechUnavailable extends validation_1.DomainError {
