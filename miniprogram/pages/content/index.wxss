@@ -1,3 +1,4 @@
+@import "../../templates/word-entry.wxss";
 .study-item { margin-top:0; }
 .content-page.has-schedule { padding-bottom:calc(160rpx + env(safe-area-inset-bottom)); }
 .content-footer { position:fixed; z-index:20; left:0; right:0; bottom:0; padding:20rpx 32rpx calc(20rpx + env(safe-area-inset-bottom)); background:#fff; border-top:1rpx solid #e5eade; }

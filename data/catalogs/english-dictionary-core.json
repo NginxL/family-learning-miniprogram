@@ -1,0 +1,958 @@
+{
+  "checkedAt": "2026-10-22",
+  "scope": "60 张入门词卡的词性与分义项补充；中文释义自编，按具名词典义项核对；不宣称完整词典。",
+  "entries": {
+    "cat": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "猫"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "dog": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "狗"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "bird": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "鸟"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "fish": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "鱼"
+        },
+        {
+          "pos": "n.",
+          "meaning": "鱼肉"
+        },
+        {
+          "pos": "v.",
+          "meaning": "捕鱼；钓鱼"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "rabbit": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "兔子"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "duck": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "鸭子"
+        },
+        {
+          "pos": "v.",
+          "meaning": "低头躲避"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "red": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "红色"
+        },
+        {
+          "pos": "adj.",
+          "meaning": "红色的"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "blue": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "蓝色"
+        },
+        {
+          "pos": "adj.",
+          "meaning": "蓝色的"
+        },
+        {
+          "pos": "adj.",
+          "meaning": "忧郁的"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "green": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "绿色"
+        },
+        {
+          "pos": "adj.",
+          "meaning": "绿色的"
+        },
+        {
+          "pos": "adj.",
+          "meaning": "未成熟的"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "yellow": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "黄色"
+        },
+        {
+          "pos": "adj.",
+          "meaning": "黄色的"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "black": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "黑色"
+        },
+        {
+          "pos": "adj.",
+          "meaning": "黑色的"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "white": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "白色"
+        },
+        {
+          "pos": "adj.",
+          "meaning": "白色的"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "book": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "书"
+        },
+        {
+          "pos": "v.",
+          "meaning": "预订"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "pen": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "钢笔；笔"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "pencil": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "铅笔"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "bag": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "包；袋子"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "desk": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "书桌"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "chair": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "椅子"
+        },
+        {
+          "pos": "v.",
+          "meaning": "主持（会议等）"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "apple": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "苹果"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "banana": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "香蕉"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "milk": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "牛奶；乳汁"
+        },
+        {
+          "pos": "v.",
+          "meaning": "挤奶"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "water": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "水"
+        },
+        {
+          "pos": "v.",
+          "meaning": "给……浇水"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "rice": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "稻米；米饭"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "egg": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "蛋；鸡蛋"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "mother": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "母亲；妈妈"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "father": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "父亲；爸爸"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "sister": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "姐妹"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "brother": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "兄弟"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "friend": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "朋友"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "family": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "家庭；家人"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "star": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "星；恒星"
+        },
+        {
+          "pos": "n.",
+          "meaning": "明星；主演"
+        },
+        {
+          "pos": "v.",
+          "meaning": "主演"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "tree": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "树"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "flower": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "花"
+        },
+        {
+          "pos": "v.",
+          "meaning": "开花"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "rain": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "雨"
+        },
+        {
+          "pos": "v.",
+          "meaning": "下雨"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "read": {
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "读；阅读"
+        },
+        {
+          "pos": "v.",
+          "meaning": "朗读"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "write": {
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "写；书写"
+        },
+        {
+          "pos": "v.",
+          "meaning": "写作"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "listen": {
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "听"
+        },
+        {
+          "pos": "v.",
+          "meaning": "听从；留意"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "look": {
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "看"
+        },
+        {
+          "pos": "v.",
+          "meaning": "看起来；显得"
+        },
+        {
+          "pos": "n.",
+          "meaning": "看；瞥"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "run": {
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "跑"
+        },
+        {
+          "pos": "v.",
+          "meaning": "管理；经营"
+        },
+        {
+          "pos": "v.",
+          "meaning": "流动"
+        },
+        {
+          "pos": "n.",
+          "meaning": "跑步"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "jump": {
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "跳；跳跃"
+        },
+        {
+          "pos": "n.",
+          "meaning": "跳跃"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "happy": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "快乐的；高兴的"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "small": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "小的；少的"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 入门词义",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "hello": {
+      "senses": [
+        {
+          "pos": "interj.",
+          "meaning": "你好；喂（问候）"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Collins · hello",
+          "url": "https://www.collinsdictionary.com/dictionary/english/hello"
+        }
+      ]
+    },
+    "goodbye": {
+      "senses": [
+        {
+          "pos": "interj.",
+          "meaning": "再见"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Collins · goodbye",
+          "url": "https://www.collinsdictionary.com/dictionary/english/goodbye"
+        }
+      ]
+    },
+    "I": {
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "我"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Collins · I",
+          "url": "https://www.collinsdictionary.com/dictionary/english/i"
+        }
+      ]
+    },
+    "you": {
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "你；你们"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Collins · you",
+          "url": "https://www.collinsdictionary.com/dictionary/english/you"
+        }
+      ]
+    },
+    "we": {
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "我们"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Collins · we",
+          "url": "https://www.collinsdictionary.com/dictionary/english/we"
+        }
+      ]
+    },
+    "my": {
+      "senses": [
+        {
+          "pos": "det.",
+          "meaning": "我的"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Collins · my",
+          "url": "https://www.collinsdictionary.com/dictionary/english/my"
+        }
+      ]
+    },
+    "sun": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "太阳；阳光"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Collins · sun",
+          "url": "https://www.collinsdictionary.com/dictionary/english/sun"
+        }
+      ]
+    },
+    "moon": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "月亮"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Collins · moon",
+          "url": "https://www.collinsdictionary.com/dictionary/english/moon"
+        }
+      ]
+    },
+    "one": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "一"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 基数词",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "two": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "二"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 基数词",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "three": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "三"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 基数词",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "four": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "四"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 基数词",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "five": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "五"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 基数词",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "six": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "六"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 基数词",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "seven": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "七"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 基数词",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "eight": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "八"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 基数词",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "nine": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "九"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 基数词",
+          "url": "https://en-word.net/"
+        }
+      ]
+    },
+    "ten": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "十"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Open English Wordnet 2025 · 基数词",
+          "url": "https://en-word.net/"
+        }
+      ]
+    }
+  }
+}

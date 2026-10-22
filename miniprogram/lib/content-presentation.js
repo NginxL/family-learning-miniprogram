@@ -38,6 +38,7 @@ exports.recitationLabel = recitationLabel;
 exports.learningGradeLabel = learningGradeLabel;
 exports.withContentSources = withContentSources;
 const learning = __importStar(require("./learning/learning"));
+const word_entry_1 = require("./word-entry");
 // Preserve stored labels while using the same grade names in every learning view.
 function recitationLabel(entry, mappings = []) {
     const mapping = mappings.find(mapping => mapping.bookId === entry.bookId);
@@ -57,6 +58,7 @@ function learningGradeLabel(item) {
 }
 function withContentSources(item) {
     const knowledge = learning.catalogById.get(learning.contentId(item));
+    const dictionary = (0, word_entry_1.wordEntry)(item, knowledge);
     const revision = knowledge === null || knowledge === void 0 ? void 0 : knowledge.textRevision;
     const vocabularyRevision = knowledge === null || knowledge === void 0 ? void 0 : knowledge.vocabularyRevision;
     const contentRevision = knowledge === null || knowledge === void 0 ? void 0 : knowledge.contentRevision;
@@ -64,12 +66,13 @@ function withContentSources(item) {
     const recitationSources = ((knowledge === null || knowledge === void 0 ? void 0 : knowledge.recitationRequirements) || []).map(entry => ({ ...entry,
         label: recitationLabel(entry, knowledge === null || knowledge === void 0 ? void 0 : knowledge.gradeMappings) }));
     return { ...item,
+        wordEntry: dictionary,
         textRevision: revision,
         vocabularyRevision,
         contentRevision,
         commonSenseSources: (knowledge === null || knowledge === void 0 ? void 0 : knowledge.commonSenseSources) || [],
         dictionaryReference: (knowledge === null || knowledge === void 0 ? void 0 : knowledge.dictionaryReference) || '',
-        textCorrectionNotice: hasOlderText ? (vocabularyRevision
+        textCorrectionNotice: (dictionary === null || dictionary === void 0 ? void 0 : dictionary.legacyText) ? `${vocabularyRevision ? '词义和词形说明已校订。' : ''}词典释义按当前词库展示；安排时的原文保留在“来源详情与说明”，学习记录不变。` : hasOlderText ? (vocabularyRevision
             ? '词义和词形说明已校订。本任务保留安排时的内容，学习笔记使用新版；请在“来源详情与说明”中核对新版词卡，学习记录不变。'
             : contentRevision ? '讲解或练习已校订。本任务保留安排时的内容，请在“来源详情与说明”中核对新版；学习记录不变。'
                 : '正文已校订。本任务保留安排时的正文，请在“来源详情与说明”中查看校订正文；学习记录不变。') : '',

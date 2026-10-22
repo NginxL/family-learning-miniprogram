@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 Component({
     options: { multipleSlots: true },
     properties: {
-        title: String, tag: String, subject: String, meta: String, preview: String,
+        title: String, tag: String, subject: String, meta: String, preview: String, pronunciation: String,
         status: String, completed: Boolean, hasActions: Boolean
     },
     methods: {

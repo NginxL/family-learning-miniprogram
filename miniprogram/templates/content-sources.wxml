@@ -2,6 +2,12 @@
   <view wx:if="{{item.source || item.note || item.sourceMappings.length || item.studyNotes || item.recitationNote}}" class="content-sources">
     <button class="quiet sources-toggle" data-id="{{item.id}}" bindtap="toggleContentSources">来源详情与说明 {{sourcesOpenId === item.id ? '↑' : '↓'}}</button>
     <view wx:if="{{sourcesOpenId === item.id}}" class="sources-body">
+      <view wx:if="{{item.wordEntry}}" class="source-book">
+        <view class="muted plan-help">音标按具名词典与开源词典记录展示。英、美分别标注；没有地区信息的只标“音标”。词义为已整理的学习义项，不是完整词典。词典释义与教材单元用法独立保留。</view>
+        <view wx:if="{{item.wordEntry.pronunciationPending}}" class="muted plan-help">该词头、短语或缩写暂无已核音标；不根据拼写自动猜读音。</view>
+        <button wx:for="{{item.wordEntry.sources}}" wx:for-item="source" wx:key="url" class="quiet notes-source" data-url="{{source.url}}" bindtap="copyStudySource">复制音标 / 词义依据：{{source.title}}</button>
+        <view wx:if="{{item.wordEntry.legacyText}}"><view class="muted plan-help">安排时保存的原文</view><view class="body">{{item.wordEntry.legacyText}}</view></view>
+      </view>
       <view wx:if="{{item.sourceGradeLabel}}" class="muted plan-help">{{item.sourceGradeLabel}}</view>
       <view wx:if="{{item.source}}" class="muted plan-help">来源：{{item.source}}</view>
       <view wx:if="{{item.note}}" class="muted plan-help">{{item.note}}</view>

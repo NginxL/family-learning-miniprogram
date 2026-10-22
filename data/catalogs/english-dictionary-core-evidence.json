@@ -1,0 +1,734 @@
+{
+  "checkedAt": "2026-10-22",
+  "sourceEdition": "Open English Wordnet 2025",
+  "entries": {
+    "cat": [
+      {
+        "pos": "n.",
+        "meaning": "猫",
+        "synset": "oewn-02124272-n",
+        "definition": "feline mammal usually having thick soft fur and no ability to roar",
+        "sha256": "5a2f3449c2d2d33e4a2833005f847039f85b30465f12aefd56a0b6f236b45ab2"
+      }
+    ],
+    "dog": [
+      {
+        "pos": "n.",
+        "meaning": "狗",
+        "synset": "oewn-02086723-n",
+        "definition": "a member of the genus Canis (probably descended from the common wolf) that has been domesticated by man since prehistoric times; occurs in many breeds",
+        "sha256": "dff0205cd23b1f1bd1c4904919bae8b6e7535c1a5d48a8c2d5256968ebf3f8a3"
+      }
+    ],
+    "bird": [
+      {
+        "pos": "n.",
+        "meaning": "鸟",
+        "synset": "oewn-01505702-n",
+        "definition": "warm-blooded egg-laying vertebrates characterized by feathers and forelimbs modified as wings",
+        "sha256": "822f3925eed0f672b8183165a92212d2167a7da11898aeac38c64a3b9bfa8d87"
+      }
+    ],
+    "fish": [
+      {
+        "pos": "n.",
+        "meaning": "鱼",
+        "synset": "oewn-02514684-n",
+        "definition": "any of various mostly cold-blooded aquatic vertebrates usually having scales and breathing through gills",
+        "sha256": "7b6bf7d50e31aac326e21853a8291ddbb803217b3425a50667a5242c5e9c07dd"
+      },
+      {
+        "pos": "n.",
+        "meaning": "鱼肉",
+        "synset": "oewn-07791351-n",
+        "definition": "the flesh of fish used as food",
+        "sha256": "2d810c88447b92b1f5504a56dc6f6bfec6d07d5786f2999ebcd5a92780b7ebf6"
+      },
+      {
+        "pos": "v.",
+        "meaning": "捕鱼；钓鱼",
+        "synset": "oewn-01143220-v",
+        "definition": "catch or try to catch fish or shellfish",
+        "sha256": "c0ad679825fbd1847b1c2f03ae6b75f34cd4dbaa1b780f265d8bf1e7d6987ec0"
+      }
+    ],
+    "rabbit": [
+      {
+        "pos": "n.",
+        "meaning": "兔子",
+        "synset": "oewn-02326697-n",
+        "definition": "any of various burrowing animals of the family Leporidae having long ears and short tails; some domesticated and raised for pets or food",
+        "sha256": "ce415967cd1a5b4baef0d9673c82b2b91ad94d7fff3d5b81333981cdc2f40d53"
+      }
+    ],
+    "duck": [
+      {
+        "pos": "n.",
+        "meaning": "鸭子",
+        "synset": "oewn-01848972-n",
+        "definition": "small wild or domesticated web-footed broad-billed swimming bird usually having a depressed body and short legs",
+        "sha256": "546f5ff0cfabc785899fb090305ea45b631fcce3c1cedded7fad0f1f4e93ad7d"
+      },
+      {
+        "pos": "v.",
+        "meaning": "低头躲避",
+        "synset": "oewn-01869189-v",
+        "definition": "to move (the head or body) quickly downwards or away",
+        "sha256": "cb05ab113471c5387473782a90a2c5ea381306d59ae22896fd2e3ab3709b3ba5"
+      }
+    ],
+    "red": [
+      {
+        "pos": "n.",
+        "meaning": "红色",
+        "synset": "oewn-04969961-n",
+        "definition": "red color or pigment; the chromatic color resembling the hue of blood",
+        "sha256": "fe14a6c128630c5bd939ce14e234caff0e02f5663df08dcf5e4720193689f6d8"
+      },
+      {
+        "pos": "adj.",
+        "meaning": "红色的",
+        "synset": "oewn-00382159-s",
+        "definition": "of a color at the end of the color spectrum (next to orange); resembling the color of blood or cherries or tomatoes or rubies",
+        "sha256": "dada939b8ac59e8b3f6dbc299704cf019633045da5afb170998db59ef358f757"
+      }
+    ],
+    "blue": [
+      {
+        "pos": "n.",
+        "meaning": "蓝色",
+        "synset": "oewn-04976072-n",
+        "definition": "blue color or pigment; resembling the color of the clear sky in the daytime",
+        "sha256": "38bc11e0f904aef2adad31fae23a7f0415cba3555fa0af96d52d113eabac883c"
+      },
+      {
+        "pos": "adj.",
+        "meaning": "蓝色的",
+        "synset": "oewn-00371931-s",
+        "definition": "of the color intermediate between green and violet; having a color similar to that of a clear unclouded sky",
+        "sha256": "749791979bfaca85cdd90a94edd4a4b0a2badf065d0f6e355cb3fc811e298eb0"
+      },
+      {
+        "pos": "adj.",
+        "meaning": "忧郁的",
+        "synset": "oewn-00707060-s",
+        "definition": "filled with melancholy and despondency",
+        "sha256": "0869fd61c41353f50919edb0e8b28f011cf905ee96952d71b3780eb70df63e09"
+      }
+    ],
+    "green": [
+      {
+        "pos": "n.",
+        "meaning": "绿色",
+        "synset": "oewn-04974368-n",
+        "definition": "green color or pigment; resembling the color of growing grass",
+        "sha256": "3088c23a25cfed2ecd1bd60538c15bcb2fd5806c2610efb349e8b39637a40a4c"
+      },
+      {
+        "pos": "adj.",
+        "meaning": "绿色的",
+        "synset": "oewn-00377031-s",
+        "definition": "of the color between blue and yellow in the color spectrum; similar to the color of fresh grass",
+        "sha256": "e83827c2b3cf056ea6ff0acd8fa90c024896634ef80854dbe2f3129409f97eb8"
+      },
+      {
+        "pos": "adj.",
+        "meaning": "未成熟的",
+        "synset": "oewn-01497045-a",
+        "definition": "not fully developed or mature; not ripe",
+        "sha256": "137b495d5ed032e3d02fb4b10e9d4ee3e621495f155b87ea14212808e66d10c8"
+      }
+    ],
+    "yellow": [
+      {
+        "pos": "n.",
+        "meaning": "黄色",
+        "synset": "oewn-04972838-n",
+        "definition": "yellow color or pigment; the chromatic color resembling the hue of sunflowers or ripe lemons",
+        "sha256": "3ac71429bb240c427efe5d10241798edc78a6106fa703a5b987140e6675ce778"
+      },
+      {
+        "pos": "adj.",
+        "meaning": "黄色的",
+        "synset": "oewn-00386818-s",
+        "definition": "of the color intermediate between green and orange in the color spectrum; of something resembling the color of an egg yolk",
+        "sha256": "99eb213f906827537939508d64a72b002a156404ebc23634d79aef8f87e17d83"
+      }
+    ],
+    "black": [
+      {
+        "pos": "n.",
+        "meaning": "黑色",
+        "synset": "oewn-04967454-n",
+        "definition": "the quality or state of the achromatic color of least lightness (bearing the least resemblance to white)",
+        "sha256": "2733c2ca032b7479909d7bccd66bbe6c7f6850848b9ce74f0722583f4187d8c6"
+      },
+      {
+        "pos": "adj.",
+        "meaning": "黑色的",
+        "synset": "oewn-00393873-a",
+        "definition": "being of the achromatic color of maximum darkness; having little or no hue owing to absorption of almost all incident light",
+        "sha256": "b4d01c2e5590745028dd11ce288d19bb15ccbd70b1c30d820a268d0e2dce5fa3"
+      }
+    ],
+    "white": [
+      {
+        "pos": "n.",
+        "meaning": "白色",
+        "synset": "oewn-04967906-n",
+        "definition": "the quality or state of the achromatic color of greatest lightness (bearing the least resemblance to black)",
+        "sha256": "e6345e698d21b86f12ad387a6d9d476ef3463d4edf1839d295d3e00c936435e1"
+      },
+      {
+        "pos": "adj.",
+        "meaning": "白色的",
+        "synset": "oewn-00394166-a",
+        "definition": "being of the achromatic color of maximum lightness; having little or no hue owing to reflection of almost all incident light",
+        "sha256": "50b69de59f87ad8438cfa6cddc27119b4bcac218e0190cb479dc1027569e2d14"
+      }
+    ],
+    "book": [
+      {
+        "pos": "n.",
+        "meaning": "书",
+        "synset": "oewn-06422547-n",
+        "definition": "a written work or composition that has been published (printed on pages bound together)",
+        "sha256": "2a2799defaaa32eb60c29519c349c8a44f0133ff97090a57015cb9186103b5b8"
+      },
+      {
+        "pos": "v.",
+        "meaning": "预订",
+        "synset": "oewn-02503969-v",
+        "definition": "arrange for and reserve (something for someone else) in advance",
+        "sha256": "fe38df344286157f5ebc8514d256cd6dc981437b9ac5e87f179abceecde48848"
+      }
+    ],
+    "pen": [
+      {
+        "pos": "n.",
+        "meaning": "钢笔；笔",
+        "synset": "oewn-03913116-n",
+        "definition": "a writing implement with a point from which ink flows",
+        "sha256": "0dddb34c3d3e4f4b3383df60c5a6d17c8697b7aaee014bd1e2b023a4e9c4b996"
+      }
+    ],
+    "pencil": [
+      {
+        "pos": "n.",
+        "meaning": "铅笔",
+        "synset": "oewn-03914323-n",
+        "definition": "a thin cylindrical pointed writing implement; a rod of marking substance encased in wood",
+        "sha256": "80a78ee82b30f23d957c0eda4abc8f28f18bf0fe06a81956234dfa19b08cc634"
+      }
+    ],
+    "bag": [
+      {
+        "pos": "n.",
+        "meaning": "包；袋子",
+        "synset": "oewn-02776042-n",
+        "definition": "a flexible container with a single opening",
+        "sha256": "77891eaff9ef405da1f516539a078682e1687b4f719a2245001da84a9cd69e2d"
+      }
+    ],
+    "desk": [
+      {
+        "pos": "n.",
+        "meaning": "书桌",
+        "synset": "oewn-03184367-n",
+        "definition": "a piece of furniture with a writing surface and usually drawers or other compartments",
+        "sha256": "e82760afcdad3c01dd4a6223293649b1b9673b5420ced546522905278f76cac6"
+      }
+    ],
+    "chair": [
+      {
+        "pos": "n.",
+        "meaning": "椅子",
+        "synset": "oewn-03005231-n",
+        "definition": "a seat for one person, with a support for the back",
+        "sha256": "f8091a7ec147d39ebf384dc75f3a31a704f7e3f09e006c7114fd4bae1b7b0ee2"
+      },
+      {
+        "pos": "v.",
+        "meaning": "主持（会议等）",
+        "synset": "oewn-00815452-v",
+        "definition": "preside over",
+        "sha256": "36098578226ebec4d79f70830f1dae4286e6649e03e0d6b95fd9c30ee2405b5b"
+      }
+    ],
+    "apple": [
+      {
+        "pos": "n.",
+        "meaning": "苹果",
+        "synset": "oewn-07755101-n",
+        "definition": "fruit with red or yellow or green skin and sweet to tart crisp whitish flesh",
+        "sha256": "20f43b5ecbeb6593fd11e99282795d47147a1c47c7e42bd8f91e75dffffc81f9"
+      }
+    ],
+    "banana": [
+      {
+        "pos": "n.",
+        "meaning": "香蕉",
+        "synset": "oewn-07769568-n",
+        "definition": "elongated crescent-shaped yellow fruit with soft sweet flesh",
+        "sha256": "6ba36118f55b60883b21fa615e81cecd410ce82d0a16eeb2a2ee612b0aed34d9"
+      }
+    ],
+    "milk": [
+      {
+        "pos": "n.",
+        "meaning": "牛奶；乳汁",
+        "synset": "oewn-07860018-n",
+        "definition": "a white nutritious liquid secreted by mammals and used as food by human beings",
+        "sha256": "5bb8052e4aa053940debbbec208a927ad9015dab63d2d9d002ec1e0064e7840b"
+      },
+      {
+        "pos": "v.",
+        "meaning": "挤奶",
+        "synset": "oewn-00194514-v",
+        "definition": "take milk from female mammals",
+        "sha256": "3468e088c0885ec768db5d47254d4153b6ecaf83b36b575a0f25ca39bd183f75"
+      }
+    ],
+    "water": [
+      {
+        "pos": "n.",
+        "meaning": "水",
+        "synset": "oewn-14869913-n",
+        "definition": "binary compound that occurs at room temperature as a clear colorless odorless tasteless liquid; freezes into ice below 0 degrees centigrade and boils above 100 degrees centigrade; widely used as a solvent",
+        "sha256": "ae99004dd9f3c18f69a53f6259132e802d2d7941bfc25f19c94ab4db61b63da7"
+      },
+      {
+        "pos": "v.",
+        "meaning": "给……浇水",
+        "synset": "oewn-00228662-v",
+        "definition": "supply with water, as with channels or ditches or streams",
+        "sha256": "d7474e7fb01c72b1304a4372c691a5124b79908ddf5cbfbea11f3c5e92c134d3"
+      }
+    ],
+    "rice": [
+      {
+        "pos": "n.",
+        "meaning": "稻米；米饭",
+        "synset": "oewn-07820299-n",
+        "definition": "grains used as food either unpolished or more often polished",
+        "sha256": "893593683f737b59f87a79fc30e50bb9b8464152b2e867b23b0382529797ff5d"
+      }
+    ],
+    "egg": [
+      {
+        "pos": "n.",
+        "meaning": "蛋；鸡蛋",
+        "synset": "oewn-07856780-n",
+        "definition": "oval reproductive body of a fowl (especially a hen) used as food",
+        "sha256": "ae934409f127c8bdf61ea251598cde1b4e9aeb1989b396c865f2b7191ec778f4"
+      }
+    ],
+    "mother": [
+      {
+        "pos": "n.",
+        "meaning": "母亲；妈妈",
+        "synset": "oewn-10352098-n",
+        "definition": "a woman who has given birth to a child (also used as a term of address to your mother)",
+        "sha256": "c27c804c316e7869f9ea52e9d03c349d7b4105b07706673576f8568c3fbd6c57"
+      }
+    ],
+    "father": [
+      {
+        "pos": "n.",
+        "meaning": "父亲；爸爸",
+        "synset": "oewn-10100638-n",
+        "definition": "a male parent (also used as a term of address to your father)",
+        "sha256": "ecfd3e235ba4b4bf0fa18a9fe958a8ac1741f1af7d4259a0c452ad7f82193b27"
+      }
+    ],
+    "sister": [
+      {
+        "pos": "n.",
+        "meaning": "姐妹",
+        "synset": "oewn-10622393-n",
+        "definition": "a female person who has the same parents as another person",
+        "sha256": "18be305bf20a73b738f601dbf9b8dd827ac61718504d66ce03a649e440e66de6"
+      }
+    ],
+    "brother": [
+      {
+        "pos": "n.",
+        "meaning": "兄弟",
+        "synset": "oewn-09895920-n",
+        "definition": "a male with the same parents as someone else",
+        "sha256": "356f05159c71a7ad1553907379e2a709b6489f46b0ffd1e201d8eb168cf357d1"
+      }
+    ],
+    "friend": [
+      {
+        "pos": "n.",
+        "meaning": "朋友",
+        "synset": "oewn-10132360-n",
+        "definition": "a person you know well and regard with affection and trust",
+        "sha256": "9b01f223f415ef602049a4378cd4d1418a346f2e5aa9f28e664f933d735939e5"
+      }
+    ],
+    "family": [
+      {
+        "pos": "n.",
+        "meaning": "家庭；家人",
+        "synset": "oewn-07986853-n",
+        "definition": "primary social group; parents and children",
+        "sha256": "3ddacef3d3bbffde0b33942b032e9b92080ec44206e129f5c906d625433395e3"
+      }
+    ],
+    "star": [
+      {
+        "pos": "n.",
+        "meaning": "星；恒星",
+        "synset": "oewn-09467004-n",
+        "definition": "(astronomy) a celestial body of hot gases that radiates energy derived from thermonuclear reactions in the interior",
+        "sha256": "26885c19c1e038ca4c5a560a50f45f59762c9c037d93ddc54dd2d9d73b256c84"
+      },
+      {
+        "pos": "n.",
+        "meaning": "明星；主演",
+        "synset": "oewn-10668135-n",
+        "definition": "an actor who plays a principal role",
+        "sha256": "cc7a3ca73cd8acb5b191cbdef59385a242fb6b28296bb67d6eb17d8834d65c28"
+      },
+      {
+        "pos": "v.",
+        "meaning": "主演",
+        "synset": "oewn-01724857-v",
+        "definition": "be the star in a performance",
+        "sha256": "c176af4dc3017d4c28b76fdee8c579578b11a256578114794eaff568d145ee97"
+      }
+    ],
+    "tree": [
+      {
+        "pos": "n.",
+        "meaning": "树",
+        "synset": "oewn-13124818-n",
+        "definition": "a tall perennial woody plant having a main trunk and branches forming a distinct elevated crown; includes both gymnosperms and angiosperms",
+        "sha256": "a64416a7d01c438ef8f17eb080e0aec3ba10e8e8da4fae2bc3fdf9cda9a614dd"
+      }
+    ],
+    "flower": [
+      {
+        "pos": "n.",
+        "meaning": "花",
+        "synset": "oewn-11689786-n",
+        "definition": "reproductive organ of angiosperm plants especially one having showy or colorful parts",
+        "sha256": "356dc344daed83f0fdc2f2ec7f9a44a1009c74ae8b6bcb3ca7ba751098714ca4"
+      },
+      {
+        "pos": "v.",
+        "meaning": "开花",
+        "synset": "oewn-00295007-v",
+        "definition": "produce or yield flowers",
+        "sha256": "bab1ac6b1f67210dac81ea36ab9b856e2e70ecd466aa14a48ef2fa664aaff968"
+      }
+    ],
+    "rain": [
+      {
+        "pos": "n.",
+        "meaning": "雨",
+        "synset": "oewn-11521799-n",
+        "definition": "water falling in drops from vapor condensed in the atmosphere",
+        "sha256": "e413218e71ce6eb12a51bc73c7e32229afd3c4d07c7744ab4b3124728bbe5d54"
+      },
+      {
+        "pos": "v.",
+        "meaning": "下雨",
+        "synset": "oewn-02762516-v",
+        "definition": "precipitate as rain",
+        "sha256": "6277f2bc4f2a118171449602f6a7619057eaa14c0ee576b5c707bc4f9f151adc"
+      }
+    ],
+    "read": [
+      {
+        "pos": "v.",
+        "meaning": "读；阅读",
+        "synset": "oewn-00626756-v",
+        "definition": "interpret something that is written or printed",
+        "sha256": "0a928f0c075b3fa16249c170ad55a68c73775e712a3e8f2ef605ec20a38b6bf5"
+      },
+      {
+        "pos": "v.",
+        "meaning": "朗读",
+        "synset": "oewn-00628065-v",
+        "definition": "look at, interpret, and say out loud something that is written or printed",
+        "sha256": "37c6f0d964cef7494789c4dc9893714cee65683b4399a2e6faeda939c32dbfc8"
+      }
+    ],
+    "write": [
+      {
+        "pos": "v.",
+        "meaning": "写；书写",
+        "synset": "oewn-01694952-v",
+        "definition": "mark or trace words or symbols on a surface",
+        "sha256": "e719ea9d710c0380d7dd5bec250aa1f1e2ff8bd088c9beafc21d998af2f6267d"
+      },
+      {
+        "pos": "v.",
+        "meaning": "写作",
+        "synset": "oewn-01702148-v",
+        "definition": "produce a literary work",
+        "sha256": "d6c1a02c3c1d3602e56276d3440f384944d38126bc36a9862aff30b7cd5f9cc6"
+      }
+    ],
+    "listen": [
+      {
+        "pos": "v.",
+        "meaning": "听",
+        "synset": "oewn-02174335-v",
+        "definition": "hear with intention",
+        "sha256": "c17d9f72b8cfd325d3c5faf0188f6f3f989efb3242d05932b7df2279ea06f423"
+      },
+      {
+        "pos": "v.",
+        "meaning": "听从；留意",
+        "synset": "oewn-02577816-v",
+        "definition": "pay close attention to; give heed to",
+        "sha256": "f6cf4ed4f959ebe05386526589671c2686c8e95d2fc314aa8e7a5c932bdbd83e"
+      }
+    ],
+    "look": [
+      {
+        "pos": "v.",
+        "meaning": "看",
+        "synset": "oewn-02134989-v",
+        "definition": "perceive with attention; direct one's gaze towards; look",
+        "sha256": "dc6cd031f07c1bb21eb749e7c9bafd15f5fd8e10320f90f055d0de4e2cbe996c"
+      },
+      {
+        "pos": "v.",
+        "meaning": "看起来；显得",
+        "synset": "oewn-02137900-v",
+        "definition": "give a certain impression of being something or having a certain aspect",
+        "sha256": "5f196a68ba532f7d86146cc4f2e733545cb1eebbbaaecdc5e50c35cc88e9cff9"
+      },
+      {
+        "pos": "n.",
+        "meaning": "看；瞥",
+        "synset": "oewn-00878805-n",
+        "definition": "the act of directing the eyes toward something and perceiving it visually; look",
+        "sha256": "35d8730aea516c79a23463135557740bf46524eaddf0694f30f7bc0a71b2bcbf"
+      }
+    ],
+    "run": [
+      {
+        "pos": "v.",
+        "meaning": "跑",
+        "synset": "oewn-01930264-v",
+        "definition": "move fast by using one's feet, with one foot off the ground at any given time",
+        "sha256": "0926bcd9e5febab06674bd84c41e016e4b16157b281325c0be45af3c10dc7ca1"
+      },
+      {
+        "pos": "v.",
+        "meaning": "管理；经营",
+        "synset": "oewn-02448714-v",
+        "definition": "direct or control; projects, businesses, etc.",
+        "sha256": "b27df87b806769df2b204bd74d9ef51f4ae2ca6799498aaca8954025f9a1b72b"
+      },
+      {
+        "pos": "v.",
+        "meaning": "流动",
+        "synset": "oewn-02070867-v",
+        "definition": "move along, of liquids",
+        "sha256": "4b092cb33cb569216ca10626fd8276d20c18a265c0a1e6f7d68b0cda77b821fa"
+      },
+      {
+        "pos": "n.",
+        "meaning": "跑步",
+        "synset": "oewn-00294760-n",
+        "definition": "the act of running; traveling on foot at a fast pace",
+        "sha256": "0163ad5f129036a16c84c97d0c30a8d77f65e421135ef7a7e71dd8dd060c4d5b"
+      }
+    ],
+    "jump": [
+      {
+        "pos": "v.",
+        "meaning": "跳；跳跃",
+        "synset": "oewn-01967949-v",
+        "definition": "move forward by leaps and bounds",
+        "sha256": "f3b62f574349b95fbdbecc2407ce9f0311dd4b80680a5f1c456e3949e3960c64"
+      },
+      {
+        "pos": "n.",
+        "meaning": "跳跃",
+        "synset": "oewn-00120388-n",
+        "definition": "the act of jumping; propelling yourself off the ground",
+        "sha256": "6495561c110903f0bb9faba070e007e216f8c5327e9d2a8c17b361de04559feb"
+      }
+    ],
+    "happy": [
+      {
+        "pos": "adj.",
+        "meaning": "快乐的；高兴的",
+        "synset": "oewn-01151786-a",
+        "definition": "enjoying or showing or marked by joy or pleasure",
+        "sha256": "ba52a7685b42ded2db13ec57159c5306e6c96dcd73e9c4c04a792988f59a9ee1"
+      }
+    ],
+    "small": [
+      {
+        "pos": "adj.",
+        "meaning": "小的；少的",
+        "synset": "oewn-01394303-a",
+        "definition": "limited or below average in number or quantity or magnitude or extent",
+        "sha256": "d7fffac6afbcf133927d094136f00f40d490516f2e762893cd086055a7dec50a"
+      }
+    ],
+    "hello": [
+      {
+        "pos": "interj.",
+        "meaning": "你好；喂（问候）",
+        "url": "https://www.collinsdictionary.com/dictionary/english/hello",
+        "checkedAt": "2026-10-22"
+      }
+    ],
+    "goodbye": [
+      {
+        "pos": "interj.",
+        "meaning": "再见",
+        "url": "https://www.collinsdictionary.com/dictionary/english/goodbye",
+        "checkedAt": "2026-10-22"
+      }
+    ],
+    "I": [
+      {
+        "pos": "pron.",
+        "meaning": "我",
+        "url": "https://www.collinsdictionary.com/dictionary/english/i",
+        "checkedAt": "2026-10-22"
+      }
+    ],
+    "you": [
+      {
+        "pos": "pron.",
+        "meaning": "你；你们",
+        "url": "https://www.collinsdictionary.com/dictionary/english/you",
+        "checkedAt": "2026-10-22"
+      }
+    ],
+    "we": [
+      {
+        "pos": "pron.",
+        "meaning": "我们",
+        "url": "https://www.collinsdictionary.com/dictionary/english/we",
+        "checkedAt": "2026-10-22"
+      }
+    ],
+    "my": [
+      {
+        "pos": "det.",
+        "meaning": "我的",
+        "url": "https://www.collinsdictionary.com/dictionary/english/my",
+        "checkedAt": "2026-10-22"
+      }
+    ],
+    "sun": [
+      {
+        "pos": "n.",
+        "meaning": "太阳；阳光",
+        "url": "https://www.collinsdictionary.com/dictionary/english/sun",
+        "checkedAt": "2026-10-22"
+      }
+    ],
+    "moon": [
+      {
+        "pos": "n.",
+        "meaning": "月亮",
+        "url": "https://www.collinsdictionary.com/dictionary/english/moon",
+        "checkedAt": "2026-10-22"
+      }
+    ],
+    "one": [
+      {
+        "pos": "num.",
+        "meaning": "一",
+        "synset": "oewn-13764713-n",
+        "definition": "the smallest whole number or a numeral representing this number",
+        "note": "OEWN 按名词记录数字；学习页归类为基数词 num.，没有将所有词典 n. 自动改成数词。"
+      }
+    ],
+    "two": [
+      {
+        "pos": "num.",
+        "meaning": "二",
+        "synset": "oewn-13765409-n",
+        "definition": "the cardinal number that is the sum of one and one or a numeral representing this number",
+        "note": "OEWN 按名词记录数字；学习页归类为基数词 num.，没有将所有词典 n. 自动改成数词。"
+      }
+    ],
+    "three": [
+      {
+        "pos": "num.",
+        "meaning": "三",
+        "synset": "oewn-13766184-n",
+        "definition": "the cardinal number that is the sum of one and one and one",
+        "note": "OEWN 按名词记录数字；学习页归类为基数词 num.，没有将所有词典 n. 自动改成数词。"
+      }
+    ],
+    "four": [
+      {
+        "pos": "num.",
+        "meaning": "四",
+        "synset": "oewn-13766444-n",
+        "definition": "the cardinal number that is the sum of three and one",
+        "note": "OEWN 按名词记录数字；学习页归类为基数词 num.，没有将所有词典 n. 自动改成数词。"
+      }
+    ],
+    "five": [
+      {
+        "pos": "num.",
+        "meaning": "五",
+        "synset": "oewn-13766661-n",
+        "definition": "the cardinal number that is the sum of four and one",
+        "note": "OEWN 按名词记录数字；学习页归类为基数词 num.，没有将所有词典 n. 自动改成数词。"
+      }
+    ],
+    "six": [
+      {
+        "pos": "num.",
+        "meaning": "六",
+        "synset": "oewn-13766862-n",
+        "definition": "the cardinal number that is the sum of five and one",
+        "note": "OEWN 按名词记录数字；学习页归类为基数词 num.，没有将所有词典 n. 自动改成数词。"
+      }
+    ],
+    "seven": [
+      {
+        "pos": "num.",
+        "meaning": "七",
+        "synset": "oewn-13767056-n",
+        "definition": "the cardinal number that is the sum of six and one",
+        "note": "OEWN 按名词记录数字；学习页归类为基数词 num.，没有将所有词典 n. 自动改成数词。"
+      }
+    ],
+    "eight": [
+      {
+        "pos": "num.",
+        "meaning": "八",
+        "synset": "oewn-13767226-n",
+        "definition": "the cardinal number that is the sum of seven and one",
+        "note": "OEWN 按名词记录数字；学习页归类为基数词 num.，没有将所有词典 n. 自动改成数词。"
+      }
+    ],
+    "nine": [
+      {
+        "pos": "num.",
+        "meaning": "九",
+        "synset": "oewn-13767410-n",
+        "definition": "the cardinal number that is the sum of eight and one",
+        "note": "OEWN 按名词记录数字；学习页归类为基数词 num.，没有将所有词典 n. 自动改成数词。"
+      }
+    ],
+    "ten": [
+      {
+        "pos": "num.",
+        "meaning": "十",
+        "synset": "oewn-13768652-n",
+        "definition": "the cardinal number that is the sum of nine and one; the base of the decimal system",
+        "note": "OEWN 按名词记录数字；学习页归类为基数词 num.，没有将所有词典 n. 自动改成数词。"
+      }
+    ]
+  }
+}

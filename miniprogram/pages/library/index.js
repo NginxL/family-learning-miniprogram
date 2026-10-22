@@ -176,7 +176,7 @@ const definition = {
                     learnedLabel: ((_a = this.learningIndex) === null || _a === void 0 ? void 0 : _a.has(item.id)) ? (this.learningIndex.get(item.id).mastered ? '已掌握' : '已学过') : '',
                     lastLearned: ((_c = (_b = this.learningIndex) === null || _b === void 0 ? void 0 : _b.get(item.id)) === null || _c === void 0 ? void 0 : _c.lastLearned) || '', learnedCount: ((_e = (_d = this.learningIndex) === null || _d === void 0 ? void 0 : _d.get(item.id)) === null || _e === void 0 ? void 0 : _e.learnedCount) || 0,
                     gradeLabel: (0, content_presentation_1.learningGradeLabel)(item),
-                    preview: item.kind === 'poetry' ? (0, page_1.decorate)(item).poetryByline : item.detail.split('\n')[1] || '' });
+                    preview: item.kind === 'poetry' ? (0, page_1.decorate)(item).poetryByline : item.kind === 'word' ? (0, page_1.decorate)(item).wordBrief : item.detail.split('\n')[1] || '' });
             }) });
     },
     changeView(event) { this.setData({ view: event.currentTarget.dataset.id }); },

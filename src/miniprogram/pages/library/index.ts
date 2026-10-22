@@ -145,7 +145,7 @@ const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = 
         learnedLabel: this.learningIndex?.has(item.id) ? (this.learningIndex.get(item.id)!.mastered ? '已掌握' : '已学过') : '',
         lastLearned: this.learningIndex?.get(item.id)?.lastLearned || '', learnedCount: this.learningIndex?.get(item.id)?.learnedCount || 0,
         gradeLabel: learningGradeLabel(item),
-        preview: item.kind === 'poetry' ? decorate(item).poetryByline : item.detail.split('\n')[1] || '' })) });
+        preview: item.kind === 'poetry' ? decorate(item).poetryByline : item.kind === 'word' ? decorate(item).wordBrief : item.detail.split('\n')[1] || '' })) });
   },
   changeView(event) { this.setData({ view: event.currentTarget.dataset.id }); },
   changeCurriculumGrade(event) {

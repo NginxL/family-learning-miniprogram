@@ -1,0 +1,285 @@
+{
+  "checkedAt": "2026-10-22",
+  "policy": "仅列已核词典的主要学习读法；不是该词全部专业义或地域变体。",
+  "entries": {
+    "word-read": {
+      "source": {
+        "title": "Collins · read 读音辨析",
+        "url": "https://www.collinsdictionary.com/dictionary/english/read"
+      },
+      "pronunciations": [
+        {
+          "headword": "read",
+          "accent": "UK",
+          "ipa": "riːd",
+          "usage": "v. 原形／现在时"
+        },
+        {
+          "headword": "read",
+          "accent": "UK",
+          "ipa": "rɛd",
+          "usage": "v. 过去式／过去分词"
+        }
+      ]
+    },
+    "word-live": {
+      "source": {
+        "title": "Collins · live 读音辨析",
+        "url": "https://www.collinsdictionary.com/dictionary/english/live"
+      },
+      "pronunciations": [
+        {
+          "headword": "live",
+          "accent": "UK",
+          "ipa": "lɪv",
+          "usage": "v. 居住；生活"
+        },
+        {
+          "headword": "live",
+          "accent": "UK",
+          "ipa": "laɪv",
+          "usage": "adj./adv. 活的；现场直播（的）"
+        }
+      ]
+    },
+    "word-close": {
+      "source": {
+        "title": "Collins · close 读音辨析",
+        "url": "https://www.collinsdictionary.com/dictionary/english/close"
+      },
+      "pronunciations": [
+        {
+          "headword": "close",
+          "accent": "UK",
+          "ipa": "kləʊs",
+          "usage": "adj./adv. 接近；亲近"
+        },
+        {
+          "headword": "close",
+          "accent": "UK",
+          "ipa": "kləʊz",
+          "usage": "v. 关闭"
+        }
+      ]
+    },
+    "word-wind": {
+      "source": {
+        "title": "Collins · wind 读音辨析",
+        "url": "https://www.collinsdictionary.com/dictionary/english/wind"
+      },
+      "pronunciations": [
+        {
+          "headword": "wind",
+          "accent": "UK",
+          "ipa": "wɪnd",
+          "usage": "n. 风"
+        },
+        {
+          "headword": "wind",
+          "accent": "UK",
+          "ipa": "waɪnd",
+          "usage": "v. 缠绕；蜿蜒"
+        }
+      ]
+    },
+    "word-lead": {
+      "source": {
+        "title": "Collins · lead 读音辨析",
+        "url": "https://www.collinsdictionary.com/dictionary/english/lead"
+      },
+      "pronunciations": [
+        {
+          "headword": "lead",
+          "accent": "UK",
+          "ipa": "liːd",
+          "usage": "v. 引领；n. 领先"
+        },
+        {
+          "headword": "lead",
+          "accent": "UK",
+          "ipa": "lɛd",
+          "usage": "n. 铅"
+        }
+      ]
+    },
+    "word-record": {
+      "source": {
+        "title": "Collins · record 读音辨析",
+        "url": "https://www.collinsdictionary.com/dictionary/english/record"
+      },
+      "pronunciations": [
+        {
+          "headword": "record",
+          "accent": "UK",
+          "ipa": "ˈrɛkɔːd",
+          "usage": "n. 记录；唱片"
+        },
+        {
+          "headword": "record",
+          "accent": "UK",
+          "ipa": "rɪˈkɔːd",
+          "usage": "v. 记录；录制"
+        }
+      ]
+    },
+    "word-schoolbag": {
+      "source": {
+        "title": "Collins · schoolbag",
+        "url": "https://www.collinsdictionary.com/dictionary/english/schoolbag"
+      },
+      "pronunciations": [
+        {
+          "headword": "schoolbag",
+          "accent": "UK",
+          "ipa": "ˈskuːlˌbæɡ"
+        }
+      ]
+    },
+    "sh54-word-seahorse": {
+      "source": {
+        "title": "Collins · seahorse",
+        "url": "https://www.collinsdictionary.com/dictionary/english/seahorse"
+      },
+      "pronunciations": [
+        {
+          "headword": "seahorse",
+          "accent": "UK",
+          "ipa": "ˈsiːhɔːs"
+        }
+      ]
+    },
+    "sh54-word-clownfish": {
+      "source": {
+        "title": "Collins · clownfish",
+        "url": "https://www.collinsdictionary.com/dictionary/english/clownfish"
+      },
+      "pronunciations": [
+        {
+          "headword": "clownfish",
+          "accent": "UK",
+          "ipa": "ˈklaʊnˌfɪʃ"
+        }
+      ]
+    },
+    "sh54-word-noticeboard": {
+      "source": {
+        "title": "Collins · noticeboard",
+        "url": "https://www.collinsdictionary.com/dictionary/english/noticeboard"
+      },
+      "pronunciations": [
+        {
+          "headword": "noticeboard",
+          "accent": "UK",
+          "ipa": "ˈnəʊtɪsbɔːd"
+        }
+      ]
+    },
+    "sh54-word-heatwave": {
+      "source": {
+        "title": "Collins · heatwave",
+        "url": "https://www.collinsdictionary.com/dictionary/english/heatwave"
+      },
+      "pronunciations": [
+        {
+          "headword": "heatwave",
+          "accent": "UK",
+          "ipa": "ˈhiːtˌweɪv"
+        }
+      ]
+    },
+    "sh54-word-handprint": {
+      "source": {
+        "title": "Collins · handprint",
+        "url": "https://www.collinsdictionary.com/dictionary/english/handprint"
+      },
+      "pronunciations": [
+        {
+          "headword": "handprint",
+          "accent": "UK",
+          "ipa": "ˈhændˌprɪnt"
+        }
+      ]
+    },
+    "sh54-word-fishnet": {
+      "source": {
+        "title": "Collins · fishnet",
+        "url": "https://www.collinsdictionary.com/dictionary/english/fishnet"
+      },
+      "pronunciations": [
+        {
+          "headword": "fishnet",
+          "accent": "UK",
+          "ipa": "ˈfɪʃˌnɛt"
+        }
+      ]
+    },
+    "sh54-word-upturned": {
+      "source": {
+        "title": "Collins · upturned",
+        "url": "https://www.collinsdictionary.com/dictionary/english/upturned"
+      },
+      "pronunciations": [
+        {
+          "headword": "upturned",
+          "accent": "UK",
+          "ipa": "ʌpˈtɜːnd"
+        }
+      ]
+    },
+    "sh54-word-analyse": {
+      "source": {
+        "title": "Collins · analyse",
+        "url": "https://www.collinsdictionary.com/dictionary/english/analyse"
+      },
+      "pronunciations": [
+        {
+          "headword": "analyse",
+          "accent": "UK",
+          "ipa": "ˈænəˌlaɪz"
+        }
+      ]
+    },
+    "sh54-word-pinecone": {
+      "pronunciations": [
+        {
+          "headword": "pinecone",
+          "accent": "US",
+          "ipa": "ˈpɑɪnˌkoʊn"
+        }
+      ],
+      "source": {
+        "title": "Cambridge Dictionary · pinecone",
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/pinecone"
+      },
+      "evidence": "2026-10-22 核对具名词典词头音标；未标地区时不推定为英式或美式。"
+    },
+    "sh54-word-unluckily": {
+      "pronunciations": [
+        {
+          "headword": "unluckily",
+          "accent": "IPA",
+          "ipa": "ʌnˈlʌkɪli"
+        }
+      ],
+      "source": {
+        "title": "Oxford Learner’s Dictionaries · unluckily",
+        "url": "https://www.oxfordlearnersdictionaries.com/definition/english/unluckily"
+      },
+      "evidence": "2026-10-22 核对具名词典词头音标；未标地区时不推定为英式或美式。"
+    },
+    "sh54-word-digitalisation": {
+      "pronunciations": [
+        {
+          "headword": "digitalisation",
+          "accent": "UK",
+          "ipa": "ˌdɪdʒ.ɪ.təl.aɪˈzeɪ.ʃən"
+        }
+      ],
+      "source": {
+        "title": "Cambridge Dictionary · digitalization（英式通常写作 digitalisation）",
+        "url": "https://dictionary.cambridge.org/dictionary/english/digitalization?q=digitalisation"
+      },
+      "evidence": "2026-10-22 核对具名词典词头音标；未标地区时不推定为英式或美式。"
+    }
+  }
+}

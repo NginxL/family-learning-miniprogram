@@ -1,0 +1,1400 @@
+{
+  "checkedAt": "2026-10-22",
+  "source": {
+    "title": "ECDICT · 基础词词性参考",
+    "url": "https://github.com/skywind3000/ECDICT/tree/bc015ed2e24a7abef49fc6dbbb7fe32c1dadaf8b"
+  },
+  "entries": {
+    "afternoon": {
+      "sourceWord": "afternoon",
+      "translation": "n. 午后, 下午",
+      "sha256": "044bacb634cca76a91a7c62d1af87149d01e2d0fe590bbab7bca9fb330be9423"
+    },
+    "age": {
+      "sourceWord": "age",
+      "translation": "n. 年龄, 老年, 成年, 寿命, 时代, 时期\\nv. 变老, 成熟",
+      "sha256": "26dbb94b42771f4b6be279a01a8be2504ce158bce69e5a35d11fed89bd7e639e"
+    },
+    "air": {
+      "sourceWord": "air",
+      "translation": "n. 空气, 旋律, 态度\\nvt. 晾, 使通风, 夸耀",
+      "sha256": "81a7823baf8c31c21210aefeb420fce89da86c11cb76c276c75c1b83340d2275"
+    },
+    "basketball": {
+      "sourceWord": "basketball",
+      "translation": "n. 篮球",
+      "sha256": "dfefb304513d30b2a83408159892abf43f3d64ac641abe98ccfcde2b24ca307f"
+    },
+    "blackboard": {
+      "sourceWord": "blackboard",
+      "translation": "n. 黑板",
+      "sha256": "19df55e43bb75c2a4b9335c12003fc0d75e3bf8b65aabf3b699c41ed32ab894a"
+    },
+    "candle": {
+      "sourceWord": "candle",
+      "translation": "n. 蜡烛\\nvt. 对着光检查",
+      "sha256": "2aa7e123a508e865db3fe4f52392872ea8409680d32eb40ead1b14d0a3c5fb0d"
+    },
+    "candy": {
+      "sourceWord": "candy",
+      "translation": "n. 糖果, 冰糖\\nvt. 用糖煮, 使结晶为砂糖\\nvi. 结晶为砂糖",
+      "sha256": "6976a2e037a2cfd3838ba49764b7243a9983fe28a34b283404dbc63551bb810f"
+    },
+    "cap": {
+      "sourceWord": "cap",
+      "translation": "n. 盖子, 帽子\\nvt. 戴帽子, 覆盖, 胜过\\nvi. 脱帽致意\\n[计] 调用程序分析, 容量, 代码分析程序, 计算机辅助生产, 计算机辅助印刷",
+      "sha256": "40f9a9be00986dde72b70c359fd5e6f95bc2af5261db8e9e4bb1df0cebc65b6e"
+    },
+    "chicken": {
+      "sourceWord": "chicken",
+      "translation": "n. 小鸡, 鸡肉",
+      "sha256": "708643a21d6072b94417c03994a966e0802411134efa7d277feb4176c091f39b"
+    },
+    "dinner": {
+      "sourceWord": "dinner",
+      "translation": "n. 晚餐, 正餐, 宴会",
+      "sha256": "f6a905d12fee7832a2db195fe53919655e9ac7290c08c5ea901541e3ddde286f"
+    },
+    "earth": {
+      "sourceWord": "earth",
+      "translation": "n. 地球, 泥土, 世界, 尘世\\nvt. 埋入土中, 赶入洞内\\nvi. 躲入洞内",
+      "sha256": "a8f4e8b4865433bf58c25ff9b1ca90eb86f0de6d79979368aab10b516462d4f2"
+    },
+    "fire": {
+      "sourceWord": "fire",
+      "translation": "n. 火, 炉火, 电炉, 火灾, 闪光体, 炮火, 热情\\nvt. 点燃, 烧制, 使发光, 激动, 放枪, 解雇\\nvi. 着火, 烧火, 开枪, 射击, 激动",
+      "sha256": "1a19c8caa9530f95e6ea745a859cbc04b8cb357d982ef4eb5151c5212ccae0f1"
+    },
+    "floor": {
+      "sourceWord": "floor",
+      "translation": "n. 地板, 楼层, 底部, 底价\\nvt. 铺地板, 打倒\\nn. 地面, 地板, 基底\\n[计] 基底",
+      "sha256": "9a19fcc33032fcd9945e3f7df00b2a1c0fb6d8e6decf219e870a5e480dc52fae"
+    },
+    "football": {
+      "sourceWord": "football",
+      "translation": "n. 足球, 橄榄球",
+      "sha256": "2c4bc94c905ef912f97ecedb4dfe7ac64ddc67439bcc8225cd5b9f70e68323e4"
+    },
+    "glue": {
+      "sourceWord": "glue",
+      "translation": "n. 胶, 粘性物\\nvt. 粘合, 胶合",
+      "sha256": "07fc42c3b6d4e256ea1e88a20c9c619d761585dd07110ab77d2246520e3e1590"
+    },
+    "grass": {
+      "sourceWord": "grass",
+      "translation": "n. 草, 草原, 牧场\\n[医] 草, 禾本",
+      "sha256": "d3294b731219218561ca00b0a7d0d8def14d54281edc5dd1783f2722aaaca020"
+    },
+    "hill": {
+      "sourceWord": "hill",
+      "translation": "n. 小山, 丘陵, 小土堆\\nvt. 作成土堆, 堆成小丘",
+      "sha256": "4f57572fa02d779daf0a070237365ac19ac6ba01633cabb218397bdec863d408"
+    },
+    "kid": {
+      "sourceWord": "kid",
+      "translation": "n. 小山羊, 小山羊肉, 小孩, 欺骗\\na. 小山羊皮制的\\nv. 哄骗, 嘲弄",
+      "sha256": "75c93e70f9145666d8f3ab19c6d7e89ae005b101acf6c636f0b0d9ce94c0469b"
+    },
+    "kite": {
+      "sourceWord": "kite",
+      "translation": "n. 风筝, 筝帆, 空头支票, 骗子\\nvi. 象风筝一样飞, 轻快地移动, 使用空头支票\\nvt. 使上升, 骗钱",
+      "sha256": "7274ede2eb512405356706898c175828fc3f01b1304df30dfb6afdc672f906ad"
+    },
+    "lot": {
+      "sourceWord": "lot",
+      "translation": "n. 运气, 签, 抽签, 份额, 许多, 一堆\\nvt. 划分\\nvi. 抽签, 抓阄",
+      "sha256": "d5ae7c273853ef30687de8d211023cb5642641ec9454cd6c4ad175dc927bfcc0"
+    },
+    "lunch": {
+      "sourceWord": "lunch",
+      "translation": "n. 午餐",
+      "sha256": "3e8bc1672076a37752560027f5d0ca7a6dcf8323b89de0fe57b07f3ed9a159bf"
+    },
+    "meat": {
+      "sourceWord": "meat",
+      "translation": "n. 肉, 餐, 食物\\n[经] 肉类",
+      "sha256": "ef368c40e73d2f73de813c7d23ff35befaf12fde7fda23c601511070f72b7049"
+    },
+    "morning": {
+      "sourceWord": "morning",
+      "translation": "n. 早晨, 早上, 初期",
+      "sha256": "1d819d0e4f4a746c3013eb057a5fa9ed9606af04005dfa77adcbd689a430a9f4"
+    },
+    "music": {
+      "sourceWord": "music",
+      "translation": "n. 音乐, 乐曲",
+      "sha256": "98273e7790950647cfa990100ee7b9406a5e489226b814ffea4ceffe0c9944ef"
+    },
+    "pair": {
+      "sourceWord": "pair",
+      "translation": "n. 一双, 一对, 一副\\nv. (使)成对",
+      "sha256": "907c7db3aba7f6558ce9084cc911d5ca1c3444e5a5dd01168fcf3698bf9ab318"
+    },
+    "pet": {
+      "sourceWord": "pet",
+      "translation": "n. 宠物, 受宠爱的人, 宠坏的孩子, 不悦, 生气\\na. 宠爱的, 表示亲昵的, 养着观赏的, 特别珍爱的, 格外的\\nvt. 宠爱, 溺爱, 抚摸\\nvi. 拥抱, 爱抚, 生气, 发脾气",
+      "sha256": "e5fcb8f9c1d155d82c1f6bb72a3fac633da71ab0d9b8f6047838b925f63ae6de"
+    },
+    "piano": {
+      "sourceWord": "piano",
+      "translation": "n. 钢琴",
+      "sha256": "989761721dc843741daf5a28940efb7adba208332c4932382f563ea913affbe0"
+    },
+    "plane": {
+      "sourceWord": "plane",
+      "translation": "n. 平面, 扁平物, 机翼, 飞机, 水准, 地位\\na. 平的, 平面的\\nvt. 将...刨平, 刨平, 掠过水面\\nvi. 翱翔, 乘飞机旅行, 刨掉",
+      "sha256": "a1d73298e86d484d6d2ecff083bf1d2492d9d200d3f3172ff2b3c9e13818a364"
+    },
+    "playground": {
+      "sourceWord": "playground",
+      "translation": "n. 运动场, 操场, 度假胜地, 活动场所",
+      "sha256": "fbc6d56044de49ccd066994c84462c80307b8103d9936d1966f27a234b0a4d6b"
+    },
+    "police": {
+      "sourceWord": "police",
+      "translation": "n. 警察, 警察当局, 治安\\nvt. 维持治安, 管辖",
+      "sha256": "78351b86614ca8169259df71cb4c5eaaba14d473632ff9bcb8382ba01099eb0a"
+    },
+    "ruler": {
+      "sourceWord": "ruler",
+      "translation": "n. 统治者, 管理者, 尺, 直尺\\nn. 划线板\\n[计] 标尺",
+      "sha256": "3dfc8b33b84bc22fad63d5e8016db1505b0cd0cc7527ceb4cc163d8da4fdc11d"
+    },
+    "schoolbag": {
+      "sourceWord": "schoolbag",
+      "translation": "n. 书包",
+      "sha256": "62bcc84fe3a2476f1f9f6b09b6c77076febe65c4dc63924d16930bbfe59db659"
+    },
+    "science": {
+      "sourceWord": "science",
+      "translation": "n. 科学, 学科, 学问, 自然科学\\n[医] 科学",
+      "sha256": "7a83f0beb9f26548e8f9f40c4cb227bce433a5684a9f61043f712515d0da91f7"
+    },
+    "ship": {
+      "sourceWord": "ship",
+      "translation": "n. 船, 舰\\nvt. 以船运送, 装船, 运送\\nvi. 上船, 乘船",
+      "sha256": "11fabccfa8f1d557449a6b92cb579611930c14edf36883608e5b3d6c6339efcc"
+    },
+    "shorts": {
+      "sourceWord": "shorts",
+      "translation": "n. 短裤, (美)男人的短衬裤\\n[经] 空头户, 空头, 短期债券",
+      "sha256": "2c5787ff668b247ce58b54a3928d3ba24e2d40d5dfadd1a860f1c390821873f0"
+    },
+    "sock": {
+      "sourceWord": "sock",
+      "translation": "n. 短袜, 鞋垫, 一击\\nvt. 重击, 猛投, 给...穿袜\\nvi. 打击\\nadv. 正着地, 不偏不倚地\\na. 非常成功的",
+      "sha256": "129b0c90c0134fc18fda2cc9872de24c5758cd3010201180b3d3cfc35cd9fddd"
+    },
+    "sport": {
+      "sourceWord": "sport",
+      "translation": "n. 运动, 游戏, 娱乐, 消遣, 玩笑\\na. 运动的, 户外穿戴的\\nvi. 游戏, 参加体育运动, 戏弄, 产生变种\\nvt. 炫耀, 使产生变种",
+      "sha256": "85db9c29cd409b1f239d19ba3a54fd9c6bf2d1943257cdbb3f9a4f93d987c294"
+    },
+    "spring": {
+      "sourceWord": "spring",
+      "translation": "n. 春天, 弹簧, 跳跃, 弹性, 活力, 泉, 源泉\\na. 春天的\\nvi. 跳, 弹跳, 涌出, 生长, 裂开, 高耸\\nvt. 使跳起, 使爆炸, 突然提出",
+      "sha256": "fded1026eadf8efd094ee8f67ae4e77693b74454b3a82e0406bd981f5424b21a"
+    },
+    "street": {
+      "sourceWord": "street",
+      "translation": "n. 街道, 马路, 街区\\na. 街道的",
+      "sha256": "63ed7c15c440d0a44f5aae95de064be621ed354e0d95d8abc138d0c15861f48a"
+    },
+    "sweater": {
+      "sourceWord": "sweater",
+      "translation": "n. 毛衣, 毛线衫, 运动衫, 出汗者\\n[化] 发汗器",
+      "sha256": "ba43c427f519e61daddb31acd1e43db92033c41ff16d2166e6162f10971cb1fc"
+    },
+    "taxi": {
+      "sourceWord": "taxi",
+      "translation": "n. 出租车\\nvi. 乘出租车\\nvt. 用出租车送",
+      "sha256": "37fad6327bb98e46a115bb547aa759b3d46f8b42c141bc60a92c794b5d5d99d0"
+    },
+    "toilet": {
+      "sourceWord": "toilet",
+      "translation": "n. 厕所, 梳妆\\nvi. 梳妆, 打扮, 上厕所\\nvt. 给...梳妆打扮",
+      "sha256": "cf1267fa7b33b524aeac51887e65f558cbeff5c51dfeebd6900105df355dc615"
+    },
+    "top": {
+      "sourceWord": "top",
+      "translation": "n. 顶部, 顶端, 极点, 上面, 上部, 顶篷, 最高地位, 首位, 陀螺\\na. 最高的, 顶上的, 头等的\\nvt. 盖, 加以顶, 高达, 超越\\nvi. 结束, 达到顶点, 高出\\n[计] TOP协议",
+      "sha256": "cedd50402fed75190980b333d7c8437cff8c66d1a1be7afd33f0015ec22d8ee0"
+    },
+    "trousers": {
+      "sourceWord": "trousers",
+      "translation": "pl. 裤子, 长裤",
+      "sha256": "3d692f04b09fca210fb99b22d0bdb43f798acadce3844af65e054a56e48f8e7e"
+    },
+    "winter": {
+      "sourceWord": "winter",
+      "translation": "n. 冬季, 萧条期, 衰退期\\na. 冬天的\\nvt. 使度过冬天\\nvi. 过冬",
+      "sha256": "1e9134d42ffe434fc0e235c7d6f43ed8fe20b57bbdb2b084496c743ee711d1b2"
+    },
+    "zoo": {
+      "sourceWord": "zoo",
+      "translation": "n. 动物园",
+      "sha256": "2e38e274f4f8aff3fbdd47780433109e5b7fd3cf9cb97607abe090a58afaafa5"
+    },
+    "meatball": {
+      "sourceWord": "meatball",
+      "translation": "n. 肉团, 愚蠢, 飞机降落目标",
+      "sha256": "3d2aa006932c3f271d830463eec4104f4a04c57d5d84e651d3a0d9334f7e0a3b"
+    },
+    "slide": {
+      "sourceWord": "slide",
+      "translation": "n. 滑, 滑道, 山崩, 雪崩, 幻灯片\\nvt. 使滑动, 偷偷放入\\nvi. 滑动, 滑落, 不知不觉陷入, 偷偷地走",
+      "sha256": "10eec18c71c65abf4a38310f6f6a9bac35ef16e759964efa73042c9ed9d995f4"
+    },
+    "swing": {
+      "sourceWord": "swing",
+      "translation": "n. 摇摆, 振幅, 音律, 节奏, 涨落, 秋千, 旋转, 行动自由\\nvi. 摇摆, 悬挂, 旋转, 大摇大摆地走, 转向\\nvt. 挥舞, 使旋转, 使转向, 悬挂, 吊运\\na. 旋转的, 悬挂的, 强节奏爵士音乐的",
+      "sha256": "805200526d4a8df13023fb36e2359d7eb5c3d794a57fada21f9b2f29755e6ba4"
+    },
+    "seesaw": {
+      "sourceWord": "seesaw",
+      "translation": "n. 跷跷板, 跷跷板游戏, 起伏交替的动作\\na. 上下或前后摇动的, 交互的\\nvi. 玩跷跷板, 上下或来回摇动\\nvt. 使上下或来回摇动",
+      "sha256": "19db767baf7f818b009ce8aa2058c795870b70eb22083a9d4e757bf00a38b2fd"
+    },
+    "seahorse": {
+      "sourceWord": "seahorse",
+      "translation": "n. 海马, 马头鱼",
+      "sha256": "ddbf454232d035f1d21cbb3859ccbb550bcd954535803ac2405f420337ad0740"
+    },
+    "dolphin": {
+      "sourceWord": "dolphin",
+      "translation": "n. 海豚",
+      "sha256": "457ae656c9c892f0a64786bcb839a02f7baa2e10122500321ff766b0db27c484"
+    },
+    "clownfish": {
+      "sourceWord": "clownfish",
+      "translation": "n. 小丑鱼；海葵鱼",
+      "sha256": "e53d2879c8f7dbdbad70d1b53b44b73cf461e56dad3f105f8901183a9a6ef4cd"
+    },
+    "pond": {
+      "sourceWord": "pond",
+      "translation": "n. 池塘\\nv. 筑成池塘",
+      "sha256": "cab7aa02c06af80cb85456acb98467a2714b226b5d5c04475bd2fbd1289e3353"
+    },
+    "frog": {
+      "sourceWord": "frog",
+      "translation": "n. 青蛙\\n[医] 蛙, 马蹄叉",
+      "sha256": "ed6728824b00de2270d15aae65847225e8be3d9bcc3b27a83ea081e7c7d12f06"
+    },
+    "aeroplane": {
+      "sourceWord": "aeroplane",
+      "translation": "n. 飞机\\n[机] 飞机",
+      "sha256": "252a7acb956fc5df41547d179912e3890e26318d2f5b1359811ad7620d27f3dd"
+    },
+    "pineapple": {
+      "sourceWord": "pineapple",
+      "translation": "n. 凤梨, 菠萝, 失业救济金\\n[医] 凤梨, 波萝",
+      "sha256": "4f546039897b47aee4bffc4f6c43f368361887e73f7b66fad01f7992624ed49a"
+    },
+    "skateboard": {
+      "sourceWord": "skateboard",
+      "translation": "n. 溜冰板",
+      "sha256": "54265b574ca48d3ae33093defc66544dfd550f0924dc2d9ad6d002028f343153"
+    },
+    "triangle": {
+      "sourceWord": "triangle",
+      "translation": "n. 三角形, 三个一组, 三角关系\\n[医] 三角, 三角形",
+      "sha256": "c39d765e057a84f7083035153af5f71d3d553283cdc3b1ee085e2ba48eb7710e"
+    },
+    "rectangle": {
+      "sourceWord": "rectangle",
+      "translation": "n. 长方形, 矩形\\n[化] 矩形",
+      "sha256": "17d0c02bd1c5c669c2fbf59a18a0ecd072b472d972bdaf97a49931b95c540d95"
+    },
+    "builder": {
+      "sourceWord": "builder",
+      "translation": "n. 建立者\\n[机] 组份",
+      "sha256": "28cb3f977d64b12ba0febfb1e13e16298bb61b8cd78a4dfe2e39b806ed1525c9"
+    },
+    "noodles": {
+      "sourceWord": "noodles",
+      "translation": "n. 面条, 挂面（noodle的复数形式）",
+      "sha256": "f96e07a4915e7ea24d6f23ec573027b12d2287fc999c72ab467445409e07b313"
+    },
+    "plum": {
+      "sourceWord": "plum",
+      "translation": "n. 李子",
+      "sha256": "a0cd061601f89e706050efc3da0cc1a4e6b9c583dce550e9abae06b6ce629627"
+    },
+    "cherry": {
+      "sourceWord": "cherry",
+      "translation": "n. 樱桃, 樱桃树, 樱桃色\\n[医] 樱桃",
+      "sha256": "eefc4981fc2a8ce69a6f5c586c56cce5a1b738058ee52a6b4192e93039c73fab"
+    },
+    "lawn": {
+      "sourceWord": "lawn",
+      "translation": "n. 草地, 草坪, 上等细麻布\\n[机] 细筛",
+      "sha256": "5ce567b2f6c3e30bc791e2efaea8bbccc88cea71cb78750fe9a6a24dc88a7732"
+    },
+    "bench": {
+      "sourceWord": "bench",
+      "translation": "n. 长椅子\\n[机] 台",
+      "sha256": "5dcbb70b9f5a1032a02b34ae32e87a28f27e0c8f164b57246fa0925a1b00d622"
+    },
+    "parrot": {
+      "sourceWord": "parrot",
+      "translation": "n. 鹦鹉, 应声虫\\nvt. 学舌, 机械地模仿",
+      "sha256": "4cddfdf509d356baed69e37902c7699885bff4eef96daac47739e3806d2328b1"
+    },
+    "crayon": {
+      "sourceWord": "crayon",
+      "translation": "n. 蜡笔, 蜡笔画\\nvt. 以蜡笔作画",
+      "sha256": "9ef2db2104a6a3fce0b4948ec5037fd39d16ac8bb28ecf200ffa8fb272fb1efc"
+    },
+    "caterpillar": {
+      "sourceWord": "caterpillar",
+      "translation": "n. 毛虫\\n[机] 履带车",
+      "sha256": "4e3fe38220e97cfd506bee1e948a707d18a940612d5d150ed221bc433f1c132e"
+    },
+    "chick": {
+      "sourceWord": "chick",
+      "translation": "n. 小鸡, 小鸟, 竹帘",
+      "sha256": "1eee99221bcce4e6e4d056fb4a1d5720b591ebbd78248328050c7eb4f342ef30"
+    },
+    "puppy": {
+      "sourceWord": "puppy",
+      "translation": "n. 小狗, 小动物, 自负的年轻人",
+      "sha256": "8d1054a2be28d600a13e76323ff76a58565ca95087b25541a1cbacb550a0ac72"
+    },
+    "drill": {
+      "sourceWord": "drill",
+      "translation": "n. 钻孔机, 钻子, 播种机, 粗斜纹布\\nv. 训练, 钻孔",
+      "sha256": "72c1d88721de63fb1f0e082966f86718b47567eef65568084568cec505c3b6a3"
+    },
+    "lorry": {
+      "sourceWord": "lorry",
+      "translation": "n. 卡车, 货车\\n[化] 载重汽车",
+      "sha256": "364a1193cc91fa96c693b9a1ed7f5719579e6cb43952dad0210f27d5565669da"
+    },
+    "motorbike": {
+      "sourceWord": "motorbike",
+      "translation": "n. 机动脚踏两用车, 摩托车",
+      "sha256": "1dea3d29f9c8cdc8cff64ea56865e95af114e2e2f37bf76c8a9beda16ce7254e"
+    },
+    "entrance": {
+      "sourceWord": "entrance",
+      "translation": "n. 入口, 进入点, 入场, 入学, 进入, 开始(阶段), 就任\\nvt. 使出神, 使入迷\\n[计] 入口",
+      "sha256": "aae055550c5f2b6fc4dd2f743755c4d1b930b532edd5a9887974936ab04c78fa"
+    },
+    "exit": {
+      "sourceWord": "exit",
+      "translation": "n. 出口, 退场, 离去, 去世\\nvi. 退出, 脱离, 去世\\n[计] 退出; DOS内部命令:本命令用于退出当前的命令处理器(COMMAND.COM)\\n恢复前一个命令处理器",
+      "sha256": "02ec1af7ad3bb740d8f0abd12573d8b4664a484586cfa356b7c38cee6ef4f9b7"
+    },
+    "telephone": {
+      "sourceWord": "telephone",
+      "translation": "n. 电话, 电话机\\nv. 打电话",
+      "sha256": "fa94859afcaecd651a12b003d6544a7e0cabd920e9b335c148291d644c75e9e8"
+    },
+    "cupboard": {
+      "sourceWord": "cupboard",
+      "translation": "n. 食橱, 碗柜, 餐具柜",
+      "sha256": "4765a0e4d7c2072e5a46db37d28391664e932a6713c436cab82ee81d87fedc4b"
+    },
+    "bookshelf": {
+      "sourceWord": "bookshelf",
+      "translation": "n. 书架",
+      "sha256": "d0448a6786a9b15efa836f210b0f49594838224a1e9f4ea0a4915b4980df3423"
+    },
+    "cushion": {
+      "sourceWord": "cushion",
+      "translation": "n. 垫子, 橡皮软垫\\nvt. 加垫褥, 缓冲, 掩盖",
+      "sha256": "a0de23b38965ec2c0bd8a4d8a2b5b0a1b52ae5f387e9c748180182ba2486238f"
+    },
+    "turkey": {
+      "sourceWord": "turkey",
+      "translation": "n. 火鸡, 无用的家伙, 土耳其",
+      "sha256": "57dac31ee189969677ed3f265caea53b7bbec71c42eaa1abd614e9587d28db95"
+    },
+    "castle": {
+      "sourceWord": "castle",
+      "translation": "n. 城堡, 象棋中的车\\nvt. 置于城堡中, 盘踞于",
+      "sha256": "673d91c10f8cd7c02e6e90b1a5bb0b13a74706d667b7256d0689401c77297c66"
+    },
+    "atmosphere": {
+      "sourceWord": "atmosphere",
+      "translation": "n. 大气, 空气, 气氛\\n[医] 大气; 大气压",
+      "sha256": "ec8f3d2238161d54a2835e3b20a0b9e2918b07a3342691fd99d263ebcf322765"
+    },
+    "consumer": {
+      "sourceWord": "consumer",
+      "translation": "n. 消费者\\n[经] 消费者, 用户",
+      "sha256": "69c19e042222e01ba2dccfa3f2def61e969e1d069fd9a12421314f1d62bfcffc"
+    },
+    "threat": {
+      "sourceWord": "threat",
+      "translation": "n. 恐吓, 恶兆, 威胁\\n[经] 威胁",
+      "sha256": "dbd137f8be94d655070ebb54ea9989183f2def02cb63754deae80c7caf528eb4"
+    },
+    "greenhouse": {
+      "sourceWord": "greenhouse",
+      "translation": "n. 温室",
+      "sha256": "8fb945b3567939b50bbaaa259b5ecd17b0345ad1b1dd421ee7f1551b8c126eff"
+    },
+    "sunlight": {
+      "sourceWord": "sunlight",
+      "translation": "n. 日光\\n[医] 日光, 太阳光",
+      "sha256": "63c24e78d13ee6f554be5cde5176f712b9c08122d4cc1e67b45d2acc789e30b3"
+    },
+    "fuel": {
+      "sourceWord": "fuel",
+      "translation": "n. 燃料, 木炭\\nvt. 加燃料, 供燃料\\nvi. 得到燃料",
+      "sha256": "3cb9d5856a9651ee31549add3d8e116fbc75c0d3541d7864f4d84f4dfe449d0f"
+    },
+    "ozone": {
+      "sourceWord": "ozone",
+      "translation": "n. 新鲜的空气, 臭氧, 使人愉快的影响\\n[化] 臭氧",
+      "sha256": "ef8428c5160d81a3dcd6a9d997d5b2fbefea32a2297f213c8d6848b0d71dbfb6"
+    },
+    "destruction": {
+      "sourceWord": "destruction",
+      "translation": "n. 破坏, 毁灭\\n[医] 破坏",
+      "sha256": "56dada93739609e34a8030c242d33a20533a1aac5aacbbedea62faa34e6aa84a"
+    },
+    "erosion": {
+      "sourceWord": "erosion",
+      "translation": "n. 腐蚀, 冲蚀, 侵蚀\\n[化] 磨耗; 侵蚀",
+      "sha256": "9be56b8f31375172d4058c66a3188119353596b402cbaf5b6e32dcd5f352968b"
+    },
+    "flooding": {
+      "sourceWord": "flooding",
+      "translation": "n. 充溢, 泛滥, 血崩\\n[计] 满屏幕; 扩散式路由选择",
+      "sha256": "64e8cfdaaeb9634a9ef958f09719937feb569b06e7bc9d2a01444d017a382c3e"
+    },
+    "cabinet": {
+      "sourceWord": "cabinet",
+      "translation": "n. 橱柜, 内阁\\na. 内阁的, 细木工做的\\n[计] 机柜",
+      "sha256": "cb7b9391674af606f1f26ae5a1f77b0a8c416e7e36c5402d7552579b458519b4"
+    },
+    "windscreen": {
+      "sourceWord": "windscreen",
+      "translation": "n. 汽车的挡风玻璃",
+      "sha256": "bd2fbfb00aee8b1e648c06bb1e4013c3d9081f59d4b5b57f4e87086f0df31f5b"
+    },
+    "function": {
+      "sourceWord": "function",
+      "translation": "n. 官能, 职务, 功能, 函数\\nvi. 活动, 运行, 行使职责\\n[计] 功能, 函数",
+      "sha256": "efc6e4deceea976abf703600dc356f8dd9926d2b75ef9d052ca73d21f1e14c99"
+    },
+    "recreation": {
+      "sourceWord": "recreation",
+      "translation": "n. 娱乐, 消遣, 休息, 再创造\\n[医] 娱乐, 休养",
+      "sha256": "e7f95b2a4b054a3791b0371a5aa78c42b30700a13eb4eac827e859855acfae1d"
+    },
+    "sword": {
+      "sourceWord": "sword",
+      "translation": "n. 刀, 剑, 战争, 武力, 剑状物",
+      "sha256": "ea996e48be0c86236db8ec2df763e2c14480c1aba6704a61e3a718bb005a0e91"
+    },
+    "nickname": {
+      "sourceWord": "nickname",
+      "translation": "n. 绰号, 昵称\\nvt. 给...取绰号, 叫错名字\\n[计] 绰号",
+      "sha256": "151245aaeda99fd1a3433584cdd36122251760e8d14f1f4210e0dfd12a8f2152"
+    },
+    "waterfront": {
+      "sourceWord": "waterfront",
+      "translation": "n. 水边, 滨水区, 滩, 海滨, 江边",
+      "sha256": "4d83e0a7036604b5aeca2a4477f75c556ca4ec5e2584f2b9a36cfc1963034e00"
+    },
+    "studio": {
+      "sourceWord": "studio",
+      "translation": "n. 工作室, 画室, 演播室, 电影制片厂",
+      "sha256": "8bef77048d7371c80f932441dcde349c5276b37ca85dbdc2612e06d21f2f67a0"
+    },
+    "jungle": {
+      "sourceWord": "jungle",
+      "translation": "n. 丛林, 杂乱的一堆, 弱肉强食的地方",
+      "sha256": "99584fd7b457cc83baa5e3d05c65ea7fabeb9b24737e9d2da31696a2c1d40929"
+    },
+    "actress": {
+      "sourceWord": "actress",
+      "translation": "n. 女演员",
+      "sha256": "c7fbd058363cc7ec55a7dc218ce3da44984c3d8b74935a038029336bddcfb85c"
+    },
+    "fence": {
+      "sourceWord": "fence",
+      "translation": "n. 围墙, 栅栏, 买卖赃物的人, 剑术\\nvt. 用篱笆围住, 练习剑术, 防护\\nvi. 击剑, 搪塞",
+      "sha256": "76433750c7052172669bb65dd808e464aa925611bd3a364eec015e0656659513"
+    },
+    "sidewalk": {
+      "sourceWord": "sidewalk",
+      "translation": "n. 人行道",
+      "sha256": "91a2081a8fa6614e5855cf96763c4f843cdf4d442ad31251a517a7a1914fd0e5"
+    },
+    "bucket": {
+      "sourceWord": "bucket",
+      "translation": "n. 桶\\n[计] 存储桶; 桶",
+      "sha256": "2464771e4f4a387dea78b6f5095a93298af9472b651589b9576a830e11fe5466"
+    },
+    "marble": {
+      "sourceWord": "marble",
+      "translation": "n. 大理石, 石弹, 雕刻品\\na. 大理石的, 冷酷无情的, 有大理石花纹的",
+      "sha256": "5fb926ac22eded382fe309f5a4085ca352c78e62a0a08fff6ae7b8b0b3f09acf"
+    },
+    "dear": {
+      "sourceWord": "dear",
+      "translation": "n. 亲爱的人\\na. 亲爱的, 昂贵的, 严重的, 急迫的\\ninterj. 啊\\nadv. 深爱地, 高价地",
+      "sha256": "a92398e579ef45c7272f2d533f1c2644e2c1bc8a717713b02147964a454d6b47"
+    },
+    "dirty": {
+      "sourceWord": "dirty",
+      "translation": "a. 肮脏的, 卑鄙的\\nvt. 弄脏\\nvi. 变脏",
+      "sha256": "798ac18c5666a57a2eab12fc400eff857844561660630076570f1d8182dc1802"
+    },
+    "hungry": {
+      "sourceWord": "hungry",
+      "translation": "a. 饥饿的, 荒年的, 渴望的, 不毛的\\n[化] 欠鞣皮",
+      "sha256": "bed5431d5cd3dfa32884410081400ab30c6d39f1919f9888cd4c799e0d33ee16"
+    },
+    "ill": {
+      "sourceWord": "ill",
+      "translation": "n. 疾病, 坏事, 罪恶, 灾难\\na. 生病的, 邪恶的, 不吉利的, 敌意的, 不良的, 不顺利的\\nadv. 有害地, 不幸地, 几乎不",
+      "sha256": "e85ebd39f7f3d219a4e8e42cc9dd245e79420c09ed87e1de902bed41b5a43817"
+    },
+    "sorry": {
+      "sourceWord": "sorry",
+      "translation": "a. 难过的, 悲哀的, 遗憾的",
+      "sha256": "1986de6b5f115b4e0628aba289cff11d56b90aab17577773575c595110bbb9ea"
+    },
+    "wonderful": {
+      "sourceWord": "wonderful",
+      "translation": "a. 令人惊奇的, 奇妙的, 极好的",
+      "sha256": "9129edcdf075ab3fa290812c3c72e28847c2f4b3ffd2128aab09aced51e676b4"
+    },
+    "wrong": {
+      "sourceWord": "wrong",
+      "translation": "a. 错误的, 不正当的, 失常的\\nadv. 错误地",
+      "sha256": "c1eb15abcf44616a776e05832555c7b80aa8669cd0f97de3ab1e0641d7106826"
+    },
+    "sour": {
+      "sourceWord": "sour",
+      "translation": "a. 酸的, 酸臭的, 发酵的, 愠怒的, 讨厌的, 拙劣的, 不健全的\\nvi. 变酸, 发酵, 厌烦, 变坏\\nvt. 使变酸, 使失望\\nn. 酸味, 酸饮料",
+      "sha256": "7192a3ad01ca7de3085b78b2f543a937f5c94b5a25aeb2d7098753b8a9be3c56"
+    },
+    "blunt": {
+      "sourceWord": "blunt",
+      "translation": "a. 钝的, 坦率的, 麻痹的",
+      "sha256": "4dc6ca4acb58d7378dfdda02b9058539e4addb46a5b00f28a2e033fe9f8cebd3"
+    },
+    "stormy": {
+      "sourceWord": "stormy",
+      "translation": "a. 暴风雨的, 粗暴的, 激烈的",
+      "sha256": "b045d5dfb3d8eee952456712ec1fe6b176f3aa27225f3c7ac5e45ac4fd709c5b"
+    },
+    "global": {
+      "sourceWord": "global",
+      "translation": "a. 通用的, 全球的, 球形的, 综合的, 普遍的\\n[计] 共用",
+      "sha256": "0bb85ce7caca4873fb0a6e5dd3f77008d4a8264c04c102991a9617533eba6186"
+    },
+    "various": {
+      "sourceWord": "various",
+      "translation": "a. 不同的, 各种的, 多方面的, 许多的, 个别的, 杂色的\\n[法] 不同的, 种种的, 各式各样的",
+      "sha256": "9aa6a3d445153c345c24311f56bebb21faddb1bddfe8b7e94331f5a20b84255a"
+    },
+    "lifeless": {
+      "sourceWord": "lifeless",
+      "translation": "a. 无生命的, 无趣味的, 死气沉沉的",
+      "sha256": "12a007465de7cb439b8f75e5e3ea24c71f3fa7a80edb378099e37864fab97a18"
+    },
+    "protective": {
+      "sourceWord": "protective",
+      "translation": "a. 给予保护的, 保护的\\n[医] 保护的, 防护的, 保护剂, 保护物, 油绸",
+      "sha256": "e1330b33d0eb6e8f212476568b7c205fdbc08819a7236704f26af6fea205ffd3"
+    },
+    "massive": {
+      "sourceWord": "massive",
+      "translation": "a. 大而重的, 宽大的, 宏伟的\\n[医] 大块的, 整块的, 大量的",
+      "sha256": "c045870ee92fea53ba372a017e6f1edec905d11bfa97884374a961f7d548f077"
+    },
+    "attractive": {
+      "sourceWord": "attractive",
+      "translation": "a. 吸引人的, 有魅力的\\n[法] 有吸引力的, 有迷惑力的",
+      "sha256": "d95403edf294be97a230f3bc28d72fc7645dd26de0b724044dbfc83a343a411a"
+    },
+    "satisfied": {
+      "sourceWord": "satisfied",
+      "translation": "a. 感到满意的",
+      "sha256": "7ceb17794455cfb6849c7a7ac0f1c9c96b2ebf4639f5105e8686b09ac7424d73"
+    },
+    "solar": {
+      "sourceWord": "solar",
+      "translation": "a. 太阳的, 日光的, 源自太阳的\\n[医] 太阳的; 腹腔丛的",
+      "sha256": "7717ddd15f7bcc5fc6b4aefb1220fbc48724c3371d4a37733e73bae17657b75a"
+    },
+    "horrible": {
+      "sourceWord": "horrible",
+      "translation": "a. 可怕的, 遭透的, 极讨厌的",
+      "sha256": "3afa555f57cf2986c65f5a43baad27813a91c4f22be29af08241b6167ebcd932"
+    },
+    "native": {
+      "sourceWord": "native",
+      "translation": "n. 本地人, 土产, 当地人\\na. 本国的, 与生俱来的, 自然的",
+      "sha256": "0bc67ed329b666986daca0ce121ca3b9cf25fb119276bf2d6a1c409a92cb2e45"
+    },
+    "exhausting": {
+      "sourceWord": "exhausting",
+      "translation": "a. 使耗尽的, 使人筋疲力尽的\\n[计] 经验, 技巧, 穷举, 耗尽, 排气",
+      "sha256": "f0c9cfb63a41c079047b91b2f1c5e19334f423ef463fa4612f219fbf7e2df1f7"
+    },
+    "marvellous": {
+      "sourceWord": "marvellous",
+      "translation": "a. 奇异的, 神奇的, 奇迹般的, 惊人的, 不可思议的, 绝妙的, 妙极的",
+      "sha256": "da0e4b85f9171e5d1a8c8f9065cdc0ccd6d441259453d87a32f869c2a06f152f"
+    },
+    "amazed": {
+      "sourceWord": "amazed",
+      "translation": "a. 吃惊的, 惊奇的",
+      "sha256": "967beaecf9c62e8a3c52c4326abc4c6438899e913894cb90b996b5b221975ad3"
+    },
+    "available": {
+      "sourceWord": "available",
+      "translation": "a. 可利用的, 可获得的, 有效的\\n[医] 有效的, 可得的",
+      "sha256": "a93f502bfb9a32e7a7f1bfdf91fcb4b5a7d0e9902abfa4cdf9efd2d63fa06b7f"
+    },
+    "awesome": {
+      "sourceWord": "awesome",
+      "translation": "a. 引起敬畏的, 可怕的",
+      "sha256": "681229af6a6f24b55daaa2ddb20e9fe684899e2ae9ebcbefa5bff860b275fcb5"
+    },
+    "terrific": {
+      "sourceWord": "terrific",
+      "translation": "a. 非常好的, 极端的, 可怕的",
+      "sha256": "dbf893be5b0243562e5f2042ba14ddbe4cd279bf35085c0d2887d9e9a3bb360c"
+    },
+    "brilliant": {
+      "sourceWord": "brilliant",
+      "translation": "a. 光辉的, 灿烂的, 有才气的\\n[机] 亮的",
+      "sha256": "8bd5df79d0a79449090837f4f1abdb82c10a7eac527f709cc3f83b4b5657098c"
+    },
+    "depressed": {
+      "sourceWord": "depressed",
+      "translation": "a. 沮丧的, 降低的\\n[医] 抑郁的, 阻抑的, 压低的, 凹[陷]的, 扁平的",
+      "sha256": "2e78e601eb39aacbb881525744124d030609f2a95902a9b9fc0734c3b6638733"
+    },
+    "unpainted": {
+      "sourceWord": "unpainted",
+      "translation": "a. 无复层的；未上漆的",
+      "sha256": "1bb845bb6d396f5aba77ea1f5df8c6dfbc17ac2825168984e5201c19778d81d4"
+    },
+    "again": {
+      "sourceWord": "again",
+      "translation": "adv. 再一次, 又, 到原处",
+      "sha256": "366674b6ded630ac98fca82f0922b54ff33f066456007564adfc67ba0454aa58"
+    },
+    "ago": {
+      "sourceWord": "ago",
+      "translation": "adv. 以前",
+      "sha256": "09fc123a324334c24038e7f55fed93a83e183b483cf30c6dadcb518f036e128f"
+    },
+    "also": {
+      "sourceWord": "also",
+      "translation": "adv. 也, 并且, 同样地",
+      "sha256": "589c1509140eac65fed79e6a09632ccce9a6a4a369118f02884bf9c7a2a4831d"
+    },
+    "here": {
+      "sourceWord": "here",
+      "translation": "adv. 在这里, 此时, 这里\\nn. 这里",
+      "sha256": "160a1a4d02d98847ec0fb6f394fd31f61de9f56fec4655e34878359d9d6f4d7d"
+    },
+    "how": {
+      "sourceWord": "how",
+      "translation": "adv. 如何, 怎样, 多少, 多么\\nn. 方式",
+      "sha256": "52d0494a64d7f504d70d838d3088a4805003e3bf78dcce43fe5f5eeadc97d05e"
+    },
+    "never": {
+      "sourceWord": "never",
+      "translation": "adv. 从不, 决不, 不曾\\n[法] 永不, 决不, 从来没有",
+      "sha256": "6767fba82c0e181cd7ae54762019770e8c20251f3cb76d5a8d475951192bfd9e"
+    },
+    "not": {
+      "sourceWord": "not",
+      "translation": "adv. 不, 非, 未\\n[计] 非",
+      "sha256": "51914bf2c8812e7ea9d269c43cb43a2f4f2d598128e16cb405c1e95446555b55"
+    },
+    "now": {
+      "sourceWord": "now",
+      "translation": "adv. 现在, 刚才, 目前\\nn. 现在\\na. 现在的\\nconj. 由于",
+      "sha256": "8a9ab8097852f59e323e2b6cbcbd31440861dad10031adf8e5acd7d23682bfe5"
+    },
+    "then": {
+      "sourceWord": "then",
+      "translation": "adv. 然后, 当时\\nconj. 然后, 当时\\nn. 那时",
+      "sha256": "6fc3fb95ca6eff48bed20ae1e01812ed95f8acdb243566aa6e2db754f25a0c17"
+    },
+    "too": {
+      "sourceWord": "too",
+      "translation": "adv. 也, 非常, 太",
+      "sha256": "e95c26a80f699bef00e28897b7954aa8b1ba276d3538abe175e52adf74641f87"
+    },
+    "very": {
+      "sourceWord": "very",
+      "translation": "a. 真正的, 恰好的, 十足的, 特有的\\nadv. 非常, 完全",
+      "sha256": "5210959db71a89f3a30acf152beda16c2e470604f7c2e8772dd161a4ed64ed6e"
+    },
+    "why": {
+      "sourceWord": "why",
+      "translation": "adv. 为什么\\nn. 原因, 理由",
+      "sha256": "754a4162eb069e5e3fdde6ad569ec52d55ec976ea1079825f117edbb574fcaea"
+    },
+    "violently": {
+      "sourceWord": "violently",
+      "translation": "adv. 猛烈地, 激烈地, 极端地",
+      "sha256": "88e3213ea846ca0c88d771248069ee64f89d395f52e988170396aa23240e1ddc"
+    },
+    "sweep": {
+      "sourceWord": "sweep",
+      "translation": "n. 扫除, 打扫, 肃清, 视野, 范围, 全胜\\nvt. 扫除, 掸去, 猛拉, 扫荡, 肃清, 冲走, 刮起, 环视, 掠过, 扫射\\nvi. 扫, 打扫, 袭击, 席卷, 扫视, 掠过",
+      "sha256": "8d7d66c19b18c45b52ef951c67d8123a5e378d4aa22aa434b4fde718511eefee"
+    },
+    "occur": {
+      "sourceWord": "occur",
+      "translation": "vi. 发生, 被想到, 存在",
+      "sha256": "2fdf0c4bfc7635fb99d0f4cdd9a9c3aceceb109b58de2752961bf6b04f0b6a8b"
+    },
+    "appreciate": {
+      "sourceWord": "appreciate",
+      "translation": "vt. 赏识, 鉴别, 为...而感激, 领会, 欣赏\\nvi. 增值, 涨价",
+      "sha256": "a5b24bb55cffaccc2a5545846dc90173416c0f20ce320d2fb750e37d56b914ce"
+    },
+    "select": {
+      "sourceWord": "select",
+      "translation": "a. 挑选出来的, 极好的\\nv. 选择, 挑选\\nn. 被挑选者, 精萃\\n[计] 选定",
+      "sha256": "ec443c79fe407266a2e449fe64a57667a07ced636e02a44d638a00677867a3e3"
+    },
+    "dip": {
+      "sourceWord": "dip",
+      "translation": "v. 浸, 降下, 把(手、勺等)伸入, 舀取\\nn. 浸, 涉猎\\n[计] 双列直插式组件, 分布式输入输出系统, 双排直插封装",
+      "sha256": "7a415963768b623df1d774ac742b4d945559257bcf7d22ed2d50e67e7874af74"
+    },
+    "ignore": {
+      "sourceWord": "ignore",
+      "translation": "vt. 不理睬, 忽视, 驳回, 忽略\\n[计] 忽略",
+      "sha256": "573de331c4f60d2ae9149e7a99de72fa2f88e40cee5e2b2140dde3b50bec32d0"
+    },
+    "he": {
+      "sourceWord": "he",
+      "translation": "pron. 他\\nn. 男孩, 男人, 雄性动物",
+      "sha256": "51793e027b0d089707c66c8c17f64fa1533f09ab9a7116748e4073710877fd23"
+    },
+    "her": {
+      "sourceWord": "her",
+      "translation": "pron. 她的, 她",
+      "sha256": "25b7b66875352fb289c22602602e608a80a31f6801f741b186e07a08890deb65"
+    },
+    "him": {
+      "sourceWord": "him",
+      "translation": "pron. 他",
+      "sha256": "683985ba24d4281ce3c76d57c811fe9e5eec3ece1738ad4486c064e0365ae290"
+    },
+    "his": {
+      "sourceWord": "his",
+      "translation": "pron. 他的\\n[化] 组氨酸",
+      "sha256": "b6879f729fa4ef90a1b30680cf5173b8fc436d6ea5bbae0596e2c8f0a55faa1e"
+    },
+    "it": {
+      "sourceWord": "it",
+      "translation": "pron. 它\\n[计] 信息论, 输入终端, 智能终端, 内捕获",
+      "sha256": "260d5eee069dde555f961836fd7551daee52862bd57f6bc704703631503d8505"
+    },
+    "its": {
+      "sourceWord": "its",
+      "translation": "pron. 它的",
+      "sha256": "868d6ad495ecd845d51fda27c921c4800433df0c31bfb73aca1ae33626a2d49f"
+    },
+    "me": {
+      "sourceWord": "me",
+      "translation": "pron. 我",
+      "sha256": "7390c3e8e49ac7438b3e11e85170619aa85007aff32edc48a66326ac9672f089"
+    },
+    "our": {
+      "sourceWord": "our",
+      "translation": "pron. 我们的",
+      "sha256": "f8a49981517cfe5c5f935c03051af09ba1a20ac18b47efc6886e9dcadfb3bf0a"
+    },
+    "she": {
+      "sourceWord": "she",
+      "translation": "pron. 她",
+      "sha256": "6101e1b85adfd375a97fb2f2de57556f2b95986cd68fb4044e65490bf2662895"
+    },
+    "them": {
+      "sourceWord": "them",
+      "translation": "pron. 他们, 她们, 它们",
+      "sha256": "6ad522433d8fd8ff069d07244726268276ec0655205c56f5a60f9c7e7da96b77"
+    },
+    "these": {
+      "sourceWord": "these",
+      "translation": "pron. 这些",
+      "sha256": "b6ef356789571fcc3fd400dc3a1ab41ba235635496434ec5786b13efb14ae897"
+    },
+    "they": {
+      "sourceWord": "they",
+      "translation": "pron. 他们, 它们",
+      "sha256": "daf68ac4d1da8b4c756ff876719ff66f992f53d586539a7a13a68cf73334d46a"
+    },
+    "this": {
+      "sourceWord": "this",
+      "translation": "pron. 这, 本\\na. 这, 本\\nadv. 这么",
+      "sha256": "ca764b29fc17ace2cd55da8f029c5758631dece9e422192170e1709ae086c24a"
+    },
+    "those": {
+      "sourceWord": "those",
+      "translation": "pron. 那些",
+      "sha256": "df52201d66a5904a888a2de576c59316a6ade6f60d0b6d220cfa5afedb6a999d"
+    },
+    "us": {
+      "sourceWord": "us",
+      "translation": "pron. 我们\\n[经] 美国",
+      "sha256": "6b6929537387a487a3d62b8560f4def1bb6f0f4824ca799e123a99f61ed02610"
+    },
+    "what": {
+      "sourceWord": "what",
+      "translation": "pron. 什么\\ninterj. 怎么, 多么\\na. 什么的\\nadv. 到什么程度",
+      "sha256": "b756456f991a92f5713ae9fd32a90f1cea772d06eb3347473b0ca64c07dc83b0"
+    },
+    "which": {
+      "sourceWord": "which",
+      "translation": "pron. 哪一个, 那一个",
+      "sha256": "1f77063c85984311af3c0df53d13a8b4cef53aa7ce63ebadd3c4c8d4025e88a7"
+    },
+    "who": {
+      "sourceWord": "who",
+      "translation": "pron. 谁",
+      "sha256": "ef3cc248345c6ada0e1da8bc709cf5525cac0cf780bec58160c184fec972dd87"
+    },
+    "whose": {
+      "sourceWord": "whose",
+      "translation": "pron. 谁的",
+      "sha256": "f16b8381cb318f69e6dec60241bfe1a59b22ea33a80fc0738db3c80f7cdad125"
+    },
+    "your": {
+      "sourceWord": "your",
+      "translation": "pron. 你的, 你们的",
+      "sha256": "024083f00c765bf11862a2a1ead594cd6b022d964e4b68d2d6685e09ce2bba7a"
+    },
+    "their": {
+      "sourceWord": "their",
+      "translation": "pron. 他们的",
+      "sha256": "cee78698ab5464aa38b23b6dd65b901b57854955f25e9fd35749f4ffae75f717"
+    },
+    "at": {
+      "sourceWord": "at",
+      "translation": "prep. 在, 向, 对\\n[计] 地址转换器, 异常传输, 自动订票",
+      "sha256": "01183d446fd535deef05477d30fd9b98bcb89a34d61ea660b0a0f51cb04b1ec8"
+    },
+    "behind": {
+      "sourceWord": "behind",
+      "translation": "adv. 在后地\\nprep. 在...背后",
+      "sha256": "ad450295ca4fffe8be2c735e166c89ea1bde4a4d95fdbfd8b9c6a4d273d78d6a"
+    },
+    "beside": {
+      "sourceWord": "beside",
+      "translation": "prep. 在旁边",
+      "sha256": "c1fb630cb5d838e5b57b4901584885f22e80f86a64918bfd1f2878890cd18cb3"
+    },
+    "between": {
+      "sourceWord": "between",
+      "translation": "prep. 在...之间",
+      "sha256": "91363aee19a283e50d30f22a976b907eb6c8437eff07e934a9817da6324105c9"
+    },
+    "by": {
+      "sourceWord": "by",
+      "translation": "prep. 被, 经, 由, 在...之旁\\nadv. 经过, 在近处",
+      "sha256": "3126f95804bec524db5d01ef4456f263ae5dbfb507d94e24ad4ad3094a2b1d61"
+    },
+    "for": {
+      "sourceWord": "for",
+      "translation": "prep. 为, 因为, 至于\\nconj. 因为\\n[计] DOS批处理命令:对一组参数重复执行指定的命令",
+      "sha256": "f4b5d5d4fbb1a195171f5c588f7fb9f2e5b054ac4d485b7632b9bfcbbd633c0a"
+    },
+    "in": {
+      "sourceWord": "in",
+      "translation": "prep. 在...期间, 在...之内, 处于...之中, 从事于, 按照, 穿着\\nadv. 进入, 朝里, 在里面, 在屋里\\na. 在里面的, 在朝的\\nn. 执政者, 交情",
+      "sha256": "3a9492396ba10d3528476c53ed9003713fddb7b79a06341387e652d4bf177f6e"
+    },
+    "of": {
+      "sourceWord": "of",
+      "translation": "prep. 的, 属于",
+      "sha256": "f3c4f48d495b94e3e229acc2a70b7130d6caaeabdcb8c8457331e79dcc05dfea"
+    },
+    "on": {
+      "sourceWord": "on",
+      "translation": "prep. 在...之上\\nadv. ...上去\\na. 正起作用的\\n[计] 打开",
+      "sha256": "860001c19042ec08fa44a3fcacf194d5f3080eac9e8d017bb37b3bb439f1ce49"
+    },
+    "over": {
+      "sourceWord": "over",
+      "translation": "adv. 结束, 越过, 从头到尾\\nprep. 在...之上, 遍于...之上, 越过\\na. 上面的\\nvt. 越过",
+      "sha256": "0f8435510d5e3845f99991299baf896f18ada081d4da68a87b8f4f3b6dd6e5b2"
+    },
+    "to": {
+      "sourceWord": "to",
+      "translation": "prep. 到, 向, 趋于\\nadv. 向前",
+      "sha256": "13eb546f2c5bd6505a29cddee26007dfbca6fd3a41054cf2cec3cea909b887c7"
+    },
+    "under": {
+      "sourceWord": "under",
+      "translation": "prep. 在...之下, 低于\\na. 下面的, 从属的\\nadv. 在下面",
+      "sha256": "edadd0b77ca80d24debf3464ef9dd4d3eb5cd03472b2cc6c57e46948e090e51b"
+    },
+    "with": {
+      "sourceWord": "with",
+      "translation": "prep. 和...在一起, 以, 由于",
+      "sha256": "f904138526fc38eb5cd76df984a0e5b544fa86f94d6d6997a0a5eb55d379497b"
+    },
+    "and": {
+      "sourceWord": "and",
+      "translation": "conj. 和, 与\\n[计] 与",
+      "sha256": "fb79363e02fec0c894f896d00348fcb6ade5ff7df9f1cb2843bb4969a230e641"
+    },
+    "because": {
+      "sourceWord": "because",
+      "translation": "conj. 因为",
+      "sha256": "5ff7844e3a3b3824c97358f0a2b977191c9dc08c216ebb5172067161ae87c73e"
+    },
+    "or": {
+      "sourceWord": "or",
+      "translation": "conj. 或, 或者\\n[计] 或",
+      "sha256": "54a9c213c00f5e874b76ec1c16a6b1b5d9d1551aa78ae60c8214171140bb3580"
+    },
+    "must": {
+      "sourceWord": "must",
+      "translation": "n. 必须, 未发酵葡萄汁, 绝对必要的事物\\naux. 必须",
+      "sha256": "d306a0760af18f6698b3f89f14d5d396ac58230476adf101332b5323544c66ce"
+    },
+    "should": {
+      "sourceWord": "should",
+      "translation": "aux. 应该, 将要",
+      "sha256": "ed791c94d5e908611598b364c7f2224a5eb78dd57d247291e75b0c6d20c1c3d2"
+    },
+    "hi": {
+      "sourceWord": "hi",
+      "translation": "interj. 喂",
+      "sha256": "fbadfaf02c49abb4b94dcb7fa20cb202409d60b36c29e8339f2bf8a0e9cf28b7"
+    },
+    "about": {
+      "sourceWord": "about",
+      "translation": "prep. 在...周围, 大约, 有关, 关于\\nadv. 大约, 四处, 在附近, 周围",
+      "sha256": "9b72ced3bf641fc746db3c242f468a5da5dacb8a21796766785733cace161811"
+    },
+    "after": {
+      "sourceWord": "after",
+      "translation": "prep. 在...之后, 由于\\nconj. 在...之后\\nadv. 后来",
+      "sha256": "63410a0dc8085d7afbd7391994db47c69d03dcfa6ceaddfd23766f3937597e29"
+    },
+    "before": {
+      "sourceWord": "before",
+      "translation": "prep. 在...之前\\nconj. 在...之前\\nadv. 在前",
+      "sha256": "c5a1844ab5cfc2966a2686174da1ce969e163117b784522d4662356de8e0008e"
+    },
+    "all": {
+      "sourceWord": "all",
+      "translation": "a. 所有的, 全部的, 一切的\\nadv. 全部, 全然\\npron. 全部\\nn. 全部",
+      "sha256": "a4441042c13d2b383aec4d687b2c88171ff81af81c1ebd9e816a534b17abde8f"
+    },
+    "any": {
+      "sourceWord": "any",
+      "translation": "a. 任何的\\npron. 任何",
+      "sha256": "be49885b8a62154eb07011e4064d5d913e4862aeedd6a6153d55ad69297eb7f8"
+    },
+    "back": {
+      "sourceWord": "back",
+      "translation": "a. 后面的\\nvt. 使后退, 支持\\nvi. 倒退, 背靠\\nadv. 向后地\\nn. 背部, 后面",
+      "sha256": "2b010c2804963aa758899962889c6ea3c937ea72b07c8484dfbff61973967db5"
+    },
+    "bear": {
+      "sourceWord": "bear",
+      "translation": "n. 熊\\nvt. 忍受, 支承, 产生, 怀有, 通过卖空使跌价\\nvi. 忍受, 结果实, 压挤, 行进, 转向",
+      "sha256": "58eb3e95a279a6429806e99e2ca64e6511f8af1c9b3dbec0a1e8eb19a556457c"
+    },
+    "best": {
+      "sourceWord": "best",
+      "translation": "a. 最好的\\nadv. 最好地\\nn. 最好的人",
+      "sha256": "3b4aca2878bccd81c0a2f8024cbc94a8c0b8cd7cc2e8c995dd24e5dd04ac01e5"
+    },
+    "brown": {
+      "sourceWord": "brown",
+      "translation": "n. 褐色\\na. 褐色的\\nv. (使)变褐色",
+      "sha256": "de127fe70f543cdb3fa5b415100697c4ce8e6667ef10e1c7cb2d2d25350cbc57"
+    },
+    "can": {
+      "sourceWord": "can",
+      "translation": "vt. 装罐\\nn. 罐头, 容器\\naux. 能, 可以\\n[计] 作废字符",
+      "sha256": "16b80fecad704b6ca29b60163183f8c043898618ae6c301b7f5aba3e92b24eba"
+    },
+    "down": {
+      "sourceWord": "down",
+      "translation": "a. 向下的\\nadv. 下, 下去, 降下\\nprep. 往下, 沿着\\nn. 丘陵, 软毛, 开阔的高地\\n[计] 向下, 退下命令",
+      "sha256": "05088f9fe6b81f85ceab80b483fb18351dece6cb62d89128e5a6b98bdd82c380"
+    },
+    "every": {
+      "sourceWord": "every",
+      "translation": "a. 每一, 所有的",
+      "sha256": "f01f8ca5c7e1f8edec75c660b6e2acce54e1e45fc8476f63c9cf43c04f01479f"
+    },
+    "free": {
+      "sourceWord": "free",
+      "translation": "a. 自由的, 享受政治权力的, 允许的, 免费的, 丰富的\\nvt. 释放, 解放, 使自由\\nadv. 自由地, 免费",
+      "sha256": "bd76db81a433e6dd275ba25a99d184c3d9a941a5172586c08837f699229eb490"
+    },
+    "half": {
+      "sourceWord": "half",
+      "translation": "n. 一半, 半场, 不完全\\na. 一半的, 不完全的, 部分的, 半场的\\nadv. 一半地, 部分地, 在某种程度上地, 几乎",
+      "sha256": "f1bc1ba93c16a10ea69e2a0ba8ce536e0d983b2b237689865550bad803933764"
+    },
+    "least": {
+      "sourceWord": "least",
+      "translation": "n. 最少, 最小, 最小限度\\na. 最少的, 最小的\\nadv. 最小, 最少",
+      "sha256": "0d26c0a95fabd48b8b7b81875f1ee11446a290cdda246ae1cdf965bcc589b29c"
+    },
+    "less": {
+      "sourceWord": "less",
+      "translation": "n. 较少, 较小\\na. 少的, 小的\\nadv. 较少, 较小, 较差\\n[计] 最低成本估算与调度法",
+      "sha256": "f6a5cb7ade358fa2c4f2adf53701b02fd0cef31b4db5738b7884bbde45170641"
+    },
+    "may": {
+      "sourceWord": "may",
+      "translation": "n. 五月\\naux. 愿能, 可以, 愿意",
+      "sha256": "16e2ab6f4b7b932f156a82a46e396553dbd03e4c1cb944d1ce0337b83a9abafa"
+    },
+    "middle": {
+      "sourceWord": "middle",
+      "translation": "n. 中央, 中间, 腰部\\na. 中央的, 中庸的, 中间的",
+      "sha256": "ee0d54e846cecf6964d73d6b20e9039f25dd863a53daddec1fb6c350e94636b9"
+    },
+    "next": {
+      "sourceWord": "next",
+      "translation": "n. 下一个\\na. 下一个的, 其次的, 贴近的\\nadv. 然后, 下次, 次于\\n[计] 近邻干扰",
+      "sha256": "0f917fb7305dde5296235a94bf3c2822228cf3b6f71e46a1e0f189b00d8c7b1e"
+    },
+    "no": {
+      "sourceWord": "no",
+      "translation": "n. 不, 拒绝, 否决票\\na. 没有, 不是, 绝非\\nadv. 不",
+      "sha256": "ac4202f1a2839c04d236aae9d25e09bb00d01db8fbc166d035988b8e6ac96a65"
+    },
+    "off": {
+      "sourceWord": "off",
+      "translation": "a. 关着的, 不再生效的, 处于...境况的, 休假的, 空闲的\\nadv. 走开, ...掉, ...下, 休息, 出发, 隔断\\nprep. 离开, 脱落, 不在从事......, 在...之外\\nvi. 离开, 滚开\\nvt. 杀死\\nn. 关闭状态\\n[计] 关闭, 清屏命令",
+      "sha256": "005c087d4cbb440e2335a9bc619826cf77ce80d172ad52a023a1cc2edce49000"
+    },
+    "out": {
+      "sourceWord": "out",
+      "translation": "a. 外面的, 熄灭的, 结束的\\nadv. 在外, 熄灭, 出现\\nprep. 出自, 离去, 向",
+      "sha256": "f88675d3f1712f08d69ac80679c11f683a056b9bec8cece4ff1580f4997a6c57"
+    },
+    "pink": {
+      "sourceWord": "pink",
+      "translation": "n. 粉红色, 石竹花, 化身, 典范, 头面人物, 极度\\na. 粉红的, 石竹科的, 比较激进的, 脸色发红的, 精致的, 有点下流的\\nvt. 刺, 扎, 刺痛, 射伤, 使面红耳赤, 使变粉红色\\nvi. 变粉红色",
+      "sha256": "9db5b6a863acc1a9b1687587a76f109ce716de7c191021d74a86295c634c4c52"
+    },
+    "please": {
+      "sourceWord": "please",
+      "translation": "adv. 请\\nvt. 使高兴, 合...的心意, 取悦\\nvi. 使人满意, 讨好, 愿意, 敬请",
+      "sha256": "598c79503e71f03e7d7d6a2cdf02ea5ae495ca013051ff5ccbfe6b00e4a05084"
+    },
+    "so": {
+      "sourceWord": "so",
+      "translation": "adv. 如此, 如是, 如...那样\\nconj. 所以, 因此\\npron. 这样",
+      "sha256": "83363250d75335fb1fd9770e074f271ee20fb7e72017d0a8bdb85d8b125853db"
+    },
+    "some": {
+      "sourceWord": "some",
+      "translation": "pron. 一些, 一部分, 若干\\nadv. 大约\\na. 一些的, 少许的, 某一的",
+      "sha256": "e86a565bbe5fb3263cd8c550054e58411246d5cdaf5e7d7fc81d9d757b5f9b1a"
+    },
+    "up": {
+      "sourceWord": "up",
+      "translation": "a. 向上的, 起床的, 涨的\\nadv. 向上, 上涨\\nprep. 在...上面, 向...的较高处",
+      "sha256": "69eb218cef771236fdd0e02785c7b50da91f3371c602012e0dd009de7e65066b"
+    },
+    "that": {
+      "sourceWord": "that",
+      "translation": "a. 那, 那个\\nconj. 以致, 因为\\npron. 那\\nadv. 那么, 那样",
+      "sha256": "82544c57e14a002f14750dc47adb14a6b4d474f498713f7652357129c21bc4a7"
+    },
+    "well": {
+      "sourceWord": "well",
+      "translation": "n. 井, 泉水, 源泉, 好\\nv. 涌出\\na. 健康的, 良好的, 适宜的, 恰当的\\nadv. 很好地, 适当地, 好意地, 很, 完全\\ninterj. 好啦",
+      "sha256": "ea3d19e067ac183781455e364b9ff55fcd86f28b73bef3ab2def5d05458cc822"
+    },
+    "yes": {
+      "sourceWord": "yes",
+      "translation": "adv. 是\\nn. 是, 同意\\nv. 同意",
+      "sha256": "f00b74bd724ee826b290e7b54ad0c0e3b59d37d750c2dbd3421b1d2b8eb0804e"
+    },
+    "yesterday": {
+      "sourceWord": "yesterday",
+      "translation": "n. 昨天\\nadv. 昨天",
+      "sha256": "71aa1fe94156268bb824d7ba321a0a323a2484fcd5c7b640bc28ab0de6963d66"
+    },
+    "today": {
+      "sourceWord": "today",
+      "translation": "n. 今天, 当今, 现在\\nadv. 今天, 当今",
+      "sha256": "20f9aa2b2db2d8b75ad06b71f8bfdec970fd6964e1c338eee936de47cc22d3db"
+    },
+    "upset": {
+      "sourceWord": "upset",
+      "translation": "a. 弄翻的, 混乱的, 心烦的\\nvt. 弄翻, 颠覆, 推翻, 打乱, 使不适, 使心烦\\nvi. 翻倒",
+      "sha256": "0295f0021e14d5a4923a30211017b1f7871575c4652e758d334298ba41ac62c1"
+    },
+    "underwater": {
+      "sourceWord": "underwater",
+      "translation": "a. 在水中的\\nadv. 在水下",
+      "sha256": "2ec1f4c59837107f9439e304d6af26085991bad8045a6ccd396f11b0427907d6"
+    },
+    "commercial": {
+      "sourceWord": "commercial",
+      "translation": "a. 商业的, 商用的, 商品化的\\nn. 商业广告节目",
+      "sha256": "23389cf3c335957bdaec0b5e81fdbf648bfc6cc56d8c51493e702e1cd5274964"
+    },
+    "zigzag": {
+      "sourceWord": "zigzag",
+      "translation": "n. 曲折线条, Z字形道路\\na. 之字形的, 曲折的, 锯齿形的\\nadv. 之字形地, 曲折地, 成锯齿形地\\nvt. 使成之字形, 使曲折进行\\nvi. 成之字形, 弯曲地走路",
+      "sha256": "9f5aed77ba046830bdc05dc3b3b2604234bb963f758129c956c1038c0057a074"
+    },
+    "envy": {
+      "sourceWord": "envy",
+      "translation": "n. 羡慕, 嫉妒\\nvt. 羡慕, 嫉妒",
+      "sha256": "e5d7e043773e39c2a68b46ed93e4df84bdb24d1acdfbb9063e21a713b5ceb5ed"
+    },
+    "eleven": {
+      "sourceWord": "eleven",
+      "translation": "num. 十一, 十一个",
+      "sha256": "a321950ff4bdfb0fb570dae23e25e3de29dc6da7af6dcc14672237cffc6fecd4"
+    },
+    "twelve": {
+      "sourceWord": "twelve",
+      "translation": "num. 十二, 十二个",
+      "sha256": "5bba3c96ab0c8ae34d2c799309b64417b3a16360319e88cb109f980bbe831527"
+    },
+    "thirteen": {
+      "sourceWord": "thirteen",
+      "translation": "num. 十三, 十三个",
+      "sha256": "e56b9bba1d80b069b2b4da681659175639fae056a6cc8fccb904c999a415aa08"
+    },
+    "fourteen": {
+      "sourceWord": "fourteen",
+      "translation": "num. 十四, 十四个",
+      "sha256": "f6ae89a4c8720dac8fe5a303e7576346d7a8bc2f01b278a388d33743555d1649"
+    },
+    "fifteen": {
+      "sourceWord": "fifteen",
+      "translation": "num. 十五, 十五个",
+      "sha256": "2deb8342f0e15bfabd245322f0744b9c9e6d8c4611db058301075e32446ba65f"
+    },
+    "sixteen": {
+      "sourceWord": "sixteen",
+      "translation": "num. 十六, 十六个",
+      "sha256": "aa9c87bfab304266880aac56fb872a613439c193e41b2c997548c16ccc9a3edb"
+    },
+    "seventeen": {
+      "sourceWord": "seventeen",
+      "translation": "num. 十七, 十七个",
+      "sha256": "a39c3718d264478ca5b29ede497597e6bb65221888d36992eb9e3f7aead89da3"
+    },
+    "eighteen": {
+      "sourceWord": "eighteen",
+      "translation": "num. 十八, 十八个",
+      "sha256": "6dff76d0886bb98b09266f334baae4e6d541bd93fa97fb201caf3682754e5368"
+    },
+    "nineteen": {
+      "sourceWord": "nineteen",
+      "translation": "num. 十九, 十九个",
+      "sha256": "cba7535fcf4488914e269074794862788d47f08106103aebf9f9666811148fea"
+    },
+    "twenty": {
+      "sourceWord": "twenty",
+      "translation": "num. 二十, 二十个",
+      "sha256": "26370bb8b9bc71a7a033daddce5abacfbf82d943c210daa7ef496ffa2ecfc5fd"
+    },
+    "thirty": {
+      "sourceWord": "thirty",
+      "translation": "num. 三十, 三十个",
+      "sha256": "a80fbeda84a649f6f42de9d030dbad00b2e06806ac3c40fb46536bb66462cfcb"
+    },
+    "forty": {
+      "sourceWord": "forty",
+      "translation": "num. 四十, 四十个",
+      "sha256": "59164b164dfebe98a843777eb121eb636ff6ed4e52bd1f708ae2f129423d4a06"
+    },
+    "fifty": {
+      "sourceWord": "fifty",
+      "translation": "num. 五十, 五十个",
+      "sha256": "47f59242b2b40a0aff78c1de37f1662851d84bd7f24d6ba7f0eab3d5947fd6e9"
+    },
+    "sixty": {
+      "sourceWord": "sixty",
+      "translation": "num. 六十, 六十个",
+      "sha256": "ce464236f492c96e41978188b6c517effbd426d816d57fe111b82b96a5a586f2"
+    },
+    "seventy": {
+      "sourceWord": "seventy",
+      "translation": "num. 七十, 七十个",
+      "sha256": "ad89226377685d4007bc4208dbf61eb9fc0379d4502d68b30e2d53d8b72952a7"
+    },
+    "eighty": {
+      "sourceWord": "eighty",
+      "translation": "num. 八十, 八十个",
+      "sha256": "7ec4cdd850389199fa2ab285cffc467c6a5385e0429acae5f041ff3abaf176d3"
+    },
+    "ninety": {
+      "sourceWord": "ninety",
+      "translation": "num. 九十, 九十个",
+      "sha256": "66fa03acb6195206675610f1da432165897c4b87ed8af4a9f48c534a84c42dd6"
+    },
+    "thousand": {
+      "sourceWord": "thousand",
+      "translation": "num. 千\\na. 成千的, 许多的\\nn. 许许多多",
+      "sha256": "abb89dc65096a2791261392cc56aa56c74fa553638dd43a8dfeb0455879ddff4"
+    },
+    "third": {
+      "sourceWord": "third",
+      "translation": "num. 第三, 三分之一\\n[机] 第三; 第三的",
+      "sha256": "be5dc327a9227d50591ed634d5bbc8e3330a4470be2f505ebe12cce796fb35d1"
+    },
+    "fourth": {
+      "sourceWord": "fourth",
+      "translation": "num. 第四, 四分之一",
+      "sha256": "81905b4feaf5d8e2b5401a4da2f31d3d7a0bbc4de1f804ee112544440b98258e"
+    },
+    "fifth": {
+      "sourceWord": "fifth",
+      "translation": "num. 第五, 五分之一",
+      "sha256": "5733b274934d91c1f71195b59a50162b0dc4e1e2cd04dbe5d2148aebb21677b3"
+    },
+    "sixth": {
+      "sourceWord": "sixth",
+      "translation": "num. 第六, 六分之一",
+      "sha256": "298717979903b5a7ef59f7c8f6dff5fe26b28b1ba03c45a3e7f8e756a00033da"
+    },
+    "seventh": {
+      "sourceWord": "seventh",
+      "translation": "num. 第七, 七分之一",
+      "sha256": "572047b982676289e844f33663e0d1d8e7f7fd1de0cf2a7bd009a3292b4bb612"
+    },
+    "eighth": {
+      "sourceWord": "eighth",
+      "translation": "num. 第八, 八分之一",
+      "sha256": "0f208b17fcb36c38983f4b60189a17a4b86a66d7c6757ce9d8057004b0455916"
+    },
+    "ninth": {
+      "sourceWord": "ninth",
+      "translation": "num. 第九, 九分之一",
+      "sha256": "a8515921c41fd823788be76a9de9ffbf2ebb7056a7802c6fab7bcd20be5ffe60"
+    },
+    "tenth": {
+      "sourceWord": "tenth",
+      "translation": "num. 第十, 十分之一",
+      "sha256": "f99ccca77252f8042ae6c552a4cad5de2b3cbcdf359775bb74bd8d2a0e45022b"
+    },
+    "eleventh": {
+      "sourceWord": "eleventh",
+      "translation": "num. 第十一, 十一分之一",
+      "sha256": "8f0d0d22ed19bcad58b3520ebfc3d5eb86f4dd92d25bdb6f6d1f3f88e51dd364"
+    },
+    "twelfth": {
+      "sourceWord": "twelfth",
+      "translation": "num. 第十二, 十二分之一",
+      "sha256": "874c34bca00f20e280bf4ba82eadb0807a10f64ae4201a1a3eb860a5129771a7"
+    },
+    "thirteenth": {
+      "sourceWord": "thirteenth",
+      "translation": "num. 第十三, 十三分之一",
+      "sha256": "289b9f50aa5e543151f64249ab801b1f032e6208cfb0a27c82941fbe0207a3fa"
+    },
+    "fourteenth": {
+      "sourceWord": "fourteenth",
+      "translation": "num. 第十四, 十四分之一",
+      "sha256": "2ad39c1196069cbb8af58194c03ec6a0832c1abe72c0a36e30aae4a75af7f8cd"
+    },
+    "fifteenth": {
+      "sourceWord": "fifteenth",
+      "translation": "num. 第十五, 十五分之一",
+      "sha256": "fe5c4f835cf2bd18ea78b22d63eef884e1ef88a96ad2f19728e17da8efb90b93"
+    },
+    "sixteenth": {
+      "sourceWord": "sixteenth",
+      "translation": "num. 第十六, 十六分之一",
+      "sha256": "d50ca1363ef36adabaf00115c975e7f0ffef2fc6607ca64bb94d3f1ab961d825"
+    },
+    "seventeenth": {
+      "sourceWord": "seventeenth",
+      "translation": "num. 第十七, 十七分之一",
+      "sha256": "0fcec7be26c5d8ac4a4216e19a3d9219149db00ce49dbd9c5f2d5712ecc24ff0"
+    },
+    "eighteenth": {
+      "sourceWord": "eighteenth",
+      "translation": "num. 第十八, 十八分之一",
+      "sha256": "a36b0a76b93f98dc378ac9e3761d191556c142b09f38a77e32964bcd0b60905b"
+    },
+    "nineteenth": {
+      "sourceWord": "nineteenth",
+      "translation": "num. 第十九, 十九分之一",
+      "sha256": "df88ea192ea7261061f2b55b694512e94f4bb3bb13a41b50dcc17ebeb3e76872"
+    },
+    "twentieth": {
+      "sourceWord": "twentieth",
+      "translation": "num. 第二十, 二十分之一",
+      "sha256": "952c9dd376373709699426978ad456e234c17ed30cfb42acfa92bad383947515"
+    },
+    "thirtieth": {
+      "sourceWord": "thirtieth",
+      "translation": "num. 第三十, 三十分之一",
+      "sha256": "d44f7dcfdd6dd9cdc93420c1eb30717f87fb7ed5584ba114edd2fbda1675591f"
+    },
+    "fortieth": {
+      "sourceWord": "fortieth",
+      "translation": "num. 第四十, 四十分之一",
+      "sha256": "9c8d555360c1afcb330b9eace3147ad2b66a6dc10c7496859fd3d185d2a5ed21"
+    },
+    "fiftieth": {
+      "sourceWord": "fiftieth",
+      "translation": "num. 第五十, 五十分之一",
+      "sha256": "eec03092de2c0a968145629eeca15f03b995b49f4e0c595ff19ac5c972aaec42"
+    },
+    "sixtieth": {
+      "sourceWord": "sixtieth",
+      "translation": "num. 第六十, 六十分之一",
+      "sha256": "67b35e71ae6b870004bb31e3fa7d171514a0a892e6f9b1868ba0a4a792b701e6"
+    },
+    "seventieth": {
+      "sourceWord": "seventieth",
+      "translation": "num. 第七十, 七十分之一",
+      "sha256": "2b885e66a5dad55b819203702ea546f685214ae260129b53739c83b5dab21999"
+    },
+    "eightieth": {
+      "sourceWord": "eightieth",
+      "translation": "num. 第八十, 八十分之一",
+      "sha256": "f105872b92717aed853e0344b3dc4205c92fee242ab922f6a09155113c329217"
+    },
+    "ninetieth": {
+      "sourceWord": "ninetieth",
+      "translation": "num. 第九十, 九十分之一",
+      "sha256": "f26d8e86952ba23ed90ff6f11d82c7107a9f0b89b7a63a257d2489f5b76a9505"
+    },
+    "hundredth": {
+      "sourceWord": "hundredth",
+      "translation": "a. 第一百的",
+      "sha256": "5612aa7de617d10139c255c7ac1d706dec3d21965b833184bb805b151f278f3a"
+    },
+    "the": {
+      "sourceWord": "the",
+      "translation": "art. 那"
+    },
+    "hundred": {
+      "sourceWord": "hundred",
+      "translation": "n. 百, 百个东西\\nnum. 百, 百个\\na. 一百的, 许多的"
+    },
+    "first": {
+      "sourceWord": "first",
+      "translation": "adv. 首先, 第一, 优先\\na. 第一的\\nnum. 第一\\nn. 开始, 第一"
+    },
+    "second": {
+      "sourceWord": "second",
+      "translation": "n. 秒, 瞬间, 第二名, 支持者, 助手\\na. 第二的, 其次的, 次要的, 附加的, 辅助的\\nnum. 第二\\nvt. 当...助手, 支持"
+    }
+  }
+}

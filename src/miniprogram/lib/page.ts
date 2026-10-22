@@ -7,9 +7,11 @@ import * as learning from './learning/learning';
 import { withCurrentAge } from './learning/child-profile';
 import { studyNotesView } from './study-notes-view';
 import { recitationLabel } from './content-presentation';
+import { wordEntry } from './word-entry';
 const modeLabels = { new: '全新', review: '复习', manual: '家长安排' };
 const decorate = <T extends Decoratable>(item: T): Decorated<T> => {
   const knowledge = learning.catalogById.get(learning.contentId(item));
+  const dictionary = wordEntry(item, knowledge);
   const poetry = learning.kindOf(item) === 'poetry' ? knowledge : undefined;
   const requirements = poetry?.recitationRequirements || [];
   const pendingBooks = [...new Map((poetry?.gradeMappings || []).filter(mapping => !requirements.some(entry => entry.bookId === mapping.bookId))
@@ -18,7 +20,7 @@ const decorate = <T extends Decoratable>(item: T): Decorated<T> => {
     ...requirements.map(entry => `${recitationLabel(entry, poetry?.gradeMappings)}${entry.start ? `（${entry.start}—${entry.end}）` : ''}；原书第${entry.sourcePrintPage}页 / 电子第${entry.sourcePdfPage}页。`),
     ...(pendingBooks.length ? [`${pendingBooks.join('、')}：指定背诵、默写范围待核实。`] : [])
   ].join('\n') : '';
-  return { ...item, studyNotes: knowledge?.studyNotes, ...(poetry ? { poetryByline: `${poetry.dynasty || '朝代待考'} · ${poetry.author || '作者待考'}`, dynastyNote: poetry.dynastyNote || '',
+  return { ...item, wordBrief: dictionary?.brief || '', phoneticBrief: dictionary?.phoneticBrief || '', studyNotes: knowledge?.studyNotes, ...(poetry ? { poetryByline: `${poetry.dynasty || '朝代待考'} · ${poetry.author || '作者待考'}`, dynastyNote: poetry.dynastyNote || '',
     recitationNote: recitationNote || '当前有原作与来源；该版本指定背诵、默写范围待核实，不将全文自动标为必背。',
     displayDetail: poetry.author && item.detail?.startsWith(`${poetry.author}\n`) ? item.detail.slice(poetry.author.length + 1) : item.detail || '' } : {}),
   kindLabel: learning.learningAreas.find(area => area.id === knowledge?.learningArea)?.label || learning.definition(learning.kindOf(item)).label,

@@ -20,6 +20,8 @@
 | `shanghai-zhongkao-framework.json` | 上海中考参考年份、能力方向、官方依据、内容缺项 | 事实性摘要；历史材料与现行政策分开，不作为完整中考清单 |
 | `english-moe-2022.json` | 1,600 组国家课标词头、505 个星标、通用词典参考 | 词头来自课标；部分释义来自 ECDICT，采用 MIT，见下方声明 |
 | `english-foundation-meanings.json` | 505 个基础词的常用义提示 | 自编简短释义，供家庭学习参考；不是教材单元词义 |
+| `english-pronunciations.json`、`english-pronunciation-evidence.json`、`english-pronunciation-overrides.json` | 客户端音标、固定来源及18个词头的单独核对 | CMU 0.7b IPA转换、Open English Wordnet 2025及具名词典；不猜读音，未确认项明确标注，见[词典展示与证据](../../docs/英语词典展示.md) |
+| `english-dictionary-core*.json`、`english-dictionary-basic-pos*.json` | 60个入门词的词性与常见义、279个基础词的词性及证据 | Wordnet、ECDICT、Collins等具名依据；只供客户端展示，不改变内容ID、教材关联或任务快照 |
 | `english-reviewed-meanings.json` | 96项原通用词典卡的常用义、例句与中文提示 | 自编教学辅助，不冒充教材译文，原ID不变 |
 | `chinese-recitation-requirements.json`、`chinese-recitation-page-evidence.json` | 138处具名教材的背诵、默写、指定范围与熟读成诵要求；新增原页核验摘要 | 原书课后要求的事实性范围和页码、核验图像SHA-256；未核范围保留待确认 |
 | `chinese-placement-page-evidence.json` | 一上、一下、二上、三上31处古诗文的独立官方位置证据 | 国家平台具名原书封面、出版说明、目录及正文页的元数据、页图SHA-256；不包含教材图像，不推定整册字表或学校印次 |

@@ -2,17 +2,20 @@
 <import src="../../templates/study-notes.wxml" />
 <import src="../../templates/content-sources.wxml" />
 <import src="../../templates/content-schedule.wxml" />
+<import src="../../templates/word-entry.wxml" />
 <view class="page content-page {{canSchedule ? 'has-schedule' : ''}}">
   <view wx:if="{{item}}" class="card study-item">
     <view class="row"><view class="pill {{item.subject}}">{{item.kindLabel}}</view><view class="muted">{{status}}{{status && assignedToday ? ' · ' : ''}}{{assignedToday ? '已在今日' : ''}}</view></view>
-    <view class="task-title"><template is="pinyinText" data="{{enabled: showPinyin, lines: pinyin.title, text: item.title}}" /></view>
+    <view class="task-title {{item.wordEntry ? 'dictionary-headword' : ''}}"><template is="pinyinText" data="{{enabled: showPinyin, lines: pinyin.title, text: item.title}}" /></view>
+    <template wx:if="{{item.wordEntry}}" is="wordPronunciation" data="{{entry: item.wordEntry}}" />
     <view wx:if="{{item.poetryByline}}" class="muted poetry-byline">{{item.poetryByline}}</view>
     <view wx:if="{{gradeLabel}}" class="muted plan-help">{{gradeLabel}}</view>
     <view wx:if="{{contextLabel}}" class="muted plan-help">{{contextLabel}}</view>
     <button wx:if="{{pinyin}}" class="quiet pinyin-toggle" bindtap="togglePinyin">{{showPinyin ? '隐藏拼音' : '显示拼音'}}</button>
     <view wx:if="{{item.textCorrectionNotice}}" class="notice">{{item.textCorrectionNotice}}</view>
-    <view class="body"><template is="pinyinText" data="{{enabled: showPinyin, lines: pinyin.body, text: item.displayDetail || item.detail || '和家人一起回顾这项内容。'}}" /></view>
+    <view wx:if="{{!item.wordEntry}}" class="body"><template is="pinyinText" data="{{enabled: showPinyin, lines: pinyin.body, text: item.displayDetail || item.detail || '和家人一起回顾这项内容。'}}" /></view>
     <speech-button item="{{item}}" child-id="{{childId}}" />
+    <template wx:if="{{item.wordEntry}}" is="wordDefinitions" data="{{entry: item.wordEntry}}" />
     <view wx:if="{{item.recitationSummary}}" class="body recitation-summary">{{item.recitationSummary}}</view>
     <template is="studyNotes" data="{{item, notesOpenId, notesAnswersId}}" />
     <template is="contentSources" data="{{item, sourcesOpenId, gradeLabels}}" />

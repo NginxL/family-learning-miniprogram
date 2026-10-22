@@ -2,6 +2,7 @@
 <import src="../../templates/study-notes.wxml" />
 <import src="../../templates/content-sources.wxml" />
 <import src="../../templates/planned-task-edit.wxml" />
+<import src="../../templates/word-entry.wxml" />
 <view class="page study-page {{planning ? 'planning-page' : ''}}">
   <view wx:if="{{mode === 'demo'}}" class="notice">本机演示 · 数据仅保存在这台设备，未连接云端</view>
   <view wx:if="{{notice}}" class="notice" bindtap="dismissNotice">{{notice}}　×</view>
@@ -17,11 +18,13 @@
     <button wx:if="{{hasPinyin}}" class="quiet pinyin-toggle" bindtap="togglePinyin">{{showPinyin ? '隐藏拼音' : '显示拼音'}}</button>
     <view wx:for="{{items}}" wx:key="id" class="card study-item">
       <view class="row"><view class="pill {{item.subject}}">{{item.modeLabel}}</view><view class="muted">{{item.pending ? '待同步' : item.done ? '已完成' : '待学习'}} · {{index + 1}} / {{group.count}}</view></view>
-      <view class="task-title"><template is="pinyinText" data="{{enabled: showPinyin, lines: item.pinyin.title, text: item.title}}" /></view>
+      <view class="task-title {{item.wordEntry ? 'dictionary-headword' : ''}}"><template is="pinyinText" data="{{enabled: showPinyin, lines: item.pinyin.title, text: item.title}}" /></view>
+      <template wx:if="{{item.wordEntry}}" is="wordPronunciation" data="{{entry: item.wordEntry}}" />
       <view wx:if="{{item.poetryByline}}" class="muted poetry-byline">{{item.poetryByline}}</view>
       <view wx:if="{{item.textCorrectionNotice}}" class="notice">{{item.textCorrectionNotice}}</view>
-      <view class="body"><template is="pinyinText" data="{{enabled: showPinyin, lines: item.pinyin.body, text: item.displayDetail || item.detail || '和家人一起完成这项学习。'}}" /></view>
+      <view wx:if="{{!item.wordEntry}}" class="body"><template is="pinyinText" data="{{enabled: showPinyin, lines: item.pinyin.body, text: item.displayDetail || item.detail || '和家人一起完成这项学习。'}}" /></view>
       <speech-button item="{{item}}" child-id="{{childId}}" date="{{date}}" task-id="{{item.id}}" />
+      <template wx:if="{{item.wordEntry}}" is="wordDefinitions" data="{{entry: item.wordEntry}}" />
     <view wx:if="{{item.recitationSummary}}" class="body recitation-summary">{{item.recitationSummary}}</view>
       <template is="studyNotes" data="{{item, notesOpenId, notesAnswersId}}" />
       <template is="contentSources" data="{{item, sourcesOpenId, gradeLabels}}" />

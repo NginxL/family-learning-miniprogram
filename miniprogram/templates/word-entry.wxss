@@ -1,0 +1,21 @@
+.study-item .task-title.dictionary-headword { font-size:52rpx; line-height:1.25; font-weight:650; letter-spacing:-.5rpx; overflow-wrap:anywhere; margin:20rpx 0 12rpx; }
+.dictionary-pronunciations { margin:14rpx 0 6rpx; }
+.dictionary-sound { display:flex; align-items:baseline; flex-wrap:wrap; gap:8rpx 14rpx; padding:7rpx 0; }
+.dictionary-accent { color:#6b7b71; font-size:23rpx; }
+.dictionary-ipa { font-family:Arial,"Helvetica Neue",sans-serif; font-size:31rpx; color:#344d41; overflow-wrap:anywhere; }
+.dictionary-pronunciation-usage { font-size:23rpx; color:#66786b; }
+.dictionary-pending { font-size:23rpx; }
+.dictionary-section { border-top:1rpx solid #e8ede6; margin-top:28rpx; padding-top:24rpx; }
+.dictionary-section-title { color:#687d70; font-size:23rpx; font-weight:500; margin-bottom:20rpx; }
+.dictionary-group + .dictionary-group { margin-top:24rpx; }
+.dictionary-pos { display:flex; align-items:baseline; gap:14rpx; color:#6b7b71; font-size:24rpx; margin-bottom:8rpx; }
+.dictionary-pos-code { color:#27654c; font-family:Georgia,serif; font-size:29rpx; font-style:italic; font-weight:600; }
+.dictionary-sense { display:flex; gap:18rpx; align-items:baseline; margin:12rpx 0; line-height:1.75; }
+.dictionary-number { color:#8b9e90; font-size:23rpx; width:22rpx; flex-shrink:0; }
+.dictionary-meaning { min-width:0; overflow-wrap:anywhere; font-size:30rpx; }
+.dictionary-form-head { font-size:28rpx; font-weight:600; color:#365c48; }
+.dictionary-inflection { padding:12rpx 0; }
+.dictionary-inflection-row { display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:8rpx 20rpx; }
+.dictionary-form-value { color:#254a36; font-weight:500; overflow-wrap:anywhere; }
+.dictionary-form-context { color:#7c897e; font-size:22rpx; }
+.dictionary-example { font-size:28rpx; margin:10rpx 0; overflow-wrap:anywhere; }

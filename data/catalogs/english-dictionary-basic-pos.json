@@ -1,0 +1,2370 @@
+{
+  "checkedAt": "2026-10-22",
+  "source": {
+    "title": "ECDICT · 基础词词性参考",
+    "url": "https://github.com/skywind3000/ECDICT/tree/bc015ed2e24a7abef49fc6dbbb7fe32c1dadaf8b"
+  },
+  "policy": "已有基础学习义项的词性整理；形容词 a. 展示为 adj.，vt./vi. 简写 v.；旧词典用法的 pron./adj./aux. 按原记录保留。自编中文提示对照同词源行，不导入专业义。基数和序数按学习用数词归类。不是全词性、全义项词典。",
+  "entries": {
+    "afternoon": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "下午"
+        }
+      ]
+    },
+    "age": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "年龄"
+        }
+      ]
+    },
+    "air": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "空气"
+        }
+      ]
+    },
+    "basketball": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "篮球"
+        }
+      ]
+    },
+    "blackboard": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "黑板"
+        }
+      ]
+    },
+    "candle": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "蜡烛"
+        }
+      ]
+    },
+    "candy": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "糖果"
+        }
+      ]
+    },
+    "cap": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "帽子（通常有帽舌）；盖子"
+        }
+      ]
+    },
+    "chicken": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "鸡；鸡肉"
+        }
+      ]
+    },
+    "dinner": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "正餐；晚餐"
+        }
+      ]
+    },
+    "earth": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "地球；泥土"
+        }
+      ]
+    },
+    "fire": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "火；火灾"
+        }
+      ]
+    },
+    "floor": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "地板；楼层"
+        }
+      ]
+    },
+    "football": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "足球；橄榄球（美式英语用法）"
+        }
+      ]
+    },
+    "glue": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "胶水"
+        },
+        {
+          "pos": "v.",
+          "meaning": "粘贴"
+        }
+      ]
+    },
+    "grass": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "草"
+        }
+      ]
+    },
+    "hill": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "小山"
+        }
+      ]
+    },
+    "kid": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "小孩"
+        }
+      ]
+    },
+    "kite": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "风筝"
+        }
+      ]
+    },
+    "lot": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "很多（常用 a lot 或 a lot of）"
+        }
+      ]
+    },
+    "lunch": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "午餐"
+        }
+      ]
+    },
+    "meat": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "肉"
+        }
+      ]
+    },
+    "morning": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "早晨；上午"
+        }
+      ]
+    },
+    "music": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "音乐"
+        }
+      ]
+    },
+    "pair": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "一双；一对"
+        }
+      ]
+    },
+    "pet": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "宠物"
+        }
+      ]
+    },
+    "piano": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "钢琴"
+        }
+      ]
+    },
+    "plane": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "飞机"
+        }
+      ]
+    },
+    "playground": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "操场"
+        }
+      ]
+    },
+    "police": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "警察"
+        }
+      ]
+    },
+    "ruler": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "尺子"
+        }
+      ]
+    },
+    "schoolbag": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "书包"
+        }
+      ]
+    },
+    "science": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "科学"
+        }
+      ]
+    },
+    "ship": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "轮船"
+        }
+      ]
+    },
+    "shorts": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "短裤"
+        }
+      ]
+    },
+    "sock": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "短袜"
+        }
+      ]
+    },
+    "sport": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "体育运动"
+        }
+      ]
+    },
+    "spring": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "春天"
+        }
+      ]
+    },
+    "street": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "街道"
+        }
+      ]
+    },
+    "sweater": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "毛衣"
+        }
+      ]
+    },
+    "taxi": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "出租车"
+        }
+      ]
+    },
+    "toilet": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "厕所；马桶"
+        }
+      ]
+    },
+    "top": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "顶部"
+        },
+        {
+          "pos": "adj.",
+          "meaning": "最上面的"
+        }
+      ]
+    },
+    "trousers": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "长裤"
+        }
+      ]
+    },
+    "winter": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "冬天"
+        }
+      ]
+    },
+    "zoo": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "动物园"
+        }
+      ]
+    },
+    "meatball": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "肉丸"
+        }
+      ]
+    },
+    "slide": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "滑梯"
+        }
+      ]
+    },
+    "swing": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "秋千"
+        }
+      ]
+    },
+    "seesaw": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "跷跷板"
+        }
+      ]
+    },
+    "seahorse": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "海马"
+        }
+      ]
+    },
+    "dolphin": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "海豚"
+        }
+      ]
+    },
+    "clownfish": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "小丑鱼"
+        }
+      ]
+    },
+    "pond": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "池塘"
+        }
+      ]
+    },
+    "frog": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "青蛙"
+        }
+      ]
+    },
+    "aeroplane": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "飞机"
+        }
+      ]
+    },
+    "pineapple": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "菠萝"
+        }
+      ]
+    },
+    "skateboard": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "滑板"
+        }
+      ]
+    },
+    "triangle": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "三角形；三角铁"
+        }
+      ]
+    },
+    "rectangle": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "长方形"
+        }
+      ]
+    },
+    "builder": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "建筑工人"
+        }
+      ]
+    },
+    "noodles": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "面条"
+        }
+      ]
+    },
+    "plum": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "李子"
+        }
+      ]
+    },
+    "cherry": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "樱桃"
+        }
+      ]
+    },
+    "lawn": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "草坪"
+        }
+      ]
+    },
+    "bench": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "长椅"
+        }
+      ]
+    },
+    "parrot": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "鹦鹉"
+        }
+      ]
+    },
+    "crayon": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "蜡笔"
+        }
+      ]
+    },
+    "caterpillar": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "毛毛虫"
+        }
+      ]
+    },
+    "chick": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "小鸡"
+        }
+      ]
+    },
+    "puppy": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "小狗"
+        }
+      ]
+    },
+    "drill": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "电钻；钻孔工具"
+        }
+      ]
+    },
+    "lorry": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "卡车"
+        }
+      ]
+    },
+    "motorbike": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "摩托车"
+        }
+      ]
+    },
+    "entrance": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "入口"
+        }
+      ]
+    },
+    "exit": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "出口"
+        }
+      ]
+    },
+    "telephone": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "电话"
+        }
+      ]
+    },
+    "cupboard": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "橱柜"
+        }
+      ]
+    },
+    "bookshelf": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "书架"
+        }
+      ]
+    },
+    "cushion": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "靠垫"
+        }
+      ]
+    },
+    "turkey": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "火鸡"
+        }
+      ]
+    },
+    "castle": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "城堡"
+        }
+      ]
+    },
+    "atmosphere": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "大气"
+        }
+      ]
+    },
+    "consumer": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "消费者"
+        }
+      ]
+    },
+    "threat": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "威胁"
+        }
+      ]
+    },
+    "greenhouse": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "温室"
+        }
+      ]
+    },
+    "sunlight": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "阳光"
+        }
+      ]
+    },
+    "fuel": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "燃料"
+        }
+      ]
+    },
+    "ozone": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "臭氧"
+        }
+      ]
+    },
+    "destruction": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "毁坏"
+        }
+      ]
+    },
+    "erosion": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "侵蚀"
+        }
+      ]
+    },
+    "flooding": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "洪水泛滥"
+        }
+      ]
+    },
+    "cabinet": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "储物柜"
+        }
+      ]
+    },
+    "windscreen": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "挡风玻璃"
+        }
+      ]
+    },
+    "function": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "功能"
+        }
+      ]
+    },
+    "recreation": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "休闲活动"
+        }
+      ]
+    },
+    "sword": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "剑"
+        }
+      ]
+    },
+    "nickname": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "别称"
+        }
+      ]
+    },
+    "waterfront": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "滨水区"
+        }
+      ]
+    },
+    "studio": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "摄影棚"
+        }
+      ]
+    },
+    "jungle": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "丛林"
+        }
+      ]
+    },
+    "actress": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "女演员"
+        }
+      ]
+    },
+    "fence": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "栅栏"
+        }
+      ]
+    },
+    "sidewalk": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "人行道"
+        }
+      ]
+    },
+    "bucket": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "桶"
+        }
+      ]
+    },
+    "marble": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "弹珠"
+        }
+      ]
+    },
+    "dear": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "亲爱的"
+        }
+      ]
+    },
+    "dirty": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "脏的"
+        }
+      ]
+    },
+    "hungry": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "饿的"
+        }
+      ]
+    },
+    "ill": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "生病的"
+        }
+      ]
+    },
+    "sorry": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "对不起；抱歉的；难过的"
+        }
+      ]
+    },
+    "wonderful": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "精彩的；极好的"
+        }
+      ]
+    },
+    "wrong": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "错误的"
+        }
+      ]
+    },
+    "sour": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "酸的"
+        }
+      ]
+    },
+    "blunt": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "钝的"
+        }
+      ]
+    },
+    "stormy": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "有暴风雨的"
+        }
+      ]
+    },
+    "global": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "全球的"
+        }
+      ]
+    },
+    "various": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "各种各样的"
+        }
+      ]
+    },
+    "lifeless": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "没有生命的"
+        }
+      ]
+    },
+    "protective": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "保护性的"
+        }
+      ]
+    },
+    "massive": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "巨大的"
+        }
+      ]
+    },
+    "attractive": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "有吸引力的"
+        }
+      ]
+    },
+    "satisfied": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "满意的"
+        }
+      ]
+    },
+    "solar": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "太阳能的"
+        }
+      ]
+    },
+    "horrible": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "可怕的"
+        }
+      ]
+    },
+    "native": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "本地的"
+        }
+      ]
+    },
+    "exhausting": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "使人疲惫的"
+        }
+      ]
+    },
+    "marvellous": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "极好的"
+        }
+      ]
+    },
+    "amazed": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "惊讶的"
+        }
+      ]
+    },
+    "available": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "可获得的"
+        }
+      ]
+    },
+    "awesome": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "令人惊叹的"
+        }
+      ]
+    },
+    "terrific": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "极好的"
+        }
+      ]
+    },
+    "brilliant": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "出色的"
+        }
+      ]
+    },
+    "depressed": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "沮丧的"
+        }
+      ]
+    },
+    "unpainted": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "未涂漆的"
+        }
+      ]
+    },
+    "again": {
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "再一次；又"
+        }
+      ]
+    },
+    "ago": {
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "以前"
+        }
+      ]
+    },
+    "also": {
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "也"
+        }
+      ]
+    },
+    "here": {
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "这里；在这里"
+        }
+      ]
+    },
+    "how": {
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "怎样；如何"
+        }
+      ]
+    },
+    "never": {
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "从不"
+        }
+      ]
+    },
+    "not": {
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "不"
+        }
+      ]
+    },
+    "now": {
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "现在"
+        }
+      ]
+    },
+    "then": {
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "然后；那时"
+        }
+      ]
+    },
+    "too": {
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "也；太"
+        }
+      ]
+    },
+    "very": {
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "很；非常"
+        }
+      ]
+    },
+    "why": {
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "为什么"
+        }
+      ]
+    },
+    "violently": {
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "猛烈地"
+        }
+      ]
+    },
+    "sweep": {
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "扫；打扫"
+        }
+      ]
+    },
+    "occur": {
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "发生"
+        }
+      ]
+    },
+    "appreciate": {
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "欣赏；感谢"
+        }
+      ]
+    },
+    "select": {
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "挑选"
+        }
+      ]
+    },
+    "dip": {
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "蘸"
+        }
+      ]
+    },
+    "ignore": {
+      "senses": [
+        {
+          "pos": "v.",
+          "meaning": "忽视"
+        }
+      ]
+    },
+    "he": {
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "他"
+        }
+      ]
+    },
+    "her": {
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "她（宾格）；她的"
+        }
+      ]
+    },
+    "him": {
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "他（宾格）"
+        }
+      ]
+    },
+    "his": {
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "他的"
+        }
+      ]
+    },
+    "it": {
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "它"
+        }
+      ]
+    },
+    "its": {
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "它的"
+        }
+      ]
+    },
+    "me": {
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "我（宾格）"
+        }
+      ]
+    },
+    "our": {
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "我们的"
+        }
+      ]
+    },
+    "she": {
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "她"
+        }
+      ]
+    },
+    "them": {
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "他们；她们；它们（宾格）"
+        }
+      ]
+    },
+    "these": {
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "这些"
+        }
+      ]
+    },
+    "they": {
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "他们；她们；它们"
+        }
+      ]
+    },
+    "this": {
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "这；这个"
+        }
+      ]
+    },
+    "those": {
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "那些"
+        }
+      ]
+    },
+    "us": {
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "我们（宾格）"
+        }
+      ]
+    },
+    "what": {
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "什么"
+        }
+      ]
+    },
+    "which": {
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "哪一个；哪些"
+        }
+      ]
+    },
+    "who": {
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "谁"
+        }
+      ]
+    },
+    "whose": {
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "谁的"
+        }
+      ]
+    },
+    "your": {
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "你的；你们的"
+        }
+      ]
+    },
+    "their": {
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "他们的；她们的；它们的"
+        }
+      ]
+    },
+    "at": {
+      "senses": [
+        {
+          "pos": "prep.",
+          "meaning": "在（某地点或时刻）"
+        }
+      ]
+    },
+    "behind": {
+      "senses": [
+        {
+          "pos": "prep.",
+          "meaning": "在……后面"
+        }
+      ]
+    },
+    "beside": {
+      "senses": [
+        {
+          "pos": "prep.",
+          "meaning": "在……旁边"
+        }
+      ]
+    },
+    "between": {
+      "senses": [
+        {
+          "pos": "prep.",
+          "meaning": "在……之间"
+        }
+      ]
+    },
+    "by": {
+      "senses": [
+        {
+          "pos": "prep.",
+          "meaning": "在……旁边；由；乘（交通工具）"
+        }
+      ]
+    },
+    "for": {
+      "senses": [
+        {
+          "pos": "prep.",
+          "meaning": "给；为了；达（某段时间）"
+        }
+      ]
+    },
+    "in": {
+      "senses": [
+        {
+          "pos": "prep.",
+          "meaning": "在……里面；在（某年、某月等时间）"
+        }
+      ]
+    },
+    "of": {
+      "senses": [
+        {
+          "pos": "prep.",
+          "meaning": "……的"
+        }
+      ]
+    },
+    "on": {
+      "senses": [
+        {
+          "pos": "prep.",
+          "meaning": "在……上面；在（某日）"
+        },
+        {
+          "pos": "adj.",
+          "meaning": "开着；正在使用的"
+        }
+      ]
+    },
+    "over": {
+      "senses": [
+        {
+          "pos": "prep.",
+          "meaning": "在……上方；超过"
+        },
+        {
+          "pos": "adv.",
+          "meaning": "结束"
+        }
+      ]
+    },
+    "to": {
+      "senses": [
+        {
+          "pos": "prep.",
+          "meaning": "向；到"
+        }
+      ]
+    },
+    "under": {
+      "senses": [
+        {
+          "pos": "prep.",
+          "meaning": "在……下面"
+        }
+      ]
+    },
+    "with": {
+      "senses": [
+        {
+          "pos": "prep.",
+          "meaning": "和……一起；用；带有"
+        }
+      ]
+    },
+    "and": {
+      "senses": [
+        {
+          "pos": "conj.",
+          "meaning": "和；并且"
+        }
+      ]
+    },
+    "because": {
+      "senses": [
+        {
+          "pos": "conj.",
+          "meaning": "因为"
+        }
+      ]
+    },
+    "or": {
+      "senses": [
+        {
+          "pos": "conj.",
+          "meaning": "或者"
+        }
+      ]
+    },
+    "must": {
+      "senses": [
+        {
+          "pos": "aux.",
+          "meaning": "必须；一定（表示推测）"
+        }
+      ]
+    },
+    "should": {
+      "senses": [
+        {
+          "pos": "aux.",
+          "meaning": "应该"
+        }
+      ]
+    },
+    "hi": {
+      "senses": [
+        {
+          "pos": "interj.",
+          "meaning": "你好（问候）"
+        }
+      ]
+    },
+    "about": {
+      "senses": [
+        {
+          "pos": "prep.",
+          "meaning": "关于"
+        },
+        {
+          "pos": "adv.",
+          "meaning": "大约"
+        }
+      ]
+    },
+    "after": {
+      "senses": [
+        {
+          "pos": "prep.",
+          "meaning": "在……之后"
+        }
+      ]
+    },
+    "before": {
+      "senses": [
+        {
+          "pos": "prep.",
+          "meaning": "在……之前"
+        }
+      ]
+    },
+    "all": {
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "全部"
+        },
+        {
+          "pos": "adj.",
+          "meaning": "所有的"
+        }
+      ]
+    },
+    "any": {
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "任何；一些（常用于疑问句或否定句）"
+        }
+      ]
+    },
+    "back": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "背部；后面"
+        },
+        {
+          "pos": "adv.",
+          "meaning": "向后；回到原处"
+        }
+      ]
+    },
+    "bear": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "熊"
+        },
+        {
+          "pos": "v.",
+          "meaning": "承受；忍受"
+        }
+      ]
+    },
+    "best": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "最好的"
+        },
+        {
+          "pos": "adv.",
+          "meaning": "最好地"
+        }
+      ]
+    },
+    "brown": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "棕色"
+        },
+        {
+          "pos": "adj.",
+          "meaning": "棕色的"
+        }
+      ]
+    },
+    "can": {
+      "senses": [
+        {
+          "pos": "aux.",
+          "meaning": "能；会；可以"
+        },
+        {
+          "pos": "n.",
+          "meaning": "罐；罐头"
+        }
+      ]
+    },
+    "down": {
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "向下"
+        },
+        {
+          "pos": "prep.",
+          "meaning": "沿着；往下"
+        }
+      ]
+    },
+    "every": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "每一；每个"
+        }
+      ]
+    },
+    "free": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "自由的；免费的"
+        },
+        {
+          "pos": "v.",
+          "meaning": "释放"
+        }
+      ]
+    },
+    "half": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "一半"
+        },
+        {
+          "pos": "adj.",
+          "meaning": "一半的"
+        }
+      ]
+    },
+    "least": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "最少的"
+        },
+        {
+          "pos": "adv.",
+          "meaning": "最少"
+        }
+      ]
+    },
+    "less": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "较少的"
+        },
+        {
+          "pos": "adv.",
+          "meaning": "较少"
+        }
+      ]
+    },
+    "may": {
+      "senses": [
+        {
+          "pos": "aux.",
+          "meaning": "可以；可能"
+        }
+      ]
+    },
+    "middle": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "中间"
+        },
+        {
+          "pos": "adj.",
+          "meaning": "中间的"
+        }
+      ]
+    },
+    "next": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "下一个的"
+        },
+        {
+          "pos": "adv.",
+          "meaning": "接下来"
+        }
+      ]
+    },
+    "no": {
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "不"
+        },
+        {
+          "pos": "adj.",
+          "meaning": "没有"
+        }
+      ]
+    },
+    "off": {
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "离开；关掉"
+        },
+        {
+          "pos": "prep.",
+          "meaning": "离开"
+        }
+      ]
+    },
+    "out": {
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "在外；出去"
+        }
+      ]
+    },
+    "pink": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "粉红色"
+        },
+        {
+          "pos": "adj.",
+          "meaning": "粉红色的"
+        }
+      ]
+    },
+    "please": {
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "请"
+        },
+        {
+          "pos": "v.",
+          "meaning": "使高兴"
+        }
+      ]
+    },
+    "so": {
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "如此；这么"
+        },
+        {
+          "pos": "conj.",
+          "meaning": "所以"
+        }
+      ]
+    },
+    "some": {
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "一些"
+        }
+      ]
+    },
+    "up": {
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "向上"
+        }
+      ]
+    },
+    "that": {
+      "senses": [
+        {
+          "pos": "pron.",
+          "meaning": "那；那个"
+        },
+        {
+          "pos": "conj.",
+          "meaning": "（引导从句）"
+        }
+      ]
+    },
+    "well": {
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "好；很好地"
+        },
+        {
+          "pos": "adj.",
+          "meaning": "健康的"
+        },
+        {
+          "pos": "n.",
+          "meaning": "井"
+        }
+      ]
+    },
+    "yes": {
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "是；是的"
+        }
+      ]
+    },
+    "yesterday": {
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "昨天"
+        },
+        {
+          "pos": "n.",
+          "meaning": "昨天"
+        }
+      ]
+    },
+    "today": {
+      "senses": [
+        {
+          "pos": "adv.",
+          "meaning": "今天"
+        },
+        {
+          "pos": "n.",
+          "meaning": "今天"
+        }
+      ]
+    },
+    "upset": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "心烦的；难过的"
+        },
+        {
+          "pos": "v.",
+          "meaning": "使心烦；打乱"
+        }
+      ]
+    },
+    "underwater": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "水下的"
+        },
+        {
+          "pos": "adv.",
+          "meaning": "在水下"
+        }
+      ]
+    },
+    "commercial": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "商业的"
+        }
+      ]
+    },
+    "zigzag": {
+      "senses": [
+        {
+          "pos": "adj.",
+          "meaning": "曲折的"
+        }
+      ]
+    },
+    "envy": {
+      "senses": [
+        {
+          "pos": "n.",
+          "meaning": "羡慕；嫉妒"
+        },
+        {
+          "pos": "v.",
+          "meaning": "羡慕；嫉妒"
+        }
+      ]
+    },
+    "eleven": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "十一"
+        }
+      ]
+    },
+    "twelve": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "十二"
+        }
+      ]
+    },
+    "thirteen": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "十三"
+        }
+      ]
+    },
+    "fourteen": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "十四"
+        }
+      ]
+    },
+    "fifteen": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "十五"
+        }
+      ]
+    },
+    "sixteen": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "十六"
+        }
+      ]
+    },
+    "seventeen": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "十七"
+        }
+      ]
+    },
+    "eighteen": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "十八"
+        }
+      ]
+    },
+    "nineteen": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "十九"
+        }
+      ]
+    },
+    "twenty": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "二十"
+        }
+      ]
+    },
+    "thirty": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "三十"
+        }
+      ]
+    },
+    "forty": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "四十"
+        }
+      ]
+    },
+    "fifty": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "五十"
+        }
+      ]
+    },
+    "sixty": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "六十"
+        }
+      ]
+    },
+    "seventy": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "七十"
+        }
+      ]
+    },
+    "eighty": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "八十"
+        }
+      ]
+    },
+    "ninety": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "九十"
+        }
+      ]
+    },
+    "thousand": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "千"
+        }
+      ]
+    },
+    "third": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "第三"
+        }
+      ]
+    },
+    "fourth": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "第四"
+        }
+      ]
+    },
+    "fifth": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "第五"
+        }
+      ]
+    },
+    "sixth": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "第六"
+        }
+      ]
+    },
+    "seventh": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "第七"
+        }
+      ]
+    },
+    "eighth": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "第八"
+        }
+      ]
+    },
+    "ninth": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "第九"
+        }
+      ]
+    },
+    "tenth": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "第十"
+        }
+      ]
+    },
+    "eleventh": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "第十一"
+        }
+      ]
+    },
+    "twelfth": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "第十二"
+        }
+      ]
+    },
+    "thirteenth": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "第十三"
+        }
+      ]
+    },
+    "fourteenth": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "第十四"
+        }
+      ]
+    },
+    "fifteenth": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "第十五"
+        }
+      ]
+    },
+    "sixteenth": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "第十六"
+        }
+      ]
+    },
+    "seventeenth": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "第十七"
+        }
+      ]
+    },
+    "eighteenth": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "第十八"
+        }
+      ]
+    },
+    "nineteenth": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "第十九"
+        }
+      ]
+    },
+    "twentieth": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "第二十"
+        }
+      ]
+    },
+    "thirtieth": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "第三十"
+        }
+      ]
+    },
+    "fortieth": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "第四十"
+        }
+      ]
+    },
+    "fiftieth": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "第五十"
+        }
+      ]
+    },
+    "sixtieth": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "第六十"
+        }
+      ]
+    },
+    "seventieth": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "第七十"
+        }
+      ]
+    },
+    "eightieth": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "第八十"
+        }
+      ]
+    },
+    "ninetieth": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "第九十"
+        }
+      ]
+    },
+    "hundredth": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "第一百"
+        }
+      ]
+    },
+    "the": {
+      "senses": [
+        {
+          "pos": "art.",
+          "meaning": "定冠词，用于特指的人或事物前"
+        }
+      ]
+    },
+    "hundred": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "百"
+        }
+      ]
+    },
+    "first": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "第一"
+        }
+      ]
+    },
+    "second": {
+      "senses": [
+        {
+          "pos": "num.",
+          "meaning": "第二"
+        },
+        {
+          "pos": "n.",
+          "meaning": "秒"
+        }
+      ]
+    }
+  }
+}

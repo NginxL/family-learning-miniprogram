@@ -1,5 +1,6 @@
 import * as learning from './learning/learning';
 import type { ContentInput, GradeMapping, KnowledgeItem } from '../../shared/models';
+import { wordEntry } from './word-entry';
 
 type RecitationRequirement = NonNullable<KnowledgeItem['recitationRequirements']>[number];
 
@@ -20,6 +21,7 @@ export function learningGradeLabel(item: KnowledgeItem): string {
 }
 export function withContentSources<T extends ContentInput>(item: T) {
   const knowledge = learning.catalogById.get(learning.contentId(item));
+  const dictionary = wordEntry(item, knowledge);
   const revision = knowledge?.textRevision;
   const vocabularyRevision = knowledge?.vocabularyRevision;
   const contentRevision = knowledge?.contentRevision;
@@ -27,12 +29,13 @@ export function withContentSources<T extends ContentInput>(item: T) {
   const recitationSources = (knowledge?.recitationRequirements || []).map(entry => ({ ...entry,
     label: recitationLabel(entry, knowledge?.gradeMappings) }));
   return { ...item,
+    wordEntry: dictionary,
     textRevision: revision,
     vocabularyRevision,
     contentRevision,
     commonSenseSources: knowledge?.commonSenseSources || [],
     dictionaryReference: knowledge?.dictionaryReference || '',
-    textCorrectionNotice: hasOlderText ? (vocabularyRevision
+    textCorrectionNotice: dictionary?.legacyText ? `${vocabularyRevision ? '词义和词形说明已校订。' : ''}词典释义按当前词库展示；安排时的原文保留在“来源详情与说明”，学习记录不变。` : hasOlderText ? (vocabularyRevision
       ? '词义和词形说明已校订。本任务保留安排时的内容，学习笔记使用新版；请在“来源详情与说明”中核对新版词卡，学习记录不变。'
       : contentRevision ? '讲解或练习已校订。本任务保留安排时的内容，请在“来源详情与说明”中核对新版；学习记录不变。'
       : '正文已校订。本任务保留安排时的正文，请在“来源详情与说明”中查看校订正文；学习记录不变。') : '',

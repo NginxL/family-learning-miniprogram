@@ -31,7 +31,7 @@
     <view wx:if="{{learningCached}}" class="muted">已学标记来自本机缓存，联网刷新后更新。</view>
     <view wx:if="{{learningError}}" class="notice" bindtap="loadLearningStatus">{{learningError}} · 点击重试</view>
     <learning-card wx:for="{{items}}" wx:key="id" data-id="{{item.id}}" bindopen="openContent" title="{{item.title}}"
-      tag="{{item.kindLabel}}" subject="{{item.subject}}" meta="{{item.gradeLabel}}" preview="{{item.preview}}"
+      tag="{{item.kindLabel}}" subject="{{item.subject}}" meta="{{item.gradeLabel}}" preview="{{item.preview}}" pronunciation="{{item.phoneticBrief}}"
       status="{{item.learnedLabel}}{{item.learnedLabel && item.assigned ? ' · ' : ''}}{{item.assigned ? '已在今日' : ''}}" has-actions="{{family && !isChild}}">
       <view slot="actions" class="learning-card-actions"><button class="small secondary" data-id="{{item.id}}" catchtap="assignItem" disabled="{{busy}}">安排日期</button></view>
     </learning-card>

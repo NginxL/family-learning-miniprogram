@@ -21,6 +21,8 @@ function artifacts() {
     fs.writeFileSync(path.join(output, 'shared/knowledge-data.json'), JSON.stringify(items));
     const resources = resourcesFor(require(path.join(output, 'shared/catalog.js')));
     const files = new Map();
+    files.set('miniprogram/lib/word-dictionary-data.js', '// Generated from sourced dictionary supplements. Run npm run build.\n'
+      + dataModule(require('./word-dictionary').wordDictionaryData(require(path.join(output, 'shared/catalog.js')))));
     files.set('miniprogram/lib/lower-primary-pinyin.js', '// Generated from the verified lower-primary catalogue. Run npm run build.\n'
       + dataModule({ ...lowerPrimary.pinyin(), ...lowerPrimary.data.extraPinyin,
         ...require('../data/catalogs/chinese-foundation-pinyin.json') }));
@@ -40,7 +42,7 @@ function artifacts() {
     for (const name of ['index', 'service', 'store', 'validation', 'homework', 'speech', 'speech-provider']) add(`cloud/${name}.js`, [`cloudfunctions/familyApi/${name}.js`]);
     add('client/cloud-transport.js', ['miniprogram/lib/cloud-transport.js']);
     add('miniprogram/app.js', ['miniprogram/app.js']);
-    for (const name of ['sync-engine', 'task-groups', 'page', 'errors', 'task-route', 'homework-media', 'pinyin', 'pinyin-data', 'study-notes-view', 'content-detail', 'planned-task-edit', 'content-schedule', 'content-presentation', 'learning-navigation'])
+    for (const name of ['sync-engine', 'task-groups', 'page', 'errors', 'task-route', 'homework-media', 'pinyin', 'pinyin-data', 'study-notes-view', 'content-detail', 'planned-task-edit', 'content-schedule', 'content-presentation', 'learning-navigation', 'word-entry'])
       add(`miniprogram/lib/${name}.js`, [`miniprogram/lib/${name}.js`]);
     add('miniprogram/components/learning-card/index.js', ['miniprogram/components/learning-card/index.js']);
     add('miniprogram/lib/speech-player.js', ['miniprogram/lib/speech-player.js']);

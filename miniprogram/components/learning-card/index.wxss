@@ -15,3 +15,4 @@
 .card-link { color:#526f5b; font-size:24rpx; line-height:1.7; }
 .card-link text { margin-left:8rpx; }
 .card-actions { max-width:100%; }
+.card-pronunciation { font-size:25rpx; color:#617a69; margin:8rpx 0; font-family:Arial,sans-serif; overflow-wrap:anywhere; }

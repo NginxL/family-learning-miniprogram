@@ -1,0 +1,26 @@
+<template name="wordPronunciation">
+  <view class="dictionary-pronunciations">
+    <view wx:for="{{entry.pronunciations}}" wx:for-item="sound" wx:key="key" class="dictionary-sound">
+      <text wx:if="{{sound.headword}}" class="dictionary-form-head">{{sound.headword}}</text><text class="dictionary-accent">{{sound.accent}}</text><text class="dictionary-ipa" selectable="true">{{sound.ipa}}</text>
+      <text wx:if="{{sound.usage}}" class="dictionary-pronunciation-usage">{{sound.usage}}</text>
+    </view>
+    <view wx:if="{{entry.pronunciationPending}}" class="muted dictionary-pending">音标待核实</view>
+  </view>
+</template>
+<template name="wordDefinitions">
+  <view class="dictionary-definitions">
+    <view wx:for="{{entry.sections}}" wx:for-item="section" wx:key="title" class="dictionary-section">
+      <view class="dictionary-section-title">{{section.title}}</view>
+      <view wx:for="{{section.groups}}" wx:for-item="group" wx:key="key" class="dictionary-group">
+        <view wx:if="{{group.form}}" class="dictionary-form-head">{{group.form}}</view>
+        <view wx:if="{{group.pos}}" class="dictionary-pos"><text class="dictionary-pos-code">{{group.pos}}</text><text>{{group.label}}</text></view>
+        <view wx:for="{{group.senses}}" wx:for-item="sense" wx:for-index="senseIndex" wx:key="*this" class="dictionary-sense"><text class="dictionary-number">{{senseIndex + 1}}</text><text class="dictionary-meaning" selectable="true">{{sense}}</text></view>
+      </view>
+    </view>
+    <view wx:if="{{entry.examples.length}}" class="dictionary-section"><view class="dictionary-section-title">例句 · 自编</view><view wx:for="{{entry.examples}}" wx:key="*this" class="dictionary-example">{{item}}</view></view>
+    <view wx:if="{{entry.forms.length}}" class="dictionary-section">
+      <view class="dictionary-section-title">词形变化</view>
+      <view wx:for="{{entry.forms}}" wx:for-item="form" wx:key="key" class="dictionary-inflection"><view class="dictionary-inflection-row"><text class="muted">{{form.label}}</text><text class="dictionary-form-value" selectable="true">{{form.value}}</text></view><view class="dictionary-form-context">{{form.context}}</view></view>
+    </view>
+  </view>
+</template>

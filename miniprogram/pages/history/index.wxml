@@ -12,7 +12,7 @@
     <view wx:if="{{historyError}}" class="notice">{{historyError}}</view>
     <view class="row"><view class="section">{{historyFilter === 'mastered' ? '已经学会的知识' : '一点点积累'}}</view><view class="muted">{{historyTotal}} 项</view></view>
     <learning-card wx:for="{{historyItems}}" wx:key="contentId" data-id="{{item.contentId}}" bindopen="openContent"
-      title="{{item.title}}" tag="{{item.kindLabel}}" subject="{{item.subject}}" preview="{{item.poetryByline}}"
+      title="{{item.title}}" tag="{{item.kindLabel}}" subject="{{item.subject}}" preview="{{item.wordBrief || item.poetryByline}}" pronunciation="{{item.phoneticBrief}}"
       status="{{item.mastered ? '已掌握' : item.learnedCount ? '已学过' : '已安排'}}"
       meta="{{item.lastLearned ? '最近学习 ' + item.lastLearned + ' · 共 ' + item.learnedCount + ' 天' : '首次安排 ' + item.firstSeen}}" has-actions="{{!isChild && item.learnedCount > 0}}">
       <view slot="actions" class="learning-card-actions"><button class="quiet" data-id="{{item.contentId}}" disabled="{{busy || historyCached}}" catchtap="toggleMastery">{{item.mastered ? '还需巩固' : '确认已掌握'}}</button><button class="secondary small" data-id="{{item.contentId}}" disabled="{{busy || historyCached}}" catchtap="reviewToday">今日复习</button></view>

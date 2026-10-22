@@ -12,7 +12,7 @@ export type DatasetEvent<D extends object = { id: string }> = {
 export type ValueEvent<V = string> = Pick<WechatMiniprogram.CustomEvent<{ value: V }>, 'detail'>;
 export type FieldEvent<V, D extends object> = ValueEvent<V> & DatasetEvent<D>;
 export type PickerEvent = ValueEvent<string | number>;
-export type Decorated<T> = T & { kindLabel: string; subjectLabel: string; modeLabel: string; poetryByline?: string; dynastyNote?: string; displayDetail?: string; recitationNote?: string; studyNotes?: StudyNotes };
+export type Decorated<T> = T & { kindLabel: string; subjectLabel: string; modeLabel: string; poetryByline?: string; dynastyNote?: string; displayDetail?: string; recitationNote?: string; studyNotes?: StudyNotes; wordBrief: string; phoneticBrief: string };
 export type Decoratable = ContentInput & { mode?: TaskMode };
 export type DisplayChild = ChildProfile & { gradeLabel: string };
 export interface StudyNotesData { notesOpenId: string; notesAnswersId: string; sourcesOpenId: string }
