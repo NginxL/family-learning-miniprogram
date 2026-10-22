@@ -2,23 +2,35 @@ import { narration } from '../../lib/learning/narration';
 import { playSpeech, type SpeechState } from '../../lib/speech-player';
 import type { LearningApp } from '../../lib/client-models';
 import type { ContentInput } from '../../../shared/models';
+import { isSpeechAccent, type SpeechAccent } from '../../lib/learning/speech-profile';
+const accents: SpeechAccent[] = ['default', 'en-GB', 'en-US'];
 const runtimes=new WeakMap<object,{token:number;context?:string;handle?:{stop():void}}>();
 function runtime(owner:object){let value=runtimes.get(owner);if(!value){value={token:0};runtimes.set(owner,value);}return value;}
 Component({
   options: {styleIsolation:'isolated'},
   properties: {item:{type:Object,value:null},childId:{type:String,value:''},date:{type:String,value:''},taskId:{type:String,value:''}},
-  data: {available:false,loading:false,playing:false,part:0,parts:0,error:'',notice:'',confirming:false},
+  data: {available:false,english:false,accent:'default' as SpeechAccent,accentIndex:0,accentLabels:['通用朗读','英式发音','美式发音'],loading:false,playing:false,part:0,parts:0,error:'',notice:'',confirming:false},
   observers: {'item,childId,date,taskId':function(item:ContentInput|null,childId:string,date:string,taskId:string) {
     const state=runtime(this);const context=JSON.stringify([item?.id,item?.title,item?.detail,childId,date,taskId]);
     // Background sync refreshes the item object every 20 seconds. It must not
     // interrupt a long reading unless the actual text or child changes.
     if(state.context!==context){this.stopReading();state.context=context;this.setData({loading:false,playing:false,error:''});}
-    this.setData({available:Boolean(item&&narration(item).chunks.length)});
+    const plan=item&&narration(item);
+    this.setData({available:Boolean(plan?.chunks.length),english:plan?.language==='en'});
   }},
-  lifetimes: { detached() {this.stopReading();} },
+  lifetimes: {
+    attached() { try { const accent=wx.getStorageSync('speech-accent-v1'); if(isSpeechAccent(accent))this.setData({accent,accentIndex:accents.indexOf(accent)}); } catch { /* The default also works when preference storage is full. */ } },
+    detached() {this.stopReading();}
+  },
   pageLifetimes: {hide() {this.stopReading();}},
   methods: {
     stopReading() { const state=runtime(this);state.handle?.stop();state.handle=undefined;state.token++; },
+    selectAccent(event:WechatMiniprogram.PickerChange) {
+      const index=Number(event.detail.value),accent=accents[index];
+      if(!Number.isInteger(index)||!accent||this.data.confirming)return;
+      this.stopReading();this.setData({accent,accentIndex:index,loading:false,playing:false,error:'',notice:''});
+      try { wx.setStorageSync('speech-accent-v1',accent); } catch { /* Playback does not require saving preferences. */ }
+    },
     async toggleReading() {
       if(this.data.loading||this.data.playing){this.stopReading();return;}
       if(this.data.confirming)return;
@@ -38,7 +50,7 @@ Component({
       }
       if(state.token!==token||scope!==JSON.stringify([app.engine.state.userId,app.engine.state.family?.id,this.data.childId]))return;
       state.handle=playSpeech(app.engine,this.data.item as ContentInput,this.data.childId,this.data.date||undefined,this.data.taskId||undefined,
-        (value:SpeechState)=>{if(state.token===token)this.setData(value);});
+        (value:SpeechState)=>{if(state.token===token)this.setData(value);},this.data.english?this.data.accent:'default');
     }
   }
 });

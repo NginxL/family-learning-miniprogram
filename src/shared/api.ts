@@ -1,5 +1,6 @@
 import type { AutoRule, CalendarDate, ContentKind, Day, HistoryQuery, PublicFamily, SchoolGrade, Subject, Task, HomeworkScope, HomeworkView, HomeworkAttachment, PlanningChange, WeeklyTemplateSchedule } from './models';
 import type { history, progress, learningStatus } from './learning';
+import type { SpeechAccent } from './speech-profile';
 
 export interface ProfileInput {
   birthDate?: CalendarDate | null;
@@ -35,7 +36,7 @@ export interface ApiPayloads {
   getHistory: ChildScope & HistoryQuery;
   getProgress: ChildScope;
   getLearningStatus: ChildScope;
-  getSpeech: ContentRequest & { part: number; taskId?: string; date?: string };
+  getSpeech: ContentRequest & { part: number; taskId?: string; date?: string; accent?: SpeechAccent };
   setMastery: ContentRequest & { mastered: boolean; baseVersion: number };
   reviewContent: ContentRequest;
   assignContent: ContentRequest & { date?: CalendarDate };

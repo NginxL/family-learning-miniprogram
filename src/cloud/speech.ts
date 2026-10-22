@@ -3,7 +3,7 @@ import type { ApiResults } from '../shared/api';
 import { narration, type SpeechLanguage } from './learning/narration';
 import * as learning from './learning/learning';
 import { hash, identifier, requireValue, chinaDate } from './validation';
-import { speechContentKey, speechVoiceKey } from './learning/speech-profile';
+import { speechContentKey, speechVoiceKey, isSpeechAccent } from './learning/speech-profile';
 import { createSpeechLibrary, FreeSpeechUnavailable } from './speech-library';
 import { createPersistentSpeechCache } from './persistent-speech';
 import type { MediaStore } from './homework';
@@ -24,7 +24,9 @@ export function createSpeechService(store: Store, provider?: SpeechProvider, per
   return async (uid: string, input: Record<string, unknown>, now: number): Promise<ApiResults['getSpeech']> => {
     const familyId = identifier(input.familyId); const childId = identifier(input.childId); const contentId = identifier(input.contentId);
     requireValue(Number.isInteger(input.part) && Number(input.part) >= 0, 'INVALID', '朗读段落无效');
-    if (!persistent) requireValue(provider && Number.isFinite(provider.expiresAt) && now < provider.expiresAt, 'SPEECH_UNAVAILABLE', '免费朗读尚未启用或已到期，学习和打卡仍可使用');
+    const accent = input.accent ?? 'default';
+    requireValue(isSpeechAccent(accent), 'INVALID', '朗读口音无效');
+    if (!persistent && accent === 'default') requireValue(provider && Number.isFinite(provider.expiresAt) && now < provider.expiresAt, 'SPEECH_UNAVAILABLE', '免费朗读尚未启用或已到期，学习和打卡仍可使用');
     const access = async (tx: Transaction) => {
       const profile = await tx.get('profiles', uid);
       const family = profile?.familyId === familyId ? await tx.get('families', familyId) : null;
@@ -52,6 +54,14 @@ export function createSpeechService(store: Store, provider?: SpeechProvider, per
       requireValue(text, 'INVALID', '此内容暂没有可朗读的正文');
       return { text, language: plan.language, parts: plan.chunks.length, publicContent: learning.catalogById.has(contentId) };
     });
+    if (accent !== 'default') {
+      requireValue(plan.language === 'en', 'INVALID', '英美口音仅适用于英语内容');
+      requireValue(library && plan.publicContent, 'SPEECH_BACKUP_PENDING', '此内容尚未提供英美口音音频，可切换通用朗读');
+      // Explicit dialect selection never falls back to an unclassified voice or
+      // invokes a generator. This also keeps private custom text out of Doubao.
+      const result = await library(plan.text, plan.language, now, async tx => { await access(tx); }, accent);
+      return { ...result, mime: 'audio/mpeg', part: Number(input.part), parts: plan.parts, persistent: true };
+    }
     if (persistent) {
       const voiceKey = provider?.voiceKey?.(plan.language) || speechVoiceKey(plan.language);
       const key = hash(JSON.stringify([familyId, speechContentKey(plan.text, voiceKey)]));

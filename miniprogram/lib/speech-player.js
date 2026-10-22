@@ -13,7 +13,7 @@ let current;
 const cache = new Map();
 let cacheBytes = 0;
 function stopSpeech() { current === null || current === void 0 ? void 0 : current.stop(); }
-function playSpeech(engine, item, childId, date, taskId, update) {
+function playSpeech(engine, item, childId, date, taskId, update, accent = 'default') {
     current === null || current === void 0 ? void 0 : current.stop();
     const snapshot = engine.snapshot();
     const family = snapshot.family;
@@ -41,9 +41,11 @@ function playSpeech(engine, item, childId, date, taskId, update) {
         const plan = (0, narration_1.narration)(item);
         if (!plan.chunks.length)
             throw new Error('此内容暂没有可朗读的正文');
-        const sourceKey = JSON.stringify([originalSession, item.title, item.detail, childId, date, taskId]);
+        if (!(0, speech_profile_1.isSpeechAccent)(accent) || (accent !== 'default' && plan.language !== 'en'))
+            throw new Error('朗读口音无效');
+        const sourceKey = JSON.stringify([originalSession, item.title, item.detail, childId, date, taskId, accent]);
         const diskScope = JSON.stringify([originalSession, childId]);
-        const voices = (0, speech_profile_1.speechVoiceKeys)(plan.language);
+        const voices = (0, speech_profile_1.speechVoiceKeys)(plan.language, accent);
         let parts = plan.chunks.length;
         for (let part = 0; part < parts && !stopped; part++) {
             state({ loading: true, playing: false, part: part + 1, parts, error: '' });
@@ -56,7 +58,7 @@ function playSpeech(engine, item, childId, date, taskId, update) {
                 const key = JSON.stringify([sourceKey, part]);
                 let result = cache.get(key);
                 if (!result) {
-                    const request = { familyId: family.id, childId, contentId: (0, learning_1.contentId)(item), part, ...(date && taskId ? { date, taskId } : {}) };
+                    const request = { familyId: family.id, childId, contentId: (0, learning_1.contentId)(item), part, ...(date && taskId ? { date, taskId } : {}), ...(accent === 'default' ? {} : { accent }) };
                     for (let attempt = 0;; attempt++) {
                         if (stopped || sessionKey() !== originalSession)
                             return;
@@ -74,6 +76,8 @@ function playSpeech(engine, item, childId, date, taskId, update) {
                     }
                     if (stopped || sessionKey() !== originalSession)
                         return;
+                    if (accent !== 'default' && (!result.voiceKey || !voices.includes(result.voiceKey)))
+                        throw new Error('当前服务未返回所选口音，请切换通用朗读或稍后重试');
                     while (cache.size && cacheBytes + result.base64.length > 4 * 1024 * 1024) {
                         const oldest = cache.keys().next().value;
                         cacheBytes -= cache.get(oldest).base64.length;

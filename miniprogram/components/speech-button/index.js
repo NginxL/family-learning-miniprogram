@@ -3,6 +3,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const narration_1 = require("../../lib/learning/narration");
 const speech_player_1 = require("../../lib/speech-player");
+const speech_profile_1 = require("../../lib/learning/speech-profile");
+const accents = ['default', 'en-GB', 'en-US'];
 const runtimes = new WeakMap();
 function runtime(owner) { let value = runtimes.get(owner); if (!value) {
     value = { token: 0 };
@@ -11,7 +13,7 @@ function runtime(owner) { let value = runtimes.get(owner); if (!value) {
 Component({
     options: { styleIsolation: 'isolated' },
     properties: { item: { type: Object, value: null }, childId: { type: String, value: '' }, date: { type: String, value: '' }, taskId: { type: String, value: '' } },
-    data: { available: false, loading: false, playing: false, part: 0, parts: 0, error: '', notice: '', confirming: false },
+    data: { available: false, english: false, accent: 'default', accentIndex: 0, accentLabels: ['通用朗读', '英式发音', '美式发音'], loading: false, playing: false, part: 0, parts: 0, error: '', notice: '', confirming: false },
     observers: { 'item,childId,date,taskId': function (item, childId, date, taskId) {
             const state = runtime(this);
             const context = JSON.stringify([item === null || item === void 0 ? void 0 : item.id, item === null || item === void 0 ? void 0 : item.title, item === null || item === void 0 ? void 0 : item.detail, childId, date, taskId]);
@@ -22,12 +24,32 @@ Component({
                 state.context = context;
                 this.setData({ loading: false, playing: false, error: '' });
             }
-            this.setData({ available: Boolean(item && (0, narration_1.narration)(item).chunks.length) });
+            const plan = item && (0, narration_1.narration)(item);
+            this.setData({ available: Boolean(plan === null || plan === void 0 ? void 0 : plan.chunks.length), english: (plan === null || plan === void 0 ? void 0 : plan.language) === 'en' });
         } },
-    lifetimes: { detached() { this.stopReading(); } },
+    lifetimes: {
+        attached() { try {
+            const accent = wx.getStorageSync('speech-accent-v1');
+            if ((0, speech_profile_1.isSpeechAccent)(accent))
+                this.setData({ accent, accentIndex: accents.indexOf(accent) });
+        }
+        catch { /* The default also works when preference storage is full. */ } },
+        detached() { this.stopReading(); }
+    },
     pageLifetimes: { hide() { this.stopReading(); } },
     methods: {
         stopReading() { var _a; const state = runtime(this); (_a = state.handle) === null || _a === void 0 ? void 0 : _a.stop(); state.handle = undefined; state.token++; },
+        selectAccent(event) {
+            const index = Number(event.detail.value), accent = accents[index];
+            if (!Number.isInteger(index) || !accent || this.data.confirming)
+                return;
+            this.stopReading();
+            this.setData({ accent, accentIndex: index, loading: false, playing: false, error: '', notice: '' });
+            try {
+                wx.setStorageSync('speech-accent-v1', accent);
+            }
+            catch { /* Playback does not require saving preferences. */ }
+        },
         async toggleReading() {
             var _a, _b;
             if (this.data.loading || this.data.playing) {
@@ -64,7 +86,7 @@ Component({
             if (state.token !== token || scope !== JSON.stringify([app.engine.state.userId, (_b = app.engine.state.family) === null || _b === void 0 ? void 0 : _b.id, this.data.childId]))
                 return;
             state.handle = (0, speech_player_1.playSpeech)(app.engine, this.data.item, this.data.childId, this.data.date || undefined, this.data.taskId || undefined, (value) => { if (state.token === token)
-                this.setData(value); });
+                this.setData(value); }, this.data.english ? this.data.accent : 'default');
         }
     }
 });

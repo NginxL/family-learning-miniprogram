@@ -230,7 +230,8 @@ export interface DatabaseDocuments {
     createdAt: number; base64?: string; digest?: string; bytes?: number; fileId?: string };
   speechAssets: { state: 'staging' | 'ready'; textHash: string; voiceKey: string; language: 'zh' | 'en';
     digest: string; bytes: number; duration: number; batchId: string; createdAt: number; verifiedAt: number;
-    review: string; references: { contentId: string; part: number }[]; fileId?: string };
+    review: string; references: { contentId: string; part: number }[]; fileId?: string;
+    accent?: 'en-GB' | 'en-US'; accentReview?: string };
 }
 export type Collection = keyof DatabaseDocuments;
 export interface Transaction {

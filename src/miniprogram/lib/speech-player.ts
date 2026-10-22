@@ -3,7 +3,7 @@ import { narration } from './learning/narration';
 import { contentId } from './learning/learning';
 import type { ContentInput } from '../../shared/models';
 import type { SyncEngine } from './sync-engine';
-import { speechVoiceKeys } from './learning/speech-profile';
+import { speechVoiceKeys, isSpeechAccent, type SpeechAccent } from './learning/speech-profile';
 import { readSavedSpeech, saveSpeech } from './speech-cache';
 export interface SpeechState { loading: boolean; playing: boolean; part: number; parts: number; error: string; notice?: string }
 const idle = (): SpeechState => ({loading:false,playing:false,part:0,parts:0,error:'',notice:''});
@@ -13,7 +13,7 @@ const cache = new Map<string, ApiResults['getSpeech']>();
 let cacheBytes = 0;
 export function stopSpeech() { current?.stop(); }
 export function playSpeech(engine: SyncEngine, item: ContentInput, childId: string, date: string | undefined,
-  taskId: string | undefined, update: (value: SpeechState) => void) {
+  taskId: string | undefined, update: (value: SpeechState) => void, accent: SpeechAccent = 'default') {
   current?.stop();
   const snapshot = engine.snapshot(); const family = snapshot.family;
   const sessionKey = () => JSON.stringify([engine.state.userId,engine.state.family?.id,engine.state.family?.myRole,engine.state.family?.myChildId]);
@@ -28,9 +28,10 @@ export function playSpeech(engine: SyncEngine, item: ContentInput, childId: stri
   const run = async () => {
     if (!family || !snapshot.userId || !family.children.some(child=>child.id===childId)) throw new Error('请先连接孩子的学习档案');
     const plan = narration(item); if(!plan.chunks.length)throw new Error('此内容暂没有可朗读的正文');
-    const sourceKey = JSON.stringify([originalSession,item.title,item.detail,childId,date,taskId]);
+    if(!isSpeechAccent(accent)||(accent!=='default'&&plan.language!=='en'))throw new Error('朗读口音无效');
+    const sourceKey = JSON.stringify([originalSession,item.title,item.detail,childId,date,taskId,accent]);
     const diskScope = JSON.stringify([originalSession,childId]);
-    const voices = speechVoiceKeys(plan.language);
+    const voices = speechVoiceKeys(plan.language, accent);
     let parts=plan.chunks.length;
     for(let part=0;part<parts&&!stopped;part++) {
       state({loading:true,playing:false,part:part+1,parts,error:''});
@@ -42,7 +43,7 @@ export function playSpeech(engine: SyncEngine, item: ContentInput, childId: stri
       const key=JSON.stringify([sourceKey,part]);
       let result=cache.get(key);
       if(!result) {
-        const request:ApiPayloads['getSpeech']={familyId:family.id,childId,contentId:contentId(item),part,...(date&&taskId?{date,taskId}:{})};
+        const request:ApiPayloads['getSpeech']={familyId:family.id,childId,contentId:contentId(item),part,...(date&&taskId?{date,taskId}:{}),...(accent==='default'?{}:{accent})};
         for(let attempt=0;;attempt++) {
           if(stopped||sessionKey()!==originalSession)return;
           try {result=await engine.transport('getSpeech',request);break;}
@@ -53,6 +54,7 @@ export function playSpeech(engine: SyncEngine, item: ContentInput, childId: stri
           }
         }
         if(stopped||sessionKey()!==originalSession)return;
+        if(accent!=='default'&&(!result.voiceKey||!voices.includes(result.voiceKey)))throw new Error('当前服务未返回所选口音，请切换通用朗读或稍后重试');
         while(cache.size&&cacheBytes+result.base64.length>4*1024*1024){const oldest=cache.keys().next().value!;cacheBytes-=cache.get(oldest)!.base64.length;cache.delete(oldest);}
         cache.set(key,result);cacheBytes+=result.base64.length;
       }

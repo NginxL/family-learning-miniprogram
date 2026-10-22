@@ -1,5 +1,11 @@
 import type { SpeechLanguage } from './narration';
 
+export type EnglishSpeechAccent = 'en-GB' | 'en-US';
+export type SpeechAccent = 'default' | EnglishSpeechAccent;
+export function isSpeechAccent(value: unknown): value is SpeechAccent {
+  return value === 'default' || value === 'en-GB' || value === 'en-US';
+}
+
 // These settings define both the synthesis request and its immutable cache identity.
 export const SPEECH_SETTINGS = { provider: 'tencent-text-to-voice', revision: 1, sampleRate: 16000, codec: 'mp3', speed: 0,
   voices: { zh: 101001, en: 101050 } } as const;
@@ -10,11 +16,17 @@ export function speechVoiceKey(language: SpeechLanguage): string {
 
 // A reviewed, pre-generated voice collection, not a runtime paid API. Bump the
 // revision when its model/style changes; published files are immutable.
-export function libraryVoiceKey(language: SpeechLanguage): string {
+export function libraryVoiceKey(language: SpeechLanguage, accent: SpeechAccent = 'default'): string {
+  if (!isSpeechAccent(accent) || (accent !== 'default' && language !== 'en')) throw new Error('Invalid speech accent');
+  // Keep v1 identities intact. An unclassified old recording must never be
+  // relabelled as British or American simply because its transcript matches.
+  if (accent !== 'default') return JSON.stringify(['doubao-work-seed-audio', 2, language, accent, 'clear-slow', 16000, 'mp3', 32000]);
   return JSON.stringify(['doubao-work-seed-audio', 1, language, 'clear-slow', 16000, 'mp3', 32000]);
 }
-export function speechVoiceKeys(language: SpeechLanguage): string[] {
-  return [speechVoiceKey(language), libraryVoiceKey(language)];
+export function speechVoiceKeys(language: SpeechLanguage, accent: SpeechAccent = 'default'): string[] {
+  if (accent !== 'default') return [libraryVoiceKey(language, accent)];
+  return [speechVoiceKey(language), libraryVoiceKey(language),
+    ...(language === 'en' ? [libraryVoiceKey('en', 'en-GB'), libraryVoiceKey('en', 'en-US')] : [])];
 }
 
 // Small UTF-8 SHA-256 implementation shared with the mini-program (no Node crypto/TextEncoder there).

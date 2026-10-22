@@ -52,12 +52,14 @@ function createSpeechService(store, provider, persistentMedia, enableLibrary = f
     const persistent = persistentMedia && (0, persistent_speech_1.createPersistentSpeechCache)(store, persistentMedia, provider, { total: exports.SPEECH_BUDGET, daily: exports.SPEECH_DAILY_BUDGET });
     const library = enableLibrary && persistentMedia && (0, speech_library_1.createSpeechLibrary)(store, persistentMedia);
     return async (uid, input, now) => {
-        var _a;
+        var _a, _b;
         const familyId = (0, validation_1.identifier)(input.familyId);
         const childId = (0, validation_1.identifier)(input.childId);
         const contentId = (0, validation_1.identifier)(input.contentId);
         (0, validation_1.requireValue)(Number.isInteger(input.part) && Number(input.part) >= 0, 'INVALID', '朗读段落无效');
-        if (!persistent)
+        const accent = (_a = input.accent) !== null && _a !== void 0 ? _a : 'default';
+        (0, validation_1.requireValue)((0, speech_profile_1.isSpeechAccent)(accent), 'INVALID', '朗读口音无效');
+        if (!persistent && accent === 'default')
             (0, validation_1.requireValue)(provider && Number.isFinite(provider.expiresAt) && now < provider.expiresAt, 'SPEECH_UNAVAILABLE', '免费朗读尚未启用或已到期，学习和打卡仍可使用');
         const access = async (tx) => {
             const profile = await tx.get('profiles', uid);
@@ -90,8 +92,16 @@ function createSpeechService(store, provider, persistentMedia, enableLibrary = f
             (0, validation_1.requireValue)(text, 'INVALID', '此内容暂没有可朗读的正文');
             return { text, language: plan.language, parts: plan.chunks.length, publicContent: learning.catalogById.has(contentId) };
         });
+        if (accent !== 'default') {
+            (0, validation_1.requireValue)(plan.language === 'en', 'INVALID', '英美口音仅适用于英语内容');
+            (0, validation_1.requireValue)(library && plan.publicContent, 'SPEECH_BACKUP_PENDING', '此内容尚未提供英美口音音频，可切换通用朗读');
+            // Explicit dialect selection never falls back to an unclassified voice or
+            // invokes a generator. This also keeps private custom text out of Doubao.
+            const result = await library(plan.text, plan.language, now, async (tx) => { await access(tx); }, accent);
+            return { ...result, mime: 'audio/mpeg', part: Number(input.part), parts: plan.parts, persistent: true };
+        }
         if (persistent) {
-            const voiceKey = ((_a = provider === null || provider === void 0 ? void 0 : provider.voiceKey) === null || _a === void 0 ? void 0 : _a.call(provider, plan.language)) || (0, speech_profile_1.speechVoiceKey)(plan.language);
+            const voiceKey = ((_b = provider === null || provider === void 0 ? void 0 : provider.voiceKey) === null || _b === void 0 ? void 0 : _b.call(provider, plan.language)) || (0, speech_profile_1.speechVoiceKey)(plan.language);
             const key = (0, validation_1.hash)(JSON.stringify([familyId, (0, speech_profile_1.speechContentKey)(plan.text, voiceKey)]));
             try {
                 const result = await persistent(key, familyId, plan.text, plan.language, now, async (tx) => { await access(tx); });

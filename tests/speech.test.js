@@ -73,7 +73,7 @@ test('provider is explicitly free-only, uses fixed covered voices and has no pai
 test('speech component survives unchanged sync refreshes and stops on changed content or child',()=>{
  const fs=require('node:fs'),vm=require('node:vm'),path=require('node:path');let definition;
  vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../miniprogram/components/speech-button/index.js'),'utf8'),{exports:{},Component:v=>definition=v,require(name){
-  if(name.includes('narration'))return {narration};if(name.includes('speech-player'))return {playSpeech(){throw Error('not expected');}};throw Error(name);
+  if(name.includes('narration'))return {narration};if(name.includes('speech-profile'))return require('../shared/speech-profile');if(name.includes('speech-player'))return {playSpeech(){throw Error('not expected');}};throw Error(name);
  }});
  const component={...definition.methods,data:{...definition.data},setData(v){Object.assign(this.data,v);}};
  const observer=definition.observers['item,childId,date,taskId'];const word=learning.catalogById.get('word-hello');

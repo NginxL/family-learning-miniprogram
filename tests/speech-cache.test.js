@@ -122,10 +122,27 @@ function wxDisk(t) {
 }
 const resultFor=(text)=>({base64:audio,mime:'audio/mpeg',part:0,parts:1,key:'cloud-key',persistent:true,textHash:speechHash(text),voiceKey:speechVoiceKey('en'),digest:speechHash(audio)});
 function engine(transport,user='parent') { return {state:{userId:user,family:{id:'family',myRole:'owner',children:[{id:'child'}]}},snapshot(){return this.state;},subscribe(){return ()=>{};},transport}; }
-function play(engine,item,date,taskId) {
+function play(engine,item,date,taskId,accent) {
   const {playSpeech}=require('../miniprogram/lib/speech-player');
-  return new Promise(resolve=>playSpeech(engine,item,'child',date,taskId,s=>{if(!s.loading&&!s.playing)resolve(s);}));
+  return new Promise(resolve=>{let last;playSpeech(engine,item,'child',date,taskId,s=>{last=s;if(!s.loading&&!s.playing)queueMicrotask(()=>resolve(last));},accent);});
 }
+test('both English accents stay distinct in memory and on disk and replay offline without another request',async t=>{
+  const disk=wxDisk(t),{libraryVoiceKey}=require('../shared/speech-profile'),requests=[];
+  const client=engine(async(action,p)=>{requests.push(p.accent);const base64=Buffer.from(`ID3-${p.accent}`).toString('base64');
+    return {...resultFor('hello'),voiceKey:libraryVoiceKey('en',p.accent),base64,digest:speechHash(base64)};});
+  const item=learning.catalogById.get('word-hello');
+  await play(client,item,undefined,undefined,'en-GB');await play(client,item,undefined,undefined,'en-US');
+  assert.deepEqual(requests,['en-GB','en-US']);assert.notEqual(disk.played[0],disk.played[1]);
+  client.transport=async()=>{throw Error('offline');};
+  for(const accent of ['en-GB','en-US'])assert.equal((await play(client,item,undefined,undefined,accent)).error,'');
+  assert.equal(disk.played[0],disk.played[2]);assert.equal(disk.played[1],disk.played[3]);
+});
+test('a legacy server that ignores accent never plays or saves its generic response as British or American',async t=>{
+  const disk=wxDisk(t);const client=engine(async()=>resultFor('hello'),'legacy-user'),item=learning.catalogById.get('word-hello');
+  await play(client,item);const before=disk.played.length;
+  const result=await play(client,item,undefined,undefined,'en-GB');
+  assert.match(result.error,/未返回所选口音/);assert.equal(disk.played.length,before);
+});
 test('phone saves automatically and reuses files after module restart, across days and entry points without a network request', async t => {
   const disk=wxDisk(t);let requests=0;
   const client=engine(async()=>{requests++;return resultFor('hello');});const word=learning.catalogById.get('word-hello');

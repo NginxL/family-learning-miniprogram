@@ -1,12 +1,14 @@
 import type { Store, Transaction, DatabaseDocuments } from '../shared/models';
 import type { MediaStore } from './homework';
 import type { SpeechLanguage } from './learning/narration';
-import { libraryVoiceKey, speechContentKey } from './learning/speech-profile';
+import { libraryVoiceKey, speechContentKey, isSpeechAccent, type SpeechAccent } from './learning/speech-profile';
 import { hash, requireValue, chinaDate, DomainError } from './validation';
 
 export const SPEECH_FILE_LIMIT = 512 * 1024;
 // Application guards shared by generated family audio and imported public audio.
-export const SPEECH_STORAGE_LIMIT = 128 * 1024 * 1024;
+// Measured 32kbps files project about 200MiB for Chinese, both English accents
+// and existing general audio. This is an app guard, not a paid plan upgrade.
+export const SPEECH_STORAGE_LIMIT = 256 * 1024 * 1024;
 export const SPEECH_TRANSFER_LIMIT = 128 * 1024 * 1024;
 // Preserve existing API error codes; only free synthesis exhaustion may switch
 // providers. Authorization, corruption and storage/transfer limits never do.
@@ -27,13 +29,30 @@ export async function reserveSpeechTransfer(store: Store, bytes: number, now: nu
   });
 }
 export function createSpeechLibrary(store: Store, media: MediaStore) {
-  return async (text: string, language: SpeechLanguage, now: number, authorize: (tx: Transaction) => Promise<void>) => {
-    const voiceKey = libraryVoiceKey(language), key = speechContentKey(text, voiceKey), textHash = hash(text);
-    const record = await store.run(async tx => { await authorize(tx); return tx.get('speechAssets', key); });
-    requireValue(record?.state === 'ready', 'SPEECH_BACKUP_PENDING', '腾讯免费朗读已不可用，此内容的备用音频尚未备好；不会启用付费合成');
+  return async (text: string, language: SpeechLanguage, now: number, authorize: (tx: Transaction) => Promise<void>, accent: SpeechAccent = 'default') => {
+    // General playback reuses an available reviewed dialect when no legacy
+    // recording exists. Explicit dialects still never substitute one another.
+    const choices: SpeechAccent[] = accent === 'default' && language === 'en' ? ['default', 'en-GB', 'en-US'] : [accent];
+    const found = await store.run(async tx => {
+      await authorize(tx);
+      for (const selectedAccent of choices) {
+        const voiceKey = libraryVoiceKey(language, selectedAccent), key = speechContentKey(text, voiceKey);
+        const record = await tx.get('speechAssets', key);
+        if (record?.state === 'ready') return { record, voiceKey, key, selectedAccent };
+      }
+      return null;
+    });
+    const textHash = hash(text);
+    const record = found?.record;
+    requireValue(record?.state === 'ready', 'SPEECH_BACKUP_PENDING', accent === 'default'
+      ? '腾讯免费朗读已不可用，此内容的备用音频尚未备好；不会启用付费合成'
+      : `此内容的${accent === 'en-GB' ? '英式' : '美式'}音频尚未核对入库，可切换通用朗读`);
+    const { voiceKey, key, selectedAccent } = found!;
     requireValue(record.voiceKey === voiceKey && record.textHash === textHash && record.language === language
       && record.verifiedAt > 0 && record.review && record.fileId && record.bytes > 0 && record.bytes <= SPEECH_FILE_LIMIT,
       'SPEECH_UNAVAILABLE', '备用音频校验记录无效，请联系管理员');
+    requireValue(selectedAccent === 'default' || (record.accent === selectedAccent && typeof record.accentReview === 'string' && record.accentReview.trim().length > 0),
+      'SPEECH_UNAVAILABLE', '此音频缺少口音核对记录，暂不能播放');
     await reserveSpeechTransfer(store, record.bytes, now);
     const bytes = await media.download(record.fileId), base64 = bytes.toString('base64');
     validateSpeechAudio(base64);
@@ -49,7 +68,10 @@ export type SpeechAssetInput = Omit<DatabaseDocuments['speechAssets'], 'state' |
 // audio again. A ready text/voice identity cannot silently be overwritten.
 export async function importSpeechAsset(store: Store, media: MediaStore, input: SpeechAssetInput, bytes: Buffer, now: number) {
   validateSpeechAudio(bytes.toString('base64'));
-  requireValue(input.voiceKey === libraryVoiceKey(input.language) && input.textHash === hash(input.text)
+  const accent = input.accent ?? 'default';
+  requireValue(isSpeechAccent(accent) && (accent === 'default' || (input.language === 'en'
+    && typeof input.accentReview === 'string' && input.accentReview.trim().length > 0)), 'INVALID', '口音或口音核对记录无效');
+  requireValue(input.voiceKey === libraryVoiceKey(input.language, accent) && input.textHash === hash(input.text)
     && input.digest === hash(bytes.toString('base64')) && input.bytes === bytes.length
     && Number.isFinite(input.duration) && input.duration > 0 && input.duration <= 120
     && input.verifiedAt > 0 && input.verifiedAt <= now && input.review.length > 0 && input.references.length > 0,

@@ -11,9 +11,27 @@ function billingAllowed(document, envId, now) {
     'A current prepaid environment with overrun billing disabled is required');
   assert.ok(Date.parse(row.ExpireTime.replace(' ','T')+'+08:00')>now, 'Cloud package has expired');
 }
+// Bound local import parallelism; all active operations finish before a failure
+// is reported so the receipt also includes their successful readback checks.
+async function importReviewedAssets(items, importOne, onStored, concurrency = 1) {
+  assert.ok(Number.isInteger(concurrency) && concurrency >= 1 && concurrency <= 4, 'Import concurrency must be 1–4');
+  let next = 0, failure;
+  const workers = Array.from({length: Math.min(concurrency, items.length)}, async () => {
+    while (!failure && next < items.length) {
+      const index = next++;
+      try { await onStored(items[index], await importOne(items[index]), index); }
+      catch (error) { failure ||= error; }
+    }
+  });
+  await Promise.all(workers);
+  if (failure) throw failure;
+}
 async function main(args) {
   const value=flag=>{const i=args.indexOf(flag);assert.ok(i>=0&&args[i+1],`Missing ${flag}`);return path.resolve(args[i+1]);};
   const manifestFile=value('--manifest'), sessionFile=value('--session'), billingFile=value('--billing'), receiptFile=value('--receipt');
+  const concurrencyIndex=args.indexOf('--concurrency');
+  const concurrency=concurrencyIndex<0?1:Number(args[concurrencyIndex+1]);
+  assert.ok(Number.isInteger(concurrency) && concurrency>=1 && concurrency<=4,'Import concurrency must be 1–4');
   const parse=p=>{const s=fs.readFileSync(p,'utf8');return JSON.parse(s.slice(s.indexOf('{')));};
   const session=parse(sessionFile).data;assert.ok(session?.envId&&session.secretId&&session.secretKey&&session.token,'Invalid temporary SDK session');
   assert.ok(Date.now()-fs.statSync(billingFile).mtimeMs < 15*60000, 'Refresh the billing check before importing');
@@ -29,14 +47,17 @@ async function main(args) {
   const media={upload:async(p,b)=>(await cloud.uploadFile({cloudPath:p,fileContent:b})).fileID,
     download:async fileID=>(await cloud.downloadFile({fileID})).fileContent};
   const receipt={createdAt:new Date().toISOString(),envId:session.envId,bytes:0,items:[]};
-  for(const asset of items) {
-    const result=await importSpeechAsset(store,media,asset.input,asset.bytes,Date.now());
-    receipt.items.push({file:asset.file,key:result.key,bytes:asset.bytes.length,reused:result.reused,digest:asset.input.digest});
-    receipt.bytes+=asset.bytes.length;
+  const stored=[];
+  await importReviewedAssets(items,
+    asset=>importSpeechAsset(store,media,asset.input,asset.bytes,Date.now()),
+    (asset,result,index)=>{
+    stored[index]={file:asset.file,key:result.key,bytes:asset.bytes.length,reused:result.reused,digest:asset.input.digest};
+    receipt.items=stored.filter(Boolean);
+    receipt.bytes=receipt.items.reduce((n,item)=>n+item.bytes,0);
     fs.writeFileSync(receiptFile,JSON.stringify(receipt,null,2));
     console.log(JSON.stringify({file:asset.file,bytes:asset.bytes.length,reused:result.reused}));
-  }
+  },concurrency);
   console.log(JSON.stringify({verifiedAndStored:receipt.items.length,bytes:receipt.bytes}));
 }
 if(require.main===module) main(process.argv.slice(2)).catch(error=>{console.error(JSON.stringify({code:error.code||'IMPORT_FAILED',message:String(error.message).slice(0,300)}));process.exitCode=1;});
-module.exports={billingAllowed};
+module.exports={billingAllowed,importReviewedAssets};
