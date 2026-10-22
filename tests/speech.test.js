@@ -80,3 +80,17 @@ test('speech component survives unchanged sync refreshes and stops on changed co
  observer.call(component,{...word,title:'new word'},'c','2026-10-22','t');assert.equal(component.data.playing,false);
  component.data.playing=true;observer.call(component,word,'different-child','2026-10-22','t');assert.equal(component.data.playing,false);
 });
+
+test('installed Tencent SDK remains CommonJS-compatible with patched UUID and constructs TextToVoice requests',async t=>{
+ const {createRequire}=require('node:module');
+ const sdkRequire=createRequire(require.resolve('../cloudfunctions/familyApi/speech-provider'));
+ const {HttpConnection}=sdkRequire('tencentcloud-sdk-nodejs-common/tencentcloud/common/http/http_connection');
+ const original=HttpConnection.doRequestWithSign3;let request;
+ t.after(()=>{HttpConnection.doRequestWithSign3=original;});
+ HttpConnection.doRequestWithSign3=async value=>{request=value;return {status:200,headers:new Map([['content-type','application/json']]),json:async()=>({Response:{Audio:audio,RequestId:'test-request'}})};};
+ const {speechProvider}=require('../cloudfunctions/familyApi/speech-provider');
+ const provider=speechProvider({TTS_FREE_ONLY:'true',TTS_FREE_EXPIRES_AT:'2027-01-22T02:30:00Z',TTS_SECRET_ID:'test-id',TTS_SECRET_KEY:'test-key'});
+ assert.equal(await provider.synthesize('hello','en'),audio);
+ assert.equal(request.action,'TextToVoice');assert.equal(request.data.Text,'hello');
+ assert.match(request.headers['X-TC-TraceId'],/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/);
+});
