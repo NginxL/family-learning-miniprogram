@@ -8,7 +8,9 @@
     <view class="status" bindtap="refresh">{{mode === 'demo' ? '本机保存' : syncLabel}} ↻</view>
     <view class="card">
       <view class="section" style="margin-top:0">孩子的学习档案</view>
-      <view wx:for="{{children}}" wx:key="id" class="member"><view class="row"><view class="grow"><view>🌱 {{item.name}}</view><view class="muted">{{item.age != null ? item.age + ' 岁 · ' : ''}}在读：{{item.gradeLabel}}</view></view><button wx:if="{{family.myRole === 'owner'}}" class="quiet" data-id="{{item.id}}" bindtap="editChild">编辑</button></view><button class="quiet" data-id="{{item.id}}" bindtap="openProgress">查看知识进度 →</button><button wx:if="{{mode === 'cloud' && family.myRole === 'owner'}}" class="secondary" data-id="{{item.id}}" bindtap="createChildInvite">绑定这个孩子的微信</button></view>
+      <view wx:for="{{children}}" wx:key="id" class="member"><view class="row"><view class="grow"><view>🌱 {{item.name}}</view><view class="muted">{{item.age != null ? item.age + ' 岁 · ' : ''}}在读：{{item.gradeLabel}}</view></view><button wx:if="{{family.myRole === 'owner'}}" class="quiet" data-id="{{item.id}}" bindtap="editChild">编辑</button></view><button class="quiet" data-id="{{item.id}}" bindtap="openProgress">查看知识进度 →</button><button wx:if="{{mode === 'cloud' && family.myRole === 'owner'}}" class="secondary" data-id="{{item.id}}" loading="{{bindingChildId === item.id}}" disabled="{{busy || bindingChildId}}" bindtap="createChildInvite">绑定这个孩子的微信</button>
+        <view wx:if="{{inviteCode && inviteChildId === item.id && family.myRole === 'owner'}}" class="notice"><view>{{inviteLabel}}</view><view class="invite">{{inviteCode}}</view><view class="muted">让孩子用自己的微信打开小程序，在「家庭 → 家人管理」输入此码。24 小时内有效，仅可用一次；新码生成后旧码失效。</view><button class="quiet" bindtap="copyInvite">复制孩子绑定码</button></view>
+      </view>
       <form wx:if="{{editingChild && family.myRole === 'owner'}}" bindsubmit="saveChild"><view>
         <label class="label">昵称</label><input name="name" value="{{editingChild.name}}" maxlength="16" />
         <label class="label">出生日期（选填）</label><picker mode="date" end="{{today}}" value="{{editBirthDate}}" data-field="editBirthDate" bindchange="changeBirthDate"><view class="picker">{{editBirthDate || '选择出生日期'}} ▾</view></picker>
@@ -32,7 +34,7 @@
       <view class="section" style="margin-top:0">陪伴的家人</view>
       <view wx:for="{{members}}" wx:key="id" class="member row"><view class="grow"><view>{{item.name}} <text wx:if="{{item.isMe && item.name !== '我'}}" class="muted">（我）</text></view><view class="muted">{{item.roleLabel}}</view></view><button wx:if="{{family.myRole === 'owner' && !item.isMe}}" class="quiet danger" data-id="{{item.id}}" data-name="{{item.name}}" bindtap="removeMember">移除</button></view>
       <block wx:if="{{mode === 'cloud' && family.myRole === 'owner'}}"><button class="secondary" loading="{{busy}}" disabled="{{busy}}" bindtap="createInvite">生成家人邀请码</button>
-        <view wx:if="{{inviteCode}}" class="notice"><view>{{inviteLabel}}</view><view class="invite">{{inviteCode}}</view><view class="muted">24 小时内有效，仅可使用一次；生成新码后旧码失效。孩子用自己的微信打开「家庭 → 家人管理」，输入此码绑定。</view><button class="quiet" bindtap="copyInvite">复制邀请码</button></view>
+        <view wx:if="{{inviteCode && !inviteChildId}}" class="notice"><view>{{inviteLabel}}</view><view class="invite">{{inviteCode}}</view><view class="muted">24 小时内有效，仅可使用一次；生成新码后旧码失效。孩子用自己的微信打开「家庭 → 家人管理」，输入此码绑定。</view><button class="quiet" bindtap="copyInvite">复制邀请码</button></view>
       </block>
       <form wx:if="{{mode === 'cloud' && family.canJoinFamily}}" bindsubmit="joinFamily"><view>
         <view class="section">使用家长邀请码／孩子绑定码</view>

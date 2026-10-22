@@ -149,6 +149,7 @@ const definition: PageDefinition<PlansData, PlansMethods, PlansRuntime> = {
     if (!target || this.data.busy || this.data.isChild || this.data.family?.id !== target.familyId || this.data.childId !== target.childId) return;
     if (this.data.scheduleConflict) { wx.showToast({ title: '请重新载入家人更新后的安排', icon: 'none' }); return; }
     const values = { childId: target.childId, activeId: target.activeId, baseRevision: target.baseRevision,
+      ...(this.data.family?.templateTodayVersion === 1 ? { applyToday: true } : {}),
       weeklySchedule: target.weekly ? { weekdaysTemplateId: target.weekdaysTemplateId, weekendTemplateId: target.weekendTemplateId } : null };
     const fingerprint = JSON.stringify([target.familyId, values]);
     if (this.scheduleMutation?.fingerprint !== fingerprint) this.scheduleMutation = { fingerprint, id: this.engine.makeId() };
@@ -257,8 +258,11 @@ const definition: PageDefinition<PlansData, PlansMethods, PlansRuntime> = {
     const name = this.data.templateName.trim();
     if (action === 'saveDailyTemplate' && (!name || name.length > 24)) { wx.showToast({ title: '请填写24字以内的模板名称', icon: 'none' }); return; }
     const familyId = this.data.family.id; const childId = this.data.childId; const selected = this.data.templateId;
+    const todayTemplateBefore = learning.templateForDate(this.data.family, childId, this.engine.today).id;
     const userId = this.engine.state.userId; const role = this.engine.state.family?.myRole;
+    const appliesToday = action !== 'deleteDailyTemplate' && this.data.family.templateTodayVersion === 1;
     const values = { childId, templateId: selected, baseRevision: this.data.draftTemplateRevision,
+      ...(appliesToday ? { applyToday: true } : {}),
       ...(action === 'saveDailyTemplate' ? { name, rules, activate } : {}) };
     const fingerprint = JSON.stringify([familyId, action, values]);
     if (this.templateMutation?.fingerprint !== fingerprint) this.templateMutation = { fingerprint, id: this.engine.makeId() };
@@ -275,7 +279,9 @@ const definition: PageDefinition<PlansData, PlansMethods, PlansRuntime> = {
         this.setData({ draftDirty: false, newTemplateDraft: false, templateConflict: false });
         this.loadTemplate(action === 'deleteDailyTemplate' ? undefined : selected);
         if (activate || action === 'activateDailyTemplate' || selected === this.data.activeTemplateId) this.setData({ editor: 'preview' });
-        wx.showToast({ title: action === 'deleteDailyTemplate' ? '模板已删除' : activate || action === 'activateDailyTemplate' ? '已启用，明日按此安排' : '模板已保存', icon: 'none' });
+        const todayTemplateAfter = learning.templateForDate(result.family, childId, this.engine.today).id;
+        const changedToday = appliesToday && (todayTemplateBefore !== todayTemplateAfter || selected === todayTemplateAfter);
+        wx.showToast({ title: action === 'deleteDailyTemplate' ? '模板已删除' : changedToday ? '已保存，今日安排已更新' : '模板已保存，按使用安排生效', icon: 'none' });
       }
     } catch (cause) {
       const error = errorDetails(cause);

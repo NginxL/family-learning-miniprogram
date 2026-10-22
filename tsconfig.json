@@ -13,7 +13,8 @@
     "types": ["node", "miniprogram-api-typings"],
     "rootDirs": ["src/shared", "src/cloud/learning", "src/miniprogram/lib/learning"],
     "paths": {
-      "wx-server-sdk": ["./cloudfunctions/familyApi/node_modules/wx-server-sdk"]
+      "wx-server-sdk": ["./cloudfunctions/familyApi/node_modules/wx-server-sdk"],
+      "tencentcloud-sdk-nodejs-tts": ["./cloudfunctions/familyApi/node_modules/tencentcloud-sdk-nodejs-tts"]
     }
   },
   "include": ["src/**/*.ts", "tests/types/**/*.ts"]

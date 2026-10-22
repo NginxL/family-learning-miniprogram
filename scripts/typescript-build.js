@@ -35,14 +35,16 @@ function artifacts() {
         + fs.readFileSync(path.join(output, source), 'utf8');
       for (const target of targets) files.set(target, generated);
     };
-    for (const name of ['catalog', 'reading-catalog', 'learning', 'child-profile']) add(`shared/${name}.js`,
+    for (const name of ['catalog', 'reading-catalog', 'learning', 'child-profile', 'narration']) add(`shared/${name}.js`,
       [`shared/${name}.js`, `miniprogram/lib/learning/${name}.js`, `cloudfunctions/familyApi/learning/${name}.js`]);
-    for (const name of ['index', 'service', 'store', 'validation', 'homework']) add(`cloud/${name}.js`, [`cloudfunctions/familyApi/${name}.js`]);
+    for (const name of ['index', 'service', 'store', 'validation', 'homework', 'speech', 'speech-provider']) add(`cloud/${name}.js`, [`cloudfunctions/familyApi/${name}.js`]);
     add('client/cloud-transport.js', ['miniprogram/lib/cloud-transport.js']);
     add('miniprogram/app.js', ['miniprogram/app.js']);
     for (const name of ['sync-engine', 'task-groups', 'page', 'errors', 'task-route', 'homework-media', 'pinyin', 'pinyin-data', 'study-notes-view', 'content-detail', 'planned-task-edit', 'content-schedule', 'content-presentation', 'learning-navigation'])
       add(`miniprogram/lib/${name}.js`, [`miniprogram/lib/${name}.js`]);
     add('miniprogram/components/learning-card/index.js', ['miniprogram/components/learning-card/index.js']);
+    add('miniprogram/lib/speech-player.js', ['miniprogram/lib/speech-player.js']);
+    add('miniprogram/components/speech-button/index.js', ['miniprogram/components/speech-button/index.js']);
     const pages = JSON.parse(fs.readFileSync(path.join(root, 'miniprogram/app.json'), 'utf8')).pages;
     for (const page of pages) add(`miniprogram/${page}.js`, [`miniprogram/${page}.js`]);
     return files;

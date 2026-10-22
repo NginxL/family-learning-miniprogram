@@ -8,6 +8,7 @@ exports.choosePhotos = choosePhotos;
 exports.writePreview = writePreview;
 exports.removePreview = removePreview;
 exports.startRecording = startRecording;
+const speech_player_1 = require("./speech-player");
 const draftId = () => `d_${Date.now()}_${Math.random().toString(36).slice(2)}`;
 exports.draftId = draftId;
 async function privacyConsent(present) {
@@ -63,6 +64,7 @@ let session;
 function startRecording(done, fail) {
     if (session)
         throw new Error('上一段录音正在结束，请稍后重试');
+    (0, speech_player_1.stopSpeech)();
     if (!recorder) {
         recorder = wx.getRecorderManager();
         recorder.onStop((result) => { const previous = session; session = undefined; if (previous && !previous.cancelled)

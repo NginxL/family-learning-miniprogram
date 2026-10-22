@@ -80,7 +80,8 @@ test('native JavaScript loader starts the demo, registers every page and creates
     assert.equal(today.data.family.members[0].name, '我');
     assert.ok(today.data.allTaskCount > 0);
     assert.ok(today.data.groups.length > 0);
-    assert.equal(runtime.components.length, 1, 'all learning lists register the same native card component');
+    assert.equal(runtime.components.length, 2, 'pages share one learning card and one speech control');
+    assert.equal(runtime.components.filter(component => component.methods.toggleReading).length, 1, 'both detail pages reuse the same speech component');
     assert.equal(runtime.app.engine.snapshot().status, 'online');
     assert.equal(runtime.cloudCalls(), 0);
   } finally { today.cleanup(); family.cleanup(); }

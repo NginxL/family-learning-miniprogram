@@ -1,4 +1,5 @@
 import type { HomeworkAttachment } from '../../shared/models';
+import { stopSpeech } from './speech-player';
 export interface DraftAttachment { id: string; path: string; mime: HomeworkAttachment['mime']; duration: number; attachmentId?: string }
 export const draftId = () => `d_${Date.now()}_${Math.random().toString(36).slice(2)}`;
 export async function privacyConsent(present: () => Promise<void>): Promise<void> {
@@ -48,6 +49,7 @@ let recorder: WechatMiniprogram.RecorderManager | undefined;
 let session: { done: WechatMiniprogram.RecorderManagerOnStopCallback; fail: () => void; cancelled: boolean } | undefined;
 export function startRecording(done: WechatMiniprogram.RecorderManagerOnStopCallback, fail: () => void): Recording {
   if (session) throw new Error('上一段录音正在结束，请稍后重试');
+  stopSpeech();
   if (!recorder) {
     recorder = wx.getRecorderManager();
     recorder.onStop((result) => { const previous = session; session = undefined; if (previous && !previous.cancelled) previous.done(result); });

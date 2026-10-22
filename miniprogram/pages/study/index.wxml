@@ -21,7 +21,8 @@
       <view wx:if="{{item.poetryByline}}" class="muted poetry-byline">{{item.poetryByline}}</view>
       <view wx:if="{{item.textCorrectionNotice}}" class="notice">{{item.textCorrectionNotice}}</view>
       <view class="body"><template is="pinyinText" data="{{enabled: showPinyin, lines: item.pinyin.body, text: item.displayDetail || item.detail || '和家人一起完成这项学习。'}}" /></view>
-      <view wx:if="{{item.recitationSummary}}" class="body recitation-summary">{{item.recitationSummary}}</view>
+      <speech-button item="{{item}}" child-id="{{childId}}" date="{{date}}" task-id="{{item.id}}" />
+    <view wx:if="{{item.recitationSummary}}" class="body recitation-summary">{{item.recitationSummary}}</view>
       <template is="studyNotes" data="{{item, notesOpenId, notesAnswersId}}" />
       <template is="contentSources" data="{{item, sourcesOpenId, gradeLabels}}" />
       <button wx:if="{{planning && !isChild && !item.done}}" class="secondary" data-id="{{item.id}}" bindtap="editTask" disabled="{{busy}}">修改日期 / 删除</button>

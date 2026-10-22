@@ -1,0 +1,30 @@
+import type { ContentInput } from './models';
+export type SpeechLanguage = 'zh' | 'en';
+// Keep the source visible on the card: do not read provenance, exercises or answers.
+export function narration(item: ContentInput): { language: SpeechLanguage; chunks: string[] } {
+  const kind = item.kind || item.subject;
+  const language = ['word', 'sentence', 'english-reading'].includes(kind || '') ? 'en' : 'zh';
+  let text = '';
+  if (kind === 'word' || kind === 'sentence') text = item.title || '';
+  else if (kind === 'english-reading') {
+    text = (item.detail || '').split(/\n(?:Read and think:|Read and answer:|Questions?:|Think and answer:|读后|想一想|先练|作答后)/i)[0];
+    text = text.split('\n').filter(line => !/[\u3400-\u9fff]/.test(line)).join('\n');
+  } else if (kind === 'poetry' || kind === 'reading') {
+    text = (item.detail || '').split(/\n\s*(?:想一想|读后|先练一练|作答后核对|学习提示)[：:]/)[0];
+    if (kind === 'poetry') text = `${item.title || ''}\n${text}`;
+  }
+  text = text.replace(/<[^>]*>/g, '').replace(/\r/g, '').trim();
+  if (!text || (language === 'en' && !/[A-Za-z]/.test(text))) return { language, chunks: [] };
+  const max = language === 'en' ? 420 : 120;
+  const chars = Array.from(text); const chunks: string[] = [];
+  for (let start = 0; start < chars.length;) {
+    let end = Math.min(start + max, chars.length);
+    if (end < chars.length) {
+      for (let split = end; split > start + Math.floor(max / 2); split--) {
+        if (/[。！？.!?;；\n]/.test(chars[split - 1]) || (language === 'en' && /\s/.test(chars[split - 1]))) { end = split; break; }
+      }
+    }
+    const chunk = chars.slice(start, end).join('').trim(); if (chunk) chunks.push(chunk); start = end;
+  }
+  return { language, chunks };
+}

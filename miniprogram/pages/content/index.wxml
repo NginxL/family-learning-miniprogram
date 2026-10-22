@@ -12,6 +12,7 @@
     <button wx:if="{{pinyin}}" class="quiet pinyin-toggle" bindtap="togglePinyin">{{showPinyin ? '隐藏拼音' : '显示拼音'}}</button>
     <view wx:if="{{item.textCorrectionNotice}}" class="notice">{{item.textCorrectionNotice}}</view>
     <view class="body"><template is="pinyinText" data="{{enabled: showPinyin, lines: pinyin.body, text: item.displayDetail || item.detail || '和家人一起回顾这项内容。'}}" /></view>
+    <speech-button item="{{item}}" child-id="{{childId}}" />
     <view wx:if="{{item.recitationSummary}}" class="body recitation-summary">{{item.recitationSummary}}</view>
     <template is="studyNotes" data="{{item, notesOpenId, notesAnswersId}}" />
     <template is="contentSources" data="{{item, sourcesOpenId, gradeLabels}}" />

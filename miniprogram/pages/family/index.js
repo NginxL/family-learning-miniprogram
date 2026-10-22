@@ -10,7 +10,7 @@ const ageValue = (value) => value === '' || value == null ? null : Number(value)
 const definition = {
     ...base,
     data: { ...base.data, gradeLabels: learning_1.gradeLabels, addGrade: 0, editGrade: 0, editingChild: null, addingChild: false, manageFamily: false,
-        editBirthDate: '', addBirthDate: '', editCurrentAge: null, addCurrentAge: null },
+        editBirthDate: '', addBirthDate: '', editCurrentAge: null, addCurrentAge: null, bindingChildId: '' },
     changeGrade(event) { this.setData({ [event.currentTarget.dataset.field]: Number(event.detail.value) }); },
     changeBirthDate(event) {
         const field = event.currentTarget.dataset.field;
@@ -66,20 +66,32 @@ const definition = {
         }
     },
     async createInvite() { const result = await this.perform('createInvite', {}); if (result)
-        this.setData({ inviteCode: result.code, inviteLabel: '家长邀请码' }); },
+        this.setData({ inviteCode: result.code, inviteLabel: '家长邀请码', inviteChildId: '' }); },
     async createChildInvite(event) {
-        var _a;
+        var _a, _b, _c, _d;
         const child = this.data.children.find((item) => item.id === event.currentTarget.dataset.id);
-        if (!child || ((_a = this.data.family) === null || _a === void 0 ? void 0 : _a.myRole) !== 'owner')
+        if (!child || ((_a = this.data.family) === null || _a === void 0 ? void 0 : _a.myRole) !== 'owner' || this.data.busy || this.data.bindingChildId)
             return;
-        const consent = await new Promise((resolve) => wx.showModal({ title: `绑定${child.name}的微信`,
-            content: '请确认你是监护人并同意：孩子主动录音或拍照提交作业，文件保存在家庭云空间，仅供孩子和家长查看、反馈。加入后只能查看该孩子的档案，不能完成任务或切换家长身份。',
-            confirmText: '同意并生成', success: (result) => resolve(result.confirm), fail: () => resolve(false) }));
-        if (!consent)
-            return;
-        const result = await this.perform('createInvite', { role: 'child', childId: child.id, guardianConsent: true });
-        if (result)
-            this.setData({ inviteCode: result.code, inviteLabel: `${child.name}的孩子绑定码`, manageFamily: true });
+        const familyId = this.data.family.id;
+        this.setData({ bindingChildId: child.id });
+        try {
+            const consent = await new Promise((resolve, reject) => wx.showModal({ title: `绑定${child.name}的微信`,
+                content: '请确认你是监护人并同意：孩子主动录音或拍照提交作业，文件保存在家庭云空间，仅供孩子和家长查看、反馈。加入后只能查看该孩子的档案，不能完成任务或切换家长身份。',
+                confirmText: '同意绑定', success: (result) => resolve(result.confirm), fail: reject }));
+            if (!consent)
+                return;
+            if (((_b = this.data.family) === null || _b === void 0 ? void 0 : _b.id) !== familyId || ((_c = this.data.family) === null || _c === void 0 ? void 0 : _c.myRole) !== 'owner')
+                return;
+            const result = await this.perform('createInvite', { role: 'child', childId: child.id, guardianConsent: true });
+            if (result && ((_d = this.data.family) === null || _d === void 0 ? void 0 : _d.id) === familyId)
+                this.setData({ inviteCode: result.code, inviteLabel: `${child.name}的孩子绑定码`, inviteChildId: child.id });
+        }
+        catch {
+            wx.showToast({ title: '绑定确认未打开，请重试', icon: 'none' });
+        }
+        finally {
+            this.setData({ bindingChildId: '' });
+        }
     },
     copyInvite() { if (this.data.inviteCode)
         wx.setClipboardData({ data: this.data.inviteCode }); },

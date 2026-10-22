@@ -48,7 +48,7 @@
       <view wx:if="{{templateConflict}}" class="notice">家人已更新模板，你的草稿已保留。<button class="quiet" bindtap="resetRules" disabled="{{busy}}">放弃草稿并重新载入</button></view>
       <button class="primary" bindtap="saveTemplate" loading="{{busy}}" disabled="{{busy || templateConflict}}">保存模板</button>
       <button wx:if="{{draftDirty}}" class="quiet discard-draft" bindtap="resetRules" disabled="{{busy}}">放弃修改</button>
-      <view class="muted plan-help">新模板保存后，可在「自动安排」中选择使用。今日任务和已完成记录保留。</view>
+      <view class="muted plan-help">新模板可在「自动安排」中选择使用。{{family.templateTodayVersion === 1 ? '修改今日使用的模板会更新未完成的自动任务；已完成、手动安排和已交作业的组保留。' : '当前服务仅更新后续安排，今日任务保留。'}}</view>
     </block>
     <block wx:else>
       <view class="card"><form bindsubmit="addPlan">
@@ -81,7 +81,7 @@
         <view class="label">{{item.label}}</view><picker range="{{templates}}" range-key="name" value="{{item.index}}" data-slot="{{item.slot}}" bindchange="chooseScheduleTemplate" disabled="{{busy}}"><view class="picker">{{item.index >= 0 ? templates[item.index].name : '模板已变更，请重新载入'}} ▾</view></picker>
       </view>
       <view wx:if="{{scheduleConflict}}" class="notice">家人已更新模板或安排。<button class="quiet" bindtap="openSchedule" disabled="{{busy}}">重新载入</button></view>
-      <view class="muted plan-help">{{scheduleDraft.weekly ? '按自然星期循环，后续每天自动选择模板。' : '后续每天使用选中的模板。'}}今日已生成的任务保持不变。</view>
+      <view class="muted plan-help">{{scheduleDraft.weekly ? '按自然星期循环，每天自动选择模板。' : '每天使用选中的模板。'}}{{family.templateTodayVersion === 1 ? '保存后更新今日未完成的自动任务；已完成、手动安排和已交作业的组保留。' : '当前服务保留今日任务。'}}</view>
       <button class="primary" bindtap="saveSchedule" loading="{{busy}}" disabled="{{busy || scheduleConflict}}">保存安排</button>
       <button class="quiet edit-cancel" bindtap="closeSchedule" disabled="{{busy}}">取消</button>
     </view>

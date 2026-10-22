@@ -162,7 +162,7 @@ const definition = {
         }
     },
     async saveSchedule() {
-        var _a, _b, _c, _d, _e;
+        var _a, _b, _c, _d, _e, _f;
         const target = this.data.scheduleDraft;
         if (!target || this.data.busy || this.data.isChild || ((_a = this.data.family) === null || _a === void 0 ? void 0 : _a.id) !== target.familyId || this.data.childId !== target.childId)
             return;
@@ -171,17 +171,18 @@ const definition = {
             return;
         }
         const values = { childId: target.childId, activeId: target.activeId, baseRevision: target.baseRevision,
+            ...(((_b = this.data.family) === null || _b === void 0 ? void 0 : _b.templateTodayVersion) === 1 ? { applyToday: true } : {}),
             weeklySchedule: target.weekly ? { weekdaysTemplateId: target.weekdaysTemplateId, weekendTemplateId: target.weekendTemplateId } : null };
         const fingerprint = JSON.stringify([target.familyId, values]);
-        if (((_b = this.scheduleMutation) === null || _b === void 0 ? void 0 : _b.fingerprint) !== fingerprint)
+        if (((_c = this.scheduleMutation) === null || _c === void 0 ? void 0 : _c.fingerprint) !== fingerprint)
             this.scheduleMutation = { fingerprint, id: this.engine.makeId() };
         const userId = this.engine.state.userId;
-        const role = (_c = this.engine.state.family) === null || _c === void 0 ? void 0 : _c.myRole;
+        const role = (_d = this.engine.state.family) === null || _d === void 0 ? void 0 : _d.myRole;
         this.setData({ busy: true });
         try {
             const result = await this.engine.command('saveTemplateSchedule', { ...values, mutationId: this.scheduleMutation.id });
-            if (this.engine.state.userId === userId && ((_d = this.engine.state.family) === null || _d === void 0 ? void 0 : _d.myRole) === role && this.data.scheduleDraft === target
-                && ((_e = this.data.family) === null || _e === void 0 ? void 0 : _e.id) === target.familyId && this.data.childId === target.childId) {
+            if (this.engine.state.userId === userId && ((_e = this.engine.state.family) === null || _e === void 0 ? void 0 : _e.myRole) === role && this.data.scheduleDraft === target
+                && ((_f = this.data.family) === null || _f === void 0 ? void 0 : _f.id) === target.familyId && this.data.childId === target.childId) {
                 this.adoptTemplates(result.family, target.childId);
                 this.setData({ scheduleDraft: null });
                 this.loadTemplate(learning.templateForDate(this.engine.state.family, target.childId, this.data.date).id);
@@ -329,9 +330,12 @@ const definition = {
         const familyId = this.data.family.id;
         const childId = this.data.childId;
         const selected = this.data.templateId;
+        const todayTemplateBefore = learning.templateForDate(this.data.family, childId, this.engine.today).id;
         const userId = this.engine.state.userId;
         const role = (_a = this.engine.state.family) === null || _a === void 0 ? void 0 : _a.myRole;
+        const appliesToday = action !== 'deleteDailyTemplate' && this.data.family.templateTodayVersion === 1;
         const values = { childId, templateId: selected, baseRevision: this.data.draftTemplateRevision,
+            ...(appliesToday ? { applyToday: true } : {}),
             ...(action === 'saveDailyTemplate' ? { name, rules, activate } : {}) };
         const fingerprint = JSON.stringify([familyId, action, values]);
         if (((_b = this.templateMutation) === null || _b === void 0 ? void 0 : _b.fingerprint) !== fingerprint)
@@ -350,7 +354,9 @@ const definition = {
                 this.loadTemplate(action === 'deleteDailyTemplate' ? undefined : selected);
                 if (activate || action === 'activateDailyTemplate' || selected === this.data.activeTemplateId)
                     this.setData({ editor: 'preview' });
-                wx.showToast({ title: action === 'deleteDailyTemplate' ? '模板已删除' : activate || action === 'activateDailyTemplate' ? '已启用，明日按此安排' : '模板已保存', icon: 'none' });
+                const todayTemplateAfter = learning.templateForDate(result.family, childId, this.engine.today).id;
+                const changedToday = appliesToday && (todayTemplateBefore !== todayTemplateAfter || selected === todayTemplateAfter);
+                wx.showToast({ title: action === 'deleteDailyTemplate' ? '模板已删除' : changedToday ? '已保存，今日安排已更新' : '模板已保存，按使用安排生效', icon: 'none' });
             }
         }
         catch (cause) {

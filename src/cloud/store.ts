@@ -1,6 +1,6 @@
 import type { Collection, DatabaseDocuments, Store, Transaction } from '../shared/models';
 
-export const COLLECTIONS: Collection[] = ['profiles', 'families', 'invites', 'days', 'receipts', 'learning', 'homeworks', 'attachments'];
+export const COLLECTIONS: Collection[] = ['profiles', 'families', 'invites', 'days', 'receipts', 'learning', 'homeworks', 'attachments', 'speechUsage'];
 // SDK transaction results are JSON at the boundary; schema ownership remains in service.ts.
 export interface CloudDatabase {
   runTransaction<T>(work: (tx: {

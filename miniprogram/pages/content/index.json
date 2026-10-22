@@ -1,1 +1,7 @@
-{"navigationBarTitleText":"学习内容","enablePullDownRefresh":false}
+{
+  "navigationBarTitleText": "学习内容",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "speech-button": "/components/speech-button/index"
+  }
+}

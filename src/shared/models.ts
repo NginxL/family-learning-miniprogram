@@ -178,6 +178,7 @@ export interface Family extends PlanningFamily {
 }
 export interface PublicFamily extends Omit<Family, 'createdAt' | 'activeInviteHash' | 'autoCreated' | 'scheduledContents'> {
   recitationPlanningVersion?: 1;
+  templateTodayVersion?: 1;
   myRole: Member['role'];
   canJoinFamily: boolean;
   myChildId?: string;
@@ -224,6 +225,7 @@ export interface DatabaseDocuments {
   learning: PersistedLedger;
   homeworks: Homework;
   attachments: HomeworkAttachment;
+  speechUsage: { characters: number };
 }
 export type Collection = keyof DatabaseDocuments;
 export interface Transaction {

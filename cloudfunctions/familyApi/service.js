@@ -41,6 +41,7 @@ const validation_1 = require("./validation");
 Object.defineProperty(exports, "DomainError", { enumerable: true, get: function () { return validation_1.DomainError; } });
 Object.defineProperty(exports, "chinaDate", { enumerable: true, get: function () { return validation_1.chinaDate; } });
 const homework_1 = require("./homework");
+const speech_1 = require("./speech");
 const learning = __importStar(require("./learning/learning"));
 const child_profile_1 = require("./learning/child-profile");
 const isRecord = (value) => value !== null && typeof value === 'object' && !Array.isArray(value);
@@ -81,7 +82,7 @@ function publicFamily(family, uid, today) {
     const childId = member.role === 'child' ? member.childId : undefined;
     (0, validation_1.requireValue)(member.role !== 'child' || (childId && family.children.some((child) => child.id === childId)), 'FORBIDDEN', '孩子绑定状态无效，请联系家长');
     return {
-        id: family.id, name: family.name, ownerId: family.ownerId, recitationPlanningVersion: 1,
+        id: family.id, name: family.name, ownerId: family.ownerId, recitationPlanningVersion: 1, templateTodayVersion: 1,
         members: family.members.map(({ id, name, role, childId }) => ({ id, name, role, ...(childId ? { childId } : {}) })),
         children: family.children.filter((child) => !childId || child.id === childId).map((child) => (0, child_profile_1.withCurrentAge)(child, today)), plans: clone(family.plans.filter((plan) => !childId || plan.childId === childId)), autoPlans: clone(childId ? { [childId]: ((_a = family.autoPlans) === null || _a === void 0 ? void 0 : _a[childId]) || [] } : family.autoPlans || {}),
         ...(family.templateSets ? { templateSets: clone(childId ? (family.templateSets[childId] ? { [childId]: family.templateSets[childId] } : {}) : family.templateSets) } : {}),
@@ -89,8 +90,9 @@ function publicFamily(family, uid, today) {
         canJoinFamily: family.autoCreated === true && family.ownerId === uid && family.members.length === 1
     };
 }
-function createService({ store, media, now = Date.now, randomId = () => crypto.randomBytes(16).toString('hex'), inviteCode = () => crypto.randomBytes(12).toString('hex').toUpperCase(), defaultChild = { name: '孩子', age: 6, schoolGrade: 1 } }) {
+function createService({ store, media, speech, now = Date.now, randomId = () => crypto.randomBytes(16).toString('hex'), inviteCode = () => crypto.randomBytes(12).toString('hex').toUpperCase(), defaultChild = { name: '孩子', age: 6, schoolGrade: 1 } }) {
     const homework = (0, homework_1.createHomeworkService)(store, media);
+    const speak = (0, speech_1.createSpeechService)(store, speech);
     async function executeRaw(openid, action, rawInput = {}) {
         (0, validation_1.requireValue)(typeof openid === 'string' && openid.length > 0, 'UNAUTHENTICATED', '请通过微信小程序进入');
         (0, validation_1.requireValue)(isRecord(rawInput), 'INVALID', '请求内容无效');
@@ -101,6 +103,8 @@ function createService({ store, media, now = Date.now, randomId = () => crypto.r
         const newId = randomId();
         if (homework.handles(action))
             return homework.execute(uid, action, input, timestamp);
+        if (action === 'getSpeech')
+            return speak(uid, input, timestamp);
         const code = action === 'createInvite' ? inviteCode() : null;
         return store.run(async (tx) => {
             var _a, _b;
@@ -301,6 +305,7 @@ function createService({ store, media, now = Date.now, randomId = () => crypto.r
             }
             if (action === 'saveDailyTemplate' || action === 'activateDailyTemplate' || action === 'deleteDailyTemplate' || action === 'saveTemplateSchedule') {
                 childExists(input.childId);
+                (0, validation_1.requireValue)(input.applyToday === undefined || typeof input.applyToday === 'boolean', 'INVALID', '今日安排设置无效');
                 const templateId = (0, validation_1.identifier)(action === 'saveTemplateSchedule' ? input.activeId : input.templateId);
                 (0, validation_1.identifier)(input.mutationId);
                 (0, validation_1.requireValue)(isInteger(input.baseRevision) && input.baseRevision >= 0, 'INVALID', '模板版本无效');
@@ -317,9 +322,12 @@ function createService({ store, media, now = Date.now, randomId = () => crypto.r
                         };
                 }
                 // Keep the existing fingerprint shape so pre-upgrade template retries remain valid.
-                const fingerprint = (0, validation_1.hash)(JSON.stringify(action === 'saveTemplateSchedule'
+                const fingerprintValues = action === 'saveTemplateSchedule'
                     ? [action, family.id, input.childId, templateId, input.baseRevision, weeklySchedule]
-                    : [action, family.id, input.childId, templateId, input.baseRevision, name, rules, input.activate]));
+                    : [action, family.id, input.childId, templateId, input.baseRevision, name, rules, input.activate];
+                if (input.applyToday !== undefined)
+                    fingerprintValues.push(input.applyToday);
+                const fingerprint = (0, validation_1.hash)(JSON.stringify(fingerprintValues));
                 const receiptId = (0, validation_1.hash)(`${uid}:${input.mutationId}`);
                 const receipt = await tx.get('receipts', receiptId);
                 if (receipt) {
@@ -327,6 +335,7 @@ function createService({ store, media, now = Date.now, randomId = () => crypto.r
                     return reply(action, { family: publicFamily(family, uid, today), duplicate: true });
                 }
                 const set = learning.templateSet(family, input.childId);
+                const todayTemplateId = learning.templateForDate(family, input.childId, today).id;
                 (0, validation_1.requireValue)(set.revision === input.baseRevision, 'CONFLICT', '家人已更新任务模板，请重新载入后再修改');
                 const index = set.templates.findIndex((item) => item.id === templateId);
                 if (action === 'saveTemplateSchedule') {
@@ -368,6 +377,22 @@ function createService({ store, media, now = Date.now, randomId = () => crypto.r
                 set.revision += 1;
                 family.templateSets = { ...family.templateSets, [input.childId]: set };
                 family.autoPlans = { ...family.autoPlans, [input.childId]: clone(set.templates.find((item) => item.id === set.activeId).rules) };
+                if (input.applyToday === true && action !== 'deleteDailyTemplate'
+                    && (action !== 'saveDailyTemplate' || templateId === todayTemplateId || input.activate)) {
+                    const id = dayKey(family.id, today);
+                    const day = (await tx.get('days', id)) || { familyId: family.id, date: today, tasks: [] };
+                    const ledger = await readLedger(input.childId);
+                    const protectedKinds = [];
+                    for (const kind of learning.kinds) {
+                        const homework = await tx.get('homeworks', (0, homework_1.homeworkKey)({ familyId: family.id, childId: input.childId, date: today, kind: kind.id }));
+                        // A submitted group's task versions must remain stable through review/resubmission.
+                        if (homework)
+                            protectedKinds.push(kind.id);
+                    }
+                    learning.replanTemplateDay(family, day, ledger, input.childId, protectedKinds);
+                    await saveDay(id, day);
+                    await saveLedger(ledger);
+                }
                 await tx.put('families', family.id, family);
                 await tx.put('receipts', receiptId, { familyId: family.id, fingerprint, template: { childId: input.childId }, createdAt: timestamp });
                 return reply(action, { family: publicFamily(family, uid, today), duplicate: false });

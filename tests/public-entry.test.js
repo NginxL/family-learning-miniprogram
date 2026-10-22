@@ -25,6 +25,7 @@ test('public cloud entry ignores private deployment defaults and keeps existing 
       if (name === 'wx-server-sdk') return cloud;
       if (name === './service') return { createService };
       if (name === './store') return { createCloudStore: () => store };
+      if (name === './speech-provider') return { speechProvider: () => undefined };
       throw new Error(`Unexpected require: ${name}`);
     }
   });

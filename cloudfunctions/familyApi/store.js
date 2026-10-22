@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.COLLECTIONS = void 0;
 exports.createCloudStore = createCloudStore;
-exports.COLLECTIONS = ['profiles', 'families', 'invites', 'days', 'receipts', 'learning', 'homeworks', 'attachments'];
+exports.COLLECTIONS = ['profiles', 'families', 'invites', 'days', 'receipts', 'learning', 'homeworks', 'attachments', 'speechUsage'];
 function createCloudStore(db) {
     return {
         run(fn) {

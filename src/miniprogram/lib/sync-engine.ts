@@ -89,6 +89,14 @@ class SyncEngine {
       throw Object.assign(new Error('教材必背安排等待服务更新；当前模板未修改。可在本机演示版体验。'), { code: 'UNSUPPORTED' });
     if ((action === 'assignContent' || action === 'reviewContent') && (catalogById.get((payload as CommandPayloads['assignContent']).contentId)?.minimumServiceVersion || 0) > (this.state.family?.recitationPlanningVersion || 0))
       throw Object.assign(new Error('这项新内容等待服务更新；当前学习记录未修改。可在本机演示版安排。'), { code: 'UNSUPPORTED' });
+    if (['saveDailyTemplate', 'activateDailyTemplate', 'saveTemplateSchedule'].includes(action)
+      && (payload as CommandPayloads['saveDailyTemplate']).applyToday) {
+      const session = JSON.stringify([this.state.userId, this.state.family?.id, this.state.family?.myRole]);
+      await this.sync();
+      if (this.status !== 'online' || this.state.queue.length) throw new Error('请先联网同步学习记录，再更新今日安排');
+      if (session !== JSON.stringify([this.state.userId, this.state.family?.id, this.state.family?.myRole])) throw new Error('家庭身份已变化，请重新打开模板');
+      if (this.state.family?.templateTodayVersion !== 1) throw Object.assign(new Error('今日安排等待服务更新，模板尚未修改'), { code: 'UNSUPPORTED' });
+    }
     const input = { ...payload, familyId: this.state.family && this.state.family.id } as ApiPayloads[A];
     const data = await this.transport(action, input);
     await this.sync();

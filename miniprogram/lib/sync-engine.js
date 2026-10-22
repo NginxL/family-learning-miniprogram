@@ -86,7 +86,7 @@ class SyncEngine {
         this.save(next);
     }
     async command(action, payload) {
-        var _a, _b, _c, _d, _e;
+        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k;
         // Membership/plan writes require a connection; only check-ins are queued offline.
         // Keep the v1 null-family request path: the service rejects writes without membership.
         if (((_a = this.state.family) === null || _a === void 0 ? void 0 : _a.myRole) === 'child' && !['uploadHomeworkAttachment', 'submitHomework', 'getHomework', 'getHomeworkAttachment'].includes(action))
@@ -96,6 +96,17 @@ class SyncEngine {
             throw Object.assign(new Error('教材必背安排等待服务更新；当前模板未修改。可在本机演示版体验。'), { code: 'UNSUPPORTED' });
         if ((action === 'assignContent' || action === 'reviewContent') && (((_d = learning_1.catalogById.get(payload.contentId)) === null || _d === void 0 ? void 0 : _d.minimumServiceVersion) || 0) > (((_e = this.state.family) === null || _e === void 0 ? void 0 : _e.recitationPlanningVersion) || 0))
             throw Object.assign(new Error('这项新内容等待服务更新；当前学习记录未修改。可在本机演示版安排。'), { code: 'UNSUPPORTED' });
+        if (['saveDailyTemplate', 'activateDailyTemplate', 'saveTemplateSchedule'].includes(action)
+            && payload.applyToday) {
+            const session = JSON.stringify([this.state.userId, (_f = this.state.family) === null || _f === void 0 ? void 0 : _f.id, (_g = this.state.family) === null || _g === void 0 ? void 0 : _g.myRole]);
+            await this.sync();
+            if (this.status !== 'online' || this.state.queue.length)
+                throw new Error('请先联网同步学习记录，再更新今日安排');
+            if (session !== JSON.stringify([this.state.userId, (_h = this.state.family) === null || _h === void 0 ? void 0 : _h.id, (_j = this.state.family) === null || _j === void 0 ? void 0 : _j.myRole]))
+                throw new Error('家庭身份已变化，请重新打开模板');
+            if (((_k = this.state.family) === null || _k === void 0 ? void 0 : _k.templateTodayVersion) !== 1)
+                throw Object.assign(new Error('今日安排等待服务更新，模板尚未修改'), { code: 'UNSUPPORTED' });
+        }
         const input = { ...payload, familyId: this.state.family && this.state.family.id };
         const data = await this.transport(action, input);
         await this.sync();

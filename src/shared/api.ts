@@ -9,7 +9,7 @@ export interface ProfileInput {
 export interface FamilyScope { familyId: string }
 export interface ChildScope extends FamilyScope { childId: string }
 export interface ContentRequest extends ChildScope { contentId: string }
-export interface TemplateRequest extends ChildScope { templateId: string; baseRevision: number; mutationId: string }
+export interface TemplateRequest extends ChildScope { templateId: string; baseRevision: number; mutationId: string; applyToday?: boolean }
 
 // Keep actions, payloads and results linked. A getHistory call cannot return a day.
 export interface ApiPayloads {
@@ -30,11 +30,12 @@ export interface ApiPayloads {
   saveDailyTemplate: TemplateRequest & { name: string; rules: AutoRule[]; activate: boolean };
   activateDailyTemplate: TemplateRequest;
   deleteDailyTemplate: TemplateRequest;
-  saveTemplateSchedule: ChildScope & { activeId: string; weeklySchedule: WeeklyTemplateSchedule | null; baseRevision: number; mutationId: string };
+  saveTemplateSchedule: ChildScope & { activeId: string; weeklySchedule: WeeklyTemplateSchedule | null; baseRevision: number; mutationId: string; applyToday?: boolean };
   getDay: FamilyScope & { date?: CalendarDate };
   getHistory: ChildScope & HistoryQuery;
   getProgress: ChildScope;
   getLearningStatus: ChildScope;
+  getSpeech: ContentRequest & { part: number; taskId?: string; date?: string };
   setMastery: ContentRequest & { mastered: boolean; baseVersion: number };
   reviewContent: ContentRequest;
   assignContent: ContentRequest & { date?: CalendarDate };
@@ -66,6 +67,7 @@ export interface ApiResults {
   getHistory: ReturnType<typeof history>;
   getProgress: ReturnType<typeof progress>;
   getLearningStatus: ReturnType<typeof learningStatus>;
+  getSpeech: { base64: string; mime: 'audio/mpeg'; part: number; parts: number; key: string };
   setMastery: { mastered: boolean };
   reviewContent: { task: Task; date: CalendarDate };
   assignContent: { task: Task; date: CalendarDate };

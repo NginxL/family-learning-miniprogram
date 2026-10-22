@@ -1,6 +1,7 @@
 import cloud = require('wx-server-sdk');
 import { createService } from './service';
 import { createCloudStore } from './store';
+import { speechProvider } from './speech-provider';
 import type { ApiEnvelope } from '../shared/api';
 
 // DYNAMIC_CURRENT_ENV is a supported runtime symbol missing from the SDK init declaration.
@@ -9,7 +10,7 @@ init({ env: cloud.DYNAMIC_CURRENT_ENV });
 // The installed SDK accepts this option; its bundled declaration omits it.
 // tests/sdk-contract.test.js exercises the installed SDK's actual transaction contract.
 const databaseOptions: NonNullable<Parameters<typeof cloud.database>[0]> & { throwOnNotFound: boolean } = { throwOnNotFound: false };
-const service = createService({ store: createCloudStore(cloud.database(databaseOptions)), media: {
+const service = createService({ store: createCloudStore(cloud.database(databaseOptions)), speech: speechProvider(), media: {
   async upload(path, data) { return (await cloud.uploadFile({ cloudPath: path, fileContent: data })).fileID; },
   async download(fileId) { return (await cloud.downloadFile({ fileID: fileId })).fileContent; }
 } });

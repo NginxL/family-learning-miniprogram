@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "学习详情"
+  "navigationBarTitleText": "学习详情",
+  "usingComponents": {
+    "speech-button": "/components/speech-button/index"
+  }
 }
