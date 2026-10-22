@@ -8,8 +8,10 @@ const configPath = path.join(root, 'project.config.json');
 const project = JSON.parse(fs.readFileSync(fs.existsSync(configPath) ? configPath : path.join(root, 'project.config.example.json')));
 const appid = value('--appid');
 const envId = value('--env');
+const speechFunction = value('--speech-function');
 if (appid && !/^wx[a-f0-9]{16}$/.test(appid)) throw new Error('AppID 应为 wx 开头的18位编号');
 if (envId && !/^[a-zA-Z0-9_-]{1,100}$/.test(envId)) throw new Error('云环境 ID 格式无效');
+if (speechFunction && !/^[a-zA-Z][a-zA-Z0-9_-]{0,59}$/.test(speechFunction)) throw new Error('语音云函数名称格式无效');
 if (appid) project.appid = appid;
 // The IDE's unused-file filter can omit the shared dynamic detail routes from preview packages.
 const completePackage = { ignoreDevUnusedFiles: false, ignoreUploadUnusedFiles: false };
@@ -22,6 +24,6 @@ if (fs.existsSync(privatePath)) {
   fs.writeFileSync(privatePath, JSON.stringify(local, null, 2) + '\n');
 }
 // Runtime config is generated, ignored by Git. The committed default is copied from an example.
-const config = { mode: envId ? 'cloud' : 'demo', envId: envId || '' };
+const config = { mode: envId ? 'cloud' : 'demo', envId: envId || '', ...(speechFunction ? { speechFunction } : {}) };
 fs.writeFileSync(path.join(root, 'miniprogram/config.js'), `module.exports = ${JSON.stringify(config, null, 2)};\n`);
 console.log(`已生成本地工程配置，运行模式：${config.mode}。`);

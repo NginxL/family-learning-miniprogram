@@ -11,7 +11,7 @@ function runtime(owner) { let value = runtimes.get(owner); if (!value) {
 Component({
     options: { styleIsolation: 'isolated' },
     properties: { item: { type: Object, value: null }, childId: { type: String, value: '' }, date: { type: String, value: '' }, taskId: { type: String, value: '' } },
-    data: { available: false, loading: false, playing: false, part: 0, parts: 0, error: '', confirming: false },
+    data: { available: false, loading: false, playing: false, part: 0, parts: 0, error: '', notice: '', confirming: false },
     observers: { 'item,childId,date,taskId': function (item, childId, date, taskId) {
             const state = runtime(this);
             const context = JSON.stringify([item === null || item === void 0 ? void 0 : item.id, item === null || item === void 0 ? void 0 : item.title, item === null || item === void 0 ? void 0 : item.detail, childId, date, taskId]);
@@ -44,11 +44,11 @@ Component({
             const state = runtime(this);
             const token = ++state.token;
             const scope = JSON.stringify([app.engine.state.userId, (_a = app.engine.state.family) === null || _a === void 0 ? void 0 : _a.id, this.data.childId]);
-            const consentKey = 'speech-text-consent-v1';
+            const consentKey = 'speech-text-consent-v2';
             if (!wx.getStorageSync(consentKey)) {
                 this.setData({ confirming: true });
                 try {
-                    const accepted = await new Promise((resolve, reject) => wx.showModal({ title: '开启学习朗读', content: '点击播放会把所选学习文字发送至腾讯云合成语音，不发送孩子档案、学习记录或作业录音。合成朗读仅作跟读辅助，多音字请结合教材核对。', confirmText: '同意播放', success: r => resolve(r.confirm), fail: reject }));
+                    const accepted = await new Promise((resolve, reject) => wx.showModal({ title: '开启学习朗读', content: '点击播放会自动保存音频供以后复用。首次合成仅将所选学习文字发送至腾讯云，不发送档案或作业；音频保存在本机和家庭私有云存储中。多音字请结合教材核对。', confirmText: '同意播放', success: r => resolve(r.confirm), fail: reject }));
                     if (!accepted || state.token !== token)
                         return;
                     wx.setStorageSync(consentKey, true);

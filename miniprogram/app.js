@@ -12,7 +12,7 @@ App({
         else {
             if (wx.cloud && config.envId)
                 wx.cloud.init({ env: config.envId, traceUser: false });
-            transport = (0, cloud_transport_1.createCloudTransport)(wx.cloud, config.envId);
+            transport = (0, cloud_transport_1.createCloudTransport)(wx.cloud, config.envId, config.speechFunction);
         }
         const key = `family-learning-v1:${config.mode}:${config.envId}`;
         this.engine = new sync_engine_1.SyncEngine({ transport, storage: {

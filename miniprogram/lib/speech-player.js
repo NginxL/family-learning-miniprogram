@@ -5,7 +5,9 @@ exports.stopSpeech = stopSpeech;
 exports.playSpeech = playSpeech;
 const narration_1 = require("./learning/narration");
 const learning_1 = require("./learning/learning");
-const idle = () => ({ loading: false, playing: false, part: 0, parts: 0, error: '' });
+const speech_profile_1 = require("./learning/speech-profile");
+const speech_cache_1 = require("./speech-cache");
+const idle = () => ({ loading: false, playing: false, part: 0, parts: 0, error: '', notice: '' });
 let current;
 // Memory-only audio cache is scoped by authenticated identity; no private text in URLs or persistent storage.
 const cache = new Map();
@@ -17,12 +19,10 @@ function playSpeech(engine, item, childId, date, taskId, update) {
     const family = snapshot.family;
     const sessionKey = () => { var _a, _b, _c; return JSON.stringify([engine.state.userId, (_a = engine.state.family) === null || _a === void 0 ? void 0 : _a.id, (_b = engine.state.family) === null || _b === void 0 ? void 0 : _b.myRole, (_c = engine.state.family) === null || _c === void 0 ? void 0 : _c.myChildId]); };
     const originalSession = sessionKey();
-    let stopped = false, audio, path = '';
+    let stopped = false, audio, path = '', temporary = false;
     let cancelPlayback;
-    const erase = () => { if (path) {
-        wx.getFileSystemManager().unlink({ filePath: path, fail() { } });
-        path = '';
-    } };
+    const erase = () => { if (path && temporary)
+        wx.getFileSystemManager().unlink({ filePath: path, fail() { } }); path = ''; temporary = false; };
     const stop = () => { if (stopped)
         return; stopped = true; cancelPlayback === null || cancelPlayback === void 0 ? void 0 : cancelPlayback(); audio === null || audio === void 0 ? void 0 : audio.destroy(); audio = undefined; erase(); update(idle()); if (current === control)
         current = undefined; unsubscribe === null || unsubscribe === void 0 ? void 0 : unsubscribe(); };
@@ -42,42 +42,73 @@ function playSpeech(engine, item, childId, date, taskId, update) {
         if (!plan.chunks.length)
             throw new Error('此内容暂没有可朗读的正文');
         const sourceKey = JSON.stringify([originalSession, item.title, item.detail, childId, date, taskId]);
+        const diskScope = JSON.stringify([originalSession, childId]);
+        const voice = (0, speech_profile_1.speechVoiceKey)(plan.language);
         let parts = plan.chunks.length;
         for (let part = 0; part < parts && !stopped; part++) {
             state({ loading: true, playing: false, part: part + 1, parts, error: '' });
-            const key = JSON.stringify([sourceKey, part]);
-            let result = cache.get(key);
-            if (!result) {
-                const request = { familyId: family.id, childId, contentId: (0, learning_1.contentId)(item), part, ...(date && taskId ? { date, taskId } : {}) };
-                result = await engine.transport('getSpeech', request);
-                if (stopped || sessionKey() !== originalSession)
-                    return;
-                while (cache.size && cacheBytes + result.base64.length > 4 * 1024 * 1024) {
-                    const oldest = cache.keys().next().value;
-                    cacheBytes -= cache.get(oldest).base64.length;
-                    cache.delete(oldest);
+            const text = plan.chunks[part];
+            const saved = text ? (0, speech_cache_1.readSavedSpeech)(diskScope, text, voice) : undefined;
+            let notice = '';
+            if (saved)
+                path = saved;
+            else {
+                const key = JSON.stringify([sourceKey, part]);
+                let result = cache.get(key);
+                if (!result) {
+                    const request = { familyId: family.id, childId, contentId: (0, learning_1.contentId)(item), part, ...(date && taskId ? { date, taskId } : {}) };
+                    for (let attempt = 0;; attempt++) {
+                        if (stopped || sessionKey() !== originalSession)
+                            return;
+                        try {
+                            result = await engine.transport('getSpeech', request);
+                            break;
+                        }
+                        catch (cause) {
+                            if (stopped || sessionKey() !== originalSession)
+                                return;
+                            if (cause.code !== 'SPEECH_PENDING' || attempt >= 5)
+                                throw cause;
+                            await new Promise(resolve => setTimeout(resolve, 2000));
+                        }
+                    }
+                    if (stopped || sessionKey() !== originalSession)
+                        return;
+                    while (cache.size && cacheBytes + result.base64.length > 4 * 1024 * 1024) {
+                        const oldest = cache.keys().next().value;
+                        cacheBytes -= cache.get(oldest).base64.length;
+                        cache.delete(oldest);
+                    }
+                    cache.set(key, result);
+                    cacheBytes += result.base64.length;
                 }
-                cache.set(key, result);
-                cacheBytes += result.base64.length;
-            }
-            parts = result.parts;
-            path = `${wx.env.USER_DATA_PATH}/speech-${Date.now()}-${part}-${Math.random().toString(36).slice(2)}.mp3`;
-            const filePath = path;
-            await new Promise((resolve, reject) => wx.getFileSystemManager().writeFile({ filePath, data: result.base64, encoding: 'base64', success: () => resolve(), fail: () => reject(new Error('本机空间不足，暂时无法播放')) }));
-            if (stopped) {
-                wx.getFileSystemManager().unlink({ filePath, fail() { } });
-                return;
+                parts = result.parts;
+                const persisted = text && result.parts === plan.chunks.length ? (0, speech_cache_1.saveSpeech)(diskScope, text, voice, result) : undefined;
+                if (persisted)
+                    path = persisted;
+                else {
+                    if (result.persistent)
+                        notice = '本次音频未能保存在手机；云端副本可供下次复用。';
+                    temporary = true;
+                    path = `${wx.env.USER_DATA_PATH}/speech-${Date.now()}-${part}-${Math.random().toString(36).slice(2)}.mp3`;
+                    const filePath = path;
+                    await new Promise((resolve, reject) => wx.getFileSystemManager().writeFile({ filePath, data: result.base64, encoding: 'base64', success: () => resolve(), fail: () => reject(new Error('本机空间不足，暂时无法播放')) }));
+                    if (stopped) {
+                        wx.getFileSystemManager().unlink({ filePath, fail() { } });
+                        return;
+                    }
+                }
             }
             audio = wx.createInnerAudioContext();
             audio.obeyMuteSwitch = false;
-            state({ loading: false, playing: true, part: part + 1, parts, error: '' });
+            state({ loading: false, playing: true, part: part + 1, parts, error: '', notice });
             await new Promise((resolve, reject) => {
                 var _a, _b;
                 cancelPlayback = resolve;
                 audio.onEnded(() => resolve());
                 audio.onError(() => reject(new Error('播放失败，请检查网络或音量后重试')));
                 (_b = (_a = audio).onStop) === null || _b === void 0 ? void 0 : _b.call(_a, () => stop());
-                audio.src = filePath;
+                audio.src = path;
                 audio.play();
             });
             audio === null || audio === void 0 ? void 0 : audio.destroy();

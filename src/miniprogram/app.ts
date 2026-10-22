@@ -9,7 +9,7 @@ App<Partial<LearningApp>>({
     if (config.mode === 'demo') transport = (require('./lib/demo') as { createDemo: typeof createDemo }).createDemo(wx);
     else {
       if (wx.cloud && config.envId) wx.cloud.init({ env: config.envId, traceUser: false });
-      transport = createCloudTransport(wx.cloud, config.envId);
+      transport = createCloudTransport(wx.cloud, config.envId, config.speechFunction);
     }
     const key = `family-learning-v1:${config.mode}:${config.envId}`;
     this.engine = new SyncEngine({ transport, storage: {

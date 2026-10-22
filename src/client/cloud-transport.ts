@@ -10,10 +10,10 @@ function isRecord(value: unknown): value is Record<string, unknown> {
   return value !== null && typeof value === 'object' && !Array.isArray(value);
 }
 
-export function createCloudTransport(cloud: WechatCloud | undefined, envId: string): ApiTransport {
+export function createCloudTransport(cloud: WechatCloud | undefined, envId: string, speechFunction?: string): ApiTransport {
   return async <A extends ApiAction>(action: A, payload: ApiPayloads[A]): Promise<ApiResults[A]> => {
     if (!cloud || !envId) throw new Error('云开发尚未配置，请设置环境 ID');
-    const response = await cloud.callFunction({ name: 'familyApi', data: { action, payload } });
+    const response = await cloud.callFunction({ name: action === 'getSpeech' && speechFunction ? speechFunction : 'familyApi', data: { action, payload } });
     const result = response.result;
     if (!isRecord(result) || result.ok !== true || !('data' in result)) {
       const detail = isRecord(result) && isRecord(result.error) ? result.error : null;

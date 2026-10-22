@@ -39,25 +39,34 @@ exports.createSpeechService = createSpeechService;
 const narration_1 = require("./learning/narration");
 const learning = __importStar(require("./learning/learning"));
 const validation_1 = require("./validation");
+const speech_profile_1 = require("./learning/speech-profile");
+const persistent_speech_1 = require("./persistent-speech");
 // A conservative app budget, below the claimed 8M free characters. Provider-side
 // postpaid must be off as well. Reservations are never refunded after uncertain calls.
 exports.SPEECH_BUDGET = 1000000;
 exports.SPEECH_DAILY_BUDGET = 10000;
-function createSpeechService(store, provider) {
+function createSpeechService(store, provider, persistentMedia) {
     const cache = new Map();
     const inFlight = new Map();
+    const persistent = persistentMedia && (0, persistent_speech_1.createPersistentSpeechCache)(store, persistentMedia, provider, { total: exports.SPEECH_BUDGET, daily: exports.SPEECH_DAILY_BUDGET });
     return async (uid, input, now) => {
+        var _a;
         const familyId = (0, validation_1.identifier)(input.familyId);
         const childId = (0, validation_1.identifier)(input.childId);
         const contentId = (0, validation_1.identifier)(input.contentId);
         (0, validation_1.requireValue)(Number.isInteger(input.part) && Number(input.part) >= 0, 'INVALID', '朗读段落无效');
-        (0, validation_1.requireValue)(provider && Number.isFinite(provider.expiresAt) && now < provider.expiresAt, 'SPEECH_UNAVAILABLE', '免费朗读尚未启用或已到期，学习和打卡仍可使用');
-        const plan = await store.run(async (tx) => {
+        if (!persistent)
+            (0, validation_1.requireValue)(provider && Number.isFinite(provider.expiresAt) && now < provider.expiresAt, 'SPEECH_UNAVAILABLE', '免费朗读尚未启用或已到期，学习和打卡仍可使用');
+        const access = async (tx) => {
             const profile = await tx.get('profiles', uid);
             const family = (profile === null || profile === void 0 ? void 0 : profile.familyId) === familyId ? await tx.get('families', familyId) : null;
             const member = family === null || family === void 0 ? void 0 : family.members.find(item => item.id === uid);
             (0, validation_1.requireValue)(family && member, 'FORBIDDEN', '当前账号没有这个家庭的访问权限');
             (0, validation_1.requireValue)(family.children.some(item => item.id === childId) && (member.role !== 'child' || member.childId === childId), 'FORBIDDEN', '请使用自己绑定的学习档案');
+            return family;
+        };
+        const plan = await store.run(async (tx) => {
+            const family = await access(tx);
             let item = learning.catalogById.get(contentId);
             if (!item && input.taskId !== undefined) {
                 (0, validation_1.identifier)(input.taskId);
@@ -79,6 +88,13 @@ function createSpeechService(store, provider) {
             (0, validation_1.requireValue)(text, 'INVALID', '此内容暂没有可朗读的正文');
             return { text, language: plan.language, parts: plan.chunks.length };
         });
+        if (persistent) {
+            const voiceKey = ((_a = provider === null || provider === void 0 ? void 0 : provider.voiceKey) === null || _a === void 0 ? void 0 : _a.call(provider, plan.language)) || (0, speech_profile_1.speechVoiceKey)(plan.language);
+            const key = (0, validation_1.hash)(JSON.stringify([familyId, (0, speech_profile_1.speechContentKey)(plan.text, voiceKey)]));
+            const result = await persistent(key, familyId, plan.text, plan.language, now, async (tx) => { await access(tx); });
+            return { ...result, mime: 'audio/mpeg', part: Number(input.part), parts: plan.parts, key,
+                persistent: true, textHash: (0, validation_1.hash)(plan.text), voiceKey };
+        }
         // Private custom text never shares a cache namespace across households.
         const key = (0, validation_1.hash)(JSON.stringify([familyId, plan.language, plan.text, 'premium-v1']));
         const recent = cache.get(key);

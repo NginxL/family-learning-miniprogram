@@ -225,7 +225,9 @@ export interface DatabaseDocuments {
   learning: PersistedLedger;
   homeworks: Homework;
   attachments: HomeworkAttachment;
-  speechUsage: { characters: number };
+  speechUsage: { characters: number; bytes?: number };
+  speechAudio: { state: 'pending' | 'ready'; owner: string; leaseUntil: number; reservedBytes: number;
+    createdAt: number; base64?: string; digest?: string; bytes?: number; fileId?: string };
 }
 export type Collection = keyof DatabaseDocuments;
 export interface Transaction {

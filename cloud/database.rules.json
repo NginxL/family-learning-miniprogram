@@ -7,5 +7,6 @@
   "learning": { "read": false, "write": false },
   "homeworks": { "read": false, "write": false },
   "attachments": { "read": false, "write": false },
-  "speechUsage": { "read": false, "write": false }
+  "speechUsage": { "read": false, "write": false },
+  "speechAudio": { "read": false, "write": false }
 }

@@ -67,7 +67,8 @@ export interface ApiResults {
   getHistory: ReturnType<typeof history>;
   getProgress: ReturnType<typeof progress>;
   getLearningStatus: ReturnType<typeof learningStatus>;
-  getSpeech: { base64: string; mime: 'audio/mpeg'; part: number; parts: number; key: string };
+  getSpeech: { base64: string; mime: 'audio/mpeg'; part: number; parts: number; key: string;
+    persistent?: true; textHash?: string; voiceKey?: string; digest?: string };
   setMastery: { mastered: boolean };
   reviewContent: { task: Task; date: CalendarDate };
   assignContent: { task: Task; date: CalendarDate };

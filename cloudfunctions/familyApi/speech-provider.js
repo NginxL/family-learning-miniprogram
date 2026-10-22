@@ -5,12 +5,13 @@ exports.speechProvider = speechProvider;
 const crypto = require("node:crypto");
 const tencentcloud_sdk_nodejs_tts_1 = require("tencentcloud-sdk-nodejs-tts");
 const validation_1 = require("./validation");
+const speech_profile_1 = require("./learning/speech-profile");
 // Credentials stay in the function runtime. Never send them to the mini program.
 function speechProvider(env = process.env) {
     const expiresAt = Date.parse(env.TTS_FREE_EXPIRES_AT || '');
     if (env.TTS_FREE_ONLY !== 'true' || !Number.isFinite(expiresAt))
         return undefined;
-    return { expiresAt, async synthesize(text, language) {
+    return { expiresAt, voiceKey: speech_profile_1.speechVoiceKey, async synthesize(text, language) {
             const secretId = env.TTS_SECRET_ID || env.TENCENTCLOUD_SECRETID;
             const secretKey = env.TTS_SECRET_KEY || env.TENCENTCLOUD_SECRETKEY;
             if (!secretId || !secretKey)
@@ -19,8 +20,8 @@ function speechProvider(env = process.env) {
                     ...(!env.TTS_SECRET_ID && env.TENCENTCLOUD_SESSIONTOKEN ? { token: env.TENCENTCLOUD_SESSIONTOKEN } : {}) },
                 region: 'ap-shanghai', profile: { httpProfile: { endpoint: 'tts.tencentcloudapi.com', reqTimeout: 12 } } });
             try {
-                const result = await client.TextToVoice({ Text: text, SessionId: crypto.randomUUID(), VoiceType: language === 'en' ? 101050 : 101001,
-                    PrimaryLanguage: language === 'en' ? 2 : 1, SampleRate: 16000, Codec: 'mp3', Speed: 0 });
+                const result = await client.TextToVoice({ Text: text, SessionId: crypto.randomUUID(), VoiceType: speech_profile_1.SPEECH_SETTINGS.voices[language],
+                    PrimaryLanguage: language === 'en' ? 2 : 1, SampleRate: speech_profile_1.SPEECH_SETTINGS.sampleRate, Codec: speech_profile_1.SPEECH_SETTINGS.codec, Speed: speech_profile_1.SPEECH_SETTINGS.speed });
                 if (!result.Audio)
                     throw new Error('Empty synthesis response');
                 return result.Audio;
