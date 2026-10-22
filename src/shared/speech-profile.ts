@@ -8,6 +8,15 @@ export function speechVoiceKey(language: SpeechLanguage): string {
     SPEECH_SETTINGS.sampleRate, SPEECH_SETTINGS.codec, SPEECH_SETTINGS.speed]);
 }
 
+// A reviewed, pre-generated voice collection, not a runtime paid API. Bump the
+// revision when its model/style changes; published files are immutable.
+export function libraryVoiceKey(language: SpeechLanguage): string {
+  return JSON.stringify(['doubao-work-seed-audio', 1, language, 'clear-slow', 16000, 'mp3', 32000]);
+}
+export function speechVoiceKeys(language: SpeechLanguage): string[] {
+  return [speechVoiceKey(language), libraryVoiceKey(language)];
+}
+
 // Small UTF-8 SHA-256 implementation shared with the mini-program (no Node crypto/TextEncoder there).
 // A cache hit also checks the audio digest; filenames never contain the learning text.
 export function speechHash(text: string): string {

@@ -161,3 +161,10 @@ test('new speech routing leaves all household calls and legacy default routing o
   await createCloudTransport(cloud,'env')('getSpeech',request);
   assert.deepEqual(calls,['familySpeechPreview','familyApi','familyApi']);
 });
+test('reviewed Doubao audio is automatically saved and reused offline without changing phone cache policy',async t=>{
+  const disk=wxDisk(t), {libraryVoiceKey}=require('../shared/speech-profile');let requests=0;
+  const client=engine(async()=>{requests++;return {...resultFor('hello'),voiceKey:libraryVoiceKey('en')};});
+  const item=learning.catalogById.get('word-hello');await play(client,item);assert.equal(requests,1);
+  client.transport=async()=>{throw Error('offline');};delete require.cache[require.resolve('../miniprogram/lib/speech-player')];
+  assert.equal((await play(client,item)).error,'');assert.equal(new Set(disk.played).size,1);assert.ok(fs.existsSync(disk.played[0]));
+});

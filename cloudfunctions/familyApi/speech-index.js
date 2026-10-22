@@ -13,7 +13,7 @@ const options = { throwOnNotFound: false };
 const speak = (0, speech_1.createSpeechService)((0, store_1.createCloudStore)(cloud.database(options)), (0, speech_provider_1.speechProvider)(), {
     async upload(path, data) { return (await cloud.uploadFile({ cloudPath: path, fileContent: data })).fileID; },
     async download(fileId) { return (await cloud.downloadFile({ fileID: fileId })).fileContent; }
-});
+}, process.env.SPEECH_LIBRARY_ENABLED === 'true');
 async function main(event) {
     try {
         (0, validation_1.requireValue)(process.env.SPEECH_STORAGE_INCLUDED_ONLY === 'true', 'SPEECH_UNAVAILABLE', '音频保存服务尚未启用');

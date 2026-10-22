@@ -30,7 +30,7 @@ Component({
       if(!wx.getStorageSync(consentKey)) {
         this.setData({confirming:true});
         try {
-          const accepted=await new Promise<boolean>((resolve,reject)=>wx.showModal({title:'开启学习朗读',content:'点击播放会自动保存音频供以后复用。首次合成仅将所选学习文字发送至腾讯云，不发送档案或作业；音频保存在本机和家庭私有云存储中。多音字请结合教材核对。',confirmText:'同意播放',success:r=>resolve(r.confirm),fail:reject}));
+          const accepted=await new Promise<boolean>((resolve,reject)=>wx.showModal({title:'开启学习朗读',content:'点击播放会自动保存音频供以后复用。首次合成仅将所选学习文字发送至腾讯云，不发送档案或作业；公开学习内容也可播放已核对的预生成音频；音频保存在本机和受权限保护的云存储。多音字请结合教材核对。',confirmText:'同意播放',success:r=>resolve(r.confirm),fail:reject}));
           if(!accepted||state.token!==token)return;
           wx.setStorageSync(consentKey,true);
         } catch {this.setData({error:'朗读确认未打开，请重试'});return;}

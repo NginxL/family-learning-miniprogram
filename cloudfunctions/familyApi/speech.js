@@ -40,15 +40,17 @@ const narration_1 = require("./learning/narration");
 const learning = __importStar(require("./learning/learning"));
 const validation_1 = require("./validation");
 const speech_profile_1 = require("./learning/speech-profile");
+const speech_library_1 = require("./speech-library");
 const persistent_speech_1 = require("./persistent-speech");
 // A conservative app budget, below the claimed 8M free characters. Provider-side
 // postpaid must be off as well. Reservations are never refunded after uncertain calls.
 exports.SPEECH_BUDGET = 1000000;
 exports.SPEECH_DAILY_BUDGET = 10000;
-function createSpeechService(store, provider, persistentMedia) {
+function createSpeechService(store, provider, persistentMedia, enableLibrary = false) {
     const cache = new Map();
     const inFlight = new Map();
     const persistent = persistentMedia && (0, persistent_speech_1.createPersistentSpeechCache)(store, persistentMedia, provider, { total: exports.SPEECH_BUDGET, daily: exports.SPEECH_DAILY_BUDGET });
+    const library = enableLibrary && persistentMedia && (0, speech_library_1.createSpeechLibrary)(store, persistentMedia);
     return async (uid, input, now) => {
         var _a;
         const familyId = (0, validation_1.identifier)(input.familyId);
@@ -86,14 +88,22 @@ function createSpeechService(store, provider, persistentMedia) {
             const plan = (0, narration_1.narration)(item);
             const text = plan.chunks[Number(input.part)];
             (0, validation_1.requireValue)(text, 'INVALID', '此内容暂没有可朗读的正文');
-            return { text, language: plan.language, parts: plan.chunks.length };
+            return { text, language: plan.language, parts: plan.chunks.length, publicContent: learning.catalogById.has(contentId) };
         });
         if (persistent) {
             const voiceKey = ((_a = provider === null || provider === void 0 ? void 0 : provider.voiceKey) === null || _a === void 0 ? void 0 : _a.call(provider, plan.language)) || (0, speech_profile_1.speechVoiceKey)(plan.language);
             const key = (0, validation_1.hash)(JSON.stringify([familyId, (0, speech_profile_1.speechContentKey)(plan.text, voiceKey)]));
-            const result = await persistent(key, familyId, plan.text, plan.language, now, async (tx) => { await access(tx); });
-            return { ...result, mime: 'audio/mpeg', part: Number(input.part), parts: plan.parts, key,
-                persistent: true, textHash: (0, validation_1.hash)(plan.text), voiceKey };
+            try {
+                const result = await persistent(key, familyId, plan.text, plan.language, now, async (tx) => { await access(tx); });
+                return { ...result, mime: 'audio/mpeg', part: Number(input.part), parts: plan.parts, key,
+                    persistent: true, textHash: (0, validation_1.hash)(plan.text), voiceKey };
+            }
+            catch (error) {
+                if (!library || !plan.publicContent || !(error instanceof speech_library_1.FreeSpeechUnavailable))
+                    throw error;
+                const backup = await library(plan.text, plan.language, now, async (tx) => { await access(tx); });
+                return { ...backup, mime: 'audio/mpeg', part: Number(input.part), parts: plan.parts, persistent: true };
+            }
         }
         // Private custom text never shares a cache namespace across households.
         const key = (0, validation_1.hash)(JSON.stringify([familyId, plan.language, plan.text, 'premium-v1']));

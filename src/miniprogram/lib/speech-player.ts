@@ -3,7 +3,7 @@ import { narration } from './learning/narration';
 import { contentId } from './learning/learning';
 import type { ContentInput } from '../../shared/models';
 import type { SyncEngine } from './sync-engine';
-import { speechVoiceKey } from './learning/speech-profile';
+import { speechVoiceKeys } from './learning/speech-profile';
 import { readSavedSpeech, saveSpeech } from './speech-cache';
 export interface SpeechState { loading: boolean; playing: boolean; part: number; parts: number; error: string; notice?: string }
 const idle = (): SpeechState => ({loading:false,playing:false,part:0,parts:0,error:'',notice:''});
@@ -30,12 +30,12 @@ export function playSpeech(engine: SyncEngine, item: ContentInput, childId: stri
     const plan = narration(item); if(!plan.chunks.length)throw new Error('此内容暂没有可朗读的正文');
     const sourceKey = JSON.stringify([originalSession,item.title,item.detail,childId,date,taskId]);
     const diskScope = JSON.stringify([originalSession,childId]);
-    const voice = speechVoiceKey(plan.language);
+    const voices = speechVoiceKeys(plan.language);
     let parts=plan.chunks.length;
     for(let part=0;part<parts&&!stopped;part++) {
       state({loading:true,playing:false,part:part+1,parts,error:''});
       const text = plan.chunks[part];
-      const saved = text ? readSavedSpeech(diskScope,text,voice) : undefined;
+      const saved = text ? voices.map(voice => readSavedSpeech(diskScope,text,voice)).find(Boolean) : undefined;
       let notice='';
       if(saved) path=saved;
       else {
@@ -57,7 +57,8 @@ export function playSpeech(engine: SyncEngine, item: ContentInput, childId: stri
         cache.set(key,result);cacheBytes+=result.base64.length;
       }
       parts=result.parts;
-      const persisted = text && result.parts===plan.chunks.length ? saveSpeech(diskScope,text,voice,result) : undefined;
+      const persisted = text && result.parts===plan.chunks.length && result.voiceKey && voices.includes(result.voiceKey)
+        ? saveSpeech(diskScope,text,result.voiceKey,result) : undefined;
       if(persisted) path=persisted;
       else {
       if(result.persistent) notice='本次音频未能保存在手机；云端副本可供下次复用。';

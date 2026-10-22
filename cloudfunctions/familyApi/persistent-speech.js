@@ -5,26 +5,16 @@ exports.SPEECH_TRANSFER_LIMIT = exports.SPEECH_STORAGE_LIMIT = exports.SPEECH_FI
 exports.createPersistentSpeechCache = createPersistentSpeechCache;
 const crypto = require("node:crypto");
 const validation_1 = require("./validation");
-exports.SPEECH_FILE_LIMIT = 512 * 1024;
-exports.SPEECH_STORAGE_LIMIT = 128 * 1024 * 1024;
-exports.SPEECH_TRANSFER_LIMIT = 128 * 1024 * 1024;
+const speech_library_1 = require("./speech-library");
+var speech_library_2 = require("./speech-library");
+Object.defineProperty(exports, "SPEECH_FILE_LIMIT", { enumerable: true, get: function () { return speech_library_2.SPEECH_FILE_LIMIT; } });
+Object.defineProperty(exports, "SPEECH_STORAGE_LIMIT", { enumerable: true, get: function () { return speech_library_2.SPEECH_STORAGE_LIMIT; } });
+Object.defineProperty(exports, "SPEECH_TRANSFER_LIMIT", { enumerable: true, get: function () { return speech_library_2.SPEECH_TRANSFER_LIMIT; } });
 const LEASE_MS = 180000;
 function createPersistentSpeechCache(store, media, provider, limits) {
     const inFlight = new Map();
-    const validate = (base64) => {
-        const bytes = Buffer.from(base64, 'base64');
-        (0, validation_1.requireValue)(bytes.length > 0 && bytes.length <= exports.SPEECH_FILE_LIMIT && bytes.toString('base64') === base64
-            && (bytes.subarray(0, 3).toString() === 'ID3' || (bytes[0] === 255 && (bytes[1] & 224) === 224)), 'SPEECH_UNAVAILABLE', '朗读音频校验失败，请重试');
-        return bytes;
-    };
-    async function reserveTransfer(bytes, now) {
-        await store.run(async (tx) => {
-            const id = `speech-transfer-v1:${(0, validation_1.chinaDate)(now)}`;
-            const usage = await tx.get('speechUsage', id) || { characters: 0, bytes: 0 };
-            (0, validation_1.requireValue)((usage.bytes || 0) + bytes <= exports.SPEECH_TRANSFER_LIMIT, 'SPEECH_LIMIT', '今日音频下载已达保护上限，手机已保存的音频仍可播放');
-            await tx.put('speechUsage', id, { ...usage, bytes: (usage.bytes || 0) + bytes });
-        });
-    }
+    const validate = speech_library_1.validateSpeechAudio;
+    const reserveTransfer = (bytes, now) => (0, speech_library_1.reserveSpeechTransfer)(store, bytes, now);
     async function generate(key, familyId, text, language, now, authorize) {
         const owner = crypto.randomUUID();
         const record = await store.run(async (tx) => {
@@ -35,26 +25,29 @@ function createPersistentSpeechCache(store, media, provider, limits) {
             (0, validation_1.requireValue)(!old || old.leaseUntil <= now, 'SPEECH_PENDING', '音频正在准备，请稍后再试');
             // Upload retries reuse staged audio even if the free synthesis window has ended.
             if (!(old === null || old === void 0 ? void 0 : old.base64)) {
-                (0, validation_1.requireValue)(provider && Number.isFinite(provider.expiresAt) && now < provider.expiresAt, 'SPEECH_UNAVAILABLE', '免费合成尚未启用或已到期，已保存的音频仍可播放');
+                const blocked = await tx.get('speechUsage', 'speech-provider-v1');
+                if (!provider || !Number.isFinite(provider.expiresAt) || now >= provider.expiresAt || ((blocked === null || blocked === void 0 ? void 0 : blocked.disabledUntil) || 0) > now)
+                    throw new speech_library_1.FreeSpeechUnavailable('SPEECH_UNAVAILABLE', '免费合成尚未启用或已到期，已保存的音频仍可播放');
                 const totalId = 'speech-v1', dailyId = (0, validation_1.hash)(`${familyId}:${(0, validation_1.chinaDate)(now)}`);
                 const total = await tx.get('speechUsage', totalId) || { characters: 0 };
                 const daily = await tx.get('speechUsage', dailyId) || { characters: 0 };
                 const amount = Array.from(text).length;
-                (0, validation_1.requireValue)(total.characters + amount <= limits.total && daily.characters + amount <= limits.daily, 'SPEECH_LIMIT', '免费合成额度已达保护上限，已保存的音频仍可播放');
+                if (total.characters + amount > limits.total || daily.characters + amount > limits.daily)
+                    throw new speech_library_1.FreeSpeechUnavailable('SPEECH_LIMIT', '免费合成额度已达保护上限，已保存的音频仍可播放');
                 await tx.put('speechUsage', totalId, { ...total, characters: total.characters + amount });
                 await tx.put('speechUsage', dailyId, { ...daily, characters: daily.characters + amount });
             }
             if (!old) {
                 const used = await tx.get('speechUsage', 'speech-storage-v1') || { characters: 0, bytes: 0 };
-                (0, validation_1.requireValue)((used.bytes || 0) + exports.SPEECH_FILE_LIMIT <= exports.SPEECH_STORAGE_LIMIT, 'SPEECH_LIMIT', '音频保存空间已达保护上限，已保存的音频仍可播放');
-                await tx.put('speechUsage', 'speech-storage-v1', { ...used, bytes: (used.bytes || 0) + exports.SPEECH_FILE_LIMIT });
+                (0, validation_1.requireValue)((used.bytes || 0) + speech_library_1.SPEECH_FILE_LIMIT <= speech_library_1.SPEECH_STORAGE_LIMIT, 'SPEECH_LIMIT', '音频保存空间已达保护上限，已保存的音频仍可播放');
+                await tx.put('speechUsage', 'speech-storage-v1', { ...used, bytes: (used.bytes || 0) + speech_library_1.SPEECH_FILE_LIMIT });
             }
-            const next = { ...(old || { createdAt: now, reservedBytes: exports.SPEECH_FILE_LIMIT }), state: 'pending', owner, leaseUntil: now + LEASE_MS };
+            const next = { ...(old || { createdAt: now, reservedBytes: speech_library_1.SPEECH_FILE_LIMIT }), state: 'pending', owner, leaseUntil: now + LEASE_MS };
             await tx.put('speechAudio', key, next);
             return next;
         });
         if (record.state === 'ready') {
-            (0, validation_1.requireValue)(record.fileId && record.digest && record.bytes && record.bytes <= exports.SPEECH_FILE_LIMIT, 'SPEECH_UNAVAILABLE', '已保存的音频暂时不可用，请稍后重试');
+            (0, validation_1.requireValue)(record.fileId && record.digest && record.bytes && record.bytes <= speech_library_1.SPEECH_FILE_LIMIT, 'SPEECH_UNAVAILABLE', '已保存的音频暂时不可用，请稍后重试');
             await reserveTransfer(record.bytes, now);
             // A missing/corrupt cloud object is not a reason to silently spend synthesis quota again.
             const bytes = await media.download(record.fileId);
@@ -66,7 +59,14 @@ function createPersistentSpeechCache(store, media, provider, limits) {
         try {
             let base64 = record.base64;
             if (!base64) {
-                base64 = await provider.synthesize(text, language);
+                try {
+                    base64 = await provider.synthesize(text, language);
+                }
+                catch (error) {
+                    if (error instanceof speech_library_1.FreeSpeechUnavailable)
+                        await store.run(tx => tx.put('speechUsage', 'speech-provider-v1', { characters: 0, disabledUntil: provider.expiresAt }));
+                    throw error;
+                }
                 const bytes = validate(base64);
                 await store.run(async (tx) => {
                     const current = await tx.get('speechAudio', key);

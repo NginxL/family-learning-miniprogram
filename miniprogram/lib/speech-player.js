@@ -43,12 +43,12 @@ function playSpeech(engine, item, childId, date, taskId, update) {
             throw new Error('此内容暂没有可朗读的正文');
         const sourceKey = JSON.stringify([originalSession, item.title, item.detail, childId, date, taskId]);
         const diskScope = JSON.stringify([originalSession, childId]);
-        const voice = (0, speech_profile_1.speechVoiceKey)(plan.language);
+        const voices = (0, speech_profile_1.speechVoiceKeys)(plan.language);
         let parts = plan.chunks.length;
         for (let part = 0; part < parts && !stopped; part++) {
             state({ loading: true, playing: false, part: part + 1, parts, error: '' });
             const text = plan.chunks[part];
-            const saved = text ? (0, speech_cache_1.readSavedSpeech)(diskScope, text, voice) : undefined;
+            const saved = text ? voices.map(voice => (0, speech_cache_1.readSavedSpeech)(diskScope, text, voice)).find(Boolean) : undefined;
             let notice = '';
             if (saved)
                 path = saved;
@@ -83,7 +83,8 @@ function playSpeech(engine, item, childId, date, taskId, update) {
                     cacheBytes += result.base64.length;
                 }
                 parts = result.parts;
-                const persisted = text && result.parts === plan.chunks.length ? (0, speech_cache_1.saveSpeech)(diskScope, text, voice, result) : undefined;
+                const persisted = text && result.parts === plan.chunks.length && result.voiceKey && voices.includes(result.voiceKey)
+                    ? (0, speech_cache_1.saveSpeech)(diskScope, text, result.voiceKey, result) : undefined;
                 if (persisted)
                     path = persisted;
                 else {

@@ -3,6 +3,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SPEECH_SETTINGS = void 0;
 exports.speechVoiceKey = speechVoiceKey;
+exports.libraryVoiceKey = libraryVoiceKey;
+exports.speechVoiceKeys = speechVoiceKeys;
 exports.speechHash = speechHash;
 exports.speechContentKey = speechContentKey;
 // These settings define both the synthesis request and its immutable cache identity.
@@ -11,6 +13,14 @@ exports.SPEECH_SETTINGS = { provider: 'tencent-text-to-voice', revision: 1, samp
 function speechVoiceKey(language) {
     return JSON.stringify([exports.SPEECH_SETTINGS.provider, exports.SPEECH_SETTINGS.revision, language, exports.SPEECH_SETTINGS.voices[language],
         exports.SPEECH_SETTINGS.sampleRate, exports.SPEECH_SETTINGS.codec, exports.SPEECH_SETTINGS.speed]);
+}
+// A reviewed, pre-generated voice collection, not a runtime paid API. Bump the
+// revision when its model/style changes; published files are immutable.
+function libraryVoiceKey(language) {
+    return JSON.stringify(['doubao-work-seed-audio', 1, language, 'clear-slow', 16000, 'mp3', 32000]);
+}
+function speechVoiceKeys(language) {
+    return [speechVoiceKey(language), libraryVoiceKey(language)];
 }
 // Small UTF-8 SHA-256 implementation shared with the mini-program (no Node crypto/TextEncoder there).
 // A cache hit also checks the audio digest; filenames never contain the learning text.

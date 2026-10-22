@@ -4,6 +4,7 @@ import { narration, type SpeechLanguage } from './learning/narration';
 import * as learning from './learning/learning';
 import { hash, identifier, requireValue, chinaDate } from './validation';
 import { speechContentKey, speechVoiceKey } from './learning/speech-profile';
+import { createSpeechLibrary, FreeSpeechUnavailable } from './speech-library';
 import { createPersistentSpeechCache } from './persistent-speech';
 import type { MediaStore } from './homework';
 export interface SpeechProvider {
@@ -15,10 +16,11 @@ export interface SpeechProvider {
 // postpaid must be off as well. Reservations are never refunded after uncertain calls.
 export const SPEECH_BUDGET = 1000000;
 export const SPEECH_DAILY_BUDGET = 10000;
-export function createSpeechService(store: Store, provider?: SpeechProvider, persistentMedia?: MediaStore) {
+export function createSpeechService(store: Store, provider?: SpeechProvider, persistentMedia?: MediaStore, enableLibrary = false) {
   const cache = new Map<string, { base64: string; at: number }>();
   const inFlight = new Map<string, Promise<string>>();
   const persistent = persistentMedia && createPersistentSpeechCache(store, persistentMedia, provider, { total: SPEECH_BUDGET, daily: SPEECH_DAILY_BUDGET });
+  const library = enableLibrary && persistentMedia && createSpeechLibrary(store, persistentMedia);
   return async (uid: string, input: Record<string, unknown>, now: number): Promise<ApiResults['getSpeech']> => {
     const familyId = identifier(input.familyId); const childId = identifier(input.childId); const contentId = identifier(input.contentId);
     requireValue(Number.isInteger(input.part) && Number(input.part) >= 0, 'INVALID', '朗读段落无效');
@@ -48,14 +50,20 @@ export function createSpeechService(store: Store, provider?: SpeechProvider, per
       requireValue(item, 'NOT_FOUND', '学习内容已变化，请返回列表刷新');
       const plan = narration(item); const text = plan.chunks[Number(input.part)];
       requireValue(text, 'INVALID', '此内容暂没有可朗读的正文');
-      return { text, language: plan.language, parts: plan.chunks.length };
+      return { text, language: plan.language, parts: plan.chunks.length, publicContent: learning.catalogById.has(contentId) };
     });
     if (persistent) {
       const voiceKey = provider?.voiceKey?.(plan.language) || speechVoiceKey(plan.language);
       const key = hash(JSON.stringify([familyId, speechContentKey(plan.text, voiceKey)]));
-      const result = await persistent(key, familyId, plan.text, plan.language, now, async tx => { await access(tx); });
-      return { ...result, mime: 'audio/mpeg', part: Number(input.part), parts: plan.parts, key,
-        persistent: true, textHash: hash(plan.text), voiceKey };
+      try {
+        const result = await persistent(key, familyId, plan.text, plan.language, now, async tx => { await access(tx); });
+        return { ...result, mime: 'audio/mpeg', part: Number(input.part), parts: plan.parts, key,
+          persistent: true, textHash: hash(plan.text), voiceKey };
+      } catch (error) {
+        if (!library || !plan.publicContent || !(error instanceof FreeSpeechUnavailable)) throw error;
+        const backup = await library(plan.text, plan.language, now, async tx => { await access(tx); });
+        return { ...backup, mime: 'audio/mpeg', part: Number(input.part), parts: plan.parts, persistent: true };
+      }
     }
     // Private custom text never shares a cache namespace across households.
     const key = hash(JSON.stringify([familyId, plan.language, plan.text, 'premium-v1']));

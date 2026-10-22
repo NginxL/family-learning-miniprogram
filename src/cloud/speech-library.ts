@@ -1,0 +1,82 @@
+import type { Store, Transaction, DatabaseDocuments } from '../shared/models';
+import type { MediaStore } from './homework';
+import type { SpeechLanguage } from './learning/narration';
+import { libraryVoiceKey, speechContentKey } from './learning/speech-profile';
+import { hash, requireValue, chinaDate, DomainError } from './validation';
+
+export const SPEECH_FILE_LIMIT = 512 * 1024;
+// Application guards shared by generated family audio and imported public audio.
+export const SPEECH_STORAGE_LIMIT = 128 * 1024 * 1024;
+export const SPEECH_TRANSFER_LIMIT = 128 * 1024 * 1024;
+// Preserve existing API error codes; only free synthesis exhaustion may switch
+// providers. Authorization, corruption and storage/transfer limits never do.
+export class FreeSpeechUnavailable extends DomainError {}
+export function validateSpeechAudio(base64: string): Buffer {
+  const bytes = Buffer.from(base64, 'base64');
+  requireValue(bytes.length > 0 && bytes.length <= SPEECH_FILE_LIMIT && bytes.toString('base64') === base64
+    && (bytes.subarray(0,3).toString() === 'ID3' || (bytes[0] === 255 && (bytes[1] & 224) === 224)),
+    'SPEECH_UNAVAILABLE', '朗读音频校验失败，请重试');
+  return bytes;
+}
+export async function reserveSpeechTransfer(store: Store, bytes: number, now: number) {
+  await store.run(async tx => {
+    const id = `speech-transfer-v1:${chinaDate(now)}`;
+    const usage = await tx.get('speechUsage', id) || { characters: 0, bytes: 0 };
+    requireValue((usage.bytes || 0) + bytes <= SPEECH_TRANSFER_LIMIT, 'SPEECH_LIMIT', '今日音频下载已达保护上限，手机已保存的音频仍可播放');
+    await tx.put('speechUsage', id, { ...usage, bytes: (usage.bytes || 0) + bytes });
+  });
+}
+export function createSpeechLibrary(store: Store, media: MediaStore) {
+  return async (text: string, language: SpeechLanguage, now: number, authorize: (tx: Transaction) => Promise<void>) => {
+    const voiceKey = libraryVoiceKey(language), key = speechContentKey(text, voiceKey), textHash = hash(text);
+    const record = await store.run(async tx => { await authorize(tx); return tx.get('speechAssets', key); });
+    requireValue(record?.state === 'ready', 'SPEECH_BACKUP_PENDING', '腾讯免费朗读已不可用，此内容的备用音频尚未备好；不会启用付费合成');
+    requireValue(record.voiceKey === voiceKey && record.textHash === textHash && record.language === language
+      && record.verifiedAt > 0 && record.review && record.fileId && record.bytes > 0 && record.bytes <= SPEECH_FILE_LIMIT,
+      'SPEECH_UNAVAILABLE', '备用音频校验记录无效，请联系管理员');
+    await reserveSpeechTransfer(store, record.bytes, now);
+    const bytes = await media.download(record.fileId), base64 = bytes.toString('base64');
+    validateSpeechAudio(base64);
+    requireValue(bytes.length === record.bytes && hash(base64) === record.digest, 'SPEECH_UNAVAILABLE', '备用音频校验失败，请联系管理员');
+    await store.run(authorize);
+    return { base64, digest: record.digest, key, voiceKey, textHash };
+  };
+}
+
+export type SpeechAssetInput = Omit<DatabaseDocuments['speechAssets'], 'state' | 'createdAt' | 'fileId'> & { text: string };
+// Admin-only import helper. It has no mini-program action or public HTTP route.
+// A failed upload/readback remains reserved and can be retried without generating
+// audio again. A ready text/voice identity cannot silently be overwritten.
+export async function importSpeechAsset(store: Store, media: MediaStore, input: SpeechAssetInput, bytes: Buffer, now: number) {
+  validateSpeechAudio(bytes.toString('base64'));
+  requireValue(input.voiceKey === libraryVoiceKey(input.language) && input.textHash === hash(input.text)
+    && input.digest === hash(bytes.toString('base64')) && input.bytes === bytes.length
+    && Number.isFinite(input.duration) && input.duration > 0 && input.duration <= 120
+    && input.verifiedAt > 0 && input.verifiedAt <= now && input.review.length > 0 && input.references.length > 0,
+    'INVALID', '音频正文、音色或核对记录不匹配');
+  const key = speechContentKey(input.text, input.voiceKey);
+  const { text: _text, ...metadata } = input;
+  const record = await store.run(async tx => {
+    const old = await tx.get('speechAssets', key);
+    if (old) {
+      requireValue(old.digest === input.digest && old.bytes === input.bytes, 'CONFLICT', '同一正文和音色已有不同音频，请升级音色版本');
+      return old;
+    }
+    const usage = await tx.get('speechUsage', 'speech-storage-v1') || { characters: 0, bytes: 0 };
+    requireValue((usage.bytes || 0) + bytes.length <= SPEECH_STORAGE_LIMIT, 'SPEECH_LIMIT', '音频保存空间已达保护上限');
+    await tx.put('speechUsage', 'speech-storage-v1', { ...usage, bytes: (usage.bytes || 0) + bytes.length });
+    const staged: DatabaseDocuments['speechAssets'] = { ...metadata, state: 'staging', createdAt: now };
+    await tx.put('speechAssets', key, staged); return staged;
+  });
+  if (record.state === 'ready') return { key, fileId: record.fileId!, reused: true };
+  const fileId = await media.upload(`speech/library/v1/${key}/${input.digest}.mp3`, bytes);
+  await reserveSpeechTransfer(store, bytes.length, now);
+  const downloaded = await media.download(fileId);
+  requireValue(downloaded.equals(bytes), 'SPEECH_UNAVAILABLE', '云端音频回读不一致，尚未接入播放');
+  await store.run(async tx => {
+    const current = await tx.get('speechAssets', key);
+    requireValue(current?.digest === input.digest, 'CONFLICT', '音频导入记录已变化');
+    await tx.put('speechAssets', key, { ...current, state: 'ready', fileId });
+  });
+  return { key, fileId, reused: false };
+}

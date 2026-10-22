@@ -4,30 +4,16 @@ import type { MediaStore } from './homework';
 import type { SpeechProvider } from './speech';
 import type { SpeechLanguage } from './learning/narration';
 import { hash, requireValue, chinaDate } from './validation';
+import { FreeSpeechUnavailable, validateSpeechAudio, reserveSpeechTransfer, SPEECH_FILE_LIMIT, SPEECH_STORAGE_LIMIT } from './speech-library';
+export { SPEECH_FILE_LIMIT, SPEECH_STORAGE_LIMIT, SPEECH_TRANSFER_LIMIT } from './speech-library';
 
-export const SPEECH_FILE_LIMIT = 512 * 1024;
-export const SPEECH_STORAGE_LIMIT = 128 * 1024 * 1024;
-export const SPEECH_TRANSFER_LIMIT = 128 * 1024 * 1024;
 const LEASE_MS = 180000;
 
 export function createPersistentSpeechCache(store: Store, media: MediaStore, provider: SpeechProvider | undefined,
   limits: { total: number; daily: number }) {
   const inFlight = new Map<string, Promise<{ base64: string; digest: string }>>();
-  const validate = (base64: string) => {
-    const bytes = Buffer.from(base64, 'base64');
-    requireValue(bytes.length > 0 && bytes.length <= SPEECH_FILE_LIMIT && bytes.toString('base64') === base64
-      && (bytes.subarray(0,3).toString() === 'ID3' || (bytes[0] === 255 && (bytes[1] & 224) === 224)),
-      'SPEECH_UNAVAILABLE', '朗读音频校验失败，请重试');
-    return bytes;
-  };
-  async function reserveTransfer(bytes: number, now: number) {
-    await store.run(async tx => {
-      const id = `speech-transfer-v1:${chinaDate(now)}`;
-      const usage = await tx.get('speechUsage', id) || { characters: 0, bytes: 0 };
-      requireValue((usage.bytes || 0) + bytes <= SPEECH_TRANSFER_LIMIT, 'SPEECH_LIMIT', '今日音频下载已达保护上限，手机已保存的音频仍可播放');
-      await tx.put('speechUsage', id, { ...usage, bytes: (usage.bytes || 0) + bytes });
-    });
-  }
+  const validate = validateSpeechAudio;
+  const reserveTransfer = (bytes: number, now: number) => reserveSpeechTransfer(store, bytes, now);
   async function generate(key: string, familyId: string, text: string, language: SpeechLanguage, now: number,
     authorize: (tx: Transaction) => Promise<void>) {
     const owner = crypto.randomUUID();
@@ -38,13 +24,15 @@ export function createPersistentSpeechCache(store: Store, media: MediaStore, pro
       requireValue(!old || old.leaseUntil <= now, 'SPEECH_PENDING', '音频正在准备，请稍后再试');
       // Upload retries reuse staged audio even if the free synthesis window has ended.
       if (!old?.base64) {
-        requireValue(provider && Number.isFinite(provider.expiresAt) && now < provider.expiresAt, 'SPEECH_UNAVAILABLE', '免费合成尚未启用或已到期，已保存的音频仍可播放');
+        const blocked = await tx.get('speechUsage', 'speech-provider-v1');
+        if (!provider || !Number.isFinite(provider.expiresAt) || now >= provider.expiresAt || (blocked?.disabledUntil || 0) > now)
+          throw new FreeSpeechUnavailable('SPEECH_UNAVAILABLE', '免费合成尚未启用或已到期，已保存的音频仍可播放');
         const totalId = 'speech-v1', dailyId = hash(`${familyId}:${chinaDate(now)}`);
         const total = await tx.get('speechUsage', totalId) || { characters: 0 };
         const daily = await tx.get('speechUsage', dailyId) || { characters: 0 };
         const amount = Array.from(text).length;
-        requireValue(total.characters + amount <= limits.total && daily.characters + amount <= limits.daily,
-          'SPEECH_LIMIT', '免费合成额度已达保护上限，已保存的音频仍可播放');
+        if (total.characters + amount > limits.total || daily.characters + amount > limits.daily)
+          throw new FreeSpeechUnavailable('SPEECH_LIMIT', '免费合成额度已达保护上限，已保存的音频仍可播放');
         await tx.put('speechUsage', totalId, { ...total, characters: total.characters + amount });
         await tx.put('speechUsage', dailyId, { ...daily, characters: daily.characters + amount });
       }
@@ -70,7 +58,12 @@ export function createPersistentSpeechCache(store: Store, media: MediaStore, pro
     try {
       let base64 = record.base64;
       if (!base64) {
-        base64 = await provider!.synthesize(text, language); const bytes = validate(base64);
+        try { base64 = await provider!.synthesize(text, language); }
+        catch (error) {
+          if (error instanceof FreeSpeechUnavailable) await store.run(tx => tx.put('speechUsage', 'speech-provider-v1', { characters: 0, disabledUntil: provider!.expiresAt }));
+          throw error;
+        }
+        const bytes = validate(base64);
         await store.run(async tx => {
           const current = await tx.get('speechAudio', key);
           requireValue(current?.owner === owner && current.state === 'pending', 'SPEECH_PENDING', '音频正在准备，请稍后再试');

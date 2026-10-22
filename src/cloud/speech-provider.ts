@@ -1,5 +1,6 @@
 import crypto = require('node:crypto');
 import { tts } from 'tencentcloud-sdk-nodejs-tts';
+import { FreeSpeechUnavailable } from './speech-library';
 import { DomainError } from './validation';
 import type { SpeechProvider } from './speech';
 import { SPEECH_SETTINGS, speechVoiceKey } from './learning/speech-profile';
@@ -23,7 +24,7 @@ export function speechProvider(env: NodeJS.ProcessEnv = process.env): SpeechProv
       const code = String((cause as {code?:string})?.code || '');
       console.error('speech synthesis failed', {code});
       if (/ResourceInsufficient|NoFreeAccount|Arrears|ResourceUnavailable|ResourceNotFound/.test(code))
-        throw new DomainError('SPEECH_LIMIT', '免费朗读额度不可用，已停止合成，不会转为付费');
+        throw new FreeSpeechUnavailable('SPEECH_LIMIT', '免费朗读额度不可用，已停止合成，不会转为付费');
       if (/AuthFailure|Unauthorized/.test(code)) throw new DomainError('SPEECH_UNAVAILABLE', '朗读服务权限待配置，请稍后再试');
       throw new DomainError('SPEECH_UNAVAILABLE', '朗读暂时不可用，请稍后重试');
     }

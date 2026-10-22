@@ -39,7 +39,7 @@ function artifacts() {
     };
     for (const name of ['catalog', 'reading-catalog', 'learning', 'child-profile', 'narration', 'speech-profile']) add(`shared/${name}.js`,
       [`shared/${name}.js`, `miniprogram/lib/learning/${name}.js`, `cloudfunctions/familyApi/learning/${name}.js`]);
-    for (const name of ['index', 'service', 'store', 'validation', 'homework', 'speech', 'speech-provider', 'persistent-speech', 'speech-index']) add(`cloud/${name}.js`, [`cloudfunctions/familyApi/${name}.js`]);
+    for (const name of ['index', 'service', 'store', 'validation', 'homework', 'speech', 'speech-provider', 'persistent-speech', 'speech-library', 'speech-index']) add(`cloud/${name}.js`, [`cloudfunctions/familyApi/${name}.js`]);
     add('client/cloud-transport.js', ['miniprogram/lib/cloud-transport.js']);
     add('miniprogram/app.js', ['miniprogram/app.js']);
     for (const name of ['sync-engine', 'task-groups', 'page', 'errors', 'task-route', 'homework-media', 'pinyin', 'pinyin-data', 'study-notes-view', 'content-detail', 'planned-task-edit', 'content-schedule', 'content-presentation', 'learning-navigation', 'word-entry'])

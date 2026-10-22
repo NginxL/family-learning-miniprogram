@@ -57,6 +57,7 @@ test('provider is explicitly free-only, uses fixed covered voices and has no pai
  vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../cloudfunctions/familyApi/speech-provider.js'),'utf8'),{exports:exported,process:{env:{}},console,require(name){
   if(name==='tencentcloud-sdk-nodejs-tts')return {tts:{v20190823:{Client}}};
   if(name==='./validation')return require('../cloudfunctions/familyApi/validation');
+  if(name==='./speech-library')return require('../cloudfunctions/familyApi/speech-library');
   if(name==='./learning/speech-profile')return require('../shared/speech-profile');
   return require(name);
  }});

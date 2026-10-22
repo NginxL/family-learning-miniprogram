@@ -4,6 +4,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.speechProvider = speechProvider;
 const crypto = require("node:crypto");
 const tencentcloud_sdk_nodejs_tts_1 = require("tencentcloud-sdk-nodejs-tts");
+const speech_library_1 = require("./speech-library");
 const validation_1 = require("./validation");
 const speech_profile_1 = require("./learning/speech-profile");
 // Credentials stay in the function runtime. Never send them to the mini program.
@@ -30,7 +31,7 @@ function speechProvider(env = process.env) {
                 const code = String((cause === null || cause === void 0 ? void 0 : cause.code) || '');
                 console.error('speech synthesis failed', { code });
                 if (/ResourceInsufficient|NoFreeAccount|Arrears|ResourceUnavailable|ResourceNotFound/.test(code))
-                    throw new validation_1.DomainError('SPEECH_LIMIT', '免费朗读额度不可用，已停止合成，不会转为付费');
+                    throw new speech_library_1.FreeSpeechUnavailable('SPEECH_LIMIT', '免费朗读额度不可用，已停止合成，不会转为付费');
                 if (/AuthFailure|Unauthorized/.test(code))
                     throw new validation_1.DomainError('SPEECH_UNAVAILABLE', '朗读服务权限待配置，请稍后再试');
                 throw new validation_1.DomainError('SPEECH_UNAVAILABLE', '朗读暂时不可用，请稍后重试');

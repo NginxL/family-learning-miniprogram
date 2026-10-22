@@ -11,7 +11,7 @@ const options: NonNullable<Parameters<typeof cloud.database>[0]> & { throwOnNotF
 const speak = createSpeechService(createCloudStore(cloud.database(options)), speechProvider(), {
   async upload(path, data) { return (await cloud.uploadFile({ cloudPath: path, fileContent: data })).fileID; },
   async download(fileId) { return (await cloud.downloadFile({ fileID: fileId })).fileContent; }
-});
+}, process.env.SPEECH_LIBRARY_ENABLED === 'true');
 export async function main(event: unknown): Promise<ApiEnvelope> {
   try {
     requireValue(process.env.SPEECH_STORAGE_INCLUDED_ONLY === 'true', 'SPEECH_UNAVAILABLE', '音频保存服务尚未启用');
