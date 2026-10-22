@@ -1,0 +1,787 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-22T12:03:14.939Z",
+  "provider": "Doubao Work built-in seed-audio",
+  "funding": "existing membership quota only; no paid API or purchase",
+  "applicationCommit": "df0bb99",
+  "audioFilesInRepository": false,
+  "cloudReadbackVerified": true,
+  "checksum": "SHA-256 of canonical base64 audio bytes; text hashes use UTF-8 SHA-256",
+  "items": [
+    {
+      "key": "30cb6ac335f7c1da04c663a64198dd9e1a8c89d1f165b5b40390353b4cba6f56",
+      "text": "apple",
+      "textHash": "3a7bd3e2360a3d29eea436fcfb7e44c735d117c42d1c1835420b6b9942dd4f1b",
+      "language": "en",
+      "voiceKey": "[\"doubao-work-seed-audio\",1,\"en\",\"clear-slow\",16000,\"mp3\",32000]",
+      "kind": "word",
+      "grade": 1,
+      "references": [
+        {
+          "contentId": "word-apple",
+          "part": 0
+        }
+      ],
+      "status": "stored",
+      "file": "word-apple.mp3",
+      "bytes": 9728,
+      "duration": 2.28,
+      "digest": "9195445c9c1e63c1588ab43ac250299dfb4fd1b7e6b3f6dc438a8da607ce237b",
+      "verifiedAt": 1792668871818,
+      "review": "此前用户试听通过；转码后本机faster-whisper large-v3-turbo独立转写为 \"Apple\"，逐词比对一致；非真人重新审听。",
+      "batchId": "doubao-20261022-approved-words"
+    },
+    {
+      "key": "0a4d0b70abc1554297416d6882e1942f98adec2cd433ab88096761c687e2b64f",
+      "text": "book",
+      "textHash": "92719fe0cf8cd51592af31ee8a5736d79f7273777fa3f7b70bfe993a4cd32180",
+      "language": "en",
+      "voiceKey": "[\"doubao-work-seed-audio\",1,\"en\",\"clear-slow\",16000,\"mp3\",32000]",
+      "kind": "word",
+      "grade": 1,
+      "references": [
+        {
+          "contentId": "word-book",
+          "part": 0
+        }
+      ],
+      "status": "stored",
+      "file": "word-book.mp3",
+      "bytes": 8144,
+      "duration": 1.9,
+      "digest": "f156a305696ab7c488e04b3294e77c45b2b8d3c4e0d82f27db58c9a63777be39",
+      "verifiedAt": 1792668871818,
+      "review": "此前用户试听通过；转码后本机faster-whisper large-v3-turbo独立转写为 \"Book.\"，逐词比对一致；非真人重新审听。",
+      "batchId": "doubao-20261022-approved-words"
+    },
+    {
+      "key": "400cdd7725ef13a81c5a33fc75a8c19fdf0a76848ce87dfb006a850e2038bbbf",
+      "text": "family",
+      "textHash": "d34a569ab7aaa54dacd715ae64953455d86b768846cd0085ef4e9e7471489b7b",
+      "language": "en",
+      "voiceKey": "[\"doubao-work-seed-audio\",1,\"en\",\"clear-slow\",16000,\"mp3\",32000]",
+      "kind": "word",
+      "grade": 1,
+      "references": [
+        {
+          "contentId": "word-family",
+          "part": 0
+        }
+      ],
+      "status": "stored",
+      "file": "word-family.mp3",
+      "bytes": 6128,
+      "duration": 1.4,
+      "digest": "c5796c491f3b0f9b04dd5c28626c391b8047d620adfb37d69820c94fe1c90ef5",
+      "verifiedAt": 1792668871818,
+      "review": "此前用户试听通过；转码后本机faster-whisper large-v3-turbo独立转写为 \"Family.\"，逐词比对一致；非真人重新审听。",
+      "batchId": "doubao-20261022-approved-words"
+    },
+    {
+      "key": "9da84fe38d28a02f499486db9f6aae217a82157d3ab62bb26770e1d53b6e0c4c",
+      "text": "school",
+      "textHash": "d64debd942d7dc26a851231583b1721f43ea936fa41932b6dad7556e5f8cd24a",
+      "language": "en",
+      "voiceKey": "[\"doubao-work-seed-audio\",1,\"en\",\"clear-slow\",16000,\"mp3\",32000]",
+      "kind": "word",
+      "grade": 3,
+      "references": [
+        {
+          "contentId": "word-school",
+          "part": 0
+        }
+      ],
+      "status": "stored",
+      "file": "word-school.mp3",
+      "bytes": 7712,
+      "duration": 1.78,
+      "digest": "a954c7b97ee242ec67fbc626bf77d49797748fb782388844ddb2becd1ee47706",
+      "verifiedAt": 1792668871819,
+      "review": "此前用户试听通过；转码后本机faster-whisper large-v3-turbo独立转写为 \"School.\"，逐词比对一致；非真人重新审听。",
+      "batchId": "doubao-20261022-approved-words"
+    },
+    {
+      "key": "387182b39c5c6e0fb0937ba2427cf28226c25fc51fe5d36b4b5204543c08fa51",
+      "text": "water",
+      "textHash": "0f4168490e38b8447e11ba4bd656aa11b925bd22af30bac464bc153fdb608501",
+      "language": "en",
+      "voiceKey": "[\"doubao-work-seed-audio\",1,\"en\",\"clear-slow\",16000,\"mp3\",32000]",
+      "kind": "word",
+      "grade": 3,
+      "references": [
+        {
+          "contentId": "word-water",
+          "part": 0
+        }
+      ],
+      "status": "stored",
+      "file": "word-water.mp3",
+      "bytes": 10160,
+      "duration": 2.4,
+      "digest": "4440a36b2d30ac692aa6c01fe96cef5a379fde1d94ef812e3d18ac78b3585203",
+      "verifiedAt": 1792668871819,
+      "review": "此前用户试听通过；转码后本机faster-whisper large-v3-turbo独立转写为 \"water\"，逐词比对一致；非真人重新审听。",
+      "batchId": "doubao-20261022-approved-words"
+    },
+    {
+      "key": "ead20e03b01a9b9cfb9fd70daaea9ffe32c72f651d4a7e7cad3b25e708180105",
+      "text": "《咏鹅》\n骆宾王\n鹅，鹅，鹅，曲项向天歌。\n白毛浮绿水，红掌拨清波。",
+      "textHash": "570d3f7452a8c68581924fb5d7ab6aa024cfe874bb752d888baa64ba5043bb01",
+      "language": "zh",
+      "voiceKey": "[\"doubao-work-seed-audio\",1,\"zh\",\"clear-slow\",16000,\"mp3\",32000]",
+      "kind": "poetry",
+      "grade": 1,
+      "references": [
+        {
+          "contentId": "poem-goose",
+          "part": 0
+        }
+      ],
+      "status": "stored",
+      "file": "poem-goose.mp3",
+      "bytes": 46160,
+      "duration": 11.4,
+      "digest": "145ae3388af00af6f0058cd3ccb8783f2af9aa512b72c20be41b5e409918723d",
+      "verifiedAt": 1792670111641,
+      "review": "精确核对生成输入；本机 Whisper large-v3-turbo 与 SenseVoice 双模型转写交叉检查、人工逐字比较；至少一份转写除标点大小写外与正文完全一致。核对格式、时长及文件摘要；非真人审听。",
+      "transcripts": {
+        "whisper": "永鹅,落冰王,鹅鹅鹅,趋向向天歌,白毛浮绿水,红掌波青波。",
+        "senseVoice": "咏鹅骆宾王，鹅鹅鹅，曲项向天歌，白毛浮绿水，红掌拨清波。"
+      },
+      "batchId": "doubao-20261022-batch001"
+    },
+    {
+      "key": "e3602e27d8f1abb462e57c766a39f6c9edd912fd98a22be4893c747520ffdea8",
+      "text": "《静夜思》\n李白\n床前明月光，疑是地上霜。\n举头望明月，低头思故乡。",
+      "textHash": "a6e7e74cde96c60d6a42ab725e64a68a302c84c479a974623feae441a30dbade",
+      "language": "zh",
+      "voiceKey": "[\"doubao-work-seed-audio\",1,\"zh\",\"clear-slow\",16000,\"mp3\",32000]",
+      "kind": "poetry",
+      "grade": 1,
+      "references": [
+        {
+          "contentId": "poem-quiet-night",
+          "part": 0
+        }
+      ],
+      "status": "stored",
+      "file": "poem-quiet-night.mp3",
+      "bytes": 44144,
+      "duration": 10.9,
+      "digest": "217be007e208636adfaa1133e4feae5010ec90808f12d35e0838238e569b8f2a",
+      "verifiedAt": 1792670111642,
+      "review": "精确核对生成输入；本机 Whisper large-v3-turbo 与 SenseVoice 双模型转写交叉检查、人工逐字比较；至少一份转写除标点大小写外与正文完全一致。核对格式、时长及文件摘要；非真人审听。",
+      "transcripts": {
+        "whisper": "静夜思,李白,床前明月光,一世地上霜,举头望明月,低头思故乡。",
+        "senseVoice": "静夜思，李白，床前明月光，疑是地上霜。举头望明月，低头思故乡。"
+      },
+      "batchId": "doubao-20261022-batch001"
+    },
+    {
+      "key": "08fa1daf44e2d7a3c0c344201a326197e2996dd54714eb797e9eaf18df6f0b38",
+      "text": "《江雪》\n柳宗元\n千山鸟飞绝，万径人踪灭。\n孤舟蓑笠翁，独钓寒江雪。",
+      "textHash": "b9baa2514d0e023fbf85ca323607aa7c1ef4606a7cf7ef3978738d219dd4ac8f",
+      "language": "zh",
+      "voiceKey": "[\"doubao-work-seed-audio\",1,\"zh\",\"clear-slow\",16000,\"mp3\",32000]",
+      "kind": "poetry",
+      "grade": 2,
+      "references": [
+        {
+          "contentId": "poem-river-snow",
+          "part": 0
+        }
+      ],
+      "status": "stored",
+      "file": "poem-river-snow.mp3",
+      "bytes": 42128,
+      "duration": 10.4,
+      "digest": "7bed0f2fd1fcc097454713cee7327634f0e6e285108a68cedfd9baa61223a481",
+      "verifiedAt": 1792670111643,
+      "review": "精确核对生成输入；本机 Whisper large-v3-turbo 与 SenseVoice 双模型转写交叉检查、人工逐字比较；至少一份转写除标点大小写外与正文完全一致。核对格式、时长及文件摘要；非真人审听。",
+      "transcripts": {
+        "whisper": "江雪,柳宗园,千山鸟飞绝,万静人宗灭,孤舟梭丽翁,独吊寒江雪。",
+        "senseVoice": "江雪柳宗元，千山鸟飞绝，万径人踪灭，孤舟蓑笠翁，独钓寒江雪。"
+      },
+      "batchId": "doubao-20261022-batch001"
+    },
+    {
+      "key": "83bd83bf961369749ec3de75d7b423d97f44c39dba182efd2719faf83af63628",
+      "text": "hello",
+      "textHash": "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824",
+      "language": "en",
+      "voiceKey": "[\"doubao-work-seed-audio\",1,\"en\",\"clear-slow\",16000,\"mp3\",32000]",
+      "kind": "word",
+      "grade": 1,
+      "references": [
+        {
+          "contentId": "word-hello",
+          "part": 0
+        }
+      ],
+      "status": "stored",
+      "file": "word-hello.mp3",
+      "bytes": 6992,
+      "duration": 1.6,
+      "digest": "e5c6bb5b3008334a45df8d71cfac9d5da3a7cf66c122f5fda12d417c5afd1ecb",
+      "verifiedAt": 1792670111644,
+      "review": "精确核对生成输入；本机 Whisper large-v3-turbo 与 SenseVoice 双模型转写交叉检查、人工逐字比较；至少一份转写除标点大小写外与正文完全一致。核对格式、时长及文件摘要；非真人审听。",
+      "transcripts": {
+        "whisper": "below!",
+        "senseVoice": "Hello."
+      },
+      "batchId": "doubao-20261022-batch001"
+    },
+    {
+      "key": "d7a8c00c38c3cb536947b372e1d30dbabdb0f93c810de7fed303f38e04dff61b",
+      "text": "cat",
+      "textHash": "77af778b51abd4a3c51c5ddd97204a9c3ae614ebccb75a606c3b6865aed6744e",
+      "language": "en",
+      "voiceKey": "[\"doubao-work-seed-audio\",1,\"en\",\"clear-slow\",16000,\"mp3\",32000]",
+      "kind": "word",
+      "grade": 1,
+      "references": [
+        {
+          "contentId": "word-cat",
+          "part": 0
+        }
+      ],
+      "status": "stored",
+      "file": "word-cat.mp3",
+      "bytes": 6992,
+      "duration": 1.6,
+      "digest": "05dbac86602709c89826dc54f040afccc44b5f556ad5eaf5b46c3d3e7363c824",
+      "verifiedAt": 1792670111644,
+      "review": "精确核对生成输入；本机 Whisper large-v3-turbo 与 SenseVoice 双模型转写交叉检查、人工逐字比较；至少一份转写除标点大小写外与正文完全一致。核对格式、时长及文件摘要；非真人审听。",
+      "transcripts": {
+        "whisper": "Cat",
+        "senseVoice": "Cat."
+      },
+      "batchId": "doubao-20261022-batch001"
+    },
+    {
+      "key": "c4ab0209e3dee598e20623f092360901621cd9fdd0f00efe10e73916c58b2032",
+      "text": "dog",
+      "textHash": "cd6357efdd966de8c0cb2f876cc89ec74ce35f0968e11743987084bd42fb8944",
+      "language": "en",
+      "voiceKey": "[\"doubao-work-seed-audio\",1,\"en\",\"clear-slow\",16000,\"mp3\",32000]",
+      "kind": "word",
+      "grade": 1,
+      "references": [
+        {
+          "contentId": "word-dog",
+          "part": 0
+        }
+      ],
+      "status": "stored",
+      "file": "word-dog.mp3",
+      "bytes": 6128,
+      "duration": 1.4,
+      "digest": "f869a2f28d2d19f6bff1bd15aae3966ec5b87ee2192eaabe6ec598b3b842db0a",
+      "verifiedAt": 1792670111645,
+      "review": "精确核对生成输入；本机 Whisper large-v3-turbo 与 SenseVoice 双模型转写交叉检查、人工逐字比较；至少一份转写除标点大小写外与正文完全一致。核对格式、时长及文件摘要；非真人审听。",
+      "transcripts": {
+        "whisper": "Dog",
+        "senseVoice": "Dog."
+      },
+      "batchId": "doubao-20261022-batch001"
+    },
+    {
+      "key": "78219d4f689c39bc747859003d89d58d2b3e38e198aa161fc42445165e0c328f",
+      "text": "pen",
+      "textHash": "e21a6b0cb193057e06ac16b813443b3e6abae0db22762c6956a78ea049453058",
+      "language": "en",
+      "voiceKey": "[\"doubao-work-seed-audio\",1,\"en\",\"clear-slow\",16000,\"mp3\",32000]",
+      "kind": "word",
+      "grade": 10,
+      "references": [
+        {
+          "contentId": "word-pen",
+          "part": 0
+        }
+      ],
+      "status": "stored",
+      "file": "word-pen.mp3",
+      "bytes": 9008,
+      "duration": 2.1,
+      "digest": "cd4a66c61b4350888eacc5bdf80796730ab46bcce33abcd2787c682aab7e140f",
+      "verifiedAt": 1792670111646,
+      "review": "精确核对生成输入；本机 Whisper large-v3-turbo 与 SenseVoice 双模型转写交叉检查、人工逐字比较；至少一份转写除标点大小写外与正文完全一致。核对格式、时长及文件摘要；非真人审听。",
+      "transcripts": {
+        "whisper": "pen",
+        "senseVoice": "Pen."
+      },
+      "batchId": "doubao-20261022-batch001"
+    },
+    {
+      "key": "d35d81a0bd114ba907c581f66c14c26f6943d82b794c77eacb60d1741d620cd0",
+      "text": "bag",
+      "textHash": "c018019b6a8b01ab5868cf4be8db327a7549ae03202548b9ffcd2671c4c2b624",
+      "language": "en",
+      "voiceKey": "[\"doubao-work-seed-audio\",1,\"en\",\"clear-slow\",16000,\"mp3\",32000]",
+      "kind": "word",
+      "grade": 3,
+      "references": [
+        {
+          "contentId": "word-bag",
+          "part": 0
+        }
+      ],
+      "status": "stored",
+      "file": "word-bag.mp3",
+      "bytes": 6992,
+      "duration": 1.6,
+      "digest": "e993bdafdc846dd24309873d88da056f1198940fdcc0d237e24a8aa55f35c441",
+      "verifiedAt": 1792670111646,
+      "review": "精确核对生成输入；本机 Whisper large-v3-turbo 与 SenseVoice 双模型转写交叉检查、人工逐字比较；至少一份转写除标点大小写外与正文完全一致。核对格式、时长及文件摘要；非真人审听。",
+      "transcripts": {
+        "whisper": "bag",
+        "senseVoice": "Bag."
+      },
+      "batchId": "doubao-20261022-batch001"
+    },
+    {
+      "key": "41e0472aa099e4201e447f641ca949bcd80ce593acf6049bdc23d690b4ac5c1a",
+      "text": "red",
+      "textHash": "b1f51a511f1da0cd348b8f8598db32e61cb963e5fc69e2b41485bf99590ed75a",
+      "language": "en",
+      "voiceKey": "[\"doubao-work-seed-audio\",1,\"en\",\"clear-slow\",16000,\"mp3\",32000]",
+      "kind": "word",
+      "grade": 1,
+      "references": [
+        {
+          "contentId": "word-red",
+          "part": 0
+        }
+      ],
+      "status": "stored",
+      "file": "word-red.mp3",
+      "bytes": 6128,
+      "duration": 1.4,
+      "digest": "8e32b3c2d4930b07be2773837872b1e78304a86fd80250acb1cbf749cf15d7ef",
+      "verifiedAt": 1792670111647,
+      "review": "精确核对生成输入；本机 Whisper large-v3-turbo 与 SenseVoice 双模型转写交叉检查、人工逐字比较；至少一份转写除标点大小写外与正文完全一致。核对格式、时长及文件摘要；非真人审听。",
+      "transcripts": {
+        "whisper": "Red",
+        "senseVoice": "Red."
+      },
+      "batchId": "doubao-20261022-batch001"
+    },
+    {
+      "key": "5a5a4d26b541854f7e4c1fe0a467e8cc318b2537af92c539a56b8a77526d84a4",
+      "text": "sun",
+      "textHash": "27756f050e14a1cb1c1ee867f0eace9ea4d9fcb81b8bee089469f1ebd5fd7b17",
+      "language": "en",
+      "voiceKey": "[\"doubao-work-seed-audio\",1,\"en\",\"clear-slow\",16000,\"mp3\",32000]",
+      "kind": "word",
+      "grade": 2,
+      "references": [
+        {
+          "contentId": "word-sun",
+          "part": 0
+        }
+      ],
+      "status": "stored",
+      "file": "word-sun.mp3",
+      "bytes": 6128,
+      "duration": 1.4,
+      "digest": "50990695b8303c577b7b7918f1c4a8440e29986e90ed4b65d3c348151bba4056",
+      "verifiedAt": 1792670111647,
+      "review": "精确核对生成输入；本机 Whisper large-v3-turbo 与 SenseVoice 双模型转写交叉检查、人工逐字比较；至少一份转写除标点大小写外与正文完全一致。核对格式、时长及文件摘要；非真人审听。",
+      "transcripts": {
+        "whisper": "Sun",
+        "senseVoice": "Son."
+      },
+      "batchId": "doubao-20261022-batch001"
+    },
+    {
+      "key": "f4603d214ff41e8e17e4a48cce2f80591f352bfb82e94081a01d6e45047209aa",
+      "text": "tree",
+      "textHash": "dc9c5edb8b2d479e697b4b0b8ab874f32b325138598ce9e7b759eb8292110622",
+      "language": "en",
+      "voiceKey": "[\"doubao-work-seed-audio\",1,\"en\",\"clear-slow\",16000,\"mp3\",32000]",
+      "kind": "word",
+      "grade": 2,
+      "references": [
+        {
+          "contentId": "word-tree",
+          "part": 0
+        }
+      ],
+      "status": "stored",
+      "file": "word-tree.mp3",
+      "bytes": 6992,
+      "duration": 1.6,
+      "digest": "4c038d6b1e27aaf6094ee2a799286b04f34030e733ae5c1046e415cc68033d28",
+      "verifiedAt": 1792670111647,
+      "review": "精确核对生成输入；本机 Whisper large-v3-turbo 与 SenseVoice 双模型转写交叉检查、人工逐字比较；至少一份转写除标点大小写外与正文完全一致。核对格式、时长及文件摘要；非真人审听。",
+      "transcripts": {
+        "whisper": "Tree.",
+        "senseVoice": "Tree."
+      },
+      "batchId": "doubao-20261022-batch001"
+    },
+    {
+      "key": "a0bb23c388962400cd4f132246cbb84a267a35b51c69c1f86041f9364f085b48",
+      "text": "Hello!",
+      "textHash": "334d016f755cd6dc58c53a86e183882f8ec14f52fb05345887c8a5edd42c87b7",
+      "language": "en",
+      "voiceKey": "[\"doubao-work-seed-audio\",1,\"en\",\"clear-slow\",16000,\"mp3\",32000]",
+      "kind": "sentence",
+      "grade": 10,
+      "references": [
+        {
+          "contentId": "sentence-hello",
+          "part": 0
+        }
+      ],
+      "status": "stored",
+      "file": "sentence-hello.mp3",
+      "bytes": 6128,
+      "duration": 1.4,
+      "digest": "b8d1f42cd03d6d6e8c308216bf26d8951758f2547bef269d710bd7a86dbb20b4",
+      "verifiedAt": 1792670111648,
+      "review": "精确核对生成输入；本机 Whisper large-v3-turbo 与 SenseVoice 双模型转写交叉检查、人工逐字比较；至少一份转写除标点大小写外与正文完全一致。核对格式、时长及文件摘要；非真人审听。",
+      "transcripts": {
+        "whisper": "Hello.",
+        "senseVoice": "Hello."
+      },
+      "batchId": "doubao-20261022-batch001"
+    },
+    {
+      "key": "cfb10021269dbc884716a715a18924c373c16957eb58b37a440ef76fc889e445",
+      "text": "Good morning!",
+      "textHash": "c9ebfb6f4b8e880908a737b8d770aa3a518fb6053b327720e8dcc79609c32858",
+      "language": "en",
+      "voiceKey": "[\"doubao-work-seed-audio\",1,\"en\",\"clear-slow\",16000,\"mp3\",32000]",
+      "kind": "sentence",
+      "grade": 10,
+      "references": [
+        {
+          "contentId": "sentence-morning",
+          "part": 0
+        }
+      ],
+      "status": "stored",
+      "file": "sentence-morning.mp3",
+      "bytes": 9296,
+      "duration": 2.18,
+      "digest": "4a38f4300e80c5e84e1b6790627b33512729943edac3574efeffe53a094a4826",
+      "verifiedAt": 1792670111648,
+      "review": "精确核对生成输入；本机 Whisper large-v3-turbo 与 SenseVoice 双模型转写交叉检查、人工逐字比较；至少一份转写除标点大小写外与正文完全一致。核对格式、时长及文件摘要；非真人审听。",
+      "transcripts": {
+        "whisper": "Good morning.",
+        "senseVoice": "Good morning."
+      },
+      "batchId": "doubao-20261022-batch001"
+    },
+    {
+      "key": "ffead6f91f6a44492d8fac1af1cb66dc3706d3fea82877954e950964823805b0",
+      "text": "How are you?",
+      "textHash": "df287dfc1406ed2b692e1c2c783bb5cec97eac53151ee1d9810397aa0afa0d89",
+      "language": "en",
+      "voiceKey": "[\"doubao-work-seed-audio\",1,\"en\",\"clear-slow\",16000,\"mp3\",32000]",
+      "kind": "sentence",
+      "grade": 10,
+      "references": [
+        {
+          "contentId": "sentence-how",
+          "part": 0
+        }
+      ],
+      "status": "stored",
+      "file": "sentence-how.mp3",
+      "bytes": 12176,
+      "duration": 2.9,
+      "digest": "a3e0f795e207606324b777e240cfa829545807916b7876c595f8680088f942df",
+      "verifiedAt": 1792670111649,
+      "review": "精确核对生成输入；本机 Whisper large-v3-turbo 与 SenseVoice 双模型转写交叉检查、人工逐字比较；至少一份转写除标点大小写外与正文完全一致。核对格式、时长及文件摘要；非真人审听。",
+      "transcripts": {
+        "whisper": "How are you?",
+        "senseVoice": "How are you."
+      },
+      "batchId": "doubao-20261022-batch001"
+    },
+    {
+      "key": "a8e55c7275392e54480ac067476b1486fe51f674f401d6ae6f5026052c5bcf71",
+      "text": "I am fine, thank you.",
+      "textHash": "2009eb59d2711a1679f7242ba0a627785cac975ff96b5b519935fb450d00249e",
+      "language": "en",
+      "voiceKey": "[\"doubao-work-seed-audio\",1,\"en\",\"clear-slow\",16000,\"mp3\",32000]",
+      "kind": "sentence",
+      "grade": 10,
+      "references": [
+        {
+          "contentId": "sentence-fine",
+          "part": 0
+        }
+      ],
+      "status": "stored",
+      "file": "sentence-fine.mp3",
+      "bytes": 15344,
+      "duration": 3.68,
+      "digest": "6fd8291a8c54e1d3e60f01d7e4a85e2cad1f0eeb8198da3160be8b776060445b",
+      "verifiedAt": 1792670111650,
+      "review": "精确核对生成输入；本机 Whisper large-v3-turbo 与 SenseVoice 双模型转写交叉检查、人工逐字比较；至少一份转写除标点大小写外与正文完全一致。核对格式、时长及文件摘要；非真人审听。",
+      "transcripts": {
+        "whisper": "I am fine. Thank you.",
+        "senseVoice": "I am fine. Thank you."
+      },
+      "batchId": "doubao-20261022-batch001"
+    },
+    {
+      "key": "ee7632ea4082e19ef47253d9ef1e8a285c1ddcf3677069ca3e7e8958de7d1ab2",
+      "text": "Nice to meet you.",
+      "textHash": "39954823f73a76e35ec7280de44b2eb4b26399ecdc00a2b3640db22375d3a4b3",
+      "language": "en",
+      "voiceKey": "[\"doubao-work-seed-audio\",1,\"en\",\"clear-slow\",16000,\"mp3\",32000]",
+      "kind": "sentence",
+      "grade": 10,
+      "references": [
+        {
+          "contentId": "sentence-nice",
+          "part": 0
+        }
+      ],
+      "status": "stored",
+      "file": "sentence-nice.mp3",
+      "bytes": 14192,
+      "duration": 3.4,
+      "digest": "7b433aa7d1715586b8b4cfd17a1f66246e548a402285b6d82afc473590170620",
+      "verifiedAt": 1792670111651,
+      "review": "精确核对生成输入；本机 Whisper large-v3-turbo 与 SenseVoice 双模型转写交叉检查、人工逐字比较；至少一份转写除标点大小写外与正文完全一致。核对格式、时长及文件摘要；非真人审听。",
+      "transcripts": {
+        "whisper": "Nice to meet you.",
+        "senseVoice": "Nice to meet you."
+      },
+      "batchId": "doubao-20261022-batch001"
+    },
+    {
+      "key": "5370ab5570e480421010b221f35faa41292903f45523a9c76a5de3d4aead38d2",
+      "text": "This is my book.",
+      "textHash": "f89ad04ea6795bb35f43a4413e9908c372c9237ab83ed4607ed9bcb316dcaabc",
+      "language": "en",
+      "voiceKey": "[\"doubao-work-seed-audio\",1,\"en\",\"clear-slow\",16000,\"mp3\",32000]",
+      "kind": "sentence",
+      "grade": 10,
+      "references": [
+        {
+          "contentId": "sentence-book",
+          "part": 0
+        }
+      ],
+      "status": "stored",
+      "file": "sentence-book.mp3",
+      "bytes": 16928,
+      "duration": 4.1,
+      "digest": "44b1d1a64c32ac22dd0d1c68dd6f581ef382ffd720a8d38c00b403abc3651d50",
+      "verifiedAt": 1792670111651,
+      "review": "精确核对生成输入；本机 Whisper large-v3-turbo 与 SenseVoice 双模型转写交叉检查、人工逐字比较；至少一份转写除标点大小写外与正文完全一致。核对格式、时长及文件摘要；非真人审听。",
+      "transcripts": {
+        "whisper": "This is my book.",
+        "senseVoice": "This is my book."
+      },
+      "batchId": "doubao-20261022-batch001"
+    },
+    {
+      "key": "a49e4eb6cd7751bb7fa57a52f49ec546b446c1c08c91fda51f7d2eddc011487f",
+      "text": "I like apples.",
+      "textHash": "e737ffb65484ea1f032ca0e3479a4ddfcd6ff01cfa306eb415b6a0c2c27a9a5b",
+      "language": "en",
+      "voiceKey": "[\"doubao-work-seed-audio\",1,\"en\",\"clear-slow\",16000,\"mp3\",32000]",
+      "kind": "sentence",
+      "grade": 10,
+      "references": [
+        {
+          "contentId": "sentence-apple",
+          "part": 0
+        }
+      ],
+      "status": "stored",
+      "file": "sentence-apple.mp3",
+      "bytes": 12176,
+      "duration": 2.9,
+      "digest": "bac2b3a3e1912605bf956711cb1a53f59d5435c96a079aaf7a0a683fe2327569",
+      "verifiedAt": 1792670111652,
+      "review": "精确核对生成输入；本机 Whisper large-v3-turbo 与 SenseVoice 双模型转写交叉检查、人工逐字比较；至少一份转写除标点大小写外与正文完全一致。核对格式、时长及文件摘要；非真人审听。",
+      "transcripts": {
+        "whisper": "I like apples.",
+        "senseVoice": "I like apples."
+      },
+      "batchId": "doubao-20261022-batch001"
+    },
+    {
+      "key": "699fde6ec6cf4ea0f876afeee4697454c560f826d79d78180b7edf9ce78e3868",
+      "text": "I can see a cat.",
+      "textHash": "512d3f9ef3f5d3c8817f4aa211f08d5bc8ab24b0b17b4a5319d448f64166b27b",
+      "language": "en",
+      "voiceKey": "[\"doubao-work-seed-audio\",1,\"en\",\"clear-slow\",16000,\"mp3\",32000]",
+      "kind": "sentence",
+      "grade": 10,
+      "references": [
+        {
+          "contentId": "sentence-cat",
+          "part": 0
+        }
+      ],
+      "status": "stored",
+      "file": "sentence-cat.mp3",
+      "bytes": 15344,
+      "duration": 3.68,
+      "digest": "d7d170fdb9959dd19a72174fab4d9722e65733d3715fed1479960c0c77b236d7",
+      "verifiedAt": 1792670111652,
+      "review": "精确核对生成输入；本机 Whisper large-v3-turbo 与 SenseVoice 双模型转写交叉检查、人工逐字比较；至少一份转写除标点大小写外与正文完全一致。核对格式、时长及文件摘要；非真人审听。",
+      "transcripts": {
+        "whisper": "I can see a cat.",
+        "senseVoice": "I can see. A cat."
+      },
+      "batchId": "doubao-20261022-batch001"
+    },
+    {
+      "key": "a03c40c8c5dec42a853eb52e56a9434a77635c0b5c13d9a629285639fb157064",
+      "text": "《春晓》\n孟浩然\n春眠不觉晓，处处闻啼鸟。\n夜来风雨声，花落知多少。",
+      "textHash": "f145808531bbfd97ec50d6c596e9b17a717ef61baf883d8883ac7e7f54058bcf",
+      "language": "zh",
+      "voiceKey": "[\"doubao-work-seed-audio\",1,\"zh\",\"clear-slow\",16000,\"mp3\",32000]",
+      "kind": "poetry",
+      "grade": 1,
+      "references": [
+        {
+          "contentId": "poem-spring-morning",
+          "part": 0
+        }
+      ],
+      "status": "stored",
+      "file": "poem-spring-morning.mp3",
+      "bytes": 39680,
+      "duration": 9.78,
+      "digest": "1947ba85b1b4df0a0efd999e639fa3603838537b5555f3cdaee53944cf8545b4",
+      "verifiedAt": 1792670322384,
+      "review": "精确核对生成输入；本机 Whisper large-v3-turbo 与 SenseVoice 双模型转写交叉检查、人工逐字比较；至少一份转写除标点大小写外与正文完全一致。核对格式、时长及文件摘要；非真人审听。",
+      "transcripts": {
+        "whisper": "春晓,梦浩然,春眠不觉晓,处处闻蹄鸟,夜来风雨声,花落之多少。",
+        "senseVoice": "春晓孟浩然，春眠不觉晓，处处闻啼鸟。夜来风雨声花落知多少。"
+      },
+      "batchId": "doubao-20261022-batch001-retry"
+    },
+    {
+      "key": "b1af13f23b92724dc5ed8ef7821eabeb2bdb0e59d85990ffead8447bda3d88ca",
+      "text": "I have a red bag.\nA book and a pen are in my bag.\nI take my bag to school.",
+      "textHash": "f0db672e5c257381035e9583bd872b934378f14ad078b1681bb7475eaaaf7e59",
+      "language": "en",
+      "voiceKey": "[\"doubao-work-seed-audio\",1,\"en\",\"clear-slow\",16000,\"mp3\",32000]",
+      "kind": "english-reading",
+      "grade": 10,
+      "references": [
+        {
+          "contentId": "english-reading-red-bag",
+          "part": 0
+        }
+      ],
+      "status": "stored",
+      "file": "english-reading-red-bag.mp3",
+      "bytes": 67328,
+      "duration": 16.68,
+      "digest": "8ba9a9e9e6c499633a044d67e6de8b7e18d3a0c2ee8631828752fe41aaf77ae4",
+      "verifiedAt": 1792670322386,
+      "review": "精确核对生成输入；本机 Whisper large-v3-turbo 与 SenseVoice 双模型转写交叉检查、人工逐字比较；至少一份转写除标点大小写外与正文完全一致。核对格式、时长及文件摘要；非真人审听。",
+      "transcripts": {
+        "whisper": "I have a red bag. A book and a pen are in my bag. I take my bag to school.",
+        "senseVoice": "I have a red bag, a book and a pen are in my bag. I take my bag to school."
+      },
+      "batchId": "doubao-20261022-batch001-retry"
+    },
+    {
+      "key": "66e292380dff02b3ad42b3bb5fb6516d4b2966e3218d9606c4acc411e3be26cd",
+      "text": "We go to the park.\nI see a bird in a tree.\nMy little sister sees a small dog.\nWe sit down and drink some water.",
+      "textHash": "5f6edfb49836346981bcbf9f7e46e6140d899e09ef59d9ed08707a902c9cd104",
+      "language": "en",
+      "voiceKey": "[\"doubao-work-seed-audio\",1,\"en\",\"clear-slow\",16000,\"mp3\",32000]",
+      "kind": "english-reading",
+      "grade": 10,
+      "references": [
+        {
+          "contentId": "english-reading-park",
+          "part": 0
+        }
+      ],
+      "status": "stored",
+      "file": "english-reading-park.mp3",
+      "bytes": 89792,
+      "duration": 22.3,
+      "digest": "f994113e24097fa7bae0f31db362b99c7fb77fdc1ec8a6fa4f2cb80d5ea2ae73",
+      "verifiedAt": 1792670322388,
+      "review": "精确核对生成输入；本机 Whisper large-v3-turbo 与 SenseVoice 双模型转写交叉检查、人工逐字比较；至少一份转写除标点大小写外与正文完全一致。核对格式、时长及文件摘要；非真人审听。",
+      "transcripts": {
+        "whisper": "We go to the park. I see a bird in a tree. My little sister sees a small dog. We sit down and drink some water.",
+        "senseVoice": "We go to the park. I see a bird in a tree. My little sister sees a small dog. We sit down and drink some water."
+      },
+      "batchId": "doubao-20261022-batch001-retry"
+    },
+    {
+      "key": "bac6b999ec1140657e0f1020dd348700504a17bee363c303aa344a71f83d6a0e",
+      "text": "It is morning.\nI have an egg and some milk.\nDad has some bread.\nWe eat together.",
+      "textHash": "a46f4b0cec0c8d0fe2cbf1eb32f6189ee3d80d1bd09775f6e807f351625efc79",
+      "language": "en",
+      "voiceKey": "[\"doubao-work-seed-audio\",1,\"en\",\"clear-slow\",16000,\"mp3\",32000]",
+      "kind": "english-reading",
+      "grade": 10,
+      "references": [
+        {
+          "contentId": "english-reading-breakfast",
+          "part": 0
+        }
+      ],
+      "status": "stored",
+      "file": "english-reading-breakfast.mp3",
+      "bytes": 67040,
+      "duration": 16.6,
+      "digest": "87eb0b6d93dc93eb8b33aae532c41f9ab2a09a9fbe3585dd480e90f760b2ca92",
+      "verifiedAt": 1792670322391,
+      "review": "精确核对生成输入；本机 Whisper large-v3-turbo 与 SenseVoice 双模型转写交叉检查、人工逐字比较；至少一份转写除标点大小写外与正文完全一致。核对格式、时长及文件摘要；非真人审听。",
+      "transcripts": {
+        "whisper": "It is morning. I have an egg and some milk. Dad has some bread. We eat together.",
+        "senseVoice": "It is morning. I have an egg and some milk. Dad has some bread. We eat together."
+      },
+      "batchId": "doubao-20261022-batch001-retry"
+    },
+    {
+      "key": "61d076c9551ee20e2ef2a902a21c88fe17588696173c4b6fda145056dc43ef41",
+      "text": "It is raining.\nI am at home with Mum.\nWe read a book about a duck.\nThen we draw a duck together.",
+      "textHash": "50ad36dcce4debd201e078015f596dc99332412d328faca1f1b46fba38fc0c76",
+      "language": "en",
+      "voiceKey": "[\"doubao-work-seed-audio\",1,\"en\",\"clear-slow\",16000,\"mp3\",32000]",
+      "kind": "english-reading",
+      "grade": 10,
+      "references": [
+        {
+          "contentId": "english-reading-rain",
+          "part": 0
+        }
+      ],
+      "status": "review-pending",
+      "file": "english-reading-rain.mp3",
+      "bytes": 98576,
+      "duration": 24.5,
+      "digest": "2151ea5e2c8faa1243cea719b96e1239be87e5e6101462a7355d3754caff1bd7",
+      "batchId": "doubao-20261022-batch001",
+      "review": "输入为 Mum；Whisper 转写为 Mom，SenseVoice 转写为 Mu，无法仅凭转写排除发音疑点。另有约12秒前置静音，保留本机待试听，尚未上传云端；不得重复生成已取得的文件。",
+      "transcripts": {
+        "whisper": "It is raining. I am at home with Mom. We read a book about a duck. Then we draw a duck together.",
+        "senseVoice": "It is raining. I am at home with Mu. We read a book about a duck. Then we draw a duck together."
+      }
+    }
+  ],
+  "summary": {
+    "totalPublicSegments": 3990,
+    "storedSegments": 28,
+    "storedBytes": 595088,
+    "reviewPending": 1,
+    "notGenerated": 3961,
+    "types": {
+      "word": 13,
+      "poetry": 4,
+      "sentence": 8,
+      "english-reading": 3
+    }
+  }
+}

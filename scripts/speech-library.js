@@ -22,6 +22,26 @@ function queue() {
   }
   return [...seen.values()];
 }
+// A downloaded but uncertain file stays in review, not in the generation queue.
+// Changed text/voice has a new key and is therefore eligible for a new recording.
+function pendingQueue(ledgers = []) {
+  const items = queue(), current = new Map(items.map(item => [item.key, item])), known = new Map();
+  for (const ledger of ledgers) {
+    assert.ok(Array.isArray(ledger.items), 'Invalid audio ledger');
+    for (const entry of ledger.items) {
+      assert.ok(['stored', 'review-pending'].includes(entry.status), 'Invalid audio ledger status');
+      assert.equal(entry.key, speechContentKey(entry.text, entry.voiceKey), 'Invalid ledger identity');
+      assert.equal(entry.textHash, speechHash(entry.text), 'Invalid ledger text hash');
+      const target = current.get(entry.key);
+      if (!target) continue;
+      assert.equal(entry.language, target.language);
+      if (known.get(entry.key) !== 'stored') known.set(entry.key, entry.status);
+    }
+  }
+  return { totalSegments: items.length, storedSegments: [...known.values()].filter(x => x === 'stored').length,
+    items: items.filter(item => !known.has(item.key)),
+    reviewPending: items.filter(item => known.get(item.key) === 'review-pending') };
+}
 function validateBatch(manifest, directory) {
   assert.match(manifest.id, /^[a-zA-Z0-9_-]{1,80}$/);
   assert.ok(Array.isArray(manifest.items) && manifest.items.length > 0, 'Empty audio batch');
@@ -46,13 +66,20 @@ function validateBatch(manifest, directory) {
   });
 }
 if (require.main === module) {
-  const [command, filename] = process.argv.slice(2);
+  const [command, filename, ...options] = process.argv.slice(2);
   if (command === 'queue' && filename) {
-    const items = queue(); fs.writeFileSync(filename, JSON.stringify({ version: 1, generatedAt: new Date().toISOString(), items }, null, 2));
-    console.log(JSON.stringify({ segments: items.length, characters: items.reduce((n,x)=>n+Array.from(x.text).length,0), output: filename }));
+    const ledgers = [];
+    for (let i = 0; i < options.length; i += 2) {
+      assert.ok(options[i] === '--exclude' && options[i+1], 'Expected --exclude ledger.json');
+      ledgers.push(JSON.parse(fs.readFileSync(options[i+1])));
+    }
+    const result = pendingQueue(ledgers);
+    fs.writeFileSync(filename, JSON.stringify({ version: 2, generatedAt: new Date().toISOString(), ...result }, null, 2));
+    console.log(JSON.stringify({ segments: result.items.length, stored: result.storedSegments,
+      reviewPending: result.reviewPending.length, characters: result.items.reduce((n,x)=>n+Array.from(x.text).length,0), output: filename }));
   } else if (command === 'validate' && filename) {
     const items = validateBatch(JSON.parse(fs.readFileSync(filename)), path.dirname(filename));
     console.log(JSON.stringify({ verified: items.length, bytes: items.reduce((n,x)=>n+x.bytes.length,0) }));
-  } else throw Error('Usage: node scripts/speech-library.js queue output.json | validate batch/manifest.json');
+  } else throw Error('Usage: node scripts/speech-library.js queue output.json [--exclude ledger.json] | validate batch/manifest.json');
 }
-module.exports = { queue, validateBatch };
+module.exports = { queue, pendingQueue, validateBatch };

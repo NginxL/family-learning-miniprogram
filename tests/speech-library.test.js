@@ -72,6 +72,20 @@ test('queue uses exact public narration chunks, deduplicated by text and voice; 
   const {queue}=require('../scripts/speech-library');const items=queue();assert.ok(items.length>3000);assert.equal(new Set(items.map(x=>x.key)).size,items.length);
   const hello=items.find(x=>x.text==='hello');assert.ok(hello.references.some(x=>x.contentId==='word-hello'));assert.equal(hello.key,speechContentKey('hello',libraryVoiceKey('en')));
 });
+test('generation queue skips stored audio and keeps uncertain downloads in a separate review queue',()=>{
+  const {queue,pendingQueue}=require('../scripts/speech-library');const all=queue(),[stored,uncertain]=all;
+  const result=pendingQueue([{items:[{...stored,status:'stored'},{...uncertain,status:'review-pending'}]}]);
+  assert.equal(result.items.length,all.length-2);assert.equal(result.storedSegments,1);
+  assert.deepEqual(result.reviewPending.map(x=>x.key),[uncertain.key]);
+  assert.equal(result.items.some(x=>x.key===stored.key||x.key===uncertain.key),false);
+});
+test('old text or voice ledgers do not hide a current recording, and forged hashes fail closed',()=>{
+  const {queue,pendingQueue}=require('../scripts/speech-library');const item=queue()[0];
+  const text=item.text+'old',voiceKey=item.voiceKey+'old';
+  const old={...item,text,voiceKey,textHash:hash(text),key:speechContentKey(text,voiceKey),status:'stored'};
+  assert.ok(pendingQueue([{items:[old]}]).items.some(x=>x.key===item.key));
+  assert.throws(()=>pendingQueue([{items:[{...item,status:'stored',textHash:'wrong'}]}]),/Invalid ledger text hash/);
+});
 test('batch validator rejects unreviewed, stale, non-catalogue and corrupt audio before uploading',t=>{
   const fs=require('node:fs'),os=require('node:os'),path=require('node:path');const {validateBatch}=require('../scripts/speech-library');
   const dir=fs.mkdtempSync(path.join(os.tmpdir(),'speech-library-'));t.after(()=>fs.rmSync(dir,{recursive:true,force:true}));fs.writeFileSync(path.join(dir,'hello.mp3'),audio);
