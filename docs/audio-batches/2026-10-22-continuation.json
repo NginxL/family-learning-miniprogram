@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "createdAt": "2026-10-23T04:51:34.200Z",
+  "createdAt": "2026-10-23T05:31:02.072Z",
   "provider": "Doubao Work built-in seed-audio",
   "funding": "existing membership quota only; no paid API or purchase",
   "applicationCommit": "98cbd3a",
@@ -163886,11 +163886,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-007",
+      "status": "stored",
+      "file": "064acd6f9954ea7283e25bd58477bfd3ce0349ee4bc3d51a1ca74276b66dac32.mp3",
+      "bytes": 54944,
+      "digest": "562f0a637334033648cfec95465c2740511358542bc4e816e6fd603d0e22a551",
+      "duration": 13.605,
+      "verifiedAt": 1792733114766,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "江南春杜牧，千里莺啼绿映红，水村山郭酒旗风。南朝48寺，多少楼台烟雨中。",
+        "whisper": "江南春,杜牧,千里英蹄绿应红,水村山锅九旗风,南朝四百八十四,多少楼台烟雨中。",
+        "qwen": "江南春，杜牧。千里莺啼绿映红，水村山郭酒旗风。南朝四百八十寺，多少楼台烟雨中。"
+      },
       "sourceGroup": "g4075",
-      "sourceGroupDigest": "c03307d15c57f93a36c551b833fefe5e8f783201f78ada362fbbc525e29ce6a3",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 0,
+      "clipEnd": 13.365,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "1a08c2ef874fb2f1bcf6b76b5561341ee6308ea86e25ef2f02fdf161b88dd64e",
@@ -163906,11 +163917,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-007",
+      "status": "stored",
+      "file": "1a08c2ef874fb2f1bcf6b76b5561341ee6308ea86e25ef2f02fdf161b88dd64e.mp3",
+      "bytes": 101168,
+      "digest": "85a5ca322014d846cc2c226a0aefc5f372efc3087abbadf461a41c90d2c95d46",
+      "duration": 25.155,
+      "verifiedAt": 1792733114769,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "西江月夜行黄沙道中，辛弃疾，明月别枝惊鹊，清风半夜鸣蝉。稻花香里说丰年，听取蛙声一片。七八个新天外两三点雨山前。旧时茅店社林边，路转溪桥忽见。",
+        "whisper": "西江月,夜行黄沙道中,新气急,明月别之金雀,清风半夜明禅,道花香里说风年,听曲蛙声一片,七八个星天外,两三点雨山前,旧时茅殿设林边,路转西桥呼见。",
+        "qwen": "西江月·夜行黄沙道中，辛弃疾。明月别枝惊鹊，清风半夜鸣蝉。稻花香里说丰年，听取蛙声一片。七八个星天外，两三点雨山前。旧时茅店社林边，路转溪桥忽见。"
+      },
       "sourceGroup": "g4075",
-      "sourceGroupDigest": "c03307d15c57f93a36c551b833fefe5e8f783201f78ada362fbbc525e29ce6a3",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 13.365,
+      "clipEnd": 38.28,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "dc2df4353d76ff9ee7896e700491f7a6749273410d2e6e1992291498bcad3617",
@@ -164086,11 +164108,21 @@
           "part": 3
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-007",
+      "status": "stored",
+      "file": "576cf98f0ffe08a2e34d19690ff883ee00f9d89d266df961d77816bbeb709916.mp3",
+      "bytes": 111536,
+      "digest": "7456952f932afa5b51bec47476e78ffb501c2b98b48a137197a51a4112becc33",
+      "duration": 27.74,
+      "verifiedAt": 1792731620927,
+      "review": "复用原始分组录音，按实际静音间隔切分。逐项核对汉典的本句对应音项：战/站 zhàn、裳/长 cháng（旧时裳本句）、帖/贴 tiē（帖花黄）、火/伙 huǒ，12/十二数词记法。只接受本组完整转写中的列明差异；替换后题名、作者及全文逐字一致，不按拼音近似批量放行，不改正文；非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "开我东阁门，坐我西阁床，脱我站时袍，著我旧时长。当窗理云鬓对镜贴花黄。出门看伙伴，火伴皆惊忙。同行12年，不知木兰是女郎。雄兔脚扑朔，雌兔眼迷离。双兔傍地走，安能辨我是雄雌。",
+        "whisper": "开我东阁门,坐我西阁床,拖我战时袍,助我旧时长,当窗里云病,对镜贴花黄,出门看伙伴,伙伴皆精忙,同行十二年,不知木兰是女郎,熊兔脚扑朔,雌兔眼迷离,双兔傍地走,安能遍我,是雄瓷。"
+      },
       "sourceGroup": "g4113",
-      "sourceGroupDigest": "8aca9b955ffcaeba49ae19121dd5a6fcd5e7d087a1b8c599b7e58bb030ab262a",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 0,
+      "clipEnd": 27.5,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "837d3d7a9f7fbfbf5971bb1b75ba52461a2f15d7cbbccf04556ca51b05e803f1",
@@ -164195,11 +164227,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-007",
+      "status": "stored",
+      "file": "a6b87e8f991fd6c2065c44d06a6086543c56ab1f5423883c35fb836f51e025e1.mp3",
+      "bytes": 85040,
+      "digest": "063e572794353d0210b1aed08b00f36d200bc67acbe17478cb62b416708eaedb",
+      "duration": 21.12,
+      "verifiedAt": 1792733114849,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "咏雪刘奕庆谢太傅寒雪日内急与儿女讲论文艺，俄尔雪骤公欣然曰，白雪纷纷何所似，兄子胡儿曰，撒盐空中差可拟兄女曰，未若柳絮因风起公大孝乐，即公大兄无奕女，左将军王凝之妻也。",
+        "whisper": "永雪 刘毅庆 谢太傅寒雪日内集 与儿女讲论文艺 阿尔雪咒 恭欣然曰 白雪纷纷何所似 兄子胡儿曰 洒言空中差可拟 兄女曰 未若柳絮英风起 恭大笑乐 即恭大兄吴义女 左将军王宁之妻也",
+        "qwen": "咏雪，刘义庆。谢太傅寒雪日内集，与儿女讲论文义。俄而雪骤，公欣然曰：“白雪纷纷何所似？”兄子胡儿曰：“撒盐空中差可拟。”兄女曰：“未若柳絮因风起。”公大笑乐。即公大兄无奕女，左将军王凝之妻也。"
+      },
       "sourceGroup": "g4118",
-      "sourceGroupDigest": "463d77e183ace99192bc6caf5dbb54de5b8bb46d6dba33207c69619ab698f1e4",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 0,
+      "clipEnd": 20.88,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "f5e76c4534313c8b7e83083af0fba5dba24cf86718899e6f313484b5f453ff05",
@@ -164375,11 +164418,22 @@
           "part": 1
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-007",
+      "status": "stored",
+      "file": "ebe366445db68a791f9672ceca6e665ffee579e0cb624c63829460e2b97b2ad2.mp3",
+      "bytes": 92672,
+      "digest": "66522c7ed3b43abbaff972a4a5669c0eafe6902d13dbfa63f289d13b8e9ba239",
+      "duration": 23.0069375,
+      "verifiedAt": 1792733328070,
+      "review": "复用原始分组录音，按实际静音间隔切分。本机 Qwen3-ASR 未提供正文或热词的独立转写，经汉典逐项核对：惟/唯 wéi。仅本组列明差异，替换后全文逐字一致，音频摘要绑定；不是按拼音相似度批量通过，不改正文，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "翁曰，以我濯游之之，乃取一葫芦置于地，以钱复其口许以表濯游利之，自钱恐入而前不失。因曰，我亦无他为首熟耳，康素笑而遣之。。",
+        "whisper": "翁曰,以我浊游之之,乃取一葫芦置于地,以钱负其口,许以表浊游立之,自浅孔入,而浅不失。阴曰,我亦无他,为首鼠尔,康素孝儿浅之。",
+        "qwen": "翁曰：“以我酌油知之。”乃取一葫芦置于地，以钱覆其口，徐以杓酌油沥之，自钱孔入，而钱不湿。因曰：“我亦无他，唯手熟尔。”康肃笑而遣之。"
+      },
       "sourceGroup": "g4126",
-      "sourceGroupDigest": "fe37b0b480e6f8668f12d11fa85567e305321b1912eb8af5bac033d1c8bceac0",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 0,
+      "clipEnd": 22.765,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "a2c29d5fd7c5b30176ad38a2157b4fb4f25ea5dbe0bf113e443514caa03eb3ed",
@@ -164453,11 +164507,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-007",
+      "status": "stored",
+      "file": "5c9b7a2f2566d7c7f61e6fb63e05eb6c719324e2d65187c707eb29eafd4b69f9.mp3",
+      "bytes": 104624,
+      "digest": "ed84bff1a396ef79dd126caee3af059c2bc0ce309d9b2e595d474e22eb487033",
+      "duration": 26.02,
+      "verifiedAt": 1792733328081,
+      "review": "复用原始分组录音，按实际静音间隔切分。本机 Qwen3-ASR 未提供正文或热词的独立转写，经汉典逐项核对：板/版 bǎn、已/以 yǐ、昇/生 shēng。仅本组列明差异，替换后全文逐字一致，音频摘要绑定；不是按拼音相似度批量通过，不改正文，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "火版沈括版印书籍唐人尚未胜为之，自逢银王使印五经以后典籍皆为版本，庆历中有布衣毕生，又为火板，其法用胶泥刻字，薄如前唇每字为一印，火烧令间，先设一铁板，其上以松枝蜡和指灰之类帽之。",
+        "whisper": "火版 审阔 版印书籍 唐人尚未甚为之 自逢银网始印五经 以后典籍皆为版本 庆历中有不一必生 又为火版 其法用焦尼克字 薄如前唇 美字为一印 火烧令尖 先设一铁板 其上以松枝 蜡和纸灰之类冒之",
+        "qwen": "活板，沈括。版印书籍，唐人尚未盛为之。自冯瀛王始印五经，以后典籍皆为版本。庆历中有布衣毕生，又为活板。其法用胶泥刻字，薄如钱唇，每字为一印。火烧令坚。先设一铁板，其上以松脂、蜡和纸灰之类冒之。"
+      },
       "sourceGroup": "g4128",
-      "sourceGroupDigest": "7ae557e016ae743ad74f689206eae78879bf902b81446d0a138fdce28ec94c75",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 0,
+      "clipEnd": 25.78,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "a68ce8d306dcb9d54190b2f81ddeb4a9a9714cab7cb61d886280d32b39bca860",
@@ -164473,11 +164538,22 @@
           "part": 1
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-007",
+      "status": "stored",
+      "file": "a68ce8d306dcb9d54190b2f81ddeb4a9a9714cab7cb61d886280d32b39bca860.mp3",
+      "bytes": 125504,
+      "digest": "74165757136e2a145254566a3b89ed16b45af3e1649d19101a2a0638940f7f67",
+      "duration": 31.24,
+      "verifiedAt": 1792733328085,
+      "review": "复用原始分组录音，按实际静音间隔切分。本机 Qwen3-ASR 未提供正文或热词的独立转写，经汉典逐项核对：板/版 bǎn、稍/烧 shāo、镕/融 róng、字/自 zì、止/只 zhǐ。仅本组列明差异，替换后全文逐字一致，音频摘要绑定；不是按拼音相似度批量通过，不改正文，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "欲印则以一铁饭至铁板上乃密布字印满铁饭为一板持旧火羊之要烧融，则以一平板按其面则字平如底，若纸印三二本未为简易，若印数十百千本则即为神速，常作二铁板一版印刷一版以字不字此印者材必则第二版以句更户用之，瞬息可就。",
+        "whisper": "御印,则以一铁饭至铁板上,乃密布字印,满铁饭为一板,持旧火扬之,要烧荣,则以一平板按其面,则字平如底,若只印三二本,未为简易,若印数十百千本,则即为神速,长作二铁板,一板印刷,一板以字布字,此印者才必,则第二板以具,更护用之,顺息管。可救",
+        "qwen": "欲印，则以一铁范置铁板上，乃密布字印，满铁范为一版。持就火炀之，药烧融，则以一平板按其面，则自平如砥。若只印三二本，未为简易；若印数十百千本，则极为神速。常作二铁板，一板印刷，一板已自布字。此印者才毕，则第二板已具，更互用之，瞬息可就。"
+      },
       "sourceGroup": "g4129",
-      "sourceGroupDigest": "2b6242c8278f2eebc9c8d2d07c3d5785f3dc8028cba7dfc04df7468bc844b967",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 0,
+      "clipEnd": 31,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "1d7f7839ef63cc9817bc30fb05da725bff4ecc27cf1bf05ae8a933a2ecc05c8c",
@@ -164553,11 +164629,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-007",
+      "status": "stored",
+      "file": "06f5bdbd100a85983a5727ac3733dd8369565d6f82f03e16a7e8c25b9ac1d95d.mp3",
+      "bytes": 103472,
+      "digest": "3018838e65acdf53ecedbdde3443fa2aa3dade97d74f44202ceca90774ca3915",
+      "duration": 25.74,
+      "verifiedAt": 1792733114877,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "观雎诗经关关雎鸠在河之洲。窈窕淑女，君子好逑，参差荇菜左右流之。窈窕淑女寤寐求之，求之不得寤寐思服，悠哉悠哉，辗转反侧，参差荇菜左右采之。窈窕淑女琴瑟友之。参差荇菜，左右之。窈窕淑女钟鼓乐之。",
+        "whisper": "官居诗经官官居鸠在河之舟窈窕淑女君子好求参词杏菜左右留之窈窕淑女恶媚求之求之不得恶媚私服悠哉悠哉辗转反侧参词杏菜左右采之窈窕淑女情色有之参词杏菜左右冒之窈窕淑女中古月之",
+        "qwen": "关雎，诗经。关关雎鸠，在河之洲。窈窕淑女，君子好逑。参差荇菜，左右流之。窈窕淑女，寤寐求之。求之不得，寤寐思服。悠哉悠哉，辗转反侧。参差荇菜，左右采之。窈窕淑女，琴瑟友之。参差荇菜，左右芼之。窈窕淑女，钟鼓乐之。"
+      },
       "sourceGroup": "g4152",
-      "sourceGroupDigest": "f44d71325b487f128911dc6ea9d7729408de6571634667e50e1ed174a1a58137",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 0,
+      "clipEnd": 25.5,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "efca434a43b09dc356546a3793c5617241c438b05f99339389e688ace2fd0cca",
@@ -164653,11 +164740,22 @@
           "part": 1
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-007",
+      "status": "stored",
+      "file": "509cc01aefdb29e2c1e5cfdd76819b509acb2a16a4b93cd706f9ed5387a70089.mp3",
+      "bytes": 101600,
+      "digest": "854f367b54677188215a8cb31bd67c47c41d3a0a62ef6805e7cde15038ddc740",
+      "duration": 25.24,
+      "verifiedAt": 1792733328106,
+      "review": "复用原始分组录音，按实际静音间隔切分。本机 Qwen3-ASR 未提供正文或热词的独立转写，经汉典逐项核对：布/不 bù。仅本组列明差异，替换后全文逐字一致，音频摘要绑定；不是按拼音相似度批量通过，不改正文，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "不衾多年冷似帖，娇儿饿卧，踏里裂，床头屋漏无干处，雨脚如麻未断绝，自今丧乱，少睡眠，长夜沾湿何由彻。安得广厦千万间，大庇天下寒士俱欢颜。风雨不动安如山呜呼，何时眼前突兀见此屋。吾庐独破受冻死亦足。",
+        "whisper": "不轻多年冷似铁,娇儿恶卧踏里裂,床头乌漏无干处,鱼角如麻未断绝,自今丧乱少睡眠,长夜沾湿何游彻,安得广煞千万间,大碧天下寒事巨欢言,风雨不动安如山,呜呼何时眼前突兀见此屋,无如独破受冻死一族。",
+        "qwen": "不衾多年冷似铁，娇儿恶卧踏里裂。床头屋漏无干处，雨脚如麻未断绝。自经丧乱少睡眠，长夜沾湿何由彻？安得广厦千万间，大庇天下寒士俱欢颜。风雨不动安如山。呜呼！何时眼前突兀见此屋？吾庐独破受冻死亦足。"
+      },
       "sourceGroup": "g4156",
-      "sourceGroupDigest": "b093d22eed12384512078010d4a1c30542e6c0b3423b6d8dc1217f2553c5217e",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 0,
+      "clipEnd": 25,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "d7a02d993c51f6da73d12cd9abc40d7135a03038a503444b777724d35e1c8539",
@@ -164673,11 +164771,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-007",
+      "status": "stored",
+      "file": "d7a02d993c51f6da73d12cd9abc40d7135a03038a503444b777724d35e1c8539.mp3",
+      "bytes": 135584,
+      "digest": "a1cb228fda4110eabf388ba2c328125e5c2634072dee827227f1f56cfb16574d",
+      "duration": 33.74,
+      "verifiedAt": 1792733328109,
+      "review": "复用原始分组录音，按实际静音间隔切分。本机 Qwen3-ASR 未提供正文或热词的独立转写，经汉典逐项核对：晓/小 xiǎo。仅本组列明差异，替换后全文逐字一致，音频摘要绑定；不是按拼音相似度批量通过，不改正文，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "卖炭翁白居易卖炭翁伐薪烧炭南山中，满面尘灰，烟火色，两鬓苍苍，十指黑。卖炭得钱何所迎，身上衣裳口中时，可怜身上衣正单，心忧炭剑怨天寒。夜来城外一尺雪，小驾炭车展冰辙。犹困人饥日已高。市南门外泥中歇。偏翩两骑来是谁。",
+        "whisper": "麦探翁,白居翼,麦探翁,乏心烧探南山中,满面成灰烟火色,两鬓苍苍食指黑,麦探得钱何所赢,身上衣裳口中食,可怜身上衣正丹,心忧探见怨天寒,夜来城外一池雪,小架探车斩冰折,牛困人机日已高,是南门外泥中歇翩翩两齐来是谁",
+        "qwen": "卖炭翁，白居易。卖炭翁，伐薪烧炭南山中。满面尘灰烟火色，两鬓苍苍十指黑。卖炭得钱何所营？身上衣裳口中食。可怜身上衣正单，心忧炭贱愿天寒。夜来城外一尺雪，小驾炭车辗冰辙。牛困人饥日已高，市南门外泥中歇。翩翩两骑来是谁？"
+      },
       "sourceGroup": "g4157",
-      "sourceGroupDigest": "cb7dadffd1c0d067f4871589c81062bf604f3925e1195a9a2ff84a50c68d9767",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 0,
+      "clipEnd": 33.5,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "3792b864d5419b162a824785b948e148e2463091f15f238a71ceaab415432982",
@@ -164903,11 +165012,22 @@
           "part": 3
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-007",
+      "status": "stored",
+      "file": "16ed1a38d620d576fe8f6a61bd8133fcf1feebbdc5749c441d0a3f8fb349b7dc.mp3",
+      "bytes": 58688,
+      "digest": "6fda9afc366faabf8cd4348ba07c1d9ee4706589c6305a2cd3394cea62e7d651",
+      "duration": 14.54,
+      "verifiedAt": 1792733328131,
+      "review": "复用原始分组录音，按实际静音间隔切分。本机 Qwen3-ASR 未提供正文或热词的独立转写，经汉典逐项核对：规/归 guī。仅本组列明差异，替换后全文逐字一致，音频摘要绑定；不是按拼音相似度批量通过，不改正文，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "及郡下诣太守说如此，太守即遣人随其往，寻象所至，遂迷不复得路。南阳刘子骥尚士也，闻之欣然归往，未国寻病终后遂无问津者。",
+        "whisper": "吉郡夏义太守,说如此,太守记遣人随其往,寻相所至,遂迷不复得路,南洋刘子记高尚事也,闻之欣然归往,为国寻并中,后遂无问经者。",
+        "qwen": "及郡下，诣太守，说如此。太守即遣人随其往，寻向所志，遂迷，不复得路。南阳刘子骥，高尚士也，闻之，欣然归往。未果，寻病终。后遂无问津者。"
+      },
       "sourceGroup": "g4167",
-      "sourceGroupDigest": "526410acbd3f00b7835aed376b1297c04493085ff0c872446dfac5c55e35653c",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 0,
+      "clipEnd": 14.3,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "bb570e4374602d958a1b05cc4da5c9452d89f522baf34781635279a340b2817c",
@@ -164953,11 +165073,22 @@
           "part": 1
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-007",
+      "status": "stored",
+      "file": "df53b0b192055a0b4e4523c1a282a39a8625368b817cf60706a17d523097535c.mp3",
+      "bytes": 84608,
+      "digest": "d5113e4c37833dbe369318e10550bc94ce9a1cff8c53438a8a061fa99f2ec124",
+      "duration": 21.02,
+      "verifiedAt": 1792733328143,
+      "review": "复用原始分组录音，按实际静音间隔切分。本机 Qwen3-ASR 未提供正文或热词的独立转写，经汉典逐项核对：巘/𪩘 yǎn（同一字的繁简字形）。仅本组列明差异，替换后全文逐字一致，音频摘要绑定；不是按拼音相似度批量通过，不改正文，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "绝眼多生怪柏，悬泉瀑布，飞树其间，青容峻茂良多趣味，每至晴初霜旦，临寒渐素，常有高原长啸，孰影凄意，空谷传响，哀转九绝，故渔者歌曰，巴东三峡巫峡长。猿冥三生泪沾伤。",
+        "whisper": "绝眼多生怪百,玄泉瀑布,飞树其间,轻荣俊茂,良多趣味,美智晴出双淡,凌寒见素,常有高原长孝,鼠影七亿,空谷传响,哀转久绝,故语者歌曰,八东三峡乌峡长,原名三生,泪沾伤。",
+        "qwen": "绝𪩘多生怪柏，悬泉瀑布，飞漱其间，清荣峻茂，良多趣味。每至晴初霜旦，林寒涧肃，常有高猿长啸，属引凄异，空谷传响，哀转久绝。故渔者歌曰：“巴东三峡巫峡长，猿鸣三声泪沾裳。”"
+      },
       "sourceGroup": "g4169",
-      "sourceGroupDigest": "6d542224dfafc891b59ba3a88d3593bcf097bed1abc2864854f491033c5b40ce",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 0,
+      "clipEnd": 20.78,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "65db1fc8a1aea78978c4516cb0162e285aff3d064b311efb45b7ddd502093683",
@@ -165113,11 +165244,22 @@
           "part": 1
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-007",
+      "status": "stored",
+      "file": "8a57d06682adf3818ffa9da32d7b3d701761a99f8e23822da1120a824dbc3131.mp3",
+      "bytes": 97568,
+      "digest": "29b6b2fe941e27a2f25f8ec274862366bc4a053e6dd1f970ce26df23754d3b30",
+      "duration": 24.24,
+      "verifiedAt": 1792733114926,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "泉水击石，泠铃作响，好鸟相鸣，嘤嘤成韵，蝉则千转不穷，原则百啭无绝。鸢飞历天者望风兮心，经纶事物者窥谷忘返横轲上臂，载昼游昏书条交印，有时见日。",
+        "whisper": "泉水积时,凌凌作响,好鸟相鸣,音音成韵,缠则千转不穷,原则百教无绝,冤非利天者,望风吸星,经伦事物者,窥骨望返,横刻上臂,在昼游昏,书条交印,有时见日。",
+        "qwen": "泉水激石，泠泠作响；好鸟相鸣，嘤嘤成韵。蝉则千转不穷，猿则百叫无绝。鸢飞戾天者，望峰息心；经纶世务者，窥谷忘反。横柯上蔽，在昼犹昏；疏条交映，有时见日。"
+      },
       "sourceGroup": "g4177",
-      "sourceGroupDigest": "7640d40527a8c649a925437477ce04cfec6cfa1e80c220dacbc0bb3b4a580047",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 0,
+      "clipEnd": 24,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "1c8c5ff8c220fb2cba49bca48b99f760de626f38475a864deff3fac3c9ddca01",
@@ -165133,11 +165275,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-007",
+      "status": "stored",
+      "file": "1c8c5ff8c220fb2cba49bca48b99f760de626f38475a864deff3fac3c9ddca01.mp3",
+      "bytes": 62720,
+      "digest": "c37ab8c74d53fa6eb3e45fd4ee11af566cf921be4af0f2be97e6f90cec5cd742",
+      "duration": 15.54,
+      "verifiedAt": 1792733114928,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "渡荆门送别，李白渡远荆门外来从楚国游，山随平野尽，将入大荒流。月下飞天尽，云生接海楼，仍怜故乡水万里送行舟。",
+        "whisper": "渡金门送别礼白渡远金门外来从楚国游山随平野境将入大荒流月下飞天境云生结海楼仍连故乡水万里送行舟",
+        "qwen": "渡荆门送别，李白。渡远荆门外，来从楚国游。山随平野尽，江入大荒流。月下飞天镜，云生结海楼。仍怜故乡水，万里送行舟。"
+      },
       "sourceGroup": "g4178",
-      "sourceGroupDigest": "afa7118283c9cc8e7c1c9934b57829b29b6c76a2ce2fa31838f9a53392729e97",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 0,
+      "clipEnd": 15.3,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "e95304411546b6f0d14ff0203d2f8f4afee54da0c6f3a8cccb85fdb6045532ec",
@@ -165283,11 +165436,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-007",
+      "status": "stored",
+      "file": "e87641c73c9c1011543cd3e0a267e6c28b2d1459855317c9abb5faa74681d28f.mp3",
+      "bytes": 141488,
+      "digest": "44f2da55b4f34a3c5f13a53e409a29f59f6744e99741a083f0bb653d081ad9b0",
+      "duration": 35.24,
+      "verifiedAt": 1792733328182,
+      "review": "复用原始分组录音，按实际静音间隔切分。本机 Qwen3-ASR 未提供正文或热词的独立转写，经汉典逐项核对：曾/增 zēng（本句增加义，字典明确曾同增）。仅本组列明差异，替换后全文逐字一致，音频摘要绑定；不是按拼音相似度批量通过，不改正文，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "生于忧患，死于安乐孟子舜发于畎母之中，父乐举于板柱之间，交各举于于言之中，管以吾举于世。孙叔敖举于海。百里兮举于事，故天将降大任于世人也，必先苦其心志，劳其筋骨，恶其体夫空乏其身，行拂乱其所为，所以动心忍性，增益其所不能。",
+        "whisper": "生于忧患,死于安乐,孟子,顺发于全母之中,复月举于板柱之间,交个举于颜之中,管一吴举于世,孙书敖举于海,百里希举于世,故天将将大任于世人也,必先苦其心智,劳其筋骨,恶其体肤,空伐其身,幸福乱其所为所以动心忍性增益其所不能",
+        "qwen": "生于忧患，死于安乐。孟子。舜发于畎亩之中，傅说举于版筑之间，胶鬲举于鱼盐之中，管夷吾举于士，孙叔敖举于海，百里奚举于市。故天将降大任于是人也，必先苦其心志，劳其筋骨，饿其体肤，空乏其身，行拂乱其所为，所以动心忍性，增益其所不能。"
+      },
       "sourceGroup": "g4184",
-      "sourceGroupDigest": "73c8e1ecdd59cafb6f7f1b4587c3fc950be9d6c5b6d9fcd9ed42739285c6b5e3",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 0,
+      "clipEnd": 35,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "b225c3d13b6a5250dfa709086a0268e8f053ad703e38c755e6040f03ed83e5f6",
@@ -165304,9 +165468,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0166",
-      "sourceGroupDigest": "b47a42c972c14abd526d66251926b35235ba076cb2a56adc792bc30177db08b7",
+      "batchId": "groups-007",
+      "sourceGroup": "g4185",
+      "sourceGroupDigest": "9115d8d036d3dc15a24eed89601a70233a93fa35bcc6ffc26695d8dba4f3f9bb",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -165323,11 +165487,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0167",
-      "sourceGroupDigest": "d4b2c27de641f077aea966cf81b4b747cc0f58bfd6a1dbe49ae5af1bf7481125",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "6bfeefe3d49a20696b469185698df144e2d15f5cc5391b8dc431496640d0e672.mp3",
+      "bytes": 117584,
+      "digest": "4ae25e4f50b02f9e25849dcb6b19d2866a2a0f672145644f7fd74a312c0e550e",
+      "duration": 29.24,
+      "verifiedAt": 1792731578216,
+      "review": "复用原始分组录音，按实际静音间隔切分。逐项核对汉典的本句对应音项：九/久 jiǔ、惩/乘 chéng、塞/色 sè、迂/淤 yū、聚/具 jù、室/世 shì、毕/必 bì、力/利 lì、指/只 zhǐ、豫/郁 yù、达/答 dá。只接受本组完整转写中的列明差异；替换后题名、作者及全文逐字一致，不按拼音近似批量放行，不改正文；非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "愚公移山列子太行王屋二山方七百里高万仞，本在冀州之南，河阳之北北山愚公者年且久十面山而居，乘山北之色，出入之淤也，具世而谋曰，吾与汝必利平险，只通郁南答于汉阴可乎杂然相许。",
+        "whisper": "鱼宫一山列子太行王乌二山方七百里高万刃本在冀州之南河阳之北北山鱼宫者年且九十面山而居成山北之色初入之淤也拒世而谋曰无与辱必立平显只通欲南达于汉阴可忽杂然相许"
+      },
+      "sourceGroup": "g4186",
+      "clipStart": 0,
+      "clipEnd": 29,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "766c183af2034b04d3c6f098e5641464391a628f4f7c902e50c455ab61e737c4",
@@ -165344,9 +165518,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0167",
-      "sourceGroupDigest": "d4b2c27de641f077aea966cf81b4b747cc0f58bfd6a1dbe49ae5af1bf7481125",
+      "batchId": "groups-007",
+      "sourceGroup": "g4187",
+      "sourceGroupDigest": "9fb44fa3700c09fae15366744a2c4b8670ba8a35106bdf8dfa8dcf3473c3c26d",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -165364,9 +165538,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0168",
-      "sourceGroupDigest": "99ce13e6907f82c65961b6d43f33c5923267d351f5adf79ee7a8adc29b738486",
+      "batchId": "groups-007",
+      "sourceGroup": "g4188",
+      "sourceGroupDigest": "1c35f914c5801d1551f398db69847d121e3c8476cb8cd9528d1eb9bda1e50013",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -165384,9 +165558,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0168",
-      "sourceGroupDigest": "99ce13e6907f82c65961b6d43f33c5923267d351f5adf79ee7a8adc29b738486",
+      "batchId": "groups-007",
+      "sourceGroup": "g4189",
+      "sourceGroupDigest": "e0f1c0363b1ca03c1e74fde5ef940a7b71f33e78c40c934d2d4e496ab3179a6a",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -165404,9 +165578,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0169",
-      "sourceGroupDigest": "d6c1930fdae3eee0ea4781829c67e22fb9fb1d4a27d9ae8f31591ef523cfdc65",
+      "batchId": "groups-007",
+      "sourceGroup": "g4190",
+      "sourceGroupDigest": "fc4ae9686a9be61b550a72c6044ff3c317c5803c3b2b90f0420504f86eb847e3",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -165424,9 +165598,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0169",
-      "sourceGroupDigest": "d6c1930fdae3eee0ea4781829c67e22fb9fb1d4a27d9ae8f31591ef523cfdc65",
+      "batchId": "groups-007",
+      "sourceGroup": "g4191",
+      "sourceGroupDigest": "c2c418c53ac9a7d50b65c35c026d3c447affabfaab702143293cc91df5a0603a",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -165444,9 +165618,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0170",
-      "sourceGroupDigest": "bd997561e775fc95dac25360073a6916a3d9a5ed42c2c6a823736b0eaceaf0e9",
+      "batchId": "groups-007",
+      "sourceGroup": "g4192",
+      "sourceGroupDigest": "5d1a21c080c9d63399c8bcaf1275c71728be14fc14d837a09ea92dc6190a946e",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -165463,11 +165637,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0170",
-      "sourceGroupDigest": "bd997561e775fc95dac25360073a6916a3d9a5ed42c2c6a823736b0eaceaf0e9",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "757dcefb90e6de1a2b858bfce01cdd77f557ff3509bcde3b3702ee3e25ac4f51.mp3",
+      "bytes": 95552,
+      "digest": "11e2559d909ac1eddb17d5ac44ef834c5eee7b54dc7a569e6cd1e7fad1e0f878",
+      "duration": 23.74,
+      "verifiedAt": 1792732290013,
+      "review": "复用原始分组录音，按实际静音间隔切分。逐项核对汉典的本句对应音项：滑/华 huá、移/疑 yí、禽/琴 qín。只接受本组完整转写中的列明差异；替换后题名、作者及全文逐字一致，不按拼音近似批量放行，不改正文；非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "采桑子轻舟短棹西湖好，欧阳修。轻舟短棹西湖好，绿水逶迤，芳草长堤，隐隐笙歌处处随。无风水面琉璃华，不觉船疑，微动涟漪。惊起沙琴掠岸飞。",
+        "whisper": "采桑子,青州短照西湖好,欧阳修,青州短照西湖好,绿水微移,芳草长堤,隐隐声歌处处随,无风水面流离滑,不觉传疑,微动涟漪,惊起沙琴,略暗飞。"
+      },
+      "sourceGroup": "g4193",
+      "clipStart": 0,
+      "clipEnd": 23.5,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "61b1d014c27cd2581fe02f71c80bc2dd65dcf50eed4f929a9cc73d815ff0e1b6",
@@ -165483,11 +165667,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0170",
-      "sourceGroupDigest": "bd997561e775fc95dac25360073a6916a3d9a5ed42c2c6a823736b0eaceaf0e9",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "61b1d014c27cd2581fe02f71c80bc2dd65dcf50eed4f929a9cc73d815ff0e1b6.mp3",
+      "bytes": 85472,
+      "digest": "4ade3ff0c3bc1c430f986167a333755d7f437d112f134ca13c81b01dc15b52a3",
+      "duration": 21.24,
+      "verifiedAt": 1792732290015,
+      "review": "复用原始分组录音，按实际静音间隔切分。逐项核对汉典的本句对应音项：儒/如 rú、倚/以 yǐ、原/元 yuán、缨/英 yīng、试/是 shì、倩/欠 qiàn；本条采用完整 Whisper 转写，不把 SenseVoice 的“遣 qiǎn”当作 qiàn。只接受本组完整转写中的列明差异；替换后题名、作者及全文逐字一致，不按拼音近似批量放行，不改正文；非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "相见欢金陵城上西楼朱敦儒金陵城上西楼倚清秋，万里夕阳垂地大江流。中元乱簪英散几时收，是遣悲风吹泪过扬州。",
+        "whisper": "相见欢,金陵城上西楼,朱敦如,金陵城上西楼,以清秋,万里夕阳垂地,大江流,中元乱,簪英散,几时收,是欠悲风吹泪,过扬州。"
+      },
+      "sourceGroup": "g4194",
+      "clipStart": 0,
+      "clipEnd": 21,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "047d621118caae6fa8d4b5758389615de361c375dfbdcd2828ad0f928f5eb759",
@@ -165504,9 +165698,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0171",
-      "sourceGroupDigest": "a02e656453b868ca945b729673feba2da8d2f4c0fdcc0a2aef939f1b863a4651",
+      "batchId": "groups-007",
+      "sourceGroup": "g4195",
+      "sourceGroupDigest": "fe6f030e2edf5dea56b3dd32754bbc642baa9f08ded017c213b4171dee52bcea",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -165544,9 +165738,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0172",
-      "sourceGroupDigest": "0765139cb84ee8a325e57e2cf6bb82261c1c29ffe9448eca2c8bd3a8e3f03ceb",
+      "batchId": "groups-007",
+      "sourceGroup": "g4197",
+      "sourceGroupDigest": "b5fff9dcf77426bee57c45f00e5490d99f42d3cde70f32a0ab4d85cf16adb3e3",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -165564,9 +165758,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0172",
-      "sourceGroupDigest": "0765139cb84ee8a325e57e2cf6bb82261c1c29ffe9448eca2c8bd3a8e3f03ceb",
+      "batchId": "groups-007",
+      "sourceGroup": "g4198",
+      "sourceGroupDigest": "94b573f4b28de8e86461bbf83abebb2b10a25aad7e6800003fd3b3d709f2eb03",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -165584,9 +165778,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0173",
-      "sourceGroupDigest": "488255379982b245675906c9f87d82e79c58ba0438ae9b3aebbcc6722916104a",
+      "batchId": "groups-007",
+      "sourceGroup": "g4199",
+      "sourceGroupDigest": "d4000fbb3b0141def896452b2003ecb60941925fa37da3b8b2d22c0bd1bc4c98",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -165604,9 +165798,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0173",
-      "sourceGroupDigest": "488255379982b245675906c9f87d82e79c58ba0438ae9b3aebbcc6722916104a",
+      "batchId": "groups-007",
+      "sourceGroup": "g4200",
+      "sourceGroupDigest": "2616782e6b2071d19283024752ba7c2a8396d2f3cfaf6f6426c9ca2bafdd78e1",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -165623,11 +165817,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0173",
-      "sourceGroupDigest": "488255379982b245675906c9f87d82e79c58ba0438ae9b3aebbcc6722916104a",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "b13fdd4fa8eebae64447972ea5c2cd572c1328268a617b6119d2e2f31e423881.mp3",
+      "bytes": 57968,
+      "digest": "0bf8403724251df1347a67b064f9d85962dc839ea36248da0f3fb27405a58fef",
+      "duration": 14.34,
+      "verifiedAt": 1792733114975,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "是威诗经士威是威胡不归，微君之故胡为乎中路。是威是威胡不归。微君之功胡为乎泥中。",
+        "whisper": "是微诗经,是微是微,胡不归,微君之故,胡为胡中路,是微是微,胡不归,微君之功,胡为胡泥中。",
+        "qwen": "式微，诗经。式微，式微，胡不归？微君之故，胡为乎中露？式微，式微，胡不归？微君之躬，胡为乎泥中？"
+      },
+      "sourceGroup": "g4201",
+      "clipStart": 0,
+      "clipEnd": 14.1,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "161a33544e879158059d56cc72dd8ad73cc76c15c1222665f3f0b6e4987e9608",
@@ -165644,9 +165849,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0174",
-      "sourceGroupDigest": "acfd9c58a2054d566a5d84cb2a781ba8dac0d8e45432213e1c4b353b4a58eacd",
+      "batchId": "groups-007",
+      "sourceGroup": "g4202",
+      "sourceGroupDigest": "1764f5439c628940723ac705df6a5df275af1379f274cde9f0048d22eaa039da",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -165663,11 +165868,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0174",
-      "sourceGroupDigest": "acfd9c58a2054d566a5d84cb2a781ba8dac0d8e45432213e1c4b353b4a58eacd",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "44e51efe576e67ce6345dcaa16ecb971af713d980c7955ffba7e24bf4a3197f6.mp3",
+      "bytes": 73520,
+      "digest": "dd4331381626d963e6b5d7aeb50a5565900ccace9c52d0de0155ff2268e4cf22",
+      "duration": 18.24,
+      "verifiedAt": 1792733114977,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "望洞庭湖上张丞相孟浩然8月湖水平，寒须混太清，气征云梦泽波汉岳阳城。欲计无州籍，端居此圣名，坐官垂钓者，徒有现余情。",
+        "whisper": "望洞庭湖上张丞相 孟浩然八月湖水平 含须混泰清弃征云孟泽 波汉岳阳城欲记吴州吉 端居齿盛名做官垂吊者 徒有献于情",
+        "qwen": "望洞庭湖上张丞相，孟浩然。八月湖水平，涵虚混太清。气蒸云梦泽，波撼岳阳城。欲济无舟楫，端居耻圣明。坐观垂钓者，徒有羡鱼情。"
+      },
+      "sourceGroup": "g4203",
+      "clipStart": 0,
+      "clipEnd": 18,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "f57a30afc915f4e837806a113f2d76e334588b43b574bac5f9883b3050996b19",
@@ -165683,11 +165899,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0174",
-      "sourceGroupDigest": "acfd9c58a2054d566a5d84cb2a781ba8dac0d8e45432213e1c4b353b4a58eacd",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "f57a30afc915f4e837806a113f2d76e334588b43b574bac5f9883b3050996b19.mp3",
+      "bytes": 137600,
+      "digest": "866f521f72c012ae2c8dc6d6ba739e9473cb133c19c7b8f1401d2665cbf5054b",
+      "duration": 34.24,
+      "verifiedAt": 1792733328217,
+      "review": "复用原始分组录音，按实际静音间隔切分。本机 Qwen3-ASR 未提供正文或热词的独立转写，经汉典逐项核对：鲦/条 tiáo、固/故 gù。仅本组列明差异，替换后全文逐字一致，音频摘要绑定；不是按拼音相似度批量通过，不改正文，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "庄子与惠子游于濠梁之上，庄子庄子与惠子游于濠梁之上。庄子曰，调鱼出游从容是鱼之乐也。惠子曰，子非鱼安之鱼之乐。庄子曰，子非我安之我不知鱼之乐惠子曰，我非子故不知子矣，子故非鱼也。子之不知鱼之乐权矣。",
+        "whisper": "庄子与惠子,由于豪梁之上,庄子,庄子与惠子,由于豪梁之上,庄子曰,调于出游从容,是鱼之乐也,惠子曰,子妃于,安之鱼之乐,庄子曰,子妃我,安之我不知鱼之乐,惠子曰我非子故不知子矣子故非鱼也子之不知鱼之乐全矣",
+        "qwen": "庄子与惠子游于濠梁之上。庄子庄子与惠子游于濠梁之上。庄子曰：“条鱼出游从容，是鱼之乐也。”惠子曰：“子非鱼，安知鱼之乐？”庄子曰：“子非我，安知我不知鱼之乐？”惠子曰：“我非子，故不知子矣。子固非鱼也，子之不知鱼之乐，全矣。”"
+      },
+      "sourceGroup": "g4204",
+      "clipStart": 0,
+      "clipEnd": 34,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "91ecdfdd131fe2fc0aff344fc58d6cef0268390df0657385b168c4860cc614b3",
@@ -165703,11 +165930,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0175",
-      "sourceGroupDigest": "63ee1e34fdce03fbbcb48ed837a25b8ddef2041b32d747cebcdc16c3e06e6ad7",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "91ecdfdd131fe2fc0aff344fc58d6cef0268390df0657385b168c4860cc614b3.mp3",
+      "bytes": 137600,
+      "digest": "fda9a7d3855061c35f06f88c8b0ba2c3147507200868d8e3cc63f9936385e1b1",
+      "duration": 34.24,
+      "verifiedAt": 1792733328221,
+      "review": "复用原始分组录音，按实际静音间隔切分。本机 Qwen3-ASR 未提供正文或热词的独立转写，经汉典逐项核对：货/或 huò、力/利 lì。仅本组列明差异，替换后全文逐字一致，音频摘要绑定；不是按拼音相似度批量通过，不改正文，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "大道之行也，礼记大道之行也，天下为公，选贤与能，讲信修睦，故人不独亲其亲，不独子其子，使老有所终，壮有所用，幼有所长，今寡孤独废己者皆有所养，男有份女有归或恶其弃于地也，不必藏于己利恶其不出于身也，不必为己。",
+        "whisper": "大道之行也礼祭大道之行也天下为功选贤与能讲信修目故人不读亲其亲不读子其子使劳有所忠状有所用幼有所长精寡孤立,恶奇不出于深野,不必为己。",
+        "qwen": "大道之行也，《礼记》。大道之行也，天下为公，选贤与能，讲信修睦。故人不独亲其亲，不独子其子，使老有所终，壮有所用，幼有所长，矜、寡、孤、独、废疾者皆有所养。男有分，女有归。或恶其弃于地也，不必藏于己；利恶其不出于身也，不必为己。"
+      },
+      "sourceGroup": "g4205",
+      "clipStart": 0,
+      "clipEnd": 34,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "a324a4b9e95c0802eb4d38bd3106cceb4977f341122fa484c2d34641eeb868c2",
@@ -165723,11 +165961,22 @@
           "part": 1
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0175",
-      "sourceGroupDigest": "63ee1e34fdce03fbbcb48ed837a25b8ddef2041b32d747cebcdc16c3e06e6ad7",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "a324a4b9e95c0802eb4d38bd3106cceb4977f341122fa484c2d34641eeb868c2.mp3",
+      "bytes": 31472,
+      "digest": "e501c6798e80837cfcec43442359cf626e5c12a18c5488447a8a7b7e2b244523",
+      "duration": 7.74,
+      "verifiedAt": 1792733114979,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "是故谋弊而不兴，盗窃乱贼而不作，故外户而不弊，是谓大同。",
+        "whisper": "是故谋弊而不兴,盗窃乱贼而不作,故外户而不弊,是为大同。",
+        "qwen": "是故谋闭而不兴，盗窃乱贼而不作，故外户而不闭，是谓大同。"
+      },
+      "sourceGroup": "g4206",
+      "clipStart": 0,
+      "clipEnd": 7.5,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "5b3801603ca07fa746a823b7051fd702bbb378acb6f30e519363bea5d35ec7b0",
@@ -165744,9 +165993,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0176",
-      "sourceGroupDigest": "b2115d34465020200aba47515c4db8ba7faa342c92d3f3fc248f27dbed5b74b2",
+      "batchId": "groups-007",
+      "sourceGroup": "g4207",
+      "sourceGroupDigest": "c1115f308b0aecd246e68093d02384aa95cea821a6259a6b8418b33ae2bc93f7",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -165764,9 +166013,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0176",
-      "sourceGroupDigest": "b2115d34465020200aba47515c4db8ba7faa342c92d3f3fc248f27dbed5b74b2",
+      "batchId": "groups-007",
+      "sourceGroup": "g4208",
+      "sourceGroupDigest": "2a7244124eaa574513130d21d9bdc819e198357c6a05756be224763c82ff5c65",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -165783,11 +166032,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0176",
-      "sourceGroupDigest": "b2115d34465020200aba47515c4db8ba7faa342c92d3f3fc248f27dbed5b74b2",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "7317551a088a834759b32e165241d03f7349fc1dc78e1c234cd6e3d073c47b05.mp3",
+      "bytes": 86480,
+      "digest": "a3dbe02a4928625aa9457351fd764f5eb80ac19f8291fcfcdee94b533fec832f",
+      "duration": 21.47,
+      "verifiedAt": 1792733114982,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "题破山寺后禅院常见清晨入古寺，出日照高龄，竹径通幽处，禅房花木深。山光月鸟信，潭影空人心。万籁此都记，但余中磬音。",
+        "whisper": "提破山寺后禅院常见清晨入古寺初日照高陵逐境通幽处禅房花木深山光月鸟性谈隐空人心万籁此都记但于中庆英",
+        "qwen": "题破山寺后禅院，常建。清晨入古寺，初日照高林。竹径通幽处，禅房花木深。山光悦鸟性，潭影空人心。万籁此都寂，但余钟磬音。"
+      },
+      "sourceGroup": "g4208",
+      "clipStart": 16.35,
+      "clipEnd": 37.58,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "331643f069ed30151eee4c0608209fb5ddda65adadbab5061b7c80905a52d33c",
@@ -165804,9 +166064,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0177",
-      "sourceGroupDigest": "ed6199ede72b35a5678f431d5c7a95475a8a2b1f6eb2bbd163b74dd32b5a9cd5",
+      "batchId": "groups-007",
+      "sourceGroup": "g4209",
+      "sourceGroupDigest": "2024286762df7378141ac4576daf32db5220655591ed3e9a9c8b098cf7a9c934",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -165823,11 +166083,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0177",
-      "sourceGroupDigest": "ed6199ede72b35a5678f431d5c7a95475a8a2b1f6eb2bbd163b74dd32b5a9cd5",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "c71426991625133e11bc4812901895aa19167e461916edbd1d135d203569bb4c.mp3",
+      "bytes": 73520,
+      "digest": "82fbfbc9da1518d79da840e23b31b90f4ab014c4034112065f160eb43c910581",
+      "duration": 18.24,
+      "verifiedAt": 1792733282727,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "卜算子黄州定会院寓居坐苏轼缺月挂疏桐，漏断人初镜，谁见幽人独往来，缥渺孤鸿影。惊起却回头有恨无人审，剪尽寒枝不肯栖，寂寞沙洲冷。",
+        "whisper": "补算子,黄州定会院玉居座,苏氏,缺月挂书铜,漏断人出镜,谁见幽人独往来,飘渺孤红颖,惊起却回头,有恨无人省,简尽寒之不肯期,寂寞杀周冷。",
+        "qwen": "卜算子·黄州定慧院寓居作，苏轼。缺月挂疏桐，漏断人初静。谁见幽人独往来？缥缈孤鸿影。惊起却回头，有恨无人省。拣尽寒枝不肯栖，寂寞沙洲冷。"
+      },
+      "sourceGroup": "g4210",
+      "clipStart": 0,
+      "clipEnd": 18,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "e1907e2b9fb4426df6003f2f6ae2bcc273154d2376540321729be45c08e02bd7",
@@ -165844,9 +166115,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0200",
-      "sourceGroupDigest": "d628e9e97d3dff3f75522bafe1fb9c7f078b7aa9d1630ef244ae030c304a2383",
+      "batchId": "groups-007",
+      "sourceGroup": "g4238",
+      "sourceGroupDigest": "d73e25c5892af4cf072a874cb654545243c57cb2a7fb482808860143d88c5440",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -165864,9 +166135,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0200",
-      "sourceGroupDigest": "d628e9e97d3dff3f75522bafe1fb9c7f078b7aa9d1630ef244ae030c304a2383",
+      "batchId": "groups-007",
+      "sourceGroup": "g4239",
+      "sourceGroupDigest": "749feb8ef75e332092a0fac1d5a8de748ec448d8ce1c961d0cb8477bfe930d68",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -165883,11 +166154,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0201",
-      "sourceGroupDigest": "bae9dcc34d3ff88041e6b7c89fece17250b16bef8e324f76fc6339334d3490e9",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "bd25c3e150b6950d78e90b124981ca4e258559850bc95c8e4dc6466538aad275.mp3",
+      "bytes": 129536,
+      "digest": "a6e78a66a159199201256e78c75ccd8921afbc75bd6929eab7c06991e23527c9",
+      "duration": 32.24,
+      "verifiedAt": 1792733282731,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "白雪歌送武判官归京岑参北风卷地百草折，胡天8月即飞雪，忽如一夜春风来，千树万树梨花开，散入珠帘湿罗幕，狐裘不暖锦衾薄，将军脚弓不得控，都护铁衣冷难着。瀚海阑干百丈冰，愁云惨淡万里凝。中君至酒饮归客，胡琴琵琶与羌笛。",
+        "whisper": "白雪歌送五判官归京曾深北风卷地百草折胡天八月即飞雪忽如一夜春风来千树万树梨花开散入株莲诗罗目胡求不暖锦轻薄将军搅功不得控都护铁衣冷难拙汉海栏杆百丈兵仇云惨淡万里宁中军至久隐归客胡琴琵琶与枪笛",
+        "qwen": "《白雪歌送武判官归京》岑参。北风卷地白草折，胡天八月即飞雪。忽如一夜春风来，千树万树梨花开。散入珠帘湿罗幕，狐裘不暖锦衾薄。将军角弓不得控，都护铁衣冷难着。瀚海阑干百丈冰，愁云惨淡万里凝。中军置酒饮归客，胡琴琵琶与羌笛。"
+      },
+      "sourceGroup": "g4240",
+      "clipStart": 0,
+      "clipEnd": 32,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "88f7c45cea182ec976a9cff945546bf4744803514e31377b310696fadc918ecc",
@@ -165904,9 +166186,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0201",
-      "sourceGroupDigest": "bae9dcc34d3ff88041e6b7c89fece17250b16bef8e324f76fc6339334d3490e9",
+      "batchId": "groups-007",
+      "sourceGroup": "g4241",
+      "sourceGroupDigest": "17908a83a9add7e8da90c0cbffb740ceac2b0b64f87afa95393584812d2192e4",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -165923,11 +166205,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0202",
-      "sourceGroupDigest": "8e9d5a98ea02b169530bb56eab78c52b68a0df846044129e43e1664cf793ca9d",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "ed51de1cc6ba73309b8cd2606d590df51f33383ee6f579f04d5bbd591de47860.mp3",
+      "bytes": 73520,
+      "digest": "6ea7e583ab2a01a443af455394894b05fc5783d9a37cc01255f236843149a6e0",
+      "duration": 18.24,
+      "verifiedAt": 1792733457119,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "无题李商隐，相见时难别亦难，东风无力百花残。春蚕到死丝方尽，蜡炬成灰泪始干。晓径但愁云鬓改，夜吟应觉月光寒。蓬山此去无多路，青鸟殷勤未探看。",
+        "whisper": "无题,李商隐,相见时难别意难,东风无力百花残,春残到死思方静,蜡聚成灰泪史干,小静淡愁云并改,夜莹莹绝月光寒,彭山此去无多路,轻鸟殷勤未探看。",
+        "qwen": "无题，李商隐。相见时难别亦难，东风无力百花残。春蚕到死丝方尽，蜡炬成灰泪始干。晓镜但愁云鬓改，夜吟应觉月光寒。蓬山此去无多路，青鸟殷勤为探看。"
+      },
+      "sourceGroup": "g4242",
+      "clipStart": 0,
+      "clipEnd": 18,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "fe29061d6c5cc793a19bac3bcef03d7d060d83fd7e2c80e36fc8fae13131a552",
@@ -165943,11 +166236,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0202",
-      "sourceGroupDigest": "8e9d5a98ea02b169530bb56eab78c52b68a0df846044129e43e1664cf793ca9d",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "fe29061d6c5cc793a19bac3bcef03d7d060d83fd7e2c80e36fc8fae13131a552.mp3",
+      "bytes": 93536,
+      "digest": "d86d96d66573206c017bae94e507cbd57222062183964932727416b848d6d77c",
+      "duration": 23.24,
+      "verifiedAt": 1792733457121,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "江城子苏轼老夫聊发少年狂，左牵黄右擎苍，锦帽貂裘，千骑卷平冈。为报倾城随太守亲射虎看孙郎。久酣胸胆尚开张，鬓微霜又何妨。持节云中何日遣冯唐。会挽雕弓如满月，西北望射天狼。",
+        "whisper": "江城子 苏氏 老夫辽发少年狂 左千黄 右勤仓 锦帽雕囚 千吉卷平刚 卫报清城隋太守 亲舍虎 看僧郎 久憨凶胆尚开张 病微霜又何妨 持节云中 何日浅逢堂 慧婉雕宫如满月 西北望 舍天郎",
+        "qwen": "江城子，苏轼。老夫聊发少年狂，左牵黄，右擎苍。锦帽貂裘，千骑卷平冈。为报倾城随太守，亲射虎，看孙郎。酒酣胸胆尚开张，鬓微霜，又何妨？持节云中，何日遣冯唐？会挽雕弓如满月，西北望，射天狼。"
+      },
+      "sourceGroup": "g4243",
+      "clipStart": 0,
+      "clipEnd": 23,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "c149e0c3ebdce612bee762b9ade228c233309faab1843985eab0e39ef4f99b6e",
@@ -261379,11 +261683,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-007",
+      "status": "stored",
+      "file": "136e8110ed43033ad615846ced08e198266e56a8af690e15d6a3248a940dbdfb.mp3",
+      "bytes": 60560,
+      "digest": "49502402e25625331e05bf81340d04619b67ec35c02d32d368733cd3c704de8f",
+      "duration": 15,
+      "verifiedAt": 1792733114787,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "蝉虞世南，垂饮清露，流响出疏桐，居高声自远，非是藉秋风。",
+        "whisper": "禅于是难垂蕊引轻路流响初书童居高生自远飞是急秋风",
+        "qwen": "蝉，虞世南。垂緌饮清露，流响出疏桐。居高声自远，非是藉秋风。"
+      },
       "sourceGroup": "g4079",
-      "sourceGroupDigest": "2a8dc4597c0d926912844158570a6573750e04f7d2533eb6503f27a59d6dafef",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 17.32,
+      "clipEnd": 32.08,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "19868fa6506889d4546e328d6dfbd87af9f60dce6ce36023cc09acc6a9c0c77a",
@@ -261399,11 +261714,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-007",
+      "status": "stored",
+      "file": "19868fa6506889d4546e328d6dfbd87af9f60dce6ce36023cc09acc6a9c0c77a.mp3",
+      "bytes": 97568,
+      "digest": "3101511638d49ffaba29acf3f31af39b04834a5c01db20841da022f7d811bbb1",
+      "duration": 24.24,
+      "verifiedAt": 1792733114772,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "两小儿辩日列子孔子东游俭两小儿辩斗，问其故一儿曰，我以日始出时去人近，而日中时远也。一儿曰，我以日初出远，而日中时近也。一儿曰，日初出大如车盖，及日中则如盘盂，此不为远者小而近者大乎。",
+        "whisper": "梁小儿便日,列子,孔子东游,见梁小儿便斗,问其故,一儿曰,我以日始初时去人静,而日中时远也,一儿曰,我以日初初远,而日中时静也,一儿曰,日初初大如车盖,即日中则如盘鱼,此不为远者小而静者大呼。",
+        "qwen": "两小儿辩日。列子，孔子东游，见两小儿辩斗，问其故。一儿曰：我以日始出时去人近，而日中时远也。一儿曰：我以日初出远，而日中时近也。一儿曰：日初出大如车盖，及日中则如盘盂，此不为远者小而近者大乎？"
+      },
       "sourceGroup": "g4076",
-      "sourceGroupDigest": "cdca359047b40686cf5ea4118630e40755cc3eca4a0940c3e1ac52d7efc0be32",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 0,
+      "clipEnd": 24,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "2fb5867c6113c90c12366ef38b051c4cd989eed3d2fa98cddd611e35f3a25ad0",
@@ -261558,11 +261884,22 @@
           "part": 1
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-007",
+      "status": "stored",
+      "file": "0ce4fb32ccc3b59673f2a848d665e29f95f494b6489a85404bb8e6f313a6585f.mp3",
+      "bytes": 35936,
+      "digest": "a7a17a57908eda3088f2df78f6badaf5a52823bd5dea72139a90ee8b74b0517e",
+      "duration": 8.84,
+      "verifiedAt": 1792733114804,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "非独舍也为国与身，一皆如之，故圣人不察存亡而察其所以然。",
+        "whisper": "非独赦也,为国与身一皆如之,故圣人不查存亡而查其所以然。",
+        "qwen": "非独射也，为国与身亦皆如之。故圣人不察存亡，而察其所以然。"
+      },
       "sourceGroup": "g4084",
-      "sourceGroupDigest": "a2375204e440570ff9283ecc514d9e2e27b2d1a7b42169230e49b153a192242a",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 0,
+      "clipEnd": 8.6,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "4885599e2b9fd51f0ee716d11d897bbd54654446857b875687c3b84b3017c35e",
@@ -261578,11 +261915,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-007",
+      "status": "stored",
+      "file": "4885599e2b9fd51f0ee716d11d897bbd54654446857b875687c3b84b3017c35e.mp3",
+      "bytes": 54800,
+      "digest": "b97ebf0dc8a176c96693aa20a497067f80b414b0b7751c65cb2f675a962012e7",
+      "duration": 13.555,
+      "verifiedAt": 1792731620900,
+      "review": "复用原始分组录音，按实际静音间隔切分。逐项核对汉典的本句对应音项：蒙冲/艨艟均为大陆普通话 méng chōng（船名同音写法）；不使用国语辞典列出的 tóng 异读。只接受本组完整转写中的列明差异；替换后题名、作者及全文逐字一致，不按拼音近似批量放行，不改正文；非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "观书有感其二朱熹昨夜江边春水生，艨艟巨舰一毛轻。向来枉费推移力，此日中流自在行。",
+        "whisper": "官书有感其二朱熹昨夜江边春水生萌冲巨见一毛青向来枉费推一力此日中留自在行"
+      },
       "sourceGroup": "g4082",
-      "sourceGroupDigest": "c3ff256c1dcda5ceb88dc80e5d7e7effc50d67319f3f6c03dcdfdd604a8eaca5",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 11.685,
+      "clipEnd": 25,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "81218c7e1459a657de8c2e7a2743eebb7d2c0cb3656247f60959905b5f2bfe97",
@@ -261598,11 +261945,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-007",
+      "status": "stored",
+      "file": "81218c7e1459a657de8c2e7a2743eebb7d2c0cb3656247f60959905b5f2bfe97.mp3",
+      "bytes": 108656,
+      "digest": "89ec7de8f5c145c5198ac7b7ea8943c008bb6665e838e96eaf864fa4d4f4f665",
+      "duration": 27.02,
+      "verifiedAt": 1792731620895,
+      "review": "复用原始分组录音，按实际静音间隔切分。逐项核对汉典的本句对应音项：援/源 yuán、弓/公 gōng、智/志 zhì。只接受本组完整转写中的列明差异；替换后题名、作者及全文逐字一致，不按拼音近似批量放行，不改正文；非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "学弈孟子弈秋通国之善弈者也，使弈秋诲二人弈其一人专心致志，惟弈秋之为听一人虽听之，一心以为有鸿鹄将至，思源公缴而射之，虽与之俱学，弗若之矣，为是其志弗若与曰，非然也。",
+        "whisper": "学义,孟子,义秋,通国之善义者也,使义秋会二人义,其义人专心致志,为义秋之为听,义人虽听之,义心以为有鸿湖江志,思源攻角而射之,虽语之俱学,扶若之矣,为是其志扶若语,曰,非然也。"
+      },
       "sourceGroup": "g4081",
-      "sourceGroupDigest": "baefbf931fa3ef06d8aafe98742bb161b91bf481ead83ca3e80c124c3e9cde55",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 0,
+      "clipEnd": 26.78,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "c9317d1fc91349d340d54f5cd6f9df38881d5789b1f071a3b4dd7b1a390f9513",
@@ -261754,21 +262111,21 @@
     }
   ],
   "localCleanup": {
-    "archiveFilesMovedFromDownloads": 111,
-    "rawGroupsMovedAfterCompleteCloudReadback": 297,
-    "logicalBytesMoved": 7618999450,
+    "archiveFilesMovedFromDownloads": 120,
+    "rawGroupsMovedAfterCompleteCloudReadback": 328,
+    "logicalBytesMoved": 7826654784,
     "trashEmptiedByAgent": false,
     "unverifiedOriginalsRetention": "Retained in the ignored task directory; raw cleanup requires receipts for every primary and derived clip."
   },
   "summary": {
     "totalPublicSegments": 3990,
-    "storedSegments": 1433,
-    "storedBytes": 40774912,
-    "reviewPending": 221,
+    "storedSegments": 1466,
+    "storedBytes": 43787008,
+    "reviewPending": 188,
     "notGenerated": 2336,
     "types": {
       "word": 770,
-      "poetry": 193,
+      "poetry": 226,
       "sentence": 363,
       "english-reading": 107
     },
@@ -261788,8 +262145,8 @@
         "notGenerated": 89
       }
     },
-    "playablePublicSegments": 3657,
+    "playablePublicSegments": 3690,
     "fullyCoveredEnglishAccents": 3146,
-    "allStoredBytes": 156918992
+    "allStoredBytes": 159931088
   }
 }
