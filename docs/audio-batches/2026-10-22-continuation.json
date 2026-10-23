@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "createdAt": "2026-10-23T03:45:11.417Z",
+  "createdAt": "2026-10-23T04:51:34.200Z",
   "provider": "Doubao Work built-in seed-audio",
   "funding": "existing membership quota only; no paid API or purchase",
   "applicationCommit": "98cbd3a",
@@ -164138,7 +164138,8 @@
       "status": "review-pending",
       "batchId": "groups-007",
       "sourceGroup": "g4115",
-      "review": "远端任务已报告生成，原始文件尚未取回；先恢复原结果，未完成下载、核对和云端回读前不供小程序播放，不重复生成。"
+      "sourceGroupDigest": "07d2dbea99efd13cc3964209345943c5066b71baa72d7cfb866c10794ee19134",
+      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
       "key": "3623aa84a07c31614d6efbef72fd51374c1f3df31ce7e189d9e9cbd5de097857",
@@ -164157,7 +164158,8 @@
       "status": "review-pending",
       "batchId": "groups-007",
       "sourceGroup": "g4116",
-      "review": "远端任务已报告生成，原始文件尚未取回；先恢复原结果，未完成下载、核对和云端回读前不供小程序播放，不重复生成。"
+      "sourceGroupDigest": "2cb201ae4675f22c7a21c44c5a9396bf9de7a49ef1f49c646643ddba6feea102",
+      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
       "key": "219ebb9f81723108a59aa1411bb181a66fca429e329b014cee8d69f6b6bf7572",
@@ -164176,7 +164178,8 @@
       "status": "review-pending",
       "batchId": "groups-007",
       "sourceGroup": "g4117",
-      "review": "远端任务已报告生成，原始文件尚未取回；先恢复原结果，未完成下载、核对和云端回读前不供小程序播放，不重复生成。"
+      "sourceGroupDigest": "f3d262206c525cf9d8d31b4b3520f5fda2332cbe9c057d3ef267f44071ee4c2d",
+      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
       "key": "a6b87e8f991fd6c2065c44d06a6086543c56ab1f5423883c35fb836f51e025e1",
@@ -164193,9 +164196,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0115",
-      "sourceGroupDigest": "6cbf07072ee26dc75cce6e92d583a4baeea2fd53b66384c5b8ab2910d3da96c2",
+      "batchId": "groups-007",
+      "sourceGroup": "g4118",
+      "sourceGroupDigest": "463d77e183ace99192bc6caf5dbb54de5b8bb46d6dba33207c69619ab698f1e4",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -164212,11 +164215,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0115",
-      "sourceGroupDigest": "6cbf07072ee26dc75cce6e92d583a4baeea2fd53b66384c5b8ab2910d3da96c2",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "f5e76c4534313c8b7e83083af0fba5dba24cf86718899e6f313484b5f453ff05.mp3",
+      "bytes": 122624,
+      "digest": "c804041da3b646c47331677378c7dda07ae1664201fe0716e6d8211348dd362f",
+      "duration": 30.52,
+      "verifiedAt": 1792730439714,
+      "review": "复用原始分组录音，按实际静音间隔切分。逐项核对所引字典：作者“义/奕”同读 yì，“友/有”同读 yǒu，“期/七”按大陆普通话同读 qī；“七/7”为数字记法。仅在本组这一完整转写中替换列明差异后与题名、作者及正文逐字一致；只接受这份完整转写，不按拼音近似批量放行，不更改正文；非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "陈太丘与友期行刘奕庆陈太丘与友期行，期日中过中不至太丘舍去去后乃至元方时年7岁，门外戏。客问元方，尊君在不？答曰，待君久不至已去。有人便怒曰，非人哉，与人期行相委而去。元方曰，君与家君七日中。",
+        "whisper": "陈泰秋与有七行,刘义庆陈泰秋与有七行,七日中,过中不至,泰秋舍去,去后乃至元方十年七岁,门外戏客问元方,尊君在不?答曰,戴君久不至,已去有人便怒曰,非人哉,与人七行,相伟而去原方曰君与家君七日中"
+      },
+      "sourceGroup": "g4119",
+      "clipStart": 0,
+      "clipEnd": 30.28,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "6ff245fd1bb0a45f7ecea1882220a602f0303ad9ad2391fbe2eb36b3c0785ffe",
@@ -164233,9 +164246,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0117",
-      "sourceGroupDigest": "ad95440da7b169fbc0abb2fad8fa37fdd187dac32a83722e3d5acec78abdd0c7",
+      "batchId": "groups-007",
+      "sourceGroup": "g4120",
+      "sourceGroupDigest": "ef9d85bdbb9bff8ab926a068040cf6167894fc36fd3cfd73d90b41fdffbf5d91",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -164253,9 +164266,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0117",
-      "sourceGroupDigest": "ad95440da7b169fbc0abb2fad8fa37fdd187dac32a83722e3d5acec78abdd0c7",
+      "batchId": "groups-007",
+      "sourceGroup": "g4121",
+      "sourceGroupDigest": "1fdd208a1d73ac96358ba5ccf8e49a4ba17f53cb085e9ec94154990d06be69fb",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -164273,9 +164286,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0118",
-      "sourceGroupDigest": "b851bb60bf1874e185e6e58b24fac01867a342ce7031eb9bc2adf2bd8f4f7702",
+      "batchId": "groups-007",
+      "sourceGroup": "g4122",
+      "sourceGroupDigest": "739f730fd0d46b504168ef102f3d2d4ab0e09e26d7b1da69450f2a181240b7e0",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -164292,11 +164305,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0118",
-      "sourceGroupDigest": "b851bb60bf1874e185e6e58b24fac01867a342ce7031eb9bc2adf2bd8f4f7702",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "7f793e1c8cf756005d4e6bab5960026f3f511d08140f639649b1957c3362fd94.mp3",
+      "bytes": 73952,
+      "digest": "31195f65f5af235ebaa4013bc90d16a9071b503224980c388d1038f2e6adcb12",
+      "duration": 18.34,
+      "verifiedAt": 1792730439716,
+      "review": "复用原始分组录音，按实际静音间隔切分。逐项核对所引字典：“尚/上”同读 shàng，题名“11月4日”与“十一月四日”为数词记法差异。仅在本组这一完整转写中替换列明差异后与题名、作者及正文逐字一致；只接受这份完整转写，不按拼音近似批量放行，不更改正文；非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "11月4日，风雨大作，其二，陆游僵卧孤村不自哀，上思为国戍轮台。夜阑卧听风吹雨，铁马冰河入梦来。",
+        "whisper": "十一月四日,风雨大作,其二,路由,江沃孤村不自哀,上司为国,树轮台,夜兰沃听风吹雨,铁马冰河入梦来。"
+      },
+      "sourceGroup": "g4123",
+      "clipStart": 0,
+      "clipEnd": 18.1,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "8a802b36e39a69d927c8f974e68a19234280f032b924fd621a7d92996b5a9af5",
@@ -164313,9 +164336,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0119",
-      "sourceGroupDigest": "dd598a0e205822d5c757c6c395bf4cf6ef0e094641da084f62ad8f913f3a663d",
+      "batchId": "groups-007",
+      "sourceGroup": "g4124",
+      "sourceGroupDigest": "f8f2ff61dff533161f427d86349e37a24a9911aa061760b5246a3ca4f80cdea3",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -164353,9 +164376,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0120",
-      "sourceGroupDigest": "54280d862dd94fa7c6f850fe1686dcf6bf477a31c2306c06e4429fb2ddf0c9ca",
+      "batchId": "groups-007",
+      "sourceGroup": "g4126",
+      "sourceGroupDigest": "fe37b0b480e6f8668f12d11fa85567e305321b1912eb8af5bac033d1c8bceac0",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -164372,11 +164395,20 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0120",
-      "sourceGroupDigest": "54280d862dd94fa7c6f850fe1686dcf6bf477a31c2306c06e4429fb2ddf0c9ca",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "a2c29d5fd7c5b30176ad38a2157b4fb4f25ea5dbe0bf113e443514caa03eb3ed.mp3",
+      "bytes": 77264,
+      "digest": "ab3009454aac5c2427166e1cc2feefa18a28d13df83584380d21f9565859ecfc",
+      "duration": 19.175,
+      "verifiedAt": 1792730115056,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "春夜洛城闻笛李白，谁家玉笛暗飞声散入春风满洛城。此夜曲中闻折柳，何人不起故园情。"
+      },
+      "sourceGroup": "g4126",
+      "clipStart": 22.765,
+      "clipEnd": 41.7,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "975ace592e533dc3335bddf45afa039ee90f26f4caf2a6ad051680a7d156ff38",
@@ -164392,11 +164424,20 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0120",
-      "sourceGroupDigest": "54280d862dd94fa7c6f850fe1686dcf6bf477a31c2306c06e4429fb2ddf0c9ca",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "975ace592e533dc3335bddf45afa039ee90f26f4caf2a6ad051680a7d156ff38.mp3",
+      "bytes": 49472,
+      "digest": "dfd36a02445c6114e80b1d894ef6d727ccc1cf5ebb43cec2bdacdad4b01c5c3a",
+      "duration": 12.24,
+      "verifiedAt": 1792730115057,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "逢入京使岑参故园东望路漫漫，双袖龙钟泪不干，马上相逢无纸笔，凭君传语报平安。"
+      },
+      "sourceGroup": "g4127",
+      "clipStart": 0,
+      "clipEnd": 12,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "5c9b7a2f2566d7c7f61e6fb63e05eb6c719324e2d65187c707eb29eafd4b69f9",
@@ -164413,9 +164454,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0121",
-      "sourceGroupDigest": "616ab0a18fc64686456dc1bf8baf847c4b40a8140dce89458b35975fed0cfddc",
+      "batchId": "groups-007",
+      "sourceGroup": "g4128",
+      "sourceGroupDigest": "7ae557e016ae743ad74f689206eae78879bf902b81446d0a138fdce28ec94c75",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -164433,9 +164474,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0121",
-      "sourceGroupDigest": "616ab0a18fc64686456dc1bf8baf847c4b40a8140dce89458b35975fed0cfddc",
+      "batchId": "groups-007",
+      "sourceGroup": "g4129",
+      "sourceGroupDigest": "2b6242c8278f2eebc9c8d2d07c3d5785f3dc8028cba7dfc04df7468bc844b967",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -164453,9 +164494,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0122",
-      "sourceGroupDigest": "3b962c9c9b1f9e32b650e1598b25e225b95f06a0ea41113814e814cf2f6c0faa",
+      "batchId": "groups-007",
+      "sourceGroup": "g4130",
+      "sourceGroupDigest": "e99faf84ed9d0c40b985d473d0179d65583a358fe63c22aa36ef7f913d1721de",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -164473,9 +164514,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0122",
-      "sourceGroupDigest": "3b962c9c9b1f9e32b650e1598b25e225b95f06a0ea41113814e814cf2f6c0faa",
+      "batchId": "groups-007",
+      "sourceGroup": "g4131",
+      "sourceGroupDigest": "953f3f2b934f51078de5fe3420ff7512bea61bf2b345fe60680e38bd542e2a14",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -164493,9 +164534,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0122",
-      "sourceGroupDigest": "3b962c9c9b1f9e32b650e1598b25e225b95f06a0ea41113814e814cf2f6c0faa",
+      "batchId": "groups-007",
+      "sourceGroup": "g4131",
+      "sourceGroupDigest": "953f3f2b934f51078de5fe3420ff7512bea61bf2b345fe60680e38bd542e2a14",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -164513,9 +164554,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0150",
-      "sourceGroupDigest": "1fbe39b93d1bb5ad5e232d63e1dcb7499f1bbedc347a3daa90a4fc3ae8bd929d",
+      "batchId": "groups-007",
+      "sourceGroup": "g4152",
+      "sourceGroupDigest": "f44d71325b487f128911dc6ea9d7729408de6571634667e50e1ed174a1a58137",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -164532,11 +164573,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0150",
-      "sourceGroupDigest": "1fbe39b93d1bb5ad5e232d63e1dcb7499f1bbedc347a3daa90a4fc3ae8bd929d",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "efca434a43b09dc356546a3793c5617241c438b05f99339389e688ace2fd0cca.mp3",
+      "bytes": 89504,
+      "digest": "5ba94771881f3f6b77ba5854175525cd4a9f99f181d6b991c23351472976883d",
+      "duration": 22.24,
+      "verifiedAt": 1792730439729,
+      "review": "复用原始分组录音，按实际静音间隔切分。逐项核对所引字典：“已/矣”同读 yǐ，仅“白露未已”中的已转写为矣。仅在本组这一完整转写中替换列明差异后与题名、作者及正文逐字一致；只接受这份完整转写，不按拼音近似批量放行，不更改正文；非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "蒹葭诗经蒹葭苍苍，白露为霜。所谓伊人在水一方，溯洄从之，道阻且长。溯游从之宛在水中央。蒹葭萋萋，白露未晞。所谓伊人在水之湄。溯洄从之，道阻且跻，溯游从之宛在水中坻。蒹葭采采，白露未矣。所谓伊人在水之涘。",
+        "whisper": "尖加诗经,尖加苍苍白鹿为双,所谓依人在水一方,素回从之,道足且长,素由从之晚在水中央,尖加七七白鹿为稀,所谓依人在水之眉,素回从之道足且挤,素由从之晚在水中底,尖加采采白鹿为矣,所谓依人在水之四。"
+      },
+      "sourceGroup": "g4153",
+      "clipStart": 0,
+      "clipEnd": 22,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "e374befea760cf91ce5c6520c10a364332224426de1324136748de48ca46e0ae",
@@ -164552,11 +164603,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0151",
-      "sourceGroupDigest": "402b3917130b3c1028e476f5bba650fd3ec3e4c8c445dac5ee1ce0451d9e159c",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "e374befea760cf91ce5c6520c10a364332224426de1324136748de48ca46e0ae.mp3",
+      "bytes": 65600,
+      "digest": "fb79b951535bc993c7c9303b6251a0e24fc5f997e52838e80d5443d8079dcc49",
+      "duration": 16.24,
+      "verifiedAt": 1792731030388,
+      "review": "复用原始分组录音，按实际静音间隔切分。逐项核对汉典普通话音项：属（属国义）/蜀 shǔ、延/言 yán、候/后 hòu、骑/齐 qí。仅这份完整转写中的列明差异；替换后题名、作者及全文逐字一致，不按拼音近似批量放行，不改正文；非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "使至塞上，王维单车欲问边蜀国过居言，征蓬出汉塞，归雁入胡天。大漠孤烟直，长河落日圆。萧关逢后齐都护在燕然。",
+        "whisper": "史智赛上,王维,单车欲问边,蜀国过居言,征鹏出汉赛,归宴入胡天,大漠孤烟直,长河落日圆,萧关逢后期,都护在烟然。"
+      },
+      "sourceGroup": "g4154",
+      "clipStart": 0,
+      "clipEnd": 16,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "4a38e80692fb132188c4cb18175aa4dfe2f238e0a942eec51949bc8adc5362b4",
@@ -164573,9 +164634,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0152",
-      "sourceGroupDigest": "407886d2439c96a30ebc2aca90f3f2cf2ff0a891e4945011186f0908602695d6",
+      "batchId": "groups-007",
+      "sourceGroup": "g4155",
+      "sourceGroupDigest": "7a4ce19276e2072a0e4e87458b0ffa2fdd5351bf6c14a967289881a97e86d1f8",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -164593,9 +164654,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0152",
-      "sourceGroupDigest": "407886d2439c96a30ebc2aca90f3f2cf2ff0a891e4945011186f0908602695d6",
+      "batchId": "groups-007",
+      "sourceGroup": "g4156",
+      "sourceGroupDigest": "b093d22eed12384512078010d4a1c30542e6c0b3423b6d8dc1217f2553c5217e",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -164613,9 +164674,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0153",
-      "sourceGroupDigest": "3904f1d2cb97fe2cca711420e2bdf5f14b41eff88860745fce575f7b05e2d897",
+      "batchId": "groups-007",
+      "sourceGroup": "g4157",
+      "sourceGroupDigest": "cb7dadffd1c0d067f4871589c81062bf604f3925e1195a9a2ff84a50c68d9767",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -164633,9 +164694,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0153",
-      "sourceGroupDigest": "3904f1d2cb97fe2cca711420e2bdf5f14b41eff88860745fce575f7b05e2d897",
+      "batchId": "groups-007",
+      "sourceGroup": "g4158",
+      "sourceGroupDigest": "43d1f8dbcea3b358c0f2d60083fd3e903ed8e84233cd6c0935c305f40df42a3d",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -164652,11 +164713,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0154",
-      "sourceGroupDigest": "9634f32e76afaf7395dfb87afe750c1d1da6cf940415004085421e6b9169b2f5",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "4ffd8d80f177733b43f6a6434fc96c928ed4ac8e169c851d7b6b6aa5677f3bdd.mp3",
+      "bytes": 93536,
+      "digest": "c9a13070b132189d6eb191eb30de1538591b3763eae7c5231def21fb25f9d6d3",
+      "duration": 23.24,
+      "verifiedAt": 1792730627499,
+      "review": "复用原始分组录音，按实际静音间隔切分。逐项核对所引字典：本篇“燕脂/胭脂”同读 yān zhī，“紫/子”同读 zǐ，“报/暴”同读 bào，“意/驿”同读 yì。仅在本组这一完整转写中替换列明差异后与全部原文逐字一致；不按拼音近似批量放行，不改正文；非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "雁门太守行李贺黑云压城城欲摧，甲光向日金鳞开，角声满天秋色里，塞上胭脂凝夜子，半卷红旗临易水，霜重鼓寒声不起。暴君黄金台上驿，提携玉龙为君死。",
+        "whisper": "燕门太守行,李赫,黑云鸭城城玉催,假光向日金临开,绞生满天秋色里,塞上胭脂凝叶子,半卷红旗淋溢水,双中骨寒生不起,暴君黄金台上溢,提携玉龙未君死。"
+      },
+      "sourceGroup": "g4159",
+      "clipStart": 0,
+      "clipEnd": 23,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "49b3b6bd5032efbadeeb9c2984d2ada16fa8e0a706d9d6ef2995137c10f3e141",
@@ -164673,9 +164744,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0154",
-      "sourceGroupDigest": "9634f32e76afaf7395dfb87afe750c1d1da6cf940415004085421e6b9169b2f5",
+      "batchId": "groups-007",
+      "sourceGroup": "g4160",
+      "sourceGroupDigest": "7e9286053276a5e8e5585c0ca6751638e17bae2a98703fba67321cf8fc8e2dbc",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -164693,9 +164764,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0155",
-      "sourceGroupDigest": "4a044ebc2bc49ec75ca09d81b4623155cb72bfc7616824b01a588b5b70fa331b",
+      "batchId": "groups-007",
+      "sourceGroup": "g4161",
+      "sourceGroupDigest": "465e2d1df780b31de9e32a717581a2cd5e657e4f5aff5fa32dd8ec16e8c5ea59",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -164712,11 +164783,21 @@
           "part": 1
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0155",
-      "sourceGroupDigest": "4a044ebc2bc49ec75ca09d81b4623155cb72bfc7616824b01a588b5b70fa331b",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "21fd6a430228288c83b7eb97c66feda4fb37c8a43bf1fc9151c3114e802f656e.mp3",
+      "bytes": 76688,
+      "digest": "78e07ea4c62fed1614e8c0617f7e7296330b70901eb643b906e6f3772ec6f385",
+      "duration": 19.02,
+      "verifiedAt": 1792730627501,
+      "review": "复用原始分组录音，按实际静音间隔切分。逐项核对所引字典：“息/西/兮”同读 xī，“极/及”同读 jí，“视/势”同读 shì；“六/6”为数字记法。仅在本组这一完整转写中替换列明差异后与全部原文逐字一致；不按拼音近似批量放行，不改正文；非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "谐之言曰，鹏之徙于南冥也，水击三千里，抟扶摇而上者九万里，去以6月西者也。野马也尘埃也。生物之以兮相吹也。天之苍苍其正色邪其远而无所至及邪，其势下也亦若是则已矣。",
+        "whisper": "邪之言曰,捧之细于难民也,水积三千里,团扶摇而上者九万里,去以六月息者也,野马也,尘埃也,生物之以西相吹也,天之苍苍,其正色邪,其远而无所至极邪,其是下也,亦若是则已矣。"
+      },
+      "sourceGroup": "g4162",
+      "clipStart": 0,
+      "clipEnd": 18.78,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "9387856f988e469673d3c1483556cbefe1399f624f267d69efe8dcc071ca2936",
@@ -164733,9 +164814,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0156",
-      "sourceGroupDigest": "46394bd10f8545588692e18349bb595f84e44028d4f164fd078ec7cc91f461b6",
+      "batchId": "groups-007",
+      "sourceGroup": "g4163",
+      "sourceGroupDigest": "b34d00449261fb5d1e326889fa92c432a472e446cb6011b22835a1038488e2c4",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -164753,9 +164834,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0156",
-      "sourceGroupDigest": "46394bd10f8545588692e18349bb595f84e44028d4f164fd078ec7cc91f461b6",
+      "batchId": "groups-007",
+      "sourceGroup": "g4164",
+      "sourceGroupDigest": "55ee7bbcc86ad675494a9ddb1630495fc3c0597fed8bfd691cd6f344684cd7f2",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -164772,11 +164853,21 @@
           "part": 1
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0157",
-      "sourceGroupDigest": "7b0c013affc32357ada467feaa6cd8d52938667f5c3305897c5fbeee2b2ed993",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "75c292a517bfee31d68b4e2ef241d70b13570af2b274b386f8e58a280b84fb3c.mp3",
+      "bytes": 128672,
+      "digest": "25efba697d1f2e1c2e0739ec5c10d270de9b104c6f54895b6edd4082f71292b0",
+      "duration": 32.02,
+      "verifiedAt": 1792730760604,
+      "review": "复用原始分组录音，按实际静音间隔切分。逐项核对所引字典：种（耕种义）/众 zhòng、作/坐 zuò、具/据 jù、咸/闲 xián。仅接受这份完整转写中的列明差异；替换后全部原文逐字一致，不按拼音近似批量放行，不改正文；非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "复行数十步，豁然开朗，土地平旷屋舍俨然，有良田美池桑竹之属，阡陌交通鸡犬相闻，其中往来众坐，男女衣着悉如外人，黄发垂髫并怡然自乐，见渔人乃大惊，问所从来，据答之，便要还家，设酒杀鸡作食，村中闻有此人闲来问讯。",
+        "whisper": "复行数十步,豁然开朗,土地平旷,乌设俨然,有良田美池,桑竹之鼠,千莫交通,鸡犬相闻,其中往来众作,男女衣着,惜如外人,黄发垂条,并宜然自乐,见于人,乃大惊,问所从来,据答之,便要还家,涉酒杀鸡坐食。村中闻有此人闲来问讯"
+      },
+      "sourceGroup": "g4165",
+      "clipStart": 0,
+      "clipEnd": 31.78,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "b8b26d74ef27407d57ffe3c06ff76f0fd4b4259eef4095611dcf2d4d83312d22",
@@ -164793,9 +164884,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0157",
-      "sourceGroupDigest": "7b0c013affc32357ada467feaa6cd8d52938667f5c3305897c5fbeee2b2ed993",
+      "batchId": "groups-007",
+      "sourceGroup": "g4166",
+      "sourceGroupDigest": "5566fd19c2f0a23f1153cd407ddffe650810e9b0e0644dae2249f10bfe55b1f0",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -164813,9 +164904,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0158",
-      "sourceGroupDigest": "2620d15cb9899d7dccca43113b2b739dd46c1a886fd5c14212012d383594ea34",
+      "batchId": "groups-007",
+      "sourceGroup": "g4167",
+      "sourceGroupDigest": "526410acbd3f00b7835aed376b1297c04493085ff0c872446dfac5c55e35653c",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -164832,11 +164923,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0158",
-      "sourceGroupDigest": "2620d15cb9899d7dccca43113b2b739dd46c1a886fd5c14212012d383594ea34",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "bb570e4374602d958a1b05cc4da5c9452d89f522baf34781635279a340b2817c.mp3",
+      "bytes": 132704,
+      "digest": "084f4ee21ef1eeb47235b17f3fe6a4ae9b0c95717b9419149a7ea613f998d029",
+      "duration": 33.02,
+      "verifiedAt": 1792730627505,
+      "review": "复用原始分组录音，按实际静音间隔切分。逐项核对所引字典：元/原 yuán、非/飞 fēi、曦/夕 xī、月/岳 yuè、夏/下 xià、襄/相（相应音项）xiāng、沿/严 yán、溯/肃 sù、宣/轩 xuān、疾/极 jí。仅这份完整转写中的列明差异；替换后题名、作者与全文逐字一致，不按拼音近似批量放行，不改正文；非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "三峡郦道原自三峡七百里中，两岸连山略无阙处，重岩叠嶂，隐天蔽日，自飞亭午夜分，不见夕岳，至于下水相陵，严肃阻绝或王命急轩，有时朝发白帝暮到江陵，其间千二百里，虽乘奔御风，不以极也。春冬之时则素湍绿潭回清倒影。",
+        "whisper": "三峡,历道远,自三峡七百里中,两岸连山,略无雀处,重言蝶杖,隐天蔽日,自非亭武夜分,不见夕月,至于下水相邻,严肃阻绝,或亡命吉宣,有时昭发白帝,目到江陵,其间千二百里,虽城奔玉丰,不以吉野,春冬之时,则速端绿坛回青倒影"
+      },
+      "sourceGroup": "g4168",
+      "clipStart": 0,
+      "clipEnd": 32.78,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "df53b0b192055a0b4e4523c1a282a39a8625368b817cf60706a17d523097535c",
@@ -164853,9 +164954,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0159",
-      "sourceGroupDigest": "594b0272795cf578703a83aa735f964e55c849a849adce9d87b8ecc1ae0ab5e1",
+      "batchId": "groups-007",
+      "sourceGroup": "g4169",
+      "sourceGroupDigest": "6d542224dfafc891b59ba3a88d3593bcf097bed1abc2864854f491033c5b40ce",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -164893,9 +164994,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0159",
-      "sourceGroupDigest": "594b0272795cf578703a83aa735f964e55c849a849adce9d87b8ecc1ae0ab5e1",
+      "batchId": "groups-007",
+      "sourceGroup": "g4171",
+      "sourceGroupDigest": "962460c588ea6737b8d0aa1040764c8c2004df4e83c60046377ccdf3bec6ea2a",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -164913,9 +165014,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0160",
-      "sourceGroupDigest": "e3e6653eb4502f38d4466e0e401b27b6ffe12353d65fc81b961e1a2ea4460063",
+      "batchId": "groups-007",
+      "sourceGroup": "g4172",
+      "sourceGroupDigest": "169842a171b4f5e38c2e174399d2284a2882c1ca9158030b2233a4ae41fcee15",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -164933,9 +165034,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0160",
-      "sourceGroupDigest": "e3e6653eb4502f38d4466e0e401b27b6ffe12353d65fc81b961e1a2ea4460063",
+      "batchId": "groups-007",
+      "sourceGroup": "g4173",
+      "sourceGroupDigest": "7b9c8619f2261d827534d1f0159360c82fb2db7c243b90f8956b03b060b56b90",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -164953,9 +165054,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0160",
-      "sourceGroupDigest": "e3e6653eb4502f38d4466e0e401b27b6ffe12353d65fc81b961e1a2ea4460063",
+      "batchId": "groups-007",
+      "sourceGroup": "g4174",
+      "sourceGroupDigest": "67dc243317aca10879024496a48a28a4609251f184cfd54cf02c54d6f7ce0d6c",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -164973,9 +165074,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0161",
-      "sourceGroupDigest": "17cc578cbcb5a78a57a1ba797e11b40c262303212745ea097f912e6a34d7eeaf",
+      "batchId": "groups-007",
+      "sourceGroup": "g4175",
+      "sourceGroupDigest": "75587662ece95f9792f6f40c9380a1c28be5fb28aa8dfbf40e708a8d5be4ae8b",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -164993,9 +165094,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0161",
-      "sourceGroupDigest": "17cc578cbcb5a78a57a1ba797e11b40c262303212745ea097f912e6a34d7eeaf",
+      "batchId": "groups-007",
+      "sourceGroup": "g4176",
+      "sourceGroupDigest": "075d03714d26932df0fe8586393ad008b12c1fbc5c94d9e2cc538ac872bf0f55",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -165013,9 +165114,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0162",
-      "sourceGroupDigest": "12ae1b59f9b9b22d46d1f15fa963d8561ecc7c7b13a49eae6b8d84e23d720361",
+      "batchId": "groups-007",
+      "sourceGroup": "g4177",
+      "sourceGroupDigest": "7640d40527a8c649a925437477ce04cfec6cfa1e80c220dacbc0bb3b4a580047",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -165033,9 +165134,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0162",
-      "sourceGroupDigest": "12ae1b59f9b9b22d46d1f15fa963d8561ecc7c7b13a49eae6b8d84e23d720361",
+      "batchId": "groups-007",
+      "sourceGroup": "g4178",
+      "sourceGroupDigest": "afa7118283c9cc8e7c1c9934b57829b29b6c76a2ce2fa31838f9a53392729e97",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -165053,9 +165154,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0163",
-      "sourceGroupDigest": "29fa8a3bcb12f37384dda192301ad058a0b747c8ea820550e8669b21b85f3b4a",
+      "batchId": "groups-007",
+      "sourceGroup": "g4179",
+      "sourceGroupDigest": "ad6e1287a2bc759b474c6015df9ccd344d36e81da99579c37831af1654489820",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -165072,11 +165173,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0163",
-      "sourceGroupDigest": "29fa8a3bcb12f37384dda192301ad058a0b747c8ea820550e8669b21b85f3b4a",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "f8efc03b6733a23cf776ce1cfb09042b0541fcb96b771ba84e1b06c34a47d142.mp3",
+      "bytes": 80720,
+      "digest": "d78d4fe9d839a7aaf082743360d14fe1589e76dea4d609e956c124df2dd216d4",
+      "duration": 20.02,
+      "verifiedAt": 1792730760617,
+      "review": "复用原始分组录音，按实际静音间隔切分。逐项核对所引字典：弟（亲属义）/第 dì、何/和 hé、劲（强劲义）/净 jìng、常/长（相应音项）cháng。仅接受这份完整转写中的列明差异；替换后全部原文逐字一致，不按拼音近似批量放行，不改正文；非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "赠从第其二，刘桢亭亭山上松，瑟瑟谷中风，风声一和盛，松枝一何净，冰霜正惨凄，终岁长端正岂不罹凝寒，松柏有本性。",
+        "whisper": "赠从第七二,刘真,亭亭山上松,瑟瑟谷中风,风声亦和盛,松枝亦和静,冰霜正惨期,终碎长端正,起步离宁寒,松柏有本性。"
+      },
+      "sourceGroup": "g4180",
+      "clipStart": 0,
+      "clipEnd": 19.78,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "bf68512b1a63a29d919c6b5839ea163215cb9ef56bc5620ec3b034cedf8b86c8",
@@ -165093,9 +165204,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0163",
-      "sourceGroupDigest": "29fa8a3bcb12f37384dda192301ad058a0b747c8ea820550e8669b21b85f3b4a",
+      "batchId": "groups-007",
+      "sourceGroup": "g4181",
+      "sourceGroupDigest": "ee5a5d76df8f38023a98eaad4e79e07cd0a7e028fc8c3a5657591eeb470d49cc",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -165112,11 +165223,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0164",
-      "sourceGroupDigest": "10533bdd5c00dcacca7da9330bcd4e2f7388754cce45f3c9dd19c9e0ca43f754",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "e24785b537ae947c2c162107a39d1d1439303c647506efde31eb7d2a68844764.mp3",
+      "bytes": 141488,
+      "digest": "9e0fe815c7da22ef7ec30ced9bc60ddd2a84c3646939ca058eb0e2e688a60757",
+      "duration": 35.24,
+      "verifiedAt": 1792730760621,
+      "review": "复用原始分组录音，按实际静音间隔切分。逐项核对所引字典：环/还（相应音项）huán、城/诚 chéng、池/驰 chí、坚/兼 jiān。仅接受这份完整转写中的列明差异；替换后全部原文逐字一致，不按拼音近似批量放行，不改正文；非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "得道多助失道寡助孟子天时不如地利，地利不如人和，三里之城七里之郭，环而攻之而不胜，夫还而攻之，必有得天时者矣。然而不胜者是天时不如地利也。诚非不高也，驰非不深也，兵革非不兼利也米粟非不多也，委而去之，是地利不如人和也。",
+        "whisper": "得道多助,诗道寡助,孟子,天时不如地利,地利不如人和,三里之城,七里之锅,还而公之而不胜,夫还而公之,必有得天时者已,然而不胜者,是天时不如地利也,城非不高也,池非不深也,兵阁非不坚立也,米素非不多也为而去之是地利不如人和也"
+      },
+      "sourceGroup": "g4182",
+      "clipStart": 0,
+      "clipEnd": 35,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "85a4e9feeeda6c3fd4ab123edf229a5659d35377c38bfa852db4535b945a2344",
@@ -165132,11 +165253,21 @@
           "part": 1
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0164",
-      "sourceGroupDigest": "10533bdd5c00dcacca7da9330bcd4e2f7388754cce45f3c9dd19c9e0ca43f754",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "85a4e9feeeda6c3fd4ab123edf229a5659d35377c38bfa852db4535b945a2344.mp3",
+      "bytes": 91520,
+      "digest": "221a1bcb291d928e21ececbfa4d1216d88678c9432a0e4f8f04a40f99b4459b8",
+      "duration": 22.74,
+      "verifiedAt": 1792731089006,
+      "review": "复用原始分组录音，按实际静音间隔切分。逐项核对汉典普通话音项：固/故 gù、溪/西 xī、至/治 zhì、畔/叛/盼 pàn、攻/公 gōng。仅这份完整转写中的列明差异；替换后全文逐字一致，不按拼音近似批量放行，不改正文；非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "故曰，域民不以封疆之界，故国不以山西之险，威天下不以兵革之利，得道者多助失道者寡助寡助之治亲戚叛之，多助之治天下顺之，以天下之所顺，公亲戚之所盼，故君子有不战战必胜矣。",
+        "whisper": "故曰,玉民不以封疆之戒,故国不以山西之险,为天下不以兵阁之力,得道者多助,失道者寡助,寡助之志,亲戚叛之,多助之志,天下顺之,以天下之所顺,供亲戚之所叛,故君子有不战,战必胜矣。"
+      },
+      "sourceGroup": "g4183",
+      "clipStart": 0,
+      "clipEnd": 22.5,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "e87641c73c9c1011543cd3e0a267e6c28b2d1459855317c9abb5faa74681d28f",
@@ -165153,9 +165284,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0166",
-      "sourceGroupDigest": "b47a42c972c14abd526d66251926b35235ba076cb2a56adc792bc30177db08b7",
+      "batchId": "groups-007",
+      "sourceGroup": "g4184",
+      "sourceGroupDigest": "73c8e1ecdd59cafb6f7f1b4587c3fc950be9d6c5b6d9fcd9ed42739285c6b5e3",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -167406,11 +167537,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-006",
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "62854d6fd679aba141d14476c44862719654912b452fb332c6a1478764f614f9.mp3",
+      "bytes": 7280,
+      "digest": "9e4bef752fa6ee9ad98b2e2dde0faa097026999d8d732755300a3fb63ced909e",
+      "duration": 1.665,
+      "verifiedAt": 1792727739143,
+      "review": "复用原始分组录音，按实际静音间隔切分。转写为数字或同音字母：2；与该单词读音等价，已逐项核对，未更改词卡正文。非真人审听。",
+      "transcripts": {
+        "senseVoice": "2.",
+        "whisper": "2"
+      },
       "sourceGroup": "g4002",
-      "sourceGroupDigest": "8dcce381ac62f9b8dde842685ccf7e4bedded946148e02529d1b78a4f2596e74",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 0,
+      "clipEnd": 1.425,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "1c9d3770d4b17f220ed1b3fa1d2d20c631d7a10d715fbbbd19f6b23679f6fc13",
@@ -168145,11 +168287,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3015",
-      "sourceGroupDigest": "c7eab5493f5ffd7390e450a2cefb7b0c7cccbe41ba71fab4c914c8cfb94d2483",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "4630d14c96c0b8ada537e8eb4668a808768dec50df04f63b2302e79a63932d6c.mp3",
+      "bytes": 92384,
+      "digest": "226171983766842c6daf90576d1e2041ca7c5fe89a882b936e3af55eefef8953",
+      "duration": 22.94,
+      "verifiedAt": 1792730159141,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "We take an apple and a pe to the park. Mu brings some grapes in a small box. We wash our hands. before eating the fruit.",
+        "whisper": "We take an apple and a pear to the park. Mum brings some grapes in a small box. We wash our hands before eating the fruit."
+      },
+      "sourceGroup": "g4020",
+      "clipStart": 0,
+      "clipEnd": 22.7,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "d595b71d701f7d4b2e93205c07cfd47e7a5f3a7bbd59362714bca62cf50ee3b5",
@@ -168166,12 +168319,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3015",
-      "sourceGroupDigest": "c7eab5493f5ffd7390e450a2cefb7b0c7cccbe41ba71fab4c914c8cfb94d2483",
-      "derivedFrom": "4630d14c96c0b8ada537e8eb4668a808768dec50df04f63b2302e79a63932d6c",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "d595b71d701f7d4b2e93205c07cfd47e7a5f3a7bbd59362714bca62cf50ee3b5.mp3",
+      "bytes": 32048,
+      "digest": "70cb8ca57a4fa8bdc05e3d1ec30c69635045a7e7f78291924459d7ddf0295c5a",
+      "duration": 7.86,
+      "verifiedAt": 1792730159142,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Mom brings some grapes in a small box.",
+        "whisper": "Mum brings some grapes in a small box."
+      },
+      "sourceGroup": "g4020",
+      "clipStart": 8.185,
+      "clipEnd": 15.805000000000001,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "039cc2a0df3661a2de1408583865f4e742bef948c6d59072020b12631fb8a0ea",
@@ -168188,12 +168351,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3016",
-      "sourceGroupDigest": "ff7dbf6f0e7d51090ae751aeb416ea8ceeb05fc9b0b5042e36599e00e95f557a",
-      "derivedFrom": "ae0e6af1c1ff646c692481ff3d41508410a2d963251a9240d0a68f74c1bb969c",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "039cc2a0df3661a2de1408583865f4e742bef948c6d59072020b12631fb8a0ea.mp3",
+      "bytes": 34208,
+      "digest": "2beb64395ac87f6ccf0445880e3dfb2e3b3523ea08a2d46cdc6ce654d87653a4",
+      "duration": 8.42,
+      "verifiedAt": 1792730159138,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "The robot cannot cook. So we help mum in the kitchen."
+      },
+      "sourceGroup": "g4018",
+      "clipStart": 0,
+      "clipEnd": 8.18,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "372efddf4d5d8d1b5903579ebacbf310a0ad98ca206cde220c7f7e574aedc862",
@@ -261582,21 +261754,21 @@
     }
   ],
   "localCleanup": {
-    "archiveFilesMovedFromDownloads": 97,
-    "rawGroupsMovedAfterCompleteCloudReadback": 275,
-    "logicalBytesMoved": 7349636652,
+    "archiveFilesMovedFromDownloads": 111,
+    "rawGroupsMovedAfterCompleteCloudReadback": 297,
+    "logicalBytesMoved": 7618999450,
     "trashEmptiedByAgent": false,
     "unverifiedOriginalsRetention": "Retained in the ignored task directory; raw cleanup requires receipts for every primary and derived clip."
   },
   "summary": {
     "totalPublicSegments": 3990,
-    "storedSegments": 1420,
-    "storedBytes": 39551168,
-    "reviewPending": 234,
+    "storedSegments": 1433,
+    "storedBytes": 40774912,
+    "reviewPending": 221,
     "notGenerated": 2336,
     "types": {
       "word": 770,
-      "poetry": 180,
+      "poetry": 193,
       "sentence": 363,
       "english-reading": 107
     },
@@ -261610,14 +261782,14 @@
       },
       "en-US": {
         "totalSegments": 3627,
-        "storedSegments": 3283,
-        "storedBytes": 57839312,
-        "reviewPending": 255,
+        "storedSegments": 3287,
+        "storedBytes": 58005232,
+        "reviewPending": 251,
         "notGenerated": 89
       }
     },
-    "playablePublicSegments": 3644,
-    "fullyCoveredEnglishAccents": 3143,
-    "allStoredBytes": 155529328
+    "playablePublicSegments": 3657,
+    "fullyCoveredEnglishAccents": 3146,
+    "allStoredBytes": 156918992
   }
 }
