@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "createdAt": "2026-10-23T08:22:03.073Z",
+  "createdAt": "2026-10-23T10:23:29.585Z",
   "provider": "Doubao Work built-in seed-audio",
   "funding": "existing membership quota only; no paid API or purchase",
   "applicationCommit": "98cbd3a",
@@ -170028,6 +170028,7 @@
       "status": "review-pending",
       "batchId": "groups-006",
       "sourceGroup": "g4035",
+      "sourceGroupDigest": "e3fba05b7a76c1d833ff27d0e13ad2273d7d100f1a40e457901187b08c3e6d0e",
       "review": "独立转写为 Baul / Ball / Bowl，元音有分歧；不能以第三模型恢复预期词头证明发音正确。原录音保留，待真人核音，不重复生成。",
       "reviewOutcome": "pronunciation-pending"
     },
@@ -170327,11 +170328,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2040",
-      "sourceGroupDigest": "6cdd98becf530744fa44e008d0d11560a7c3038a8055749203db7da7958033d2",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "8851bdda1a182e9b067b9ed4e924830bea6ce7d5fda218149bcb53b5b17608f0.mp3",
+      "bytes": 127088,
+      "digest": "14f4146adac6fef106abb20c25b85d903cbcc822a076ac36632780ee2bda0b81",
+      "duration": 31.62,
+      "verifiedAt": 1792744239599,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Our school has a small reading corner beside the art room. We keep it tidy and put books back after reading My classmates are making a project about their favorite school places. I choose this corner because I can read and think quietly.",
+        "whisper": "Our school has a small reading corner beside the art room. We keep it tidy and put books back after reading. My classmates are making a project about their favourite school places. I choose this corner because I can read and think quietly."
+      },
+      "sourceGroup": "g4043",
+      "clipStart": 0,
+      "clipEnd": 31.38,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "0b446c0ecaa24731492037aa6691428bfae35d5ea678ad77995e4a509fa9e707",
@@ -170348,12 +170360,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2040",
-      "sourceGroupDigest": "6cdd98becf530744fa44e008d0d11560a7c3038a8055749203db7da7958033d2",
-      "derivedFrom": "8851bdda1a182e9b067b9ed4e924830bea6ce7d5fda218149bcb53b5b17608f0",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "0b446c0ecaa24731492037aa6691428bfae35d5ea678ad77995e4a509fa9e707.mp3",
+      "bytes": 34496,
+      "digest": "49da118e69532b45efd8eab487a0cfb2e8d49ab355228862751ce16d544eea95",
+      "duration": 8.465,
+      "verifiedAt": 1792744239602,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "My classmates are making a project about their favorite school places.",
+        "whisper": "My classmates are making a project about their favourite school places."
+      },
+      "sourceGroup": "g4043",
+      "clipStart": 16.445,
+      "clipEnd": 24.67,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "88d0ab0896d2497c41c2b974af755f9be496b23023077173d8575b299d573973",
@@ -170370,11 +170392,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3040",
-      "sourceGroupDigest": "1712f65cd5ba365dd91d9a336447d36134f8909730e35bec2b69c9d2bb43c852",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "88d0ab0896d2497c41c2b974af755f9be496b23023077173d8575b299d573973.mp3",
+      "bytes": 139472,
+      "digest": "615744ec6832ea6c72ceaae6386e67f438f6356d9bb8f6fe2fa87c66708453ad",
+      "duration": 34.74,
+      "verifiedAt": 1792744346762,
+      "review": "复用原始分组录音，按实际静音间隔切分。仅英美拼写或序数词数字记法不同，所读词项一致；原文保持英式拼写。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Our school has a small reading corner beside the art room. We keep it tidy and put books back after reading My classmates are making a project about their favorite school places I choose this corner because I can read and think quietly.",
+        "whisper": "Our school has a small reading corner beside the art room. We keep it tidy and put books back after reading. My classmates are making a project about their favorite school places. I choose this corner because I can read and think quietly. You"
+      },
+      "sourceGroup": "g4048",
+      "clipStart": 0,
+      "clipEnd": 34.5,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "e3e550b84d8a5ce337fdedb5ba0c2ff081db5dce2f33299d103dfb6c4a962f0b",
@@ -170391,12 +170424,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3040",
-      "sourceGroupDigest": "1712f65cd5ba365dd91d9a336447d36134f8909730e35bec2b69c9d2bb43c852",
-      "derivedFrom": "88d0ab0896d2497c41c2b974af755f9be496b23023077173d8575b299d573973",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "e3e550b84d8a5ce337fdedb5ba0c2ff081db5dce2f33299d103dfb6c4a962f0b.mp3",
+      "bytes": 34784,
+      "digest": "817074434d8be6627a04889b372b45cf384259e9cb86c8e95945312c7905641a",
+      "duration": 8.535,
+      "verifiedAt": 1792749596745,
+      "review": "复用原始分组录音，按实际静音间隔切分。仅英美拼写或序数词数字记法不同，所读词项一致；原文保持英式拼写。非真人审听。",
+      "transcripts": {
+        "senseVoice": "My classmates are making a project about their favorite school places.",
+        "whisper": "My classmates are making a project about their favorite school places."
+      },
+      "sourceGroup": "g4048",
+      "clipStart": 14.955,
+      "clipEnd": 23.25,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "86aaa01ba4876b56d940f956b80cb6d6a727ff17f64d36629c8d954c0ae0b1f3",
@@ -170413,11 +170456,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2041",
-      "sourceGroupDigest": "db7a9e9043847362efddeb74a32a85d772dcec948cdfa16023ba194d56e06082",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "86aaa01ba4876b56d940f956b80cb6d6a727ff17f64d36629c8d954c0ae0b1f3.mp3",
+      "bytes": 145808,
+      "digest": "46f834782c381540646b55eb02c4aa8de16fa5eb84321dae17e33a5f9bf187fa",
+      "duration": 36.32,
+      "verifiedAt": 1792744239612,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Lily often brings an interesting book to share with our class When I cannot understand a word, She helps me find its meaning She does not give me every answer. but asks useful questions, I think a helpful classmate makes learning easier and more enjoyable.."
+      },
+      "sourceGroup": "g4044",
+      "clipStart": 0,
+      "clipEnd": 36.08,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "41680dbe8ba93554162269f46dbd9eb3e24228f4bc45f996e89ea1fb7ed858e1",
@@ -170434,12 +170487,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2041",
-      "sourceGroupDigest": "db7a9e9043847362efddeb74a32a85d772dcec948cdfa16023ba194d56e06082",
-      "derivedFrom": "86aaa01ba4876b56d940f956b80cb6d6a727ff17f64d36629c8d954c0ae0b1f3",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "41680dbe8ba93554162269f46dbd9eb3e24228f4bc45f996e89ea1fb7ed858e1.mp3",
+      "bytes": 38240,
+      "digest": "371557ab36d8250ffceb0194af24c76b3660ee318406918de401a8dedd240eff",
+      "duration": 9.43,
+      "verifiedAt": 1792744450007,
+      "review": "复用原始分组录音，原始录音完整词序已定位；重新截取连续原音频并保留句尾，未合成、拼接或替换已通过录音。切后另做独立转写核对。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "I think a helpful classmate makes learning easier and more enjoyable.",
+        "whisper": "I think a helpful classmate makes learning easier and more enjoyable."
+      },
+      "sourceGroup": "g4044",
+      "clipStart": 26.89,
+      "clipEnd": 36.08,
+      "batchId": "doubao-20261022-groups-157"
     },
     {
       "key": "75eb19b16861fdc007c32e5a1a9b1150c4128bca0bfb3b2fdba088e4610c3704",
@@ -170584,11 +170647,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3045",
-      "sourceGroupDigest": "297a4b9cb39538a5d7ef21a0e54e2c65deff14802381c756395e38d683bdcbc5",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "27b51bfbf762cb10b9aaa1c1f8d2b6b7b7c74cc32e3154546c205996a8dfc56f.mp3",
+      "bytes": 142640,
+      "digest": "3b20a843cec6ab1a0cd9b938f0fd4569cd281d566b4bf29ddcd40f14493bca0b",
+      "duration": 35.52,
+      "verifiedAt": 1792744346773,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "While playing near the window, Sam breaks a small flower pot. He feels worried, but tells his mother the truth at once They move the plant to another pot and clean the floor together. Sam learns that being honest is the first step towards solving a problem.."
+      },
+      "sourceGroup": "g4049",
+      "clipStart": 0,
+      "clipEnd": 35.28,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "2fadca2b40f10318e8f1eb96c811d274519ab24e8100a6856094b9fb70af4389",
@@ -170648,11 +170721,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3046",
-      "sourceGroupDigest": "c8d18a2a8bbfabd65e7c5524ab294b7fb0f8107bf92dc053392a3f21f10b0ec1",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "069a10cc2f5ced2835401c02684276864bfd063d49a71e8459b842f50880ecfa.mp3",
+      "bytes": 147536,
+      "digest": "72a078ce8d72004a56b0dec35e5269d4c5812acb93b4767908e594ab8a194b3e",
+      "duration": 36.74,
+      "verifiedAt": 1792744346784,
+      "review": "复用原始分组录音，按实际静音间隔切分。用户于 2026-10-23 明确接受美式 Mom 并复用现有录音；本条为通用录音或生成请求明确按已认可美式样音生成的 en-US 录音。除已记录的拼写或数词记法差异外，其余词项完整一致。原文保持 Mum，不据此推断或改标口音；此接受不适用于 en-GB 或同时列出 mum/mom 两个词项的词卡。非真人审听。",
+      "transcripts": {
+        "senseVoice": "The weather report says there will be heavy rain this morning Before leaving home Mu and I check the sky and take our raincoats we walk carefully because the path is wet At school, I write the date and weather in our class weather diary.",
+        "whisper": "The weather report says there will be heavy rain this morning. Before leaving home, Mom and I check the sky and take our raincoats. We walk carefully because the path is wet. At school, I write the date and weather in our class weather diary."
+      },
+      "sourceGroup": "g4050",
+      "clipStart": 0,
+      "clipEnd": 36.5,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "7b1593cf4e650b8179bbece1937bb3290d84f6de97353bbc08a67b2e162d104c",
@@ -170669,12 +170753,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3046",
-      "sourceGroupDigest": "c8d18a2a8bbfabd65e7c5524ab294b7fb0f8107bf92dc053392a3f21f10b0ec1",
-      "derivedFrom": "069a10cc2f5ced2835401c02684276864bfd063d49a71e8459b842f50880ecfa",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "7b1593cf4e650b8179bbece1937bb3290d84f6de97353bbc08a67b2e162d104c.mp3",
+      "bytes": 38816,
+      "digest": "ae82ca4bf3ae76d38d5b03ddae9ec944dea0ec95c53213d6df0ede6d5d59436b",
+      "duration": 9.55,
+      "verifiedAt": 1792744346787,
+      "review": "复用原始分组录音，按实际静音间隔切分。用户于 2026-10-23 明确接受美式 Mom 并复用现有录音；本条为通用录音或生成请求明确按已认可美式样音生成的 en-US 录音。除已记录的拼写或数词记法差异外，其余词项完整一致。原文保持 Mum，不据此推断或改标口音；此接受不适用于 en-GB 或同时列出 mum/mom 两个词项的词卡。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Before leaving home, mom and I check the sky and take our raincoats.",
+        "whisper": "Before leaving home, Mom and I check the sky and take our raincoats."
+      },
+      "sourceGroup": "g4050",
+      "clipStart": 9.36,
+      "clipEnd": 18.67,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "b87e9f215cddef6de3d694306789920b80403d35e84e469ddb31096d8cfa2173",
@@ -170691,11 +170785,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2049",
-      "sourceGroupDigest": "a47af23f1fe318b8508911a1f7617785a7e1bee5cbfdb02d052e950fa1d126fb",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "b87e9f215cddef6de3d694306789920b80403d35e84e469ddb31096d8cfa2173.mp3",
+      "bytes": 137600,
+      "digest": "07b55e60096d9b004c60094a543354eb86b993a585fca95929015c0d82d97758",
+      "duration": 34.24,
+      "verifiedAt": 1792744346749,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "My neighbour has a parrot and asks us to speak softly near it. We watch it from a short distance and do not put fingers into its cage. It owner gives its suitable food and fresh water. I learn that liking an animal also means respecting its needs..",
+        "whisper": "My neighbour has a parrot and asks us to speak softly near it. We watch it from a short distance and do not put fingers into its cage. Its owner gives it suitable food and fresh water. I learn that liking an animal also means respecting its needs."
+      },
+      "sourceGroup": "g4046",
+      "clipStart": 0,
+      "clipEnd": 34,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "4797212b5ea08d8a74ce1415af44c6eb5b4175414baa167cddddb8c51be04e58",
@@ -170712,12 +170817,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2049",
-      "sourceGroupDigest": "a47af23f1fe318b8508911a1f7617785a7e1bee5cbfdb02d052e950fa1d126fb",
-      "derivedFrom": "b87e9f215cddef6de3d694306789920b80403d35e84e469ddb31096d8cfa2173",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "4797212b5ea08d8a74ce1415af44c6eb5b4175414baa167cddddb8c51be04e58.mp3",
+      "bytes": 32624,
+      "digest": "efafdcd037956dc4841a59ed9e0a6db9f507fa652fc107d861503fd0d43b0804",
+      "duration": 8.015,
+      "verifiedAt": 1792744346752,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "My neighbor has a parrot and asks us to speak softly near it.",
+        "whisper": "My neighbour has a parrot and asks us to speak softly near it."
+      },
+      "sourceGroup": "g4046",
+      "clipStart": 0,
+      "clipEnd": 7.775,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "67b12992e18450e921a1b2a92044e5513b64c305fe079f710d4cd47ff2e9621d",
@@ -170734,11 +170849,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3049",
-      "sourceGroupDigest": "c85293ca9a0202c48be8b944f57d29083d900e9d6f2da4eaf4768f21cfd885c9",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "67b12992e18450e921a1b2a92044e5513b64c305fe079f710d4cd47ff2e9621d.mp3",
+      "bytes": 107504,
+      "digest": "c5227c3784a2ba831286c40c10b6e7fb8487f9a1eb5b70e097c1d749ec8eaac8",
+      "duration": 26.74,
+      "verifiedAt": 1792744575094,
+      "review": "复用原始分组录音，按实际静音间隔切分。用户于 2026-10-23 明确接受美式 Mom 并复用现有录音；本条为通用录音或生成请求明确按已认可美式样音生成的 en-US 录音。除已记录的拼写或数词记法差异外，其余词项完整一致。原文保持 Mum，不据此推断或改标口音；此接受不适用于 en-GB 或同时列出 mum/mom 两个词项的词卡。非真人审听。",
+      "transcripts": {
+        "senseVoice": "On Saturday morning, my family shares the housework. Dad cleans the kitchen while mom puts books away in the living room. I fold my clothes and carry them to my bedroom When we finish we sit together. and enjoy our tidy home.",
+        "whisper": "On Saturday morning, my family shares the housework. Dad cleans the kitchen, while Mom puts books away in the living room. I fold my clothes and carry them to my bedroom. When we finish, we sit together and enjoy our tidy home."
+      },
+      "sourceGroup": "g4051",
+      "clipStart": 0,
+      "clipEnd": 26.5,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "fbf8ac8916fa9cb903a93abf798fa22b5c26582577ed2f05c4d4adb9a4abbf3b",
@@ -170777,12 +170903,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3049",
-      "sourceGroupDigest": "c85293ca9a0202c48be8b944f57d29083d900e9d6f2da4eaf4768f21cfd885c9",
-      "derivedFrom": "67b12992e18450e921a1b2a92044e5513b64c305fe079f710d4cd47ff2e9621d",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "0e0062ece76c3fd1451a6b7f6a2d9f4c0e127317f7ae36509faf73f16a9e46e8.mp3",
+      "bytes": 29456,
+      "digest": "ea359c26e52bda5c453149512c23cbdc3de412b78e02709598a9ddfa25a6f1c2",
+      "duration": 7.21,
+      "verifiedAt": 1792744575097,
+      "review": "复用原始分组录音，按实际静音间隔切分。用户于 2026-10-23 明确接受美式 Mom 并复用现有录音；本条为通用录音或生成请求明确按已认可美式样音生成的 en-US 录音。除已记录的拼写或数词记法差异外，其余词项完整一致。原文保持 Mum，不据此推断或改标口音；此接受不适用于 en-GB 或同时列出 mum/mom 两个词项的词卡。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Dad cleans the kitchen while mom puts books away in the living room.",
+        "whisper": "Dad cleans the kitchen while Mom puts books away in the living room."
+      },
+      "sourceGroup": "g4051",
+      "clipStart": 6.07,
+      "clipEnd": 13.04,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "dc292dd43b3a69f79ee3f80efb913047e2bf9ba48c967f7a711c7b7b43c35532",
@@ -170951,9 +171087,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2055",
-      "sourceGroupDigest": "157854c59cf4d7fa702f12f3e37e0a636433ad00a12c0d65788322cb6aff8b93",
+      "batchId": "groups-006",
+      "sourceGroup": "g4052",
+      "sourceGroupDigest": "60aa945ff69c6b106a12cb6998a8c4c62472ec54a073011ca170c16bae50fd30",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -170971,11 +171107,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2055",
-      "sourceGroupDigest": "157854c59cf4d7fa702f12f3e37e0a636433ad00a12c0d65788322cb6aff8b93",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "c23105f7c00bd2f2e8ce7bfb405ad72826b5e914bd8b092a3ae191b0bb026dd9.mp3",
+      "bytes": 8432,
+      "digest": "33fed1db4ca007dd11340bfa76ad9c97a0988d27b98f8a1b6ff38b3d53803450",
+      "duration": 1.95,
+      "verifiedAt": 1792745176250,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Music."
+      },
+      "sourceGroup": "g4052",
+      "clipStart": 1.595,
+      "clipEnd": 3.305,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "0e40323ac71338d835107e0de5371ccaa42a5a687d93bba2c5740b9f65d1d666",
@@ -171024,11 +171170,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2055",
-      "sourceGroupDigest": "157854c59cf4d7fa702f12f3e37e0a636433ad00a12c0d65788322cb6aff8b93",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "dad34eb117c7b17240fd94f1a4af8a7e20e0d4b16956abddcc93b9f325a77142.mp3",
+      "bytes": 10304,
+      "digest": "3e3d847eed3501129e968c18fa8bc9e565d361e0887401dee86dc915dacda4e7",
+      "duration": 2.42,
+      "verifiedAt": 1792745176251,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Scientist."
+      },
+      "sourceGroup": "g4052",
+      "clipStart": 3.305,
+      "clipEnd": 5.485,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "17e3d1e4f429495d132c5086b6a565c687240512a85431d6e696fda773bcdd68",
@@ -171077,11 +171233,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3055",
-      "sourceGroupDigest": "f553fb079551717ab88cae05ee6394f45b12323a1350457b9b695fb93a9001ad",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "7fb6e7d93d091acbdd4b03b51cae54b7597891aaf63ecfcf906beddc42ebc3d5.mp3",
+      "bytes": 7856,
+      "digest": "7697da824c30e04356fe8e9005f5377660596b2adf2820943614d94d6826ac80",
+      "duration": 1.805,
+      "verifiedAt": 1792745176254,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Potato."
+      },
+      "sourceGroup": "g4053",
+      "clipStart": 0,
+      "clipEnd": 1.565,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "b2866c3a38758ca89845ab7b5ad9ecafc273c5003db27e37e9e4e6a21eb08c4b",
@@ -171098,11 +171264,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3055",
-      "sourceGroupDigest": "f553fb079551717ab88cae05ee6394f45b12323a1350457b9b695fb93a9001ad",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "b2866c3a38758ca89845ab7b5ad9ecafc273c5003db27e37e9e4e6a21eb08c4b.mp3",
+      "bytes": 9584,
+      "digest": "8c52c734df91998fc2e68b31639f2a9d1741d0a5fd2c1fbf6380124d2e393ebe",
+      "duration": 2.2349375,
+      "verifiedAt": 1792745176255,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Scientist."
+      },
+      "sourceGroup": "g4053",
+      "clipStart": 1.565,
+      "clipEnd": 3.5599999999999996,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "6188763b7bef414a15595960b43ff8b4515256eb89184b33094d36a853b9d594",
@@ -171119,11 +171295,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2056",
-      "sourceGroupDigest": "314b56290e629f6f7eb555c7b3b108f50cdec5f70c755ab75d5a2486c25a9b0c",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "6188763b7bef414a15595960b43ff8b4515256eb89184b33094d36a853b9d594.mp3",
+      "bytes": 8720,
+      "digest": "fb5748be71c8856099ecfd9c4488f506e33896585c651ea678dfd0ed3098e872",
+      "duration": 2.05,
+      "verifiedAt": 1792745176252,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "2.",
+        "whisper": "tour"
+      },
+      "sourceGroup": "g4052",
+      "clipStart": 5.485,
+      "clipEnd": 7.295,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "3ea34ef189bc5da7291dfb2668412fce248f7e7c74f2ab3aec8a256130109977",
@@ -171140,11 +171327,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3056",
-      "sourceGroupDigest": "1139c3eb5e0c3c6210b1a9cde5d718b8ce4430e1912d2dbdb253ed0a6f0a869c",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "3ea34ef189bc5da7291dfb2668412fce248f7e7c74f2ab3aec8a256130109977.mp3",
+      "bytes": 8288,
+      "digest": "a621de24d90a0aee46f434c1ecf1ff45a6db1a1724c1d6b84083a3c3455e6e04",
+      "duration": 1.9300625,
+      "verifiedAt": 1792745176256,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Will."
+      },
+      "sourceGroup": "g4053",
+      "clipStart": 3.5599999999999996,
+      "clipEnd": 5.25,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "bf94aacb93b02c81543a9197cb81b8c247364e4dd7ce0e22031b63ea2e9bfa06",
@@ -171161,11 +171358,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3057",
-      "sourceGroupDigest": "931d89ad1da1adbdf9d6ebc52106a982f9d608b964469e7b596317cb9a1f5f93",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "bf94aacb93b02c81543a9197cb81b8c247364e4dd7ce0e22031b63ea2e9bfa06.mp3",
+      "bytes": 7280,
+      "digest": "ed00cfec2de4bc38cc01c00389b0b7b3dae6f3c55cd3792e5fafefc2021c43e9",
+      "duration": 1.67,
+      "verifiedAt": 1792745176257,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Hippo."
+      },
+      "sourceGroup": "g4053",
+      "clipStart": 5.25,
+      "clipEnd": 6.68,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "4da36d793b3b496b3cfa768e0e7dc91e9dc2ff5716a635664fba12f7176ad198",
@@ -171182,11 +171389,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2059",
-      "sourceGroupDigest": "986e989a249cb04943ec72a66e23b848b1fe06af2aaaf10339306c22d5e99f21",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "4da36d793b3b496b3cfa768e0e7dc91e9dc2ff5716a635664fba12f7176ad198.mp3",
+      "bytes": 8432,
+      "digest": "2293b2976c79b3498ac38e8e19cf3eaf9a6ed5e07d6b68566c8b91b81529cd2a",
+      "duration": 1.9469375,
+      "verifiedAt": 1792745176253,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Stororey.",
+        "whisper": "stormy"
+      },
+      "sourceGroup": "g4052",
+      "clipStart": 7.295,
+      "clipEnd": 9,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "3bfe61a7fdb8dfd095691be6d85ca639f135b2c6cadbe05641dd71bee67f6731",
@@ -171247,10 +171465,11 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3063",
-      "sourceGroupDigest": "10217573bed8fb42adaee87c36df51bb421ad1a8108fac191e3b87f327482dc9",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "batchId": "groups-006",
+      "sourceGroup": "g4065",
+      "sourceGroupDigest": "23958f4294cc7dfee1cf7840b8b8c1a303ef84a0e7812c261bc25717fd5ea0c3",
+      "review": "原始文件和同次生成的恢复副本均截断；已停止重复下载，保留原件与恢复记录，未重新合成。 未取得完整且核对通过的对应片段前不供小程序播放；不将文件截断记为朗读错音。",
+      "reviewOutcome": "incomplete-source"
     },
     {
       "key": "7a226037cc176d35440e71a20074a28d89e328466b73ced07919b97350817d1d",
@@ -171268,11 +171487,12 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3063",
-      "sourceGroupDigest": "10217573bed8fb42adaee87c36df51bb421ad1a8108fac191e3b87f327482dc9",
+      "batchId": "groups-006",
+      "sourceGroup": "g4065",
+      "sourceGroupDigest": "23958f4294cc7dfee1cf7840b8b8c1a303ef84a0e7812c261bc25717fd5ea0c3",
       "derivedFrom": "9154f3766161b584e3ce331e891f6a24143e31ae7d9b19d57853ba99a0387f2e",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "review": "原始文件和同次生成的恢复副本均截断；已停止重复下载，保留原件与恢复记录，未重新合成。 未取得完整且核对通过的对应片段前不供小程序播放；不将文件截断记为朗读错音。",
+      "reviewOutcome": "incomplete-source"
     },
     {
       "key": "268aa24ded656d6eba7d8bc5ef439c71ec09a78164ef154c72047b3d078fb3f4",
@@ -171377,10 +171597,11 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3070",
-      "sourceGroupDigest": "09abd13dacfea99ad784678b6874fbb21d8e91c1dceeb638d21edb4cffa1b021",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "batchId": "groups-006",
+      "sourceGroup": "g4066",
+      "sourceGroupDigest": "7538dc043ab355ea30804812b9c0d24c85fbd88a1c9e122f7227f01cd30ac818",
+      "review": "原始文件和同次生成的恢复副本均截断；已停止重复下载，保留原件与恢复记录，未重新合成。 未取得完整且核对通过的对应片段前不供小程序播放；不将文件截断记为朗读错音。",
+      "reviewOutcome": "incomplete-source"
     },
     {
       "key": "eaae68a45b56d4ffe6c1fda4ad9509e702af4801ec44570135a264590c2b9785",
@@ -171398,11 +171619,12 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3070",
-      "sourceGroupDigest": "09abd13dacfea99ad784678b6874fbb21d8e91c1dceeb638d21edb4cffa1b021",
+      "batchId": "groups-006",
+      "sourceGroup": "g4066",
+      "sourceGroupDigest": "7538dc043ab355ea30804812b9c0d24c85fbd88a1c9e122f7227f01cd30ac818",
       "derivedFrom": "da908db9aa290f554a9903e7561821c35508767fd5d2c412e077d6c286ef2444",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "review": "原始文件和同次生成的恢复副本均截断；已停止重复下载，保留原件与恢复记录，未重新合成。 未取得完整且核对通过的对应片段前不供小程序播放；不将文件截断记为朗读错音。",
+      "reviewOutcome": "incomplete-source"
     },
     {
       "key": "b348dd44ae6059b4694c9c1f7a293a8652d9e560a7a047f27323427fe9a909da",
@@ -171420,10 +171642,11 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2073",
-      "sourceGroupDigest": "1b843296f111157150640731a1c22011c6b6c56cb74a0ff4c1e43d6f225c6268",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "batchId": "groups-006",
+      "sourceGroup": "g4064",
+      "sourceGroupDigest": "77cb59d0060a7589bb81d07b28f9e575c187a8ef56d5a4b5a2a951b885de9ba7",
+      "review": "原始文件和同次生成的恢复副本均截断；已停止重复下载，保留原件与恢复记录，未重新合成。 未取得完整且核对通过的对应片段前不供小程序播放；不将文件截断记为朗读错音。",
+      "reviewOutcome": "incomplete-source"
     },
     {
       "key": "5bc7d7f723017e1d2cf06e9db685bd3114315b6c98c4e4ccf6f4e65bf4944b0c",
@@ -171441,11 +171664,12 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2073",
-      "sourceGroupDigest": "1b843296f111157150640731a1c22011c6b6c56cb74a0ff4c1e43d6f225c6268",
+      "batchId": "groups-006",
+      "sourceGroup": "g4064",
+      "sourceGroupDigest": "77cb59d0060a7589bb81d07b28f9e575c187a8ef56d5a4b5a2a951b885de9ba7",
       "derivedFrom": "b348dd44ae6059b4694c9c1f7a293a8652d9e560a7a047f27323427fe9a909da",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "review": "原始文件和同次生成的恢复副本均截断；已停止重复下载，保留原件与恢复记录，未重新合成。 未取得完整且核对通过的对应片段前不供小程序播放；不将文件截断记为朗读错音。",
+      "reviewOutcome": "incomplete-source"
     },
     {
       "key": "dbfb027254f25b35a8a45ab43b40ee77d963d5c1b6adc0c453ebb3e79a3fad29",
@@ -171463,11 +171687,12 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2073",
-      "sourceGroupDigest": "1b843296f111157150640731a1c22011c6b6c56cb74a0ff4c1e43d6f225c6268",
+      "batchId": "groups-006",
+      "sourceGroup": "g4064",
+      "sourceGroupDigest": "77cb59d0060a7589bb81d07b28f9e575c187a8ef56d5a4b5a2a951b885de9ba7",
       "derivedFrom": "b348dd44ae6059b4694c9c1f7a293a8652d9e560a7a047f27323427fe9a909da",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "review": "原始文件和同次生成的恢复副本均截断；已停止重复下载，保留原件与恢复记录，未重新合成。 未取得完整且核对通过的对应片段前不供小程序播放；不将文件截断记为朗读错音。",
+      "reviewOutcome": "incomplete-source"
     },
     {
       "key": "1094cf5f0e1206d70e142d54a9ba2b8643577279117b99959a993a82028c4bd3",
@@ -171657,12 +171882,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2077",
-      "sourceGroupDigest": "d9c6cf051e71baa59735e25d1dcef0dfb25b886d57e42db7c502dc1e9ce19c30",
-      "derivedFrom": "f484472f83e488f224e76a53c584f998b91462c8b5f839e8f61cd8d3a8f7e1b1",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "f3c297a13f4703abbda23216a32e5d1ef53e246c7f21b319104ffc0488886e39.mp3",
+      "bytes": 33920,
+      "digest": "e6dbd126fab3d134974f8ed64fdff55c5c24e19d007a5c3cf22c0aa87532c6a2",
+      "duration": 8.34,
+      "verifiedAt": 1792745176259,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "I read their labels and notice differences in their shape."
+      },
+      "sourceGroup": "g4060",
+      "clipStart": 0,
+      "clipEnd": 8.1,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "f94df73949fdd89024c7e1aa5fceaff7a99b6cb1b1f564a02323ed082eedae78",
@@ -171679,11 +171913,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2080",
-      "sourceGroupDigest": "c44a9bffc67e149471b439921f8619ac487a0bec6f5e5792af0a52f45e12635a",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "f94df73949fdd89024c7e1aa5fceaff7a99b6cb1b1f564a02323ed082eedae78.mp3",
+      "bytes": 7280,
+      "digest": "fb509ef0b5c06e377d1646d3d9ae082749a7845371f8fe0d3812623b45802079",
+      "duration": 1.67,
+      "verifiedAt": 1792747457453,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Baseball."
+      },
+      "sourceGroup": "g4068",
+      "clipStart": 0,
+      "clipEnd": 1.4300000000000002,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "345cc20350e76f4370af8797fb5768a124c9591447ad1b5113354a523e9e80da",
@@ -171827,11 +172071,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2082",
-      "sourceGroupDigest": "28bd7f73c0072850a9821bdec8ac4b0bb60175f5b778594ea70ea25421e3ff75",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "8942762586157668dba5077ed0cb6098a3dd2c2255c4f61ed380b11928acb3cf.mp3",
+      "bytes": 8000,
+      "digest": "394b9814ec43ee0b8f19a8ceeec71c647ffd7123cd90f109e9bd97f851dde883",
+      "duration": 1.86,
+      "verifiedAt": 1792747457454,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Direct."
+      },
+      "sourceGroup": "g4068",
+      "clipStart": 1.4300000000000002,
+      "clipEnd": 3.0500000000000003,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "f8d50d2c01f66168ec29588c075b873164278ba66ecf1a1c69a5c2cb5a64da55",
@@ -171912,11 +172166,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2084",
-      "sourceGroupDigest": "d2025240d8c56fec46d22bbbc749f8ce80dfe3ddd1691fc941986292db2a9ff4",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "a00f6cde8e378b842404b04a3696a28a25f55c4d4a116ac1034d51d1008dc565.mp3",
+      "bytes": 13760,
+      "digest": "c560b0b2b177923509c00aa604dab9c4da790457ded0352b0bbddae93ef8c47c",
+      "duration": 3.31,
+      "verifiedAt": 1792747457455,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Host, hostess."
+      },
+      "sourceGroup": "g4068",
+      "clipStart": 3.0500000000000003,
+      "clipEnd": 6.12,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "d0b807ee45328df60f8d73c0afcde4bd9a7d94eb50a1310f3ceda3f9791d82df",
@@ -171933,11 +172197,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2084",
-      "sourceGroupDigest": "d2025240d8c56fec46d22bbbc749f8ce80dfe3ddd1691fc941986292db2a9ff4",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "d0b807ee45328df60f8d73c0afcde4bd9a7d94eb50a1310f3ceda3f9791d82df.mp3",
+      "bytes": 14336,
+      "digest": "ec9b061d8bf7017c0270df97c0a14d00d62e979247d2aeec917fa03873593277",
+      "duration": 3.45,
+      "verifiedAt": 1792747457456,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Lab laboratory."
+      },
+      "sourceGroup": "g4068",
+      "clipStart": 6.12,
+      "clipEnd": 9.33,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "4c73b9e54ea71bbfbb27dbb10b337f45027f15b59b5768d03d6dc551434f3d4f",
@@ -171954,11 +172228,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2084",
-      "sourceGroupDigest": "d2025240d8c56fec46d22bbbc749f8ce80dfe3ddd1691fc941986292db2a9ff4",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "4c73b9e54ea71bbfbb27dbb10b337f45027f15b59b5768d03d6dc551434f3d4f.mp3",
+      "bytes": 8288,
+      "digest": "b253e70446268fbd8d57186f52b0ef8add4152a29d799f9afe692551a0e03065",
+      "duration": 1.93,
+      "verifiedAt": 1792747457457,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Laugh."
+      },
+      "sourceGroup": "g4068",
+      "clipStart": 9.33,
+      "clipEnd": 11.02,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "a9270fbc539947aa0a728ed213d3541222b92077917937fa473ecc4220642534",
@@ -171975,11 +172259,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2084",
-      "sourceGroupDigest": "d2025240d8c56fec46d22bbbc749f8ce80dfe3ddd1691fc941986292db2a9ff4",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "a9270fbc539947aa0a728ed213d3541222b92077917937fa473ecc4220642534.mp3",
+      "bytes": 14048,
+      "digest": "bd667fb4b4da682edd3bdb8bc06a31e752296c44bec8ec94ff930b0636ecdc18",
+      "duration": 3.37,
+      "verifiedAt": 1792747457458,
+      "review": "复用原始分组录音，按实际静音间隔切分。词头和所列变体完整读出；不朗读词典标记 pl. / AmE，英美拼写差异按同一词项核对。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Life lives.",
+        "whisper": "Life lives."
+      },
+      "sourceGroup": "g4068",
+      "clipStart": 11.02,
+      "clipEnd": 14.15,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "f48fcfa1258c715a41b49d85429f5d4ed09a35827ce4ec82d014124e138c8346",
@@ -172049,11 +172344,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2085",
-      "sourceGroupDigest": "88847f01abfb81b74da819b6d7fd7c5c701285808fb595aa294e5a5237ae8b3f",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "3b719e857c7b083e6053a37c10fef9091b196ea4a0517bea377d613afa3e2bae.mp3",
+      "bytes": 8432,
+      "digest": "79ea4e23b49ec0df364dfb91471590a31b08a429c7807055be02b065366dc1db",
+      "duration": 1.95,
+      "verifiedAt": 1792747457459,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Myself."
+      },
+      "sourceGroup": "g4068",
+      "clipStart": 14.15,
+      "clipEnd": 15.86,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "289d5981e673413505ad286dacc1beac74a8daa7926d9f4ec7def49d4a9d3d9e",
@@ -172070,11 +172375,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2085",
-      "sourceGroupDigest": "88847f01abfb81b74da819b6d7fd7c5c701285808fb595aa294e5a5237ae8b3f",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "289d5981e673413505ad286dacc1beac74a8daa7926d9f4ec7def49d4a9d3d9e.mp3",
+      "bytes": 7280,
+      "digest": "18376626d826a14534b452402cf42243c7a5e2086d215beb1aec286f6d7e7725",
+      "duration": 1.66,
+      "verifiedAt": 1792747457460,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Need."
+      },
+      "sourceGroup": "g4068",
+      "clipStart": 15.86,
+      "clipEnd": 17.28,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "8cff5724de267a0ddab1c678618b941666c14242ce8d739a77486c3d328cab2b",
@@ -172649,11 +172964,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3090",
-      "sourceGroupDigest": "75a7ac06838fad8bac33e4f7c4c12cd1e397e23e503841a504d2ded03796fe70",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "37fa4a963294b3ae9aa35327f95edb0a6e2375c6bcad901193433a76d06237a6.mp3",
+      "bytes": 7568,
+      "digest": "b1680502b6bda121607443c38fd691218a783bb43e7203a686fd31043a5d2720",
+      "duration": 1.74,
+      "verifiedAt": 1792748690077,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Underground."
+      },
+      "sourceGroup": "g4074",
+      "clipStart": 0,
+      "clipEnd": 1.5,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "f75b0bbc0d9e21a93c8edc9eb247d719ef2933f12c304d03b0dcc6191f3b42ce",
@@ -172670,11 +172995,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3090",
-      "sourceGroupDigest": "75a7ac06838fad8bac33e4f7c4c12cd1e397e23e503841a504d2ded03796fe70",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "f75b0bbc0d9e21a93c8edc9eb247d719ef2933f12c304d03b0dcc6191f3b42ce.mp3",
+      "bytes": 7280,
+      "digest": "4b3f2bce432ad254076ef21c0b2915019f90902203a0c68e34eabe2ff1f888cd",
+      "duration": 1.6699375,
+      "verifiedAt": 1792748690078,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Wealth."
+      },
+      "sourceGroup": "g4074",
+      "clipStart": 1.5,
+      "clipEnd": 2.9299999999999997,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "506a858662c954d0921e36dabeb2ebe901f4a3337039459568fa5b74ec2bd1b9",
@@ -172691,11 +173026,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3090",
-      "sourceGroupDigest": "75a7ac06838fad8bac33e4f7c4c12cd1e397e23e503841a504d2ded03796fe70",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "506a858662c954d0921e36dabeb2ebe901f4a3337039459568fa5b74ec2bd1b9.mp3",
+      "bytes": 7712,
+      "digest": "a41f43784a8aaf2289cfc3519c5020cde4fc9d61db6f25b6c94ee56ed6e2c22b",
+      "duration": 1.7900625,
+      "verifiedAt": 1792748690079,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Wei.",
+        "whisper": "weigh"
+      },
+      "sourceGroup": "g4074",
+      "clipStart": 2.9299999999999997,
+      "clipEnd": 4.48,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "4bae2266fcb3b1913fb1d890e8fe027ef82237dc9d45cf93588c83ce9279dc7a",
@@ -172712,11 +173058,23 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3090",
-      "sourceGroupDigest": "75a7ac06838fad8bac33e4f7c4c12cd1e397e23e503841a504d2ded03796fe70",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "4bae2266fcb3b1913fb1d890e8fe027ef82237dc9d45cf93588c83ce9279dc7a.mp3",
+      "bytes": 7424,
+      "digest": "e4b4e1de3ade7017094541854d2ddb9273ded3072a3c502cec7e41dfee908cee",
+      "duration": 1.71,
+      "verifiedAt": 1792749596819,
+      "review": "复用原始分组录音，按实际静音间隔切分。SenseVoice、Whisper、Qwen 三份独立转写均为 Wait；Cambridge weight 与 wait 的英美音标均为 /weɪt/，为同音异拼，不更改词卡文字。仅核对此具体单词原录音，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Wait.",
+        "whisper": "Wait",
+        "qwen": "Wait."
+      },
+      "sourceGroup": "g4074",
+      "clipStart": 4.48,
+      "clipEnd": 5.95,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "d70cb4d570e80eb0b06a0760ab1e55d9f2989b84afc2f246323f494ddcad6255",
@@ -172733,11 +173091,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3090",
-      "sourceGroupDigest": "75a7ac06838fad8bac33e4f7c4c12cd1e397e23e503841a504d2ded03796fe70",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "d70cb4d570e80eb0b06a0760ab1e55d9f2989b84afc2f246323f494ddcad6255.mp3",
+      "bytes": 13760,
+      "digest": "ddb92b6586764c17f420e870d64310bc5379c665420ea502b1d06a8be8e7320d",
+      "duration": 3.31,
+      "verifiedAt": 1792748690081,
+      "review": "复用原始分组录音，按实际静音间隔切分。词头和所列变体完整读出；不朗读词典标记 pl. / AmE，英美拼写差异按同一词项核对。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Wife, wives.",
+        "whisper": "wife, wives"
+      },
+      "sourceGroup": "g4074",
+      "clipStart": 5.95,
+      "clipEnd": 9.02,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "d00b29d4e70fd8d4224a20b827e9c6c57037637c7b63d8df06ef689a62d073cf",
@@ -172786,11 +173155,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3090",
-      "sourceGroupDigest": "75a7ac06838fad8bac33e4f7c4c12cd1e397e23e503841a504d2ded03796fe70",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "956b326f693c7317c84c3c77c21d985e29a7c41e01b328aae0f73964849f8b47.mp3",
+      "bytes": 9296,
+      "digest": "73bc47059d5d997a326cc79d183d452d828cf08169e45b2a972e51ec08497e08",
+      "duration": 2.1899375,
+      "verifiedAt": 1792748690082,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Experiment."
+      },
+      "sourceGroup": "g4074",
+      "clipStart": 9.02,
+      "clipEnd": 10.969999999999999,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "996c163c4cd81b3519e41f1fe0353403148bac1a495f881aa031d63a5e019f29",
@@ -172923,11 +173302,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3091",
-      "sourceGroupDigest": "6f9c3edfc8033c280eeffb51290e8677e57f08e87496ad6d060273a7cd5218b3",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "32564c2e44a4b10156e41d911d6d8b834d6146e41cfc455039fa7a14db9f0db3.mp3",
+      "bytes": 6848,
+      "digest": "3533191e9c6ede64de2c22a913fb9e457f46d95d86e4dda647d52a06c4b53b09",
+      "duration": 1.5700625,
+      "verifiedAt": 1792748690083,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Gear."
+      },
+      "sourceGroup": "g4074",
+      "clipStart": 10.969999999999999,
+      "clipEnd": 12.3,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "43a2c2276bcc8c607faf3a30d0443ec6dc7e5041235123eae826b3c8283e27b3",
@@ -173019,9 +173408,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2094",
-      "sourceGroupDigest": "a614c063473d35cc8e74475b423b12f04540393983a845d3c3a910cc200264ff",
+      "batchId": "groups-006",
+      "sourceGroup": "g4071",
+      "sourceGroupDigest": "9212406ce2cc0983163fcda3023846635c17ffe9cf615bf409df99d04216df4a",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -173040,10 +173429,11 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2095",
-      "sourceGroupDigest": "179257b6d9e73a4f3f448e12555cb3bc8d81324f1830615037fb039589fe6329",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "batchId": "groups-006",
+      "sourceGroup": "g4091",
+      "sourceGroupDigest": "8c15e3691eb9f8d5b3e3bb598ff95f3a962b63d5ac5d9b805c01680a873a3724",
+      "review": "原始 WAV 在半采样帧处结束，文件不完整；保留原件，未作为已核对音频入库。 未取得完整且核对通过的对应片段前不供小程序播放；不将文件截断记为朗读错音。",
+      "reviewOutcome": "incomplete-source"
     },
     {
       "key": "caf1c8d0ab9e852ef2b011f55137d0b7358f8865ec87da0618f6275b032a4f9f",
@@ -173061,10 +173451,11 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2095",
-      "sourceGroupDigest": "179257b6d9e73a4f3f448e12555cb3bc8d81324f1830615037fb039589fe6329",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "batchId": "groups-006",
+      "sourceGroup": "g4091",
+      "sourceGroupDigest": "8c15e3691eb9f8d5b3e3bb598ff95f3a962b63d5ac5d9b805c01680a873a3724",
+      "review": "原始 WAV 在半采样帧处结束，文件不完整；保留原件，未作为已核对音频入库。 未取得完整且核对通过的对应片段前不供小程序播放；不将文件截断记为朗读错音。",
+      "reviewOutcome": "incomplete-source"
     },
     {
       "key": "443d876bf7fec9ceb22acebff315a72dfe35ea5a1f4f13296c5a1d18218dae39",
@@ -173113,11 +173504,23 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2096",
-      "sourceGroupDigest": "e66de5f74e794946ff81ea698e8f2ea4a403520600029f783c2b009f8bf03743",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "ccbe2cc4b2df507a2740d1b417fff4d0113edaafae679678c1fbfc7ffb6ce5a0.mp3",
+      "bytes": 197792,
+      "digest": "94043b28659349873e6d3c9906c3aad621e201d200ad1e53c67520067e45068f",
+      "duration": 49.32,
+      "verifiedAt": 1792748814087,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Hello, my name is Lyn, and I am starting middle school this year I enjoy drawing and asking questions about nature in my school bag I keep a notebook for new English words When I meet an unfamiliar word I check a dictionary and write a useful example I plan a short practice every day and review my notes on Friday a small steady plan helps me see my progress.",
+        "whisper": "Hello, my name is Lynn, and I am starting middle school this year. I enjoy drawing and asking questions about nature. In my school bag, I keep a notebook for new English words. When I meet an unfamiliar word, I check a dictionary and write a useful example. I plan a short practice every day and review my notes on Friday. A small, steady plan helps me see my progress.",
+        "qwen": "Hello, my name is Lin, and I am starting middle school this year. I enjoy drawing and asking questions about nature. In my school bag, I keep a notebook for new English words. When I meet an unfamiliar word, I check a dictionary and write a useful example. I plan a short practice every day and review my notes on Friday. A small, steady plan helps me see my progress."
+      },
+      "sourceGroup": "g4093",
+      "clipStart": 0,
+      "clipEnd": 49.08,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "b574139c4ba81c3160cb4c64fdd24cf45617c4e65d4df8046224c68d0289972f",
@@ -173134,12 +173537,23 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2096",
-      "sourceGroupDigest": "e66de5f74e794946ff81ea698e8f2ea4a403520600029f783c2b009f8bf03743",
-      "derivedFrom": "ccbe2cc4b2df507a2740d1b417fff4d0113edaafae679678c1fbfc7ffb6ce5a0",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "b574139c4ba81c3160cb4c64fdd24cf45617c4e65d4df8046224c68d0289972f.mp3",
+      "bytes": 39248,
+      "digest": "4e76d5ebaba49f99a84e7592a84aaf54bda9f1e0201884489c0495f0bb52b5f8",
+      "duration": 9.66,
+      "verifiedAt": 1792749596847,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Hello, my name is Lyn, and I am starting middle school this year.",
+        "whisper": "Hello, my name is Lynn, and I am starting middle school this year.",
+        "qwen": "Hello, my name is Lin, and I am starting middle school this year."
+      },
+      "sourceGroup": "g4093",
+      "clipStart": 0,
+      "clipEnd": 9.42,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "e12c8894fd579f1a42f35683f6686bacbc62dd980d103a445ac20403fb41b851",
@@ -173156,11 +173570,23 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3096",
-      "sourceGroupDigest": "631eef409f493c4e8f332368a0a12b1f557c527050d96f6f05eabfd4970d766a",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "e12c8894fd579f1a42f35683f6686bacbc62dd980d103a445ac20403fb41b851.mp3",
+      "bytes": 166400,
+      "digest": "562cbe0bc58fb533cec65b6c575299ea66a7b0fe4ded6cbaba8bad636b0f0975",
+      "duration": 41.44,
+      "verifiedAt": 1792749596911,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Hello, my name is Lynn, and I am starting middle school this year. I enjoy drawing and asking questions about nature. in my schoolb. I keep a notebook for new English words When I meet an unfamiliar word I check a dictionary and write a useful example. I plan a short practice every day and review my notes on Friday. A small steady plan helps me see my progress.",
+        "whisper": "Hello, my name is Lynn, and I am starting middle school this year. I enjoy drawing and asking questions about nature. In my school bag, I keep a notebook for new English words. When I meet an unfamiliar word, I check a dictionary and write a useful example. I plan a short practice every day and review my notes on Friday. A small, steady plan helps me see my progress.",
+        "qwen": "Hello, my name is Lin, and I am starting middle school this year. I enjoy drawing and asking questions about nature. In my school bag, I keep a notebook for new English words. When I meet an unfamiliar word, I check a dictionary and write a useful example. I plan a short practice every day, and review my notes on Friday. A small, steady plan helps me see my progress."
+      },
+      "sourceGroup": "g4097",
+      "clipStart": 0,
+      "clipEnd": 41.2,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "f0531dcf4fd1a880c9b8207b44b7b98144d4eaf91284db4c253e0942357fe516",
@@ -173178,9 +173604,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3096",
-      "sourceGroupDigest": "631eef409f493c4e8f332368a0a12b1f557c527050d96f6f05eabfd4970d766a",
+      "batchId": "groups-006",
+      "sourceGroup": "g4097",
+      "sourceGroupDigest": "3047fd0e6165e607760de23fe3421d6f6728221d50becf6c4bd19e4446d9fe3a",
       "derivedFrom": "e12c8894fd579f1a42f35683f6686bacbc62dd980d103a445ac20403fb41b851",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
@@ -173199,11 +173625,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3098",
-      "sourceGroupDigest": "e98c908886e3b489340f7b5633fc1078067f8273e20f229e166dbf0fa9029dd0",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "3a8062ff42b78b971876ca9e74c57a3819c1a81274f5951c1d530972dd47bbd5.mp3",
+      "bytes": 174320,
+      "digest": "4d78757a970ca7f2e436207e2e8f9482bd751cf98473582d306f938e43b8bd8b",
+      "duration": 43.44,
+      "verifiedAt": 1792749596925,
+      "review": "复用原始分组录音，按实际静音间隔切分。用户于 2026-10-23 明确接受美式 Mom 并复用现有录音；本条为通用录音或生成请求明确按已认可美式样音生成的 en-US 录音。除已记录的拼写或数词记法差异外，其余词项完整一致。原文保持 Mum，不据此推断或改标口音；此接受不适用于 en-GB 或同时列出 mum/mom 两个词项的词卡。非真人审听。",
+      "transcripts": {
+        "senseVoice": "It is Saturday afternoon, and our family is preparing a small celebration. Grandpa is coming home after a long visit to his brother. Mu is cooking his favorite dish. While dad is setting the table. My sister and I are putting family photos into an album. We write a short note below each photo to explain the happy moment. When grandpa arrives. He sits with us and opens the album slowly.",
+        "whisper": "It is Saturday afternoon, and our family is preparing a small celebration. Grandpa is coming home after a long visit to his brother. Mom is cooking his favorite dish, while Dad is setting the table. My sister and I are putting family photos into an album. We write a short note below each photo to explain the happy moment. When Grandpa arrives, he sits with us and opens the album slowly."
+      },
+      "sourceGroup": "g4098",
+      "clipStart": 0,
+      "clipEnd": 43.2,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "399b795dbb3de6bae16516be7b12ab5b60a79ccac903218f0409ea1b354b20f8",
@@ -173220,12 +173657,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3098",
-      "sourceGroupDigest": "e98c908886e3b489340f7b5633fc1078067f8273e20f229e166dbf0fa9029dd0",
-      "derivedFrom": "3a8062ff42b78b971876ca9e74c57a3819c1a81274f5951c1d530972dd47bbd5",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "399b795dbb3de6bae16516be7b12ab5b60a79ccac903218f0409ea1b354b20f8.mp3",
+      "bytes": 29168,
+      "digest": "7b43447125d1703b433f00499b7edd45342db93e7e944433a738a5fbcae04224",
+      "duration": 7.135,
+      "verifiedAt": 1792749596928,
+      "review": "复用原始分组录音，按实际静音间隔切分。用户于 2026-10-23 明确接受美式 Mom 并复用现有录音；本条为通用录音或生成请求明确按已认可美式样音生成的 en-US 录音。除已记录的拼写或数词记法差异外，其余词项完整一致。原文保持 Mum，不据此推断或改标口音；此接受不适用于 en-GB 或同时列出 mum/mom 两个词项的词卡。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Mom is cooking his favorite dish while dad is setting the table.",
+        "whisper": "Mom is cooking his favorite dish while Dad is setting the table."
+      },
+      "sourceGroup": "g4098",
+      "clipStart": 14.2,
+      "clipEnd": 21.095,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "4b17065d44da23553878d19f47efc3829d31d9c8df5d86d6966a9896b0ba4e5a",
@@ -173243,10 +173690,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2100",
-      "sourceGroupDigest": "70345839c5abae2fcd13070eaa541df645cb173f40889f45c2485b5d912d5696",
-      "derivedFrom": "ae2619e7464eafd0f7abe6f116c18171d50c62a268ae4f515c9b7252d65971e4",
+      "batchId": "groups-006",
+      "sourceGroup": "g4090",
+      "sourceGroupDigest": "0e38cbd42bcdd0b40711e6fbee416e973999febcff4022eae327ee0c4de6079c",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -173264,12 +173710,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3100",
-      "sourceGroupDigest": "a84a26e82cd24b8964823685221b9cef2c8555b1235568e6c4a01f07413b2b51",
-      "derivedFrom": "78fffabfcf7da486b9237e9c3e50ee60090268047e5e779d50f096252ac24130",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "77a94448d88329d7958122b038f5f1c84a2ffcd8f49dd70fcd38dc798a88df9f.mp3",
+      "bytes": 50768,
+      "digest": "b132f6da6015124390be729857123b2005af1546baa83af130e2cd56bf989d7d",
+      "duration": 12.54,
+      "verifiedAt": 1792748814082,
+      "review": "复用原始分组录音，按实际静音间隔切分。仅英美拼写或序数词数字记法不同，所读词项一致；原文保持英式拼写。非真人审听。",
+      "transcripts": {
+        "senseVoice": "At the next practice, we warm up and then practice looking before passing.",
+        "whisper": "At the next practice, we warm up, and then practice looking before passing."
+      },
+      "sourceGroup": "g4092",
+      "clipStart": 0,
+      "clipEnd": 12.3,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "6053029df81ad98ae87cac35e7ca00667bc8d27bf4e43153878d08bbbabda856",
@@ -173287,9 +173743,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2102",
-      "sourceGroupDigest": "c6931b9c2f6bc424b59ea9649cda83ae8395a22becd6d331f530a395693e63b3",
+      "batchId": "groups-006",
+      "sourceGroup": "g4094",
+      "sourceGroupDigest": "98a2c37981372a50e60550ed138adc958560292eeb0867b2cb250e4d7a397df1",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -173307,12 +173763,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2102",
-      "sourceGroupDigest": "c6931b9c2f6bc424b59ea9649cda83ae8395a22becd6d331f530a395693e63b3",
-      "derivedFrom": "6053029df81ad98ae87cac35e7ca00667bc8d27bf4e43153878d08bbbabda856",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "04a99e3cbc022cc65e72d915dedcc7da5c3959a3cee32b2dc98a01afee4c8862.mp3",
+      "bytes": 29888,
+      "digest": "479f8c01763bb96ea18ee395097195eb36f6317c0ec834f4d2f957683fe3bad4",
+      "duration": 7.33,
+      "verifiedAt": 1792749596851,
+      "review": "复用原始分组录音，按实际静音间隔切分。仅英美拼写或序数词数字记法不同，所读词项一致；原文保持英式拼写。非真人审听。",
+      "transcripts": {
+        "senseVoice": "On the first day, we are going to walk through an old neighborhood.",
+        "whisper": "On the first day, we are going to walk through an old neighborhood."
+      },
+      "sourceGroup": "g4094",
+      "clipStart": 19.22,
+      "clipEnd": 26.310000000000002,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "f5c1f89e6366d93bb0ecbddeda8359154155de29218b13af0ee17503e45e9f4a",
@@ -173329,12 +173795,23 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2102",
-      "sourceGroupDigest": "c6931b9c2f6bc424b59ea9649cda83ae8395a22becd6d331f530a395693e63b3",
-      "derivedFrom": "6053029df81ad98ae87cac35e7ca00667bc8d27bf4e43153878d08bbbabda856",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "f5c1f89e6366d93bb0ecbddeda8359154155de29218b13af0ee17503e45e9f4a.mp3",
+      "bytes": 34496,
+      "digest": "65f4ac7b218feaf0305af147a0c2659e721a768be1395e23c80ec63c5f7d9865",
+      "duration": 8.48,
+      "verifiedAt": 1792749596854,
+      "review": "复用原始分组录音，按实际静音间隔切分。从原短文连续截取后另做三份独立转写，句子全文词序一致，仅 travelling/traveling 或 organising/organizing、programme/program 的英美拼写差异；Cambridge 已核实相关拼写关系。此判断不继承整篇通过状态、不以拼写证明口音，未重新生成，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "We also leave some free time, because traveling should not be a race.",
+        "whisper": "We also leave some free time, because traveling should not be a race.",
+        "qwen": "We also leave some free time because traveling should not be a race."
+      },
+      "sourceGroup": "g4094",
+      "clipStart": 34.15,
+      "clipEnd": 42.39,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "36336b792163d77f05f2e06f176f488c7eccbf0ef4269775d1260277fecde3c5",
@@ -173351,11 +173828,23 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3102",
-      "sourceGroupDigest": "b50e8eb97e62235cb41df9bf20ede56da1adcb6b56a82b65d82645c619c0dd42",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "36336b792163d77f05f2e06f176f488c7eccbf0ef4269775d1260277fecde3c5.mp3",
+      "bytes": 158624,
+      "digest": "baef6a8c825ed528daae6153ea6358cc067fe6b8a2c79394e148a5ccd5c309ae",
+      "duration": 39.52,
+      "verifiedAt": 1792749947141,
+      "review": "复用原始分组录音，按实际静音间隔切分。三份未提供参考正文或热词的独立转写全文词序一致，仅neighbourhood/neighborhood、travelling/traveling的拼写或分词差异，相关英美拼写关系已核 Cambridge。正文保持原样；连续截取的独立句子已单独转写，不继承整篇通过状态，不以拼写推断口音，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Our family is going to visit a nearby city during the holiday. We compare train times and ticket prices before choosing a morning train On the first day, we are going to walk through an old neighborhood. If it rains. we will visit a museum instead of taking a long walk. We also leave some free time because traveling should not be a race at home. I prepare a small notebook for new words and observations.",
+        "whisper": "Our family is going to visit a nearby city during the holiday. We compare train times and ticket prices before choosing a morning train. On the first day, we are going to walk through an old neighborhood. If it rains, we will visit a museum instead of taking a long walk. We also leave some free time, because traveling should not be a race. At home, I prepare a small notebook for new words and observations.",
+        "qwen": "Our family is going to visit a nearby city during the holiday. We compare train times and ticket prices before choosing a morning train. On the first day, we are going to walk through an old neighborhood. If it rains, we will visit a museum instead of taking a long walk. We also leave some free time because traveling should not be a race. At home, I prepare a small notebook for new words and observations."
+      },
+      "sourceGroup": "g4099",
+      "clipStart": 0,
+      "clipEnd": 39.28,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "745fd5097e6a0466a1adee0e2282b88b6f567ab537626fcb37ebdb1bcdb0640c",
@@ -173372,12 +173861,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3102",
-      "sourceGroupDigest": "b50e8eb97e62235cb41df9bf20ede56da1adcb6b56a82b65d82645c619c0dd42",
-      "derivedFrom": "36336b792163d77f05f2e06f176f488c7eccbf0ef4269775d1260277fecde3c5",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "745fd5097e6a0466a1adee0e2282b88b6f567ab537626fcb37ebdb1bcdb0640c.mp3",
+      "bytes": 25280,
+      "digest": "6da5b1d91e7421a4c441f90815e95a2723e606d321624926f87a1f1ebe631c8c",
+      "duration": 6.1649375,
+      "verifiedAt": 1792749596930,
+      "review": "复用原始分组录音，按实际静音间隔切分。仅英美拼写或序数词数字记法不同，所读词项一致；原文保持英式拼写。非真人审听。",
+      "transcripts": {
+        "senseVoice": "On the first day, we are going to walk through an old neighborhood.",
+        "whisper": "On the first day, we are going to walk through an old neighborhood."
+      },
+      "sourceGroup": "g4099",
+      "clipStart": 13.21,
+      "clipEnd": 19.134999999999998,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "787b57bdc6e43edb6369a77f3965878174b104c50f60aac4607627bdf2252f53",
@@ -173394,12 +173893,23 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3102",
-      "sourceGroupDigest": "b50e8eb97e62235cb41df9bf20ede56da1adcb6b56a82b65d82645c619c0dd42",
-      "derivedFrom": "36336b792163d77f05f2e06f176f488c7eccbf0ef4269775d1260277fecde3c5",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "787b57bdc6e43edb6369a77f3965878174b104c50f60aac4607627bdf2252f53.mp3",
+      "bytes": 27728,
+      "digest": "de29dd7327d579f19da58129a6caa5009d01f9d44ae92a8f2736a45b54fca054",
+      "duration": 6.79,
+      "verifiedAt": 1792749947145,
+      "review": "复用原始分组录音，按实际静音间隔切分。三份未提供参考正文或热词的独立转写全文词序一致，仅neighbourhood/neighborhood、travelling/traveling的拼写或分词差异，相关英美拼写关系已核 Cambridge。正文保持原样；连续截取的独立句子已单独转写，不继承整篇通过状态，不以拼写推断口音，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "We also leave some free time because traveling should not be a race.",
+        "whisper": "We also leave some free time, because traveling should not be a race.",
+        "qwen": "We also leave some free time because traveling should not be a race."
+      },
+      "sourceGroup": "g4099",
+      "clipStart": 25.810000000000002,
+      "clipEnd": 32.36,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "25b13c4cb984fa23ef24cc0d19bce82abaac10d2fc6e26b9f7020ba0550f2a0a",
@@ -173416,11 +173926,23 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2103",
-      "sourceGroupDigest": "0d471140c3fecb4ec3c40f5a8efedb0b023e8408d6b76babd144126f906818a8",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "25b13c4cb984fa23ef24cc0d19bce82abaac10d2fc6e26b9f7020ba0550f2a0a.mp3",
+      "bytes": 182384,
+      "digest": "f729d6664611488bb1a6dceedfe28b9e7153213c755af8266c222fe135388241",
+      "duration": 45.44,
+      "verifiedAt": 1792749596868,
+      "review": "复用原始分组录音，按实际静音间隔切分。三份独立转写的全文词序完整一致，仅 noticeboard 分词、organising/organizing 与 programme/program 的英美拼写差异；Cambridge 已确认拼写关系。不删改正文，不据文字拼写推断实际口音，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Our class will hold a small talent show next month Some students will sing or play the violin but not everyone wants to be on stage Ming enjoys drawing so he will design the notice board, I prefer organizing things, and I will help the host prepare the program We agree not to laugh at anyone who makes a mistakeDifferent abilities can all help us create a welcoming event.",
+        "whisper": "Our class will hold a small talent show next month. Some students will sing or play the violin. But not everyone wants to be on stage. Ming enjoys drawing, so he will design the notice board. I prefer organizing things. And I will help the host prepare the program. We agree not to laugh at anyone who makes a mistake. Different abilities can all help us create a welcoming event.",
+        "qwen": "Our class will hold a small talent show next month. Some students will sing or play the violin, but not everyone wants to be on stage. Ming enjoys drawing, so he will design the notice board. I prefer organizing things, and I will help the host prepare the program. We agree not to laugh at anyone who makes a mistake. Different abilities can all help us create a welcoming event."
+      },
+      "sourceGroup": "g4095",
+      "clipStart": 0,
+      "clipEnd": 45.2,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "9e4d9f8edbac0a54fec9723296e6afb8374c11f6af0fe067b73840db995b2653",
@@ -173437,12 +173959,23 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2103",
-      "sourceGroupDigest": "0d471140c3fecb4ec3c40f5a8efedb0b023e8408d6b76babd144126f906818a8",
-      "derivedFrom": "25b13c4cb984fa23ef24cc0d19bce82abaac10d2fc6e26b9f7020ba0550f2a0a",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "9e4d9f8edbac0a54fec9723296e6afb8374c11f6af0fe067b73840db995b2653.mp3",
+      "bytes": 38384,
+      "digest": "b87d73d3c3fcfbbca6235aae58b72a115401334e26962a3d670016763d1b8811",
+      "duration": 9.445,
+      "verifiedAt": 1792749596872,
+      "review": "复用原始分组录音，按实际静音间隔切分。从原短文连续截取后另做三份独立转写，句子全文词序一致，仅 travelling/traveling 或 organising/organizing、programme/program 的英美拼写差异；Cambridge 已核实相关拼写关系。此判断不继承整篇通过状态、不以拼写证明口音，未重新生成，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "I prefer organizing things, and I will help the host prepare the program.",
+        "whisper": "I prefer organizing things and I will help the host prepare the program.",
+        "qwen": "I prefer organizing things, and I will help the host prepare the program."
+      },
+      "sourceGroup": "g4095",
+      "clipStart": 23.97,
+      "clipEnd": 33.175,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "1d8c4828ce1c89d0df2a2711d3cf14264d10e679d3730a0c25c204093a0044c5",
@@ -173459,11 +173992,23 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3103",
-      "sourceGroupDigest": "229a0cf8e11faf60a17e3fad1e8b40a11a9f101586028356b94e7055eb40c2ba",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "1d8c4828ce1c89d0df2a2711d3cf14264d10e679d3730a0c25c204093a0044c5.mp3",
+      "bytes": 169568,
+      "digest": "2894a1dd9ddbf3a417f7db0072d93f76d6a1a896ebaea49dae5f192699d18690",
+      "duration": 42.24,
+      "verifiedAt": 1792749947149,
+      "review": "复用原始分组录音，按实际静音间隔切分。三份未提供参考正文或热词的独立转写全文词序一致，仅noticeboard 分词、organising/organizing、programme/program的拼写或分词差异，相关英美拼写关系已核 Cambridge。正文保持原样；连续截取的独立句子已单独转写，不继承整篇通过状态，不以拼写推断口音，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Our class will hold a small talent show next month. Some students will sing or play the violin, but not everyone wants to be on stage. Ming enjoys drawing, so he will design the notice board. I prefer organizing things. and I will help the host prepare the program. We agree not to laugh at anyone who makes a mistake. Different abilities can all help us create a welcoming event..",
+        "whisper": "Our class will hold a small talent show next month. Some students will sing or play the violin, but not everyone wants to be on stage. Ming enjoys drawing, so he will design the notice board. I prefer organizing things, and I will help the host prepare the program. We agree not to laugh at anyone who makes a mistake. Different abilities can all help us create a welcoming event.",
+        "qwen": "Our class will hold a small talent show next month. Some students will sing or play the violin, but not everyone wants to be on stage. Ming enjoys drawing, so he will design the notice board. I prefer organizing things, and I will help the host prepare the program. We agree not to laugh at anyone who makes a mistake. Different abilities can all help us create a welcoming event."
+      },
+      "sourceGroup": "g4100",
+      "clipStart": 0,
+      "clipEnd": 42,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "44cd37005baa8619fe8f778a7915dd47dd908528cc99695bad519e928fd75461",
@@ -173480,12 +174025,23 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3103",
-      "sourceGroupDigest": "229a0cf8e11faf60a17e3fad1e8b40a11a9f101586028356b94e7055eb40c2ba",
-      "derivedFrom": "1d8c4828ce1c89d0df2a2711d3cf14264d10e679d3730a0c25c204093a0044c5",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "44cd37005baa8619fe8f778a7915dd47dd908528cc99695bad519e928fd75461.mp3",
+      "bytes": 29456,
+      "digest": "2d9cff9447674a4dcfe80de1df7cc52ecdc5a0da50e612d450da51ec4a4e533c",
+      "duration": 7.225,
+      "verifiedAt": 1792749947151,
+      "review": "复用原始分组录音，按实际静音间隔切分。三份未提供参考正文或热词的独立转写全文词序一致，仅noticeboard 分词、organising/organizing、programme/program的拼写或分词差异，相关英美拼写关系已核 Cambridge。正文保持原样；连续截取的独立句子已单独转写，不继承整篇通过状态，不以拼写推断口音，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "I prefer organizing things, and I will help the host prepare the program.",
+        "whisper": "I prefer organizing things, and I will help the host prepare the program.",
+        "qwen": "I prefer organizing things, and I will help the host prepare the program."
+      },
+      "sourceGroup": "g4100",
+      "clipStart": 18.82,
+      "clipEnd": 25.805,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "61f175e7728fdaae7a7dfa938f15e73ec99aeee60eae8564ef3ab4dab1e929ed",
@@ -173503,10 +174059,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2105",
-      "sourceGroupDigest": "2c6b7b8edb7ccba73a35e4ecd4601b4f9cd9880e581263dc802522df1ba2edc3",
-      "derivedFrom": "c25165499f88f8b81c43b6471b3dc6e04c356e5346f3701e4c7a7fb7d8bd2722",
+      "batchId": "groups-006",
+      "sourceGroup": "g4090",
+      "sourceGroupDigest": "0e38cbd42bcdd0b40711e6fbee416e973999febcff4022eae327ee0c4de6079c",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -173525,9 +174080,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3105",
-      "sourceGroupDigest": "f06c2f855a4b127e226cd481bd4e75a7453cb454324468a527594e1849745d57",
+      "batchId": "groups-006",
+      "sourceGroup": "g4101",
+      "sourceGroupDigest": "49bc33151d5aa865e4062a3b6ad3daf081f6becf2308f42e932a7187e9e8d475",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -173578,9 +174133,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3105",
-      "sourceGroupDigest": "f06c2f855a4b127e226cd481bd4e75a7453cb454324468a527594e1849745d57",
+      "batchId": "groups-006",
+      "sourceGroup": "g4101",
+      "sourceGroupDigest": "49bc33151d5aa865e4062a3b6ad3daf081f6becf2308f42e932a7187e9e8d475",
       "derivedFrom": "3b5b2146215971f0d12a9a6b521c6d02e6e1ad7d76bd4348f25047e0d4d5bda4",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
@@ -173599,11 +174154,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3107",
-      "sourceGroupDigest": "b5d098df2469b024fe5bab168077a01cd5edebf8e2d994b201a410f3f2cb46ed",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "1b34df0a9f1edc13fd918786ee7495ed4ba7e19b6d6cdcec3672c241b59987cc.mp3",
+      "bytes": 292256,
+      "digest": "35f58436539e6b243ef95645c6e9a74051c8a96f90105f411433955fdbdb6416",
+      "duration": 72.92,
+      "verifiedAt": 1792749740745,
+      "review": "复用原始分组录音，按实际静音间隔切分。仅英美拼写或序数词数字记法不同，所读词项一致；原文保持英式拼写。非真人审听。",
+      "transcripts": {
+        "senseVoice": "There is a repair table at our neighborhood activity day people bring loose buttons, broken toy wheels, and bags with small holes, we can help sort the items but adults handle sharp tools and electrical repairs Before throwing something away we ask whether it can be repaired or reusedSome items can be fixed, so we follow local instructions for sorting the waste, The activity teaches us that reducing waste.",
+        "whisper": "There is a repair table at our neighborhood activity day. People bring loose buttons, broken toy wheels, and bags with small holes. We can help sort the items, but adults handle sharp tools and electrical repairs. Before throwing something away, we ask whether it can be repaired or reused. Some items cannot be fixed, so we follow local instructions for sorting the waste. The activity teaches us that reducing waste"
+      },
+      "sourceGroup": "g4102",
+      "clipStart": 0,
+      "clipEnd": 72.68,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "a1db5e8e46f9b2b8936717cac87d8244a3317dc0dcff2682e62875b98bf7c570",
@@ -173620,11 +174186,21 @@
           "part": 1
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3107",
-      "sourceGroupDigest": "b5d098df2469b024fe5bab168077a01cd5edebf8e2d994b201a410f3f2cb46ed",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "a1db5e8e46f9b2b8936717cac87d8244a3317dc0dcff2682e62875b98bf7c570.mp3",
+      "bytes": 19808,
+      "digest": "b961e4b2d77e3634d140d6a2a39bc4d3ccee48b66cd9f8622a9821f45af50d7f",
+      "duration": 4.82,
+      "verifiedAt": 1792749740750,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Often begins with a careful choice."
+      },
+      "sourceGroup": "g4103",
+      "clipStart": 0,
+      "clipEnd": 4.58,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "621c1276ec684f0dd33b48834112093598988dc548e261318adeb7762d4e93bb",
@@ -173641,12 +174217,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3107",
-      "sourceGroupDigest": "b5d098df2469b024fe5bab168077a01cd5edebf8e2d994b201a410f3f2cb46ed",
-      "derivedFrom": "1b34df0a9f1edc13fd918786ee7495ed4ba7e19b6d6cdcec3672c241b59987cc",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "621c1276ec684f0dd33b48834112093598988dc548e261318adeb7762d4e93bb.mp3",
+      "bytes": 42560,
+      "digest": "50b5341028166dee2fa70f712b8339789d5b06c779561ba3b96c798fc42ebda1",
+      "duration": 10.485,
+      "verifiedAt": 1792749740748,
+      "review": "复用原始分组录音，按实际静音间隔切分。仅英美拼写或序数词数字记法不同，所读词项一致；原文保持英式拼写。非真人审听。",
+      "transcripts": {
+        "senseVoice": "There is a repair table at our neighborhood activity day.",
+        "whisper": "There is a repair table at our neighborhood activity day."
+      },
+      "sourceGroup": "g4102",
+      "clipStart": 0,
+      "clipEnd": 10.245000000000001,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "71707a263ba6feace9c006702c47e8cddd24616b067bb8036872b5f6c3f74c69",
@@ -173663,11 +174249,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2108",
-      "sourceGroupDigest": "2073db4f9be7c4d4ab292051c3345e4136d6c2c1cf2b2b502b8588ad337f29ed",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "71707a263ba6feace9c006702c47e8cddd24616b067bb8036872b5f6c3f74c69.mp3",
+      "bytes": 292256,
+      "digest": "acd2b2562a989e61cba02ab77c3467a555631816f1c693741210d5c0383479d7",
+      "duration": 72.92,
+      "verifiedAt": 1792749596896,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Our group is making a card about a scientist for the school display There are two books and a museum page on our desk as sources We compare dates carefully because a discovery and its publication may happen in different years We also describe the work of other people who helped the project When a detail cannot be checked We leave it out instead of inventing an exciting story Our card is short, but each claim."
+      },
+      "sourceGroup": "g4096",
+      "clipStart": 0,
+      "clipEnd": 72.68,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "d22d6cbdfb3d0fbaab3b8e597edd654a803a95103e91ae08fd0972c49b8a8488",
@@ -173684,12 +174280,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2108",
-      "sourceGroupDigest": "2073db4f9be7c4d4ab292051c3345e4136d6c2c1cf2b2b502b8588ad337f29ed",
-      "derivedFrom": "71707a263ba6feace9c006702c47e8cddd24616b067bb8036872b5f6c3f74c69",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "d22d6cbdfb3d0fbaab3b8e597edd654a803a95103e91ae08fd0972c49b8a8488.mp3",
+      "bytes": 42416,
+      "digest": "b86694e96984feb06e30635b63b91e5353a16c1717bfeae4ecdbba60e7634374",
+      "duration": 10.465,
+      "verifiedAt": 1792749596900,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "There are two books and a museum page on our desk as sources."
+      },
+      "sourceGroup": "g4096",
+      "clipStart": 8.45,
+      "clipEnd": 18.675,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "9d3ed4a6b840af8519ad0d1a2b88c3ae6d39dc72a9a024b701a54e0a321e4c27",
@@ -173706,12 +174311,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2108",
-      "sourceGroupDigest": "2073db4f9be7c4d4ab292051c3345e4136d6c2c1cf2b2b502b8588ad337f29ed",
-      "derivedFrom": "71707a263ba6feace9c006702c47e8cddd24616b067bb8036872b5f6c3f74c69",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "9d3ed4a6b840af8519ad0d1a2b88c3ae6d39dc72a9a024b701a54e0a321e4c27.mp3",
+      "bytes": 74816,
+      "digest": "e79b7563531175f93af410ca959a3e91f146181ccd8cfd618010ab981de16d14",
+      "duration": 18.56,
+      "verifiedAt": 1792749596906,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "When a detail cannot be checked, we leave it out instead of inventing an exciting story."
+      },
+      "sourceGroup": "g4096",
+      "clipStart": 48.135000000000005,
+      "clipEnd": 66.455,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "48d6f07ae6392b2de1d4241fece336a6d1f5cbb5375011312453430652535dc4",
@@ -173729,9 +174343,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3108",
-      "sourceGroupDigest": "d1ed50cfe693bab9b5bfd198322ceb5abfeedb53f4fe5b08b4a07b8a62dfe091",
+      "batchId": "groups-006",
+      "sourceGroup": "g4104",
+      "sourceGroupDigest": "e73e9b81dee669287912f33696ca5aea8aa5ad004485f683bca1821d2b1471d5",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -173781,11 +174395,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3109",
-      "sourceGroupDigest": "582541e90580a7dabb1fd8761cc8d57d02d544eeed8402cd4e57edd3cf5e648d",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "c103c9784d152dcbdfd5af4ad654738155a1aa361f90357b500f6b8d70f5304a.mp3",
+      "bytes": 11456,
+      "digest": "5731f7942c6160446cbca753cda6e3db9f7c23c86915d973650a2af40d84147d",
+      "duration": 2.705,
+      "verifiedAt": 1792750252606,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Actor, actress."
+      },
+      "sourceGroup": "g4107",
+      "clipStart": 0,
+      "clipEnd": 2.465,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "285f8cba6dd1474e170f80f656bfa12beebbf37ac8a4964c7c69ebc6a858ac7c",
@@ -173834,11 +174458,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3110",
-      "sourceGroupDigest": "61c4764017ce39d5d8af18ff250e8fe9ee4f5a4c5836ade71367664a18dcdd93",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "c6e3c5754a6b164399534ead2d8ef77db4ff0a02724c2b58b1910347b90ccbe3.mp3",
+      "bytes": 8576,
+      "digest": "40625b2515d4e43c6a5ad79bb0d59957ab6aa2ecb639fa7d8f265a66a141c68d",
+      "duration": 2.005,
+      "verifiedAt": 1792750252607,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Challenge."
+      },
+      "sourceGroup": "g4107",
+      "clipStart": 2.465,
+      "clipEnd": 4.23,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "86cb89492ece7d6a5d3e080cf20df254d011df849a2ff31ccda3c0954ed4e85e",
@@ -173855,11 +174489,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3110",
-      "sourceGroupDigest": "61c4764017ce39d5d8af18ff250e8fe9ee4f5a4c5836ade71367664a18dcdd93",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "86cb89492ece7d6a5d3e080cf20df254d011df849a2ff31ccda3c0954ed4e85e.mp3",
+      "bytes": 8144,
+      "digest": "f1b9f5ce556d9207327d4051db4dca758681227bf699ff8075e6ecb29b8aff2c",
+      "duration": 1.9,
+      "verifiedAt": 1792750252608,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Chance."
+      },
+      "sourceGroup": "g4107",
+      "clipStart": 4.23,
+      "clipEnd": 5.890000000000001,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "542e41858357ff9d4cccabb938a220c48c6e1d38453da598e3df125d4d7a0755",
@@ -173876,11 +174520,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3110",
-      "sourceGroupDigest": "61c4764017ce39d5d8af18ff250e8fe9ee4f5a4c5836ade71367664a18dcdd93",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "542e41858357ff9d4cccabb938a220c48c6e1d38453da598e3df125d4d7a0755.mp3",
+      "bytes": 8576,
+      "digest": "c2e3f35c0cd27245280ef00bf04a16870ce1d0b945a5a5d21eccd0dbce4db469",
+      "duration": 1.995,
+      "verifiedAt": 1792750252609,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Choose."
+      },
+      "sourceGroup": "g4107",
+      "clipStart": 5.890000000000001,
+      "clipEnd": 7.645,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "5497f653bd5f9ba755242c50bfbdca5c84a2390b7bc711eb97de784aff41bd1c",
@@ -173897,11 +174551,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3111",
-      "sourceGroupDigest": "305f56abd88e92bcc53ac665776239ec05023a431f9c017557b5511f3a7a0124",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "5497f653bd5f9ba755242c50bfbdca5c84a2390b7bc711eb97de784aff41bd1c.mp3",
+      "bytes": 8864,
+      "digest": "d8ef3694e0e22fb9e5958122d609f0cf54ec67375a9c5772b947dafadbad53fb",
+      "duration": 2.07,
+      "verifiedAt": 1792750252610,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Disease."
+      },
+      "sourceGroup": "g4107",
+      "clipStart": 7.645,
+      "clipEnd": 9.475,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "bbac4b7a5802d9f83c200a76fc7b25a5f3abcc56cd5f032cf436b75ad62069ee",
@@ -173950,11 +174614,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3111",
-      "sourceGroupDigest": "305f56abd88e92bcc53ac665776239ec05023a431f9c017557b5511f3a7a0124",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "ba958d3fddace75e6110f4501118a17ceda59f8f2e4928d8b610140611ff77cb.mp3",
+      "bytes": 9872,
+      "digest": "be4e82ec3dbe7e37502b6c0dd27b64283f1f334580f1bea3e9f1ccbcf374aa78",
+      "duration": 2.34,
+      "verifiedAt": 1792750252611,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Emergency."
+      },
+      "sourceGroup": "g4107",
+      "clipStart": 9.475,
+      "clipEnd": 11.575,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "b034035ba74e07b1008ae4afe66d6de4b1706963c47eea06fb19e0d1c0dfb983",
@@ -173972,9 +174646,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2112",
-      "sourceGroupDigest": "f77474a8b2bfccae7e4cafcbf6b993644bcc2a31a931cc8e82aa3142179436fb",
+      "batchId": "groups-006",
+      "sourceGroup": "g4105",
+      "sourceGroupDigest": "eb35b9c313d5b2eed72353da993c0f4da4e19e0ff8f639966bb8c017eff9fa1b",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -173992,11 +174666,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2112",
-      "sourceGroupDigest": "f77474a8b2bfccae7e4cafcbf6b993644bcc2a31a931cc8e82aa3142179436fb",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "ad1dd0a9188f66fab8a03f262d4a4c44f46645453543ad92988d0431028cbfa6.mp3",
+      "bytes": 9728,
+      "digest": "5a81cf65a1ca13d5b135aed72399ebb5e9ab857200aa2d7a7156af4e0631cdd2",
+      "duration": 2.3,
+      "verifiedAt": 1792749740751,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Fok.",
+        "whisper": "Folk"
+      },
+      "sourceGroup": "g4105",
+      "clipStart": 1.8900000000000001,
+      "clipEnd": 3.95,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "ece53021e24f198f8abf8b67f4bfefcd42ae4b4a65fc629bc9e206e2e8949f92",
@@ -174013,11 +174698,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2112",
-      "sourceGroupDigest": "f77474a8b2bfccae7e4cafcbf6b993644bcc2a31a931cc8e82aa3142179436fb",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "ece53021e24f198f8abf8b67f4bfefcd42ae4b4a65fc629bc9e206e2e8949f92.mp3",
+      "bytes": 10160,
+      "digest": "b79a42d43369abee4ac7ca12fe8c1c8afe07c46cc20306479c00671df0d379d7",
+      "duration": 2.405,
+      "verifiedAt": 1792749740752,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Forget."
+      },
+      "sourceGroup": "g4105",
+      "clipStart": 3.95,
+      "clipEnd": 6.115,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "e43b2780931be8d31f736c9c7b2e241ba83439aaa1655fe6388bbfa857ce4745",
@@ -174034,11 +174729,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2112",
-      "sourceGroupDigest": "f77474a8b2bfccae7e4cafcbf6b993644bcc2a31a931cc8e82aa3142179436fb",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "e43b2780931be8d31f736c9c7b2e241ba83439aaa1655fe6388bbfa857ce4745.mp3",
+      "bytes": 10160,
+      "digest": "24c0a9f0a300434c976af3c23a946250fb29b40b986021caa78342a19eb2f87c",
+      "duration": 2.395,
+      "verifiedAt": 1792750103308,
+      "review": "复用原始分组录音，根据原录音无提示词级转写和两侧完整静音间隔重新截取，移除相邻词；仅连续截取，不拼接、不重新生成，切片另做独立转写核对。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Fresh.",
+        "whisper": "Fresh"
+      },
+      "sourceGroup": "g4105",
+      "clipStart": 6.115,
+      "clipEnd": 8.27,
+      "batchId": "doubao-20261022-groups-920"
     },
     {
       "key": "e53f852570d89724d4dd32dd374dd7070d8ae55a3381d612d409e011777f7507",
@@ -174055,11 +174761,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2112",
-      "sourceGroupDigest": "f77474a8b2bfccae7e4cafcbf6b993644bcc2a31a931cc8e82aa3142179436fb",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "e53f852570d89724d4dd32dd374dd7070d8ae55a3381d612d409e011777f7507.mp3",
+      "bytes": 10880,
+      "digest": "b1c20b9bb6b039b40fc634fab5568541d2e827c8e5658e52e6bf53be66e962b5",
+      "duration": 2.56,
+      "verifiedAt": 1792750103308,
+      "review": "复用原始分组录音，根据原录音无提示词级转写和两侧完整静音间隔重新截取，移除相邻词；仅连续截取，不拼接、不重新生成，切片另做独立转写核对。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Friendship.",
+        "whisper": "FRIENDSHIP"
+      },
+      "sourceGroup": "g4105",
+      "clipStart": 8.27,
+      "clipEnd": 10.59,
+      "batchId": "doubao-20261022-groups-920"
     },
     {
       "key": "aae8db12ca6ab6280ec478de613cd0b86c17cfa6a66dc666420a54644d782047",
@@ -174076,11 +174793,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2112",
-      "sourceGroupDigest": "f77474a8b2bfccae7e4cafcbf6b993644bcc2a31a931cc8e82aa3142179436fb",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "aae8db12ca6ab6280ec478de613cd0b86c17cfa6a66dc666420a54644d782047.mp3",
+      "bytes": 9296,
+      "digest": "47318acb1d458406a8452af96e77025499dcced942de47a009e4779056b1b077",
+      "duration": 2.17,
+      "verifiedAt": 1792749740753,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Guide."
+      },
+      "sourceGroup": "g4105",
+      "clipStart": 10.59,
+      "clipEnd": 12.52,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "45c0a791bcb2c00b5c017bbc15c587ddef6feb3ecde9b3f3df387a936b4abbbe",
@@ -174098,9 +174825,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3112",
-      "sourceGroupDigest": "c7d691648f20da236fc743c9bde2dac21626efc6c124ba12cbe814e982317ffe",
+      "batchId": "groups-006",
+      "sourceGroup": "g4107",
+      "sourceGroupDigest": "6bf0f4d3007e95ce37c8e03027289fd3eaebd977c48f8712bcd5a793cc8ba4f9",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -174150,11 +174877,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3112",
-      "sourceGroupDigest": "c7d691648f20da236fc743c9bde2dac21626efc6c124ba12cbe814e982317ffe",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "d5965a4e75f569728bf29ccf40a66c1907b254a0869265ad77df06b7d433b67a.mp3",
+      "bytes": 8144,
+      "digest": "e4553c65aa5f02c5064ff9afd63fd10553314932e474f7e8978e322db3f82ce4",
+      "duration": 1.9,
+      "verifiedAt": 1792750252613,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Fresh."
+      },
+      "sourceGroup": "g4107",
+      "clipStart": 14.620000000000001,
+      "clipEnd": 16.28,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "38577c515b062b28f911d3bf277b2afa09936c197e8c6c9d1efdb64b90b60f87",
@@ -174171,11 +174908,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3112",
-      "sourceGroupDigest": "c7d691648f20da236fc743c9bde2dac21626efc6c124ba12cbe814e982317ffe",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "38577c515b062b28f911d3bf277b2afa09936c197e8c6c9d1efdb64b90b60f87.mp3",
+      "bytes": 5552,
+      "digest": "aba6ea8d61917f80608a1a01222a2a33abd2da24369e58131248e00293862eb8",
+      "duration": 1.23,
+      "verifiedAt": 1792750252614,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Height."
+      },
+      "sourceGroup": "g4108",
+      "clipStart": 0,
+      "clipEnd": 0.99,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "2589635fbf0c28c4d222e41298728e7c05a670a5788a46d278d6854343457a46",
@@ -174225,9 +174972,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2113",
-      "sourceGroupDigest": "73cdf59df4682b9cd58bf2f3c42bce0caeb21e9c004842a67180ab387eae1c53",
+      "batchId": "groups-006",
+      "sourceGroup": "g4105",
+      "sourceGroupDigest": "eb35b9c313d5b2eed72353da993c0f4da4e19e0ff8f639966bb8c017eff9fa1b",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -174309,11 +175056,23 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3113",
-      "sourceGroupDigest": "92d5f770792206ba743ed74214a616ed2ac903d7de75c2294e9474eb5437f974",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "f8efe5abbcb7704e1d042fa52de60dc799859714f4ee5bfc4eb5d933ddb624a3.mp3",
+      "bytes": 11456,
+      "digest": "cc7dca954a480d50e8b6a262ac5c397a01b18a69e02f9a18c20622dc8ea5e583",
+      "duration": 2.735,
+      "verifiedAt": 1792750409299,
+      "review": "复用原始分组录音，按实际静音间隔切分。Whisper 与 Qwen 均识别出两次完整词项，只有 kilometre/kilometer 英美拼写差异；词头和括注词均保留，不朗读 AmE 标记。Cambridge 标明 US kilometer 与 UK kilometre 为同一词。未提供参考正文或热词，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Killometer kilometer.",
+        "whisper": "kilometre, kilometre",
+        "qwen": "Kilometer, kilometer."
+      },
+      "sourceGroup": "g4108",
+      "clipStart": 0.99,
+      "clipEnd": 3.4850000000000003,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "c3ed088e6ceebff683377acfaa31c05aef73c3b2052fc9e723d429319bb8d50d",
@@ -174426,11 +175185,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2114",
-      "sourceGroupDigest": "8b48876e9675000bb063829072759c4b6c6dc2a998f96604b83ec35f6e1d9e1c",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "768f95e747df8121c551ab1f3947606f334484a3b7652bfe368521be8e454a83.mp3",
+      "bytes": 9728,
+      "digest": "1c65dd4835f07f8b2a203c57a1a3917760024f5a9e9310cb220ca89e4b057b0f",
+      "duration": 2.295,
+      "verifiedAt": 1792749740754,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Often.",
+        "whisper": "Oven"
+      },
+      "sourceGroup": "g4105",
+      "clipStart": 14.645,
+      "clipEnd": 16.7,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "abc5002952f6b7b39fd760d1e2e2ad75ca202a905fe2feea5d127ac874d1c35c",
@@ -174447,11 +175217,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2114",
-      "sourceGroupDigest": "8b48876e9675000bb063829072759c4b6c6dc2a998f96604b83ec35f6e1d9e1c",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "abc5002952f6b7b39fd760d1e2e2ad75ca202a905fe2feea5d127ac874d1c35c.mp3",
+      "bytes": 6272,
+      "digest": "b247909de22d88ad81dbf8b8d26ac8f7bd08a1a726fe5dc4625c97c871898804",
+      "duration": 1.42,
+      "verifiedAt": 1792750252598,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Payle.",
+        "whisper": "Pale."
+      },
+      "sourceGroup": "g4106",
+      "clipStart": 0,
+      "clipEnd": 1.18,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "555e39223a32d61c5b9df66289cad93c0dcde39163497eb2f373b69c22cbf5d6",
@@ -174500,11 +175281,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3114",
-      "sourceGroupDigest": "ffcdf4307207c5a6bfa164e911ed7b9d03997fcdb7581efffcfa3ae31a6a40ff",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "d448f80b1bc9c5d273104f889b95b82322a9da609125810dd56dca6dbab7d2ed.mp3",
+      "bytes": 11024,
+      "digest": "172ae32bc75468e03d33473669d7395201cf0669c505ab21f69e28367212584e",
+      "duration": 2.625,
+      "verifiedAt": 1792750252615,
+      "review": "复用原始分组录音，按实际静音间隔切分。词头和所列变体完整读出；不朗读词典标记 pl. / AmE，英美拼写差异按同一词项核对。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Medium media.",
+        "whisper": "medium, media"
+      },
+      "sourceGroup": "g4108",
+      "clipStart": 3.4850000000000003,
+      "clipEnd": 5.87,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "cd096fc455a9962d575dd5410e846139439edfcb3fc8770dbc16e72d38461c5b",
@@ -174585,11 +175377,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3114",
-      "sourceGroupDigest": "ffcdf4307207c5a6bfa164e911ed7b9d03997fcdb7581efffcfa3ae31a6a40ff",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "7edfcb5c1d7947085011a656fbed117a002364f6acd2e0fcdfc1b98e982ab452.mp3",
+      "bytes": 12464,
+      "digest": "fc56eadaed08f13858b36af715570242472f6b248f43c43b8f15bb275352e6e9",
+      "duration": 2.975,
+      "verifiedAt": 1792750252617,
+      "review": "复用原始分组录音，按实际静音间隔切分。词头和所列变体完整读出；不朗读词典标记 pl. / AmE，英美拼写差异按同一词项核对。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Percent, percent.",
+        "whisper": "per cent per cent"
+      },
+      "sourceGroup": "g4108",
+      "clipStart": 5.87,
+      "clipEnd": 8.605,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "932fd68daca51bc47c8524471940fd09fcbbb0845152f5ee8356b1f04bd18034",
@@ -174766,11 +175569,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2116",
-      "sourceGroupDigest": "ef43f87b4826e83ff2bd448151d6bd27ed6d6495568c89f6a020acc8564ef53a",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "14f563d453071b602849e28280feb78c0cc3385e0bb4342992af284a113d78d6.mp3",
+      "bytes": 12032,
+      "digest": "d9a92885d3246cd02d4639aff377ad046fce98f5752912a61193e09895c6a961",
+      "duration": 2.87,
+      "verifiedAt": 1792750252600,
+      "review": "复用原始分组录音，按实际静音间隔切分。词头和所列变体完整读出；不朗读词典标记 pl. / AmE，英美拼写差异按同一词项核对。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Shelf, shelves.",
+        "whisper": "shelf shelves"
+      },
+      "sourceGroup": "g4106",
+      "clipStart": 1.18,
+      "clipEnd": 3.81,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "ad020fb73934722a5d7768d2761bb2e1bbda08b3190b2a99608adf3cf718410e",
@@ -174820,9 +175634,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2116",
-      "sourceGroupDigest": "ef43f87b4826e83ff2bd448151d6bd27ed6d6495568c89f6a020acc8564ef53a",
+      "batchId": "groups-006",
+      "sourceGroup": "g4106",
+      "sourceGroupDigest": "8aa20adf1f1c66ff96acb4474cdae3fc7eb0f7584edc157d6b14d2ba5e3478de",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -174840,11 +175654,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2116",
-      "sourceGroupDigest": "ef43f87b4826e83ff2bd448151d6bd27ed6d6495568c89f6a020acc8564ef53a",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "ed436788280fef6f13b5dfff04f24f96076a8bfbec58efc8b9c3ab755422aed1.mp3",
+      "bytes": 8432,
+      "digest": "891cbdc41c40aa71cf285b52226ebd151af754bbad1de7083ba5fbdbba4bc1b7",
+      "duration": 1.9649375,
+      "verifiedAt": 1792750252601,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Total."
+      },
+      "sourceGroup": "g4106",
+      "clipStart": 5.555,
+      "clipEnd": 7.279999999999999,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "f1bcd24d69b4b8183df981d548740989aa2ad0e2a9fc1313457c64a0d60b3a3c",
@@ -174861,11 +175685,23 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3116",
-      "sourceGroupDigest": "8c828b01c1b01eaef2a7f53f7b2ff89e3de24a58940a87299aef420813516bcc",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "f1bcd24d69b4b8183df981d548740989aa2ad0e2a9fc1313457c64a0d60b3a3c.mp3",
+      "bytes": 7856,
+      "digest": "e33b068436f69697c720a7165b9602c89ad945351d286370a2b0f7bd61825ca7",
+      "duration": 1.805,
+      "verifiedAt": 1792750409302,
+      "review": "复用原始分组录音，按实际静音间隔切分。三份独立转写均为 Soar；Cambridge 标注 sore 与 soar 的美式音标均为 /sɔːr/，属于同音异拼。本条为既有美式生成录音，仅按此词项核对，不修改词卡正文。未提供参考正文或热词，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Soar.",
+        "whisper": "Soar.",
+        "qwen": "Soar."
+      },
+      "sourceGroup": "g4108",
+      "clipStart": 8.605,
+      "clipEnd": 10.17,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "aa2249fe47e936fc7df3ea79d5f91a26b95ecf056bf019b1f43e65dd633c3b6f",
@@ -174882,11 +175718,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2117",
-      "sourceGroupDigest": "9589b7f354c7444df3d3723219b18e8ae7d38bf02cf6de76e618910f328aa45f",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "aa2249fe47e936fc7df3ea79d5f91a26b95ecf056bf019b1f43e65dd633c3b6f.mp3",
+      "bytes": 8144,
+      "digest": "0e93b9988bc8e26c555fd3acfe202dcf7dc8309eec0b876222d824dee126b2dd",
+      "duration": 1.895,
+      "verifiedAt": 1792750252602,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Village."
+      },
+      "sourceGroup": "g4106",
+      "clipStart": 7.279999999999999,
+      "clipEnd": 8.934999999999999,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "efa3c984ef05874a0c5dacc9eb2809d589c2c457b087ace7e64429d7763d9793",
@@ -174967,11 +175813,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3117",
-      "sourceGroupDigest": "c756ee88c7512e98e40fb4fff9cde744428b765d7cae514a632bea27ea026aa3",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "bd7bfa521fc5559a3247c7f7f11bb03805da1fa556afe3988a0d28f66982b624.mp3",
+      "bytes": 7280,
+      "digest": "9f90d4865aa0baacc982b2ff9c6309d4a396cc748ea7fef674b4563852862355",
+      "duration": 1.68,
+      "verifiedAt": 1792750252618,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Winner."
+      },
+      "sourceGroup": "g4108",
+      "clipStart": 10.17,
+      "clipEnd": 11.61,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "3fa40a7311d7d1e528e134d49a9720bbe9304bf0cda53e5d8cae65f7885c3850",
@@ -175052,11 +175908,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3118",
-      "sourceGroupDigest": "2e3d7ee4d5c75ef993f9bcdf3438603b999481bec91aff4b3a6c38af86ec3a5d",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "e22a5a336e95009b1698b520413222b12bd1ab5d1e9b9cbef279e56094c1a06c.mp3",
+      "bytes": 9296,
+      "digest": "19d64268a683b6c0fe54064d82b03d47f7567ef2075d661df2f51b057b0e139f",
+      "duration": 2.195,
+      "verifiedAt": 1792750252619,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Countless."
+      },
+      "sourceGroup": "g4108",
+      "clipStart": 11.61,
+      "clipEnd": 13.565000000000001,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "50fdab4e500e569c82f3d7e979f5f854f271a30b7c5f131412248b6be5ddc341",
@@ -175105,11 +175971,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2119",
-      "sourceGroupDigest": "f8ca4cfb314c73835a52d70b36a2474c69cea989511f67fd81ee9e4b38b66417",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "e4fcbd729775c2fdc51dd5a653f3392c7c3824e15f3c22afc1d80185fbcdfc6c.mp3",
+      "bytes": 8864,
+      "digest": "be1a5c26a5366fb5e46a5d1b23a482c3e24f13a7fc07627a8db816c41477e024",
+      "duration": 2.0550625,
+      "verifiedAt": 1792750252604,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Incorrect."
+      },
+      "sourceGroup": "g4106",
+      "clipStart": 8.934999999999999,
+      "clipEnd": 10.75,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "f3d847b2fb37b392f7f660e3c376476c7672adc4b4598cc66f653a0a01ffa45f",
@@ -175126,11 +176002,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3120",
-      "sourceGroupDigest": "8760fd3b1af1ddba89b8fa8a74ccaa338ddb429cac77306d9f7361ac56812cb8",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "f3d847b2fb37b392f7f660e3c376476c7672adc4b4598cc66f653a0a01ffa45f.mp3",
+      "bytes": 8000,
+      "digest": "42a881862919de0dfe74eed272688081b68ed9abd39b342ec2d76593d6632a04",
+      "duration": 1.855,
+      "verifiedAt": 1792750252620,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Breathe."
+      },
+      "sourceGroup": "g4108",
+      "clipStart": 13.565000000000001,
+      "clipEnd": 15.18,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "fa09bbbe6f2f8ec593e7a108b7fee47f5959865de7dfc179aba22f8fbfa05718",
@@ -175428,11 +176314,23 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2122",
-      "sourceGroupDigest": "8483dd1dc347693f11a553fefdded8f7ffd258ea886421acace6639931edb04f",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "a23ddc7995230e90ff81c8cd2bd24a8452a38982afc0347aac27e834ac1c86cb.mp3",
+      "bytes": 8576,
+      "digest": "3b9e4904583dfe22c8adefa96332d6c00119eee5b9ea7d67215b4826204cb12c",
+      "duration": 1.99,
+      "verifiedAt": 1792750252604,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Cheerful.",
+        "whisper": "Cheerful",
+        "qwen": "Cheer for."
+      },
+      "sourceGroup": "g4106",
+      "clipStart": 10.75,
+      "clipEnd": 12.5,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "b9936b48b2c30f96d6eedb7e580719cc94245c253db39ec592b801110f5bf77f",
@@ -176351,11 +177249,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3122",
-      "sourceGroupDigest": "4f282e0f89dcecec2a6cbdb4a4ad03cc7402b9e70ff496233a703a36fa27fef1",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "0a94449dac780095e89f4be3ceed36b025995bd3f91a21c7eab104bdc05225fb.mp3",
+      "bytes": 7568,
+      "digest": "dfba0b0d4fa47d64bd393c3f6e714183bc0f0678e966f092d7d748f50e5a3596",
+      "duration": 1.7309375,
+      "verifiedAt": 1792750252621,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Cheer4.",
+        "whisper": "Cheer for."
+      },
+      "sourceGroup": "g4109",
+      "clipStart": 0,
+      "clipEnd": 1.49,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "8db3cbfabf04a136c51c8d88ba9f0f8e1bfbd70046bf3335c850cb716f03ab23",
@@ -178674,9 +179583,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3123",
-      "sourceGroupDigest": "5f31d47c749bb44d529b652de6980fc141cb959b3fcb9bcdb6b122ce5733939c",
+      "batchId": "groups-006",
+      "sourceGroup": "g4109",
+      "sourceGroupDigest": "4f28c5b0afd3ae62f0370c7254ef203c5c55acda1a30675189be0e02f6d7ef6c",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -180373,11 +181282,23 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3124",
-      "sourceGroupDigest": "0eb0fadad15baa2a1f06ff82ccfbb91b3a1e4391e1a2586041d56d7050814435",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "259b3011d989d004b1835e7bd59905eee92a854ec199b0d5a9c307666cbb70e9.mp3",
+      "bytes": 8720,
+      "digest": "4bb9f01524178ec04872f2d385904cc15aed79f6d9d91ec78ae9684d0c980038",
+      "duration": 2.035,
+      "verifiedAt": 1792750252622,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Treat top.",
+        "whisper": "Treat Top",
+        "qwen": "Treetop."
+      },
+      "sourceGroup": "g4109",
+      "clipStart": 3.085,
+      "clipEnd": 4.88,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "7f4ced6518b56cb950bf2af8780dad6b391778ca7d18de95c8c5c9f6ed448edc",
@@ -180425,11 +181346,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3124",
-      "sourceGroupDigest": "0eb0fadad15baa2a1f06ff82ccfbb91b3a1e4391e1a2586041d56d7050814435",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "7df3c01b611c85de2a44c63793c5df85b4c0076e465eb722b54970b85a79c159.mp3",
+      "bytes": 8720,
+      "digest": "c7426fa2497250dbe141eddad4452eddfb6e64cabb3076492bee1d824e3d209c",
+      "duration": 2.04,
+      "verifiedAt": 1792750252623,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Coverage."
+      },
+      "sourceGroup": "g4109",
+      "clipStart": 4.88,
+      "clipEnd": 6.68,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "94ecdbe6f13e8e03f2e585e3239b1b825f0b11826b7474f6a8b55f3e7d1cb9f0",
@@ -180602,11 +181533,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3124",
-      "sourceGroupDigest": "0eb0fadad15baa2a1f06ff82ccfbb91b3a1e4391e1a2586041d56d7050814435",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "8df38896b8a03315a8bc8e007188bdad6db3f63ceaa9a0ee7157df47fdd97647.mp3",
+      "bytes": 8000,
+      "digest": "2028e74c9588f785b9257084bf9837c6fa09b5c7d58b039d9ef6304460d415cf",
+      "duration": 1.86,
+      "verifiedAt": 1792750252624,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Update."
+      },
+      "sourceGroup": "g4109",
+      "clipStart": 6.68,
+      "clipEnd": 8.3,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "a1d6f1c949929b0a429b232472504ade46488cd8b82408bab4e576ca1767e84d",
@@ -181473,11 +182414,10 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2136",
-      "sourceGroupDigest": "4f64dff335c61f47837bf164d1f6b903b78c9dc95004ac7b8ecc30170d9d83b9",
+      "batchId": "groups-006",
+      "sourceGroup": "g4137",
       "derivedFrom": "970aa0ded5b4c935cf40e2d9f72ec6a92ea182275a9599aaafc7a97863787771",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "review": "远端任务已报告生成，原始文件尚未取回；先恢复原结果，未完成下载、核对和云端回读前不供小程序播放，不重复生成。"
     },
     {
       "key": "160f1d59e930bdc0e6aebf59a3bc5465443095cb2eb4e43a66f72893b04037b8",
@@ -182781,11 +183721,21 @@
           "part": 1
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2127",
-      "sourceGroupDigest": "ec275fc0b16f94c921b7413ed3885d9251653cf15e800b80af2f00979e98b5a6",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "637a0d62e901f93b6f49221f7002e13e65640d1636c033e6d56bc31cddce8270.mp3",
+      "bytes": 33488,
+      "digest": "6d34f5e4b810ad0a207aff71b18c1e70cc92e6cce9846c8f26196c7b38debce8",
+      "duration": 8.24,
+      "verifiedAt": 1792750698246,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Learning about wildlife includes learning when to step back."
+      },
+      "sourceGroup": "g4133",
+      "clipStart": 0,
+      "clipEnd": 8,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "67d4580345e0baabb2d879205d2b25ce6c5b2041ef5826ecfdf8632702516c55",
@@ -182895,11 +183845,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2135",
-      "sourceGroupDigest": "5b1391e4b8ecb9ff8e4d1c2f66124354588d296ecb2e49ed20aa47d6f8855a6a",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "6d0b078529fb15d4b81dfaebe5382e3be4d2a8a02b917c3c43a14a385855ed53.mp3",
+      "bytes": 257552,
+      "digest": "01899a2031690d111dee35654e077b608cf483e2874cdb7fb59742a410002d6c",
+      "duration": 64.24,
+      "verifiedAt": 1792750698276,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Our geography club compares two roots beside the same river. The Eastern route is as long as the western one, but it is not as quiet, we record bridges trees and places where people can rest Everyone notices something different so we put our notes together before making a brochure We include the date of our visit because conditions along the river can change, a useful description helps visitors choose a route,.",
+        "whisper": "Our Geography Club compares two routes beside the same river. The eastern route is as long as the western one, but it is not as quiet. We record bridges, trees, and places where people can rest. Everyone notices something different. so we put our notes together before making a brochure. We include the date of our visit because conditions along the river can change. A useful description helps visitors choose a route."
+      },
+      "sourceGroup": "g4136",
+      "clipStart": 0,
+      "clipEnd": 64,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "6ed9e53aa451edd181b31b34dd838291b5ba48d15a022b22478fd2f88008c627",
@@ -182990,11 +183951,21 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2127",
-      "sourceGroupDigest": "ec275fc0b16f94c921b7413ed3885d9251653cf15e800b80af2f00979e98b5a6",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "72f6477e1e6408d762ffe13528d9c9cc57b2eac64a6754fc4a1301904e1d0fad.mp3",
+      "bytes": 75248,
+      "digest": "a549e55ca81ebfda1ccf5030add8387211bedee4603201b2a823937c5f91a8fd",
+      "duration": 18.68,
+      "verifiedAt": 1792750698244,
+      "review": "复用原始分组录音，按实际静音间隔切分。切分后的独立 SenseVoice/Whisper 转写至少一份与原文逐字一致（仅忽略标点、大小写和空格）。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Being honest does not remove every difficulty, but it gives us a chance to repair the result."
+      },
+      "sourceGroup": "g4132",
+      "clipStart": 18.84,
+      "clipEnd": 37.28,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "73ddc25d45c0ecf273e03faf7395da16f907b447afda35d9c82d890616f2592c",
@@ -183104,12 +184075,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3131",
-      "sourceGroupDigest": "ec57cba4833b879e8c5d0d631b8dc936e1e4055553469cc4b61dce0083c61751",
-      "derivedFrom": "c87c36d3fed0bf2ce7bad8b54e3f7edca235822354b3209e4a235815834bb7aa",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "7b124491ef1a6de83eeae59a613601a1f4b4f153898002ad93d5b5524683161d.mp3",
+      "bytes": 35792,
+      "digest": "0b0e35fafd1b8a5aa8f5cef4293e69b62fce877fa2c22254ec69c0ac0bdedf5f",
+      "duration": 8.7869375,
+      "verifiedAt": 1792750698249,
+      "review": "复用原始分组录音，按实际静音间隔切分。仅英美拼写或序数词数字记法不同，所读词项一致；原文保持英式拼写。非真人审听。",
+      "transcripts": {
+        "senseVoice": "You had better practice the opening slowly, her friend suggests.",
+        "whisper": "You had better practice the opening slowly, her friend suggests."
+      },
+      "sourceGroup": "g4134",
+      "clipStart": 0,
+      "clipEnd": 8.545,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "7b9bfc111a37e9c6e83561d100c23f5ca04792db09fe678dd6999774dc1fc66d",
@@ -183407,10 +184388,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2136",
-      "sourceGroupDigest": "4f64dff335c61f47837bf164d1f6b903b78c9dc95004ac7b8ecc30170d9d83b9",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "batchId": "groups-006",
+      "sourceGroup": "g4137",
+      "review": "远端任务已报告生成，原始文件尚未取回；先恢复原结果，未完成下载、核对和云端回读前不供小程序播放，不重复生成。"
     },
     {
       "key": "9b14cd1cd913d1c61bef23486b716216d7605c0d8691e54a6d8c81dbd9946b2d",
@@ -183645,12 +184625,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2131",
-      "sourceGroupDigest": "615aa3777c6324822864de032d22f02e2c6d601c74bf63e09c52815efea9e412",
-      "derivedFrom": "7c025536d2125d574d0341b82500198e965d8dcde4fe7db59c4064a2df6e43be",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "a28cefb09a51d7a5bfe28c868e0d28850a7479edbe46cd09753a7d646d149a32.mp3",
+      "bytes": 56528,
+      "digest": "3c79c246cc24bbf9e90d5e1ac0cb8d24151c2054356396c63d1d80f1a486bd6d",
+      "duration": 14,
+      "verifiedAt": 1792750933617,
+      "review": "复用原始分组录音，原分句末端落在长静音间隔内；按该完整间隔重新定界，保留 her friend suggests；只从原录音连续截取，切片另做独立转写核对。仅英美拼写或序数词数字记法不同，所读词项一致；原文保持英式拼写。非真人审听。",
+      "transcripts": {
+        "senseVoice": "You had better practice the opening slowly, her friend suggests.",
+        "whisper": "You had better practice the opening slowly, her friend suggests."
+      },
+      "sourceGroup": "g4132",
+      "clipStart": 5.08,
+      "clipEnd": 18.84,
+      "batchId": "doubao-20261022-groups-921"
     },
     {
       "key": "a2cf5ae1c37e54e74e6883c4c4fdff9d9a3c15d433a2c52d02858f36f10e38a3",
@@ -183795,12 +184785,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3134",
-      "sourceGroupDigest": "9b6568ae90b596e9e9e65cc0a0615f6fd56e405e9f9ceb36897f39fb571af282",
-      "derivedFrom": "02188c2f559fcc4099482a9b9ebd1f1c51fc89b84f0bed163bbfda48e5726520",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "a6ba2ba32ea14042375cda7bce42c0f3b139583873bf62ce8f0d214273f8d9f0.mp3",
+      "bytes": 77408,
+      "digest": "9223f107f08291e92b76ea9973d062e009a9fc4a6722d9fc2ae1578d650efaff",
+      "duration": 19.195,
+      "verifiedAt": 1792750698254,
+      "review": "复用原始分组录音，按实际静音间隔切分。仅英美拼写或序数词数字记法不同，所读词项一致；原文保持英式拼写。非真人审听。",
+      "transcripts": {
+        "senseVoice": "The first has brighter colors, while the second tells a more surprising story.",
+        "whisper": "The first has brighter colors, while the second tells a more surprising story."
+      },
+      "sourceGroup": "g4134",
+      "clipStart": 8.545,
+      "clipEnd": 27.5,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "a9922edcbde7bd7a01911f50c1e9f630793aee659b1898d769a052a0ace7e691",
@@ -184467,11 +185467,10 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2136",
-      "sourceGroupDigest": "4f64dff335c61f47837bf164d1f6b903b78c9dc95004ac7b8ecc30170d9d83b9",
+      "batchId": "groups-006",
+      "sourceGroup": "g4137",
       "derivedFrom": "970aa0ded5b4c935cf40e2d9f72ec6a92ea182275a9599aaafc7a97863787771",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "review": "远端任务已报告生成，原始文件尚未取回；先恢复原结果，未完成下载、核对和云端回读前不供小程序播放，不重复生成。"
     },
     {
       "key": "e82e153cc302f97b113ebe6c54a60bb2215e0891bf657017025980e8aa932e65",
@@ -184799,11 +185798,10 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g2136",
-      "sourceGroupDigest": "4f64dff335c61f47837bf164d1f6b903b78c9dc95004ac7b8ecc30170d9d83b9",
+      "batchId": "groups-006",
+      "sourceGroup": "g4137",
       "derivedFrom": "970aa0ded5b4c935cf40e2d9f72ec6a92ea182275a9599aaafc7a97863787771",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "review": "远端任务已报告生成，原始文件尚未取回；先恢复原结果，未完成下载、核对和云端回读前不供小程序播放，不重复生成。"
     },
     {
       "key": "f96c76492f218e9eeb7b4da62728981d62217a8286bcf47069ce57e1f16fc90e",
@@ -185879,12 +186877,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-005",
-      "sourceGroup": "g3141",
-      "sourceGroupDigest": "7e5df9446ec31f16fb407fd5f32b6af458171a401f4f9c472ace27c470686754",
-      "derivedFrom": "7d4a0230501d52828e06e22584a1b0faea0c753eca1c6601f0d93f9edb370640",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "7c3afc9a3c677a630acd09674daabbbef9c828c0f801b00785e07d768ce4bb96.mp3",
+      "bytes": 56672,
+      "digest": "d7bba5ac5f9ba23bffe8518192a0e8b07b816948d89160f3ac9f8c92618c1931",
+      "duration": 14.04,
+      "verifiedAt": 1792750698258,
+      "review": "复用原始分组录音，按实际静音间隔切分。英文数词与阿拉伯数字逐项对应（zero 至 nineteen），其余词项全文一致；保留原文和转写。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Our group counts 12 trees in the first section and writes down the date.",
+        "whisper": "Our group counts 12 trees in the first section and writes down the date."
+      },
+      "sourceGroup": "g4135",
+      "clipStart": 0,
+      "clipEnd": 13.8,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "7d1c7ad679366cafec055db6422de65e3f12eb6b3ea9aed9ef1bd9cdf45e7b25",
@@ -263314,11 +264322,12 @@
     }
   ],
   "localCleanup": {
-    "archiveFilesMovedFromDownloads": 144,
-    "rawGroupsMovedAfterCompleteCloudReadback": 390,
-    "logicalBytesMoved": 8279415644,
+    "archiveFilesMovedFromDownloads": 157,
+    "rawGroupsMovedAfterCompleteCloudReadback": 421,
+    "logicalBytesMoved": 8647105538,
     "trashEmptiedByAgent": false,
-    "unverifiedOriginalsRetention": "Retained in the ignored task directory; raw cleanup requires receipts for every primary and derived clip."
+    "unverifiedOriginalsRetention": "Retained in the ignored task directory; raw cleanup requires receipts for every primary and derived clip.",
+    "rawGroupsRestoredForReview": 1
   },
   "summary": {
     "totalPublicSegments": 3990,
@@ -263335,21 +264344,21 @@
     "accentVariants": {
       "en-GB": {
         "totalSegments": 3627,
-        "storedSegments": 3325,
-        "storedBytes": 58443440,
-        "reviewPending": 260,
+        "storedSegments": 3369,
+        "storedBytes": 60577296,
+        "reviewPending": 216,
         "notGenerated": 42
       },
       "en-US": {
         "totalSegments": 3627,
-        "storedSegments": 3322,
-        "storedBytes": 58936400,
-        "reviewPending": 226,
+        "storedSegments": 3374,
+        "storedBytes": 61194880,
+        "reviewPending": 174,
         "notGenerated": 79
       }
     },
-    "playablePublicSegments": 3741,
-    "fullyCoveredEnglishAccents": 3187,
-    "allStoredBytes": 165789184
+    "playablePublicSegments": 3760,
+    "fullyCoveredEnglishAccents": 3261,
+    "allStoredBytes": 170181520
   }
 }
