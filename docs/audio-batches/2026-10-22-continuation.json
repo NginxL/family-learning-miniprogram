@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "createdAt": "2026-10-23T05:31:02.072Z",
+  "createdAt": "2026-10-23T06:12:10.781Z",
   "provider": "Doubao Work built-in seed-audio",
   "funding": "existing membership quota only; no paid API or purchase",
   "applicationCommit": "98cbd3a",
@@ -163316,11 +163316,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-007",
+      "status": "stored",
+      "file": "6b6d27bc69abe87643c6789cf0cf33e46b74c0bdb42088d707829de12441e765.mp3",
+      "bytes": 53792,
+      "digest": "437d8e8a3e6667baaf78c5fb9c37694313d369a78eb5e9d0251c0966ad54d800",
+      "duration": 13.31,
+      "verifiedAt": 1792735114491,
+      "review": "复用原始分组录音，按实际静音间隔切分。本机 Qwen3-ASR 未提供参考正文或热词的完整独立转写逐字一致。用户于 2026-10-23T13:56:22.325040+08:00 实际试听确认：《送元二使安西》题名“元二”的“二”读第四声 èr。此确认只覆盖所列读音，音频摘要绑定；其余内容按独立转写核对。未声称整段真人审听。",
+      "transcripts": {
+        "senseVoice": "送元儿使安西王维，渭城朝雨浥轻尘，客舍青青柳色新。劝君更尽一杯酒，西出阳关无故人。",
+        "whisper": "宋元儿使安息 王为 未成朝雨一清晨 客舍清清柳色星 劝君更尽一杯酒 吸出阳关 无故人",
+        "qwen": "送元二使安西，王维。渭城朝雨浥轻尘，客舍青青柳色新。劝君更尽一杯酒，西出阳关无故人。"
+      },
       "sourceGroup": "g4054",
-      "sourceGroupDigest": "df8465e94de1efc3bef0439863f91fd52f6f95de2fe041f257c3d0cc8f873299",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 12.93,
+      "clipEnd": 26,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "6c50240ca0124da30b5c907b52313ce481cd7f4a5c0d6ecac323934c77e92428",
@@ -163336,11 +163347,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-007",
+      "status": "stored",
+      "file": "6c50240ca0124da30b5c907b52313ce481cd7f4a5c0d6ecac323934c77e92428.mp3",
+      "bytes": 53936,
+      "digest": "b409303c0a6b30ee145a8c91fdda9af5bb508dee9cf6e069ffaaedf9a340dc29",
+      "duration": 13.34,
+      "verifiedAt": 1792735114496,
+      "review": "复用原始分组录音，按实际静音间隔切分。本机 Qwen3-ASR 未提供参考正文或热词的完整独立转写逐字一致。用户于 2026-10-23T13:56:22.326110+08:00 实际试听确认：《题临安邸》末句“直把杭州作汴州”的“直”读第二声 zhí。此确认只覆盖所列读音，音频摘要绑定；其余内容按独立转写核对。未声称整段真人审听。",
+      "transcripts": {
+        "senseVoice": "题临安邸林升，山外青山楼外楼，西湖歌舞几时休。暖风熏得游人醉，只把杭州作汴州。",
+        "whisper": "提林安邸林生山外青山楼外楼西湖歌舞几时修暖风勋得游人醉只把杭州做变州",
+        "qwen": "题临安邸，林升。山外青山楼外楼，西湖歌舞几时休？暖风熏得游人醉，直把杭州作汴州。"
+      },
       "sourceGroup": "g4055",
-      "sourceGroupDigest": "afaf84368cb190cb9c9aa74346571d00ea9ca3547885ab80f6bb0ca0357dea51",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 0,
+      "clipEnd": 13.1,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "fbad675869cbedc3b4d2efebb30250f70b1a8f9dfd4d2c2d98f82db368c2c69e",
@@ -165124,11 +165146,22 @@
           "part": 1
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-007",
+      "status": "stored",
+      "file": "3cdfc4546fac5c422f52740590ca30614d22472c287beea59e67c7e61b970c9e.mp3",
+      "bytes": 112688,
+      "digest": "e9e177f92886a266a860e4c16f30c5ee079b517371d94dce972637fd5d002f86",
+      "duration": 28.02,
+      "verifiedAt": 1792734635925,
+      "review": "复用原始分组录音，按实际静音间隔切分。本机 Qwen3-ASR 未提供正文或热词的独立转写，经汉典核对：鸣/明均读 míng；仅将转写的明之还原为正文鸣之，其余全文完整一致。 仅本条完整转写适用；音频摘要绑定，不改正文，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "是马也虽有千里之能，食不饱力不足，才美不外见，且欲与常马等不可得，安求其能千里也。策之不以其道，时之不能尽其才，明之而不能通其义，执策而灵之，曰，天下无马呜乎其真无马邪，其真不知马也。",
+        "whisper": "是马也,虽有千里之能,实不保,力不足,才美不外见,且玉与长马等不可得,安求其能千里也,侧之不以其道,实之不能尽其才,明之而不能通其意,直侧而灵之,曰,天下无马,呜呼,其真无马鞋,其真不知马也。",
+        "qwen": "是马也，虽有千里之能，食不饱，力不足，才美不外见，且欲与常马等不可得，安求其能千里也？策之不以其道，食之不能尽其材，明之而不能通其意，执策而临之，曰：天下无马。呜呼！其真无马邪？其真不知马也。"
+      },
       "sourceGroup": "g4171",
-      "sourceGroupDigest": "962460c588ea6737b8d0aa1040764c8c2004df4e83c60046377ccdf3bec6ea2a",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 0,
+      "clipEnd": 27.78,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "fd655852aad23853982ecac579a65fa85cbc6c3f712b2f177bbf089be894b3f2",
@@ -165471,7 +165504,8 @@
       "batchId": "groups-007",
       "sourceGroup": "g4185",
       "sourceGroupDigest": "9115d8d036d3dc15a24eed89601a70233a93fa35bcc6ffc26695d8dba4f3f9bb",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "review": "用户试听确认“法家拂士”的“拂”未读 bì，属于错读，不得入库。 已使用本轮获准的一次补录，保留录音供核对，不入库、不自动再次生成。",
+      "reviewOutcome": "rejected-pronunciation"
     },
     {
       "key": "6bfeefe3d49a20696b469185698df144e2d15f5cc5391b8dc431496640d0e672",
@@ -165777,11 +165811,22 @@
           "part": 3
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-007",
+      "status": "stored",
+      "file": "b0e3bbdff1698d1399e972d719423d25735bb3b2d7b943180c5c629fcdc3ed65.mp3",
+      "bytes": 125936,
+      "digest": "b0fe29265c093cb8f01b17a636d76534e680ad4989330d23950f151680c1f79c",
+      "duration": 31.34,
+      "verifiedAt": 1792734636000,
+      "review": "复用原始分组录音，按实际静音间隔切分。本机 Qwen3-ASR 未提供正文或热词的独立转写，经汉典核对：倚/以 yǐ、衡/横 héng、趾/指 zhǐ、啸/笑 xiào、呼/乎 hū、视/嗜 shì、蚊/文 wén；逐处同音差异以全文校验约束。 仅本条完整转写适用；音频摘要绑定，不改正文，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "居右者追记仰面，左手以一横目，右手攀右指，若笑乎状。居左者右手执蒲魁扇左手俯庐炉上有壶，其人事端容剂，若听茶生然。其传被稍移，则提名其上。文曰，天起任虚秋日，虞山王意疏远俯克，细若文足勾画寥了，其色墨。",
+        "whisper": "居右者,追记仰面,左手,以翼横目,右手,攀右指,若笑呼撞,居左者,右手,直蒲魁扇,左手,斧炉,炉上有弧,其人,誓端荣记,若听茶声然,其船被烧移,则提名其上,文曰,天启任须秋日,于山王毅疏远辅客,细弱文族勾画寥寥其色末",
+        "qwen": "居右者椎髻仰面，左手以一横木，右手攀右指，若笑乎状。居左者右手执蒲葵扇，左手抚炉，炉上有壶，其人嗜端容寂，若听茶声然。其船背稍夷，则题名其上，文曰“天启壬戌秋日，虞山王毅叔远甫刻”，细若文足，钩画了了，其色墨。"
+      },
       "sourceGroup": "g4199",
-      "sourceGroupDigest": "d4000fbb3b0141def896452b2003ecb60941925fa37da3b8b2d22c0bd1bc4c98",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 0,
+      "clipEnd": 31.1,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "9d3e31e5b32fb206153118f675b1522ff575860ef0832cf2702fe09d7e20d48b",
@@ -166012,11 +166057,22 @@
           "part": 1
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-007",
+      "status": "stored",
+      "file": "b28172dbcb4225c78091b69a6feda7099478bcde04c2544f21cd1533974c19c6.mp3",
+      "bytes": 66896,
+      "digest": "a73a4aabfaffc78ac2e680655edb7bd3cf80356723a8b5ccbd507aeb08c94495",
+      "duration": 16.59,
+      "verifiedAt": 1792734636035,
+      "review": "复用原始分组录音，按实际静音间隔切分。本机 Qwen3-ASR 未提供正文或热词的独立转写，经汉典核对：老妪的妪/欲 yù、吏/立 lì、急/即 jí、备/被 bèi、炊/吹 chuī、语声的语/雨 yǔ；所列声调一致，全文没有增减。 仅本条完整转写适用；音频摘要绑定，不改正文，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "老妪力虽衰，请从立夜归，即应何阳意，犹得被晨吹。夜久与声绝，如闻栖幽夜，天明灯前途，独与老翁别。",
+        "whisper": "老玉历虽衰,请从历叶归,极应和阳意,游得被沉吹,夜久与生觉,如闻七幽夜,天明灯前途,独于老翁别。",
+        "qwen": "老欲力虽衰，请从立夜归。即应河阳役，犹得被晨吹。夜久雨声绝，如闻泣幽咽。天明登前途，独与老翁别。"
+      },
       "sourceGroup": "g4208",
-      "sourceGroupDigest": "2a7244124eaa574513130d21d9bdc819e198357c6a05756be224763c82ff5c65",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 0,
+      "clipEnd": 16.35,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "7317551a088a834759b32e165241d03f7349fc1dc78e1c234cd6e3d073c47b05",
@@ -166114,11 +166170,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-007",
+      "status": "stored",
+      "file": "e1907e2b9fb4426df6003f2f6ae2bcc273154d2376540321729be45c08e02bd7.mp3",
+      "bytes": 117584,
+      "digest": "aa3fe78cf9086a36c1b81c02260f8ad362db1b8fb3fecc21c472619532d8ea53",
+      "duration": 29.24,
+      "verifiedAt": 1792733891834,
+      "review": "复用原始分组录音，按实际静音间隔切分。本机 Qwen3-ASR 未提供正文或热词的独立转写，经汉典逐项核对饴/贻均读 yí；本句饴同贻，送给。仅本组列明同音字差异，替换后题名、作者、全文逐字一致，音频摘要绑定；不改正文，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "1五从军征汉乐府1五从军征，8十始得归，道逢乡里人，家中有阿谁。遥看是君家，松柏冢累累。兔从狗窦入，雉从梁上飞，中庭生吕谷，颈上生旅葵，舂谷持作饭，采葵持作羹。羹饭一时熟，不知遗鸭谁。出门东向看泪落沾我衣。",
+        "whisper": "十五从军争,汉岳府,十五从军争,八十使得归,道逢乡里人,家中有阿谁,摇看市军家,松白肿累累,兔从狗斗入,志从梁上飞,中亭生吕骨,锦上生吕葵,冲骨持做饭,采葵持做羹,羹饭一时熟,不知已阿谁,出门东向看,泪落沾我衣。",
+        "qwen": "十五从军征，汉乐府。十五从军征，八十始得归。道逢乡里人，家中有阿谁？遥看是君家，松柏冢累累。兔从狗窦入，雉从梁上飞。中庭生旅谷，井上生旅葵。舂谷持作饭，采葵持作羹。羹饭一时熟，不知贻阿谁。出门东向看，泪落沾我衣。"
+      },
       "sourceGroup": "g4238",
-      "sourceGroupDigest": "d73e25c5892af4cf072a874cb654545243c57cb2a7fb482808860143d88c5440",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 0,
+      "clipEnd": 29,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "2630eaa8d700baea2a4e692213c135c2b5b6a80cbde34e032b0de7e814fc3133",
@@ -166267,11 +166334,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0203",
-      "sourceGroupDigest": "eb328be5bffcd9cd69c4dc0236b5d84894e2308de8bbb0a3a5f601fd0e3c99ec",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "c149e0c3ebdce612bee762b9ade228c233309faab1843985eab0e39ef4f99b6e.mp3",
+      "bytes": 100592,
+      "digest": "bbd83dab362da18ecff87953cede4f1490ae9bd1504a7ed177a4abe555140b06",
+      "duration": 25.02,
+      "verifiedAt": 1792733891859,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "南乡子辛弃疾何处望神州，满眼风光北固楼。千古兴亡多少事悠悠，不尽长江滚滚流，年少万斗鍪，坐断东南战未休，天下英雄谁敌手，曹流，生子当如孙仲谋。",
+        "whisper": "南乡子新气急何处望神州满眼风光北顾楼千古新王多少事悠悠不进长江滚滚流年少万斗谋坐断东南战未休天下英雄谁敌手曹流生子当如孙众谋",
+        "qwen": "南乡子，辛弃疾。何处望神州？满眼风光北固楼。千古兴亡多少事？悠悠。不尽长江滚滚流。年少万兜鍪，坐断东南战未休。天下英雄谁敌手？曹刘。生子当如孙仲谋。"
+      },
+      "sourceGroup": "g4244",
+      "clipStart": 0,
+      "clipEnd": 24.78,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "5ac429380f1bb67185030a9d1f323c3293d7bd24e0a697dca15d693b8093e753",
@@ -166287,11 +166365,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0204",
-      "sourceGroupDigest": "898b98d00af141557fb151611e0359c96868610ac07d1ff4059c43a6cee48b0c",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "5ac429380f1bb67185030a9d1f323c3293d7bd24e0a697dca15d693b8093e753.mp3",
+      "bytes": 77552,
+      "digest": "79e78c738abaab2166f5ff9cc38ab4de7430542e058b545d5919988ec8155f3a",
+      "duration": 19.24,
+      "verifiedAt": 1792733891861,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "破阵子辛弃疾醉里挑灯看剑，梦回吹角连营，八百里分麾下炙五0弦翻塞外声，沙场秋点兵，马作的卢飞快，弓如霹雳弦金，了却君王天下事，赢得生前身后名，可怜白发生。",
+        "whisper": "破阵子,心气急,醉里挑灯看见,梦回吹脚连营,八百里分挥下至,五十弦翻赛外生,沙场秋点兵,马座狄卢飞快,公如霹雳贤金,了却君王天下士,赢得生前身后名,可怜白发生。",
+        "qwen": "破阵子，辛弃疾。醉里挑灯看剑，梦回吹角连营。八百里分麾下炙，五十弦翻塞外声。沙场秋点兵。马作的卢飞快，弓如霹雳弦惊。了却君王天下事，赢得生前身后名。可怜白发生。"
+      },
+      "sourceGroup": "g4245",
+      "clipStart": 0,
+      "clipEnd": 19,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "530fb5fcdda9196084352eb6d11abc1acbdd3454568463febc06b05cf95b4ebb",
@@ -166307,11 +166396,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0204",
-      "sourceGroupDigest": "898b98d00af141557fb151611e0359c96868610ac07d1ff4059c43a6cee48b0c",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "530fb5fcdda9196084352eb6d11abc1acbdd3454568463febc06b05cf95b4ebb.mp3",
+      "bytes": 90368,
+      "digest": "e4346212e61868505fc8c8108179dcba542e0e213b43130a072a084609efe9bf",
+      "duration": 22.44,
+      "verifiedAt": 1792733891864,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "过零丁阳文天祥辛苦遭逢起易经，干戈寥落四周心。山河破碎风飘絮，身世浮沉雨打平。惶恐滩头说惶恐，伶丁洋里叹伶丁。人生自古谁无死，留取丹心照汗青。",
+        "whisper": "过林丁阳,闻天祥,辛苦遭逢起一惊,干戈缭络落四周星,山河破碎风飘续,绅士浮沉,雨打平,惶恐摊头说惶恐,林丁阳里,叹林丁,人生自古谁无死,留取担心,赵汉清。",
+        "qwen": "过零丁洋，文天祥。辛苦遭逢起一经，干戈寥落四周星。山河破碎风飘絮，身世浮沉雨打萍。惶恐滩头说惶恐，零丁洋里叹零丁。人生自古谁无死，留取丹心照汗青。"
+      },
+      "sourceGroup": "g4246",
+      "clipStart": 0,
+      "clipEnd": 22.2,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "e1a5ee73c73dd9ebf56100f4fc865985262de733516bf3fd618a79604df57860",
@@ -166327,11 +166427,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0204",
-      "sourceGroupDigest": "898b98d00af141557fb151611e0359c96868610ac07d1ff4059c43a6cee48b0c",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "e1a5ee73c73dd9ebf56100f4fc865985262de733516bf3fd618a79604df57860.mp3",
+      "bytes": 86624,
+      "digest": "b29f30e163d5daa5cd68735b588b0d3f8d7e29bf42536b1c158ee5f789e751a8",
+      "duration": 21.52,
+      "verifiedAt": 1792733891866,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "山坡杨潼关怀古张养浩风峦如炬，波涛如怒，山河表里潼关路，望西都一踌躇。伤心秦汉经行处，宫阙万间都作了土辛百姓苦亡百姓苦。",
+        "whisper": "山坡羊同关怀骨,张养浩,风鸾如炬,波涛如怒,山河表里同关路,望西都亦愁愁,伤心情悍惊行处,宫阙万间都做了土,心百信苦,亡百信苦。",
+        "qwen": "《山坡羊·潼关怀古》张养浩，峰峦如聚，波涛如怒，山河表里潼关路。望西都，意踌躇。伤心秦汉经行处，宫阙万间都做了土。兴，百姓苦；亡，百姓苦。"
+      },
+      "sourceGroup": "g4247",
+      "clipStart": 0,
+      "clipEnd": 21.28,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "e8611097ed8c0ced33ca5f5d7cda5510448d9f3fe3e8df99a06de98c8744ba6e",
@@ -166348,9 +166459,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0205",
-      "sourceGroupDigest": "114e9882528c24d7bfbc2410e347f5f36e21b0227052f90ece3cbe75d8e7cb57",
+      "batchId": "groups-007",
+      "sourceGroup": "g4248",
+      "sourceGroupDigest": "a1bd9d5176a249e53f6a6d32af28f1e514caedbac960dfa2a72e5d43ca79a546",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -166367,11 +166478,22 @@
           "part": 1
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0205",
-      "sourceGroupDigest": "114e9882528c24d7bfbc2410e347f5f36e21b0227052f90ece3cbe75d8e7cb57",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "504fda4fa60a089d9843514a3f9b7c634ebf150832d19dc7afc469a5cd5aba2f.mp3",
+      "bytes": 8288,
+      "digest": "de39184c4686738c53de89d4e04e00500ecd3662a38b2dfc5bed7b04bfd975f2",
+      "duration": 1.92,
+      "verifiedAt": 1792734805568,
+      "review": "复用原始分组录音，按实际静音间隔切分。本机 Qwen3-ASR 未提供正文或热词的独立转写，经汉典核对：衫/山均读 shān，青衫湿全文三个字完整一致。 仅本条完整转写适用；音频摘要绑定，不改正文，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "青山湿。",
+        "whisper": "青山诗",
+        "qwen": "青山湿。"
+      },
+      "sourceGroup": "g4249",
+      "clipStart": 0,
+      "clipEnd": 1.6800000000000002,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "d4f6c4f031d5906f7072d49ad57d33f1e430ab68a53e362c9daccf17af7da688",
@@ -166387,11 +166509,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0205",
-      "sourceGroupDigest": "114e9882528c24d7bfbc2410e347f5f36e21b0227052f90ece3cbe75d8e7cb57",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "d4f6c4f031d5906f7072d49ad57d33f1e430ab68a53e362c9daccf17af7da688.mp3",
+      "bytes": 137888,
+      "digest": "66aaec5c0e6ecdb6b499cabdd9de76689a51c340aff246cafb9abcede565dee7",
+      "duration": 34.34,
+      "verifiedAt": 1792734805571,
+      "review": "复用原始分组录音，按实际静音间隔切分。本机 Qwen3-ASR 未提供正文或热词的独立转写，经汉典核对：本句间为参与义，读 jiàn，与见同音；弗/服 fú。只对全文两处差异逐字核对，其余文字完整一致。 仅本条完整转写适用；音频摘要绑定，不改正文，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "曹刿论战左传十年春，齐师伐我公将战曹刿请见其乡人曰，肉食者谋之，又何见焉，刿曰，肉食者比未能远谋，乃入见问，何以战公曰，衣食所安，弗敢专也，必以分人，对曰，小惠未变民弗从也。",
+        "whisper": "曹贵论战,左传,十年春,其师伐我,功将战,曹贵请见,其乡人曰,肉食者谋之,又何见焉?贵曰,肉食者比,未能远谋,乃入见,问,何以战?公曰衣食所安府感专业必已分人对曰小会未变民服从也",
+        "qwen": "曹刿论战，左传。十年春，齐师伐我。公将战，曹刿请见。其乡人曰：“肉食者谋之，又何见焉？”刿曰：“肉食者鄙，未能远谋。”乃入见，问：“何以战？”公曰：“衣食所安，弗敢专也，必以分人。”对曰：“小惠未遍，民服从也。”"
+      },
+      "sourceGroup": "g4249",
+      "clipStart": 1.6800000000000002,
+      "clipEnd": 35.78,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "7d5096dfbff7546688f04ebae5f775ea968727bfb935cf18b6577d294340aab8",
@@ -166407,11 +166540,22 @@
           "part": 1
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0206",
-      "sourceGroupDigest": "813ae8fcf5e5334fceac7459b3cd9f7256799bdbb559734c7300549bc64f3dee",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "7d5096dfbff7546688f04ebae5f775ea968727bfb935cf18b6577d294340aab8.mp3",
+      "bytes": 101600,
+      "digest": "7f1d596fbb6f62c2392e831f74e2d189c0885185f4c023c4260d452a5b33aaf9",
+      "duration": 25.24,
+      "verifiedAt": 1792734805574,
+      "review": "复用原始分组录音，按实际静音间隔切分。本机 Qwen3-ASR 未提供正文或热词的独立转写，经汉典核对：矣/以均读 yǐ；可矣与可以仅同音字转写差异，全文其余文字完整一致。 仅本条完整转写适用；音频摘要绑定，不改正文，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "公曰，牺生欲帛，弗敢家也，必以信。对曰，小信未弗神弗弗也。公曰，小大之欲虽不能察必以秦。对曰，终之孰也，可以一战，战则请从公与之乘，战于长勺，公将鼓之，刿曰，未可其人三股刿曰，可以其师败祭。",
+        "whisper": "公曰,牺牲玉伯,福感家也,必以信,对曰,小信未福,神福福也,公曰,小大之欲虽不能查,必以情,对曰,终之鼠也,可以一战,战则请从,公语之秤,战于长勺,公将谷之,贵曰,未可,其人三谷,贵曰,可以,其师败尽。",
+        "qwen": "公曰：“牺牲玉帛，弗敢加也，必以信。”对曰：“小信未孚，神弗福也。”公曰：“小大之狱，虽不能察，必以情。”对曰：“忠之属也，可以一战。战则请从。”公与之乘，战于长勺。公将鼓之，刿曰：“未可。”齐人三鼓，刿曰：“可以。”齐师败绩。"
+      },
+      "sourceGroup": "g4250",
+      "clipStart": 0,
+      "clipEnd": 25,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "d3b898b3368f212b2a110c00e21d74c2c034aca361e72cf33608831b6797a917",
@@ -166427,11 +166571,22 @@
           "part": 2
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0206",
-      "sourceGroupDigest": "813ae8fcf5e5334fceac7459b3cd9f7256799bdbb559734c7300549bc64f3dee",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "d3b898b3368f212b2a110c00e21d74c2c034aca361e72cf33608831b6797a917.mp3",
+      "bytes": 115568,
+      "digest": "aa65439e9514b5a361f1b549a4b30cd4b6d75cf061fca72466023738d1229ef9",
+      "duration": 28.74,
+      "verifiedAt": 1792734805577,
+      "review": "复用原始分组录音，按实际静音间隔切分。本机 Qwen3-ASR 未提供正文或热词的独立转写，经汉典核对：驰/持 chí、矣/以 yǐ、齐/其 qí、惧/具 jù，全文各处同音差异，未删减文字。 仅本条完整转写适用；音频摘要绑定，不改正文，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "公将持之刿曰，未可下士其者登世而望之曰，可矣遂遂其师既客公问其故对曰，夫战勇弃也，一鼓作气再而衰，三而竭，彼竭我盈故克之，夫大国南测也，具有夫焉，吾事其折乱，忘其其迷故逐之。",
+        "whisper": "公将持之,跪曰,未可,下士其辙,登士而望之,曰,可以,遂逐其师,即刻,公问其故,对曰,夫战,勇气也,一股作气,载而衰,三而劫,彼劫我淫,故克之,夫大国,南侧也,具有福焉,无事其折乱,望其其迷,故逐之。",
+        "qwen": "公将持之，刿曰：“未可。”下视其辙，登轼而望之，曰：“可以。”遂逐其师。既克，公问其故，对曰：“夫战，勇气也。一鼓作气，再而衰，三而竭。彼竭我盈，故克之。夫大国，难测也，具有伏焉。吾视其辙乱，望其旗靡，故逐之。”"
+      },
+      "sourceGroup": "g4251",
+      "clipStart": 0,
+      "clipEnd": 28.5,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "9ac195fee752517e9d0a5fce77d25059034b123187f23de43e2667000d7e0d09",
@@ -166448,9 +166603,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0207",
-      "sourceGroupDigest": "c8170f34c6337066443e5521357e9ed60a27e2ea391640824d9533b2ae856cd6",
+      "batchId": "groups-007",
+      "sourceGroup": "g4252",
+      "sourceGroupDigest": "cc80251771869cdee5053e93fe943b8edb8d98c65b16bac283512857c5d3b729",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -166487,11 +166642,22 @@
           "part": 2
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0208",
-      "sourceGroupDigest": "274c7a3c918b8830ab0952b1bc93a89e261737d0c9172f7342b30c65272cee82",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "c2bb8e0bcb63490fc86da983cc1d665c8bad8f62f6eff4280f6b4c599341ebd4.mp3",
+      "bytes": 119600,
+      "digest": "dace66d123a4e08ff154a842f1d5e81ccb2c9e48738f4926fc76a5ea461e1b09",
+      "duration": 29.74,
+      "verifiedAt": 1792735440968,
+      "review": "复用原始分组录音，按实际静音间隔切分。本机 Qwen3-ASR 未提供正文或热词的独立转写，经汉典核对：臣诚知的知/之 zhī、齐/其 qí、蔽/必 bì；本篇知是知道义，非通智。 全文逐处校验，仅本条完整转写适用；音频摘要绑定，不改正文，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "于是入朝见威王曰，臣乘之不如徐公美，臣之妻思臣臣之妾谓臣臣之客欲有求于臣皆以美于徐公今其地方千里百20城，功父左右，莫不私亡。朝廷之臣莫不魏王四晋之内莫不有求于王。由此观之王之必甚矣。王曰，善。",
+        "whisper": "于是入朝见威王,约,臣臣之不如徐公美,臣之妻私臣,臣之妾未臣,臣之客欲有求于臣,皆以美于徐公,经其地方千里百二十成,功赴左右莫不私王,朝廷之臣莫不未王,四境之内莫不有求于王,由此官知,王之必甚矣,王曰,善。",
+        "qwen": "于是入朝见威王，曰：“臣诚之不如徐公美。臣之妻私臣，臣之妾畏臣，臣之客欲有求于臣，皆以美于徐公。今其地方千里，百二十城，宫妇左右莫不私王，朝廷之臣莫不畏王，四境之内莫不有求于王。由此观之，王之必甚矣。”王曰：“善。”"
+      },
+      "sourceGroup": "g4254",
+      "clipStart": 0,
+      "clipEnd": 29.5,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "cfe5fa3f4bf9e3358b4b68a8bd07915fbc2cef0777448446e63feba1292c92fd",
@@ -166508,9 +166674,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0208",
-      "sourceGroupDigest": "274c7a3c918b8830ab0952b1bc93a89e261737d0c9172f7342b30c65272cee82",
+      "batchId": "groups-007",
+      "sourceGroup": "g4255",
+      "sourceGroupDigest": "0553c9016c32a6687a368acf74abcda3afaaaf8c3f933129f678ed1a84339f97",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -166527,11 +166693,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0209",
-      "sourceGroupDigest": "ed0ddc2e749fad316c90b268b346824e352df7eb5209c4a2fbe7abf68220a00e",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "a6534dfdf04650cdccf8a2167e44bb1082f0b56c643b5f64848c2611c1b433a9.mp3",
+      "bytes": 153584,
+      "digest": "0c03b7ad99c359fd452a24a1f30b09ab4be3730d9330ff86afc0361befb8c93e",
+      "duration": 38.24,
+      "verifiedAt": 1792735440973,
+      "review": "复用原始分组录音，按实际静音间隔切分。本机 Qwen3-ASR 未提供正文或热词的独立转写，经汉典核对：引喻的引/隐 yǐn、义/意 yì、以塞忠谏的塞/色 sè、忠/中 zhōng；按本文语义核定多音字。 全文逐处校验，仅本条完整转写适用；音频摘要绑定，不改正文，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "出师表，诸葛亮先帝创业未办而终道崩殂，今天下三分，一周疲弊，此诚危及存亡之秋也。然士卫之臣不泄于内，终志之士忘身于外者盖追先帝之疏欲欲暴之于陛下也。诚移开张盛听，以光先帝遗德，恢弘志士之气，不遗妄自菲薄，隐喻失意，以色中见之路也。",
+        "whisper": "出诗表,诸葛亮,先帝创业未伴而中道崩俗,今天下三分,一周疲弊,此成危及存亡之秋也。然侍卫之臣不屑于内终治之势妄身于外者盖追先帝之疏欲欲报之于陛下也承宜开张盛听以光先帝宜得辉红治势之气不宜妄自菲薄隐欲诗意以色中间之路也",
+        "qwen": "出师表，诸葛亮。先帝创业未半而中道崩殂，今天下三分，益州疲弊，此诚危急存亡之秋也。然侍卫之臣不懈于内，忠志之士忘身于外者，盖追先帝之殊遇，欲报之于陛下也。诚宜开张圣听，以光先帝遗德，恢弘志士之气，不宜妄自菲薄，隐喻失意，以色中谏之路也。"
+      },
+      "sourceGroup": "g4256",
+      "clipStart": 0,
+      "clipEnd": 38,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "345a86dcd617c7b41effbedef20cbf9d640ca596c16e8a3e565df705ff2e8d54",
@@ -166548,9 +166725,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0209",
-      "sourceGroupDigest": "ed0ddc2e749fad316c90b268b346824e352df7eb5209c4a2fbe7abf68220a00e",
+      "batchId": "groups-007",
+      "sourceGroup": "g4257",
+      "sourceGroupDigest": "4ed1b5e5fa11f85028ec36d52016dbe63f72762c170a74cda3b5afa23dcf097d",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -166568,9 +166745,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0210",
-      "sourceGroupDigest": "d0e5265494a83675c2b0390bd115813a48d9676772948a6b4da6fdda2d7a784b",
+      "batchId": "groups-007",
+      "sourceGroup": "g4258",
+      "sourceGroupDigest": "adba217f88a1536d72359ac1e7e69aef0596599f782280801013791106f352c6",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -166587,11 +166764,22 @@
           "part": 3
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0210",
-      "sourceGroupDigest": "d0e5265494a83675c2b0390bd115813a48d9676772948a6b4da6fdda2d7a784b",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "fb0bdb6a884dc1ca647469279c7f252b7abed80e353b4dc39811e603bb583a4c.mp3",
+      "bytes": 114704,
+      "digest": "5af071e4d0455d6a5e3c401b6242186f8a56cb25eda4714483bbb8e0d67aaf9c",
+      "duration": 28.52,
+      "verifiedAt": 1792735328821,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "卿小人远贤臣，此后汉所以倾颓也。先帝在时没与臣论此事，未尝不叹息痛恨于桓灵也。事中尚书长史参军此惜贞粮死节之臣，愿陛下卿之性之，则汉室之龙可继日而待也。臣本不衣功耕于南阳。苟权性命于乱世，不求闻达于诸侯。",
+        "whisper": "亲小人,远贤臣,此后汉所以亲腿也。先帝在时,没与臣论此事,未尝不叹息痛恨于还陵也。世忠,尚书,长使,参君,此夕真凉死劫之臣,愿陛下亲知信之,则汉世之龙可继日而待也。臣本不一,功耕于南洋,苟全性命于乱世,不求闻达于诸侯。",
+        "qwen": "亲小人，远贤臣，此后汉所以倾颓也。先帝在时，每与臣论此事，未尝不叹息痛恨于桓灵也。侍中、尚书、长史、参军，此悉贞良死节之臣，愿陛下亲之信之，则汉室之隆，可计日而待也。臣本布衣，躬耕于南阳，苟全性命于乱世，不求闻达于诸侯。"
+      },
+      "sourceGroup": "g4259",
+      "clipStart": 0,
+      "clipEnd": 28.28,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "37a9c523a6f73bd53800bf907f13c5bcc30f292c021ced8595f02a4e25a1f17f",
@@ -166607,11 +166795,22 @@
           "part": 4
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0211",
-      "sourceGroupDigest": "489f88f9937f04b276f5b2f763c974e7c24081d4d199a75ce20d692770795159",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "37a9c523a6f73bd53800bf907f13c5bcc30f292c021ced8595f02a4e25a1f17f.mp3",
+      "bytes": 92672,
+      "digest": "a99b301d55dfb1fec0af1f0416335c79d54dbe34b347351884b5982839935d55",
+      "duration": 23.02,
+      "verifiedAt": 1792735328824,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "先帝不以臣卑毙为自往屈三顾臣于草庐之中，资臣以当事之事，犹是感激遂许先帝以屈迟后执亲覆受任于败军之计，奉命于危难之间。而来2世有一年矣。先帝之臣谨慎，故临邦继臣以大事也。",
+        "whisper": "先帝不以臣卑鄙,为字枉驱,三顾臣于草庐之中,资臣以当世之事,犹是感激,遂许先帝已驱持,后执亲父,受任于败君之计,奉命于危难之间,而来二世有一年矣,先帝知臣谨慎,顾临崩继臣以大事也。",
+        "qwen": "先帝不以臣卑鄙，猥自枉屈，三顾臣于草庐之中，咨臣以当世之事，由是感激，遂许先帝以驱驰。后值倾覆，受任于败军之际，奉命于危难之间，尔来二十有一年矣。先帝知臣谨慎，故临崩寄臣以大事也。"
+      },
+      "sourceGroup": "g4260",
+      "clipStart": 0,
+      "clipEnd": 22.78,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "54cbea37ad775eff985bad4c3748da60ff195c53fb1afb2f3e1c822bb0e0ae9b",
@@ -166627,11 +166826,22 @@
           "part": 5
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0211",
-      "sourceGroupDigest": "489f88f9937f04b276f5b2f763c974e7c24081d4d199a75ce20d692770795159",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "54cbea37ad775eff985bad4c3748da60ff195c53fb1afb2f3e1c822bb0e0ae9b.mp3",
+      "bytes": 106640,
+      "digest": "849eaeab07033cce271d4ff5aceae2d76301c03737607c9171406c1d38133ccc",
+      "duration": 26.52,
+      "verifiedAt": 1792735440993,
+      "review": "复用原始分组录音，按实际静音间隔切分。本机 Qwen3-ASR 未提供正文或热词的独立转写，经汉典核对：明/名 míng、五月的月/越 yuè；其余全文无增减。 全文逐处校验，仅本条完整转写适用；音频摘要绑定，不改正文，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "受命以来，夙业犹叹，恐托父不孝，以伤先帝之名，故5岳杜卢深入不毛。今南方以定兵甲以卒，当蒋帅三军北定中原，数节奴盾，攘除兼凶，心腹汉室，还于旧都此臣所以报先帝而终陛下之职分也。至于斟酌损意，进进忠言，则忧之一允之任也。",
+        "whisper": "授命以来,素叶忧叹,恐托父不孝,以伤先帝之名,故五岳渡炉,深入不毛,经南方已定,兵甲已足,当蒋帅三军,北定中原,数捷奴,嚷除奸凶,心腹汉士,还于旧都,此臣所以报先帝而终陛下之职分也,至于斟酌损益,静静忠言,则忧之一允之刃也。",
+        "qwen": "受命以来，夙夜忧叹，恐托付不效，以伤先帝之名。故五越渡泸，深入不毛。今南方已定，兵甲已足，当奖率三军，北定中原，庶竭驽钝，攘除奸凶，兴复汉室，还于旧都。此臣所以报先帝而忠陛下之职分也。至于斟酌损益，进尽忠言，则攸之、祎、允之任也。"
+      },
+      "sourceGroup": "g4261",
+      "clipStart": 0,
+      "clipEnd": 26.28,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "6afc4f276b032493742d1c5b66c5eb997802404f9b30ee759723261a811abcb5",
@@ -166647,11 +166857,22 @@
           "part": 6
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0212",
-      "sourceGroupDigest": "ef24ad401ea3bc6c272a338bafc5b476daffb915fcb8561441b9b1937cf98fac",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "6afc4f276b032493742d1c5b66c5eb997802404f9b30ee759723261a811abcb5.mp3",
+      "bytes": 115568,
+      "digest": "a07f70bfe8dc6987cabd6610b57ff7ffc956e6997281a6d78d97c9da4c4079e2",
+      "duration": 28.74,
+      "verifiedAt": 1792735586164,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "愿陛下托臣以讨贼兴腹之孝，不孝则治臣之罪，以告先帝之灵，若无心德之言，则择忧之一云等之慢，以张其咎，陛下亦遗自谋，以兹邹善道，察纳雅言，深追先帝遗诏臣不胜受恩感激。今当远离临表涕灵不知所言。",
+        "whisper": "愿陛下托臣以讨贼心腹之孝,不孝,则治臣之罪,以告先帝之灵,若无心得之言,则则忧之,依,云等之慢,以章其咎,陛下意宜自谋,以滋邹善道,查那雅言,深追先帝遗诏,臣不胜受恩感激,今当远离,临表涕灵,不知所言。",
+        "qwen": "愿陛下托臣以讨贼兴复之效，不效则治臣之罪，以告先帝之灵。若无兴德之言，则责攸之、祎、允等之慢，以彰其咎。陛下亦宜自谋，以咨诹善道，察纳雅言，深追先帝遗诏。臣不胜受恩感激。今当远离，临表涕零，不知所言。"
+      },
+      "sourceGroup": "g4262",
+      "clipStart": 0,
+      "clipEnd": 28.5,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "603f5244241fbbecdee2d2ce97fded2a28f41f5cbe2ec3b2e7f889bb9cea90bb",
@@ -166667,11 +166888,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0212",
-      "sourceGroupDigest": "ef24ad401ea3bc6c272a338bafc5b476daffb915fcb8561441b9b1937cf98fac",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "603f5244241fbbecdee2d2ce97fded2a28f41f5cbe2ec3b2e7f889bb9cea90bb.mp3",
+      "bytes": 111104,
+      "digest": "3841182c121a2a4c4c7f14788505a1afca3a58ce48e93bac0f870f32a74ccf74",
+      "duration": 27.62,
+      "verifiedAt": 1792735586167,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "岳阳楼记范仲淹庆历四年春，滕子经谪首巴陵郡月明年政通人和百废俱兴，乃重修岳阳楼，增其旧志，客堂贤今人师赋于其上，属于作文以继之，与官夫巴陵盛状，在洞庭一壶。",
+        "whisper": "岳阳楼记,范仲淹,庆历四年春,藤子经折首八陵郡,月明年,正通人和百废巨星,乃重修岳阳楼,增其旧志,刻唐贤金人师父于其上,属于作文以记之,于官夫八陵圣状,在洞庭一湖。",
+        "qwen": "《岳阳楼记》范仲淹。庆历四年春，滕子京谪守巴陵郡。越明年，政通人和，百废具兴，乃重修岳阳楼，增其旧制，刻唐贤今人诗赋于其上，属予作文以记之。予观夫巴陵胜状，在洞庭一湖。"
+      },
+      "sourceGroup": "g4263",
+      "clipStart": 0,
+      "clipEnd": 27.38,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "c94260bb5070f70a67f8923593a4664dc49e7bff537ad5c82f26f17d189582e3",
@@ -166687,11 +166919,22 @@
           "part": 1
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0212",
-      "sourceGroupDigest": "ef24ad401ea3bc6c272a338bafc5b476daffb915fcb8561441b9b1937cf98fac",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "c94260bb5070f70a67f8923593a4664dc49e7bff537ad5c82f26f17d189582e3.mp3",
+      "bytes": 81584,
+      "digest": "d6b6417b598b69b515b65f03b323691061685794090ff41e88975400387575b4",
+      "duration": 20.24,
+      "verifiedAt": 1792735924961,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "衔远山吞长江，浩浩汤汤，横无际涯，朝晖夕阴气象万千。此则岳阳楼之大观也。前人之树倍矣，然则北通巫峡南极潇湘，千客骚人多会于此，览悟之情，得无一乎。",
+        "whisper": "咸远山吞长江,浩浩桑桑,横无济芽,朝辉夕阴气象万千,此则岳阳楼之大观也,前人之树背矣,然则北通乌霞,南极萧香,千刻骚人多惠于此,懒悟之情得无异乎。",
+        "qwen": "衔远山，吞长江，浩浩汤汤，横无际涯；朝晖夕阴，气象万千。此则岳阳楼之大观也。前人之述备矣。然则北通巫峡，南极潇湘，迁客骚人多会于此，览物之情，得无异乎？"
+      },
+      "sourceGroup": "g4264",
+      "clipStart": 0,
+      "clipEnd": 20,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "3ec309cc1be27b65d45c4086901fa80cc3ca110069eccc6e7a67e867734d0e1e",
@@ -166708,9 +166951,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0213",
-      "sourceGroupDigest": "174d5d5378b0bc64ddfe4fed3401b0701f5eddc4f0fb5e7100a88f02414d2b9e",
+      "batchId": "groups-007",
+      "sourceGroup": "g4265",
+      "sourceGroupDigest": "990c4cd4f343996e797f0ad30e135668641a3078fed4f624d8c5355670cf8fc9",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -166727,11 +166970,22 @@
           "part": 3
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0213",
-      "sourceGroupDigest": "174d5d5378b0bc64ddfe4fed3401b0701f5eddc4f0fb5e7100a88f02414d2b9e",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "7cd4b2cb8bcf443b662aa3989633ba612843dbcb7096c753e939d82197c649eb.mp3",
+      "bytes": 110672,
+      "digest": "64e63420898d931ab525441762b2c5d36bb9ff95dbe56df3e6efcc0f8364d64d",
+      "duration": 27.52,
+      "verifiedAt": 1792735924964,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "至若春和景明，波澜不惊，上下天光一碧万顷，沙鸥翔集锦邻游泳，暗指听蓝，郁郁清清，而获长烟一空，皓月千里，浮光月惊，静影沉璧，渔歌互达此乐何集。登丝楼也则有心旷神怡，宠辱邪望，把酒临风，其喜洋洋者矣。嗟夫。",
+        "whisper": "智若春河景明 波澜不惊 上下天光 一碧万寝 沙欧祥吉 锦铃游勇 暗指听澜 郁郁清清 而获长烟一空 浩月千里 浮光月经 静影沉蔽 于歌护达 此乐何吉 登四楼也 则有心旷神仪 宠辱邪望 把酒临风 起喜洋洋者矣 皆夫",
+        "qwen": "至若春和景明，波澜不惊，上下天光，一碧万顷；沙鸥翔集，锦鳞游泳，岸芷汀兰，郁郁青青。而或长烟一空，皓月千里，浮光跃金，静影沉璧，渔歌互答，此乐何极！登斯楼也，则有心旷神怡，宠辱偕忘，把酒临风，其喜洋洋者矣。嗟夫！"
+      },
+      "sourceGroup": "g4266",
+      "clipStart": 0,
+      "clipEnd": 27.28,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "26b8036c2337c6ddfc81ebb22a70abaf5ddb0f3825235a243e1209b252c81a7f",
@@ -166748,9 +167002,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0214",
-      "sourceGroupDigest": "23a58b4071e6200d17817d8105176dbd5f0677fffd161228fad9e40d501d958b",
+      "batchId": "groups-007",
+      "sourceGroup": "g4267",
+      "sourceGroupDigest": "bb5b7db8f48fd931dbcbdf97f71243bcade6cd7bbd8c403b0ea0092c27c3aeca",
       "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
     },
     {
@@ -166767,11 +167021,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0214",
-      "sourceGroupDigest": "23a58b4071e6200d17817d8105176dbd5f0677fffd161228fad9e40d501d958b",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "status": "stored",
+      "file": "74400afa7f0a3f6e738374053e245ca2e216b6ed878f5d4d7db61c2b83cddc1d.mp3",
+      "bytes": 139472,
+      "digest": "d2b3b383806dc75583e81a23e8ee1a3e5de8a689c5f70315f3aff39a0d121adc",
+      "duration": 34.74,
+      "verifiedAt": 1792735924969,
+      "review": "复用原始分组录音，按实际静音间隔切分。第三份本机 Qwen3-ASR-1.7B 独立转写与题名、作者和正文逐字一致（仅忽略标点、大小写和空格）。未提供参考正文、热词或语言提示，音频摘要已核对；另做截短诗句与静音负例检查。保留三份转写，不以转写证明口音或多音字必然正确。非真人审听。",
+      "transcripts": {
+        "senseVoice": "醉翁亭记欧阳修环滁皆山也，其西南珠峰林壑犹美，望之巍然而深秀者琅琊也。山行六七里，见闻水生潺潺而泻出于两风之间者，酿泉也。峰回路转，有亭亦然临于泉上者，醉翁亭也。坐亭者谁山之僧至仙也。明之者谁太守自谓也。",
+        "whisper": "醉翁亭记欧阳修环除皆山也其西南诸风林鹤有美望之未然而生锈者狼牙也山行六区里见闻水生缠缠而泄出于两风之间者酿泉也峰回路转有亭亦然临于泉上者醉翁亭也坐亭者谁山之僧至先也明知者谁太守自卫也",
+        "qwen": "《醉翁亭记》欧阳修。环滁皆山也，其西南诸峰，林壑尤美，望之蔚然而深秀者，琅琊也。山行六七里，渐闻水声潺潺而泻出于两峰之间者，酿泉也。峰回路转，有亭翼然临于泉上者，醉翁亭也。作亭者谁？山之僧智仙也。名之者谁？太守自谓也。"
+      },
+      "sourceGroup": "g4268",
+      "clipStart": 0,
+      "clipEnd": 34.5,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "9509a95efb83b4a1714f6dae09af761f82f902d8ec4cfdc85f0e857448e25d70",
@@ -166788,10 +167053,9 @@
         }
       ],
       "status": "review-pending",
-      "batchId": "groups-004",
-      "sourceGroup": "g0215",
-      "sourceGroupDigest": "e903290181297709e1142f93e7d526f70c30ccbe2c750069df30954745a03925",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "batchId": "groups-007",
+      "sourceGroup": "g4269",
+      "review": "远端任务已报告生成，原始文件尚未取回；先恢复原结果，未完成下载、核对和云端回读前不供小程序播放，不重复生成。"
     },
     {
       "key": "1bfd066114dc1f37e1d25ef21d7855ae9b50b623614866ec8729bd126c72f6e3",
@@ -168239,11 +168503,23 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-006",
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "78c4ab687cd3271775ee04044247c77fd91fa9181311f566254a899a2c5b2129.mp3",
+      "bytes": 80720,
+      "digest": "fb2010293e937ec061c8aa78100f6dc7cde09abb895de71bbb22534942994e38",
+      "duration": 20.02,
+      "verifiedAt": 1792734451584,
+      "review": "复用原始分组录音，按实际静音间隔切分。用户于 2026-10-23 明确接受美式 Mom 并复用现有录音；本条为通用录音或生成请求明确按已认可美式样音生成的 en-US 录音。除已记录的拼写或数词记法差异外，其余词项完整一致。原文保持 Mum，不据此推断或改标口音；此接受不适用于 en-GB 或同时列出 mum/mom 两个词项的词卡。非真人审听。",
+      "transcripts": {
+        "senseVoice": "This is my family, mom, dad and my sister are with me. We are happy together.",
+        "whisper": "This is my family. Mom, Dad, and my sister are with me. We are happy together.",
+        "qwen": "This is my family. Mum, Dad, and my sister are with me. We are happy together."
+      },
       "sourceGroup": "g4011",
-      "sourceGroupDigest": "442c2a1ee62bcb963333d5b40c4d346fdc4a30b8062fbfd2922087abad3f86cf",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 0,
+      "clipEnd": 19.78,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "688cc215c56941d8cbbee78a47b7c4b82307236426a5c4ce171dae0ae55c55a9",
@@ -168282,12 +168558,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-006",
+      "status": "stored",
+      "accentReview": "用户于2026-10-23试听并认可对应英式/美式参考样音；本组沿用该样音的同款口音与语速提示词生成（text_to_audio_plus，没有可锁定口音参数）。词句经本机ASR核对，本条未单独真人审听；提示词不等于锁定口音。",
+      "file": "1d90b7d95becb83f958b41383ee354edb0217643def6cf51a2015b933123cc94.mp3",
+      "bytes": 24560,
+      "digest": "b709955b06b328267826472fcaaec89684460c59d48587cbcbd81df7ee19c39f",
+      "duration": 5.995,
+      "verifiedAt": 1792734451586,
+      "review": "复用原始分组录音，按实际静音间隔切分。用户于 2026-10-23 明确接受美式 Mom 并复用现有录音；本条为通用录音或生成请求明确按已认可美式样音生成的 en-US 录音。除已记录的拼写或数词记法差异外，其余词项完整一致。原文保持 Mum，不据此推断或改标口音；此接受不适用于 en-GB 或同时列出 mum/mom 两个词项的词卡。非真人审听。",
+      "transcripts": {
+        "senseVoice": "Mom, dad and my sister are with me.",
+        "whisper": "Mom, Dad, and my sister are with me."
+      },
       "sourceGroup": "g4011",
-      "sourceGroupDigest": "442c2a1ee62bcb963333d5b40c4d346fdc4a30b8062fbfd2922087abad3f86cf",
-      "derivedFrom": "78c4ab687cd3271775ee04044247c77fd91fa9181311f566254a899a2c5b2129",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 5.43,
+      "clipEnd": 11.185,
+      "batchId": "doubao-20261022-groups-006"
     },
     {
       "key": "e37f305bbbf99eefa78dd05f10ff4bf16155f98d1b48045ca0993a05aac40bb8",
@@ -262004,11 +262290,22 @@
           "part": 0
         }
       ],
-      "status": "review-pending",
-      "batchId": "groups-007",
+      "status": "stored",
+      "file": "03ae6f8c1046695100192831fec18519224545ae4f371ecce72bcf729e94d691.mp3",
+      "bytes": 58256,
+      "digest": "ea132ac2f224e97b6766f391971e5025b7f04dfff1418efe340c82f43a16a760",
+      "duration": 14.43,
+      "verifiedAt": 1792734635756,
+      "review": "复用原始分组录音，按实际静音间隔切分。本机 Qwen3-ASR 未提供正文或热词的独立转写，经汉典核对：淮/怀均读 huái，犊/独均读 dú；题名其余字、作者和诗文完整一致。 仅本条完整转写适用；音频摘要绑定，不改正文，非真人审听。非真人审听。",
+      "transcripts": {
+        "senseVoice": "怀中晚泊独头苏舜清，春莺垂野草青青，时有幽花一树鸣。晚泊孤舟古辞下，满春风雨看潮生。",
+        "whisper": "怀中婉博独头,苏顺青,春荫垂野草青青,时有幽花一树名,婉博孤舟古词下,满川风雨,看潮生。",
+        "qwen": "怀中晚泊独头，苏舜钦。春阴垂野草青青，时有幽花一树明。晚泊孤舟古祠下，满川风雨看潮生。"
+      },
       "sourceGroup": "g4089",
-      "sourceGroupDigest": "f309e394d7ad9db42d310bf4068d50a4d87b4cb2ed45e6835aa8347772eea58c",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "clipStart": 17.69,
+      "clipEnd": 31.88,
+      "batchId": "doubao-20261022-groups-007"
     },
     {
       "key": "461314bdbc535ba808870ed6c3fc21f14352fba98cc5c023315713a8b83b0397",
@@ -262028,7 +262325,8 @@
       "batchId": "groups-007",
       "sourceGroup": "g4089",
       "sourceGroupDigest": "f309e394d7ad9db42d310bf4068d50a4d87b4cb2ed45e6835aa8347772eea58c",
-      "review": "已有原始录音，正在逐条切分和独立转写核对；未通过前不供小程序播放，不重复生成。"
+      "review": "用户试听确认《生查子》的“查”未读 zhā，属于错读，不得入库。 已使用本轮获准的一次补录，保留录音供核对，不入库、不自动再次生成。",
+      "reviewOutcome": "rejected-pronunciation"
     },
     {
       "key": "76fe7323e6ba463c68ab8f9e984c6aba4af9b11f28462bb7cb02e5bd63f6f55f",
@@ -262111,21 +262409,21 @@
     }
   ],
   "localCleanup": {
-    "archiveFilesMovedFromDownloads": 120,
-    "rawGroupsMovedAfterCompleteCloudReadback": 328,
-    "logicalBytesMoved": 7826654784,
+    "archiveFilesMovedFromDownloads": 127,
+    "rawGroupsMovedAfterCompleteCloudReadback": 352,
+    "logicalBytesMoved": 8001809588,
     "trashEmptiedByAgent": false,
     "unverifiedOriginalsRetention": "Retained in the ignored task directory; raw cleanup requires receipts for every primary and derived clip."
   },
   "summary": {
     "totalPublicSegments": 3990,
-    "storedSegments": 1466,
-    "storedBytes": 43787008,
-    "reviewPending": 188,
+    "storedSegments": 1491,
+    "storedBytes": 46240176,
+    "reviewPending": 163,
     "notGenerated": 2336,
     "types": {
       "word": 770,
-      "poetry": 226,
+      "poetry": 251,
       "sentence": 363,
       "english-reading": 107
     },
@@ -262139,14 +262437,14 @@
       },
       "en-US": {
         "totalSegments": 3627,
-        "storedSegments": 3287,
-        "storedBytes": 58005232,
-        "reviewPending": 251,
+        "storedSegments": 3289,
+        "storedBytes": 58110512,
+        "reviewPending": 249,
         "notGenerated": 89
       }
     },
-    "playablePublicSegments": 3690,
-    "fullyCoveredEnglishAccents": 3146,
-    "allStoredBytes": 159931088
+    "playablePublicSegments": 3715,
+    "fullyCoveredEnglishAccents": 3148,
+    "allStoredBytes": 162489536
   }
 }
