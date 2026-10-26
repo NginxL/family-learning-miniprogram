@@ -69,7 +69,7 @@ test('review uses completed content, oldest last-study date first; unfinished an
 test('exhausted new pool and empty review pool show an explicit shortage instead of repeating or substituting', async () => {
   const s = await setup(); await s.configure({ reading: { quantity: 5 }, word: { quantity: 3, mode: 'review' } });
   const a = (await s.call('getDay')).day;
-  assert.equal(a.tasks.length, 5); assert.match(a.warnings[0].message, /可复习内容不足/);
+  assert.equal(a.tasks.length, 5); assert.match(a.warnings[0].message, /已学内容不足/);
   s.f.advance(86400000);
   const b = (await s.call('getDay')).day;
   assert.equal(b.tasks.length, 1); assert.ok(b.warnings.some((entry) => /全新内容不足/.test(entry.message)));

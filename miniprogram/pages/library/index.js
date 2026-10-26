@@ -42,7 +42,7 @@ const content_presentation_1 = require("../../lib/content-presentation");
 const pinyin_1 = require("../../lib/pinyin");
 const errors_1 = require("../../lib/errors");
 const content_detail_1 = require("../../lib/content-detail");
-const base = (0, page_1.common)();
+const base = (0, page_1.common)(learning.subjects.filter(subject => subject.id !== 'math' && subject.id !== 'other'));
 const scheduling = (0, content_schedule_1.contentSchedule)();
 const definition = {
     ...base,
@@ -102,9 +102,7 @@ const definition = {
                 void this.loadLearningStatus();
         }
         this.refreshAssignment();
-        this.setData({ subjectOptions: this.data.subjectOptions.filter((subject) => subject.id !== 'math' && subject.id !== 'other'),
-            showPinyin: ((_b = this.pinyinChoice) === null || _b === void 0 ? void 0 : _b.childId) === this.data.childId ? this.pinyinChoice.enabled : (0, pinyin_1.defaultPinyin)((_c = this.data.children.find((child) => child.id === this.data.childId)) === null || _c === void 0 ? void 0 : _c.schoolGrade),
-            ...(this.data.subjectFilter === 'math' || this.data.subjectFilter === 'other' ? { subjectFilter: 'all' } : {}) });
+        this.setData({ showPinyin: ((_b = this.pinyinChoice) === null || _b === void 0 ? void 0 : _b.childId) === this.data.childId ? this.pinyinChoice.enabled : (0, pinyin_1.defaultPinyin)((_c = this.data.children.find((child) => child.id === this.data.childId)) === null || _c === void 0 ? void 0 : _c.schoolGrade) });
         this.updateItems();
     },
     afterSync() { return this.loadLearningStatus(); },

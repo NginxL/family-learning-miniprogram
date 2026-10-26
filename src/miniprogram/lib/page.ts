@@ -27,16 +27,17 @@ const decorate = <T extends Decoratable>(item: T): Decorated<T> => {
   subjectLabel: learning.subjects.find((subject) => subject.id === item.subject)?.label || '其他',
   modeLabel: modeLabels[item.mode || 'manual'] || '家长安排' };
 };
-function common(): PageDefinition<CommonData, CommonMethods, CommonRuntime> {
+function common(subjects = learning.subjects): PageDefinition<CommonData, CommonMethods, CommonRuntime> {
   const notes = studyNotesView();
+  const allowedSubject = (id: CommonData['subjectFilter']) => subjects.some(subject => subject.id === id) ? id : 'all';
   return {
     ...notes,
     data: { ...notes.data, family: null, children: [], childId: '', tasks: [], plans: [], members: [], date: chinaDate(), today: chinaDate(),
-      followToday: true, subjectFilter: 'all', subjectOptions: learning.subjects, mode: 'demo', busy: false, isChild: false },
+      followToday: true, subjectFilter: 'all', subjectOptions: subjects, mode: 'demo', busy: false, isChild: false },
     onShow() {
       this.engine = getApp<LearningApp>().engine;
       const navigation = getApp<LearningApp>().navigation || {};
-      this.setData({ childId: navigation.childId || this.data.childId, subjectFilter: navigation.subject || this.data.subjectFilter });
+      this.setData({ childId: navigation.childId || this.data.childId, subjectFilter: allowedSubject(navigation.subject || this.data.subjectFilter) });
       if (navigation.date) { this.setData({ date: navigation.date, followToday: true }); delete navigation.date; }
       this.active = true;
       this.unsubscribe = this.engine.subscribe(() => this.render());
@@ -54,20 +55,28 @@ function common(): PageDefinition<CommonData, CommonMethods, CommonRuntime> {
       const childId = children.some((child) => child.id === this.data.childId) ? this.data.childId : (children[0] && children[0].id) || '';
       const date = this.data.followTomorrow ? shiftDate(snapshot.today, 1) : this.data.followToday ? snapshot.today : this.data.date;
       const day = this.engine.viewDay(date);
+      const subjectFilter = allowedSubject(this.data.subjectFilter);
       const allTasks = day.tasks.filter((task) => task.childId === childId).map(decorate);
-      const tasks = allTasks.filter((task) => this.data.subjectFilter === 'all' || task.subject === this.data.subjectFilter);
+      const tasks = allTasks.filter((task) => subjectFilter === 'all' || task.subject === subjectFilter);
       const doneCount = allTasks.filter((task) => task.done).length;
       const minutes = allTasks.reduce((sum, task) => sum + task.minutes, 0);
       const plans = (family ? family.plans : []).filter((plan) => plan.childId === childId)
-        .filter((plan) => this.data.subjectFilter === 'all' || plan.subject === this.data.subjectFilter)
+        .filter((plan) => subjectFilter === 'all' || plan.subject === subjectFilter)
         .map((plan) => ({ ...decorate(plan), scheduleLabel: plan.schedule === 'library' ? '自动内容库' : plan.schedule === 'once' ? `仅 ${plan.date}` : '每天固定' }));
       let syncLabel = snapshot.status === 'syncing' ? '正在同步…' : snapshot.status === 'online' ? '已同步' : '等待连接';
       if (snapshot.queue.length) syncLabel += ` · ${snapshot.queue.length} 条待同步`;
       const members = family ? family.members.map((member) => ({ ...member, isMe: member.id === snapshot.userId, roleLabel: member.role === 'child' ? '孩子' : member.role === 'owner' ? '家长 · 管理者' : '家长' })) : [];
-      const subjectOptions = learning.subjects.map((subject) => ({ ...subject,
+      const subjectOptions = subjects.map((subject) => ({ ...subject,
         count: subject.id === 'all' ? allTasks.length : allTasks.filter((task) => task.subject === subject.id).length }));
-      this.setData({ family, children, childId, date, tasks, isChild: family?.myRole === 'child', allTaskCount: allTasks.length, plans, members, today: snapshot.today, subjectOptions,
-        dayWarnings: (day.warnings || []).filter((warning) => warning.childId === childId && (this.data.subjectFilter === 'all' || learning.definition(warning.kind).subject === this.data.subjectFilter)),
+      this.setData({ family, children, childId, date, tasks, isChild: family?.myRole === 'child', allTaskCount: allTasks.length, plans, members, today: snapshot.today, subjectOptions, subjectFilter,
+        dayWarnings: (day.warnings || []).filter((warning) => warning.childId === childId && (subjectFilter === 'all' || learning.definition(warning.kind).subject === subjectFilter))
+          .flatMap((warning) => {
+            const rule = day.generated?.[childId]?.[warning.kind];
+            if (!rule) return [warning];
+            const quantity = Math.max(0, rule.quantity - (day.omitted || []).filter(item => item.childId === childId && item.kind === rule.kind && item.automatic).length);
+            const actual = day.tasks.filter(task => task.childId === childId && task.kind === rule.kind && task.id.startsWith('a_')).length;
+            return actual < quantity ? [{ ...warning, message: learning.ruleShortageMessage({ ...rule, quantity }, actual) }] : [];
+          }),
         childIndex: Math.max(0, children.findIndex((child) => child.id === childId)),
         doneCount, minutes, percent: allTasks.length ? Math.round(doneCount / allTasks.length * 100) : 0,
         syncLabel, syncError: snapshot.error, notice: snapshot.notice, mode: getApp<LearningApp>().mode });
@@ -79,7 +88,7 @@ function common(): PageDefinition<CommonData, CommonMethods, CommonRuntime> {
       if (this.selectionChanged) this.selectionChanged();
     },
     selectSubject(event) {
-      this.setData({ subjectFilter: event.currentTarget.dataset.id }); this.rememberSelection(); this.render();
+      this.setData({ subjectFilter: allowedSubject(event.currentTarget.dataset.id) }); this.rememberSelection(); this.render();
       if (this.selectionChanged) this.selectionChanged();
     },
     async refresh() {

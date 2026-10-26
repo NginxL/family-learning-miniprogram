@@ -4,8 +4,11 @@
 .schedule-entry::after { border: 0; }
 .template-name { margin-bottom: 12rpx; }
 .quantity-list { margin: 12rpx 0 22rpx; }
-.quantity-row { display: flex; gap: 16rpx; align-items: center; justify-content: space-between; padding: 16rpx 0; border-bottom: 1rpx solid #eef0eb; font-size: 29rpx; }
+.quantity-row { padding: 16rpx 0; border-bottom: 1rpx solid #eef0eb; font-size: 29rpx; }
 .quantity-row .muted { font-size: 22rpx; }
+.rule-choices { display: flex; flex-wrap: wrap; gap: 8rpx 20rpx; margin-top: 8rpx; }
+.rule-choice { padding: 10rpx 0; font-size: 25rpx; line-height: 1.5; color: #52675b; }
+.template-summary { margin-top: 12rpx; line-height: 1.6; }
 .advanced-toggle { margin-top: 24rpx; }
 .rule-settings { padding: 24rpx 0; border-top: 1rpx solid #e5e9e1; }
 .template-delete { margin-top: 24rpx; color: #a53d32; }

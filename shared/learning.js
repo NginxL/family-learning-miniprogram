@@ -5,6 +5,7 @@ exports.learningAreas = exports.gradeLabels = exports.inScope = exports.emptyRul
 exports.contentId = contentId;
 exports.content = content;
 exports.scopeOptions = scopeOptions;
+exports.ruleShortageMessage = ruleShortageMessage;
 exports.materialPool = materialPool;
 exports.recordTasks = recordTasks;
 exports.taskFrom = taskFrom;
@@ -128,6 +129,13 @@ function scopeOptions(kind) {
     options.push({ id: 'all', label: '全部可用内容' });
     return options;
 }
+function ruleShortageMessage(rule, actual) {
+    var _a;
+    const kind = definition(rule.kind);
+    const scope = ((_a = scopeOptions(rule.kind).find(option => option.id === (rule.scope || 'starter'))) === null || _a === void 0 ? void 0 : _a.label) || '当前内容范围';
+    return `${kind.label}（${scope} · ${rule.mode === 'new' ? '全新' : '复习'}）：计划 ${rule.quantity}${kind.unit}，已安排 ${actual}${kind.unit}。`
+        + (rule.mode === 'new' ? '当前范围全新内容不足，可在模板中调整内容范围，或改为复习。' : '当前范围已学内容不足，完成学习后再安排复习。');
+}
 const inScope = (item, scope) => scope === 'all' || (item.collections || []).includes(scope);
 exports.inScope = inScope;
 function content(item) {
@@ -228,26 +236,30 @@ function omitTask(day, task) {
     }
     day.planRevision = (day.planRevision || 0) + 1;
 }
-function generateDay(family, day, ledgers, preview = false, countExisting = false) {
+// Template edits already selected the automatic tasks that may change. In that
+// mode, count retained assignments and only append automatic tasks; leave normal
+// day cleanup and scheduled manual-plan insertion to the ordinary getDay path.
+function generateDay(family, day, ledgers, preview = false, templateEdit = false) {
     const filterPlanned = preview || !day.generated;
     const learnedKeys = new Map(family.children.map((child) => [child.id, new Set(Object.values(ledgers[child.id].records)
             .filter((entry) => entry.completedDates.length).flatMap((entry) => planningKeys(entry.item)))]));
     const doneKeys = new Set(day.tasks.filter((task) => task.done).flatMap((task) => planningKeys(task).map(key => JSON.stringify([task.childId, key]))));
     const pendingKeys = new Set();
     // Completed snapshots are immutable here, even if old versions stored duplicates.
-    day.tasks = day.tasks.filter((task) => {
-        if (!ledgers[task.childId])
+    if (!templateEdit)
+        day.tasks = day.tasks.filter((task) => {
+            if (!ledgers[task.childId])
+                return true;
+            if (task.done)
+                return true;
+            const keys = planningKeys(task).map(key => JSON.stringify([task.childId, key]));
+            if (keys.some(key => doneKeys.has(key) || pendingKeys.has(key)))
+                return false;
+            if (filterPlanned && !allowsRepeat(family, task) && overlapsKeys(learnedKeys.get(task.childId) || new Set(), task))
+                return false;
+            keys.forEach(key => pendingKeys.add(key));
             return true;
-        if (task.done)
-            return true;
-        const keys = planningKeys(task).map(key => JSON.stringify([task.childId, key]));
-        if (keys.some(key => doneKeys.has(key) || pendingKeys.has(key)))
-            return false;
-        if (filterPlanned && !allowsRepeat(family, task) && overlapsKeys(learnedKeys.get(task.childId) || new Set(), task))
-            return false;
-        keys.forEach(key => pendingKeys.add(key));
-        return true;
-    });
+        });
     day.generated = day.generated || {};
     day.warnings = day.warnings || [];
     family.children.forEach((child) => {
@@ -257,15 +269,16 @@ function generateDay(family, day, ledgers, preview = false, countExisting = fals
         const assignedKeys = new Set(day.tasks.filter((task) => task.childId === child.id).flatMap(planningKeys));
         recordTasks(ledger, day.tasks.filter((task) => task.childId === child.id), day.date);
         // Existing plans without a schedule preserve the v0.1 daily-repeat semantics.
-        family.plans.filter((plan) => plan.childId === child.id && plan.enabled && plan.schedule !== 'library'
-            && (!plan.startDate || plan.startDate <= day.date)
-            && (plan.schedule !== 'once' || plan.date === day.date)).forEach((plan) => {
-            const key = planningKey(plan);
-            if (!overlapsKeys(assignedKeys, plan) && !omittedKeys.has(key) && (plan.schedule !== 'once' || !overlapsKeys(learnedKeys.get(child.id) || new Set(), plan))) {
-                day.tasks.push(taskFrom(plan, child.id, plan.id, 'manual'));
-                planningKeys(plan).forEach(key => assignedKeys.add(key));
-            }
-        });
+        if (!templateEdit)
+            family.plans.filter((plan) => plan.childId === child.id && plan.enabled && plan.schedule !== 'library'
+                && (!plan.startDate || plan.startDate <= day.date)
+                && (plan.schedule !== 'once' || plan.date === day.date)).forEach((plan) => {
+                const key = planningKey(plan);
+                if (!overlapsKeys(assignedKeys, plan) && !omittedKeys.has(key) && (plan.schedule !== 'once' || !overlapsKeys(learnedKeys.get(child.id) || new Set(), plan))) {
+                    day.tasks.push(taskFrom(plan, child.id, plan.id, 'manual'));
+                    planningKeys(plan).forEach(key => assignedKeys.add(key));
+                }
+            });
         recordTasks(ledger, day.tasks.filter((task) => task.childId === child.id), day.date);
         const generated = day.generated[child.id] || {};
         // Explicit future dates reserve a work without claiming it has been studied.
@@ -297,7 +310,7 @@ function generateDay(family, day, ledgers, preview = false, countExisting = fals
             if (rule.kind === 'poetry')
                 pool = recitationPool(pool, rule.recitationPolicy, rule.mode !== 'review');
             const quantity = Math.max(0, rule.quantity - omitted.filter((item) => item.kind === rule.kind && item.automatic).length);
-            const existing = countExisting ? day.tasks.filter(task => task.childId === child.id && task.kind === rule.kind && task.id.startsWith('a_')).length : 0;
+            const existing = templateEdit ? day.tasks.filter(task => task.childId === child.id && task.kind === rule.kind && task.id.startsWith('a_')).length : 0;
             const chosen = [];
             for (const item of pool) {
                 const key = planningKey(item);
@@ -312,7 +325,7 @@ function generateDay(family, day, ledgers, preview = false, countExisting = fals
             generated[rule.kind] = { ...rule, actual: chosen.length + existing };
             if (chosen.length + existing < quantity)
                 day.warnings.push({ childId: child.id, kind: rule.kind,
-                    message: `${definition(rule.kind).label}：计划 ${quantity}，已安排 ${chosen.length + existing}。${rule.mode === 'new' ? '全新内容不足，可在明日计划里补充内容库或改为复习。' : '可复习内容不足，完成学习后再安排复习。'}` });
+                    message: ruleShortageMessage({ ...rule, quantity }, chosen.length + existing) });
         });
         day.generated[child.id] = generated;
         recordTasks(ledger, day.tasks.filter((task) => task.childId === child.id), day.date);
@@ -325,7 +338,12 @@ function replanTemplateDay(family, day, ledger, childId, protectedKinds = []) {
     const rules = templateForDate(family, childId, day.date).rules;
     const signature = (rule) => rule && JSON.stringify([rule.mode, rule.quantity, rule.scope || 'starter', rule.recitationPolicy || 'all']);
     const changed = rules.filter(rule => { var _a, _b; return !protectedKinds.includes(rule.kind) && signature((_b = (_a = day.generated) === null || _a === void 0 ? void 0 : _a[childId]) === null || _b === void 0 ? void 0 : _b[rule.kind]) !== signature(rule); });
-    if (!changed.length)
+    // An explicit save may retry a shortage after the parent adds content. The
+    // unchanged rule only appends; deliberate omissions still reduce its target.
+    const refill = rules.filter(rule => !protectedKinds.includes(rule.kind) && !changed.includes(rule)
+        && day.tasks.filter(task => task.childId === childId && task.kind === rule.kind && task.id.startsWith('a_')).length
+            < Math.max(0, rule.quantity - (day.omitted || []).filter(item => item.childId === childId && item.kind === rule.kind && item.automatic).length));
+    if (!changed.length && !refill.length)
         return;
     const before = JSON.stringify(day.tasks);
     recordTasks(ledger, day.tasks.filter(task => task.childId === childId), day.date);
@@ -346,6 +364,8 @@ function replanTemplateDay(family, day, ledger, childId, protectedKinds = []) {
             }
             return false;
         });
+    }
+    for (const rule of [...changed, ...refill]) {
         delete day.generated[childId][rule.kind];
         day.warnings = (day.warnings || []).filter(item => item.childId !== childId || item.kind !== rule.kind);
     }

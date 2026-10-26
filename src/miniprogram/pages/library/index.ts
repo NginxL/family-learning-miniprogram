@@ -41,7 +41,7 @@ export interface LibraryMethods extends CommonMethods, ContentScheduleMethods {
 }
 interface LibraryRuntime extends CommonRuntime { matchSignature?: string; visibleLimit: number; preferredDate?: string; pinyinChoice?: { childId: string; enabled: boolean };
   learningScope?: string; learningRequest?: number; learningIndex?: Map<string, ApiResults['getLearningStatus']['items'][number]> }
-const base = common();
+const base = common(learning.subjects.filter(subject => subject.id !== 'math' && subject.id !== 'other'));
 const scheduling = contentSchedule();
 const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = {
   ...base,
@@ -90,9 +90,7 @@ const definition: PageDefinition<LibraryData, LibraryMethods, LibraryRuntime> = 
       if (this.active) void this.loadLearningStatus();
     }
     this.refreshAssignment();
-    this.setData({ subjectOptions: this.data.subjectOptions.filter((subject) => subject.id !== 'math' && subject.id !== 'other'),
-      showPinyin: this.pinyinChoice?.childId === this.data.childId ? this.pinyinChoice.enabled : defaultPinyin(this.data.children.find((child) => child.id === this.data.childId)?.schoolGrade),
-      ...(this.data.subjectFilter === 'math' || this.data.subjectFilter === 'other' ? { subjectFilter: 'all' as const } : {}) });
+    this.setData({ showPinyin: this.pinyinChoice?.childId === this.data.childId ? this.pinyinChoice.enabled : defaultPinyin(this.data.children.find((child) => child.id === this.data.childId)?.schoolGrade) });
     this.updateItems();
   },
   afterSync() { return this.loadLearningStatus(); },

@@ -7,12 +7,13 @@
     <view wx:if="{{children.length > 1}}" class="tab-row"><view wx:for="{{children}}" wx:key="id" class="chip {{childId === item.id ? 'active' : ''}}" data-id="{{item.id}}" bindtap="selectChild">{{item.name}}</view></view>
     <view wx:if="{{!isChild}}" class="segmented"><view class="segment {{editor === 'preview' ? 'selected' : ''}}" data-id="preview" bindtap="changeEditor">明日内容</view><view class="segment {{editor === 'auto' ? 'selected' : ''}}" data-id="auto" bindtap="changeEditor">任务模板</view><view class="segment {{editor === 'manual' ? 'selected' : ''}}" data-id="manual" bindtap="changeEditor">添加任务</view></view>
     <block wx:if="{{editor === 'preview' || isChild}}">
-      <view class="card template-overview"><view class="row"><view class="grow"><view class="muted">明天使用{{weeklyEnabled ? ' · 按星期安排' : ''}}</view><view class="rule-title">{{previewTemplateName}}</view></view><button wx:if="{{!isChild}}" class="quiet" bindtap="openSchedule" disabled="{{busy}}">自动安排 ›</button></view></view>
+      <view class="card template-overview"><view class="row"><view class="grow"><view class="muted">明天使用{{weeklyEnabled ? ' · 按星期安排' : ''}}</view><view class="rule-title">{{previewTemplateName}}</view></view><button wx:if="{{!isChild}}" class="quiet" bindtap="openSchedule" disabled="{{busy}}">自动安排 ›</button></view><view class="muted template-summary">{{previewTemplateSummary}}</view></view>
       <view class="subtitle">共 {{tasks.length}} 项 · 约 {{minutes}} 分钟</view>
       <learning-card wx:for="{{groups}}" wx:key="id" data-id="{{item.id}}" bindopen="openGroup"
         title="{{item.label}}" tag="{{item.quantityLabel}}" subject="{{item.subject}}"
         meta="{{item.modeSummary}} · 约 {{item.minutes}} 分钟" preview="{{item.preview}}" status="待学习" />
       <view wx:for="{{dayWarnings}}" wx:key="kind" class="notice">{{item.message}}</view>
+      <button wx:if="{{dayWarnings.length && !isChild}}" class="quiet" bindtap="openTemplate" disabled="{{busy}}">查看模板与内容范围 ›</button>
       <view wx:if="{{!groups.length}}" class="card empty">{{previewReady ? '明天还没有学习安排' : '正在读取明日安排…'}}</view>
       <button wx:if="{{!isChild}}" class="primary" bindtap="openLibrary">从知识库添加内容</button>
       <view class="muted plan-help">点击卡片查看任务、改期或删除，已完成记录保留。</view>
@@ -25,20 +26,25 @@
         <input wx:if="{{newTemplateDraft}}" class="template-name" value="{{templateName}}" bindinput="changeTemplateName" maxlength="24" placeholder="模板名称，例如：上学日" disabled="{{busy}}" />
         <view class="quantity-list">
           <view wx:for="{{visibleRules}}" wx:key="id" class="quantity-row">
-            <view class="grow"><view>{{item.label}}</view><view class="muted">{{item.unit}}</view></view>
-            <view class="stepper"><button class="step" data-id="{{item.id}}" data-step="-1" bindtap="stepQuantity" disabled="{{busy}}">−</button><input class="quantity" type="number" maxlength="2" value="{{item.quantity}}" data-id="{{item.id}}" bindinput="changeQuantity" disabled="{{busy}}" /><button class="step" data-id="{{item.id}}" data-step="1" bindtap="stepQuantity" disabled="{{busy}}">＋</button></view>
+            <view class="row"><view class="grow">{{item.label}} <text class="muted">· {{item.unit}}</text></view>
+              <view class="stepper"><button class="step" data-id="{{item.id}}" data-step="-1" bindtap="stepQuantity" disabled="{{busy}}">−</button><input class="quantity" type="number" maxlength="2" value="{{item.quantity}}" data-id="{{item.id}}" bindinput="changeQuantity" disabled="{{busy}}" /><button class="step" data-id="{{item.id}}" data-step="1" bindtap="stepQuantity" disabled="{{busy}}">＋</button></view>
+            </view>
+            <view class="rule-choices">
+              <picker range="{{modes}}" value="{{item.mode === 'review' ? 1 : 0}}" data-id="{{item.id}}" bindchange="changeMode" disabled="{{busy}}"><view class="rule-choice">{{item.mode === 'review' ? '复习' : '全新'}} ▾</view></picker>
+              <picker range="{{item.scopes}}" range-key="label" value="{{item.scopeIndex}}" data-id="{{item.id}}" bindchange="changeScope" disabled="{{busy}}"><view class="rule-choice">{{item.scopes[item.scopeIndex].label}} ▾</view></picker>
+            </view>
           </view>
         </view>
         <view class="muted">每天 {{dailyCount}} 项 · 0 表示不安排</view>
-        <button class="quiet advanced-toggle" bindtap="toggleTemplateAdvanced">{{templateAdvanced ? '收起更多设置 ↑' : '更多设置 · 新学／复习、范围 ↓'}}</button>
+        <view class="muted plan-help">全新会跳过曾安排的内容；当前范围不足时会提示缺额，不自动重复或扩大范围。</view>
+        <button class="quiet advanced-toggle" bindtap="toggleTemplateAdvanced">{{templateAdvanced ? '收起更多设置 ↑' : '更多设置 · 必背、内容查看 ↓'}}</button>
         <block wx:if="{{templateAdvanced}}">
           <block wx:if="{{!newTemplateDraft}}"><label class="label">模板名称</label><input class="template-name" value="{{templateName}}" bindinput="changeTemplateName" maxlength="24" placeholder="模板名称" disabled="{{busy}}" /></block>
           <view wx:for="{{visibleRules}}" wx:key="id" class="rule-settings">
-            <view class="row"><view>{{item.label}}</view><picker range="{{modes}}" value="{{item.mode === 'review' ? 1 : 0}}" data-id="{{item.id}}" bindchange="changeMode" disabled="{{busy}}"><view class="mode-picker">{{item.mode === 'review' ? '复习' : '全新'}} ▾</view></picker></view>
-            <picker range="{{item.scopes}}" range-key="label" value="{{item.scopeIndex}}" data-id="{{item.id}}" bindchange="changeScope" disabled="{{busy}}"><view class="picker">{{item.scopes[item.scopeIndex].label}} ▾</view></picker>
+            <view>{{item.label}} · {{item.scopes[item.scopeIndex].label}}</view>
             <picker wx:if="{{item.id === 'poetry'}}" range="{{recitationPolicies}}" value="{{item.recitationPolicyIndex}}" bindchange="changeRecitationPolicy" disabled="{{busy}}"><view class="picker">{{recitationPolicies[item.recitationPolicyIndex]}} ▾</view></picker>
             <text wx:if="{{item.id === 'poetry' && item.recitationPolicy !== 'all'}}" class="muted">全新内容按年级、学期从低到高安排；必背范围不含旧版参考要求。</text>
-            <button class="quiet" data-id="{{item.id}}" bindtap="browseRule">查看内容 · {{item.poolCount}} 项 →</button>
+            <button class="quiet" data-id="{{item.id}}" bindtap="browseRule">查看范围内全部内容 · {{item.poolCount}} 项 →</button>
             <view wx:if="{{item.id === 'english-reading' && !item.poolCount}}" class="muted">请先在「添加任务」中录入英文文章，加入自动内容库。</view>
           </view>
           <view class="muted plan-help">全新过滤曾经安排过的内容；复习从已学内容中选择。内容不足时提示缺额。课标范围不代表完整的上海教材。</view>

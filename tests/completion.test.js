@@ -116,7 +116,7 @@ test('required-only and priority planning preserve quantity, new/review semantic
   const saved = structuredClone(ledger.records[completed.contentId]);
   const review = dayFor(familyFor(rules('only', 'review')), ledger);
   assert.equal(review.tasks.length, 1); assert.equal(review.tasks[0].contentId, completed.contentId);
-  assert.match(review.warnings[0].message, /可复习内容不足/);
+  assert.match(review.warnings[0].message, /已学内容不足/);
   for (const field of ['item', 'firstSeen', 'completedDates', 'mastered', 'version']) assert.deepEqual(ledger.records[completed.contentId][field], saved[field]);
   assert.match(learning.templateSummary(rules('only')), /只选教材必背/);
   assert.match(learning.templateSummary(rules('first', 'review')), /复习，教材必背优先/);

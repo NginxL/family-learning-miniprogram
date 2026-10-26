@@ -116,6 +116,40 @@ function page(engine) {
   instance.unsubscribe = engine.subscribe(() => instance.render()); instance.render(); return instance;
 }
 const value = v => ({ detail: { value: v } });
+test('template scope is editable without advanced settings and old-cloud shortages show their actual saved scope', async t => {
+  const s = await setup(); const { engine } = s.f.client('parent-a'); await engine.sync(tomorrow);
+  global.getApp = () => ({ engine, mode: 'cloud', navigation: {} }); global.wx = { showToast() {} };
+  const plans = page(engine); t.after(() => { plans.cleanup(); delete global.Page; delete global.wx; delete global.getApp; });
+  plans.openTemplate(); assert.equal(plans.data.templateAdvanced, false);
+  const poetry = plans.data.rules.find(rule => rule.id === 'poetry');
+  assert.equal(poetry.scope, 'starter');
+  plans.changeScope({ currentTarget: { dataset: { id: 'poetry' } }, detail: { value: poetry.scopes.findIndex(scope => scope.id === 'shanghai54') } });
+  assert.equal(plans.data.templateAdvanced, false);
+  assert.equal(plans.data.rules.find(rule => rule.id === 'poetry').scope, 'shanghai54');
+  assert.equal(plans.data.rules.find(rule => rule.id === 'poetry').quantity, poetry.quantity);
+  assert.equal(plans.data.rules.find(rule => rule.id === 'poetry').mode, poetry.mode);
+  const key = `${s.family.id}:${tomorrow}`;
+  engine.state.days[key] = { ...engine.state.days[key],
+    tasks: engine.state.days[key].tasks.filter(task => task.kind !== 'poetry'),
+    generated: { [s.childId]: { poetry: { kind: 'poetry', scope: 'starter', mode: 'new', quantity: 2, actual: 0 } } },
+    omitted: [{ childId: s.childId, kind: 'poetry', key: 'removed-poem', automatic: true }],
+    warnings: [{ childId: s.childId, kind: 'poetry', message: '旧服务的缺额提示' }] };
+  plans.render();
+  assert.match(plans.data.dayWarnings[0].message, /亲子入门.*计划 1首.*已安排 0首/,
+    'warnings explain the saved generated rule, not the unsaved broader draft');
+  assert.equal(plans.data.rules.find(rule => rule.id === 'poetry').scope, 'shanghai54');
+  const day = engine.state.days[key];
+  day.generated[s.childId].poetry = { ...day.generated[s.childId].poetry, quantity: 3, actual: 2 };
+  day.tasks.push(learning.taskFrom(learning.catalog.find(item => item.kind === 'poetry'), s.childId, 'a_remaining', 'new'));
+  plans.render();
+  assert.match(plans.data.dayWarnings[0].message, /计划 2首.*已安排 1首/,
+    'deleting a task must not reuse the generated count from before deletion');
+  day.omitted.push({ childId: s.childId, kind: 'poetry', key: 'another-removed-poem', automatic: true });
+  plans.render(); assert.deepEqual(plans.data.dayWarnings, [], 'satisfied targets do not show stale shortage warnings');
+  const markup = require('node:fs').readFileSync(require('node:path').join(__dirname, '../miniprogram/pages/plans/index.wxml'), 'utf8');
+  const mainEditor = markup.split('<block wx:if="{{templateAdvanced}}">')[0];
+  assert.match(mainEditor, /bindchange="changeScope"/); assert.match(mainEditor, /bindchange="changeMode"/);
+});
 test('template UI creates and enables a named draft, preserves unsaved input on refresh, detects conflicts and reloads only on request', async t => {
   const s = await setup(); await s.f.addParent(s.family.id); const { engine } = s.f.client('parent-a'); await engine.sync(tomorrow);
   const toasts = []; global.getApp = () => ({ engine, mode: 'cloud', navigation: {} }); global.wx = { showToast: v => toasts.push(v.title) };
